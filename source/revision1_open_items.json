@@ -1,0 +1,3173 @@
+[
+ {
+  "file": "Part1_Qubit_era.md",
+  "line": 7,
+  "tag": "(front matter)",
+  "state": "KEPT",
+  "quote": "each part citing only its priors, itself (earlier tags), and the two annexes: **Census.md** (the computed data cells, cited row-wise by tag) and **HistLog.md** (the historical and open ledger; citations are pointers, $\\neg$premises). Part 1 (this file): \u00a7A axioms A1\u2013A9 \u00b7 \u00a7B conve"
+ },
+ {
+  "file": "Part1_Qubit_era.md",
+  "line": 11,
+  "tag": "(front matter)",
+  "state": "KEPT",
+  "quote": "**0.2a Math & hypothesis policy.** Standard mathematics (linear algebra, representation theory, tensor calculus, classification theorems) is cited as $[\\text{math}]$-class tags in **Req** and is not part of the physical axioms. Conditional theorems carry their hypotheses explicit"
+ },
+ {
+  "file": "Part1_Qubit_era.md",
+  "line": 435,
+  "tag": "(front matter)",
+  "state": "KEPT",
+  "quote": "**Era-extension note.** The P4 core lists the bosonic-era free internal parameters (Part 2 loci). The fermion-era parameters (the Janus rate ratio $r=x_+/x_-$; the defect residues $\\hat\\mu^2$, $\\hat\\mu'^2$; the Ansatz-B formal temperature $\\alpha$; the channel scales $\\mu$, $\\mu_"
+ },
+ {
+  "file": "Part1_Qubit_era.md",
+  "line": 1915,
+  "tag": "L2",
+  "state": "KEPT",
+  "quote": "**Phys.** Near the vacuum, every tilt step contracts the Lyapunov function by a $\\gamma$-dependent exact rational factor: $\\bigl(1-\\tfrac\\gamma4\\bigr)^2$ of $V$ survives, $\\tfrac{\\gamma(8-\\gamma)}{16}$ of it is lost. At $\\gamma=1$ ($\\varepsilon_q=0$, sharp crystallization) the co"
+ },
+ {
+  "file": "Part1_Qubit_era.md",
+  "line": 2107,
+  "tag": "L5",
+  "state": "KEPT",
+  "quote": "| Def-BM.1\u20132 \u00b7 BM.1\u2013BM.6 | colour-sealed composites: baryons/mesons, junction grammar, observability, the forced family group, invariance laws, census consumption, open construction specs | Part 4 |"
+ },
+ {
+  "file": "Part1_Qubit_era.md",
+  "line": 2109,
+  "tag": "L5",
+  "state": "KEPT",
+  "quote": "| the former declared-choice registry \u00b7 items 1\u201321 \u00b7 Q1\u2013Q12 \u00b7 the tier adjudication summaries \u00b7 the closure tier F.43 | declaration history and dispositions, open ledger, status ledger, adjudication record | HistLog |"
+ },
+ {
+  "file": "Part2_Bosonic_era.md",
+  "line": 12,
+  "tag": "(front matter)",
+  "state": "KEPT",
+  "quote": "The P4 core ($g,\\ g';\\ h_0;\\ c_W;\\ \\Lambda;\\ \\varkappa,\\ \\beta,\\ \\alpha_\\Omega$) and P3 ($G_N$, $\\kappa^2$ \u2014 named combinations of $\\mathfrak h$) are Part 1 \u00a7E. Logged spectral datum of this part: $\\alpha_{\\mathrm{EM}}^{(2)}$ \u2014 the EM-block scale read [EM.17]: operatorially defin"
+ },
+ {
+  "file": "Part2_Bosonic_era.md",
+  "line": 91,
+  "tag": "CT1.12a",
+  "state": "KEPT",
+  "quote": "$(3)$ **Read classes.** The corpus's discrete reads fall into exactly three classes, one per discreteness route: **(R1)** binary registration \u2014 $\\sigma_e$ [CT0.9], $q_{\\mathrm{EM}}\\in\\{-1,0,+1\\}$ [EM.9, D3.4], wall parity $(-1)^{\\aleph}$ [$\\aleph_v$ from D3.3's $f_v$]; **(R2)** i"
+ },
+ {
+  "file": "Part2_Bosonic_era.md",
+  "line": 842,
+  "tag": "CT1.23",
+  "state": "KEPT",
+  "quote": "**Rmk (dependency audit).** The field-equation chain (CT1.20 $\\to$ CT1.21 $\\to$ CT1.22 $\\to$ CT1.23, conservation CT1.24/CT1.26) rests solely on the declared inputs listed in A \u00a70.2a (CT2.6 (i)\u2013(iii) via CT1.19/CT2.6; Lovelock [math]) \u2014 no clause depends on persistence data, on a"
+ },
+ {
+  "file": "Part2_Bosonic_era.md",
+  "line": 3129,
+  "tag": "EM.25",
+  "state": "KEPT",
+  "quote": "**Phys.** The corpus states exactly which abelian quantities are derived \u2014 alphabet, masslessness, polarizations, the per-edge phase alphabet, block-read stability, and the identity $e=g\\sin\\theta_W$ \u2014 and exactly which data stay open: the numerical coupling (configuration data),"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3,
+  "tag": "(front matter)",
+  "state": "KEPT",
+  "quote": "**Dep.** Part 1 (axioms, conventions, qubit-era definitions, calibration, pair canon, ledger dynamics L0\u2013L5); Part 2 (definitions D2.1\u2013D4.3, geometry, electroweak, electromagnetic, colour, saturation) \u2014 cited by tag at use. Annexes cited row-wise: **Census.md** (the computed data"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 7,
+  "tag": "(front matter)",
+  "state": "KEPT",
+  "quote": "**0.2 Ledger resolution rules.** (i) \u201cOpen Gaps $N$\u201d, \u201citem $N$\u201d, \u201cQ$n$\u201d, \u201cdeficit $n$\u201d resolve to HistLog \u00a7II (the open ledger keeps the historical numbering). (ii) Historical scope tokens: \u201cComm-min\u201d, \u201cEff\u201d mark the fixed-phase read of the first-edition tiers; both premises are"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 14,
+  "tag": "(front matter)",
+  "state": "KEPT",
+  "quote": "Policy: Part 1 \u00a7E (P4: free internal configuration parameters, $\\neg$constants of the theory; P5: no external identification; P1: $\\mathfrak h$ the single free dimensionful scale). Every entry: dimensionless internal configuration data unless a dimension is stated; no value is fi"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 66,
+  "tag": "Def-H.3",
+  "state": "KEPT",
+  "quote": "the supremum of transit entropy carried [EM.7: $\\mathsf E_{\\mathrm{tr}}=\\delta h\\ln2$, extended additively over $\\gamma$]. The identification of extractable information with carried transit entropy is constitutive of this definition; coherence with the computed cards: channel pay"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 511,
+  "tag": "FT.14",
+  "state": "KEPT",
+  "quote": "**Req.** A1, A2, A4; C8, C9, C10; CT0.1, CT0.6, CT0.7, CT0.9 (Part 1); CT1.12, CT1.19, CT1.25 (Part 2); D3.5; EW.13, EW.17 (Part 2); EM.9, EM.16 (Part 2); FT.9; FT.22\u2013FT.24 (on-shell line-element quantization \u2014 the parity-read step below is scoped to materialized edges; completio"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 582,
+  "tag": "Def-H.9",
+  "state": "KEPT",
+  "quote": "[\\text{on-shell}\\ \\Theta_{\\mathrm{int}}\\in\\mathbb Z\\ \\text{\u2014 derived from materialization, not postulated}:\\ \\mathrm{FT.25};\\ \\alpha=\\pi:\\ \\mathrm{FT.9};\\ \\text{completion scope}:\\ \\text{Open Gaps 13}];"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 585,
+  "tag": "Def-H.9",
+  "state": "KEPT",
+  "quote": "\\mathbf S:\\ \\text{the}\\ \\mathfrak{su}(2)\\ \\text{Casimir label}\\ j(j{+}1)\\ \\text{associated with}\\ \\mathrm{Hol}_{\\mathrm{int}}\\ \\text{under the weak action}\\ [\\mathrm{FT.13}]\\quad(\\text{extraction rule OPEN \u2014 Open Gaps 11})."
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 588,
+  "tag": "Def-H.9",
+  "state": "KEPT",
+  "quote": "**Notation.** $m_{\\mathrm{hid}}$ \u2014 the informational mass read \u2014 is kept symbolically distinct from the pole mass $m$ of D2.5/EW.19 ($m^2:=$ pole displacement): the two are different constructions, and their identification or relation is open, nowhere assumed in this document."
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 980,
+  "tag": "Def-H.13",
+  "state": "KEPT",
+  "quote": "**Rmk (strictly new at $\\Sigma$ \u2014 first counts).** Def-H.13's filter evaluated at small $N(\\Sigma)$: $N=1$: $\\mathfrak u(1)$ factors per-edge entirely \u2014 nothing strictly new; single-contact floors carry no collective boundary mode. $N=2$: $\\dim\\mathfrak u(2)=4$, factored diagonal"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 1135,
+  "tag": "FT.24",
+  "state": "KEPT",
+  "quote": "**Rmk (two integer reads at the floor).** The materialized minimal bound structure carries two derived integer reads: the geometric winding $\\kappa=\\Theta(c)/2$ [FT.22, clause (1)] and the informational mass $m_{\\mathrm{hid}}=I_{\\mathrm{hid}}/\\mathfrak h$ [Def-H.9(2), FT.17: $I_{"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 1148,
+  "tag": "FT.25",
+  "state": "KEPT",
+  "quote": "$$(2)\\quad\\text{every internal edge carries on-shell integer line element}\\ [\\mathrm{FT.24};\\ \\text{scope}:\\ \\text{Open Gaps 13}]:\\qquad\\Theta_{\\mathrm{int}}(\\Sigma)\\in\\mathbb Z,\\qquad\\mathrm{Hol}_{\\mathrm{int}}=(-1)^{\\Theta_{\\mathrm{int}}}\\in\\{\\pm1\\}\\ \\ \\text{well-defined};"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 1171,
+  "tag": "FT.25",
+  "state": "KEPT",
+  "quote": "**Rmk (spin-extraction consequence).** For $\\Sigma$ swept entirely by fermion chains, clause (1) forces $\\mathrm{Hol}_{\\mathrm{int}}=+1$ on-shell: the *parity* of a full materialized loop cannot carry the spin label. The live candidates are the integer data \u2014 the winding $k(c)$, "
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 1173,
+  "tag": "FT.25",
+  "state": "KEPT",
+  "quote": "**Phys.** The internal geometric ledger of a coarse-grained fermion is integer-valued wherever the corpus's own spectral condition reaches: loops materialize in even hop-area quanta, the minimal loop is exactly one quantum per channel, and Def-H.9's binary holonomy label is a wel"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 1191,
+  "tag": "Def-H.15",
+  "state": "KEPT",
+  "quote": "**Rmk (configuration-relativity).** Unlike the rung masks $\\mathcal P_M^{(n)}$ [D2.3], which are state-independent, $\\mathcal K_\\Sigma(C)$ depends on the ambient configuration $C$ \u2014 FT.20's criteria read $f_v$, $I_{\\mathrm{hid}}$, $\\Theta_{\\mathrm{int}}$, $\\mathcal C(\\Sigma;C)$, "
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 1233,
+  "tag": "FT.26",
+  "state": "KEPT",
+  "quote": "**Rmk (the observability deficit, in dimensions).** The rung-3 mask carries $\\dim\\mathcal K_3=25$ [CT0.14]; the maximal observable $\\Sigma$-mask carries $18$. The deficit $25-18=7=3+3+1$ is exactly $J^+\\oplus J^-\\oplus D^+$ [CT0.12] \u2014 the structural aspects FT.20 reclassifies as "
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 1336,
+  "tag": "FT.29",
+  "state": "KEPT",
+  "quote": "**Rmk (three routes to discreteness).** The corpus's quantization mechanisms are now three, on three different objects: **(R1) reality line** \u2014 CT0.9: $\\sigma_e\\in\\{\\pm1\\}$, single-qubit $\\wedge^2\\mathcal H_q$; **(R2) materialization** \u2014 EW.18/FT.22\u2013FT.25: $\\kappa,k,\\Theta_{\\math"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 1378,
+  "tag": "FT.30",
+  "state": "KEPT",
+  "quote": "**Verdict.** Independent quanta exist in exactly three read classes, one per discreteness route [FT.29 Rmk]: **(R1)** binary registration \u2014 reality line [CT0.9]: $\\sigma_e$, $q$, $(-1)^{\\aleph}$; **(R2)** integer winding \u2014 materialization [EW.18, FT.22\u2013FT.25]: $\\kappa$, $k$, $\\Th"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 1448,
+  "tag": "Def-H.19",
+  "state": "KEPT",
+  "quote": "**No coupling to materialization is asserted.** CT1.20's stationary phase weights minima and saddles alike (every $\\delta\\Phi=0$ configuration dominates non-stationary ones); whether the pole condition [CT2.5] or the defect criterion [FT.33] *selects* the stable subclass is a the"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 1473,
+  "tag": "FT.33",
+  "state": "KEPT",
+  "quote": "\\ell_c=\\textstyle\\sum_e\\sqrt{\\kappa_e}\\,\\mathfrak h\\ [\\mathrm{Def\\text{-}H.2}\\ \\text{piecewise-straight length};\\ \\mathrm{FT.24}(2):\\ ds^2(e)=\\kappa_e\\mathfrak h^2,\\ \\text{spacelike}\\ \\kappa_e>0];\\qquad\\hat\\mu^2:\\ \\mathrm{EW.33}\\ \\text{packaging},\\ \\ell^2\\ \\text{factored out}\\ [\\"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 1582,
+  "tag": "FT.37",
+  "state": "KEPT",
+  "quote": "On all-nonnull per-edge-integer chains [FT.24/FT.34(4) scope]: $\\bar\\kappa\\ge1$, with equality $\\iff\\kappa_e\\equiv1$; null edges or class-(iii) rational profiles [Open Gaps 13, FT.38(3)] admit $\\bar\\kappa<1$ (witness $(1,1,0)$: $\\bar\\kappa=\\tfrac23$)."
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 1696,
+  "tag": "FT.41",
+  "state": "KEPT",
+  "quote": "$(d)$ **Strictly new at $\\Sigma$, first counts [Def-H.13's filter].** $N(\\Sigma)=1$: $\\mathfrak u(1)$ factors per-edge entirely \u2014 nothing strictly new; single-contact floors carry no collective boundary mode. $N(\\Sigma)=2$: $\\dim\\mathfrak u(2)=4$, factored diagonal $=2$, strictly"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 1767,
+  "tag": "FT.46",
+  "state": "KEPT",
+  "quote": "**Rmk (what \"distinct\" does not yet mean).** Clause (2) separates the floors as *ledger objects*. Whether distinct $n$ correspond to distinct *particles* (spectrum-level separation: distinct poles of $Z(\\mathcal R,\\Sigma_{P_n})$ [Def-H.16]) requires the pole-side computation [Ope"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 1807,
+  "tag": "FT.47",
+  "state": "KEPT",
+  "quote": "**Rmk (what a real ceiling would require).** An upper limit on the polygon family could only arise from the *spectral* side: a proof that M1$_n$/M2$_n$ fails for large $n$ in every valid universe (e.g. if $Z(\\mathcal R,\\Sigma_{P_n})$'s pole structure [Def-H.16] degenerated with $"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 1823,
+  "tag": "FT.48",
+  "state": "KEPT",
+  "quote": "$(4)$ **Derived vs. open.** Clauses (1)\u2013(3) close the variational side of the stability program: stable channels are geodesics, their ledger distance is integer, and the two distance reads are Cauchy\u2013Schwarz-bound with equality at uniformity. The selection side \u2014 whether the pole"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 1866,
+  "tag": "FT.52",
+  "state": "KEPT",
+  "quote": "$$(5)\\quad\\textbf{verdict}:\\ j=k/2\\ \\text{remains the leading candidate}\\ \u2014\\ \\text{it passes every available consistency test}:\\ (1)\\ \\text{parity triviality (it reads}\\ k,\\ \\neg\\text{parity});\\ (2)\\ \\text{additive composition}\\ [\\mathrm{FT.34}(3)];\\ (3)\\ \\text{seed anchor}\\ R(1)"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 1903,
+  "tag": "FT.53",
+  "state": "KEPT",
+  "quote": "$(4)$ **Semiclassical exclusion of class (iii).** FT.38(3)'s rational non-uniform ladders ($\\kappa_e\\in(2/L)\\mathbb Z$, varying) require $\\kappa(\\lambda)$ non-constant along the chain $\\Rightarrow$ [contrapositive of (1)] non-geodesic support $\\Rightarrow$ off-stationary $\\Righta"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 1918,
+  "tag": "FT.53",
+  "state": "KEPT",
+  "quote": "(4):\\ \\kappa\\ \\text{non-constant along}\\ c\\overset{(1)}{\\implies}\\neg\\text{geodesic}\\overset{\\mathrm{FT.48}(1)}{\\implies}\\neg\\text{stationary}\\overset{\\mathrm{CT1.20}}{\\implies}\\text{pairwise cancellation};\\qquad\\text{residue}:\\ \\text{finite-}\\mathfrak h\\ \\text{non-stationary pol"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 1938,
+  "tag": "Def-H.21",
+  "state": "KEPT",
+  "quote": "**No physical identification is made here**: $\\mathcal U^{\\mathrm{spin}}$ is *not* asserted to be EW.33's weak transport $\\mathcal U$ (couplings $c_A$, P4 data) \u2014 that identification is the declared content of Def-H.37(2) (HistLog \u00a7I), and the obstruction to deriving it is Open G"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 1997,
+  "tag": "FT.54",
+  "state": "KEPT",
+  "quote": "**Rmk (Def-H.37(1) vs Def-H.37(2)).** Def-H.37(1) (leading order, weak-coupling profile $c_A$) and Def-H.37(2) (exact, spin-connection) agree to leading order when $\\hat\\mu'^2\\Theta_R^2/4=\\hat\\mu^2\\ell_c^2G(c)$ \u2014 a matching condition on the P4-class packaging (Cal-F), recorded no"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 2010,
+  "tag": "FT.55",
+  "state": "KEPT",
+  "quote": "$(4)$ **Residual, relocated.** What remains missing for promotion is neither the connection (Def-H.21 constructs it) nor the algebra (FT.52 settles it): it is a **ledger mechanism assigning $\\mathrm{Sym}^k(\\mathcal H_{\\mathsf v})$ to a materialized chain of winding $k$** \u2014 a $k$-"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 2238,
+  "tag": "Def-H.38",
+  "state": "KEPT",
+  "quote": "**Scope.** Bound chains on the nonnegative cone only; transit/trivial chains excluded \u2014 photon helicity [EM.8] is a transit-side read, no identification. Carriers for $k\\ge3$ ($\\dim\\ge4$) exceed the registered pair-channel inventory [CT0.12: blocks $3,3,5,3,1,1$] \u2014 no aspect clai"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 2325,
+  "tag": "FT.60",
+  "state": "KEPT",
+  "quote": "**Rmk (relation to Def-H.37(1)).** Def-H.37 fixes the defect *transfer* (pole side $=$ transport defect of the seed); Def-H.38 fixes the defect *carrier* (which space the seed's copies occupy). Both are transfer choices around EW.32/EW.33's proven single-seed transport; both are "
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 2412,
+  "tag": "FT.62",
+  "state": "KEPT",
+  "quote": "$(5)$ **Type ledger and the EM row (scope note).** Bidirectional-skeleton vertices with $d\\ge2$ channels have type $(d,d)$ [D0.8/A7]; D3.3's literal $f_v$ domain (type-$(1,1)$ vertices) is empty on dark polygon and Platonic floors (the digon $\\Sigma_{\\min}$ keeps type-$(1,1)$ ver"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 2413,
+  "tag": "FT.62",
+  "state": "KEPT",
+  "quote": "$(6)$ **Materialization sharpening.** M1/M2 at Platonic/polygon vertices are now explicitly spectral hypotheses at *locked* vertices ($n=2d\\ge4$): strictly stronger than the text suggested. No contradiction with EW.17 (whose rung-$3$ claim concerns wrapping chains at channel-admi"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 2482,
+  "tag": "FT.66",
+  "state": "KEPT",
+  "quote": "$(3)$ **Reconstructability, and the true shape of exit (a).** The ambient configuration determines the metric: $C\\mapsto g_{\\mu\\nu}(C)$ [CT1.20's own grouping map; CT1.12: $g$ from per-edge sector coordinates $(a_{00},q_{ij},w_i)$ [D2.1, D1.6, Def-H.14's arena]], sampled at $O(\\m"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 2487,
+  "tag": "FT.66",
+  "state": "KEPT",
+  "quote": "Hence an absolute selection rule \u2014 \"index-0 stationary channels materialize; $\\operatorname{ind}_B\\ge1$ channels are suppressed\" \u2014 admits **no** closed stationary channel on such a slice. Dilemma against M1/M2 (declared face/digon materialization [Def-H.20]): **horn 1** \u2014 if the "
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 2488,
+  "tag": "FT.66",
+  "state": "KEPT",
+  "quote": "$(5)$ **Verdict (Gap 18 closed).** The four sub-questions of item 18 now carry derived answers: variational side \u2014 closed [FT.48(1)\u2013(3)]; weight/ledger blindness \u2014 closed [FT.61(1)\u2013(3)], Bott-stable [(2) here]; reconstructability \u2014 settled [(3) here]: the datum exists in principl"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 2489,
+  "tag": "FT.66",
+  "state": "KEPT",
+  "quote": "$(6)$ **Folds.** Def-H.19's vocabulary is refined to Morse\u2013Bott [Def-H.24(5)] \u2014 its [math] content constructed; the non-coupling clause superseded in part by clause (4)'s derived anti-coupling, itself superseded for absolute closed-chain rules by (4); Def-H.19 patched in place; F"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 2565,
+  "tag": "Def-H.25",
+  "state": "KEPT",
+  "quote": "split $Z_\\Gamma=Z_{\\mathrm{byp}}(\\Gamma)+Z_{\\mathrm{lock}}(\\Gamma)$ by lock status (any $k_v\\ge4$). **Scope declarations, marked at every use**: **(S1)** minimal-edge class $\\kappa_e\\equiv1$ on real edges [D1.1, Comm-min]; for general on-shell integer $\\kappa$: every theorem belo"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 2591,
+  "tag": "FT.67",
+  "state": "KEPT",
+  "quote": "$(6)$ **Consistency anchors and the norm layer.** (a) The $k{=}2$ survivor is the $\\Sigma_{\\min}$ pass-through structure verbatim [FT.28(5): $q$ of type $(1,1)$]; (b) FT.61(1)'s phase inventory $e^{i\\Phi}=(-1)^{\\Theta+\\aleph+n_-}$ is reproduced termwise inside the monomial of (2)"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 2657,
+  "tag": "FT.68",
+  "state": "KEPT",
+  "quote": "$(4)$ **Layer dichotomy (the flicker hypothesis, resolved).** (a) *Bypass is real*: $Z^{\\pm}_{\\mathrm{byp}}>0$ on every computed skeleton \u2014 single vertex $1+n_{\\mathrm{in}}n_{\\mathrm{out}}\\cdot4$, tetrahedron $1057$, polygons growing, cube $1\\,109\\,313$: the admissible sector of "
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 2703,
+  "tag": "FT.68",
+  "state": "KEPT",
+  "quote": "**Rmk (relation to Def-H.20/FT.62 \u2014 no retraction).** The Def-H.20 floors are the fully crystallized points of their skeletons' pattern lattices; FT.62's rung and lock ledgers describe those points and are untouched. This tier adds the amplitude-layer anatomy of the *neighbourhoo"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 2726,
+  "tag": "Def-H.26",
+  "state": "KEPT",
+  "quote": "**Rmk (layer scope).** Every read above is a $\\mu_p$-average of pattern-layer ledger entries; the spectral layer (Def-H.16 poles; M1/M2 materialization) is $p$-independent by declaration, and the two layers meet only through item 13's open bridge [FT.68(4)]. Static census data ($"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 2876,
+  "tag": "FT.73",
+  "state": "MOVED",
+  "quote": "$(4)$ **The $\\alpha$ flag.** EM.20 derives $\\alpha_{\\mathrm{EM}}^{(2)}=\\pi$ under Comm-min+Eff \u2014 a pure number, independent of $\\mathfrak h$, $G_N$, $\\kappa$, and every P4 parameter [Eff: historical scope token \u2014 Part 3 \u00a70.2(ii); HistLog \u00a7I.4]. The proposed \"$\\alpha\\approx1/137$ "
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 2877,
+  "tag": "FT.73",
+  "state": "MOVED",
+  "quote": "$(5)$ **Adjudication summary (proposal transcript, audit pattern).** *Confirmed (already derived)*: per-edge binary freedom [A4, D0.1, Def-H.25]; the constraint surface $=$ the cap census [CT0.11; FT.68(1)\u2013(3), FT.69(1)]; photon $=$ trivial chain [D3.7, frozen]; \"mass $=$ time-av"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 2938,
+  "tag": "Def-H.27",
+  "state": "KEPT",
+  "quote": "**Rmk (status).** Domains (b), (c) are **computed variants, not adopted**: Parts 1\u20132 define $\\aleph$ by (a) [D3.3 via A8]; domains (b), (c) await the domain choice. The extension is *forced data* wherever the corpus itself uses chain-local pass-through reads \u2014 FT.21(i)'s telescop"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 2958,
+  "tag": "FT.74",
+  "state": "KEPT",
+  "quote": "with $N_{E2}(R)=0$ unless **(a)** no edge of $R$ joins two type-$(1,1)$ vertices (such an edge is read literally twice), and **(b)** every literal thread at a type-$(1,1)$ vertex is open \u2014 a literal thread whose two ends coincide is a closed chain [D1.4], and its wrap read double"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 2959,
+  "tag": "FT.74",
+  "state": "KEPT",
+  "quote": "$(3)$ **Pointwise order, and incomparability of the three domains.** $N_{E2}(R)\\le N_{E1}(R)$ for every $R$ on every skeleton (an E2 structure maps injectively to its thread partition: forced literal threads are open by (2b), edges with a $(1,1)$ endpoint are covered exactly once"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3034,
+  "tag": "FT.75",
+  "state": "KEPT",
+  "quote": "machine-verified $L=3..10$ $(0,4,0,4,0,4,0,4)$. **FT.68(4)'s verdict \"fuzzing into solids \u2014 no at the amplitude layer\" is the literal-domain verdict; in the chain-local domains every computed even polygon floor and the three computed Platonic floors carry strictly positive amplit"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3058,
+  "tag": "FT.75",
+  "state": "KEPT",
+  "quote": "each directed edge contributing (absent, $+$, $-$); the extended domains refine this set by an inner sum over $D$/$M$ and cannot change it. **Item 13's bridge question is therefore invariant under the $\\aleph$-domain choice**: no domain rescues or worsens it \u2014 exit (b) must opera"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3105,
+  "tag": "FT.75",
+  "state": "KEPT",
+  "quote": "**Phys.** Let the phase-comparisons ride chains instead of vertex types, and the amplitude layer changes character: locked vertices acquire weight of their own \u2014 a single over-subscribed vertex hums with amplitude $32$, $96$, $672$ as its degree climbs, and a hub holding $a$ digo"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3124,
+  "tag": "FT.155",
+  "state": "KEPT",
+  "quote": "Hence the replacement search space of the interface contains no combinatorial, dielectric, or rotor species; the derivation of the transfer itself \u2014 why the seed's transport defect is the terminus's pole displacement \u2014 remains the open locus."
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3142,
+  "tag": "FT.155",
+  "state": "KEPT",
+  "quote": "**Phys.** The defect interface is priced: one scalar and one identification, and every competing shape is excluded by theorem \u2014 each alternative mass formula the corpus has tested is either inside its Taylor regime, outside its range, or outside its field. What remains open is no"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3148,
+  "tag": "FT.77",
+  "state": "MOVED",
+  "quote": "**Thm.** **External-data clause.** The three hierarchies compared below \u2014 charged leptons $1{:}207{:}3477$, up-type quarks $1{:}600{:}80000$, down-type quarks $1{:}20{:}900$ \u2014 are *supplied measured data* (2\u20133 significant figures). They enter no derivation, no definition and no c"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3160,
+  "tag": "FT.77",
+  "state": "MOVED",
+  "quote": "**Req.** FT.44, FT.60, FT.63, FT.73, FT.76; Def-H.37(2), Def-H.38; A \u00a70.2 (policy); Open Gaps 5/12/16(e); external measured hierarchies (comparison only, marked); exhaustive triple search, ratio bounds [machine]."
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3222,
+  "tag": "FT.79",
+  "state": "KEPT",
+  "quote": "**Thm.** Under Def-H.28; the SM hierarchies of clause (4) are **external measured data**, marked, entering no derivation and no identification (A \u00a70.2; Open Gaps 5/12)."
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3288,
+  "tag": "FT.80",
+  "state": "KEPT",
+  "quote": "$(4)$ **The exact resolvent condition a declaration would have to supply** (recorded, **not** adopted). Item 13's exit (b) is constructible only as a triple of declarations: (i) a rule $\\mathcal O\\mapsto(\\Sigma(\\mathcal O),C(\\mathcal O))$; (ii) colour data making $\\Pi_{\\mathcal C"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3335,
+  "tag": "Def-H.29",
+  "state": "KEPT",
+  "quote": "**(R1) binary registration** \u2014 $\\sigma_e\\in\\{\\pm1\\}$ [CT0.9, A7/A8], the end-charge $q_{\\mathrm{EM}}(c)=\\tfrac12(\\sigma_{s(c)}-\\sigma_{t(c)})\\in\\{-1,0,+1\\}$ [D3.4, EM.9], the vertex phase-comparison $f_v$ and $(-1)^{\\aleph_v}$ [D3.3, FT.67(1)], the edge weight $G(e)=\\sigma_e e^{i"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3336,
+  "tag": "Def-H.29",
+  "state": "KEPT",
+  "quote": "**(R2) integer winding and ledger** \u2014 $\\widehat{ds}^{\\,2}$, $\\Theta(\\gamma)$ [D1.6, D1.7], the on-shell quantum $\\kappa_e\\in\\mathbb Z$ [FT.22], the winding $k$ and $\\Theta_{\\mathrm{int}}$ [FT.25(3), FT.34, FT.43], $\\delta h$ [D0.6], the spin ladder $j=|k|/2$ on $\\mathrm{Sym}^k$ c"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3337,
+  "tag": "Def-H.29",
+  "state": "KEPT",
+  "quote": "**(R3) singlet admissibility** \u2014 the sealing indicator $\\mathcal C(\\Sigma;C)\\in\\{0,1\\}$ and its idempotent $\\Pi_{\\mathcal C}$ [Def-H.9, Def-H.10, FT.19, CT3.18, CT3.22], with the partition rule ($|\\mathrm{Colour}(\\Sigma)|$ into $2$s and $3$s) [FT.34(5), CT3.17]."
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3547,
+  "tag": "FT.87",
+  "state": "MOVED",
+  "quote": "$(6)$ **The moment-of-inertia table is exact but embedding-dependent.** $I=KR^2$ reproduces $(0.8889,2.0000,\\text{ratio }2.25)$, $(1.5585,4.5000,2.8873)$, $(6.2882,18.0000,2.8625)$ for $R^2=(\\tfrac13,\\tfrac38,\\tfrac34)$ (machine). The **ratios are embedding-free** \u2014 $R^2$ cancels"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3549,
+  "tag": "FT.87",
+  "state": "MOVED",
+  "quote": "$(8)$ **The weak $\\pm2$ shift.** No tag supplies $\\varepsilon_W$, and \"parity\" collides with the corpus's $\\mathbb Z_2$ *ledger* parity [FT.64's cut-space classes] \u2014 spacetime parity has no read (`left-handed`, $P_L$, $P_R$, $\\gamma_5$: count $0$). What *is* legitimate: $\\chi=\\op"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3553,
+  "tag": "FT.87",
+  "state": "MOVED",
+  "quote": "$(12)$ **Verdict.** The tumbling model supplies **no mechanism that escapes the two ceilings**: its mass term is Def-H.37(2)s small-angle regime (bounded by FT.76(3)), its size datum is undeclared, its shell stability is excluded by FT.66(4), and its generation mechanism is an am"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3605,
+  "tag": "FT.88",
+  "state": "KEPT",
+  "quote": "$(4)$ **Scope, and what this is not.** The inventory contains no C, P or T *operator*, no Lorentzian field algebra and no spinor bundle, so no CPT theorem is claimed or claimable; $\\mathbb Z_2\\times\\mathbb Z_2$ is the exact group generated by the two declared reversals and nothin"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3645,
+  "tag": "FT.89",
+  "state": "MOVED",
+  "quote": "**(b) No referent.** The corpus has **no lepton mass read at all**: no Yukawa sector, no lepton species, no flavour index [FT.81(5); item 20's deficits 1\u20133]. $Q$ therefore cannot be formed inside the corpus, and no map connects the two sides."
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3705,
+  "tag": "FT.90",
+  "state": "MOVED",
+  "quote": "$(5)$ **The chiral merger is NOT forced by FT.15.** Sign-dependence of the tuple, component by component: $S=j=|k|/2$ [FT.52/FT.55, FT.60] \u2014 **sign-blind**; $m_{\\mathrm{hid}}=E_{\\mathrm{int}}\\ln2/\\mathfrak h$ [FT.16/FT.44(4)] \u2014 **sign-blind**; $q=q_{\\mathrm{core}}=\\tfrac12(\\sigma"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3706,
+  "tag": "FT.90",
+  "state": "MOVED",
+  "quote": "$(6)$ **The \"information cost of generations\" question: premise void, legitimate version exact.** The submitted $(8,1056,1109312)$ and $\\ln Z$ gaps rest on FT.87(9)'s refuted identification (those are $(8,Z^{\\rm tetra}_{\\mathrm{byp}}-1,Z^{\\rm cube}_{\\mathrm{byp}}-1)$, three diffe"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3742,
+  "tag": "FT.91",
+  "state": "KEPT",
+  "quote": "$(1)$ **The three declarations restated.** Item 13's exit (b) requires exactly: **(i)** a rule $\\mathcal O\\mapsto(\\Sigma(\\mathcal O),C(\\mathcal O))$ assigning a subnetwork and observer channel to a cover class; **(ii)** colour data making $\\Pi_{\\mathcal C}(\\Sigma;C)$ computable ["
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3748,
+  "tag": "FT.91",
+  "state": "KEPT",
+  "quote": "- **Buys:** a spectral side on the same objects that carry amplitude, so item 13's bridge becomes computable; class-invariance is preserved because the vertex support is $\\operatorname{Aut}(\\Gamma)$-invariant."
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3751,
+  "tag": "FT.91",
+  "state": "KEPT",
+  "quote": "$(6)$ **Adoption status.** The map is constructed; no tag of Parts 1\u20134 imports it (retirement record: HistLog \u00a7I); its species is a **map**, contrasted with the transfer interfaces Def-H.37/Def-H.38 and the Cal-F dynamics datum. Its consequences are enumerable in advance: the pol"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3823,
+  "tag": "FT.93",
+  "state": "KEPT",
+  "quote": "$(1)$ **Clifford frames are native (positive, new).** Among the $15$ non-identity Pauli products (each Hermitian, squaring to $+I_4$, traceless) there are exactly **$30$ pairwise-anticommuting $4$-frames** (unordered; $720$ ordered, $24$ orderings per frame). For every frame: $\\g"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3846,
+  "tag": "FT.93",
+  "state": "KEPT",
+  "quote": "$(4)$ **Task 2's claim refuted, per frame and in general.** For $\\mathcal F_0$: $W_1,W_2$ *flip* the chiral halves ($P_\\mp W_{1,2}P_\\pm\\ne0$ entrywise) and $W_3$ (the only commuting one) preserves them with $P_-W_3P_-=\\operatorname{diag}(1,0,0,0)$ \u2014 nonzero, non-scalar on the $2$"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3849,
+  "tag": "FT.93",
+  "state": "KEPT",
+  "quote": "$(7)$ **Diagnosis and relocation of deficit 1 (the synthesis).** The override's correction is accepted where it is true: the \"missing spinor bundle\" framing was too strong \u2014 fiberwise, the Clifford algebra and its chiral projectors are **constructible from A1/A3 with no declarati"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3850,
+  "tag": "FT.93",
+  "state": "KEPT",
+  "quote": "$(8)$ **The inventory gloss, corrected on the record.** Item 20 deficit 1's parenthetical \"(no Dirac/Clifford algebra is declared)\" is superseded: none is *declared*, but $Cl(4,0)$ frames are *derived* (clause (1)) \u2014 the deficit was never the algebra; it is the weak-covariant gra"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3898,
+  "tag": "FT.94",
+  "state": "MOVED",
+  "quote": "$(1)$ **The typed tuple is not constructible.** No read of the form $(I_{\\mathrm{topo}},I_{\\mathrm{grav}},I_{\\mathrm{Higgs}},I_{\\mathrm{Weak}},I_{\\mathrm{strong}})$ exists in the inventory: no pair-channel block carries a block-local quantum [FT.30's verdict: the geometric quantu"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3899,
+  "tag": "FT.94",
+  "state": "MOVED",
+  "quote": "$(2)$ **\"Chiral\" splits no mass read.** By FT.93(3) no weak-chiral grade exists on any carrier; and cover-class reversal chirality is invisible to both mass ans\u00e4tze \u2014 $K$, $|\\mathcal C|$, $\\Omega$, amp, norm weight, $k_{\\max}$, mask dimension and cycle signature are identical on "
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3905,
+  "tag": "FT.94",
+  "state": "MOVED",
+  "quote": "exact rationals. **Flag:** this is a census statistic over classes (amplitude enters only as a weight \u2014 F4 respected: no amplitude is a mass, FT.79(5)); it is not a particle-mass read, and no pole interpretation is available without a bridge-map interface of the FT.91 species (re"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3939,
+  "tag": "FT.95",
+  "state": "KEPT",
+  "quote": "In particular $\\langle q_{\\mathrm{core}}\\rangle=0$ ($\\omega$-odd: FT.40/D2.6) and $\\langle\\operatorname{sign}(k)\\rangle=0$ ($C$-odd: FT.87(8)) in the declared ensemble. **Parity violation is not constructible from the flicker**: producing $\\langle C\\text{-odd}\\rangle\\ne0$ require"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 3954,
+  "tag": "FT.95",
+  "state": "KEPT",
+  "quote": "**Phys.** The proposed flicker chirality is a formula that multiplies a sign by the thing the sign came from \u2014 the answer is the absolute value, every time, for every period, at every phase boundary. Strip that away and ask the real question \u2014 can the flickering gas prefer one or"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 4053,
+  "tag": "FT.101",
+  "state": "KEPT",
+  "quote": "$(5)$ **Structural parity non-invariance.** The weak couples to one A4 branch and annihilates the other: a $\\mathbb Z_2$-asymmetry of the force on the registration alphabet of the real edges; the branch exchange does not preserve the weak action. **Scope:** the force-arena $S$-pa"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 4167,
+  "tag": "Def-H.31",
+  "state": "KEPT",
+  "quote": "The phase-band $\\leftrightarrow$ generation-label correspondence is a labelling clause of this definition, not a derived selection; no particle identification (Open Gaps 5/12); no coupling to $m_{\\mathrm{pole}}$/$m_{\\mathrm{hid}}$ beyond Def-H.39's bridge slots (unconstructed)."
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 4169,
+  "tag": "Def-H.31",
+  "state": "KEPT",
+  "quote": "**Rmk (what is new, what is frozen).** All numerical coefficients are prior-canon data: the covering rows $(1,24,60\\,|\\,12,4)$, $(1,48,648,2672,3624\\,|\\,24,728,3192,264,4)$, $(1,72,852,1152\\,|\\,36,1008,840)$ [FT.68, FT.69]; the cap-census rows $c_K$ [FT.68(1),(3), FT.69(1)]; $16="
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 4269,
+  "tag": "FT.103",
+  "state": "KEPT",
+  "quote": "$(5)$ **Phase-band reading (Def-H.31(6)).** The three wall-delimited bands that carry vacua \u2014 floor band ($\\mathrm V_1$; static-crystallization side), crossover band ($\\mathrm V_2,\\mathrm V_3$; sliver $+$ mixed), thread-gas band ($\\mathrm V_4$) \u2014 are the three topological phases "
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 4303,
+  "tag": "FT.103",
+  "state": "KEPT",
+  "quote": "**Phys.** The effective potential has four exact vacua, bracketed by walls that *are* the phase diagram: every crossover boundary FT.70 computed is now a divergent barrier at which the six seal modes go soft, and every vacuum is a phase \u2014 the crystallization-side well, the thread"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 4311,
+  "tag": "FT.104",
+  "state": "KEPT",
+  "quote": "**Thm.** **External-data clause** (FT.73(5)/FT.79(4) pattern): the hierarchies compared below \u2014 charged leptons $1{:}207{:}3477$, down-type $1{:}20{:}900$, up-type $1{:}600{:}80000$ \u2014 are *supplied measured data* [EXT]; they enter no derivation, no definition, no coefficient of t"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 4340,
+  "tag": "FT.104",
+  "state": "KEPT",
+  "quote": "$(4)$ **Adjudication summary.** The bridge is constructed and machine-exact: the tree limit reproduces the covering census [FT.102(3)]; the loop layer produces the corpus's first multi-vacuum spectrum \u2014 four exact vacua, three wall-delimited phase bands, walls at FT.70's boundari"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 4361,
+  "tag": "FT.104",
+  "state": "KEPT",
+  "quote": "**Phys.** The bridge carries the census across into geometry: walls where the phase diagram has boundaries, vacua where the ensemble has phases, masses as missing information. What it does not carry is the observed hierarchy: on the computed cells the span stays of order six in $"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 4404,
+  "tag": "Def-H.32",
+  "state": "KEPT",
+  "quote": "open chains carry $S=0$ (no closed core \u2014 bookkeeping label, $\\neg$ a spin value; the $j=|k|/2$ map is Def-H.38-declared content and is *not* imported). A **chain instance** is a pair $(c,\\text{base})$ (closed: base $=$ each of the $L$ cyclic starts; open: the tuple itself). The "
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 4419,
+  "tag": "Def-H.32",
+  "state": "KEPT",
+  "quote": "the branch-state values $|\\delta\\rho|^2=(\\tfrac34,\\tfrac1{12})$ (virtual $\\Pi_{\\mathcal V}$, real $\\Pi_{\\mathcal R}/3$) computed matrix-exact [FT.107(2)]; dimensionless nats [L3(4) species]; no coupling to $m_{\\mathrm{pole}}/m_{\\mathrm{hid}}$ (item 7 residue; Def-H.39's bridge sl"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 4495,
+  "tag": "FT.107",
+  "state": "KEPT",
+  "quote": "$(2)$ **Branch-state deficits (matrix-exact).** At the canonical branch states [CT0.8 sharp readings]: $\\rho_{\\mathcal V}=\\Pi_{\\mathcal V}$: $|\\delta\\rho|^2=\\tfrac34$; $\\rho_{\\mathcal R}=\\Pi_{\\mathcal R}/3$: $|\\delta\\rho|^2=\\tfrac1{12}$; leading deficits $2|\\delta\\rho|^2=(\\tfrac3"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 4934,
+  "tag": "FT.118",
+  "state": "KEPT",
+  "quote": "**Rmk (interface definition Def-H.42, logged in HistLog \u00a7I).** Clause (2)'s tensor product is the same species of interface definition as Def-H.41, with one new factor: a triplet-attached chain carries, simultaneously and independently, a seal triplet at its termini [CT0.12, CT0."
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5061,
+  "tag": "Def-H.33",
+  "state": "KEPT",
+  "quote": "**Rmk (canonicity and the naming residue).** Among Hermitian involutions on $\\mathcal H_\\omega$ that are $\\hat\\omega$-odd and diagonal-free in the orientation basis, $\\hat\\chi$ is unique up to overall sign [FT.122(6); machine: without the diagonal-free condition the family is the"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5157,
+  "tag": "FT.123",
+  "state": "KEPT",
+  "quote": "**Rmk (interface definition Def-H.34, logged in HistLog \u00a7I).** The tensor product $\\mathcal H_{\\mathrm{int}}\\otimes\\mathcal H_\\omega$ is the same species of interface definition as Def-H.41/Def-H.42: the minimal carrier combination consistent with both structures being independen"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5159,
+  "tag": "FT.123",
+  "state": "KEPT",
+  "quote": "**Req.** Def-H.33; FT.122; Def-H.34 (carrier clause); A8 (Parts 1\u20132); EW.32, EW.33 (Part 2); D2.6 (Parts 1\u20132); CT0.7, Cor CT0.7a (Part 1); FT.22, FT.25 (Tiers F.1\u2013F.11); FT.28 (Tiers F.1\u2013F.11); FT.60 (Tiers F.20\u2013F.22); Def-H.38 (HistLog \u00a7I); EM.8 (Part 2); Kronecker-product commu"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5184,
+  "tag": "FT.123",
+  "state": "KEPT",
+  "quote": "**Phys.** The weak force lives on the internal seed; the chiral grade lives on the chain's own orientation bookkeeping; disjoint factors commute. That is the whole mechanism \u2014 and it is precisely the ingredient whose absence FT.93(7) diagnosed: a carrier on which the gauge action"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5248,
+  "tag": "FT.125",
+  "state": "KEPT",
+  "quote": "### FT.125 \u2014 The deficit ledger: deficit 1 closed at the projector level; deficit 1$'$ opened"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5251,
+  "tag": "FT.125",
+  "state": "KEPT",
+  "quote": "$$(1)\\quad\\textbf{Item 20 deficit 1 (chirality projector) \u2014 CLOSED at the projector level}\\ (\\text{under Def-H.34}).\\ \\ P_L,P_R\\ \\text{are corpus-constructible on}\\ \\mathcal H_\\omega(c);\\ \\text{they satisfy every defining property}\\ \u2014\\ \\text{idempotent, orthogonal, complete, rank"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5252,
+  "tag": "FT.125",
+  "state": "KEPT",
+  "quote": "$$\\textbf{Residue:}\\ \\text{item 21(i)'s frame section}\\ e\\mapsto\\mathcal F_e,\\ \\text{its coupling to the EW.32 transport, and a global Dirac-type operator on the emergent geometry remain unconstructed \u2014 Tier F.39 supplies the extended carrier and its grade, not the section};$$"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5253,
+  "tag": "FT.125",
+  "state": "KEPT",
+  "quote": "$$(2)\\quad\\textbf{Item 20 deficit 5 (gauge anomalies) \u2014 blocker RELOCATED, not removed.}\\ \\ \\mathrm{FT.81}(4)\\ \\text{names three prerequisites: a chiral projector, a Weyl symbol, a hypercharge-assignment read. Tier F.39 discharges only the first. The anomaly sums}\\ \\bigl(\\sum Y,\\"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5254,
+  "tag": "FT.125",
+  "state": "KEPT",
+  "quote": "$$(3)\\quad\\textbf{Item 20 deficit 6 (the neutrino row) \u2014 PARTIALLY UNBLOCKED, precisely:}\\ \\ \\operatorname{im}P_R\\ \\text{is a constructible right-handed Weyl-type carrier}\\ [\\mathrm{Def\\text{-}H.33}];\\ \\text{species content remains absent (deficits 2/3 stand) \u2014 whether the corpus"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5255,
+  "tag": "FT.125",
+  "state": "KEPT",
+  "quote": "$$(4)\\quad\\textbf{NEW deficit 1' (chiral matter assignment).}\\ \\ \\text{Which species sits in which gauge representation on which chiral ray is not derived. The SM pattern}\\ \u2014\\ \\text{left}\\ \\mathrm{SU}(2)_L\\ \\text{doublets, right singlets}\\ [\\mathrm{FT.81}(2)]\\ \u2014\\ \\text{requires a"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5256,
+  "tag": "FT.125",
+  "state": "KEPT",
+  "quote": "$$(5)\\quad\\textbf{Item 20 deficit 11 (spin\u2013statistics) \u2014 UNCHANGED.}\\ \\ \\text{A single-chain chiral grade is not an exchange operator on two-chain states; FT.80}(5)\\text{'s inventory still contains no exchange operator. Equating the grade's}\\ \\mathbb Z_2\\ \\text{with the permutati"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5260,
+  "tag": "FT.125",
+  "state": "KEPT",
+  "quote": "**Req.** FT.122, FT.123, FT.124 (this tier); FT.79, FT.80, FT.81, FT.84 (Tiers F.26\u2013F.28); FT.87(8), FT.89(2) (Tiers F.29\u2013F.30); FT.93(7) (Tiers F.31\u2013F.34); FT.117, FT.119 (Tier F.38); item 20, item 21(i), Def-H.38, Def-H.34; exact bookkeeping; machine: `checks/verify_H_chirality"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5264,
+  "tag": "FT.125",
+  "state": "KEPT",
+  "quote": "(1):\\ \\mathrm{FT.122}(1)\\text{\u2013}(5)+\\mathrm{FT.123}(1)\\text{\u2013}(2)\\ \\text{discharge the defining properties}\\ [\\text{machine}\\ \\S\\mathrm{A}\\text{\u2013}\\S\\mathrm{B}];\\qquad\\text{residue}:\\ \\text{item 21(i)'s enumeration stands \u2014 no frame section is constructed anywhere in Tier F.39}"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5270,
+  "tag": "FT.125",
+  "state": "KEPT",
+  "quote": "(3):\\ \\operatorname{im}P_R=\\mathbb C|R\\rangle\\ [\\mathrm{FT.122}(2)\\text{\u2013}(3):\\ \\text{rank}\\ 1];\\qquad\\text{species: deficits 2/3 unchanged}"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5309,
+  "tag": "FT.126",
+  "state": "KEPT",
+  "quote": "**Phys.** The weak force and the chiral grade do not interfere: the branch grading of FT.101 and the chiral grading of this tier are two independent $\\mathbb Z_2$'s on disjoint data, and the lifted projectors give each Weyl half of the chain carrier its own orientation ray. Which"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5346,
+  "tag": "FT.127",
+  "state": "KEPT",
+  "quote": "$$\\text{a bridge between the seed neutral content and the ternary read is not derived (item 20 deficit 9 records the ternary-read situation)};$$"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5357,
+  "tag": "FT.127",
+  "state": "KEPT",
+  "quote": "**Req.** CT0.7, CT0.12, CT0.13, CT0.14, CT1.2, CT1.3 (Part 1); CT1.23, CT1.25 (Part 2); A8, D1.2, D3.1, D3.4, D3.10, D4.1, D4.3, P1, P4 (Parts 1\u20132); EW.8, EW.13, EW.20, EW.24, EW.32, EW.33 (Part 2); EM.9 (Part 2); CT3.2, CT3.8, CT3.13 (Part 2); CT4.1, CT4.2, CT4.3, CT4.5, CT4.6 ("
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5427,
+  "tag": "Def-H.43",
+  "state": "KEPT",
+  "quote": "**Bars (standing).** $2|q|$ is $\\neg$a frequency \u2014 no carrier-time parameter exists; emergent time is a prerequisite [FT.131(3)]; $\\hat\\kappa$-/$\\hat\\chi$-eigenrays are $\\neg$species and $\\neg$SM chiralities \u2014 the assignment rule is the open locus; $\\omega$-even reads are not pro"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5441,
+  "tag": "FT.129",
+  "state": "KEPT",
+  "quote": "$$\\text{no such action is derived in Parts 1\u20132 (reads are labels}\\ [\\mathrm{Def\\text{-}H.15}(4)]\\text{), hence declared.}\\ \\textbf{Tension logged:}\\ \\text{the chiral rays superpose}\\ \\omega\\text{-opposed core charges}\\ (q,-q);\\ \\text{channel-level coarse-graining fuses only equal"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5448,
+  "tag": "FT.129",
+  "state": "KEPT",
+  "quote": "**Req.** Def-H.34; FT.128; FT.122(6)\u2013(7), FT.123, FT.126 (Tier F.39); Def-H.33 (Tier F.39); FT.15 (Tiers F.1\u2013F.11); FT.40 (Tiers F.12\u2013F.13); Def-H.15 (Tiers F.1\u2013F.11); FT.87(8), FT.89(2), FT.90(5) (Tiers F.29\u2013F.30); EM.9, EM.24 (Part 2); D2.6, D3.4 (Parts 1\u20132); Def-H.43 (HistLog "
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5464,
+  "tag": "FT.129",
+  "state": "KEPT",
+  "quote": "(4):\\ \\hat Q_{\\mathrm{EM}}|c\\rangle=q|c\\rangle,\\quad\\hat Q_{\\mathrm{EM}}|\\omega(c)\\rangle=-q|\\omega(c)\\rangle\\ [\\mathrm{FT.40}\\ \\text{eigenvalues}];\\qquad\\text{declaration status and tension: logged in HistLog \u00a7I (Def-H.43)}"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5545,
+  "tag": "FT.131",
+  "state": "KEPT",
+  "quote": "$$(5)\\quad\\textbf{the standing superselection tension (scope restatement):}\\qquad\\text{the chiral rays superpose}\\ \\omega\\text{-opposed core charges}\\ (q,-q)\\ [\\mathrm{FT.40}];\\ \\text{channel reads are sign-blind and fuse only equal-}q\\ \\text{states}\\ [\\mathrm{FT.15};\\ \\mathrm{FT"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5547,
+  "tag": "FT.131",
+  "state": "KEPT",
+  "quote": "**Req.** D1.4, D1.5, D3.4 (Parts 1\u20132); EM.9, EM.24 (Part 2); CT0.3 (Part 1); CT3.22 (Part 2); FT.15 (Tiers F.1\u2013F.11); FT.40 (Tiers F.12\u2013F.13); Def-H.19 (Tiers F.12\u2013F.13); Def-H.24 (Tiers F.20\u2013F.22); FT.86, FT.90 (Tiers F.29\u2013F.30); Def-H.19, Def-H.38, Def-H.43 (HistLog \u00a7I); exact "
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5565,
+  "tag": "FT.131",
+  "state": "KEPT",
+  "quote": "**Rmk (forward pointer, non-load-bearing).** The parity structures invoked by this part's census rows receive their systematic treatment in Tier F.41: the configuration-space reversal calculus with the exact commutations and both frozen CPT lifts (FT.133); the carrier bookkeeping"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5601,
+  "tag": "FT.133",
+  "state": "KEPT",
+  "quote": "$$(7)\\quad\\textbf{the parity naming (derived record):}\\ \\ \\text{the parity operation on configuration space is}\\ \\mathrm{EM.24}(2)\\text{'s}\\ P\\ \u2014\\ \\textbf{derived}\\ \\text{from the dynamic phase}\\ [\\mathrm{Def\\text{-}EM.20},\\ \\mathrm{EM.20}(1)]\\ \\text{and named inside the derived "
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5816,
+  "tag": "FT.138",
+  "state": "KEPT",
+  "quote": "**Req.** FT.60, FT.63 (Tiers F.20\u2013F.22); FT.76, FT.77 (Tiers F.26\u2013F.28); FT.22 (Tiers F.1\u2013F.11); CT2.3, CT2.5 (Part 2); Def-H.16 (Tiers F.1\u2013F.11); Def-H.37(2) (HistLog \u00a7I); FT.133, FT.137 (this tier); exact Chebyshev arithmetic in $\\mathbb Q[c]/(16c^4-20c^2+5)$, exact $\\mathbb Q("
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5866,
+  "tag": "FT.139",
+  "state": "KEPT",
+  "quote": "**Phys.** The numbers that carry the seal-side and colour-side hierarchies are cut from counts no reversal can reach \u2014 caps, dimensions, traces \u2014 so both channels sit outside the entire parity calculus, exactly invariant under all four involutions at once. Where parity does bite "
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5897,
+  "tag": "FT.141",
+  "state": "KEPT",
+  "quote": "$$\\text{the rule coupling the two}\\ \\mathbb Z_2\\text{'s \u2014 and the branch-label}\\ \\mathbb Z_2\\ [\\mathrm{FT.101},\\ \\mathrm{FT.135}]\\ \\text{and the Janus arrow}\\ [\\mathrm{FT.144}(5)] \u2014 \\text{to species is the deficit}\\ 1'\\ \\text{assignment rule}\\ [\\mathrm{FT.125}(4),\\ \\text{HistLog "
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5939,
+  "tag": "FT.141",
+  "state": "KEPT",
+  "quote": "\\text{coupling rule}:\\ \\neg\\exists\\ \\text{tag assigning grades to species}\\ [\\text{inventory scan};\\ \\mathrm{FT.125}(4),\\ \\text{HistLog \u00a7IV}/\\mathrm{FT.140}(3):\\ \\text{deficit}\\ 1'\\ \\text{content}].\\ \\blacksquare"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5942,
+  "tag": "FT.141",
+  "state": "KEPT",
+  "quote": "**Phys.** At the first rung the entire force complex is chiral, and its chirality is a count: ten dimensions speak to the metric \u2014 shear, volume, conformal, shift \u2014 and six only move the ledger. The count belongs to no force: it is the swap grading of the pair algebra, and every "
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 5967,
+  "tag": "FT.142",
+  "state": "KEPT",
+  "quote": "**Req.** A1, A8, D0.8, D1.5, D3.3, P1, P4, P5 (Parts 1\u20132); CT0.6, CT0.12, CT0.13, CT0.14, CT1.2, CT1.7 (Part 1); CT3.11 (Part 2); Def-H.4 (Tier F.2); FT.19, FT.28 (Tiers F.1\u2013F.11); FT.68(2) (Tiers F.23\u2013F.25); FT.109, FT.110, FT.111, FT.112 (Tier F.37); FT.118 (Tier F.38); FT.141 "
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 6092,
+  "tag": "FT.144",
+  "state": "KEPT",
+  "quote": "$$\\textbf{conditional}\\ (\\text{the coupling}):\\quad|c\\rangle=\\tfrac1{\\sqrt2}\\bigl(|L\\rangle+|R\\rangle\\bigr)\\quad[\\mathrm{Def\\text{-}H.34}\\ \\mathrm{Rmk};\\ \\text{machine}]:\\ \\text{the orientation rays carry no definite chirality}\\implies\\text{transferring single-arrow occupancy to "
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 6168,
+  "tag": "FT.145",
+  "state": "KEPT",
+  "quote": "$$\\text{the channel ratios of FT.143 are dimensionless with overall scale}\\ \\mu_\\nu\\ \\text{undeclared}\\ (\\mathrm{P4});\\qquad\\text{the relating equation between the channel read and the}\\ m_{\\mathrm{hid}}/\\text{pole/sector reads is undeclared and remains open}\\ [\\mathrm{FT.113}\\ \\"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 6202,
+  "tag": "FT.145",
+  "state": "KEPT",
+  "quote": "| Arrow$\\leftrightarrow$ray assignment rule | \u2014 | Open (deficit 1$'$ content) |"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 6221,
+  "tag": "FT.145",
+  "state": "KEPT",
+  "quote": "(3):\\ 3+3+5+3+1+1=16\\ [\\mathrm{CT0.12}\\ \\text{table};\\ \\text{machine}];\\qquad\\dim\\mathcal K_1=16=C_{\\mathrm{cap}}\\ [\\mathrm{CT0.14};\\ \\mathrm{CT0.6}];\\qquad\\neg\\text{-rows}:\\ \\mathrm{CT0.13}\\ \\text{activation rungs verbatim};\\ \\mathrm{FT.142}(1)\\ \\text{channel class};\\ \\text{defi"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 6340,
+  "tag": "FT.157",
+  "state": "KEPT",
+  "quote": "$$\\text{the rule coupling the gradings to species is}\\ \\neg\\text{constructed here; no species is assigned}\\ [\\text{Q1}'\\ \\text{open}];$$"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 6346,
+  "tag": "FT.157",
+  "state": "KEPT",
+  "quote": "**Rmk (naming and identification bars).** The labels *spatial branch*/*temporal branch* attach to the A4 branch and swap-eigenspace loci only \u2014 internal bookkeeping for the derived dimension and Casimir matches. Naming either branch *left* or *right* is barred [FT.101 Phys bars s"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 6348,
+  "tag": "FT.157",
+  "state": "KEPT",
+  "quote": "**Req.** A3, A4, A6, A8 (Part 1); C8 (Part 1); D0.5, D2.1 (Part 1); CT0.7, Cor CT0.7a, CT0.9, CT0.12, CT1.2, CT1.4, CT1.8 (Part 1); CT1.12 (Part 2); FT.13 (Tiers F.1\u2013F.11); FT.101 (Tier F.34); FT.125, FT.126 (Tier F.39); FT.133 (Tier F.41); FT.136, FT.141, FT.144 (Tiers F.41\u2013F.42"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 6370,
+  "tag": "FT.157",
+  "state": "KEPT",
+  "quote": "**Phys.** The three generators the corpus calls weak are the same three coefficients the metric calls shift: the weak force is literally the time\u2013space coupling block of the emergent geometry \u2014 a spatial force, triad-indexed, rotating everything it touches as vectors. On states, "
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 6404,
+  "tag": "FT.158",
+  "state": "KEPT",
+  "quote": "**Req.** CT0.12, CT1.2, CT1.4, CT1.8 (Part 1); FT.14 (Tiers F.1\u2013F.11); FT.63(4) (Tiers F.20\u2013F.22); FT.68(2), FT.70(3) (Tiers F.23\u2013F.25); FT.89 (Tier F.30); FT.109, FT.110, FT.111, FT.112, FT.113, FT.119 (Tiers F.37\u2013F.38); FT.142 (Tier F.42; the Rmk row); Def-H.41 cited as FT.110'"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 6505,
+  "tag": "FT.160",
+  "state": "MOVED",
+  "quote": "$$\\begin{array}{c|c|c}\\text{content} & \\text{tag} & \\text{status}\\\\ \\hline\\text{one signature datum}\\ (-,+,+,+)\\ \\text{at two loci} & \\mathrm{FT.156}(1) & \\text{Derived}\\ (\\mathrm{A3}\\circ\\mathrm{CT1.12};\\ \\text{machine}\\ T\\text{-table})\\\\ 7/3\\ T\\text{-split}\\ =(1;6;3)\\ \\text{dic"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 6515,
+  "tag": "FT.160",
+  "state": "MOVED",
+  "quote": "**Req.** FT.156, FT.157, FT.158, FT.159 (this tier); FT.125(4), FT.131(3), FT.141(6), FT.145(6) (Tiers F.39\u2013F.42); CT1.1 (Part 1); CT1.12 (Part 2); Cal-F; items 7/12/20/21, Q1$'$; P1, P4, P5 (Parts 1\u20132); exact integer and rational arithmetic; the machine sections \u00a7A\u2013\u00a7D green [mat"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 6522,
+  "tag": "FT.160",
+  "state": "MOVED",
+  "quote": "(2):\\ \\text{each row is the adjudication of its own tag}\\ [\\mathrm{FT.156}\\ (\\S\\mathrm A),\\ \\mathrm{FT.157}\\ (\\S\\mathrm B),\\ \\mathrm{FT.158}\\ (\\S\\mathrm C),\\ \\mathrm{FT.159}\\ (\\S\\mathrm D)];\\qquad\\text{the open rows cite their frozen tags unmodified}\\ [\\mathrm{FT.125}(4),\\ \\mathr"
+ },
+ {
+  "file": "Part3_Fermion_era.md",
+  "line": 6531,
+  "tag": "FT.160",
+  "state": "MOVED",
+  "quote": "**Phys.** The tier closes as a sector: one signature datum declared at the register and derived at the metric; one dictionary turning the $7/3$ grading into lapse, spatial metric, and shift; one rotation algebra \u2014 the weak \u2014 performing every symmetry of the spatial triad from ins"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 3,
+  "tag": "(front matter)",
+  "state": "KEPT",
+  "quote": "**Dep.** Part 1 (axioms A1\u2013A9; conventions C1\u2013C13; qubit-era definitions D0.1\u2013D1.12; calibration P1\u2013P5; pair canon CT0.*/CT1.1\u2013CT1.11b; ledger dynamics L0\u2013L5); Part 2 (definitions D2.1\u2013D4.3; geometry CT1.12\u2013CT2.11; electroweak EW.*; electromagnetic EM.*; colour CT3.1\u2013CT3.22a; sat"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6,
+  "tag": "(front matter)",
+  "state": "KEPT",
+  "quote": "**0.1 Charter.** The baryomesonic era is the layer of colour-sealed composites: the algebraic sealings of D3.9 (baryon $\\varepsilon_{ijk}q^iq^jq^k$; meson $\\delta^i{}_j\\,q^jr_i$) realized on bound-chain constituents (Def-H.4) at shared junctions. Its foundation stack, by citation"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 13,
+  "tag": "(front matter)",
+  "state": "KEPT",
+  "quote": "None introduced by this part. Inherited and undeclared: the family-channel overall scale $\\mu$ [Cal-F; FT.113, FT.119 \u2014 every ratio is $\\mu$-free]. **Declared slot, value $\\neg$issued (A-BM.9, Tier BM.20):** the bridge's dimensionless calibration ratio $\\rho_{\\mathrm B}=\\hat\\mu'^"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 152,
+  "tag": "BM.4",
+  "state": "KEPT",
+  "quote": "## Tier BM.3 \u2014 Consumption and Open Constructions"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 179,
+  "tag": "BM.6",
+  "state": "KEPT",
+  "quote": "### BM.6 \u2014 The open construction interfaces (specifications)"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 184,
+  "tag": "BM.6",
+  "state": "KEPT",
+  "quote": "$$(3)\\quad\\textbf{the}\\ \\aleph\\text{-domain choice}:\\ \\text{literal}\\ [\\mathrm{D3.3}]\\ \\text{vs chain-local}\\ \\mathrm{E1}/\\mathrm{E2}\\ [\\mathrm{Def\\text{-}H.27}]\\ \\text{\u2014 both path integrals computed and pairwise inequivalent}\\ [\\mathrm{FT.67},\\ \\mathrm{FT.74},\\ \\mathrm{FT.75}];\\"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 216,
+  "tag": "Def-BM.3",
+  "state": "KEPT",
+  "quote": "$$\\text{extension of the map beyond clauses}\\ (2)\\text{\u2013}(3)\\ \\text{requires a HistLog \u00a7I addendum entry first}\\ [\\text{Part 4 \u00a7Cal-BM rule}];\\qquad\\text{the layer adds}\\ \\neg\\text{dimensionful scale}\\ [\\mathrm{P1}]\\ \\text{and}\\ \\neg\\text{P4 parameter}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 218,
+  "tag": "Def-BM.3",
+  "state": "KEPT",
+  "quote": "**Rmk (identification discipline).** The layer answers *which name sits on which derived tuple*; it does not answer *which species sits in which gauge representation on which chiral ray* \u2014 that is deficit $1'$ [FT.125(4)] and it stays open. Naming the neutron is a labelling act o"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 227,
+  "tag": "Def-BM.3",
+  "state": "KEPT",
+  "quote": "**Phys.** The baryomesonic era names its objects. A name is pinned to a tuple the corpus already derives \u2014 the junction grammar, the sealing phase class, the charge class, the informational mass, the equation of state \u2014 and the pinning itself is the declared part. The neutron is "
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 557,
+  "tag": "BM.12",
+  "state": "MOVED",
+  "quote": "$$(5)\\quad\\textbf{the open rows touched:}\\qquad\\mathrm{BM.6}(1)\\ \\text{(the additive multi-chain charge read \u2014 Def-BM.3's classes are declared pending it)};\\qquad\\mathrm{BM.6}(5)\\ \\text{(the dynamics rates:}\\ J^\\pm\\ \\text{rates would convert BM.8(2)'s scope into dynamics)};$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 558,
+  "tag": "BM.12",
+  "state": "MOVED",
+  "quote": "$$\\text{HistLog \u00a7II items 13 (the amplitude}\\leftrightarrow\\text{spectral bridge), 17 (the momentum-space resolvent), 21(b) (the tick-rate coupling)};\\qquad\\text{deficit}\\ 1'\\ [\\mathrm{FT.125}(4)]\\ \\text{is untouched by the naming layer and stays open};$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 577,
+  "tag": "BM.12",
+  "state": "MOVED",
+  "quote": "(5):\\ \\text{ledger pointers}\\ \u2014\\ \\text{HistLog \u00a7II carries the resolution text};\\qquad(6):\\ \\text{conjunction of}\\ (1)\\text{\u2013}(5).\\ \\blacksquare"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 838,
+  "tag": "BM.17",
+  "state": "KEPT",
+  "quote": "**Rmk (identification discipline).** Clause (3) is a row of derived exact expressions attached to a Census cell and labelled by Def-BM.3. It derives no neutron property that the tuple does not already carry, imports no neutron datum, and closes no open row: the additive charge re"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 878,
+  "tag": "BM.18",
+  "state": "MOVED",
+  "quote": "$$(4)\\quad\\textbf{the open rows touched:}\\qquad\\mathrm{BM.6}(1)\\ \\text{(the additive multi-chain charge read}\\ \u2014\\ \\mathrm{BM.17}(2)\\text{'s charge class waits on it)};\\qquad\\mathrm{BM.6}(5)\\ \\text{(the dynamics rates)};$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 879,
+  "tag": "BM.18",
+  "state": "MOVED",
+  "quote": "$$\\text{the general composite additivity law for}\\ E_{\\mathrm{int}}\\ [\\mathrm{BM.17}(6);\\ \\mathrm{Def\\text{-}BM.1}\\ \\text{read clause}];\\qquad\\text{HistLog \u00a7II items 13, 17, 21(b)};\\qquad\\text{deficit}\\ 1'\\ [\\mathrm{FT.125}(4)];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 899,
+  "tag": "BM.18",
+  "state": "MOVED",
+  "quote": "(4):\\ \\text{ledger pointers}\\ \u2014\\ \\text{HistLog \u00a7II carries the resolution text}"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 908,
+  "tag": "BM.18",
+  "state": "MOVED",
+  "quote": "**Phys.** The lock holds where a lock can hold. Two dimensionless products \u2014 the squared width times the curvature scale, and the width times the comparison radius \u2014 are pure functions of an integer edge count, with no hop length, no internal parameter and no measured number in t"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 938,
+  "tag": "Def-BM.5",
+  "state": "KEPT",
+  "quote": "\\text{Definition block: the constitutive clause is}\\ (1)\\text{'s sector-conditioned configuration set};\\ \\text{the inherited clauses are Def-H.32's}\\ (1)\\text{\u2013}(2)\\ \\text{and scopes}\\ (\\mathrm{S1})\\text{\u2013}(\\mathrm{S4}),\\ \\text{already dispositioned}\\ [\\text{HistLog \u00a7I}];\\ \\text{"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 947,
+  "tag": "Def-BM.6",
+  "state": "KEPT",
+  "quote": "**Def.** An extension of Def-BM.3's identification layer to the three derived channel triplets, recorded by a HistLog \u00a7I addendum entry as Def-BM.3(7) requires. A name attaches to a *line of a derived spectrum*, ordered by that spectrum; no name attaches to a mass value."
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 957,
+  "tag": "Def-BM.6",
+  "state": "KEPT",
+  "quote": "$$(7)\\quad\\textbf{scope:}\\qquad\\text{the names occur in Part 4 only}\\ [\\mathrm{Def\\text{-}BM.3}(7)\\ \\text{extended}];\\qquad\\text{further extension requires a further HistLog \u00a7I addendum entry}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 961,
+  "tag": "Def-BM.6",
+  "state": "KEPT",
+  "quote": "**Req.** FT.79(5), FT.109, FT.110, FT.111, FT.112, FT.113, FT.118, FT.119, FT.120(6), FT.142, FT.143, FT.144, FT.158 (Part 3); Def-BM.3 (this part); P4, P5 (Parts 1\u20132); Cal-F; HistLog \u00a7I (the addendum), \u00a7II item 13 (pointer); exact identities in $\\mathbb Q[c,s,r]/(c^2{+}s^2{-}1,\\"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 968,
+  "tag": "Def-BM.6",
+  "state": "KEPT",
+  "quote": "**Phys.** Three channels, three triplets, one mechanism: a $C_3$-covariant seal bilinear whose shape covariance forces, whose normalization the seal dimension fixes, and whose angle is a ratio of spatial counts. The ratio the charged-lepton family is known for falls out as $6/9$ "
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 1110,
+  "tag": "BM.22",
+  "state": "KEPT",
+  "quote": "$$\\text{the flipping block exists only under Def-H.43's declared read promotion}\\ [\\text{HistLog \u00a7I}];\\qquad\\textbf{status: conditional on that declaration, not on any new one};$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 1116,
+  "tag": "BM.22",
+  "state": "KEPT",
+  "quote": "**Req.** CT0.12, CT1.1, CT1.2 (Part 1); EM.9 (Part 2); Def-H.34, Def-H.43, FT.122(6), FT.123, FT.128(2), FT.129(2), FT.129(5), FT.130(2), FT.130(5), FT.130(6), FT.130(7) (Part 3); Def-BM.3 (this part); HistLog \u00a7I (Def-H.43's disposition), \u00a7II Q10 (pointer); exact $\\mathbb Q(i)$ b"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 1132,
+  "tag": "BM.22",
+  "state": "KEPT",
+  "quote": "**Phys.** Put the static force matrix on the two charge classes and they come apart in exactly one place. Both classes share the same internal block $h$; the promoted read adds a chiral-flipping block equal to the core charge times the identity, so the neutral class has no flippi"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 1198,
+  "tag": "BM.24",
+  "state": "MOVED",
+  "quote": "$$(2)\\quad\\textbf{the declared rows:}\\qquad\\mathrm{Def\\text{-}BM.6}\\text{'s name}\\leftrightarrow\\text{line attachment}\\ (\\text{HistLog \u00a7I addendum},\\ \\mathrm{Def\\text{-}BM.3}(7)\\text{'s rule});\\qquad\\mathrm{Def\\text{-}H.43}\\text{'s read promotion}\\ [\\mathrm{BM.22}(5)];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 1199,
+  "tag": "BM.24",
+  "state": "MOVED",
+  "quote": "$$\\mathrm{Def\\text{-}BM.3}(4)\\text{'s charge-class labels, pending the additive read}\\ [\\mathrm{BM.6}(1)];\\qquad\\mathrm{Def\\text{-}H.32}\\text{'s own constitutive clauses}\\ [\\text{HistLog \u00a7I}];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 1205,
+  "tag": "BM.24",
+  "state": "MOVED",
+  "quote": "$$(5)\\quad\\textbf{the open rows touched:}\\qquad\\mathrm{BM.6}(1)\\ \\text{(the additive charge read)};\\qquad\\mathrm{BM.6}(5)\\ \\text{(the dynamics rates: the weights are derived from}\\ \\varepsilon_q,\\ \\text{the per-tick scale is not)};$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 1206,
+  "tag": "BM.24",
+  "state": "MOVED",
+  "quote": "$$\\text{HistLog \u00a7II items 13 (the amplitude}\\leftrightarrow\\text{spectral bridge}\\ =\\ \\text{the mass form}),\\ 17\\ \\text{(the momentum-space resolvent)};\\qquad\\text{deficit}\\ 1'\\ [\\mathrm{FT.125}(4):\\ \\text{which line sits on which chiral ray and in which gauge representation}];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 1212,
+  "tag": "BM.24",
+  "state": "MOVED",
+  "quote": "**Req.** D1.8 (Part 1); P1, P4, P5 (Parts 1\u20132); Def-H.32, Def-H.43, FT.125(4) (Part 3); Def-BM.3, Def-BM.5, Def-BM.6, BM.6(1), BM.6(5), BM.19, BM.20, BM.21, BM.22, BM.23 (this part); Census FT.35(2), FT.42(5), FT.107(3) (row-wise); HistLog \u00a7I, \u00a7II items 13/17, Q10 (pointers); \u00a7Ca"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 1225,
+  "tag": "BM.24",
+  "state": "MOVED",
+  "quote": "(5):\\ \\text{ledger pointers}\\ \u2014\\ \\text{HistLog \u00a7II carries the resolution text}"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 1500,
+  "tag": "BM.28",
+  "state": "KEPT",
+  "quote": "**Phys.** The charge constraint does exactly what a constraint on a sum does: it changes how many microscopic sign assignments land in each class. For one chain the neutral read has two realizations and each charged read one; for three chains bound by $q_1+q_2+q_3=Q$ the full cen"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 1511,
+  "tag": "BM.29",
+  "state": "MOVED",
+  "quote": "$$(4)\\quad\\textbf{the open rows touched:}\\qquad\\mathrm{BM.6}(1)\\ \\text{(the additive charge read, on which both class labels wait)};\\qquad\\text{deficit}\\ 1'\\ [\\mathrm{FT.125}(4):\\ \\text{which line sits on which chiral ray}];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 1512,
+  "tag": "BM.29",
+  "state": "MOVED",
+  "quote": "$$\\text{HistLog \u00a7II items 13 (the amplitude}\\leftrightarrow\\text{spectral bridge), 17 (the momentum-space resolvent)};\\qquad\\text{no inter-sector dynamics}\\ [\\mathrm{BM.27}(7)];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 1529,
+  "tag": "BM.29",
+  "state": "MOVED",
+  "quote": "(4):\\ \\text{ledger pointers}\\ \u2014\\ \\text{HistLog \u00a7II carries the resolution text}"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 1576,
+  "tag": "Def-BM.8",
+  "state": "KEPT",
+  "quote": "**Phys.** The additive charge read the era listed as an open construction is now built, and it costs nothing: sum the ternary endpoint reads of the constituents, restrict to sealed supports, and the three clauses the specification demanded are satisfied by inspection. Two things "
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 1591,
+  "tag": "BM.30",
+  "state": "KEPT",
+  "quote": "$$\\text{adoption requires a HistLog \u00a7I addendum entry}\\ [\\text{Census FT.76's priced-variant pattern};\\ \\mathrm{BM.6}(4)\\ \\text{precedent}];\\qquad\\textbf{no route is adopted here};$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 1593,
+  "tag": "BM.30",
+  "state": "KEPT",
+  "quote": "$$(7)\\quad\\textbf{the status of the adjudication:}\\qquad\\textbf{derived:}\\ (1)\\text{\u2013}(4),\\ (6);\\qquad\\textbf{open:}\\ \\text{the route choice}\\ (5),\\ \\text{the amplitude}\\leftrightarrow\\text{mass bridge}\\,\\ \\text{the gauge coupling of}\\ Q\\;$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 1761,
+  "tag": "BM.33",
+  "state": "MOVED",
+  "quote": "$$(4)\\quad\\textbf{the open rows touched:}\\qquad\\text{the junction-gluing census at}\\ N\\ge4\\ [\\mathrm{BM.2}(3);\\ \\text{Census FT.50}]:\\ \\text{the mixed-sealing ensemble's reads are not computed here};$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 1762,
+  "tag": "BM.33",
+  "state": "MOVED",
+  "quote": "$$\\mathrm{BM.6}(1)\\ \\text{is discharged by Def-BM.8 but its dynamics coupling remains open}\\ [\\mathrm{BM.6}(5)];\\qquad\\text{item 13 (the amplitude}\\leftrightarrow\\text{spectral bridge)}\\ \\text{governs whether}\\ (5)\\text{'s dissolved-digon rows can carry a mass read at all};$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 1777,
+  "tag": "BM.33",
+  "state": "MOVED",
+  "quote": "(4):\\ \\text{ledger pointers}\\ \u2014\\ \\text{HistLog \u00a7II carries the resolution text}"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 1920,
+  "tag": "BM.35",
+  "state": "KEPT",
+  "quote": "$$\\neg\\exists\\ \\text{a theorem equating the bit currency}\\ (\\ln2\\ \\text{per directed edge})\\ \\text{and the angle currency}\\ (\\Theta_R):\\qquad\\text{the relating equation stays open}\\ [\\text{HistLog \u00a7II item 7; Q2 pointer}];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 1930,
+  "tag": "BM.35",
+  "state": "KEPT",
+  "quote": "**Rmk (three currencies, one reference point).** The ledger deficit counts the crystallized bits \u2014 $\\ln2$ per directed edge; the branch-state deficit counts the uncrystallized channels at $\\tfrac32$ nats each [FT.107(2)]; the angle deficit counts the holonomy against flatness [FT"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 1984,
+  "tag": "BM.36",
+  "state": "KEPT",
+  "quote": "$$\\boxed{\\ \\textbf{the Yukawa-like coupling}\\ \u2014\\ \\text{the family-profile map and its scale}\\ \u2014\\ \\textbf{remains an open gap}\\ }\\qquad[\\text{HistLog \u00a7II items 7, 13; Q2 pointers}];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 1987,
+  "tag": "BM.36",
+  "state": "KEPT",
+  "quote": "**Rmk (what the dimension ratios can and cannot carry).** The ladder $6\\subset16\\subset17\\subset25$ and its ratios $(\\tfrac13,\\,8,\\,\\tfrac1{25})$ count activation capacity \u2014 how many generator directions the ledger can switch on at each rung. A strength read would require a coupl"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2014,
+  "tag": "BM.36",
+  "state": "KEPT",
+  "quote": "(6):\\ \\text{the inventory scan of}\\ \\mathrm{Def\\text{-}BM.6}\\ \\text{and the channel tags}\\ \\mathrm{FT.109}\\text{--}\\mathrm{FT.119},\\ \\mathrm{FT.142}\\text{--}\\mathrm{FT.145}:\\ \\neg\\exists\\ \\text{a clause outputting a transport profile}\\ [\\text{machine: token scan}];\\qquad\\text{the"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2048,
+  "tag": "BM.37",
+  "state": "KEPT",
+  "quote": "$$\\text{the inter-family content remains open}\\ [\\mathrm{BM.36}(6)].$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2050,
+  "tag": "BM.37",
+  "state": "KEPT",
+  "quote": "**Rmk (what the closure does not do).** The closure retracts no route: every route value stands as a derived exact rational, and BM.30(5)'s read-choice row is untouched \u2014 adopting any route as \"the mass\" still requires a HistLog \u00a7I addendum entry. What the closure establishes is "
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2080,
+  "tag": "BM.37",
+  "state": "KEPT",
+  "quote": "**Phys.** Three exact rationals \u2014 one, four thirds, fifty-eight thirteenths \u2014 came out of the charge-constrained ensemble, and the temptation is to read them as mass ratios. The corpus closes that trap the only way it closes anything: by classification. Each of the three routes i"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2087,
+  "tag": "BM.38",
+  "state": "MOVED",
+  "quote": "$$(1)\\quad\\textbf{the answers:}\\qquad\\begin{array}{l|l}\\text{the kinetic energy} & \\mathrm{BM.34}:\\ \\textbf{derived from the emergent metric}\\ \u2014\\ \\text{the ADM split by Schur, the master mass-shell identity, the Eulerian energy}\\\\ & E=N\\sqrt{m^2+\\gamma^{ij}p_ip_j}-N^ip_i,\\ \\text{"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2093,
+  "tag": "BM.38",
+  "state": "MOVED",
+  "quote": "$$(3)\\quad\\textbf{the open rows touched, not closed:}\\qquad\\text{item 7}\\ \u2014\\ \\text{the relating equation across the mass reads: the three deficit currencies remain unconverted}\\ [\\mathrm{BM.35}\\ \\mathrm{Rmk}];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2094,
+  "tag": "BM.38",
+  "state": "MOVED",
+  "quote": "$$\\text{item 13}\\ \u2014\\ \\text{the amplitude}\\leftrightarrow\\text{spectral/mass bridge: route}\\ (\\mathrm{iii})\\text{'s and}\\ Q=\\tfrac23\\text{'s mass forms};\\qquad\\mathrm{Q2}\\ \u2014\\ \\text{the mass-mechanism inventory: the dispersion read joins the read-class taxonomy}\\ [\\mathrm{FT.84}(1)"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2117,
+  "tag": "BM.38",
+  "state": "MOVED",
+  "quote": "**Phys.** The tier's verdict in one sentence: a sealed composite's energy is now a derived object from end to end, and its mass ratios across families are not. The vacuum is the reference \u2014 maximal in entropy, flat in geometry; crystallization books a deficit against it, and the "
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2141,
+  "tag": "Def-BM.11",
+  "state": "KEPT",
+  "quote": "$$\\text{logged as HistLog \u00a7I/\u00a7II.4 addendum}\\ (\\text{A-BM.4})\\ \\text{before use};$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2144,
+  "tag": "Def-BM.11",
+  "state": "KEPT",
+  "quote": "$$\\textbf{BM.36}(6)\\textbf{'s gap label is discharged:}\\quad\\text{the family-profile map exists as this construction};\\qquad\\text{what remains open is the scale data}\\ (\\mathrm{P4},\\ \\neg\\text{declared})\\ \\text{and item 7},\\ \\neg\\text{the map}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2148,
+  "tag": "Def-BM.11",
+  "state": "KEPT",
+  "quote": "**Req.** D1.4, D2.12 (Parts 1\u20132); EW.8, EW.20, EW.32, EW.33 (Part 2); P4, P5 (Parts 1\u20132); Def-H.37(1), FT.111(2), FT.112, FT.113, FT.119(1), FT.142(5), FT.143, FT.145(3), FT.158(1) (Part 3); Def-BM.4(1), Def-BM.6, BM.36(4), BM.36(5), BM.36(6) (this part); Cal-F; HistLog \u00a7I, \u00a7II.4"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2153,
+  "tag": "Def-BM.11",
+  "state": "KEPT",
+  "quote": "**Phys.** The map the corpus named as its open construction is built, and it is made of pieces the derivations already produced. The family rotation is the inner $C_3$ of the weak algebra \u2014 the same rotation that forces the cosine shape of every channel spectrum \u2014 so a transport "
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2175,
+  "tag": "BM.39",
+  "state": "KEPT",
+  "quote": "$$\\text{the order is read-relative; neither species is adopted as ``the mass''}\\ [\\mathrm{Def\\text{-}BM.11}(7);\\ \\text{item 7 pointer}];\\qquad Q=\\tfrac23\\ \\text{is the structure invariant of}\\ \\mathrm{Def\\text{-}BM.6}(4),\\ \\neg\\text{a mass claim}\\ [\\mathrm{FT.143}(4)];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2280,
+  "tag": "BM.41",
+  "state": "KEPT",
+  "quote": "$$\\textbf{the line index within the}\\ \\nu\\textbf{-triplet is}\\ \\neg\\textbf{derived}\\ [\\text{deficit 4:}\\ \\neg\\text{a mixing matrix}\\ [\\mathrm{FT.145}(3)]];\\qquad\\mathrm{BM.23}(6)\\ \\text{is upgraded on record: admissible}\\ \\longrightarrow\\ \\text{conditionally forced}\\ [\\text{its R"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2456,
+  "tag": "BM.43",
+  "state": "KEPT",
+  "quote": "**Phys.** Every member of the vertex gravitates, and the corpus writes each gravity in monomials. The two baryon rows are numbers: six bits over $\\mathfrak h$, a density of twelve ninety-six $(\\ln2)^4$ over $\\mathfrak h^4$, a horizon read of three $\\mathfrak h$, a lock of seventy"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2520,
+  "tag": "BM.45",
+  "state": "KEPT",
+  "quote": "$$(7)\\quad\\textbf{the open rows touched, not closed:}\\qquad\\text{item 7}\\ \u2014\\ \\text{the relating equation across the read species}\\ [\\mathrm{Def\\text{-}BM.11}(7);\\ \\mathrm{BM.35}\\ \\mathrm{Rmk}\\ \\text{stands}];\\qquad\\text{item 13}\\ \u2014\\ \\text{the amplitude}\\leftrightarrow\\text{mass b"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2521,
+  "tag": "BM.45",
+  "state": "KEPT",
+  "quote": "$$\\text{item 19}\\ \u2014\\ \\text{the}\\ \\mathrm{Sym}^k\\ \\text{ledger mechanism}\\ [\\mathrm{FT.55}(4);\\ \\mathrm{BM.42}(7)];\\qquad\\text{deficit}\\ 1'\\ \u2014\\ \\text{the gauge coupling of}\\ Q\\ [\\mathrm{BM.41}(3)];\\qquad\\text{deficit 4}\\ \u2014\\ \\text{the mixing matrix}\\ [\\mathrm{FT.145}(3);\\ \\mathrm{B"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2522,
+  "tag": "BM.45",
+  "state": "KEPT",
+  "quote": "$$\\mathrm{Q2}\\ \u2014\\ \\text{the mass-mechanism inventory: the transport-species family form joins the read-class taxonomy}\\ [\\mathrm{FT.84}(1)\\ \\text{pattern}];\\qquad\\text{the read specification that would open the decay kinematics}\\ [\\mathrm{BM.41}(4)(\\mathrm e)]:\\ \\text{a \u00a7I addend"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2529,
+  "tag": "BM.45",
+  "state": "KEPT",
+  "quote": "**Req.** P1, P4, P5 (Parts 1\u20132); A6, D1.4, D1.8, D2.9 (Parts 1\u20132); EM.11 (Part 2); CT2.6 (Part 2); Def-H.38, FT.135(4), FT.144(2), FT.144(5), FT.145(3), FT.84(1), FT.55(4) (Part 3); Census FT.35(2), FT.44(4), FT.49(3) (row-wise); Def-BM.3, Def-BM.6, Def-BM.7, Def-BM.11, BM.2(1), "
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2561,
+  "tag": "Def-BM.12",
+  "state": "KEPT",
+  "quote": "$$(7)\\quad\\textbf{status and scope:}\\qquad\\textbf{constructed}\\ \u2014\\ \\mathrm{Def\\text{-}BM.8}(8)\\text{'s named open construction (the coupling of}\\ Q\\ \\text{to a gauge field)}\\ \\text{is discharged for the sealed classes at static leading order};$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2596,
+  "tag": "BM.46",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a P4 addition},\\ \\neg\\text{a new dimensionful scale}\\ [\\mathrm{P1}];\\qquad\\text{the open rows: the numerical value of}\\ e\\ (\\text{a calibration step requiring one datum}\\ [\\mathrm{EM.25}(7)]),\\ \\text{the internal-multipole resolution}\\ ((2)),\\ \\text{the dynamics of}\\ "
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2683,
+  "tag": "BM.48",
+  "state": "KEPT",
+  "quote": "$$\\text{the}\\ n\\text{-ladder is a chart-side spectrum};\\qquad m_r\\ \\text{of a lepton--baryon pair requires the lepton mass read}\\ [\\mathrm{BM.43}(2):\\ \\text{symbolic};\\ \\text{item 7 residue}];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2768,
+  "tag": "BM.50",
+  "state": "MOVED",
+  "quote": "$$(3)\\quad\\textbf{the open rows touched, not closed:}\\qquad\\text{the numerical value of}\\ e\\ [\\mathrm{EM.25}(7):\\ \\text{a calibration step requiring one datum};\\ \\mathrm{P5}];\\qquad\\text{the dynamics of}\\ Q\\ [\\mathrm{BM.6}(5)];\\qquad\\text{an EM bound channel}\\ [\\mathrm{BM.48}(3)]"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 2822,
+  "tag": "BM.51",
+  "state": "KEPT",
+  "quote": "**Rmk (why the zero needs no bridge).** The relating equation between the deficit species and the informational species is open, and this tier does not touch it \u2014 because a splitting claim would need the bridge while a degeneracy claim does not: two rows sharing every input of a "
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 3004,
+  "tag": "BM.55",
+  "state": "KEPT",
+  "quote": "(4):\\ \\mathrm{BM.28}(7)/\\mathrm{Def\\text{-}BM.8}(5),\\ \\mathrm{Def\\text{-}BM.3},\\ \\text{item 7 pointer, and the}\\ \\mathrm{Def\\text{-}BM.11}\\ \\text{locus clause re-cited};\\qquad(5):\\ \\mathrm{BM.49}(1)\\text{--}(2)\\ \\text{re-cited};\\qquad(6):\\ \\text{the status record}.\\ \\blacksquare"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 3017,
+  "tag": "BM.56",
+  "state": "MOVED",
+  "quote": "$$(3)\\quad\\textbf{the open rows touched, not closed:}\\qquad\\text{the numerical value of}\\ e\\ [\\mathrm{EM.25}(7):\\ \\text{one calibration datum};\\ \\mathrm{P5}];\\qquad\\text{item 7}\\ \u2014\\ \\text{the deficit/inertial-to-informational conversions}\\ [\\mathrm{BM.51}(5)];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 3022,
+  "tag": "BM.56",
+  "state": "MOVED",
+  "quote": "$$\\text{amplitude}\\ne\\text{mass}\\ [\\mathrm{FT.79}(5)];\\qquad\\text{rung}\\ne\\text{scale}\\ [\\mathrm{D0.8}];\\qquad\\text{topology labels are internal bookkeeping}\\ [\\mathrm{Def\\text{-}H.32}(4)];\\qquad\\neg\\text{a HistLog disposition imported as premise}\\ (\\text{item 7 is a pointer});$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 3087,
+  "tag": "Def-BM.13",
+  "state": "KEPT",
+  "quote": "$$\\textbf{open:}\\ \\text{the triple-level resolution}\\ \u2014\\ \\text{the chart does not resolve which triple a class member occupies, because the end signs carry no position datum}\\ [\\mathrm{D3.4};\\ \\mathrm{BM.46}(2)\\ \\text{resolution residue}]:\\ \\text{the class read of}\\ (4)\\ \\text{is"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 3130,
+  "tag": "Def-BM.14",
+  "state": "KEPT",
+  "quote": "$$\\text{the ordering is derived}\\ [(4)];\\ \\text{the name attachment is a label on a derived structural tuple and carries no datum}\\ [\\mathrm{Def\\text{-}BM.3}\\ \\text{pattern};\\ \\mathrm{Def\\text{-}BM.3}(7)\\ \\text{scope}];\\qquad\\textbf{logged as HistLog \u00a7II.4 addendum}\\ (\\mathrm{A\\t"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 3134,
+  "tag": "Def-BM.14",
+  "state": "KEPT",
+  "quote": "$$\\textbf{open:}\\ \\text{the scale relating the defect and informational currencies}\\;\\qquad\\text{the flavour composition of the baryon classes}\\;\\qquad\\text{the materialization scope}\\ \\mathrm{M1}/\\mathrm{M2}\\ [\\mathrm{Def\\text{-}H.20}]\\ \\text{is inherited at every use}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 3401,
+  "tag": "BM.60",
+  "state": "KEPT",
+  "quote": "$$(10)\\quad\\textbf{status:}\\qquad\\textbf{derived:}\\ (1)\\text{--}(8);\\qquad\\textbf{declared:}\\ \\mathrm{Def\\text{-}BM.14}(8)\\text{'s name attachment alone};\\qquad\\textbf{open:}\\ \\text{the currency relating equation}\\ (6),\\ \\text{the flavour composition}\\,\\ \\text{the scales}\\ [\\math"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 3597,
+  "tag": "BM.63",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a measured lifetime, mass difference or endpoint enters}\\ [\\mathrm{P5}];\\qquad\\neg\\text{external seconds}\\ [\\mathrm{BM.44}(3)];\\qquad\\neg\\text{a P4 addition};\\qquad\\text{the open rows: the numerical value of}\\ e,\\ \\text{the lepton floors}\\ E_{\\mathrm{int}}^{(\\ell)},E_"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 3631,
+  "tag": "BM.64",
+  "state": "MOVED",
+  "quote": "$$(1)\\quad\\textbf{the answers:}\\qquad\\begin{array}{l|l}\\text{the vertex asymmetry} & \\mathrm{BM.57}:\\ \\textbf{the count derived, the mechanism refuted}\\ \u2014\\ |A_3|=3\\ (2\\ \\text{nontrivial})\\ \\text{against}\\ |S_1\\times S_1|=1\\ (0\\ \\text{nontrivial}),\\ \\text{asymmetry}\\ 2\\ \\text{by b"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 3642,
+  "tag": "BM.64",
+  "state": "MOVED",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ (\\text{items}\\ 7,\\ 13,\\ \\mathrm{Q2},\\ \\text{deficits}\\ 1',\\ 4\\ \\text{are pointers});\\qquad\\text{the extra-axiomatic list}\\ [\\text{A \u00a70.2a}]\\ \\text{gains no member};$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 3643,
+  "tag": "BM.64",
+  "state": "MOVED",
+  "quote": "$$\\textbf{the declarations this tier adds:}\\qquad\\text{exactly one name attachment}\\ [\\mathrm{Def\\text{-}BM.14}(8):\\ \\text{the branch labels};\\ \\text{logged as the \u00a7II.4 addendum}\\ \\mathrm{A\\text{-}BM.6}\\ \\text{before use},\\ \\text{as}\\ \\mathrm{Def\\text{-}BM.3}(7)\\ \\text{requires}"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 3978,
+  "tag": "BM.69",
+  "state": "KEPT",
+  "quote": "$$\\textbf{the same direction as the transport row};\\qquad\\text{and}\\ \\neg\\textbf{addable to the informational assembly:}\\ \\ \\text{a cross-currency addition is the category item 7 bars}\\qquad[\\mathrm{BM.35}(5);\\ \\mathrm{BM.60}(6);\\ \\mathrm{BM.37}(2);\\ \\text{pointers}];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4049,
+  "tag": "BM.70",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a measured lifetime, mass difference or endpoint enters}\\ [\\mathrm{P5}];\\qquad\\neg\\text{a P4 addition};\\qquad\\neg\\text{a new dimensionful scale}\\ [\\mathrm{P1}];\\qquad\\text{the open rows:}\\ E_{\\mathrm{int}}^{(\\ell)},\\ E_{\\mathrm{int}}^{(\\nu)},\\ \\text{the}\\ \\nu\\text{-li"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4070,
+  "tag": "BM.70",
+  "state": "KEPT",
+  "quote": "**Phys.** The audit asked whether the two-bit daughter floor is a theorem or an artifact of an unfinished lepton read, and the answer separates the two cleanly. It is a theorem wherever the question is formed: the emitted charged member is a line of the lepton channel, every chan"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4093,
+  "tag": "BM.71",
+  "state": "KEPT",
+  "quote": "$$\\text{and the bridge's pole-currency content is unformed without the relating equation}\\qquad[\\mathrm{BM.69}(3),(4);\\ \\text{item 7 pointer}];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4096,
+  "tag": "BM.71",
+  "state": "KEPT",
+  "quote": "$$(\\mathrm i)\\quad\\textbf{the sign of}\\ m_n-m_p:\\qquad>0\\ \\ \\text{on the sub-critical branch}\\ \\varepsilon_{\\mathrm{EM}}<\\varepsilon_{\\mathrm{crit}}(c);\\qquad=0\\ \\ \\text{at}\\ \\varepsilon_{\\mathrm{crit}}(c);\\qquad<0\\ \\ \\text{above}\\qquad[\\mathrm{BM.62}(6),(9);\\ \\mathrm{BM.65}(3)\\t"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4136,
+  "tag": "BM.72",
+  "state": "MOVED",
+  "quote": "(1)\\quad\\textbf{the answers:}\\qquad\\begin{array}{l|l}\\text{the operator EM lift} & \\mathrm{BM.66}:\\ \\textbf{derived}\\ \u2014\\ \\operatorname{Tr}\\widehat F=2c_0\\ \\text{charge-blind};\\ \\ I_F=4\\widehat Q^2;\\ \\ \\tfrac{E_{\\mathrm{int}}}4c\\,\\varepsilon_{\\mathrm{EM}}\\ln2\\,I_F\\ \\text{reproduce"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4153,
+  "tag": "BM.72",
+  "state": "MOVED",
+  "quote": "$\\neg\\text{a HistLog disposition imported as premise}\\ (\\text{items}\\ 7,\\ 13,\\ 19,\\ \\mathrm{Q2},\\ \\text{deficits}\\ 1',\\ 4\\ \\text{are pointers});\\qquad\\text{the extra-axiomatic list}\\ [\\text{A \u00a70.2a}]\\ \\text{gains no member};\\qquad\\neg\\text{a Yukawa-type object exists or is added}"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4157,
+  "tag": "BM.72",
+  "state": "MOVED",
+  "quote": "$$\\text{its opening is a specification act, which the corpus prices, audits, and}\\ \\neg\\text{performs};\\qquad\\text{the ledger's open items stay open with sharper names}\\ \u2014\\ (\\mathrm R1)\\text{--}(\\mathrm R3),\\ \\text{the regime-scoped fiber, the lepton floors, the numerical value o"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4173,
+  "tag": "BM.72",
+  "state": "MOVED",
+  "quote": "**Phys.** The tier's verdict is two outcomes conjoined. The bridge is partially derived: the EM correction is an operator identity with a charge-blind linear trace and a four-Q-squared invariant, the joint entropy is a fiber cardinality whose stationary geometric factor is exactl"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4179,
+  "tag": "BM.72",
+  "state": "MOVED",
+  "quote": "**Locus.** This tier consumes the Tier BM.15 baseline unmodified and walks the two doors the corpus priced and declined: the deficit-$1'$ assignment rule \u2014 named missing at $\\mathrm{FT.125}(4)$, $\\mathrm{FT.141}(6)$, $\\mathrm{FT.144}(5)$ and $\\mathrm{FT.157}(4)$, with its forced "
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4181,
+  "tag": "BM.72",
+  "state": "MOVED",
+  "quote": "**Standing rows.** The refutations of $\\mathrm{BM.57}(8)$ and $\\mathrm{BM.58}(4)$ stand closed and are $\\neg$reopened. $\\mathrm{BM.70}(4)$'s dichotomy and $\\mathrm{BM.71}(2)$'s no-go stand on the reads formed at their loci; $\\mathrm{BM.77}(7)$ records their rescope under the spec"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4233,
+  "tag": "BM.73",
+  "state": "KEPT",
+  "quote": "(7)\\quad\\textbf{status:}\\qquad\\textbf{derived:}\\ (1),\\ (3)\\text{--}(6)\\ \\ [(3)\\ \\text{given}\\ (2)];\\qquad\\textbf{declared: exactly one naming bit}\\ (2)\\ \u2014\\ \\text{logged as the \u00a7II.4 addendum A-BM.7 before use};"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4236,
+  "tag": "BM.73",
+  "state": "KEPT",
+  "quote": "\\textbf{deficit}\\ 1'\\ \\textbf{is closed at the assignment level:}\\qquad\\text{the coupling rule exists}\\ \u2014\\ \\mathrm{Q1}'\\text{'s root is issued};\\qquad\\text{the downstream rows unblock at their own loci and stay open:}\\ \\text{deficits}\\ 2,\\ 3,\\ 4\\ [\\mathrm{FT.125}(6)],\\ \\ \\mathrm{"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4274,
+  "tag": "BM.74",
+  "state": "KEPT",
+  "quote": "$$\\textbf{the Casimir ladder:}\\qquad\\frac k2\\Bigl(\\frac k2+1\\Bigr)\\qquad[\\mathrm{FT.60}(3)];\\qquad\\text{the multiplicity--winding coupling itself stays a declared interface}\\ [\\mathrm{Def\\text{-}H.38};\\ \\text{item 19 pointer}]\\ \u2014\\ \\neg\\text{derived here},\\ \\neg\\text{reopened};"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4298,
+  "tag": "BM.74",
+  "state": "KEPT",
+  "quote": "$$(6)\\quad\\textbf{what is not obtained:}\\qquad\\neg\\text{a spin--statistics theorem}\\ \u2014\\ \\text{no exchange operator exists}\\ [\\mathrm{FT.80}(5);\\ \\mathrm{FT.125}(5)];\\qquad\\neg\\text{a fixed}\\ j\\ \\text{for the baryon card}\\ \u2014\\ \\text{the rung datum is open}\\ [\\mathrm{BM.68}(6)\\ \\tex"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4300,
+  "tag": "BM.74",
+  "state": "KEPT",
+  "quote": "$$(7)\\quad\\textbf{status:}\\qquad\\textbf{derived given A-BM.7:}\\ (2)\\text{--}(5);\\qquad\\textbf{inherited declarations:}\\ \\mathrm{Def\\text{-}H.38}\\text{'s multiplicity coupling}\\ [\\text{item 19 pointer}]\\ \\text{and the naming rows}\\ [\\mathrm{Def\\text{-}BM.3};\\ \\mathrm{Def\\text{-}BM"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4325,
+  "tag": "BM.74",
+  "state": "KEPT",
+  "quote": "**Phys.** Spin in this corpus was always a winding label \u2014 j equals half the winding, with the seed qubit as the k-equals-one anchor \u2014 and chirality was always an orientation grade; the assignment now says which ray the matter sits in, and the census resolves by ray without movin"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4353,
+  "tag": "BM.75",
+  "state": "KEPT",
+  "quote": "$$\\textbf{the currencies remain incommensurate:}\\qquad\\neg\\exists\\ \\text{a derived ratio between}\\ \\Delta_g\\ \\text{and}\\ \\ln(4/3)/\\mathfrak h\\ \u2014\\ \\text{the relating equation stays open}\\qquad[\\mathrm{BM.35}(5);\\ \\mathrm{BM.68}(7);\\ \\mathrm{BM.69}(4);\\ \\text{item 7 pointer}];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4354,
+  "tag": "BM.75",
+  "state": "KEPT",
+  "quote": "$$(6)\\quad\\textbf{what remains open:}\\qquad\\text{the full flavour composition}\\ \u2014\\ \\text{which three of the six states a class occupies}\\ \u2014\\ \\text{stays}\\ \\neg\\text{derived:}\\ \\neg\\text{a fractional constituent alphabet},\\ \\text{the end signs carry no position datum}\\qquad[\\mathr"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4381,
+  "tag": "BM.75",
+  "state": "KEPT",
+  "quote": "(6)\\text{--}(7):\\ \\text{the open rows re-cited};\\qquad\\text{the standing-rule scans}\\ [\\text{machine}]. \\ \\blacksquare"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4384,
+  "tag": "BM.75",
+  "state": "KEPT",
+  "quote": "**Phys.** Two derived twos have always sat side by side \u2014 the seed's weight doublet and the defect floor's branch pair \u2014 with their attachment recorded as undeclared. The chiral assignment supplies the missing link, and the link turns out to be forced: the ladder raises exactly o"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4448,
+  "tag": "BM.77",
+  "state": "KEPT",
+  "quote": "$$\\text{the scales}\\ (\\hat\\mu_\\ell,\\hat\\mu_\\nu,\\ell_c,g,g')\\ \\text{remain undeclared P4/Cal-F data}\\ [\\mathrm{FT.143};\\ \\mathrm{Q6}\\ \\text{pointer}]\\ \u2014\\ \\rho_\\ell,\\rho_\\nu\\ \\text{are restatements,}\\ \\neg\\text{new members}\\qquad[\\mathrm{P4};\\ \\mathrm{P1};\\ \\text{Cal-F logged}];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4453,
+  "tag": "BM.77",
+  "state": "KEPT",
+  "quote": "$$\\text{no informational value is equated to a geometric one};\\qquad\\text{item 7 stands untouched}\\qquad[\\mathrm{BM.35}(5);\\ \\mathrm{BM.68}(8);\\ \\mathrm{BM.69}(5);\\ \\text{pointer}];\\qquad\\text{the EM and transport rest-slot refinements are}\\ \\neg\\text{summands of this read}\\ \u2014\\ \\"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4481,
+  "tag": "BM.77",
+  "state": "KEPT",
+  "quote": "$$(9)\\quad\\textbf{what the specification does not do:}\\qquad\\neg\\text{a scale is fixed}\\ \u2014\\ (\\rho_\\ell,\\rho_\\nu,g,g',\\hat\\mu,\\hat\\mu',\\hat\\mu_\\nu)\\ \\text{remain undeclared}\\ [\\mathrm{P4};\\ \\mathrm{P5}];\\qquad\\neg\\text{a currency is converted}\\ \u2014\\ \\text{item 7 stands}\\ [(3)];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4482,
+  "tag": "BM.77",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a Q-value is numerically derived}\\ \u2014\\ \\text{the branch structure is the content};\\qquad\\text{the numerical value of}\\ e\\ \\text{remains open and does not enter}\\ \u2014\\ \\text{the specified read carries no EM monomial}\\ [\\mathrm{EM.25}(7);\\ \\mathrm{BM.62}(12)];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4484,
+  "tag": "BM.77",
+  "state": "KEPT",
+  "quote": "$$(10)\\quad\\textbf{status:}\\qquad\\textbf{derived:}\\ (2)\\text{--}(8)\\ [\\text{given}\\ (1)];\\qquad\\textbf{declared:}\\ (1)\\ \u2014\\ \\text{logged as the \u00a7II.4 addendum A-BM.8 before use};$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4528,
+  "tag": "BM.78",
+  "state": "MOVED",
+  "quote": "$$(1)\\quad\\textbf{the answers:}\\qquad\\begin{array}{l|l}\\text{the chiral assignment} & \\mathrm{BM.73}:\\ \\textbf{issued and logged}\\ (\\text{A-BM.7})\\ \u2014\\ \\text{one naming bit on the derived forced shape}\\ [\\mathrm{FT.144}(5)]:\\ \\text{the arrow-occupied ray is the left ray}\\ (\\hat\\ch"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4543,
+  "tag": "BM.78",
+  "state": "MOVED",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ (\\text{items}\\ 7,\\ 13,\\ 19,\\ 21,\\ \\mathrm{Q1}'\\text{--}\\mathrm{Q6},\\ \\text{deficits}\\ 1',\\ 4\\ \\text{are pointers or issued here});\\qquad\\text{the extra-axiomatic list}\\ [\\text{A \u00a70.2a}]\\ \\text{gains no member};\\qquad\\neg\\tex"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4546,
+  "tag": "BM.78",
+  "state": "MOVED",
+  "quote": "$$\\text{the corpus walked the one door it had left open, and every other door stayed shut}:\\qquad\\text{item 7 stands};\\ \\ \\text{the composition stands open};\\ \\ \\text{the scales stand undeclared};\\ \\ \\text{and nothing measured entered anywhere}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4572,
+  "tag": "BM.78",
+  "state": "MOVED",
+  "quote": "**Standing rows.** $\\alpha_B$ stays barred on $\\mathrm{BM.61}(8)$'s four grounds and \u00a7Cal-BM stays empty. The relating equation is $\\neg$assumed anywhere \u2014 item 7 stays open $[\\mathrm{BM.35}(5);\\ \\mathrm{BM.68}(7);\\ \\mathrm{BM.69}(4),(5);\\ \\text{pointer}]$, and this tier's contri"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4763,
+  "tag": "BM.80",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a P4 addition},\\quad\\neg\\text{a new dimensionful scale}\\ [\\mathrm{P1}],\\quad\\neg\\text{a measured value}\\ [\\mathrm{P5}],\\quad\\neg\\text{a declaration},\\quad\\neg\\text{a HistLog disposition imported as premise};\\qquad\\textbf{open:}\\ \\text{the three channel scales}\\ [\\math"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4886,
+  "tag": "BM.81",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a P4 addition},\\quad\\neg\\text{a new dimensionful scale}\\ [\\mathrm{P1}],\\quad\\neg\\text{a measured value}\\ [\\mathrm{P5}],\\quad\\text{\u00a7Cal-BM stays empty};\\qquad\\textbf{open:}\\ \\hat\\mu'^2,\\ \\mu\\in\\text{Cal-F}\\ [\\text{the map is an order,}\\ \\neg\\text{a number}].$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 4888,
+  "tag": "BM.81",
+  "state": "KEPT",
+  "quote": "**Req.** D0.8 (Parts 1\u20132); P1, P4, P5 (Parts 1\u20132); Def-H.37(2), FT.44(1), FT.44(4), FT.111(3), FT.145(3) (Part 3); Census FT.63(6) (row-wise); Def-BM.8(5), Def-BM.12(4), Def-BM.14(1), Def-BM.14(2), Def-BM.14(3), Def-BM.14(5), Def-BM.14(6), Def-BM.14(8), BM.28(7), BM.39(1), BM.39("
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 5003,
+  "tag": "BM.82",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a currency is converted anywhere in this theorem};\\qquad\\neg\\text{a HistLog disposition is imported as premise}\\ \u2014\\ \\text{item 7 is cited as a pointer and its residue is re-derived from}\\ \\mathrm{BM.69}(4),(5)\\text{'s own clauses}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 5102,
+  "tag": "BM.83",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a P4 addition},\\quad\\neg\\text{a new dimensionful scale}\\ [\\mathrm{P1}],\\quad\\neg\\text{a measured value}\\ [\\mathrm{P5}],\\quad\\neg\\text{a HistLog disposition imported as premise};\\qquad\\text{item 7 stands, with its residue reduced to}\\ (\\rho_{\\mathrm B},\\sigma_\\ell,\\sig"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 5149,
+  "tag": "BM.84",
+  "state": "KEPT",
+  "quote": "$$\\text{and a cross-currency addition is the category item 7 bars}\\ [\\mathrm{BM.69}(3);\\ \\mathrm{BM.35}(5);\\ \\mathrm{BM.37}(2);\\ \\mathrm{BM.71}(1)\\ \\text{row}\\ 5];\\qquad\\text{the same substitution's two readings point the same way}\\ [\\mathrm{BM.75}(4),(5)]\\ \\text{and are}\\ \\neg\\t"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 5181,
+  "tag": "BM.84",
+  "state": "KEPT",
+  "quote": "$$\\textbf{the numerical value of}\\ e\\ \\textbf{remains open and does not enter:}\\qquad\\varepsilon_{\\mathrm{EM}}=e^2/(4\\pi)\\ \\text{is carried symbolically}\\qquad[\\mathrm{EM.25}(7),(9);\\ \\mathrm{BM.62}(12)\\ \\text{pattern}];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 5266,
+  "tag": "BM.85",
+  "state": "KEPT",
+  "quote": "**Req.** P1, P4, P5 (Parts 1\u20132); FT.79(5) (Part 3); Census FT.114, FT.120 (row-wise); Def-BM.13(5), BM.28(4), BM.37(2), BM.39(1), BM.41(1), BM.41(4), BM.41(5), BM.45, BM.49(1), BM.49(3), BM.49(4), BM.62(4), BM.62(9), BM.62(11), BM.63(1), BM.66(6), BM.70(1), BM.70(2), BM.70(3), BM"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 5321,
+  "tag": "BM.86",
+  "state": "MOVED",
+  "quote": "$$(6)\\quad\\textbf{the open items (named, priced, unfilled):}\\qquad\\begin{array}{l|l}(\\mathrm{R1})\\ \\ \\rho_{\\mathrm B}=\\hat\\mu'^2\\mathfrak h^2/(\\ln2)^2 & \\text{the one undeclared dimensionless ratio of the bridge}\\ [\\mathrm{BM.69}(5);\\ \\mathrm{BM.82}(6);\\ \\text{four grounds bound "
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 5325,
+  "tag": "BM.86",
+  "state": "MOVED",
+  "quote": "$$\\text{item 7 stands with its residue named};\\qquad\\text{the scales stand undeclared};\\qquad\\text{nothing measured entered anywhere}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 5340,
+  "tag": "BM.86",
+  "state": "MOVED",
+  "quote": "(5):\\ \\text{the standing-rule scans: external tokens, decimal numerals, unit tokens, registry tokens, declaration lines, the barred object}\\ \\alpha_B\\ [\\text{machine}];\\qquad(6):\\ \\text{the ten open rows re-cited from their own tags}\\ [\\text{machine}]"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 5346,
+  "tag": "BM.86",
+  "state": "MOVED",
+  "quote": "**Phys.** The census ends where it began, with a shorter list. Every mass ratio the corpus can form \u2014 inside a Platonic ladder, across a generation, between two branches of a doublet, between a cone defect and an edge count, between two charge classes in bits, and between the par"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 5354,
+  "tag": "BM.86",
+  "state": "MOVED",
+  "quote": "**Standing rows.** $\\alpha_B$ stays barred on $\\mathrm{BM.61}(8)$'s four grounds and \u00a7Cal-BM stays empty. No clause of $\\mathrm{BM.1}$\u2013$\\mathrm{BM.86}$ is retracted, replaced or renumbered: every row this tier touches is re-scoped at its own locus and recorded in $\\mathrm{BM.87}("
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 5414,
+  "tag": "BM.87",
+  "state": "MOVED",
+  "quote": "**Phys.** The corpus never had a charged ball. It had an integer read on the ends of chains, a width derived from an edge count, and a field equation varied from an action it already owned. Asking whether the charge sits on a shell or fills a ball asks for a density the graph can"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 5453,
+  "tag": "BM.88",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a declaration},\\quad\\neg\\text{a new dimensionful scale}\\ [\\mathrm{P1}],\\quad\\neg\\text{a measured value}\\ [\\mathrm{P5}],\\quad\\neg\\text{a HistLog disposition imported as premise};\\qquad\\textbf{open:}\\ \\text{the value of}\\ e\\ [\\mathrm{EM.25}(7)],\\ \\text{the curvature com"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 5561,
+  "tag": "BM.89",
+  "state": "KEPT",
+  "quote": "**Phys.** The composite was never a fixed topology, and the correction that rides it should not have been either. Take the flicker's own measure \u2014 the unique stationary line of the Janus generator, which specializes to one minus four times the crystallization threshold with no ra"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 5585,
+  "tag": "BM.90",
+  "state": "KEPT",
+  "quote": "$$\\textbf{and}\\ \\neg\\textbf{addable to the informational assembly:}\\qquad[\\Delta_g]=\\mathfrak q\\ \\ \\text{against}\\ \\ [\\Delta m]=\\mathfrak q^{+1/2},\\qquad\\text{a cross-currency addition being the category item 7 bars}$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 5739,
+  "tag": "BM.92",
+  "state": "KEPT",
+  "quote": "**Req.** P1, P4, P5 (Parts 1\u20132); FT.79(5) (Part 3); Def-BM.13(4), BM.28(4), BM.37(2), BM.39(1), BM.41(1), BM.41(4), BM.41(5), BM.45, BM.49(3), BM.49(4), BM.63(1), BM.70(2), BM.70(3), BM.70(4), BM.77(2), BM.77(3), BM.77(5), BM.77(6), BM.77(8), BM.82(6), BM.83(5), BM.83(7), BM.84(1"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 5794,
+  "tag": "BM.93",
+  "state": "MOVED",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ \\text{the flicker measure is}\\ \\mathrm{BM.19}(1),(2)\\text{'s derived row and}\\ \\mathrm{A4}\\text{'s threshold, and item 7 is cited as a pointer};$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 5795,
+  "tag": "BM.93",
+  "state": "MOVED",
+  "quote": "$$(6)\\quad\\textbf{the open items (named, priced, unfilled):}\\qquad\\begin{array}{l|l}(\\mathrm{R1})\\ \\ \\rho_{\\mathrm B}=\\hat\\mu'^2\\mathfrak h^2/(\\ln2)^2 & \\text{the bridge's single undeclared dimensionless ratio}\\ [\\mathrm{BM.69}(5);\\ \\mathrm{BM.82}(6)]\\\\(\\mathrm{R2})\\ \\ \\text{the "
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 5799,
+  "tag": "BM.93",
+  "state": "MOVED",
+  "quote": "$$\\text{item 7 stands with its residue named};\\qquad\\text{the scales stand undeclared};\\qquad\\text{nothing measured entered anywhere}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 5814,
+  "tag": "BM.93",
+  "state": "MOVED",
+  "quote": "(5):\\ \\text{the standing-rule scans: external tokens, decimal numerals, unit tokens, registry tokens, declaration lines, the barred object}\\ \\alpha_B\\ [\\text{machine}];\\qquad(6):\\ \\text{the ten open rows re-cited from their own tags}\\ [\\text{machine}]"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 5868,
+  "tag": "BM.94",
+  "state": "KEPT",
+  "quote": "$$\\text{the lower endpoint is open and is attained only in the fully dissolved limit, where}\\ \\langle E\\rangle_{\\mathrm{mat}}\\to2\\ \\ \\text{exactly}\\qquad[\\text{machine:}\\ 6/(3-3p+p^2)\\to6/3];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 5973,
+  "tag": "BM.95",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a cross-register equation is formed}\\ \u2014\\ \\text{the two registers are distinct alphabets and are}\\ \\neg\\text{equated}\\qquad[\\mathrm{BM.37}(2);\\ \\mathrm{BM.83}(3);\\ \\text{item 7 pointer}];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6120,
+  "tag": "BM.97",
+  "state": "KEPT",
+  "quote": "$$\\text{equating them is the conversion item 7 bars}\\qquad[\\mathrm{BM.35}(5);\\ \\mathrm{BM.83}(3);\\ \\mathrm{BM.37}(2);\\ \\text{pointer}];\\qquad\\text{the specified read A-BM.8 reads the baryon classes on route}\\ (\\mathrm{ii})\\ \\text{and the emitted lines on the transport species}\\ ["
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6160,
+  "tag": "BM.97",
+  "state": "KEPT",
+  "quote": "$$\\boxed{\\ \\text{the informational alphabet is disjoint from the two transport alphabets except for}\\ \\mathfrak h;\\qquad\\neg\\text{a derived equation relates the three expressions}\\ }\\qquad[\\text{machine: the three token censuses};\\ \\text{item 7's residue, localized at}\\ \\mathrm{B"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6166,
+  "tag": "BM.97",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ \\text{A-BM.8 is cited as the locus of the read specification and item 7 as a pointer}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6218,
+  "tag": "BM.98",
+  "state": "KEPT",
+  "quote": "### BM.98 \u2014 The relating equation: the bridge in four exact forms, its flicker weighting, and the closure of item 7 in form"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6227,
+  "tag": "BM.98",
+  "state": "KEPT",
+  "quote": "$$\\text{the upper endpoint is open and is approached only in the fully dissolved limit, where}\\ \\bigl\\langle E\\bigr\\rangle_{\\mathrm{mat}}\\to2\\ \u2014\\ \\text{the digon floor}\\ [\\mathrm{Census\\ FT.28};\\ \\mathrm{BM.94}(7)];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6248,
+  "tag": "BM.98",
+  "state": "KEPT",
+  "quote": "$$\\boxed{\\ \\textbf{item 7's relating equation is derived as an exact identity in the derived vocabulary plus}\\ (\\mathrm{R1}):\\ \\ \\textbf{the equation is closed, the ratio is}\\ \\neg\\textbf{derived}\\ }$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6261,
+  "tag": "BM.98",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ \\text{item 7 is cited as a pointer and its disposition is recorded in the status ledger},\\ \\neg\\textbf{used as a premise};\\qquad\\alpha_B:\\ \\neg\\text{added},\\ \\neg\\text{derived},\\ \\text{barred}\\ [\\mathrm{BM.61}(8)].$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6397,
+  "tag": "BM.100",
+  "state": "MOVED",
+  "quote": "$$\\boxed{\\ \\textbf{item 7's relating equation is derived in four exact forms, flicker-weighted, bounded by an exact nine, and closed up to the single undeclared ratio}\\ (\\mathrm{R1})\\ }$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6400,
+  "tag": "BM.100",
+  "state": "MOVED",
+  "quote": "$$\\textbf{item 7's disposition:}\\qquad\\textbf{the equation is closed in form and its residue is localized to one dimensionless ratio};\\qquad\\mathrm{BM.69}(4)\\text{'s non-derivation theorem stands};\\qquad\\neg\\text{a value for}\\ \\rho_{\\mathrm B}\\ \\text{is derived, declared or fitte"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6415,
+  "tag": "BM.100",
+  "state": "MOVED",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ \\text{the flicker measure is}\\ \\mathrm{BM.19}(1),(2)\\text{'s derived row and}\\ \\mathrm{A4}\\text{'s threshold},\\ \\text{the materialization restriction is}\\ \\mathrm{FT.144}(4)\\text{'s domain},\\ \\text{and items 7 and 20 are "
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6416,
+  "tag": "BM.100",
+  "state": "MOVED",
+  "quote": "$$(6)\\quad\\textbf{the open items (named, priced, unfilled):}\\qquad\\begin{array}{l|l}(\\mathrm{R1})\\ \\ \\rho_{\\mathrm B}=\\hat\\mu'^2\\mathfrak h^2/(\\ln2)^2 & \\text{the bridge's single undeclared dimensionless ratio}\\ [\\mathrm{BM.69}(5);\\ \\mathrm{BM.98}(5)]\\\\(\\mathrm{R2})\\ \\ \\text{the "
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6420,
+  "tag": "BM.100",
+  "state": "MOVED",
+  "quote": "$$\\text{item 7 stands with its residue named and its equation derived};\\qquad\\text{the scales stand undeclared};\\qquad\\text{nothing measured entered anywhere}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6435,
+  "tag": "BM.100",
+  "state": "MOVED",
+  "quote": "(5):\\ \\text{the standing-rule scans: external tokens, decimal numerals, unit tokens, registry tokens, declaration lines, the barred object}\\ \\alpha_B,\\ \\text{the seesaw-type and right-ray tokens}\\ [\\text{machine}];\\qquad(6):\\ \\text{the open rows re-cited from their own tags}\\ [\\t"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6447,
+  "tag": "BM.100",
+  "state": "MOVED",
+  "quote": "**Locus.** This tier takes six named objectives and gives each its exact adjudication: one graph, one census with one declared slot, one referent table, one fixed point, one measure-free bound, and one kind structure. The Q-value becomes a function of the energy scale, its forwar"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6464,
+  "tag": "BM.101",
+  "state": "KEPT",
+  "quote": "$$[\\text{machine: the sign census on a rational lattice}]\\qquad\\textbf{on the informational currency the forward channel is closed and the inverse channel is open at every energy scale, with the exact margin}\\ \\ln3;$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6495,
+  "tag": "BM.101",
+  "state": "KEPT",
+  "quote": "$$\\textbf{the envelope row:}\\qquad f(1)=0\\implies\\varepsilon_{\\mathrm{eff}}=0\\ \\ \\text{at}\\ \\ E=E_1\\implies\\Delta m(E_1)\\,\\mathfrak h=\\ln\\tfrac43>0\\qquad[\\mathrm{BM.88}(5);\\ \\text{machine}]:\\qquad\\textbf{the splitting is open at the member's own envelope on every composition};$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6503,
+  "tag": "BM.101",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ \\text{item 7 and deficit 12 are cited as pointers};\\qquad\\textbf{open:}\\ e_0\\ (4),\\quad\\mathsf g\\ (5)\\ [\\mathrm{BM.104}(5)],\\quad N\\ \\text{as solution data}\\ [\\mathrm{CT2.7};\\ \\mathrm{BM.34}(2)].$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6578,
+  "tag": "BM.102",
+  "state": "KEPT",
+  "quote": "$$(5)\\quad\\textbf{the declaration (logged as the \u00a7II.4 addendum A-BM.9 before use):}\\qquad\\textbf{species:}\\ \\text{the bridge's dimensionless calibration slot}$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6588,
+  "tag": "BM.102",
+  "state": "KEPT",
+  "quote": "$$(7)\\quad\\textbf{item 7's disposition:}\\qquad\\boxed{\\ \\textbf{the relating equation is derived in form}\\ [\\mathrm{BM.98}]\\ \\textbf{and its single residue is a declared slot with no value issued}\\ \\ [(\\mathrm{A\\text{-}BM.9})]\\ \\Longrightarrow\\ \\textbf{item 7 is closed as an equat"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6594,
+  "tag": "BM.102",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a P4 addition beyond the declared slot},\\quad\\neg\\text{a new dimensionful scale}\\ [\\mathrm{P1}],\\quad\\neg\\text{a measured value}\\ [\\mathrm{P5}],\\quad\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ \\text{A-BM.9 is issued here and logged, and item 7 is cited as"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6596,
+  "tag": "BM.102",
+  "state": "KEPT",
+  "quote": "**Req.** D0.8, D1.8, D2.9, D3.4 (Parts 1\u20132); A \u00a70.3, CT1.29, CT2.1 (Part 1, Part 2); CT2.9, EM.9, EM.11, EM.25(7), EM.25(9), EW.33, Def-BM.12(1) (Part 2, this part); P1, P4, P5 (Parts 1\u20132); Def-H.2, Def-H.37(1), Def-H.37(2), FT.44(4), FT.54(4), FT.73(5), FT.79(5) (Part 3); Def-BM"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6600,
+  "tag": "BM.102",
+  "state": "KEPT",
+  "quote": "(1):\\ \\mathrm{D2.9},\\ \\mathrm{P1},\\ \\text{A \u00a70.3},\\ \\mathrm{CT2.9}\\ \\text{re-cited verbatim (frozen)};\\qquad\\neg\\exists\\ \\text{a second dimensionful scale in the inventory}\\ [\\text{Q7's derived no-go re-cited as a pointer}]"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6667,
+  "tag": "BM.103",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ \\text{Q9, Q11 and deficit}\\ 1'\\ \\text{are cited as pointers, and}\\ \\mathrm{FT.80}(5),\\ \\mathrm{FT.125}(5),\\ \\mathrm{FT.66}(4),\\ \\mathrm{FT.142}(3)\\ \\text{are canon tags}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6857,
+  "tag": "BM.106",
+  "state": "KEPT",
+  "quote": "$$[\\mathrm{Def\\text{-}H.38};\\ \\mathrm{FT.60}(1)\\text{--}(3);\\ \\mathrm{FT.22};\\ \\mathrm{FT.25}(3);\\ \\text{the transfer's derivation or replacement is item 19's residue, cited as a pointer}];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6868,
+  "tag": "BM.106",
+  "state": "KEPT",
+  "quote": "$$\\boxed{\\ \\textbf{the spin--statistics connection is}\\ \\neg\\textbf{formed}\\ \u2014\\ \\text{deficit 11 stands}\\ }\\qquad[\\mathrm{FT.125}(5)\\ \\text{re-cited};\\ \\text{item 20 deficit 11 pointer}];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6880,
+  "tag": "BM.106",
+  "state": "KEPT",
+  "quote": "$$\\boxed{\\ \\neg\\text{an external mixing matrix is imported};\\qquad\\text{the mixing matrix is}\\ \\neg\\text{derived and deficit 4 stands};\\qquad\\text{every row holds uniformly in the unresolved line index}\\ i_\\nu\\ }\\qquad[\\mathrm{FT.145}(3);\\ \\mathrm{BM.77}(2)];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6883,
+  "tag": "BM.106",
+  "state": "KEPT",
+  "quote": "$$\\text{Q11's baryonic-era candidate is the pointer};\\qquad\\textbf{the sealed composite is a junction subnetwork,}\\ \\neg\\textbf{a tensor product of chain state spaces:}\\qquad\\text{its constituents share vertices}\\ [\\mathrm{Def\\text{-}BM.1};\\ \\mathrm{Def\\text{-}BM.2}]\\ \\ \\text{and"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6884,
+  "tag": "BM.106",
+  "state": "KEPT",
+  "quote": "$$(8)\\quad\\textbf{status:}\\qquad\\textbf{derived:}\\ (1),\\ (2),\\ (4),\\ (5),\\ (6);\\qquad\\textbf{refuted as formed:}\\ \\text{the spin--statistics derivation from the tick arrow}\\ (3);\\qquad\\textbf{standing:}\\ \\text{deficit 11 with}\\ (\\mathrm{R7})\\ \\text{named};$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6886,
+  "tag": "BM.106",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ \\text{Q11, deficit 11 and item 19 are cited as pointers, and}\\ \\mathrm{FT.80}(5),\\ \\mathrm{FT.125}(5),\\ \\mathrm{FT.89}(2),\\ \\mathrm{FT.66}(4)\\ \\text{are canon tags}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6926,
+  "tag": "BM.107",
+  "state": "MOVED",
+  "quote": "$$(1)\\quad\\textbf{the answers:}\\qquad\\begin{array}{l|l}\\text{the energy-scale graph} & \\mathrm{BM.101}:\\ \\textbf{derived}\\ \u2014\\ Q^{\\mathrm{inv}}=-Q^{\\mathrm{fwd}}\\ \\text{identically};\\ \\Delta m(E)\\,\\mathfrak h=\\ln\\tfrac43-3w\\ln2\\cdot\\varepsilon_{\\mathrm{eff}};\\ \\text{the crossing s"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6956,
+  "tag": "BM.107",
+  "state": "MOVED",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ \\text{items 7, 19, 20, Q1}',\\ \\text{Q7},\\ \\text{Q9},\\ \\text{Q11 and the deficits are cited as pointers, and A-BM.9 is issued here and logged before use};$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6957,
+  "tag": "BM.107",
+  "state": "MOVED",
+  "quote": "$$(7)\\quad\\textbf{the open items (named, priced, unfilled):}\\qquad\\begin{array}{l|l}(\\mathrm{R1})\\ \\ \\rho_{\\mathrm B}\\text{'s value} & \\text{the declared slot}\\ \\text{A-BM.9};\\ \\neg\\text{derived on}\\ \\mathrm{BM.69}(4)\\text{'s four grounds};\\ \\neg\\text{fixed by measurement}\\ [\\mat"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6961,
+  "tag": "BM.107",
+  "state": "MOVED",
+  "quote": "$$\\text{item 7 is closed as an equation with one declared slot};\\qquad\\text{deficits 4, 6, 11, 12 stand};\\qquad\\text{nothing measured entered anywhere}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6963,
+  "tag": "BM.107",
+  "state": "MOVED",
+  "quote": "**Req.** D0.8, D2.9 (Parts 1\u20132); A \u00a70.2a, CT2.1, CT2.7, EM.25(7), EM.25(9), EW.15 (Part 2); P1, P4, P5 (Parts 1\u20132); Def-H.32(4), Def-H.37, Def-H.38, FT.66(4), FT.73(2), FT.73(3), FT.76, FT.79(2), FT.79(5), FT.80(5), FT.84(2), FT.125(5), FT.143(3), FT.145(3) (Part 3); Census FT.63"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6982,
+  "tag": "BM.107",
+  "state": "MOVED",
+  "quote": "(7):\\ \\text{the open rows re-cited from their own tags}\\ [\\text{machine}];\\qquad(8):\\ \\text{assembly}.\\ \\blacksquare"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6991,
+  "tag": "BM.107",
+  "state": "MOVED",
+  "quote": "**Locus.** This tier takes the residue $(\\mathrm{R7})$ that $\\mathrm{BM.106}(7)$ named \u2014 *an exchange structure: a two-chain state space, an exchange operator, a permutation-sign read* \u2014 and constructs all three members, then reads the spectrum the construction exposes. The CP-co"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 6993,
+  "tag": "BM.107",
+  "state": "MOVED",
+  "quote": "**Standing rows.** $\\alpha_B$ stays barred on $\\mathrm{BM.61}(8)$'s four grounds. No clause of $\\mathrm{BM.1}$\u2013$\\mathrm{BM.107}$ is retracted, replaced or renumbered: the rows this tier touches are re-scoped at their own loci \u2014 $\\mathrm{BM.106}(3)$'s statistics referent census an"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7078,
+  "tag": "BM.108",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ \\text{Q10 and deficit}\\ 1'\\ \\text{are cited as pointers};\\qquad\\text{\u00a7Cal-BM stays empty except for}\\ \\mathrm{A\\text{-}BM.9}\\text{'s logged slot}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7212,
+  "tag": "Def-BM.16",
+  "state": "KEPT",
+  "quote": "$$\\textbf{open:}\\ \\ \\text{the three-chain state space}\\ \\mathcal H_3\\ \\text{and its}\\ S_3\\ \\text{action}\\ \\text{are}\\ \\neg\\text{constructed}\\ [\\mathrm{BM.103}(4)\\ \\text{re-scoped},\\ \\neg\\text{discharged}].$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7223,
+  "tag": "Def-BM.16",
+  "state": "KEPT",
+  "quote": "**Phys.** The corpus said for three tiers that a statistics has no referent, and listed exactly what one would need: a space of two chains, an operator that swaps them, and a sign to read off. This definition supplies all three and nothing more. The space is the tensor product of"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7245,
+  "tag": "BM.110",
+  "state": "KEPT",
+  "quote": "$$\\text{colour is}\\ \\neg\\textbf{observable by construction}\\qquad[\\mathrm{CT3.22};\\ \\text{Q9 pointer}];\\qquad\\text{the mask admits only singlets}\\qquad[\\mathrm{CT3.18};\\ \\mathrm{D2.14};\\ \\mathrm{FT.19}:\\ \\text{all-or-nothing}];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7252,
+  "tag": "BM.110",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ \\text{Q9, Q11 and deficit}\\ 11\\ \\text{are cited as pointers}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7311,
+  "tag": "BM.111",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a currency is converted:}\\ \\ \\lambda^{(2)}\\ \\text{is a defect-currency eigenvalue and}\\ m_{\\mathrm{hid}}\\ \\text{an informational one, and their ratio carries the single undeclared}\\ \\rho_{\\mathrm B}\\ [\\mathrm{BM.82}(1),(5);\\ \\mathrm{A\\text{-}BM.9};\\ \\text{item 7 point"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7314,
+  "tag": "BM.111",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ \\text{item 7 and item 13 are cited as pointers}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7383,
+  "tag": "BM.112",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ \\text{Q11 and deficit}\\ 11\\ \\text{are cited as pointers}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7420,
+  "tag": "BM.113",
+  "state": "KEPT",
+  "quote": "### BM.113 \u2014 Spin\u2013statistics: the phase alphabet of the swap, the winding parity, and the closure of deficit 11"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7446,
+  "tag": "BM.113",
+  "state": "KEPT",
+  "quote": "$$(7)\\quad\\textbf{the closure:}\\qquad\\boxed{\\ \\textbf{deficit 11 (spin--statistics) is CLOSED: the connection is derived from the multi-chain exchange operator, with no external postulate}\\ }$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7453,
+  "tag": "BM.113",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ \\text{Q11, deficit}\\ 11\\ \\text{and item}\\ 20\\ \\text{are cited as pointers}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7528,
+  "tag": "Def-BM.17",
+  "state": "KEPT",
+  "quote": "$$\\textbf{open:}\\ \\ \\mathsf g(G)\\ [\\mathrm{BM.104}(5)],\\quad e_0\\ [\\mathrm{EM.25}(7)],\\quad N\\ \\text{as solution data}\\ [\\mathrm{CT2.7};\\ \\mathrm{BM.34}(2)],\\quad\\rho_{\\mathrm B}\\ [\\mathrm{A\\text{-}BM.9}],\\quad(\\mathrm{R3})\\ \\text{the flavour composition},\\quad(\\mathrm{R8})\\ \\tex"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7554,
+  "tag": "BM.114",
+  "state": "KEPT",
+  "quote": "$$\\textbf{colour is}\\ \\neg\\textbf{observable by construction}\\qquad[\\mathrm{CT3.22};\\ \\text{Q9 pointer}]\\implies\\boxed{\\ \\textbf{the colour slot symmetry is}\\ \\neg\\textbf{the statistics}\\ \u2014\\ \\text{the statistics is}\\ \\varepsilon(c)\\ \\text{on the winding carrier}\\ [\\mathrm{BM.113}"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7582,
+  "tag": "BM.114",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ \\text{Q9 and deficits}\\ 1',\\ 3\\ \\text{are cited as pointers}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7816,
+  "tag": "BM.117",
+  "state": "KEPT",
+  "quote": "$$\\textbf{the two currencies stay incommensurate:}\\qquad\\neg\\exists\\ \\text{a derived ratio between}\\ \\lambda^{(n)}\\ \\text{and}\\ E_{\\mathrm{int}}^{(n)}\\ \u2014\\ \\text{the single residue is}\\ \\rho_{\\mathrm B}\\qquad[\\mathrm{BM.82}(1),(5),(7);\\ \\mathrm{BM.69}(4);\\ \\mathrm{A\\text{-}BM.9};\\"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7826,
+  "tag": "BM.117",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ (\\mathrm{R3}),\\ \\text{item 7 and deficits}\\ 1',\\ 12\\ \\text{are cited as pointers}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7863,
+  "tag": "BM.118",
+  "state": "MOVED",
+  "quote": "### BM.118 \u2014 The status of the Antimatter and Resonance Tier: adjudication, scope, and the open items"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7866,
+  "tag": "BM.118",
+  "state": "MOVED",
+  "quote": "$$(1)\\quad\\textbf{the four objectives and their four verdicts:}\\qquad\\begin{array}{l|l|l}\\text{objective} & \\text{verdict} & \\text{locus}\\\\\\hline\\text{the CP-conjugate chain} & \\textbf{derived, and forced by the ledger's own balance} & [\\mathrm{BM.108}(2),(5);\\ \\mathrm{Def\\text{-"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7871,
+  "tag": "BM.118",
+  "state": "MOVED",
+  "quote": "$$(5)\\quad\\textbf{the rescope record (each row re-scoped at its own locus, none retracted, replaced or renumbered):}\\qquad\\begin{array}{l|l}\\text{row} & \\text{the rescope}\\\\\\hline\\mathrm{BM.6}(2) & \\textbf{discharged:}\\ \\text{the exchange-space specification is constructed}\\ [\\ma"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7879,
+  "tag": "BM.118",
+  "state": "MOVED",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ \\text{Q9, Q10, Q11, items 7, 13, 20 and the deficits are cited as pointers};$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7880,
+  "tag": "BM.118",
+  "state": "MOVED",
+  "quote": "$$(7)\\quad\\textbf{the open items (named, priced, unfilled):}\\qquad\\begin{array}{l|l}(\\mathrm{R1})\\ \\ \\rho_{\\mathrm B}\\text{'s value} & \\text{the declared slot}\\ \\mathrm{A\\text{-}BM.9};\\ \\neg\\text{derived on}\\ \\mathrm{BM.69}(4)\\text{'s four grounds};\\ \\neg\\text{fixed by measuremen"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7884,
+  "tag": "BM.118",
+  "state": "MOVED",
+  "quote": "$$\\text{the spin--statistics connection as}\\ \\varepsilon=(-1)^{|k|}=(-1)^{2j}\\ \\text{with deficit 11 closed};\\ \\text{two characteristic polynomials at every chain count};\\ \\text{the multiset-orbit law with stabilizer multiplicities};\\ \\text{exactly one exact collision in the thre"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7886,
+  "tag": "BM.118",
+  "state": "MOVED",
+  "quote": "$$\\textbf{deficit 11 is closed};\\qquad\\text{residue}\\ (\\mathrm{R7})\\ \\text{is discharged at}\\ n=2;\\qquad\\mathrm{BM.6}(2)\\ \\text{is discharged as written};\\qquad\\text{deficits}\\ 1',\\ 3,\\ 4,\\ 6,\\ 12\\ \\text{stand};\\qquad\\text{nothing measured entered anywhere}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7904,
+  "tag": "BM.118",
+  "state": "MOVED",
+  "quote": "(7):\\\\ \\text{the open rows re-cited from their own tags, with}\\ (\\mathrm{R8}),\\ (\\mathrm{R9})\\ \\text{and the sector-choice row named here}\\ [\\text{machine}];\\qquad(8):\\\\ \\text{assembly}.\\ \\blacksquare"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7913,
+  "tag": "BM.118",
+  "state": "MOVED",
+  "quote": "**Locus.** This tier takes the residue $(\\mathrm{R9})$ that $\\mathrm{BM.118}(7)$ named \u2014 *the annihilation channel: an inter-sector transition operator, $\\neg$in the inventory* \u2014 and constructs the channel, then follows the two chains that fall out of it: the concrete spin and th"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7915,
+  "tag": "BM.118",
+  "state": "MOVED",
+  "quote": "**Standing rows.** $\\alpha_B$ stays barred on $\\mathrm{BM.61}(8)$'s four grounds; \u00a7Cal-BM stays empty except for $\\mathrm{A\\text{-}BM.9}$'s logged slot with its value $\\neg$issued. No right-ray matter line, no seesaw-type mechanism, no Yukawa-type object and no external mixing ma"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7940,
+  "tag": "Def-BM.18",
+  "state": "KEPT",
+  "quote": "$$\\neg\\exists\\ \\text{a cross-section, an S-matrix element or a Lorentz-invariant phase space}\\ [\\mathrm{BM.6}(6);\\ \\mathrm{BM.118}(7)(\\mathrm{R9});\\ \\text{item 17 pointer}];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 7947,
+  "tag": "Def-BM.18",
+  "state": "KEPT",
+  "quote": "$$\\textbf{open:}\\ \\ \\text{the momentum-space}\\ \\Sigma\\text{-resolvent}\\ [\\mathrm{BM.6}(6)],\\qquad\\text{the gauge coupling of the charge read}\\ [\\mathrm{Def\\text{-}BM.8}(8)].$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8055,
+  "tag": "BM.120",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ \\text{Q11 and item}\\ 17\\ \\text{are cited as pointers}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8198,
+  "tag": "BM.122",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ \\text{item 17 and deficits}\\ 1',\\ 3\\ \\text{are cited as pointers}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8238,
+  "tag": "BM.123",
+  "state": "KEPT",
+  "quote": "### BM.123 \u2014 The annihilation channel: the reverse move, the entropy destination, and the closure of residue (R9)"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8260,
+  "tag": "BM.123",
+  "state": "KEPT",
+  "quote": "$$(6)\\quad\\textbf{the closure of residue (R9):}\\qquad\\mathrm{BM.118}(7)\\ \\text{named}\\ (\\mathrm{R9})\\ \\text{as}\\ \\textit{the annihilation channel: an inter-sector transition operator between}\\ \\mathrm{EM}^+\\ \\text{and}\\ \\mathrm{EM}^-,\\ \\neg\\text{in the inventory}:$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8269,
+  "tag": "BM.123",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ \\text{item 17, Q9 and deficits}\\ 1',\\ 3\\ \\text{are cited as pointers}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8302,
+  "tag": "BM.123",
+  "state": "KEPT",
+  "quote": "**Phys.** Annihilation is the same algebra read the other way, and it costs the square of the dissolution weight. The two directions have an exact ratio \u2014 four epsilon over one minus four epsilon, squared \u2014 which is one precisely at the threshold value one eighth, below one befor"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8326,
+  "tag": "Def-BM.19",
+  "state": "KEPT",
+  "quote": "$$(\\mathrm{R1})\\ \\ \\rho_{\\mathrm B}=\\hat\\mu'^2\\mathfrak h^2/(\\ln2)^2\\ \\text{is the single cross-currency residue, its slot declared and its value}\\ \\neg\\text{issued}\\qquad[\\mathrm{A\\text{-}BM.9};\\ \\mathrm{BM.82}(1),(6);\\ \\text{item 7 pointer}];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8332,
+  "tag": "Def-BM.19",
+  "state": "KEPT",
+  "quote": "**Rmk (why the defect is a ladder and not a number).** A single-valued $\\Delta(j)$ would require the frame-holonomy angle to be a function of the winding, and that identification is ruled out on a dimension count: the winding carries the free scale with weight minus two while the"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8442,
+  "tag": "BM.125",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ \\text{item 7,}\\ (\\mathrm{R1}),\\ (\\mathrm{R2})\\ \\text{and deficits}\\ 6,\\ 12\\ \\text{are cited as pointers}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8485,
+  "tag": "BM.126",
+  "state": "MOVED",
+  "quote": "$$(\\mathrm O4)\\quad\\textbf{no second scale:}\\ \\exists!\\ \\text{free dimensionful scale}\\ \\mathfrak h\\qquad[\\mathrm{P1};\\ \\mathrm{A}\\ \\text{\u00a70.3};\\ \\text{Q7 pointer}];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8505,
+  "tag": "BM.126",
+  "state": "MOVED",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ \\text{Q7 and deficits}\\ 2,\\ 3\\ \\text{are cited as pointers}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8557,
+  "tag": "BM.127",
+  "state": "KEPT",
+  "quote": "$$(6)\\quad\\textbf{what is complete and what is open:}\\qquad\\textbf{complete:}\\ \\varepsilon\\ \\text{is an exact function of a ledger datum, with no external input}\\ [(1),(2)];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8558,
+  "tag": "BM.127",
+  "state": "KEPT",
+  "quote": "$$\\textbf{open:}\\qquad\\begin{array}{l|l}\\text{the winding of a named sealed class} & (\\mathrm{R3})\\ /\\ \\text{deficit}\\ 1':\\ \\text{which three of the six states a class occupies, and which winding each constituent carries}\\ [\\mathrm{BM.28}(7);\\ \\mathrm{BM.103}(8);\\ \\mathrm{BM.117}"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8590,
+  "tag": "BM.127",
+  "state": "KEPT",
+  "quote": "(6):\\ \\text{the three open rows cite their own tags}\\ [\\text{machine}];\\qquad(7):\\ \\text{the standing-rule scans}\\ [\\text{machine}].\\ \\blacksquare"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8593,
+  "tag": "BM.127",
+  "state": "KEPT",
+  "quote": "**Phys.** The statistics sign is a parity of a registration integer, and that is the whole content of the identification: the winding is a sum of per-edge line elements, each of which is registration data fixed at crystallization, so its parity is a ledger read with no postulate,"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8628,
+  "tag": "BM.128",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ \\text{Q11 and}\\ (\\mathrm{R7})\\ \\text{are cited as pointers}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8728,
+  "tag": "BM.129",
+  "state": "KEPT",
+  "quote": "**Phys.** Two composites, two clean answers, and one honest gap. The meson is a boson and it is one unconditionally: its constituents are a chain and its conjugate, so their windings are equal and their sum is even, which makes the total spin an integer and the exchange sign plus"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8732,
+  "tag": "BM.130",
+  "state": "MOVED",
+  "quote": "### BM.130 \u2014 The status of the Annihilation, Concrete Spin and Fermion Identification Tier: adjudication, scope, and the open items"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8737,
+  "tag": "BM.130",
+  "state": "MOVED",
+  "quote": "$$(3)\\quad\\textbf{the derived negatives (each with its ground):}\\qquad\\begin{array}{l|l}\\text{negative} & \\text{ground}\\\\\\hline\\neg\\text{a velocity threshold and}\\ \\neg\\text{an acceleration to}\\ c & c=1\\ \\text{is a convention};\\ 1-v=m^2/(E(E+p))>0\\ \\text{exactly}\\ [\\mathrm{BM.119"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8748,
+  "tag": "BM.130",
+  "state": "MOVED",
+  "quote": "$$\\neg\\text{a HistLog disposition imported as premise}\\ \u2014\\ \\text{Q7, Q9, Q11, items 7, 13, 16(b), 17, 19, 20 and the deficits are cited as pointers};$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8749,
+  "tag": "BM.130",
+  "state": "MOVED",
+  "quote": "$$(7)\\quad\\textbf{the open items (named, priced, unfilled):}\\qquad\\begin{array}{l|l}(\\mathrm{R1})\\ \\ \\rho_{\\mathrm B}\\text{'s value} & \\text{the declared slot}\\ \\mathrm{A\\text{-}BM.9};\\ \\neg\\text{derived on}\\ \\mathrm{BM.69}(4)\\text{'s four grounds};\\ \\neg\\text{fixed by measuremen"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8757,
+  "tag": "BM.130",
+  "state": "MOVED",
+  "quote": "$$\\textbf{deficit 11 stays closed};\\qquad(\\mathrm{R7})\\ \\text{and}\\ (\\mathrm{R9})\\ \\text{are discharged and narrowed};\\qquad\\text{deficits}\\ 1',\\ 2,\\ 3,\\ 4,\\ 6,\\ 12\\ \\text{stand};\\qquad\\text{nothing measured entered anywhere}.$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8775,
+  "tag": "BM.130",
+  "state": "MOVED",
+  "quote": "(7):\\ \\text{the open rows re-cited from their own tags, with}\\ (\\mathrm{R7}'),\\ (\\mathrm{R9}'),\\ (\\mathrm{R9}''),\\ (\\mathrm{R10})\\ \\text{named here}\\ [\\text{machine}];\\qquad(8):\\ \\text{assembly}.\\ \\blacksquare"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8778,
+  "tag": "BM.130",
+  "state": "MOVED",
+  "quote": "**Phys.** Four directives came in and eleven verdicts went out, of which six are plain derivations, four are refutations with grounds, and one is a closure with a narrowed successor. The tunnel exists, but not where the question put it: nothing reaches the speed of light, because"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8812,
+  "tag": "BM.131",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{a numerical identification of the two};\\qquad\\text{they join only through}\\ (7)\\text{'s exponent}\\qquad[\\text{item 7 discipline};\\ \\mathrm{BM.37}(2):\\ \\text{disjoint alphabets}];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8814,
+  "tag": "BM.131",
+  "state": "KEPT",
+  "quote": "$$\\text{the tick-rate/field coupling of HistLog \u00a7II item 21(b) is re-scoped by it: the redshifted contraction read is formed at the point of use, inheriting}\\ \\mathrm{CT2.6}\\text{'s hypotheses}\\ [\\text{A \u00a70.2a}];\\qquad\\text{its absolute-frequency datum remains calibration-species"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8955,
+  "tag": "BM.133",
+  "state": "KEPT",
+  "quote": "**Phys.** Three curvature compositions were priced and none was selected, because consistency alone is satisfied three times over. Two derived criteria break the tie. The first is the corpus's own contraction discipline: the back-reaction map of row (iii) is a strict contraction "
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8961,
+  "tag": "Def-BM.20",
+  "state": "KEPT",
+  "quote": "**Def.** A chart-side interface definition on $\\mathrm{BM.34}$'s ADM split and $\\mathrm{CT2.6}$'s charts; the non-derived clauses are stated exactly and priced inside Part 4; no new axiom, no new datum, no new dimensionful scale. Logged as \u00a7II.4 addendum A-BM.12 before use."
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8972,
+  "tag": "Def-BM.20",
+  "state": "KEPT",
+  "quote": "$$(6)\\quad\\textbf{status:}\\qquad\\textbf{constructed}\\ \u2014\\ \\mathrm{BM.6}(6)\\text{'s specification is discharged;}\\qquad\\text{HistLog \u00a7II item 17 is closed by}\\ \\mathrm{BM.134};\\qquad\\text{the two derived clauses}\\ (2),(4)\\ \\text{carry no new freedom beyond}\\ (1),(3)\\text{'s declare"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8974,
+  "tag": "Def-BM.20",
+  "state": "KEPT",
+  "quote": "**Req.** D2.5, D2.9 (Parts 1\u20132); CT2.6 (Part 2); P4, P5 (Parts 1\u20132); FT.26(1), FT.79(5) (Part 3); Def-BM.10, Def-BM.17, BM.6(6), BM.10(1), BM.34(4), BM.34(7), BM.122(3), BM.123(1), EM.25(7) (this part or Part 2); A-BM.12 (\u00a7II.4, logged before use); the plane-wave basis on a chart"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 8976,
+  "tag": "Def-BM.20",
+  "state": "KEPT",
+  "quote": "**Pf.** Specification content: each clause states its requirement and cites its anchors; the non-derived clauses (1) and (3) are declared at the point of use and logged in \u00a7II.4; the constitutive clauses (2) and (4) are constructions on derived objects, each priced in its own cla"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9006,
+  "tag": "BM.134",
+  "state": "KEPT",
+  "quote": "$$(7)\\quad\\textbf{the closure row:}\\qquad\\boxed{\\ \\textbf{HistLog \u00a7II item 17 is closed: the momentum-space}\\ \\Sigma\\textbf{-resolvent is constructed}\\ }\\qquad[\\mathrm{Def\\text{-}BM.20};\\ \\text{machine: the discharge census against}\\ \\mathrm{BM.6}(6)\\text{'s three requirements \u2014 "
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9009,
+  "tag": "BM.134",
+  "state": "KEPT",
+  "quote": "**Req.** D2.5, D2.9 (Parts 1\u20132); CT2.1, CT2.6 (Part 2); P5 (Parts 1\u20132); FT.26(1), FT.79(5) (Part 3); Def-BM.10, Def-BM.17(3), Def-BM.20, BM.6(6), BM.10(1), BM.23(7), BM.34(1), BM.34(4), BM.34(7), BM.119(1), BM.121(2), BM.121(5), BM.122(3), BM.132(2) (this part); A-BM.10, A-BM.12 "
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9042,
+  "tag": "BM.135",
+  "state": "KEPT",
+  "quote": "$$(4)\\quad\\textbf{the stretched and unit rows (deficits 10 and 9 adjudicated):}\\qquad\\boxed{\\ \\#|Q|=2\\ \\ \\text{states:}\\ \\ 12\\ \\ \\text{at}\\ k=3,\\quad2\\ \\ \\text{at}\\ k=2;\\qquad\\#|Q|=3\\ \\ \\text{states:}\\ \\ 2\\ \\ \\text{at}\\ k=3\\ }\\qquad[W_3(\\pm2)=6,\\ W_3(\\pm3)=1,\\ W_2(\\pm2)=1;\\ \\text"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9043,
+  "tag": "BM.135",
+  "state": "KEPT",
+  "quote": "$$\\textbf{deficit 10 is closed:}\\qquad|Q|=2\\ \\ \\text{and}\\ \\ |Q|=3\\ \\ \\text{observable integer states exist on sealed supports of the additive read}\\qquad[\\text{item 20 deficit 10's requirement discharged};\\ \\mathrm{FT.41}(\\mathrm a):\\ N_{\\mathrm{charge}}=2\\ \\text{end registers p"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9044,
+  "tag": "BM.135",
+  "state": "KEPT",
+  "quote": "$$\\textbf{deficit 9's row stands re-certified:}\\qquad\\text{the read is integer-valued at every}\\ k:\\quad\\tfrac13,\\ \\tfrac23\\ \\ \\text{are structurally unreachable}\\qquad[\\mathrm{Def\\text{-}BM.8}(5);\\ \\mathrm{BM.28}(7);\\ \\text{machine: the sum-closure scan over}\\ \\{-1,0,1\\}^k,\\ k=1"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9050,
+  "tag": "BM.135",
+  "state": "KEPT",
+  "quote": "$$(7)\\quad\\textbf{the closure row:}\\qquad\\boxed{\\ \\textbf{HistLog \u00a7II Q10 is closed: an additive multi-chain charge read exists, is constructed, and is gauged on the chart side}\\ }\\qquad[\\mathrm{Def\\text{-}BM.8};\\ (1)\\text{--}(6);\\ \\text{machine: the three-clause discharge census"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9051,
+  "tag": "BM.135",
+  "state": "KEPT",
+  "quote": "$$\\text{Q9's row is complete: no residue at any chain count};\\qquad\\neg\\text{a species name attaches to any charge class beyond the identification layer}\\ [\\mathrm{Def\\text{-}BM.3}(7)];\\qquad\\neg\\text{a measured charge enters}\\ [\\mathrm{P5}].$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9066,
+  "tag": "BM.135",
+  "state": "KEPT",
+  "quote": "**Phys.** The additive charge read the era opened as its first construction spec is re-certified, censused and gauged. Baryons carry seven integer charge classes with the frozen weight row and the neutral-to-unit ratio four thirds; mesons carry five, and their CP pairs saturate t"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9096,
+  "tag": "BM.136",
+  "state": "KEPT",
+  "quote": "$$\\textbf{the flavour occupancy remains}\\ (\\mathrm{R3})\\textbf{-species:}\\qquad\\text{which three of the six states a named class occupies is the generation-selection question}\\ [\\mathrm{BM.60}(1):\\ \\text{three lines derived, three selected}\\ \\neg\\text{derived}]\\ \u2014\\ \\textbf{named "
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9101,
+  "tag": "BM.136",
+  "state": "KEPT",
+  "quote": "**Req.** A3 (Part 1); D2.14, D3.9 (Parts 1\u20132); CT3.8, CT3.15, CT3.17a, CT3.22 (Part 2); P5 (Parts 1\u20132); FT.28, FT.32(6), FT.76(1), FT.82(3), FT.107(1) (Part 3, Census); Def-BM.1, Def-BM.3(7), Def-BM.14, BM.1, BM.17, BM.26, BM.28(1), BM.31(2), BM.33, BM.60(1), BM.117(3), BM.126, B"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9114,
+  "tag": "BM.136",
+  "state": "KEPT",
+  "quote": "**Phys.** The permutation action on the three-chain state space is not a bookkeeping device: it is the colour 3-vertex read on slots. The epsilon tensor is the unique invariant line of three colour slots, it transforms by the sign of the permutation, and the sealed baryon is exac"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9140,
+  "tag": "BM.137",
+  "state": "KEPT",
+  "quote": "$$\\textbf{the two ensemble reads are separated species:}\\qquad\\text{the sector/defect read gives}\\ 0;\\ \\text{the informational read gives}\\ (3)\\text{'s strict negative};\\qquad\\neg\\text{a derived equation relates them}\\ \u2014\\ \\text{that is}\\ (\\mathrm{R1})\\text{'s bridge}\\qquad[\\mathr"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9153,
+  "tag": "BM.137",
+  "state": "KEPT",
+  "quote": "**Req.** A4 (Part 1); D0.4, D0.8 (Part 1); CT0.8, CT1.29 (Part 1); CT2.8 (Part 2); P1, P5 (Parts 1\u20132); Def-H.4, Def-H.32, FT.28, FT.32(6), FT.44(4), FT.105, FT.106(3), FT.107(1), FT.107(2), FT.144(4) (Part 3); Def-BM.5, Def-BM.14(3), Def-BM.17(2), BM.13(3), BM.19(2), BM.19(3), BM"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9175,
+  "tag": "BM.137",
+  "state": "KEPT",
+  "quote": "**Phys.** The meson gets its ensemble. The flicker measure generalizes from the marked three-pair specialization to a law at every $n$: the materialized weight is one over the geometric sum $1+u+\\cdots+u^{n-1}$, the mean count is $2n$ over that sum, and at two chains the measure "
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9197,
+  "tag": "BM.138",
+  "state": "KEPT",
+  "quote": "$$\\boxed{\\ \\textbf{the mechanism is derived and the coupling integer stays a priced interface:}\\ \\ \\text{what was open in item 19 was the construction half, and it is complete}\\ }\\qquad[\\text{HistLog \u00a7I.3's INTERFACE disposition re-cited as pointer}];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9200,
+  "tag": "BM.138",
+  "state": "KEPT",
+  "quote": "$$\\neg\\text{an aspect claim at}\\ k\\ge3\\ \\ \\text{is made or needed}\\ [\\mathrm{Def\\text{-}H.38}\\ \\text{Scope re-cited}];\\qquad\\textbf{the inventory-extension question of item 16(b) is void for this era}\\ \u2014\\ \\text{named for Part 5 if an aspect read of a}\\ k\\ge3\\ \\text{carrier is eve"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9201,
+  "tag": "BM.138",
+  "state": "KEPT",
+  "quote": "$$(7)\\quad\\textbf{status:}\\qquad\\textbf{derived:}\\ (1)\\text{--}(4);\\qquad\\textbf{adjudicated:}\\ (5),(6);\\qquad\\boxed{\\ \\textbf{HistLog \u00a7II item 19 is closed: the seed-tensoring mechanism is derived}\\ };\\qquad\\neg\\text{a declaration},\\qquad\\neg\\text{a P4 addition},\\qquad\\neg\\text{"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9203,
+  "tag": "BM.138",
+  "state": "KEPT",
+  "quote": "**Req.** A2 (Part 1); D1.4 (Part 1); CT0.12 (Part 1); P5 (Parts 1\u20132); EW.32, EW.33 (Part 2); Def-H.37(2), Def-H.38, FT.34(3), FT.55(2), FT.60(3), FT.60(4), FT.60(6), FT.60(7) (Part 3); Def-BM.19(3), BM.2(2), BM.124(3), BM.124(5), BM.128(2), BM.131(6) (this part); HistLog \u00a7I.3, \u00a7I"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9223,
+  "tag": "BM.139",
+  "state": "KEPT",
+  "quote": "### BM.139 \u2014 The two convention declarations and the sector locus: the conflicts, the issuances, and the closure of item 16"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9247,
+  "tag": "BM.139",
+  "state": "KEPT",
+  "quote": "$$(6)\\quad\\textbf{item 16 closed \u2014 the census:}\\qquad(\\mathrm d)\\ \\ \\text{the}\\ \\aleph\\text{-domain: declared}\\ [(2)];\\qquad(\\mathrm e)\\ \\ \\text{the corner convention: declared}\\ [(4)];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9250,
+  "tag": "BM.139",
+  "state": "KEPT",
+  "quote": "$$\\boxed{\\ \\textbf{HistLog \u00a7II item 16 is closed: both conventions are declared, the void residue is adjudicated, and the cell remainder is transferred}\\ }$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9252,
+  "tag": "BM.139",
+  "state": "KEPT",
+  "quote": "$$\\textbf{all four logged in \u00a7II.4 before use};\\qquad\\neg\\text{a P4 member added by any of them};\\qquad\\neg\\text{a dimensionful scale}\\ [\\mathrm{P1}];\\qquad\\neg\\text{a measured value}\\ [\\mathrm{P5}];\\qquad\\text{\u00a7Cal-BM gains no parameter}\\ [\\mathrm{BM.143}(4)\\text{'s consolidatio"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9254,
+  "tag": "BM.139",
+  "state": "KEPT",
+  "quote": "**Req.** A8 (Part 1); D3.3 (Part 1); CT0.9 (Part 1); P1, P5 (Parts 1\u20132); Def-H.27, Def-H.32, FT.21, FT.62(5), FT.67(1), FT.67(3), FT.74, FT.75, FT.76(1), FT.76(3), FT.77 (Part 3); A3 (Part 1); Def-BM.14(3), Def-BM.16(5), Def-BM.19(3), Def-BM.20, BM.6(4), BM.7, BM.73, BM.79(1), BM"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9264,
+  "tag": "BM.139",
+  "state": "KEPT",
+  "quote": "(2),(4)\\text{--}(7):\\ \\text{the declaration rows cite their grounds and their loci; the \u00a7II.4 entries carry the registry grammar}\\ [\\text{machine: the logged-before-use document pins}].\\ \\blacksquare"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9267,
+  "tag": "BM.139",
+  "state": "KEPT",
+  "quote": "**Phys.** Two conflicts the corpus could compute but not settle are settled by declaration, each with its grounds on the record. The amplitude-domain question \u2014 literal against chain-local \u2014 resolves pointwise: the ensembles keep the frozen literal domain, and the sealed junction"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9271,
+  "tag": "BM.140",
+  "state": "MOVED",
+  "quote": "### BM.140 \u2014 The ceiling study: the Platonic defect census, the dodecahedron selection theorem, the five-currency range table, and the adjudication of deficit 12"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9289,
+  "tag": "BM.140",
+  "state": "MOVED",
+  "quote": "$$\\textbf{the comparison is arithmetic,}\\ \\neg\\textbf{a bridge:}\\qquad\\text{the currencies are incommensurable}\\ \\bigl(\\ln1280/\\ln960\\notin\\mathbb Q\\bigr)\\ \\text{and no derived equation converts them}\\qquad[\\mathrm{BM.83}(2)\\text{--}(4);\\ \\mathrm{BM.37}(2);\\ \\text{item 7 pointer}"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9296,
+  "tag": "BM.140",
+  "state": "MOVED",
+  "quote": "$$(7)\\quad\\textbf{deficit 12 adjudicated \u2014 closed:}\\qquad(\\mathrm a)\\ \\ \\text{the ceiling census is complete: every formed mass read of the corpus carries an exact range row}\\ [(5)];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9299,
+  "tag": "BM.140",
+  "state": "MOVED",
+  "quote": "$$\\boxed{\\ \\textbf{deficit 12 is closed as adjudicated: the ceilings are derived, the selection is explained, and what stands is a calibration bar,}\\ \\neg\\textbf{a structural gap}\\ }\\qquad[\\text{item 20's bracket updated at the ledger}];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9324,
+  "tag": "BM.140",
+  "state": "MOVED",
+  "quote": "**Phys.** The last unexplained selection in the mass ledger is explained: the dodecahedron bounds the pole spectrum because its vertex defect is the unique minimum of the Platonic series, and the series terminates there for a reason of pure convexity \u2014 three pentagons is the tigh"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9396,
+  "tag": "BM.142",
+  "state": "KEPT",
+  "quote": "**Req.** A4, A8 (Part 1); D0.4, D1.2 (Part 1); CT1.22, CT2.1 (Part 2); EM.8, EM.15, EM.25(7) (Part 2); P2, P5 (Parts 1\u20132); Def-H.38 (Part 3); FT.79(5) (Part 3); Def-BM.12, Def-BM.17(3), Def-BM.18(2), Def-BM.20, BM.27, BM.44(4), BM.44(5), BM.58, BM.73(1), BM.73(2), BM.75(3), BM.76"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9421,
+  "tag": "BM.143",
+  "state": "MOVED",
+  "quote": "### BM.143 \u2014 The house cleaning: the void residues closed, the phantom gaps reclassified, the calibration register consolidated, and the Part-5 requirements named"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9449,
+  "tag": "BM.143",
+  "state": "MOVED",
+  "quote": "$$(6)\\quad\\textbf{the era's final residue census (the ledger balanced):}\\qquad\\begin{array}{l|l|l}\\text{residue} & \\text{the final disposition} & \\text{the locus}\\\\\\hline(\\mathrm{R1})\\ \\ \\rho_{\\mathrm B}\\text{'s value} & \\textbf{reclassified: calibration slot, value}\\ \\neg\\text{i"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9456,
+  "tag": "BM.143",
+  "state": "MOVED",
+  "quote": "$$(\\mathrm{P5.5})\\ \\ \\text{the generation/flavour selection}\\qquad[(\\mathrm{R3})\\text{'s occupancy half}];\\qquad(\\mathrm{P5.6})\\ \\ \\text{item 16(c)'s remaining cells}\\qquad[\\mathrm{BM.139}(6)];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9457,
+  "tag": "BM.143",
+  "state": "MOVED",
+  "quote": "$$(\\mathrm{P5.7})\\ \\ (\\mathrm{R4}')\\text{'s ensemble refinement}\\ [(5)];\\qquad(\\mathrm{P5.8})\\ \\ \\text{the}\\ n\\ge4\\ \\text{sealing-grammar cells}\\qquad[\\mathrm{BM.31}(2);\\ \\mathrm{BM.33};\\ \\mathrm{BM.136}(3)];\\qquad(\\mathrm{P5.9})\\ \\ \\text{item 13's finite-}\\mathfrak h\\ \\text{resi"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9486,
+  "tag": "BM.144",
+  "state": "MOVED",
+  "quote": "$$(1)\\quad\\textbf{the objectives and their verdicts:}\\qquad\\begin{array}{l|l|l}\\text{objective} & \\text{verdict} & \\text{locus}\\\\\\hline\\text{the Haar--Poisson duality} & \\textbf{derived}\\ \u2014\\ \\text{the twirl fixed point, the complementary factorization, the unique common fixed poi"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9489,
+  "tag": "BM.144",
+  "state": "MOVED",
+  "quote": "$$(4)\\quad\\textbf{the declarations this tier adds: four.}\\qquad\\text{A-BM.10}\\ (\\aleph\\text{-domain, pointwise}),\\quad\\text{A-BM.11}\\ (\\text{corner convention, variant B}),\\quad\\text{A-BM.12}\\ (\\text{resolvent interface}),\\quad\\text{A-BM.13}\\ (\\vee^2\\ \\text{locus})\\qquad[\\mathrm{"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9491,
+  "tag": "BM.144",
+  "state": "MOVED",
+  "quote": "$$(5)\\quad\\textbf{the rescope record (each row re-scoped at its own locus, none retracted, replaced or renumbered):}\\qquad\\begin{array}{l|l}\\text{row} & \\text{the rescope}\\\\\\hline\\mathrm{BM.88}(5),(8)\\text{'s envelope zero and}\\ N\\text{-row} & \\textbf{re-scoped:}\\ \\text{the vacuu"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9498,
+  "tag": "BM.144",
+  "state": "MOVED",
+  "quote": "$$(7)\\quad\\textbf{the ledger balanced (the final state):}\\qquad\\begin{array}{l|l}\\text{ledger row} & \\text{the final state}\\\\\\hline\\text{items 16, 17, 19} & \\textbf{closed}\\ [\\mathrm{BM.139}(6);\\ \\mathrm{BM.134}(7);\\ \\mathrm{BM.138}(7)]\\\\\\hline\\text{Q10, Q11} & \\textbf{closed}\\ \u2014"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9508,
+  "tag": "BM.144",
+  "state": "MOVED",
+  "quote": "$$\\textbf{the open items that are}\\ \\neg\\textbf{baryomesonic:}\\qquad\\text{item 7's value side}\\ (\\mathrm{C\\text{-}BM.1});\\qquad\\text{items 12, 21(d)}\\ \\text{(the selection)};\\qquad\\text{item 13's finite-}\\mathfrak h\\ \\text{loci};\\qquad\\text{item 21(a),(b),(e),(i)};\\qquad\\text{def"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9512,
+  "tag": "BM.144",
+  "state": "MOVED",
+  "quote": "**Req.** D0.8, D3.4 (Part 1); CT3.22 (Part 2); P1, P3, P5 (Parts 1\u20132); Def-H.32(4), FT.79(5), FT.145(3) (Part 3); Def-BM.3(7), Def-BM.6(7), Def-BM.11(7), Def-BM.14(8), Def-BM.16(5), Def-BM.17(6), Def-BM.20, BM.1\u2013BM.143 (this part, at the clauses cited in (1)\u2013(8)); A-BM.7, A-BM.9,"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9528,
+  "tag": "BM.144",
+  "state": "MOVED",
+  "quote": "**Phys.** The closing tier closes. Fourteen directives came in and every one left with a verdict: the duality derived, the lapse a function, the composition selected, the resolvent and phase space constructed, the charge read censused and gauged, the permutation action shown to b"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9557,
+  "tag": "BM.145",
+  "state": "KEPT",
+  "quote": "**Req.** A2, A7, A8 (Part 1); C8 (Part 1); D0.3, D0.8, D0.9, D1.2, D1.8, D2.1, D2.3, D2.12, D3.1, D3.5, D3.6, D4.1 (Parts 1\u20132); CT0.5, CT0.6, CT0.11, CT0.12, CT0.13, CT0.14, CT1.1, CT1.2, L0, L1, L2, L3(1) (Part 1); CT1.12, CT1.20, CT1.21, CT2.4, CT2.5, CT2.6, CT2.7, CT3.8, CT4.1"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9802,
+  "tag": "BM.151",
+  "state": "KEPT",
+  "quote": "$$\\text{item 13's finite-}\\mathfrak h\\ \\ \\text{residue is distinct and stands}\\ [\\text{the clean-bifurcation loci};\\ \\mathrm{FT.66}(3);\\ \\text{named for Part 5 as}\\ (\\mathrm{P5.9})\\ [\\mathrm{BM.143}(7)]];$$"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9848,
+  "tag": "BM.152",
+  "state": "MOVED",
+  "quote": "$$(9)\\quad\\textbf{the open items that are}\\ \\neg\\textbf{foundational-era structure:}\\qquad\\text{item 7's value side}\\ (\\mathrm{C\\text{-}BM.1});\\qquad\\text{items 12, 21(d)}\\ \\ \\text{(the selection)};\\qquad\\text{item 13's finite-}\\mathfrak h\\ \\ \\text{loci};\\qquad\\text{item 21(a),(b"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9851,
+  "tag": "BM.152",
+  "state": "MOVED",
+  "quote": "**Req.** A1\u2013A9 (Part 1); C1\u2013C13 (Part 1); D0.1\u2013D4.3 (Parts 1\u20132); P1\u2013P5 (Parts 1\u20132); CT0.*, CT1.*, CT2.*, CT3.*, CT4.* (Parts 1\u20132, at the clauses cited in BM.145\u2013BM.151); L0\u2013L5 (Part 1); Def-H.*, FT.* (Part 3, at the clauses cited); Def-BM.*, BM.1\u2013BM.151 (this part, at the clauses"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9877,
+  "tag": "BM.152",
+  "state": "MOVED",
+  "quote": "\\mathrm{BM.4}\\ \\text{colour/weak invariance};\\ \\text{parity passage} & \\mathrm{BM.5}\\ 25\\ \\text{cells},\\ 6\\ \\text{families};\\ \\text{conditioning law} & \\mathrm{BM.6}\\ 8\\ \\text{open construction specs}\\\\"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9913,
+  "tag": "BM.152",
+  "state": "MOVED",
+  "quote": "\\mathrm{BM.85}\\ Q_\\beta/m_n\\le{-}\\ln3/\\ln1280;\\ \\text{two formed reads, disjoint alphabets} & \\mathrm{BM.86}\\ \\text{the census adjudication};\\ \\neg\\text{a declaration};\\ \\text{the ten open rows} & \\neg\\text{Cal-BM parameter};\\ \\neg\\text{a measured value}\\ [\\mathrm{P5}]\\\\"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9914,
+  "tag": "BM.152",
+  "state": "MOVED",
+  "quote": "\\text{four currencies, zero conversions} & \\text{item 7 stands with its residue named} & \\text{the residue:}\\ (\\mathrm{R1})\\text{--}(\\mathrm{R3}),\\ \\sigma_\\ell,\\ \\sigma_\\nu,\\ e\\\\"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9921,
+  "tag": "BM.152",
+  "state": "MOVED",
+  "quote": "\\mathrm{BM.101}\\ Q^{\\mathrm{inv}}{=}{-}Q^{\\mathrm{fwd}};\\ \\varepsilon_\\ast{=}(2{-}\\log_23)/(3w)\\in(\\tfrac18,\\tfrac5{12});\\ P_{\\max}{=}1{-}\\tfrac3{2x_\\ast} & \\mathrm{BM.102}\\ [\\mathfrak h]{=}\\mathfrak q^{-1/2},\\ [\\rho_{\\mathrm B}]{=}\\mathfrak q^0;\\ \\text{A-BM.9 declared, value}\\ \\"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9922,
+  "tag": "BM.152",
+  "state": "MOVED",
+  "quote": "\\mathrm{BM.104}\\ G_{\\mathrm{corr}}{=}G(1{+}a\\mathsf g);\\ \\mathsf g_{\\mathrm{fp}}{=}(1{+}G)/(1{-}aG);\\ aG{=}\\pi Nw\\,\\varepsilon_{\\mathrm{EM}}Q^2E^2\\ln2;\\ \\mathsf g(G)\\ \\neg\\text{derived} & \\mathrm{BM.105}\\ w_{\\mathrm{mat}}{=}\\tfrac13\\sum_ia_i\\in[\\tfrac13,1]\\ \\text{measure-free};\\ "
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9926,
+  "tag": "BM.152",
+  "state": "MOVED",
+  "quote": "\\mathrm{BM.112}\\ \\hat P_{12}^2=\\mathrm{id};\\ \\operatorname{spec}\\subseteq\\{\\pm1\\};\\ \\operatorname{Tr}=d\\,\\mu_{\\mathrm{CP}};\\ \\text{the orientation block is statistics-blind} & \\mathrm{BM.113}\\ \\varepsilon=(-1)^{|k|}=(-1)^{2j};\\ \\textbf{deficit 11 closed};\\ \\mathrm{BM.6}(2)\\ \\text"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9938,
+  "tag": "BM.152",
+  "state": "MOVED",
+  "quote": "\\mathrm{Def\\text{-}BM.20}\\ R(z;\\mathbf p);\\ \\text{the embedding and Fourier rows declared (A-BM.12)};\\ \\mathcal V{=}1\\ \\text{minimal} & \\mathrm{BM.134}\\ \\text{the pole locus is the dispersion};\\ \\text{form-unique};\\ d\\mu_{\\mathrm{shell}}{=}\\tfrac{d^3p}{2E};\\ \\Phi_2{=}\\tfrac{\\sqrt"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9939,
+  "tag": "BM.152",
+  "state": "MOVED",
+  "quote": "\\mathrm{BM.136}\\ \\varepsilon_{\\sigma(i)\\sigma(j)\\sigma(k)}{=}\\mathrm{sgn}(\\sigma)\\varepsilon_{ijk};\\ \\mathcal H_n{=}2^n\\prod(|k_a|{+}1),\\ \\chi(\\sigma){=}d^{c(\\sigma)}\\ \\text{at every}\\ n;\\ \\dim\\operatorname{Inv}((\\mathbb C^3)^{\\otimes4}){=}0;\\ (1,1,1){:}\\ \\varepsilon_B{=}{-}1,\\ j"
+ },
+ {
+  "file": "Part4_Baryomesonic_era.md",
+  "line": 9940,
+  "tag": "BM.152",
+  "state": "MOVED",
+  "quote": "\\mathrm{BM.139}\\ \\text{A-BM.10}\\ (\\aleph\\text{-domain, pointwise: ensembles literal, junctions E2});\\ \\text{A-BM.11}\\ (\\text{variant B});\\ \\text{A-BM.13}\\ (\\vee^2\\ \\text{locus});\\ \\text{item 16 closed} & \\mathrm{BM.140}\\ \\delta_v^{\\mathrm{dodeca}}{=}\\tfrac\\pi5\\ \\text{minimal, uni"
+ },
+ {
+  "file": "Census.md",
+  "line": 63,
+  "tag": "FT.28",
+  "state": "KEPT",
+  "quote": "**Phys.** The first particle card of the program, every entry derived: the floor fermion carries informational mass $m_{\\mathrm{hid}}=2\\ln2/\\mathfrak h$ \u2014 two bits of hidden connectivity \u2014 an even interior winding $2\\kappa$ with trivial interior parity, the integer label $k=\\kapp"
+ },
+ {
+  "file": "Census.md",
+  "line": 78,
+  "tag": "FT.32",
+  "state": "KEPT",
+  "quote": "$$\\text{all-nonnull per-edge-integral}\\ [\\text{scope}:\\ \\mathrm{FT.24}/\\text{Open Gaps 13}]:\\ \\Theta_{\\min}=L+(L\\ \\mathrm{mod}\\ 2);\\qquad\\text{null-permitting}:\\ \\Theta_{\\min}=2\\ (\\kappa\\ \\text{profile}\\ (1,1,0,\\dots,0)\\ [\\mathrm{CT1.19a}:\\ \\kappa=0\\iff\\text{null}]);$$"
+ },
+ {
+  "file": "Census.md",
+  "line": 79,
+  "tag": "FT.32",
+  "state": "KEPT",
+  "quote": "$$\\text{scope}:\\ \\text{uniform/all-nonnull regimes presuppose per-edge}\\ \\kappa\\in\\mathbb Z\\ \u2014\\ \\text{derived at}\\ L{=}2\\ [\\mathrm{FT.24}]\\ \\text{and on round-trip-closed edges}\\ [\\mathrm{FT.34}(4),\\ \\text{forward}],\\ \\text{conditional for bare}\\ L\\ge3\\ \\text{cycles}\\ [\\text{Open"
+ },
+ {
+  "file": "Census.md",
+  "line": 80,
+  "tag": "FT.32",
+  "state": "KEPT",
+  "quote": "$$(7)\\quad\\Pi(\\Sigma_L)=L^2\\,\\Theta\\,(\\ln2)^2\\ [\\text{Open Gaps 7 diagnostic}];\\qquad L=2\\ \\text{reproduces FT.28's card verbatim (consistency)}.$$"
+ },
+ {
+  "file": "Census.md",
+  "line": 107,
+  "tag": "FT.32",
+  "state": "KEPT",
+  "quote": "**Rmk (the mass ladder).** $m_{\\mathrm{hid}}(\\Sigma_L)=L\\ln2/\\mathfrak h$ is linear in the cycle length at single contact \u2014 the first ladder structure of the fermion hunt. Its physical reading (generations? excitations? observer artifacts?) is *not* claimed: $m_{\\mathrm{hid}}$ is"
+ },
+ {
+  "file": "Census.md",
+  "line": 167,
+  "tag": "FT.42",
+  "state": "KEPT",
+  "quote": "$$(5)\\quad\\textbf{the card table}:\\ \\Pi=E_{\\mathrm{int}}^2\\,\\Theta_{\\mathrm{int}}(\\ln2)^2=8E^2K_S(\\ln2)^2\\ [\\text{Open Gaps 7 diagnostic}].$$"
+ },
+ {
+  "file": "Census.md",
+  "line": 282,
+  "tag": "FT.44",
+  "state": "KEPT",
+  "quote": "**Rmk (candidate reading, recorded not claimed).** Dual mass-degeneracy split by finer integer ledgers is a derived degeneracy-splitting *template* of the kind Open Gaps 5/12 asks for (families sharing a mass-like read, distinguished by winding/colour/lock data). No physical iden"
+ },
+ {
+  "file": "Census.md",
+  "line": 465,
+  "tag": "FT.51",
+  "state": "KEPT",
+  "quote": "**Phys.** The winding ledger is countable in closed form: at winding $k$ a polygon floor carries $\\binom{2k+n-1}{n-1}$ integer profiles, collapsing to dihedral necklaces under the corpus's own relabeling equivalence \u2014 two, four, seven distinct states for the triangle at $k=1,2,3$"
+ },
+ {
+  "file": "Census.md",
+  "line": 576,
+  "tag": "FT.63",
+  "state": "KEPT",
+  "quote": "**Rmk (corner convention, undeclared).** Skeleton face-loops pass through conical vertices: their $\\Theta_R$ requires a corner-distribution convention for defects on the loop (or the two-region read $0$ vs $4\\pi-\\delta$: the defect values differ by side, though the total $4\\pi$ a"
+ },
+ {
+  "file": "Census.md",
+  "line": 578,
+  "tag": "FT.63",
+  "state": "KEPT",
+  "quote": "**Rmk (no identifications).** As everywhere in this document: no card entry is identified with a named particle; the dual-degeneracy/splitting pattern (mass and $\\Pi$ degenerate; winding, sealing, locks, pole defects, and spin structure split) extends FT.44(2)'s template with two"
+ },
+ {
+  "file": "Census.md",
+  "line": 684,
+  "tag": "FT.65",
+  "state": "KEPT",
+  "quote": "$(3)$ **Density of states.** $\\#\\text{states}(K)\\sim2^{2E}\\,g(V)\\,K^{E-1}/((E-1)!\\,2^{F-1}\\,|\\operatorname{Aut}|)$ [from FT.64(4)'s asymptotics]: polynomial in the winding at fixed solid \u2014 degrees $E-1=(5,11,11,29,29)$ \u2014 with the Platonic prefactors spanning twelve orders of magn"
+ },
+ {
+  "file": "Census.md",
+  "line": 782,
+  "tag": "FT.69",
+  "state": "KEPT",
+  "quote": "**Rmk (what the lemma settles for the two-layer picture).** The amplitude layer does not merely cancel bound *cells* \u2014 it cancels every odd cycle and every undissolved even cycle. Bound content inside survivors is always *threaded*: read exactly once per edge, which a closed chai"
+ },
+ {
+  "file": "Census.md",
+  "line": 792,
+  "tag": "FT.76",
+  "state": "KEPT",
+  "quote": "**Thm.** Under Def-H.37(2) and Def-H.38, with $\\Theta_R=\\delta_v$ [FT.63(4)'s vertex-figure read; the corner convention of Open Gaps 16(e) is *not* declared], $D_S(m):=m^2_{\\mathrm{pole}}(m)/\\hat\\mu'^2=2-2\\cos(m\\,\\delta_v/2)=4\\sin^2(m\\,\\delta_v/4)$ [FT.60(5)], and $k$ the carrier"
+ },
+ {
+  "file": "Census.md",
+  "line": 1118,
+  "tag": "FT.84",
+  "state": "KEPT",
+  "quote": "$5$ structural no-goes or blocked items (each with a cited no-go), $7$ open. Deficit $1$ is the root of $4,5,6$ and $11$; deficits $7$\u2013$9$ and $12$ are derived impossibilities within the current inventory."
+ },
+ {
+  "file": "Census.md",
+  "line": 1119,
+  "tag": "FT.84",
+  "state": "KEPT",
+  "quote": "$(2)$ **The two-ceiling synthesis.** Both mass audits failed for the *same* structural reason at different loci: the pole side is bounded because a cone defect is an angle ($m^2_{\\mathrm{pole}}\\in[0,4\\hat\\mu'^2]$, widest ratio $6.39$ [FT.76(3)]), and the cover side is bounded bec"
+ },
+ {
+  "file": "Census.md",
+  "line": 1121,
+  "tag": "FT.84",
+  "state": "KEPT",
+  "quote": "$(4)$ **Verdict.** The corpus is **not** a Standard Model completion and does not claim to be: it is a derivation of the gauge-and-geometry skeleton from one scale and sixteen registers, with the chiral matter sector, the flavour sector and every dimensionful mass scale left outs"
+ },
+ {
+  "file": "Census.md",
+  "line": 1122,
+  "tag": "FT.84",
+  "state": "KEPT",
+  "quote": "$(5)$ **Consequences.** (a) Any further mass-read search must first extend P4 with a flavour/Yukawa sector or accept that fermion masses have no read \u2014 searching for the SM hierarchy inside the existing reads is exhausted by FT.77/FT.79 and this clause. (b) The large-$V$ route of"
+ },
+ {
+  "file": "Census.md",
+  "line": 1124,
+  "tag": "FT.84",
+  "state": "KEPT",
+  "quote": "**Req.** Def-H.29; FT.11, FT.12, FT.19, FT.20, FT.26, FT.27, FT.30, FT.34, FT.41, FT.52\u2013FT.60, FT.71, FT.76\u2013FT.83; A \u00a70.2, \u00a70.3; D1.5, D2.6, D3.4, D3.9, D4.1\u2013D4.3; CT0.11\u2013CT0.14 (Part 1); CT2.9, CT3.15, CT3.17, CT3.18, CT3.20, CT3.22 (**C/F**); CT4.1, CT4.4, CT4.5 (Part 2); EM.9,"
+ },
+ {
+  "file": "Census.md",
+  "line": 1165,
+  "tag": "FT.96",
+  "state": "KEPT",
+  "quote": "$(5)$ **E4: negative.** The reversal invariant takes exactly **two** values (self / paired) on both skeletons \u2014 not three; the exact counts are $6$ (tetra) and $153$ (cube) reversal classes. \"Three generations $=$ three distinct $S$-parity bias classes\" fails at the invariant lev"
+ },
+ {
+  "file": "Census.md",
+  "line": 1180,
+  "tag": "FT.96",
+  "state": "KEPT",
+  "quote": "**Phys.** Turn every arrow in the gas around and ask what changed. On the tetrahedron, one pair of shapes trades places and five look at themselves in the mirror; on the cube, a hundred eleven pairs dance and forty-two stand still \u2014 a hundred fifty-three reversal classes under th"
+ },
+ {
+  "file": "Census.md",
+  "line": 1446,
+  "tag": "FT.120",
+  "state": "KEPT",
+  "quote": "*Preamble (census supply from Category-A tags): the cover-polynomial tables of FT.68, the frame catalogue of FT.93, and the susceptibility census of FT.103 are census sides of structural tags; Part 4 consumes them through those tags' own rows \u2014 no B-classification is implied. No "
+ },
+ {
+  "file": "Census.md",
+  "line": 1480,
+  "tag": "FT.120",
+  "state": "KEPT",
+  "quote": "**FT.81.** Space: the corpus read classes against the external-reference content rows. Counts: presence/absence per read class (charge, spin, winding, sealing, chirality, flavour) \u2014 the internal read-class inventory (external scoring columns retired \u2014 framing retirement: HistLog "
+ },
+ {
+  "file": "Census.md",
+  "line": 1484,
+  "tag": "FT.120",
+  "state": "KEPT",
+  "quote": "**FT.84.** Space: the five mass-read species with their ranges. Counts: the ceiling taxonomy: two hard ceilings, two size-scaling species, one undeclared-fugacity direction (external scoring retired \u2014 framing retirement: HistLog \u00a7IV/FT.149). Baryonic: the range constraints any ba"
+ }
+]

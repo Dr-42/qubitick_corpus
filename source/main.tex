@@ -1,0 +1,193 @@
+\documentclass[11pt,openany]{book}
+
+\usepackage{fontspec}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{amsthm}
+\usepackage[margin=1in,headheight=17pt,headsep=14pt]{geometry}
+\usepackage{booktabs,longtable,array}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{microtype}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,linkcolor=NavyBlue,citecolor=NavyBlue,urlcolor=Mahogany]{hyperref}
+\makeatletter
+\@ifundefined{IfFontExistsTF}{\newcommand{\IfFontExistsTF}[3]{#3}}{}
+\makeatother
+\IfFontExistsTF{TeX Gyre Pagella}{\setmainfont{TeX Gyre Pagella}}{%
+  \IfFontExistsTF{texgyrepagella-regular.otf}{\setmainfont{texgyrepagella-regular.otf}}{}}
+\IfFontExistsTF{TeX Gyre Heros}{\setsansfont{TeX Gyre Heros}}{}
+\IfFontExistsTF{Latin Modern Mono}{\setmonofont{Latin Modern Mono}[Scale=0.92]}{%
+  \IfFontExistsTF{lmmono10-regular.otf}{\setmonofont{lmmono10-regular.otf}[Scale=0.92]}{}}
+% --- amsthm setup -----------------------------------------------------------
+% \theoremstyle{plain}-family style for theorem-like environments and
+% \theoremstyle{definition}-family style for definition-like environments.
+% The bodies are set upright (a `plain` italic body would italicise the
+% corpus's extensive \text{...} proof justifications); head formatting and
+% numbering follow the plain / definition styles respectively.
+\newtheoremstyle{canonplain}%
+  {7pt plus 2pt minus 1pt}{7pt plus 2pt minus 1pt}%
+  {\normalfont}{0pt}{\bfseries}{.}%
+  {0.6em plus 0.2em}%
+  {\thmname{#1}\thmnumber{ #2}\thmnote{\normalfont\ (#3)}}
+\newtheoremstyle{canondef}%
+  {7pt plus 2pt minus 1pt}{7pt plus 2pt minus 1pt}%
+  {\normalfont}{0pt}{\bfseries}{.}%
+  {0.6em plus 0.2em}%
+  {\thmname{#1}\thmnumber{ #2}\thmnote{\normalfont\ (#3)}}
+\theoremstyle{canonplain}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{axiom}{Axiom}[chapter]
+\newtheorem{convention}{Convention}[chapter]
+\theoremstyle{canondef}
+\newtheorem{definition}{Definition}[chapter]
+\newenvironment{movedblock}
+  {\par\medskip\begingroup\small\itshape\leftskip2.2em\rightskip2.2em}
+  {\par\endgroup\medskip}
+% run-in heading for theorem-class blocks that contain tables or verbatim
+% material (longtable/verbatim cannot live inside amsthm environments); the
+% printed form matches the environment heads and the counter is shared.
+\newcommand{\pseudohead}[3]{\par\medskip\noindent\refstepcounter{#1}%
+  \textbf{\csname the#1\endcsname\hspace{0.6em}(#2\hspace{0.35em}---\hspace{0.35em}#3).}%
+  \par\nobreak\smallskip}
+% ----------------------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\small\thepage}
+\fancyhead[RO]{\small\thepage}
+\fancyhead[RE]{\nouppercase{\small\leftmark}}
+\fancyhead[LO]{\nouppercase{\small\rightmark}}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\parskip}{2pt plus 1pt}
+\renewcommand{\arraystretch}{1.08}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\thepage}}
+\titleformat{\chapter}[hang]{\normalfont\Large\bfseries}{\thechapter}{1em}{}
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
+\titlespacing{\subsection}{0pt}{8pt plus 2pt minus 1pt}{3pt}
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{3}
+\allowdisplaybreaks
+\emergencystretch=3em
+\hbadness=10000
+\vbadness=10000
+\hfuzz=2pt
+\begin{document}
+
+
+\begin{titlepage}
+\centering
+\vspace*{2.0cm}
+{\Huge $\langle qu(b(i(t|t))ick)\rangle$\par}
+\vspace{0.4cm}
+{\LARGE The Four-Era Canon\par}
+\vspace{0.3cm}
+{\large A Machine-Verified, Discrete-Ledger Framework for Foundational Physics\par}
+\vspace{0.5cm}
+{\large Volume I --- The Four-Era Canon\par}
+\vspace{0.8cm}
+{\large Qubit\_era $\longrightarrow$ Bosonic\_era $\longrightarrow$ Fermion\_era $\longrightarrow$ Baryomesonic\_era\par}
+\vspace{1.3cm}
+\begin{tabular}{rl}
+\toprule
+axioms & A1--A9 \\
+conventions & C1--C13 \\
+definitions & D0.1--D4.3, Def-EM.20--22, Def-H.1--43, Def-BM.1--20 \\
+theorem and data-cell tags & 481 \\
+registry tags (total) & 623 \\
+dependency edges (Req graph) & 8014 \\
+free dimensionful scales & $1$ ($\mathfrak h$, P1) \\
+verification suite & 80 checkers, exact arithmetic, no floating point \\
+\bottomrule
+\end{tabular}
+\vfill
+{\large Edition of 2026-10-09\par}
+\vspace{0.2cm}
+{\normalsize Machine-verified: \texttt{verification/run\_all.py} --- suite state 80/80 green.\par}
+\vspace{0.3cm}
+{\small The mathematics is transplanted unmodified from the canon files preserved in \texttt{working\_markdowns/}; this volume is the sanitized presentation layer.\par}
+\end{titlepage}
+
+\frontmatter
+
+\chapter*{\texorpdfstring{Preface — Guide to this Volume}{Preface - Guide to this Volume}}
+\addcontentsline{toc}{chapter}{Preface --- Guide to this Volume}
+
+This volume is the presentation layer of the $\langle qu(b(i(t|t))ick)\rangle$
+corpus (read \textit{qubitick}): a formal corpus
+deriving, from nine axioms and one free dimensionful scale $\mathfrak h$, the
+qubit, bosonic, fermionic and baryomesonic layers, with every theorem carrying
+its requirement set (\textbf{Req}), its symbolic proof (\textbf{Pf}) and its
+physical reading (\textbf{Phys}), and every identity machine-verified in exact
+arithmetic. The corpus's own description of its subject stands: qubits
+$\longrightarrow$ bosonic gauge/geometry $\longrightarrow$ fermionic bound
+chains $\longrightarrow$ baryomesonic colour-sealed composites; pure symbolic
+derivation; no floating point anywhere; no external physical constant enters
+any derivation.
+
+\medskip
+\noindent\textbf{The volume.}\quad
+Chapters 1--4 are the four eras (Part 1 · Qubit, Part 2 · Bosonic,
+Part 3 · Fermion, Part 4 · Baryomesonic); Appendix A is the Census annex (the
+25 computed data cells, cited row-wise by the parts); the Index of Corpus Tags
+maps every canonical tag to its location in this volume or in the Addendum.
+
+\noindent\textbf{Companion documents.}\quad
+\textit{Addendum --- Structural Constraints, Refutations, and No-Go Theorems}
+(\texttt{docs/Addendum\_Refutations.pdf}) is the volume's Appendix B: the
+adjudication record, the refuted hypotheses, the no-go theorems and the trap
+register, moved out of the main text; where such a block stood inline, a stub
+cross-reference remains. \textit{Calibration Policy}
+(\texttt{docs/Calibration\_Policy.pdf}) lists every calibration slot, its
+locus, its consumers, and its status under P5. The repository
+\texttt{README.md} describes the package; \texttt{working\_markdowns/}
+preserves the raw working corpus byte-identically;
+\texttt{verification/} contains the checker suite.
+
+\noindent\textbf{Canonical tags and numbering.}\quad
+Every theorem environment carries both its presentation number (Theorem 1.1,
+Definition 3.12, \dots) and its canonical corpus tag (CT0.1, FT.54, BM.137,
+\dots) in its head. \textbf{All cross-citations in Req lines, proofs and scope
+clauses use the canonical tags}, which are unique across the corpus and are
+resolved by the Index of Corpus Tags; tags moved to the Addendum keep their
+identity there (Appendix B.$x$.$y$ entries are labelled with the tag).
+
+\noindent\textbf{Citations and records.}\quad
+This volume presents the corpus as a finished mathematical model: every
+citation resolves to a canonical tag, a Census cell, a [math] class, or a
+machine checker. The adjudications, refutations, no-go theorems and trap
+register --- the record of how the model was won --- live in the Addendum;
+the archival working record (including the historical ledger
+\texttt{HistLog.md}) is preserved in \texttt{working\_markdowns/}. Paths of
+the form \texttt{checks/verify\_*.py} in Req lines refer to
+\texttt{verification/checks/verify\_*.py} in this repository.
+
+\noindent\textbf{Verification.}\quad
+The dependency graph over the registry tags is acyclic and is re-derived from
+the canon at every suite run (\texttt{verify\_corpus\_graph.py}); the era
+structure, document format and every algebraic identity are checked in exact
+arithmetic (integer, \texttt{Fraction}, algebraic number fields, prime-log
+rings, truncated power series) with no floating point in any assertion.
+
+\tableofcontents
+\mainmatter
+\input{parts/part1_qubit.tex}
+\input{parts/part2_boson.tex}
+\input{parts/part3_fermion.tex}
+\input{parts/part4_baryon.tex}
+\appendix
+\input{annex_census.tex}
+\input{tag_index.tex}
+\chapter*{Colophon}
+\addcontentsline{toc}{chapter}{Colophon}
+This volume was generated from the canon files preserved in
+\texttt{working\_markdowns/} by the packaging pipeline in \texttt{source/pipeline/}.
+Registry: 623 tags; Req graph: 8014
+edges, acyclic (re-derived at every suite run). Verification suite: 80/80 green
+(\texttt{verification/run\_all.py}); exact arithmetic only --- no floating
+point in any assertion. Edition of 2026-10-09. The archive,
+the checkers and the mathematics are unmodified; the transformations applied
+to produce this presentation layer are logged in
+	exttt{source/CONVERSION\_LOG.md}.
+\end{document}
