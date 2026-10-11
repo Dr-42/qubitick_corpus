@@ -10,16 +10,18 @@ declaration issues, §Cal-AT is empty, and no clause of Parts 1–4 is modified 
 | `Part5_Atomic_era_TierAT3.md` … `TierAT5.md` | **Tiers AT.3–AT.5** — AT.16–AT.38: the capacity censor, the CP-assimilated tensor, the boundary-invariance survey, the shell, the calibration floor |
 | `Part5_Atomic_era_TierAT6.md` | **Tier AT.6** — AT.39–AT.40: the closure row and the gap-closure pass (committed in session 1 as `CLOSURE.md`; renamed for the uniform TierAT1–AT7 sequence) |
 | `Part5_Atomic_era_TierAT7.md` | **Tier AT.7** — AT.41–AT.45: the hydrogen spine — the EM sealing grammar, the dynamics of Q, the binding-scaling no-go, the two-body resolvent, and the tier's closure row |
+| `Part5_Atomic_era_TierAT8.md` | **Tier AT.8** — AT.46–AT.49: the spin spine — the duality tool and the polygon spin holonomy, the frame section on the extended carrier, the ledger-native moment coupling, and the tier's closure row |
 | `run_all_era2.py` | the tier's runner — gates first, exit 0 iff all green |
 | `check_era2_format.py` | the format + citation gate: canon `math_balance` rules ported, per-block Thm/Req/Pf/Phys anatomy, and every cited tag attested against the canon registry |
 | `qexact.py` | shared exact-arithmetic core (see below) |
+| `duality.py` | shared View1↔View2 duality core — the dictionary rules (D1)–(D6): sector→ADM (CT1.12≡BM.34(1)), the AT.5(1) closed form, the flat/drag split, holonomy reads, exact polygons (`Quad(√d)`), the H_ω doublet over `Gauss(i)` |
 | `SESSION_SUMMARY_AND_REVIEW.md` | session ledger, the model's error profile, and interaction review notes |
-| the 28 `*.py` checkers | the machine verification (26 content checkers + the 2 validation gates); each cites the canon tags it reproduces or extends |
+| the 31 `*.py` checkers | the machine verification (29 content checkers + the 2 validation gates); each cites the canon tags it reproduces or extends |
 
 ## Run
 
 ```bash
-cd canon/era2 && python3 run_all_era2.py     # -> 28 checkers, 497 exact markers, 0 failures, exit 0
+cd canon/era2 && python3 run_all_era2.py     # -> 31 checkers, 551 exact markers, 0 failures, exit 0
 ```
 
 **Tier index.** AT.1–AT.8 (Tier AT.1) the coherence census and the split · AT.9–AT.15 (AT.2) the
@@ -27,7 +29,9 @@ bit/qubit tensor form · AT.16–AT.20 (AT.3) the capacity censor · AT.21–AT.
 CP-assimilated tensor and subnetwork equivalence · AT.29–AT.38 (AT.5) the boundary-invariance
 survey, the shell, and the calibration floor · **AT.39–AT.40 (AT.6) the closure row and the
 gap-closure pass** · AT.41–AT.44 (AT.7) the hydrogen spine: the sealing grammar, the dynamics of Q,
-the binding-scaling no-go, the two-body resolvent · **AT.45 (AT.7) the closure row**.
+the binding-scaling no-go, the two-body resolvent · **AT.45 (AT.7) the closure row** · AT.46–AT.48
+(AT.8) the spin spine: the duality tool and the polygon holonomy, the frame section, the moment
+coupling · **AT.49 (AT.8) the closure row**.
 
 **AT.40 — the gap-closure pass: eight more rows closed.**
 - **AT-O19**: the five extrema at `ε_q = ⅛` are **ONE equation** — `d/dp[p(1−p)] = 1−2p = 0` and
@@ -84,11 +88,50 @@ the binding-scaling no-go, the two-body resolvent · **AT.45 (AT.7) the closure 
   into its block), all
   found by the new `check_era2_format.py` gate.
 
+**Session 3 — CONSOLIDATED as Tier AT.8 (AT.46–AT.49): the duality tool and the spin sector.** `duality.py` (the reusable
+View1↔View2 core, rules (D1)–(D6)) + `spin_holonomy.py` (**18/18 exact**) + `frame_section.py`
+(**19/19 exact**, candidate AT.47 — the spacetime spin factor is Def-H.34's triple and is MAXIMAL:
+gauge-trivial Cl(3,0), no fourth gamma (nullity 0); the relocation row γ_{F₀}=σ₀⊗σ₃=I⊗κ̂ — FT.93's
+example pseudoscalar IS Def-H.34's partner involution, the pincer arena-relative; the weak-scalar
+frame shortlist = 6 frames, one S-orbit, the six seed-only SINGLETONS; the section reduces to one
+base frame per arc-transitive floor under the marked lift; de Moivre transport exact with the
+fourth-root lattice Lφ∈(π/2)ℤ; and the unification: AT.46's drag operator = exp(i(π/2)Θ_drag κ̂) —
+the polygon's discrete spin connection IS the pseudoscalar's fourth-root exponential. Discovery
+record `era2/FRAME_SECTION.md`.) + `moment_coupling.py` (**17/17 exact**, candidate AT.48 — the
+ledger-native moment coupling: the VANISHING LEMMA (Σ_v f_v ≡ 0 on every configuration — the naive
+total contraction is identically zero, proved); the two non-vanishing native channels — the
+boundary-channel operator identity M̂ = (Σ_int f_v)·γ_{F₀} = −q_EM·(I⊗κ̂) (chirality-FLIPPING,
+{M̂,χ̂}=0, chiral-basis off-diagonal −q·I⊗σ₁, splitting 2|q| with splitting-per-charge exactly 2)
+and the frozen A8 activity dressing (−1)^ℵ; the exact dichotomy — boundary channel FLICKER-IMMUNE
+(q preserved on 𝓔(𝒳) [Def-BM.5(1)]), the dressing FLICKER-SENSITIVE (the anomalous part is the
+fluctuation correction); ε_total = i^Θ(−1)^ℵ closed within the fourth roots; the VECTOR contraction
+Σᵢ(EM)ᵢσᵢ⊗σ₂ is a HARD NO-GO (EM is a stack aspect with zero metric coordinates — no native EM
+index exists; the smooth σ^{μν}F_{μν} decomposes into the pseudoscalar channel + AT.6's
+shift-mediated channel); BM.125(4)'s three grounds passed one by one, BM.126's {ε_q} alphabet
+untouched. AT-O6 CLOSED AS STRUCTURE for the coupling; discovery record `era2/MOMENT_COUPLING.md`.) All three
+constructions are consolidated in `Part5_Atomic_era_TierAT8.md` (AT.46–AT.48, closure row AT.49);
+the open ledger now runs: AT-O14/O16 (priority 1), AT-O11, AT-O7's convention, AT-O13, AT-O26,
+AT-O27, **new AT-O28** (the global Dirac-type operator — two enumerated slots away: the lift + the
+base frame per floor), **new AT-O29** (a native vector EM read — proved structural absence,
+by-nature row). the polygon shift
+holonomy — zero for constant shift (telescoping), forced nonzero up to one scale on arc-transitive
+floors (AT.34's field, by integer group transport), orientation-odd, and **Diophantine-quantized**
+by FT.22/FT.24-25; the H_ω doublet splits by exact fourth-root phases, with a **statistics-flip
+law** (ε₊≠ε₋ ⟺ Θ_drag odd — witnessed: one geometry, two orientations, opposite statistics
+classes); the Frenet-lift vs exchange-sign census (two distinct reads, agreeing exactly on L odd ∨
+L≡2 mod 4 — FT.55(1)'s bar at parity level). Adjudication: the ledger drag holonomy is the spin
+connection's **dictionary partner, ¬its equal**; Open Gaps 19 stays declared; **AT-O6 sharpened** —
+the drag/spin-orbit polygon sector is derived, and the exact missing definition is BM.6(8)'s frame
+section e↦F_e (the polygon's symmetry gives the forced *line*, not a *section*). Candidate tag
+**AT.46**; discovery record `era2/SPIN_HOLONOMY.md`; tier consolidation pending.
+
 **The sharpened open list, in priority order:**
 1. **(AT-O14/O16)** compute `dim 𝒦_{n≥4}` — CT0.14's own method; **the only row that could unlock
    the locked sector**. Cheap and decisive.
-2. **(AT-O6)** the anomalous moment — unchanged and now sharp: AT.44's resolvent is ¬spin-carrying;
-   the spin–field coupling still needs the frame section [BM.6(8)]; BM.125(4)'s three grounds stand.
+2. **(AT-O28)** the global Dirac-type operator — **two enumerated slots away** (AT.47/AT.48):
+   the marked lift (Open Gaps 19) + one base frame per floor from the 6-frame shortlist; the
+   skeleton's chiral-odd graded shape is derived, and its spatial gammas are gauge-carrying by the
+   maximality theorem.
 3. **(AT-O11)** extend CT1.12's dictionary past the pair arena to `n=4`.
 4. **(AT-O7)** land the BM.140(6) pin and the re-citation-pinning convention.
 5. **(AT-O13)** Kerr, once **(AT-O3)** issues `(ϰ,β)`.
@@ -97,10 +140,15 @@ the binding-scaling no-go, the two-body resolvent · **AT.45 (AT.7) the closure 
 7. **(AT-O27)** `ε_q`'s value — ⅛ is derived as the unique distinguished point (now four ways),
    its **adoption** is ¬issued [P5]; calibration-era content.
 **By nature / by design, not gaps:** (AT-O2) the slicing choice is gauge; (AT-O3) `(ϰ,β)` is
-calibration. **Closed at Tier AT.7:** (AT-O4) the EM sealing grammar — grammar AT.41(5), dynamics
+calibration; **(AT-O29)** a native vector EM read — proved absent (EM is a stack aspect with zero
+metric coordinates, AT.48(3)); reopening needs a new derived read-species. **Closed at Tier AT.7:** (AT-O4) the EM sealing grammar — grammar AT.41(5), dynamics
 AT.42, spectrum AT.44(5); residual = calibration species. (AT-O5) the lepton mass read — formed
 **in species** as the k=1 resolvent price AT.44(4); the `ε_q` value and the family splitting stay
-calibration/Gram-currency. AT.43(R3) — met by AT.44. **Closed earlier:** AT-O1, O7 (checker
+calibration/Gram-currency. AT.43(R3) — met by AT.44. **Closed at Tier AT.8:** (AT-O6) the
+anomalous moment — **closed as structure**: the drag/spin-orbit sector derived (AT.46), the frame
+section reduced to two enumerated slots (AT.47), the moment coupling constructed natively with the
+anomalous read `(2|q| splitting; (−1)^ℵ dressing)` and the vector channel a proved no-go (AT.48);
+the continuous anomaly number is calibration-species by P5 design. **Closed earlier:** AT-O1, O7 (checker
 written), O8, O9, O10, O12, O15, O16, O17, O18, O19, O20, O21, O22, O23, O23b, O24, O25.
 
 ## The arithmetic covenant
