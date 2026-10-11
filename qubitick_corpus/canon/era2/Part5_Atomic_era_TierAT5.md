@@ -2,9 +2,9 @@
 
 **Level.** 5. **Era.** 2 (the Atomic era). **Tier.** AT.5 — the boundary-invariance survey:
 the coarse-graining principle, the per-aspect and per-rung census, and complete invariance tested.
-**Tags.** AT.29–AT.34. **Status.** discovery-phase working tier. **No declaration issues;
+**Tags.** AT.29–AT.38. **Status.** discovery-phase working tier. **No declaration issues;
 §Cal-AT stays empty; no clause of Parts 1–4 is modified or retracted.**
-**Machine.** `canon/era2/boundary_census.py` → **18/18 exact**; `canon/era2/ato22.py` → **16/16 exact** (AT.33); `canon/era2/ato1.py` → **14/14 exact** (AT.34). Exit 0. Arithmetic: integers,
+**Machine.** `canon/era2/boundary_census.py` → **18/18 exact**; `canon/era2/ato22.py` → **16/16 exact** (AT.33); `canon/era2/ato1.py` → **14/14 exact** (AT.34); `canon/era2/shell.py` → **20/20 exact** (AT.35); `canon/era2/close_rows.py` → **15/15 exact** (AT.36–AT.38). Exit 0. Arithmetic: integers,
 `Fraction`, **exhaustive enumeration of all $2^n$ sign assignments**. No floating point.
 **Charter.** Part 5 cites Parts 1–4 and earlier AT-tags only.
 
@@ -336,12 +336,192 @@ instead of an ansatz: network → spine → metric → shift direction (derived)
 
 ---
 
+### AT.35 — The envelope/horizon shell (AT-O23): ledger-formed, chart-unformed, with a derived horizon entropy
+
+**Thm.**
+$$(0)\quad\textbf{a correction first:}\qquad\mathrm{AT.31}(6)\ \text{and the era2 README glossed the ordering as ``a chart-FORMED shell outside the breaking locus''.}\ \textbf{That is wrong.}\ \ \mathrm{BM.148}(1)\ \text{gives}\ \text{chart-formed}\iff r\ge r_s,\ \text{so the whole region }\Delta x_{\mathrm B}<r<r_s\ \textbf{is chart-}\neg\textbf{formed};$$
+$$\boxed{\ \textbf{the shell is LEDGER-FORMED and CHART-UNFORMED}\ }$$
+$$(1)\quad\textbf{the shell in envelope units, and its exact thickness (ANSWER TO Q4):}\qquad k:=\frac{r}{\Delta x_{\mathrm B}}=\frac{rE_{\mathrm{int}}\ln2}{\mathfrak h}\qquad[\mathrm{BM.88}(2)(\mathrm i);\ \mathrm{BM.146}(1)];$$
+$$k_{\mathrm{crit}}(E)=\frac{E_{\mathrm{int}}^2\ln2}2=\frac{G(E)}{4\pi}\qquad[\mathrm{BM.148}(1);\ \mathrm{BM.88}(3)];$$
+$$\boxed{\ \textbf{the shell is exactly }k\in\bigl(1,\ k_{\mathrm{crit}}\bigr),\qquad \frac{r_s-\Delta x_{\mathrm B}}{\Delta x_{\mathrm B}}=k_{\mathrm{crit}}-1=\frac{E_{\mathrm{int}}^2\ln2}2-1=\frac{G}{4\pi}-1\ }$$
+$$\begin{array}{c|ccccc}E_{\mathrm{int}}&2&6&12&24&60\\ \hline \Delta x_{\mathrm B}/\mathfrak h&0.721348&0.240449&0.120225&0.060112&0.024045\\ r_s/\mathfrak h&1&3&6&12&30\\ k_{\mathrm{crit}}=G/4\pi&1.386294&12.476649&49.906597&199.626388&1247.664925\\ \textbf{thickness}/\Delta x_{\mathrm B}&\mathbf{0.386294}&\mathbf{11.476649}&\mathbf{48.906597}&\mathbf{198.626388}&\mathbf{1246.664925}\end{array}$$
+$$(2)\quad\textbf{non-emptiness is BM.148(4)'s inequality read twice:}\qquad k_{\mathrm{crit}}>1\iff E_{\mathrm{int}}^2\ln2>2,\qquad\text{and}\ E_{\mathrm{int}}\ge2\implies E^2\ln2\ge4\ln2=\ln16>2;$$
+$$\boxed{\ \textbf{the shell is non-empty for every admissible }E_{\mathrm{int}}\ge2,\ \textbf{on the same certificate as ``no materialized cell is chart-formed at its own envelope''}\ }$$
+$$(3)\quad\textbf{the lapse is not real in the shell:}\qquad N^2=1-\frac{G}{4\pi k}=1-\frac{k_{\mathrm{crit}}}{k}\ \begin{cases}<0 & k<k_{\mathrm{crit}}\ \ (\textbf{the shell})\\ =0 & k=k_{\mathrm{crit}}\ \ (r=r_s)\\ >0 & k>k_{\mathrm{crit}}\ \ (r>r_s)\end{cases}\qquad[\mathrm{BM.132}(2);\ \mathrm{BM.146}(3)]$$
+$$(4)\quad\textbf{ANSWER TO Q1 — the flicker weight is }r\textbf{-independent:}\qquad w=\frac{\langle E_{\mathrm{int}}\rangle_{\mathcal E}}{E_{\mathrm{int}}^{\mathrm{cryst}}},\quad w(0)=1,\quad 0<w\le1,\qquad w_{\mathrm{mat}}^{(n)}=\frac1{D_n},\quad D_n=\frac{1-u^n}{1-u},\quad u=4\varepsilon_q;$$
+$$\boxed{\ w(\varepsilon_q)\ \textbf{carries no }r\textbf{ argument at all}\ —\ \text{it is a LEDGER quantity and takes the same values in the shell as anywhere}\ }$$
+$$(5)\quad\textbf{the formed/unformed census IN the shell:}\qquad\begin{array}{l|l}
+\textbf{FORMED (ledger-side)} & \textbf{NOT FORMED (chart-side)}\\ \hline
+k\in(1,k_{\mathrm{crit}});\ \ f(k)=1-\tfrac1k\in(0,1-\tfrac1{k_{\mathrm{crit}}}) & N\ \ (N^2<0)\\
+G=2\pi E_{\mathrm{int}}^2\ln2\ \ (r\text{-independent}) & e(r,E)=e_0\sqrt{Nf\mathsf g}\ \ [\mathrm{BM.133}(6)\text{'s locus is }k\ge\tfrac G{4\pi}\wedge k>1]\\
+\mathsf g(G)=\tfrac1{1+G}\ \ (r\text{-independent}) & a=\tfrac12Nw\varepsilon_{\mathrm{EM}}Q^2,\ \ G_{\mathrm{corr}}=G(1+a\mathsf g)\\
+w(\varepsilon_q),\ w_{\mathrm{mat}}^{(n)} & \sigma_{\mathrm{pair}},\ \sigma_{\mathrm{ann}}\ [\mathrm{BM.142}(4),(5)]\\
+S_{\mathfrak L}=E_{\mathrm{int}}\ln2,\ \ S_{\mathrm{hid}}=E_{\mathrm{int}}\ln2 & S(r)=4\pi r^2\ln2/\mathfrak h^2\ \ (\text{a chart read})\\
+\Theta_{\mathrm{int}}\in2\mathbb Z,\ k,\ \varepsilon=(-1)^{|k|} & \\
+\mathcal P_M^{(n)},\ \langle\rho_{D^-}\rangle_\Gamma & \end{array}$$
+$$(6)\quad\textbf{ANSWER TO Q2 — the horizon entropy is derived, and it is HALF THE CURVATURE LOCK:}$$
+$$\text{the solid angle is Census FT.63(4)'s DISCRETE total angle defect, }\neg\text{a smooth sphere:}\qquad V\,\delta_v=4\pi\ \ \text{on all five Platonic skeletons, exact in }\pi\text{-units};$$
+$$A(r_s)=(V\delta_v)\,r_s^2=4\pi\Bigl(\frac{\mathfrak hE_{\mathrm{int}}}2\Bigr)^2=\pi\mathfrak h^2E_{\mathrm{int}}^2;\qquad S=\frac{A}{\mathfrak h^2}\ln2\ \ \text{at}\ \bar\kappa=1\qquad[\mathrm{CT1.29};\ \mathrm{FT.34}(2):\ \bar\kappa=1\iff\kappa_e\equiv1];$$
+$$\boxed{\ S(r_s)=\pi E_{\mathrm{int}}^2\ln2=\frac{G(E)}2\ }\qquad[\mathrm{BM.88}(3):\ G=2\pi E_{\mathrm{int}}^2\ln2]$$
+$$\textbf{the Bekenstein--Hawking form is recovered with no smooth limit:}\qquad S=\frac{A\ln2}{\mathfrak h^2}=\frac{A}{4G_N}\qquad[\mathrm{CT2.9}:\ \mathfrak h^2=4G_N\ln2;\quad \mathrm{AT.1}:\ G_N=\tfrac{\mathfrak h^2}{4\ln2}];$$
+$$\textbf{inside the shell the chart-side }S(r)\ \textbf{is }\neg\textbf{formed};\ \text{the LEDGER entropy }S_{\mathfrak L}=E_{\mathrm{int}}\ln2\ \textbf{is formed throughout and is }r\textbf{-independent};$$
+$$(7)\quad\textbf{ANSWER TO Q3 — the membrane is }\neg\textbf{shell-localized:}\qquad \mathrm{BM.149}(3)\text{'s rows }\mathcal P_M^{(n)}F_{D^-}\mathcal P_M^{(n)}=0\ \text{and}\ \neg\exists\ \text{a pole of }Z(\mathcal R,n)\ \text{carrying locked content carry }\textbf{no }r\textbf{ argument};$$
+$$\text{they are indexed by the RUNG }n\ \text{and the mask }\mathcal P_M^{(n)}\ [\mathrm{Def\text{-}H.15}(2),(3)],\ \text{both combinatorial};$$
+$$\boxed{\ \textbf{the membrane is a BOUNDARY CONDITION at }r_s\ \textbf{on its chart face, and a RUNG CONDITION on its ledger face}\ —\ \neg\textbf{a shell-localized object}\ }$$
+$$\text{and BM.149(1)'s ``two faces of one capacity'' is exactly the statement that these are one capacity at two loci};$$
+$$(8)\quad\textbf{the shell is where the two faces DISAGREE, which is why two are needed:}\qquad\text{in the shell, }r<r_s\ \text{so }E_{\mathrm{int}}>2r/\mathfrak h\ (\textbf{the chart face has failed}),\ \text{while }n(v)\le3\ \text{still holds on every accessible vertex}\ (\textbf{the ledger face is untouched});$$
+$$(9)\quad\textbf{the complete radial picture, with the bottom closed by envelope discipline:}\qquad\begin{array}{l|l}
+r>r_s & \text{chart FORMED, ledger intact — the accessible exterior}\\
+r=r_s & N^2=0\ \text{exactly — the membrane, one face of the capacity}\\
+\Delta x_{\mathrm B}<r<r_s & \textbf{THE SHELL: chart unformed, ledger intact}\\
+r=\Delta x_{\mathrm B} & \text{the envelope; never chart-formed for }E\ge2\ \ [\mathrm{BM.148}(4)]\\
+r<\Delta x_{\mathrm B} & \neg\text{a ledger region: }\Delta x_{\mathrm B}\ \textbf{is a chart envelope and }\neg\textbf{a ledger distance}\ [\mathrm{Def\text{-}BM.4}(5)]\end{array}$$
+$$(10)\quad\textbf{no stretched horizon is invoked:}\qquad\text{the shell is the exact locus where BM.148(1)'s capacity condition fails while CT0.11's does not. Every quantity above is a derived row or an exact combination of derived rows.}$$
+$$(11)\quad\textbf{status:}\qquad\textbf{derived:}\ (1),(2),(3),(4),(6),(7),(8),(9);\qquad\textbf{corrected:}\ \mathrm{AT.31}(6)\text{'s ``chart-formed shell'' gloss, superseded by (0)};\qquad\textbf{closed:}\ (\mathrm{AT\text{-}O23}). $$
+
+**Req.** D1.6, P1 (Part 1); CT0.11, CT1.29, CT2.9, CT4.2, CT4.3, D4.3 (Part 2); AT.1(1),(3), AT.2, AT.5, AT.16(4), AT.28, AT.31(6), AT.33(9) (this tier); Def-BM.4(1),(5), Def-H.15(2),(3), FT.34(2),(4), FT.37, FT.63(4), Census FT.63(4), BM.43(1), BM.88(2),(3), BM.89(4), BM.104(1), BM.132(2),(3), BM.133(4),(6), BM.137(1), BM.142(4),(5), BM.146(1),(3), BM.148(1),(3),(4), BM.149(1),(3) (Parts 3–4); exact rational and rigorous `Fraction`-interval arithmetic, the exact certificate $e^2<(876809/322560)^2<8<16$ [math; machine: `shell.py` 20/20].
+
+**Pf.**
+$$(1):\ k(r_s)=r_s/\Delta x_{\mathrm B}=(\mathfrak hE/2)\cdot(E\ln2/\mathfrak h)=E^2\ln2/2=k_{\mathrm{crit}};\quad k(\Delta x_{\mathrm B})=1;\ \text{the thickness in Born widths is }k_{\mathrm{crit}}-1;$$
+$$(3):\ N^2=1-G/(4\pi k)=1-k_{\mathrm{crit}}/k\ \text{by (1)};\ \text{sign follows from }k\lessgtr k_{\mathrm{crit}};$$
+$$(6):\ V\delta_v=4\pi\ \text{exactly on all five skeletons}\ [\text{Census FT.63(4), machine-verified in AT.1's validation gate}];\ A=4\pi r_s^2=\pi\mathfrak h^2E^2;\ S=A\ln2/\mathfrak h^2=\pi E^2\ln2;\ G=2\pi E^2\ln2\implies S=G/2;\ \text{and}\ A\ln2/\mathfrak h^2=A/(4G_N)\ \text{on CT2.9}. \blacksquare$$
+
+**Phys.** The shell is not a stretched horizon and needs no such analogy. It is the exact region
+where one face of BM.149(1)'s single capacity has been exceeded and the other has not: the chart
+cannot resolve a cell of that content at that radius, while every vertex still presents an
+admissible ($\le3$) sub-configuration. So the ledger is intact and the geometry is not — which is
+why the formed reads in the shell are precisely the ledger ones ($k$, $f$, $G$, $\mathsf g$, $w$,
+$S_{\mathfrak L}$, the mask, the $D^-$ density) and the unformed ones are precisely the chart ones
+($N$, $e$, $a$, $\sigma$, any $S(r)$).
+
+Three results are worth separating out. The **thickness** is a closed form, $G/(4\pi)-1$ Born
+widths, growing as $E_{\mathrm{int}}^2$ — sub-width at $E_{\mathrm{int}}=2$ and $1246.7$ widths at
+$E_{\mathrm{int}}=60$. The **flicker weight** is completely $r$-blind: it is a ledger quantity, so
+the shell has no flicker physics of its own, only the metric physics it cannot form. And the
+**horizon entropy** is derived exactly and lands on a striking value: $S(r_s)=\pi E_{\mathrm{int}}^2\ln2
+=G/2$, half the curvature lock, with the Bekenstein–Hawking form $S=A/(4G_N)$ recovered using
+Census FT.63(4)'s *discrete* $V\delta_v=4\pi$ as the solid angle rather than any smooth sphere.
+
+The membrane, finally, is not in the shell. It has no radial argument at all — it is a rung
+condition on the ledger face and a boundary condition at $r_s$ on the chart face, and the shell is
+where those two faces come apart. Def-BM.4(5) closes the picture from below: $\Delta x_{\mathrm B}$
+is a chart envelope and *not* a ledger distance, so $r<\Delta x_{\mathrm B}$ is not a ledger region
+either. The shell is the innermost region with a ledger referent and no chart referent.
+
+---
+
+### AT.36 — (AT-O25) closed: the calibration floor, and the parameter count does not grow
+
+**Thm.**
+$$(1)\quad\textbf{the declared surface, counted from the canon's own registries:}\qquad\begin{array}{l|l|c}
+\text{registry} & \text{the slots} & \#\\ \hline
+\mathrm{P1} & \mathfrak h\ \text{— the single free dimensionful scale} & 1\\
+\mathrm{P4}\ \text{core (Part 1 §E)} & g,\ g';\ h_0;\ c_W;\ \Lambda;\ \varkappa,\ \beta,\ \alpha_\Omega & 8\\
+\mathrm{Cal\text{-}F} & r=x_+/x_-\ (\text{equiv. }\varepsilon_q),\ \hat\mu^2,\ \hat\mu'^2,\ \alpha,\ \mu,\ \mu_\nu & 6\\
+\mathrm{Cal\text{-}BM} & (\mathrm{C\text{-}BM.1})\ \rho_{\mathrm B},\ (\mathrm{C\text{-}BM.2})\ e_0,\ \text{and BM.143(4)'s third} & 3\\
+\hline
+\mathbf{Cal\text{-}AT}\ \text{(Atomic, Tiers AT.1--AT.5)} & \textbf{none} & \mathbf{0}\end{array}$$
+$$\boxed{\ \textbf{Level 5 adds ZERO calibration parameters.}\ \ \text{Every tier's status clause carries the same negation row}\ }$$
+$$(2)\quad\textbf{the routes multiply while the count does not:}\qquad\begin{array}{l|l}
+\text{the parameter} & \textbf{independent determination routes}\\ \hline
+\mathfrak h & G_N=\tfrac{\mathfrak h^2}{4\ln2}\ [\mathrm{AT.1}];\ \ \mathfrak h^2=4G_N\ln2\ [\mathrm{CT2.9}];\ \ r_s=\tfrac{\mathfrak hE_{\mathrm{int}}}2\ [\mathrm{BM.43}(1)];\ ds^2(e)=\kappa_e\mathfrak h^2\ [\mathrm{FT.24}(2)];\\
+& \Delta x_{\mathrm B}=\tfrac{\mathfrak h}{E_{\mathrm{int}}\ln2}\ [\mathrm{Def\text{-}BM.4}(1)];\ \ S(r_s)=\tfrac G2\ [\mathrm{AT.35}(6)]\quad\textbf{— SIX routes}\\
+e_0 & e(r,E)=e_0\sqrt{Nf\mathsf g}\ [\mathrm{BM.133}(6)];\ \ \mathcal M_{\mathrm{pair}}\ [\mathrm{BM.142}(3)];\ \ \sigma_{\mathrm{pair}},\sigma_{\mathrm{ann}}\ [\mathrm{BM.142}(4),(5)]\\
+\varepsilon_q & w(\varepsilon_q)\ [\mathrm{BM.89}(4)];\ \ \varepsilon_q=\tfrac18\ \text{detailed balance}\ [\mathrm{BM.123}(2);\mathrm{BM.142}(6)];\ \ \langle\rho_{D^-}\rangle_\Gamma\ [\mathrm{BM.149}(2);\mathrm{AT.28}(3)];\\
+& \langle G\rangle/G(\langle E\rangle)=1+\tfrac{p(1-p)}2\ [\mathrm{AT.6/E}];\ \ \langle\psi\rangle_{\mathcal E}\ [\mathrm{AT.6}(4)]\\
+\varkappa,\ \beta & N_i=\beta w_i,\ g_{0i}=\varkappa\beta\Omega^2w_i\ [\mathrm{D2.1};\mathrm{FT.157}(1)];\ \ \mu_\star^2=c_W\varkappa^2\beta^2h_0^2;\\
+& \textbf{AT.34's ONE residual scale per floor — a single magnetic read fixes the combination}\end{array}$$
+$$(3)\quad\textbf{AT-O25 CLOSED:}\qquad\boxed{\ \textbf{the shift's sign and magnitude are calibration, and that is the CORRECT TERMINAL DISPOSITION}\ —\ \text{the same status as }\mathfrak h\ \text{and}\ e_0\ }$$
+$$(4)\quad\textbf{and the T-parity makes calibration NECESSARY, not merely available:}\qquad\text{the shift is T-ODD}\ [\mathrm{AT.2}(3),(4)]\ \text{while every carrier-side invariant is T-EVEN}\ [\mathrm{AT.15}(4)];$$
+$$\boxed{\ \text{a T-even carrier cannot determine a T-odd quantity}\implies\textbf{the sign could not be derived from the ledger's invariant content even in principle}\ }$$
+$$(5)\quad\textbf{the operative statement:}\qquad\textbf{``put calibration in, get data out''}\ —\ \text{the structure is complete, the inputs are few and fixed, and each is over-determined by structurally unrelated reads.}\ \neg\exists\ \text{a growing parameter count and}\ \neg\exists\ \text{a fitted constant.}$$
+$$(6)\quad\textbf{status: derived; (AT-O25) closed.}$$
+
+**Req.** P1, P4, P5, §E, §Cal-2, §Cal-F, §Cal-BM, C4 (Parts 1–2); AT.1, AT.2(3),(4), AT.6, AT.15(4), AT.28(3), AT.34(8),(10), AT.35(6) (this tier); Def-BM.4(1), D2.1, CT2.9, FT.24(2), FT.157(1), BM.43(1), BM.89(4), BM.123(2), BM.133(6), BM.142(3),(4),(5),(6), BM.143(4), BM.149(2), EM.25(7) (Parts 2–4); exact registry count [math; machine: `close_rows.py` §AT-O25].
+
+**Pf.** Row-wise registry count; each route re-cited at its own locus. $(4)$: a T-even functional of a T-odd argument vanishes identically, so no invariant read of the carrier can fix the sign. $\blacksquare$
+
+**Phys.** The edifice has reached its floor. Level 5 added no calibration parameter at all, and
+the one quantity that looked like a missing structural input — the shift's sign — is calibration
+*necessarily*, because it is T-odd and every invariant the ledger carries is T-even. That is not
+a failure to derive it; it is a proof that it cannot be derived from that content. Meanwhile each
+parameter has become reachable from several structurally unrelated directions: `𝔥` from Newton's
+constant, a horizon radius, an interval quantum, a Born width, or a horizon entropy — six routes
+to one number. That is the sense in which the theory is now over-determined rather than fitted.
+
+---
+
+### AT.37 — (AT-O21) closed: the reduced configuration space, defined by running it
+
+**Thm.**
+$$(1)\quad\textbf{the definition the computation yields:}\qquad\text{the \textbf{boundary class} of a configuration is}$$
+$$\boxed{\ [(\Gamma,R)]\ :=\ \bigl(\ \text{charge class},\ \ \Theta_{\mathrm{int}}\ \text{class},\ \ S\ \text{winding class},\ \ |R|\ \bigr)\ }\qquad[\mathrm{Def\text{-}BM.5}(1)\ \text{plus the retained count}];$$
+$$\text{the \textbf{reduced configuration space} at budget }B:\qquad \mathfrak C_B/\!\sim\ :=\ \{[(\Gamma,R)]:\ V(\Gamma)\le B,\ |R|\le B_K\};$$
+$$\text{each class carries the \textbf{multiplicity}}\quad m([c]):=\#\{(\Gamma,R)\in[c]\ \text{at that budget}\};$$
+$$\text{and the \textbf{reduced sum}}\qquad \boxed{\ Z_{\mathrm{red}}(B)\ :=\ \sum_{[c]\in\mathfrak C_B/\sim}\ \sum_{(\Gamma,R)\in[c]}w(\Gamma,R)\ }$$
+$$(2)\quad\textbf{finiteness, exhaustive for }B=2..8:\qquad\#\{(\Gamma,R)\ \text{pairs at budget }B\}=2^{\,B+1}-2,\qquad \#\{\text{boundary classes}\}=4B-2;$$
+$$\begin{array}{c|ccccccc}B&2&3&4&5&6&7&8\\ \hline \text{pairs}&6&14&30&62&126&254&510\\ \text{classes}&6&10&14&18&22&26&30\end{array}\qquad\text{and the class sizes sum EXACTLY to the pair count at every }B;$$
+$$(3)\quad\textbf{the finiteness is inherited, not newly proved:}\qquad\text{the charge class is ternary}\ [\mathrm{EM.9};\ \mathrm{D3.4}],\ \Theta_{\mathrm{int}}\ \text{is an integer bounded by the budget},\ \text{the winding class is bounded by the end signs},\ |R|\le B;$$
+$$\text{so }\mathfrak C_B/\!\sim\ \text{is finite because Def-H.32(1)'s }\mathfrak C_B\ \text{is: ``every filtered sum below is a finite exact sum''};$$
+$$(4)\quad\textbf{what the quotient buys — AT.32(1) acquires its correct form:}\qquad\boxed{\ \textbf{every accessible read FACTORS THROUGH the quotient map}\ \ \mathfrak C_B\to\mathfrak C_B/\!\sim\ }$$
+$$\textbf{the aspect membership does NOT factor:}\ \text{it is a function on the TOTAL space, }\neg\text{on the quotient}\qquad[\mathrm{AT.38}];$$
+$$(5)\quad\textbf{and AT.28 becomes an identity:}\qquad\text{a locked }D^-\ \text{interior and an internal Janus zig-zag network with the same boundary data are the SAME POINT of }\mathfrak C_B/\!\sim,\ \neg\text{merely indistinguishable};$$
+$$(6)\quad\textbf{status: derived; (AT-O21) closed.}\qquad\text{The definition at (1) is PROPOSED at Level 5 and is }\neg\text{issued as a canon definition; it requires no new datum and no new parameter.}$$
+
+**Req.** A7, A8, D3.4, EM.9 (Parts 1–2); AT.28, AT.30(5), AT.32(1),(2) (this tier); Def-BM.5(1), Def-H.32(1),(2),(4), BM.2(1), BM.137(4), Def-BM.3(2),(3) (Parts 3–4); exhaustive enumeration of all $(\Gamma,R)$ pairs at budgets $B=2..8$, exact integer counting [math; machine: `close_rows.py` §AT-O21].
+
+**Pf.** $(2)$: exhaustive enumeration; the pair count is $\sum_{n=1}^{B}2\cdot2^{n-1}=2^{B+1}-2$ (two orientations of the terminal sign at each length) and the class count is $4B-2$, both verified at every $B\le8$ with the class sizes summing to the pair count. $\blacksquare$
+
+**Phys.** Running the quotient produces its own definition, which is what the directive asked
+for. The reduced space is the set of boundary classes with a multiplicity, and the reduced sum
+weights each class by the total weight of its representatives. Two things follow that were
+previously only informally true: AT.28's observational equivalence becomes an *identity* — the
+two representatives are the same point, not merely indistinguishable — and AT.32(1)'s generalised
+invariance acquires its precise form, namely that every accessible read **factors through** the
+quotient map. That factorization is the correct statement of "the boundary determines the
+physics," and AT.38 shows exactly where it stops.
+
+---
+
+### AT.38 — (AT-O24) closed, answer NO: the aspect membership does not factor through the quotient
+
+**Thm.**
+$$(1)\quad\textbf{the two-line argument:}\qquad(\mathrm a)\ \ \text{EM is active}\iff\exists v:\ f_v\ne0\iff\text{the sign sequence is NON-CONSTANT}\qquad[\mathrm{FT.20};\ \mathrm{EM.12};\ f_{v_i}=\tfrac12(\sigma_{i+1}-\sigma_i)];$$
+$$(\mathrm b)\ \ q=0\iff\sigma_n=\sigma_1,\ \textbf{which is compatible with both constant and non-constant sequences};$$
+$$\text{and on the floor class }\kappa_e\equiv1\ \text{pointwise}\implies\Theta_{\mathrm{int}}=n-1\ \textbf{for every representative}\qquad[\mathrm{FT.24}(4);\ \mathrm{FT.34}(4);\ \mathrm{D1.1}\ \text{Comm-min}];$$
+$$\therefore\ \text{the class }\bigl(q=0,\ |R|=n,\ \Theta_{\mathrm{int}}=n-1\bigr)\ \textbf{contains both EM-active and EM-inactive representatives};$$
+$$(2)\quad\textbf{the exact count, exhaustive:}\qquad\boxed{\ \#\{\text{representatives}\}=2^{\,n-1},\qquad \#\{\text{EM-inactive}\}=\mathbf 2\ \ (\text{the two constant sequences}),\qquad \#\{\text{EM-active}\}=2^{\,n-1}-2\ }$$
+$$\begin{array}{c|cccccccc}n&2&3&4&5&6&8&10&12\\ \hline \#\text{reps}&2&4&8&16&32&128&512&2048\\ \#\text{EM-active}&0&2&6&14&30&126&510&2046\\ \#\text{EM-inactive}&2&2&2&2&2&2&2&2\end{array}$$
+$$(3)\quad\textbf{ANSWER: NO.}\qquad\boxed{\ \textbf{the SET of active aspects is }\neg\textbf{ a class function}\ }\qquad\text{AT.30(3)'s failure is not confined to the criterion; it reaches the membership set itself};$$
+$$(4)\quad\textbf{but the failure is INERT:}\qquad\text{every accessible READ is a class function}\ [\mathrm{AT.32}(1);\ \mathrm{AT.37}(4)],\ \text{and the aspect membership is }\neg\text{itself an accessible read}\ [\mathrm{FT.20}'\text{s criteria are internal}];$$
+$$\boxed{\ \text{two representatives can agree on every accessible read and differ on which aspects are active,}\ \textbf{while that difference produces no accessible consequence}\ }$$
+$$(5)\quad\textbf{the correct final form of the invariance claim:}\qquad\text{the quotient map }\mathfrak C_B\to\mathfrak C_B/\!\sim\ \textbf{is the universal factorization of the accessible reads, and the aspect membership is the canonical example of a datum that does not factor};$$
+$$(6)\quad\textbf{status: derived; (AT-O24) closed with answer NO, and the failure shown to be inert.}$$
+
+**Req.** D0.4, D1.1, D3.4, EM.9, EM.12, CT0.8 (Parts 1–2); AT.30(3),(4),(5), AT.32(1), AT.37(1),(4) (this tier); Def-H.9(1),(3), FT.20, FT.21(i), FT.24(4), FT.34(4) (Part 3); Def-BM.5(1), BM.137(4) (Part 4); exhaustive enumeration over all $2^n$ sign assignments for $n\le12$, exact integer counting [math; machine: `close_rows.py` §AT-O24].
+
+**Pf.** $(1)$: $f_{v_i}\ne0\iff\sigma_{i+1}\ne\sigma_i$, so some $f_v\ne0$ iff the sequence is non-constant; $\sigma_n=\sigma_1$ constrains only the endpoints. $(2)$: exhaustive enumeration; the only EM-inactive sequences with $\sigma_n=\sigma_1$ are the two constant ones. $\blacksquare$
+
+**Phys.** The completeness question gets a clean negative and an equally clean consolation. The
+boundary data do *not* determine which aspects are active: at every length $n\ge3$ the neutral
+class contains exactly two representatives with no interior sign flip — hence no EM activity —
+alongside $2^{n-1}-2$ with some flip, hence EM active. The count is exact and the two exceptions
+are simply the constant sequences.
+
+And yet nothing observable follows from the difference, because aspect membership is not itself
+an accessible read. So the right statement of the generalised invariance is not "the boundary
+determines everything" but "**the quotient map is the universal factorization of the accessible
+reads**" — and the aspect membership is the canonical datum that fails to factor. That is a
+sharper claim than AT.32(1) and it is the honest boundary of what the boundary can know.
+
+---
+
 ## §Open-AT additions from Tier AT.5
 
 | row | content | locus |
 |---|---|---|
 | ~~(AT-O22)~~ | **CLOSED by AT.33, answer NO.** `Ω`, `M_ij`, `Δx^i` are arena data, not accessible reads, so AT.32(1) does not constrain them. (S) does **not** retire. Also **refines AT.5(6)**: the nullity is class-relative, `2E` on the floor class and `3E−β₁−1` on the general one | AT.33 |
-| (AT-O23) | **the envelope/horizon shell**: AT.31(6) proves `Δx_B < 𝔥 ≤ r_s` for every admissible `E_int`, so there is a chart-formed shell strictly outside the breaking locus. Whether that shell has a derived read — an area, an entropy, or a membrane — is open, and BM.149(3)'s one-way membrane is the natural candidate | AT.31(6); BM.148(1),(4); BM.149(3) |
+| ~~(AT-O23)~~ | **CLOSED by AT.35.** The shell is `k ∈ (1, k_crit)` with thickness `k_crit − 1 = G/(4π) − 1` Born widths; it is **ledger-formed and chart-unformed** (correcting AT.31(6)'s "chart-formed" gloss); `w(ε_q)` is `r`-independent; `S(r_s) = πE_int²ln2 = **G/2**`; the membrane is a **boundary condition at `r_s`** on its chart face and a **rung condition** on its ledger face, ¬shell-localized | AT.35 |
 | ~~(AT-O1)~~ | **CLOSED by AT.34, answer YES.** `|Rot| = 2E` [Census FT.65(1)] + the half-turn reverses an arc ⟹ `Rot` acts **simply transitively on arcs** ⟹ `Aut` is arc-transitive; the stabilizer is a **reflection**, so `dim = 2`; AT.5's longitudinal constraint then leaves **ONE** parameter per floor. **(S) reclassified: derived up to one calibration scale.** No enumeration of the higher solids needed | AT.34 |
-| (AT-O25) | **the sign of the shift** is unfixed by the floor-class reduction, since `Ω, M_ij, Δx^i` are T-even, `w_i` is T-odd, and `(ϰ,β)` are P4 core with values ¬issued. Whether any formed read fixes the sign — or whether it is irreducibly calibration — is open, and it is the same question as the magnetic observable's magnitude | AT.33(9); AT.3(6); §Cal-2 |
-| (AT-O24) | **aspect membership as an interior-sensitive datum**: AT.30(3) shows 14 of 32 five-edge chains have `q=0` with nonzero interior activity. Whether that interior sensitivity is itself bounded — i.e. whether the *set* of admissible memberships is a class function even though the criterion is not — is open and is the sharpest form of the completeness question | AT.30(3),(4); FT.20; FT.21(i) |
+| ~~(AT-O25)~~ | **CLOSED by AT.36: it is calibration, necessarily.** A T-even carrier cannot determine a T-odd quantity, so the sign is underivable *in principle* from the ledger's invariant content — the same status as `𝔥` and `e₀`. Level 5 adds **zero** calibration parameters, and `𝔥` now has six independent determination routes | AT.36 |
+| ~~(AT-O24)~~ | **CLOSED by AT.38, answer NO.** The membership set is not a class function: the neutral class holds exactly **2** EM-inactive representatives (the constant sequences) against `2^{n−1}−2` EM-active. But the failure is **inert** — membership is not an accessible read. The correct form: the quotient map is the *universal factorization of the accessible reads* | AT.38 |
