@@ -1,0 +1,23 @@
+PLAN: 275 ledger pointers removable
+  Part3_Fermion_era.md: 49
+      (343, 'Def-H.7', '(Open Gaps 13)')
+      (588, 'Def-H.9', '(Open Gaps 7)')
+      (759, 'Def-H.39', 'HistLog §II item 7')
+      (773, 'Def-H.40', 'HistLog §II items 5/12')
+      (1202, 'Def-H.16', '(Open Gaps 7)')
+      (1202, 'Def-H.16', '(Open Gaps 17)')
+      ... (43 more)
+  Part4_Baryomesonic_era.md: 222
+      (19, '(front matter)', "HistLog §II Q7's derived no-go")
+      (169, 'BM.5', '\\ \\text{HistLog §II item 13}')
+      (171, 'BM.5', 'Req-seg: HistLog §II items 13/16')
+      (182, 'BM.6', '\\text{HistLog §II Q10}')
+      (183, 'BM.6', '\\text{HistLog §II Q11}')
+      (184, 'BM.6', '\\text{HistLog §II item 16(d)}')
+      ... (216 more)
+  Census.md: 4
+      (104, 'FT.32', '\\text{Open Gaps 7}')
+      (107, 'FT.32', '(Open Gaps 5)')
+      (588, 'FT.64', 'Open Gaps 13')
+      (1106, 'FT.84', '(Open Gaps 12)')
+category-(b) content lines: 173 (KEPT blocks: 126, MOVED blocks: 47)

@@ -1,0 +1,430 @@
+\documentclass[11pt,openany]{report}
+
+\usepackage{fontspec}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{amsthm}
+\usepackage[margin=1in,headheight=17pt,headsep=14pt]{geometry}
+\usepackage{booktabs,longtable,array}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{microtype}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,linkcolor=NavyBlue,citecolor=NavyBlue,urlcolor=Mahogany]{hyperref}
+\makeatletter
+\@ifundefined{IfFontExistsTF}{\newcommand{\IfFontExistsTF}[3]{#3}}{}
+\makeatother
+\IfFontExistsTF{TeX Gyre Pagella}{\setmainfont{TeX Gyre Pagella}}{%
+  \IfFontExistsTF{texgyrepagella-regular.otf}{\setmainfont{texgyrepagella-regular.otf}}{}}
+\IfFontExistsTF{TeX Gyre Heros}{\setsansfont{TeX Gyre Heros}}{}
+\IfFontExistsTF{Latin Modern Mono}{\setmonofont{Latin Modern Mono}[Scale=0.92]}{%
+  \IfFontExistsTF{lmmono10-regular.otf}{\setmonofont{lmmono10-regular.otf}[Scale=0.92]}{}}
+% --- amsthm setup -----------------------------------------------------------
+% \theoremstyle{plain}-family style for theorem-like environments and
+% \theoremstyle{definition}-family style for definition-like environments.
+% The bodies are set upright (a `plain` italic body would italicise the
+% corpus's extensive \text{...} proof justifications); head formatting and
+% numbering follow the plain / definition styles respectively.
+\newtheoremstyle{canonplain}%
+  {7pt plus 2pt minus 1pt}{7pt plus 2pt minus 1pt}%
+  {\normalfont}{0pt}{\bfseries}{.}%
+  {0.6em plus 0.2em}%
+  {\thmname{#1}\thmnumber{ #2}\thmnote{\normalfont\ (#3)}}
+\newtheoremstyle{canondef}%
+  {7pt plus 2pt minus 1pt}{7pt plus 2pt minus 1pt}%
+  {\normalfont}{0pt}{\bfseries}{.}%
+  {0.6em plus 0.2em}%
+  {\thmname{#1}\thmnumber{ #2}\thmnote{\normalfont\ (#3)}}
+\theoremstyle{canonplain}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{axiom}{Axiom}[chapter]
+\newtheorem{convention}{Convention}[chapter]
+\theoremstyle{canondef}
+\newtheorem{definition}{Definition}[chapter]
+\newenvironment{movedblock}
+  {\par\medskip\begingroup\small\itshape\leftskip2.2em\rightskip2.2em}
+  {\par\endgroup\medskip}
+% run-in heading for theorem-class blocks that contain tables or verbatim
+% material (longtable/verbatim cannot live inside amsthm environments); the
+% printed form matches the environment heads and the counter is shared.
+\newcommand{\pseudohead}[3]{\par\medskip\noindent\refstepcounter{#1}%
+  \textbf{\csname the#1\endcsname\hspace{0.6em}(#2\hspace{0.35em}---\hspace{0.35em}#3).}%
+  \par\nobreak\smallskip}
+% ----------------------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\small\thepage}
+\fancyhead[RO]{\small\thepage}
+\fancyhead[RE]{\nouppercase{\small\leftmark}}
+\fancyhead[LO]{\nouppercase{\small\rightmark}}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\parskip}{2pt plus 1pt}
+\renewcommand{\arraystretch}{1.08}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\thepage}}
+\titleformat{\chapter}[hang]{\normalfont\Large\bfseries}{\thechapter}{1em}{}
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
+\titlespacing{\subsection}{0pt}{8pt plus 2pt minus 1pt}{3pt}
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{3}
+\allowdisplaybreaks
+\emergencystretch=3em
+\hbadness=10000
+\vbadness=10000
+\hfuzz=2pt
+\begin{document}
+
+
+\begin{titlepage}
+\centering
+\vspace*{2.6cm}
+{\LARGE $\langle qu(b(i(t|t))ick)\rangle$ — the four-era canon\par}
+\vspace{0.8cm}
+{\Huge\bfseries Calibration Policy\par}
+\vspace{0.5cm}
+{\LARGE The Declared Slots of the Corpus\par}
+\vspace{1.0cm}
+{\large Companion document to the four-era canon, Volume I\par}
+\vspace{0.4cm}
+{\large Every calibration slot, what it calibrates, which results depend on it,\\ and its status under P5\par}
+\vfill
+{\large Edition of 2026-10-09\par}
+\vspace{0.3cm}
+{\small Calibration is a policy decision, not a mathematical derivation; this document therefore stands apart from the monograph. All slot data are transcribed from the corpus's own registries (Part 1 §E; Part 2 §Cal-2; Part 3 §Cal-F; Part 4 §Cal-BM).\par}
+\end{titlepage}
+
+\tableofcontents
+
+\section*{\texorpdfstring{Purpose and standing}{Purpose and standing}}
+\addcontentsline{toc}{section}{Purpose and standing}
+
+This document lists every calibration slot of the corpus. A \emph{slot} is a
+symbol the corpus declares as free internal configuration data (P4-class) or
+logs as a spectral datum, without issuing a numerical value. The governing
+constraints are the policy clauses P1--P5 of Part 1 \S E, reproduced verbatim
+below; in particular:
+
+\begin{itemize}
+\item \textbf{P1} --- $\exists!\,$ free dimensionful scale: $\mathfrak h$; every
+  other quantity is dimensionless-derived or a power of $\mathfrak h$.
+\item \textbf{P4} --- free internal configuration parameters are
+  $\neg$constants of the theory; predictions $:=$ dimensionless ratios among
+  derived quantities at fixed core data.
+\item \textbf{P5} --- $\neg\exists$ quantity identified with a measured
+  external constant; comparison is a test of A9, $\neg$ an input to A1--A8.
+\end{itemize}
+
+Every slot below is \textbf{declared but $\neg$issued}: the corpus fixes its
+locus, its dimension and its consumers, and no theorem, audit or annex attaches
+a numerical value to it. No slot enters any machine-verified identity as a
+number; the verification suite (\texttt{verification/run\_all.py}) is unaffected
+by any future issuance, which would itself require a ledger addendum first.
+
+\section*{\texorpdfstring{The policy clauses P1--P5 (Part 1 §E, verbatim)}{The policy clauses P1-P5}}
+\addcontentsline{toc}{section}{The policy clauses P1--P5}
+\phantomsection\label{tag:P1}
+\textbf{P1.} $\forall$ quantities of the corpus: derived from A1–A9 $\wedge$ C1–C13 $\wedge$ D0.1–D4.3, except the hop length $\mathfrak h$; $[\mathfrak h]=\mathfrak q^{-1/2}$; $\mathfrak h$ fixes the absolute scale.
+
+\phantomsection\label{tag:P2}
+\textbf{P2.} Derived, zero freedom:
+
+%dsp-level:0
+\[
+(\dim\mathcal E_{++},\dim\mathcal E_{+-},\dim\mathcal E_{-+},\dim\mathcal E_{--})=(7,3,3,3);\quad
+C_{\mathrm{cap}}=16;\quad
+D_{\mathrm{tick}}(n)=2^{n+1};\quad
+n_{\max}=3;
+\]
+
+%dsp-level:0
+\[
+N_{\text{colour}}=3;\quad
+N_{\text{gluon}}=8;\quad
+N_{\gamma\text{-pol}}=2;\quad
+q_{\mathrm{EM}}\in\{-1,0,+1\};\quad
+\alpha_e\in\{0,\pi\}\ \text{per edge};
+\]
+
+%dsp-level:0
+\[
+m_W=m_Z\cos\theta_W;\quad
+e=g\sin\theta_W;\quad
+S=n_{\mathcal R}\ln2;\quad
+w_{D^+}=-1 .
+\]
+
+\textbf{Audit note.} Every entry of this list is re-verified from first principles in exact arithmetic: \texttt{checks/\allowbreak{}verify\_\allowbreak{}merge\_\allowbreak{}tierB.py} §F (totals and cross-references; the identity-level checks live in \texttt{verify\_\allowbreak{}B.py}–\texttt{verify\_\allowbreak{}G.py}).
+
+\phantomsection\label{tag:P3}
+\textbf{P3.} Named combinations of $\mathfrak h$ (external comparison only; $\neg$ inputs):
+
+%dsp-level:0
+\[
+G_N=\frac{\mathfrak h^2}{4\ln2};\qquad
+\kappa^2=8\pi G_N=\frac{2\pi\,\mathfrak h^2}{\ln2}\qquad[\mathrm{CT2.9}].
+\]
+
+\phantomsection\label{tag:P4}
+\textbf{P4.} Free internal configuration parameters ($\neg$ constants of the theory). Independent core: $g,\ g';\ h_0;\ c_W;\ \Lambda;\ \varkappa,\ \beta,\ \alpha_\Omega$. Functionally dependent members (properties of a solution, $\neg$ further freedom): $\theta_W(g,g')$ [EW.24]; $e(g,g')$ [EW.35]; $\mu_\star^2(c_W,\varkappa,\beta,h_0)$ [EW.33]; $m_W,\ m_Z$ [EW.20, EW.23]; $m_H$ [EW.27]. Predictions $:=$ dimensionless ratios among derived quantities at fixed core data.
+
+\phantomsection\label{tag:P5}
+\textbf{P5.} $\neg\exists$ quantity identified with a measured external constant. Comparison procedure: fix $\mathfrak h$ once; read P2 $\wedge$ P3; result $:=$ test of A9, $\neg$ input to A1–A8. \textbf{Era-extension note.} The P4 core lists the bosonic-era free internal parameters (Part 2 loci). The fermion-era parameters (the Janus rate ratio $r=x_+/x_-$; the defect residues $\hat\mu^2$, $\hat\mu'^2$; the Ansatz-B formal temperature $\alpha$; the channel scales $\mu$, $\mu_\nu$; the formal fugacities) are registered in Part 3 §Cal-F under this policy; the baryomesonic era introduces none (Part 4 §Cal-BM).
+
+\section*{\texorpdfstring{The consolidated slot register}{The consolidated slot register}}
+\addcontentsline{toc}{section}{The consolidated slot register}
+One row per slot; the sheets that follow give the full record. P4-class members are free internal configuration parameters ($\neg$constants of the theory); all values are $\neg$issued [P5].
+\begingroup\small
+\begin{longtable}{@{}p{0.14\textwidth}p{0.34\textwidth}p{0.26\textwidth}p{0.18\textwidth}@{}}
+\toprule
+\textbf{Slot} & \textbf{Calibrates} & \textbf{Registration} & \textbf{Status} \\
+\midrule
+\endhead
+$\mathfrak h$ & the hop length — the single free dimensionful scale; $[\mathfrak h]=\mathfrak q^{-1/2}$; fixes the absolute scale (P1; D0.6) & Part 1 §E (P1, P3); D0.6; D2.9 & free scale, value $\neg$issued [P1, P5] \\
+$g$ & the weak coupling (§D: weak, hypercharge, EM couplings) & Part 1 §E (P4 core); EW.33 & declared, value $\neg$issued [P4, P5] \\
+$g'$ & the hypercharge coupling (§D: weak, hypercharge, EM couplings) & Part 1 §E (P4 core); EW.33 & declared, value $\neg$issued [P4, P5] \\
+$h_0$ & the Higgs background (§D) & Part 1 §E (P4 core); EW.33 & declared, value $\neg$issued [P4, P5] \\
+$c_W$ & the electroweak mixing datum entering the scalar trace mode & Part 1 §E (P4 core); EW.24, EW.33 & declared, value $\neg$issued [P4, P5] \\
+$\Lambda$ & the stretch scalar — identity on the $D^+$ force space ($F_{D^+}=\Lambda\,\mathbb I$) [A8; §D] & Part 1 §E (P4 core); A8; §D & declared, value $\neg$issued [P4, P5] \\
+$\varkappa$ & the sector-to-metric embedding scale [C4; D2.1]; $\varkappa\ne\kappa$ (C4) & Part 1 §E (P4 core); C4; D2.1 & declared, value $\neg$issued [P4, P5] \\
+$\beta$ & a metric embedding constant [§D; D2.1] & Part 1 §E (P4 core); D2.1 & declared, value $\neg$issued [P4, P5] \\
+$\alpha_\Omega$ & a metric embedding constant [§D; D2.1] & Part 1 §E (P4 core); D2.1 & declared, value $\neg$issued [P4, P5] \\
+$\alpha_{\mathrm{EM}}^{(2)}$ & the EM-block scale read [EM.17] — a spectral datum of $\mathbf F$ at the solution level, $\neg$a fitted constant and $\neg$a P4 core member (Cal-2) & Part 2 §Cal-2; EM.17; EM.25(8) & logged spectral datum; value $\neg$issued; any future use that needs a value requires a HistLog §I addendum entry first (Cal-2) \\
+$\rho_{\mathrm B}$ & the bridge's dimensionless calibration ratio $\rho_{\mathrm B}=\hat\mu'^2\mathfrak h^2/(\ln2)^2\in\mathfrak q^0$ — a packaging of Cal-F's $\hat\mu'^2$ and P1's $\mathfrak h$, hence $\neg$a new free parameter and $\neg$a new dimensionful scale (C-BM.1) & Part 4 §Cal-BM (C-BM.1; A-BM.9, Tier BM.20); BM.143(4) consolidation & slot declared, value $\neg$issued [A-BM.9; P5] \\
+$e_0$ & the numerical value of the electric coupling (C-BM.2) & Part 4 §Cal-BM (C-BM.2); EM.25(7) & value $\neg$issued; $\neg$fixed by measurement [P5] \\
+$\mu_\nu,\ \mu,\ \rho_\ell,\ \rho_\nu$ & the channel scales, inherited from Cal-F, $\neg$declared in Part 4 (C-BM.3) & Part 4 §Cal-BM (C-BM.3); Part 3 §Cal-F & inherited; values $\neg$issued [P5] \\
+$r=x_+/x_-$ (Janus rate ratio; equivalently $x_\pm$) & the flicker ensemble; the equilibrium form $p=x_+/(x_++x_-)$ is derived [FT.108(4)], the ratio is the datum & Part 3 §Cal-F & declared, value $\neg$issued [P4, P5] \\
+$\hat\mu^2$ & the leading-order pole read [FT.33] & Part 3 §Cal-F & declared, value $\neg$issued [P4, P5] \\
+$\hat\mu'^2$ & the exact pole read [FT.54(4); Census FT.76] & Part 3 §Cal-F & declared, value $\neg$issued [P4, P5] \\
+$\alpha$ (Ansatz-B formal temperature) & class masses $m_B=(K-\alpha\ln\Omega)\ln2/\mathfrak h$; no value declared; Ansatz-B results stand as exact $(K,a,b)$ classes & Part 3 §Cal-F & declared, value $\neg$issued [P4, P5] \\
+$\mu$ (family-channel overall scale) & channel spectra; every ratio is $\mu$-free & Part 3 §Cal-F & declared, value $\neg$issued [P4, P5] \\
+$\mu_\nu$ (rung-one channel scale) & the rung-one spectrum; ratios exact, scale undeclared & Part 3 §Cal-F & declared, value $\neg$issued [P4, P5] \\
+$t,u,x_\pm,y_d,z_d,\tau_{\mathcal R},\tau_{\mathcal V}$ (formal fugacities) & formal indeterminates over $\mathbb Q$; specializations marked at use [FT.108(4); Cor L0a] & Part 3 §Cal-F & declared, value $\neg$issued [P4, P5] \\
+\bottomrule
+\end{longtable}
+\endgroup
+\section*{\texorpdfstring{Slot sheets}{Slot sheets}}
+\addcontentsline{toc}{section}{Slot sheets}
+\subsection*{Slot $\mathfrak h$}
+\begin{itemize}\setlength{\itemsep}{2pt}
+\item \textbf{Name.} $\mathfrak h$ — registered at Part 1 §E (P1, P3); D0.6; D2.9.
+\item \textbf{Calibrates.} the hop length — the single free dimensionful scale; $[\mathfrak h]=\mathfrak q^{-1/2}$; fixes the absolute scale (P1; D0.6).
+\item \textbf{Dependents.} every dimensionful quantity of the corpus is a power of $\mathfrak h$ (P1); named combinations $G_N=\mathfrak h^2/(4\ln2)$, $\kappa^2=8\pi G_N=2\pi\mathfrak h^2/\ln2$ [P3; CT2.9].
+\item \textbf{P5 constraint.} $\neg\exists$ quantity identified with a measured external constant; comparison procedure: fix $\mathfrak h$ once, read P2 $\wedge$ P3; result $:=$ test of A9, $\neg$ input to A1--A8 [P5].
+\item \textbf{Status.} free scale, value $\neg$issued [P1, P5].
+\end{itemize}
+\subsection*{Slot $g$}
+\begin{itemize}\setlength{\itemsep}{2pt}
+\item \textbf{Name.} $g$ — registered at Part 1 §E (P4 core); EW.33.
+\item \textbf{Calibrates.} the weak coupling (§D: weak, hypercharge, EM couplings).
+\item \textbf{Dependents.} $\theta_W(g,g')$ [EW.24]; $e(g,g')$ [EW.35]; $m_W,\ m_Z$ [EW.20, EW.23] (functionally dependent members (properties of a solution, $\neg$ further freedom [P4]): $\theta_W(g,g')$ [EW.24]; $e(g,g')$ [EW.35]; $\mu_\star^2(c_W,\varkappa,\beta,h_0)$ [EW.33]; $m_W,\ m_Z$ [EW.20, EW.23]; $m_H$ [EW.27]).
+\item \textbf{P5 constraint.} $\neg\exists$ quantity identified with a measured external constant; comparison procedure: fix $\mathfrak h$ once, read P2 $\wedge$ P3; result $:=$ test of A9, $\neg$ input to A1--A8 [P5].
+\item \textbf{Status.} declared, value $\neg$issued [P4, P5].
+\end{itemize}
+\subsection*{Slot $g'$}
+\begin{itemize}\setlength{\itemsep}{2pt}
+\item \textbf{Name.} $g'$ — registered at Part 1 §E (P4 core); EW.33.
+\item \textbf{Calibrates.} the hypercharge coupling (§D: weak, hypercharge, EM couplings).
+\item \textbf{Dependents.} $\theta_W(g,g')$ [EW.24]; $e(g,g')$ [EW.35] (functionally dependent members (properties of a solution, $\neg$ further freedom [P4]): $\theta_W(g,g')$ [EW.24]; $e(g,g')$ [EW.35]; $\mu_\star^2(c_W,\varkappa,\beta,h_0)$ [EW.33]; $m_W,\ m_Z$ [EW.20, EW.23]; $m_H$ [EW.27]).
+\item \textbf{P5 constraint.} $\neg\exists$ quantity identified with a measured external constant; comparison procedure: fix $\mathfrak h$ once, read P2 $\wedge$ P3; result $:=$ test of A9, $\neg$ input to A1--A8 [P5].
+\item \textbf{Status.} declared, value $\neg$issued [P4, P5].
+\end{itemize}
+\subsection*{Slot $h_0$}
+\begin{itemize}\setlength{\itemsep}{2pt}
+\item \textbf{Name.} $h_0$ — registered at Part 1 §E (P4 core); EW.33.
+\item \textbf{Calibrates.} the Higgs background (§D).
+\item \textbf{Dependents.} $\mu_\star^2(c_W,\varkappa,\beta,h_0)$ [EW.33]; $m_H$ [EW.27] (functionally dependent members (properties of a solution, $\neg$ further freedom [P4]): $\theta_W(g,g')$ [EW.24]; $e(g,g')$ [EW.35]; $\mu_\star^2(c_W,\varkappa,\beta,h_0)$ [EW.33]; $m_W,\ m_Z$ [EW.20, EW.23]; $m_H$ [EW.27]).
+\item \textbf{P5 constraint.} $\neg\exists$ quantity identified with a measured external constant; comparison procedure: fix $\mathfrak h$ once, read P2 $\wedge$ P3; result $:=$ test of A9, $\neg$ input to A1--A8 [P5].
+\item \textbf{Status.} declared, value $\neg$issued [P4, P5].
+\end{itemize}
+\subsection*{Slot $c_W$}
+\begin{itemize}\setlength{\itemsep}{2pt}
+\item \textbf{Name.} $c_W$ — registered at Part 1 §E (P4 core); EW.24, EW.33.
+\item \textbf{Calibrates.} the electroweak mixing datum entering the scalar trace mode.
+\item \textbf{Dependents.} $\mu_\star^2(c_W,\varkappa,\beta,h_0)$ [EW.33]; $\theta_W(g,g')$ [EW.24] (functionally dependent members (properties of a solution, $\neg$ further freedom [P4]): $\theta_W(g,g')$ [EW.24]; $e(g,g')$ [EW.35]; $\mu_\star^2(c_W,\varkappa,\beta,h_0)$ [EW.33]; $m_W,\ m_Z$ [EW.20, EW.23]; $m_H$ [EW.27]).
+\item \textbf{P5 constraint.} $\neg\exists$ quantity identified with a measured external constant; comparison procedure: fix $\mathfrak h$ once, read P2 $\wedge$ P3; result $:=$ test of A9, $\neg$ input to A1--A8 [P5].
+\item \textbf{Status.} declared, value $\neg$issued [P4, P5].
+\end{itemize}
+\subsection*{Slot $\Lambda$}
+\begin{itemize}\setlength{\itemsep}{2pt}
+\item \textbf{Name.} $\Lambda$ — registered at Part 1 §E (P4 core); A8; §D.
+\item \textbf{Calibrates.} the stretch scalar — identity on the $D^+$ force space ($F_{D^+}=\Lambda\,\mathbb I$) [A8; §D].
+\item \textbf{Dependents.} no dependent member is listed in P4; the $D^+$ sector datum [A8].
+\item \textbf{P5 constraint.} $\neg\exists$ quantity identified with a measured external constant; comparison procedure: fix $\mathfrak h$ once, read P2 $\wedge$ P3; result $:=$ test of A9, $\neg$ input to A1--A8 [P5].
+\item \textbf{Status.} declared, value $\neg$issued [P4, P5].
+\end{itemize}
+\subsection*{Slot $\varkappa$}
+\begin{itemize}\setlength{\itemsep}{2pt}
+\item \textbf{Name.} $\varkappa$ — registered at Part 1 §E (P4 core); C4; D2.1.
+\item \textbf{Calibrates.} the sector-to-metric embedding scale [C4; D2.1]; $\varkappa\ne\kappa$ (C4).
+\item \textbf{Dependents.} $\mu_\star^2(c_W,\varkappa,\beta,h_0)$ [EW.33] (functionally dependent members (properties of a solution, $\neg$ further freedom [P4]): $\theta_W(g,g')$ [EW.24]; $e(g,g')$ [EW.35]; $\mu_\star^2(c_W,\varkappa,\beta,h_0)$ [EW.33]; $m_W,\ m_Z$ [EW.20, EW.23]; $m_H$ [EW.27]).
+\item \textbf{P5 constraint.} $\neg\exists$ quantity identified with a measured external constant; comparison procedure: fix $\mathfrak h$ once, read P2 $\wedge$ P3; result $:=$ test of A9, $\neg$ input to A1--A8 [P5].
+\item \textbf{Status.} declared, value $\neg$issued [P4, P5].
+\end{itemize}
+\subsection*{Slot $\beta$}
+\begin{itemize}\setlength{\itemsep}{2pt}
+\item \textbf{Name.} $\beta$ — registered at Part 1 §E (P4 core); D2.1.
+\item \textbf{Calibrates.} a metric embedding constant [§D; D2.1].
+\item \textbf{Dependents.} $\mu_\star^2(c_W,\varkappa,\beta,h_0)$ [EW.33] (functionally dependent members (properties of a solution, $\neg$ further freedom [P4]): $\theta_W(g,g')$ [EW.24]; $e(g,g')$ [EW.35]; $\mu_\star^2(c_W,\varkappa,\beta,h_0)$ [EW.33]; $m_W,\ m_Z$ [EW.20, EW.23]; $m_H$ [EW.27]).
+\item \textbf{P5 constraint.} $\neg\exists$ quantity identified with a measured external constant; comparison procedure: fix $\mathfrak h$ once, read P2 $\wedge$ P3; result $:=$ test of A9, $\neg$ input to A1--A8 [P5].
+\item \textbf{Status.} declared, value $\neg$issued [P4, P5].
+\end{itemize}
+\subsection*{Slot $\alpha_\Omega$}
+\begin{itemize}\setlength{\itemsep}{2pt}
+\item \textbf{Name.} $\alpha_\Omega$ — registered at Part 1 §E (P4 core); D2.1.
+\item \textbf{Calibrates.} a metric embedding constant [§D; D2.1].
+\item \textbf{Dependents.} no dependent member is listed in P4.
+\item \textbf{P5 constraint.} $\neg\exists$ quantity identified with a measured external constant; comparison procedure: fix $\mathfrak h$ once, read P2 $\wedge$ P3; result $:=$ test of A9, $\neg$ input to A1--A8 [P5].
+\item \textbf{Status.} declared, value $\neg$issued [P4, P5].
+\end{itemize}
+\subsection*{Slot $\alpha_{\mathrm{EM}}^{(2)}$}
+\begin{itemize}\setlength{\itemsep}{2pt}
+\item \textbf{Name.} $\alpha_{\mathrm{EM}}^{(2)}$ — registered at Part 2 §Cal-2; EM.17; EM.25(8).
+\item \textbf{Calibrates.} the EM-block scale read [EM.17] — a spectral datum of $\mathbf F$ at the solution level, $\neg$a fitted constant and $\neg$a P4 core member (Cal-2).
+\item \textbf{Dependents.} no result consumes its value — every edge-level phase read uses the registration data $\alpha_e\in\{0,\pi\}$ [Def-EM.20, EM.20] (Cal-2).
+\item \textbf{P5 constraint.} $\neg\exists$ quantity identified with a measured external constant; comparison procedure: fix $\mathfrak h$ once, read P2 $\wedge$ P3; result $:=$ test of A9, $\neg$ input to A1--A8 [P5].
+\item \textbf{Status.} logged spectral datum; value $\neg$issued; any future use that needs a value requires a HistLog §I addendum entry first (Cal-2).
+\end{itemize}
+\subsection*{Slot $\rho_{\mathrm B}$}
+\begin{itemize}\setlength{\itemsep}{2pt}
+\item \textbf{Name.} $\rho_{\mathrm B}$ — registered at Part 4 §Cal-BM (C-BM.1; A-BM.9, Tier BM.20); BM.143(4) consolidation.
+\item \textbf{Calibrates.} the bridge's dimensionless calibration ratio $\rho_{\mathrm B}=\hat\mu'^2\mathfrak h^2/(\ln2)^2\in\mathfrak q^0$ — a packaging of Cal-F's $\hat\mu'^2$ and P1's $\mathfrak h$, hence $\neg$a new free parameter and $\neg$a new dimensionful scale (C-BM.1).
+\item \textbf{Dependents.} the organic-bridge energy audit [BM.69(2); BM.98; BM.102(5)]; no numerical value attaches to it here or anywhere [P5; BM.69(4)'s four grounds].
+\item \textbf{P5 constraint.} $\neg\exists$ quantity identified with a measured external constant; comparison procedure: fix $\mathfrak h$ once, read P2 $\wedge$ P3; result $:=$ test of A9, $\neg$ input to A1--A8 [P5].
+\item \textbf{Status.} slot declared, value $\neg$issued [A-BM.9; P5].
+\end{itemize}
+\subsection*{Slot $e_0$}
+\begin{itemize}\setlength{\itemsep}{2pt}
+\item \textbf{Name.} $e_0$ — registered at Part 4 §Cal-BM (C-BM.2); EM.25(7).
+\item \textbf{Calibrates.} the numerical value of the electric coupling (C-BM.2).
+\item \textbf{Dependents.} the running-coupling completion [EM.25(7); BM.88(8); BM.133(6)].
+\item \textbf{P5 constraint.} $\neg\exists$ quantity identified with a measured external constant; comparison procedure: fix $\mathfrak h$ once, read P2 $\wedge$ P3; result $:=$ test of A9, $\neg$ input to A1--A8 [P5].
+\item \textbf{Status.} value $\neg$issued; $\neg$fixed by measurement [P5].
+\end{itemize}
+\subsection*{Slot $\mu_\nu,\ \mu,\ \rho_\ell,\ \rho_\nu$}
+\begin{itemize}\setlength{\itemsep}{2pt}
+\item \textbf{Name.} $\mu_\nu,\ \mu,\ \rho_\ell,\ \rho_\nu$ — registered at Part 4 §Cal-BM (C-BM.3); Part 3 §Cal-F.
+\item \textbf{Calibrates.} the channel scales, inherited from Cal-F, $\neg$declared in Part 4 (C-BM.3).
+\item \textbf{Dependents.} the rung-one spectrum [FT.145(3)]; the beta-decay channel reads [BM.83(5),(7)].
+\item \textbf{P5 constraint.} $\neg\exists$ quantity identified with a measured external constant; comparison procedure: fix $\mathfrak h$ once, read P2 $\wedge$ P3; result $:=$ test of A9, $\neg$ input to A1--A8 [P5].
+\item \textbf{Status.} inherited; values $\neg$issued [P5].
+\end{itemize}
+\subsection*{The fermion-era slots (Part 3 §Cal-F, parsed from the registry table)}
+\begin{itemize}\setlength{\itemsep}{2pt}
+\item $r=x_+/x_-$ (Janus rate ratio; equivalently $x_\pm$) — \textbf{locus:} Def-H.26; FT.68(5); FT.70–FT.71; \textbf{dimension:} $\mathfrak q^0$; \textbf{consumers:} the flicker ensemble; the equilibrium form $p=x_+/(x_++x_-)$ is derived [FT.108(4)], the ratio is the datum; \textbf{status:} declared, value $\neg$issued [P4, P5; any numerical use beyond the listed loci requires a HistLog §I addendum entry first].
+\item $\hat\mu^2$ — \textbf{locus:} Def-H.37(1); \textbf{dimension:} $\mathfrak q^2$ [EW.33 packaging; D2.9]; \textbf{consumers:} the leading-order pole read [FT.33]; \textbf{status:} declared, value $\neg$issued [P4, P5; any numerical use beyond the listed loci requires a HistLog §I addendum entry first].
+\item $\hat\mu'^2$ — \textbf{locus:} Def-H.37(2); \textbf{dimension:} $\mathfrak q$ [FT.54(4)]; \textbf{consumers:} the exact pole read [FT.54(4); Census FT.76]; \textbf{status:} declared, value $\neg$issued [P4, P5; any numerical use beyond the listed loci requires a HistLog §I addendum entry first].
+\item $\alpha$ (Ansatz-B formal temperature) — \textbf{locus:} Def-H.28; \textbf{dimension:} $\mathfrak q^0$; \textbf{consumers:} class masses $m_B=(K-\alpha\ln\Omega)\ln2/\mathfrak h$; no value declared; Ansatz-B results stand as exact $(K,a,b)$ classes; \textbf{status:} declared, value $\neg$issued [P4, P5; any numerical use beyond the listed loci requires a HistLog §I addendum entry first].
+\item $\mu$ (family-channel overall scale) — \textbf{locus:} FT.113; FT.119; \textbf{dimension:} —; \textbf{consumers:} channel spectra; every ratio is $\mu$-free; \textbf{status:} declared, value $\neg$issued [P4, P5; any numerical use beyond the listed loci requires a HistLog §I addendum entry first].
+\item $\mu_\nu$ (rung-one channel scale) — \textbf{locus:} FT.143; \textbf{dimension:} —; \textbf{consumers:} the rung-one spectrum; ratios exact, scale undeclared; \textbf{status:} declared, value $\neg$issued [P4, P5; any numerical use beyond the listed loci requires a HistLog §I addendum entry first].
+\item $t,u,x_\pm,y_d,z_d,\tau_{\mathcal R},\tau_{\mathcal V}$ (formal fugacities) — \textbf{locus:} Def-H.32(3); \textbf{dimension:} $\mathfrak q^0$; \textbf{consumers:} formal indeterminates over $\mathbb Q$; specializations marked at use [FT.108(4); Cor L0a]; \textbf{status:} declared, value $\neg$issued [P4, P5; any numerical use beyond the listed loci requires a HistLog §I addendum entry first].
+\end{itemize}
+\section*{\texorpdfstring{The era registries (verbatim)}{The era registries (verbatim)}}
+\addcontentsline{toc}{section}{The era registries (verbatim)}
+\subsection*{Part 2 §Cal-2 - Calibration note (bosonic era)}
+The P4 core ($g,\ g';\ h_0;\ c_W;\ \Lambda;\ \varkappa,\ \beta,\ \alpha_\Omega$) and P3 ($G_N$, $\kappa^2$ — named combinations of $\mathfrak h$) are Part 1 §E. Logged spectral datum of this part: $\alpha_{\mathrm{EM}}^{(2)}$ — the EM-block scale read [EM.17]: operatorially defined; no theorem of the corpus fixes its numerical value under the dynamic-phase regime [EM.25(8)]; it is a spectral datum of $\mathbf F$ at the solution level, $\neg$a fitted constant and $\neg$a P4 core member; no result consumes its value — every edge-level phase read uses the registration data $\alpha_e\in\{0,\pi\}$ [Def-EM.20, EM.20]. Any future use that needs a value requires a logged declaration first.
+
+\subsection*{Part 3 §Cal-F - Free internal parameters of the fermion era (P4-class)}
+Policy: Part 1 §E (P4: free internal configuration parameters, $\neg$constants of the theory; P5: no external identification; P1: $\mathfrak h$ the single free dimensionful scale). Every entry: dimensionless internal configuration data unless a dimension is stated; no value is fitted to external data; any numerical use beyond the loci listed requires a logged declaration first.
+
+%tbl-level:3
+{\scriptsize\setlength{\tabcolsep}{4pt}
+\begin{longtable}{>{\raggedright\arraybackslash}p{\dimexpr0.2312\textwidth-2\tabcolsep\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.1559\textwidth-2\tabcolsep\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.1344\textwidth-2\tabcolsep\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.4785\textwidth-2\tabcolsep\relax}}
+\toprule
+parameter & locus & dimension & consumers \\
+\addlinespace[2pt]
+\midrule
+\endfirsthead
+\toprule
+parameter & locus & dimension & consumers \\
+\addlinespace[2pt]
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+$r=\allowbreak x_+\allowbreak /x_-$ (Janus rate ratio; equivalently $x_\pm$) & Def-H.26; FT.68(5); FT.70–FT.71 & $\mathfrak q^0$ & the flicker ensemble; the equilibrium form $p=\allowbreak x_+\allowbreak /(x_+\allowbreak +\allowbreak x_-)$ is derived [FT.108(4)], the ratio is the datum \\
+$\hat\mu^2$ & Def-H.37(1) & $\mathfrak q^2$ [EW.33 packaging; D2.9] & the leading-order pole read [FT.33] \\
+$\hat\mu'^2$ & Def-H.37(2) & $\mathfrak q$ [FT.54(4)] & the exact pole read [FT.54(4); Census FT.76] \\
+$\alpha$ (Ansatz-B formal temperature) & Def-H.28 & $\mathfrak q^0$ & class masses $m_B=\allowbreak (K-\alpha\ln\Omega)\ln2/\mathfrak h$; no value declared; Ansatz-B results stand as exact $(K,\allowbreak a,\allowbreak b)$ classes \\
+$\mu$ (family-channel overall scale) & FT.113; FT.119 & — & channel spectra; every ratio is $\mu$-free \\
+$\mu_\nu$ (rung-one channel scale) & FT.143 & — & the rung-one spectrum; ratios exact, scale undeclared \\
+$t,\allowbreak u,\allowbreak x_\pm,\allowbreak y_d,\allowbreak z_d,\allowbreak \tau_{\mathcal R},\allowbreak \tau_{\mathcal V}$ (formal fugacities) & Def-H.32(3) & $\mathfrak q^0$ & formal indeterminates over $\mathbb Q$; specializations marked at use [FT.108(4); Cor L0a] \\
+\end{longtable}
+}
+
+\subsection*{Part 4 §Cal-BM - Free internal parameters of the baryomesonic era (P4-class)}
+None introduced by this part. Inherited and undeclared: the family-channel overall scale $\mu$ [Cal-F; FT.113, FT.119 — every ratio is $\mu$-free]. \textbf{Declared slot, value $\neg$issued (A-BM.9, Tier BM.20):} the bridge's dimensionless calibration ratio $\rho_{\mathrm B}=\hat\mu'^2\mathfrak h^2/(\ln2)^2\in\mathfrak q^0$ [BM.69(2); BM.98; BM.102(5)] — a packaging of Cal-F's $\hat\mu'^2$ and P1's $\mathfrak h$, hence $\neg$a new free parameter and $\neg$a new dimensionful scale; no numerical value attaches to it here or anywhere [P5; BM.69(4)'s four grounds stand: the slot is declared, $\neg$derived]. No second dimensionful scale exists [P1; the derived no-go: Part 1 §E]. Any numerical use of an inherited scale beyond its Part-3 loci requires a logged declaration first.
+
+\textbf{Consolidated calibration register (Tier BM.23, BM.143(4) — a consolidation, $\neg$an addition; the parameter count is unchanged).}
+
+%dsp-level:0
+\[
+(\mathrm{C\text{-}BM.1})\quad\rho_{\mathrm B}
+\]
+
+%dsp-level:0
+\[
+= \hat\mu'^2\mathfrak h^2/(\ln2)^2\in\mathfrak q^0:\ \ \text{the bridge ratio; slot declared}\ [\mathrm{A\text{-}BM.9}],
+\]
+
+%dsp-level:0
+\[
+\ \text{value}\ \neg\text{issued}\ [\mathrm{BM.143}(4)];
+\]
+
+%dsp-level:0
+\[
+(\mathrm{C\text{-}BM.2})
+\]
+
+%dsp-level:0
+\[
+\quad e_0:\ \ \text{the numerical value of the electric coupling}\ [\mathrm{EM.25}(7);\ \mathrm{BM.88}(8);\ \mathrm{BM.133}(6)];
+\]
+
+%dsp-level:0
+\[
+\ \ \text{value}\ \neg\text{issued};
+\]
+
+%dsp-level:0
+\[
+\ \neg\text{fixed by measurement}\ [\mathrm{P5}];
+\]
+
+%dsp-level:0
+\[
+(\mathrm{C\text{-}BM.3})\quad\mu_\nu,
+\]
+
+%dsp-level:0
+\[
+\ \mu,
+\]
+
+%dsp-level:0
+\[
+\ \rho_\ell,
+\]
+
+%dsp-level:0
+\[
+\ \rho_\nu:\ \ \text{the channel scales, inherited from}\ \mathrm{Cal\text{-}F},
+\]
+
+%dsp-level:0
+\[
+\ \neg\text{declared in this part}\ [\mathrm{FT.145}(3);\ \mathrm{BM.83}(5),(7)].
+\]
+
+Each row is a calibration datum of the P4/A-BM.9 species, $\neg$a structural gap; no row carries a value; $\mathfrak h$ remains the single dimensionful scale [P1].
+
+\section*{\texorpdfstring{P5 and the external-data quarantine}{P5 and the external-data quarantine}}
+\addcontentsline{toc}{section}{P5 and the external-data quarantine}
+\begin{quote}
+\textbf{External-data quarantine.} The [EXT] audit rows (FT.114, FT.120; and the audit clauses of FT.77, FT.79, FT.87, FT.104 in Part 3) are quarantined comparison data: tested, never trusted; they enter no derivation [P1, P5; FT.73(5) pattern].
+
+\end{quote}
+External comparison data enter only quarantined audit rows (Census FT.114, FT.120; P1, P5): tested, never trusted, entering no derivation. No slot of this register is fixed by any such row.
+
+\end{document}

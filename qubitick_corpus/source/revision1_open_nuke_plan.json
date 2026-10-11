@@ -1,0 +1,1383 @@
+{
+ "Part3_Fermion_era.md": [
+  [
+   343,
+   "Def-H.7",
+   "(Open Gaps 13)"
+  ],
+  [
+   588,
+   "Def-H.9",
+   "(Open Gaps 7)"
+  ],
+  [
+   759,
+   "Def-H.39",
+   "HistLog \u00a7II item 7"
+  ],
+  [
+   773,
+   "Def-H.40",
+   "HistLog \u00a7II items 5/12"
+  ],
+  [
+   1202,
+   "Def-H.16",
+   "(Open Gaps 7)"
+  ],
+  [
+   1202,
+   "Def-H.16",
+   "(Open Gaps 17)"
+  ],
+  [
+   1448,
+   "Def-H.19",
+   "(Open Gaps 18)"
+  ],
+  [
+   1464,
+   "FT.33",
+   "(Open Gaps 7)"
+  ],
+  [
+   1608,
+   "FT.38",
+   "Open Gaps 13"
+  ],
+  [
+   1817,
+   "FT.48",
+   "Open Gaps 13"
+  ],
+  [
+   1823,
+   "FT.48",
+   "(Open Gaps 18)"
+  ],
+  [
+   1847,
+   "FT.48",
+   "Open Gaps 13"
+  ],
+  [
+   1887,
+   "FT.52",
+   "Open Gaps 11"
+  ],
+  [
+   2090,
+   "FT.57",
+   "(Open Gaps 16)"
+  ],
+  [
+   2487,
+   "FT.66",
+   "item 13"
+  ],
+  [
+   2633,
+   "FT.67",
+   "Open Gaps 16(d)"
+  ],
+  [
+   2938,
+   "Def-H.27",
+   "HistLog \u00a7II item 16(d)"
+  ],
+  [
+   3124,
+   "FT.155",
+   "HistLog \u00a7II item 7"
+  ],
+  [
+   3139,
+   "FT.155",
+   "\\text{HistLog \u00a7II item 7}"
+  ],
+  [
+   3156,
+   "FT.77",
+   "(items 5/12)"
+  ],
+  [
+   3652,
+   "FT.89",
+   "Req-seg: item 20 (deficits 1\u20133)"
+  ],
+  [
+   3708,
+   "FT.90",
+   "Req-seg: item 20"
+  ],
+  [
+   3753,
+   "FT.91",
+   "Req-seg: item 13, item 21"
+  ],
+  [
+   3852,
+   "FT.93",
+   "Req-seg: item 20 (deficits 1, 2, 6), item 21"
+  ],
+  [
+   3908,
+   "FT.94",
+   "Req-seg: item 20 (deficits 2, 8), item 13"
+  ],
+  [
+   3990,
+   "FT.97",
+   "Req-seg: item 20 (deficits 8, 12)"
+  ],
+  [
+   4361,
+   "FT.104",
+   "(Open Gaps 7)"
+  ],
+  [
+   4636,
+   "Def-H.41",
+   "HistLog \u00a7II items 5/12"
+  ],
+  [
+   4916,
+   "Def-H.42",
+   "HistLog \u00a7II items 5/12"
+  ],
+  [
+   5153,
+   "FT.123",
+   "(\\text{deficit}\\ 1')"
+  ],
+  [
+   5270,
+   "FT.125",
+   "(item 20)"
+  ],
+  [
+   5427,
+   "Def-H.43",
+   "HistLog \u00a7II item 21(b)"
+  ],
+  [
+   5427,
+   "Def-H.43",
+   "HistLog \u00a7II Q1$'$"
+  ],
+  [
+   5428,
+   "Def-H.43",
+   "HistLog \u00a7II items 7/13"
+  ],
+  [
+   5448,
+   "FT.129",
+   "Req-seg: items 7/13 (HistLog \u00a7I)"
+  ],
+  [
+   5542,
+   "FT.131",
+   "\\ \\text{item 21(b)}"
+  ],
+  [
+   5545,
+   "FT.131",
+   "\\text{items 7/13}"
+  ],
+  [
+   5547,
+   "FT.131",
+   "Req-seg: items 7/13/21(b) (HistLog \u00a7I)"
+  ],
+  [
+   5899,
+   "FT.141",
+   "(HistLog \u00a7IV)"
+  ],
+  [
+   6101,
+   "FT.144",
+   "(HistLog \u00a7IV)"
+  ],
+  [
+   6168,
+   "FT.145",
+   "\\text{item}\\ 7"
+  ],
+  [
+   6200,
+   "FT.145",
+   "(item 7)"
+  ],
+  [
+   6208,
+   "FT.145",
+   "Req-seg: items 7/20/21 (HistLog \u00a7I)"
+  ],
+  [
+   6218,
+   "FT.145",
+   "\\ \\text{item}\\ 7"
+  ],
+  [
+   6469,
+   "FT.159",
+   "Req-seg: item 21(b) (HistLog \u00a7II)"
+  ],
+  [
+   6507,
+   "FT.160",
+   "\\text{item}\\ 21(\\mathrm b)"
+  ],
+  [
+   6508,
+   "FT.160",
+   "(\\text{item}\\ 7)"
+  ],
+  [
+   6508,
+   "FT.160",
+   "(\\text{deficit}\\ 1',\\ \\text{Q1}')"
+  ],
+  [
+   6515,
+   "FT.160",
+   "(HistLog \u00a7II)"
+  ]
+ ],
+ "Part4_Baryomesonic_era.md": [
+  [
+   19,
+   "(front matter)",
+   "HistLog \u00a7II Q7's derived no-go"
+  ],
+  [
+   169,
+   "BM.5",
+   "\\ \\text{HistLog \u00a7II item 13}"
+  ],
+  [
+   171,
+   "BM.5",
+   "Req-seg: HistLog \u00a7II items 13/16"
+  ],
+  [
+   182,
+   "BM.6",
+   "\\text{HistLog \u00a7II Q10}"
+  ],
+  [
+   183,
+   "BM.6",
+   "\\text{HistLog \u00a7II Q11}"
+  ],
+  [
+   184,
+   "BM.6",
+   "\\text{HistLog \u00a7II item 16(d)}"
+  ],
+  [
+   184,
+   "BM.6",
+   "\\text{HistLog \u00a7II item 13}"
+  ],
+  [
+   185,
+   "BM.6",
+   "\\text{HistLog \u00a7II item 16(e)}"
+  ],
+  [
+   186,
+   "BM.6",
+   "\\ \\text{HistLog \u00a7II item 21(b)}"
+  ],
+  [
+   187,
+   "BM.6",
+   "\\text{HistLog \u00a7II item 17}"
+  ],
+  [
+   188,
+   "BM.6",
+   "\\text{HistLog \u00a7II item 21(a)}"
+  ],
+  [
+   189,
+   "BM.6",
+   "\\text{HistLog \u00a7II item 21(i)}"
+  ],
+  [
+   191,
+   "BM.6",
+   "Req-seg: HistLog \u00a7II items 13/16/17/21, Q10/Q11"
+  ],
+  [
+   208,
+   "Def-BM.3",
+   "\\ \\text{HistLog \u00a7II Q10}"
+  ],
+  [
+   210,
+   "Def-BM.3",
+   "\\ \\text{HistLog \u00a7II}"
+  ],
+  [
+   220,
+   "Def-BM.3",
+   "Req-seg: HistLog \u00a7II Q10 (pointer)"
+  ],
+  [
+   564,
+   "BM.12",
+   "Req-seg: HistLog \u00a7II items 13/17/21(b) (pointers)"
+  ],
+  [
+   812,
+   "BM.17",
+   "\\text{HistLog \u00a7II Q10}"
+  ],
+  [
+   834,
+   "BM.17",
+   "\\ \\text{HistLog \u00a7II}"
+  ],
+  [
+   840,
+   "BM.17",
+   "Req-seg: HistLog \u00a7II Q10 (pointer)"
+  ],
+  [
+   889,
+   "BM.18",
+   "Req-seg: HistLog \u00a7II items 13/17/21(b) (pointers)"
+  ],
+  [
+   954,
+   "Def-BM.6",
+   "\\text{HistLog \u00a7II item 13}"
+  ],
+  [
+   1068,
+   "BM.21",
+   "\\ \\text{HistLog \u00a7II item 13}"
+  ],
+  [
+   1070,
+   "BM.21",
+   "Req-seg: HistLog \u00a7II item 13 (pointer)"
+  ],
+  [
+   1113,
+   "BM.22",
+   "\\ \\text{HistLog \u00a7II Q10}"
+  ],
+  [
+   1163,
+   "BM.23",
+   "deficit $1'$"
+  ],
+  [
+   1199,
+   "BM.24",
+   "\\ \\text{Q10}"
+  ],
+  [
+   1200,
+   "BM.24",
+   "\\ \\text{item 13}"
+  ],
+  [
+   1353,
+   "BM.26",
+   "Q10"
+  ],
+  [
+   1451,
+   "BM.28",
+   "\\text{HistLog \u00a7II item 13}"
+  ],
+  [
+   1466,
+   "BM.28",
+   "Req-seg: HistLog \u00a7II item 13 (pointer)"
+  ],
+  [
+   1507,
+   "BM.29",
+   "\\ \\text{Q10}"
+  ],
+  [
+   1519,
+   "BM.29",
+   "Req-seg: HistLog \u00a7II items 13/17, Q10 (pointers)"
+  ],
+  [
+   1593,
+   "BM.30",
+   "\\text{item 13}"
+  ],
+  [
+   1593,
+   "BM.30",
+   "\\text{deficit}\\ 1'"
+  ],
+  [
+   1598,
+   "BM.30",
+   "Req-seg: HistLog \u00a7II item 13 (pointer)"
+  ],
+  [
+   1770,
+   "BM.33",
+   "Req-seg: HistLog \u00a7II item 13 (pointer)"
+  ],
+  [
+   1932,
+   "BM.35",
+   "Req-seg: HistLog \u00a7II item 7, Q2 (pointers)"
+  ],
+  [
+   1989,
+   "BM.36",
+   "Req-seg: HistLog \u00a7II items 7, 13, Q2 (pointers)"
+  ],
+  [
+   2035,
+   "BM.37",
+   "\\text{HistLog \u00a7II item 13 pointer}"
+  ],
+  [
+   2052,
+   "BM.37",
+   "Req-seg: HistLog \u00a7II item 13 (pointer)"
+  ],
+  [
+   2087,
+   "BM.38",
+   "Q2}"
+  ],
+  [
+   2107,
+   "BM.38",
+   "Req-seg: HistLog \u00a7II items 7, 13, Q2, deficit 1' (pointers)"
+  ],
+  [
+   2143,
+   "Def-BM.11",
+   "\\text{HistLog \u00a7II item 7 pointer}"
+  ],
+  [
+   2189,
+   "BM.39",
+   "Req-seg: HistLog \u00a7II item 7 (pointer)"
+  ],
+  [
+   2305,
+   "BM.41",
+   "Req-seg: HistLog \u00a7II item 13 (pointer)"
+  ],
+  [
+   2365,
+   "BM.42",
+   "\\ \\text{HistLog \u00a7II item 19 pointer}"
+  ],
+  [
+   2378,
+   "BM.42",
+   "Req-seg: HistLog \u00a7II item 19 (pointer)"
+  ],
+  [
+   2431,
+   "BM.43",
+   "Req-seg: HistLog \u00a7II item 7 (pointer)"
+  ],
+  [
+   2509,
+   "BM.45",
+   "\\text{deficit 4}"
+  ],
+  [
+   2697,
+   "BM.48",
+   "Req-seg: HistLog \u00a7II item 7 (pointer)"
+  ],
+  [
+   2769,
+   "BM.50",
+   "\\ \\text{item 7}"
+  ],
+  [
+   2781,
+   "BM.50",
+   "Req-seg: HistLog \u00a7II item 7 (pointer)"
+  ],
+  [
+   2815,
+   "BM.51",
+   "\\text{HistLog \u00a7II item 7 pointer},\\ \\neg\\text{premise}"
+  ],
+  [
+   2824,
+   "BM.51",
+   "Req-seg: HistLog \u00a7II item 7 (pointer)"
+  ],
+  [
+   2991,
+   "BM.55",
+   "Req-seg: HistLog \u00a7II item 7 (pointer)"
+  ],
+  [
+   3029,
+   "BM.56",
+   "Req-seg: HistLog \u00a7II item 7 (pointer)"
+  ],
+  [
+   3124,
+   "Def-BM.14",
+   "\\ \\mathrm{HistLog\\ \u00a7II}\\ \\text{item}\\ 7\\ \\text{pointer}"
+  ],
+  [
+   3134,
+   "Def-BM.14",
+   "\\text{item}\\ 7"
+  ],
+  [
+   3134,
+   "Def-BM.14",
+   "\\text{deficit}\\ 1'"
+  ],
+  [
+   3324,
+   "BM.59",
+   "Req-seg: HistLog \u00a7II item 7, deficit $1'$ (pointers)"
+  ],
+  [
+   3390,
+   "BM.60",
+   "\\ \\mathrm{HistLog\\ \u00a7II}\\ \\text{item}\\ 7,\\ \\mathrm{Q2}\\ \\text{pointers}"
+  ],
+  [
+   3401,
+   "BM.60",
+   "\\text{deficit}\\ 1'"
+  ],
+  [
+   3404,
+   "BM.60",
+   "Req-seg: HistLog \u00a7II item 7, Q2, deficit $1'$ (pointers)"
+  ],
+  [
+   3599,
+   "BM.63",
+   "Req-seg: HistLog \u00a7II item 7, deficit 4 (pointers)"
+  ],
+  [
+   3631,
+   "BM.64",
+   "\\ \\text{deficit}\\ 1'"
+  ],
+  [
+   3631,
+   "BM.64",
+   "\\text{item}\\ 7"
+  ],
+  [
+   3650,
+   "BM.64",
+   "Req-seg: HistLog \u00a7II items 7, 13, Q2, deficits $1'$, 4 (pointers)"
+  ],
+  [
+   3848,
+   "BM.67",
+   "item 19"
+  ],
+  [
+   3848,
+   "BM.67",
+   "deficit 1'"
+  ],
+  [
+   3848,
+   "BM.67",
+   "item 7"
+  ],
+  [
+   3857,
+   "BM.67",
+   "Req-seg: HistLog \u00a7II items 7, 13, 19, deficit $1'$ (pointers)"
+  ],
+  [
+   3928,
+   "BM.68",
+   "\\ \\text{HistLog \u00a7II item 7 pointer}"
+  ],
+  [
+   3942,
+   "BM.68",
+   "Req-seg: HistLog \u00a7II item 7, Q2 (pointers)"
+  ],
+  [
+   3986,
+   "BM.69",
+   "\\text{deficit}\\ 1'"
+  ],
+  [
+   3995,
+   "BM.69",
+   "Req-seg: HistLog \u00a7II item 7, Q2, deficit $1'$ (pointers)"
+  ],
+  [
+   4042,
+   "BM.70",
+   "\\text{deficit 4}"
+  ],
+  [
+   4051,
+   "BM.70",
+   "Req-seg: HistLog \u00a7II item 7, deficit 4 (pointers)"
+  ],
+  [
+   4101,
+   "BM.71",
+   "\\text{deficit 4}"
+  ],
+  [
+   4101,
+   "BM.71",
+   "\\text{item 7}"
+  ],
+  [
+   4101,
+   "BM.71",
+   "\\text{deficit}\\ 1'"
+  ],
+  [
+   4106,
+   "BM.71",
+   "Req-seg: HistLog \u00a7II item 7, deficits $1'$, 4 (pointers)"
+  ],
+  [
+   4160,
+   "BM.72",
+   "Req-seg: HistLog \u00a7II items 7, 13, 19, Q2, deficits $1'$, 4 (pointers)"
+  ],
+  [
+   4242,
+   "BM.73",
+   "Req-seg: HistLog \u00a7II.4 (the tier's assignment addendum, logged before use), \u00a7II Q1$'$, items 20, 21(i) (pointers)"
+  ],
+  [
+   4303,
+   "BM.74",
+   "Req-seg: HistLog \u00a7II item 19 (pointer), \u00a7II.4 (the naming and assignment addenda) (pointers)"
+  ],
+  [
+   4355,
+   "BM.75",
+   "\\text{deficit 4}"
+  ],
+  [
+   4359,
+   "BM.75",
+   "Req-seg: HistLog \u00a7II.4 (the branch-naming and assignment addenda), \u00a7II item 7, deficit 4 (pointers)"
+  ],
+  [
+   4412,
+   "BM.76",
+   "Req-seg: HistLog \u00a7II.4 (the assignment and naming addenda) (pointers)"
+  ],
+  [
+   4451,
+   "BM.77",
+   "\\text{deficit 4}"
+  ],
+  [
+   4487,
+   "BM.77",
+   "Req-seg: HistLog \u00a7II.4 (the tier's vertex-specification addendum, logged before use), \u00a7II item 7, Q6, deficit 4 (pointers)"
+  ],
+  [
+   4530,
+   "BM.78",
+   "\\ \\text{item}\\ 21(\\mathrm b)"
+  ],
+  [
+   4530,
+   "BM.78",
+   "\\mathrm{Q4}"
+  ],
+  [
+   4548,
+   "BM.78",
+   "Req-seg: HistLog \u00a7II.4 (the tier's two addenda), \u00a7II items 7, 13, 19, 20, 21(b), Q1$'$, Q4, Q5, Q6, deficits $1'$, 4 (pointers)"
+  ],
+  [
+   4657,
+   "BM.79",
+   "Req-seg: HistLog \u00a7II item 7, deficit 12 (pointers)"
+  ],
+  [
+   4765,
+   "BM.80",
+   "Req-seg: HistLog \u00a7II item 7, Q6 (pointers)"
+  ],
+  [
+   4884,
+   "BM.81",
+   "\\text{deficit}\\ 4"
+  ],
+  [
+   5005,
+   "BM.82",
+   "Req-seg: HistLog \u00a7II item 7, deficit $1'$ (pointers)"
+  ],
+  [
+   5096,
+   "BM.83",
+   "\\text{deficit}\\ 6"
+  ],
+  [
+   5104,
+   "BM.83",
+   "Req-seg: HistLog \u00a7II item 7, deficits $1'$, 4, 6 (pointers)"
+  ],
+  [
+   5186,
+   "BM.84",
+   "Req-seg: HistLog \u00a7II item 7 (pointer)"
+  ],
+  [
+   5321,
+   "BM.86",
+   "\\ \\text{deficit}\\ 1'"
+  ],
+  [
+   5321,
+   "BM.86",
+   "\\ \\mathrm{Q6}"
+  ],
+  [
+   5321,
+   "BM.86",
+   "\\text{deficit}\\ 6"
+  ],
+  [
+   5321,
+   "BM.86",
+   "\\text{deficit}\\ 4"
+  ],
+  [
+   5321,
+   "BM.86",
+   "\\text{deficit}\\ 4"
+  ],
+  [
+   5321,
+   "BM.86",
+   "\\text{item}\\ 21(\\mathrm d)"
+  ],
+  [
+   5327,
+   "BM.86",
+   "Req-seg: HistLog \u00a7II items 7, 21(d), Q6, deficits $1'$, 4, 6, 12 (pointers)"
+  ],
+  [
+   5389,
+   "BM.87",
+   "Req-seg: HistLog \u00a7II item 7 (pointer)"
+  ],
+  [
+   5590,
+   "BM.90",
+   "\\ \\text{item}\\ 7"
+  ],
+  [
+   5592,
+   "BM.90",
+   "Req-seg: HistLog \u00a7II item 7 (pointer)"
+  ],
+  [
+   5666,
+   "BM.91",
+   "Req-seg: HistLog \u00a7II item 7 (pointer)"
+  ],
+  [
+   5795,
+   "BM.93",
+   "\\ \\text{item}\\ 7"
+  ],
+  [
+   5795,
+   "BM.93",
+   "\\ \\text{deficit}\\ 1'"
+  ],
+  [
+   5795,
+   "BM.93",
+   "\\text{deficit}\\ 6"
+  ],
+  [
+   5795,
+   "BM.93",
+   "\\text{deficit}\\ 4"
+  ],
+  [
+   5795,
+   "BM.93",
+   "\\text{item}\\ 21(\\mathrm d)"
+  ],
+  [
+   5801,
+   "BM.93",
+   "Req-seg: HistLog \u00a7II items 7, 21(d), deficits $1'$, 4, 6, 12 (pointers)"
+  ],
+  [
+   5882,
+   "BM.94",
+   "Req-seg: HistLog \u00a7II item 7 (pointer)"
+  ],
+  [
+   5980,
+   "BM.95",
+   "Req-seg: HistLog \u00a7II item 7 (pointer)"
+  ],
+  [
+   6032,
+   "BM.96",
+   "\\ \\text{deficit}\\ 6"
+  ],
+  [
+   6051,
+   "BM.96",
+   "\\ \\text{HistLog \u00a7II Q8}"
+  ],
+  [
+   6052,
+   "BM.96",
+   "\\ \\text{HistLog \u00a7II Q7's derived no-go}"
+  ],
+  [
+   6054,
+   "BM.96",
+   "\\ \\text{deficit}\\ 6"
+  ],
+  [
+   6063,
+   "BM.96",
+   "\\text{deficit}\\ 4"
+  ],
+  [
+   6067,
+   "BM.96",
+   "Req-seg: HistLog \u00a7II Q7, Q8, deficits 4, 6 (pointers)"
+  ],
+  [
+   6125,
+   "BM.97",
+   "\\text{deficit}\\ 4"
+  ],
+  [
+   6168,
+   "BM.97",
+   "Req-seg: HistLog \u00a7II item 7, deficit 4 (pointers)"
+  ],
+  [
+   6263,
+   "BM.98",
+   "Req-seg: HistLog \u00a7II item 7 (pointer)"
+  ],
+  [
+   6416,
+   "BM.100",
+   "\\ \\text{item}\\ 7"
+  ],
+  [
+   6416,
+   "BM.100",
+   "\\ \\text{deficit}\\ 1'"
+  ],
+  [
+   6416,
+   "BM.100",
+   "\\text{deficit}\\ 6"
+  ],
+  [
+   6416,
+   "BM.100",
+   "\\text{deficit}\\ 4"
+  ],
+  [
+   6416,
+   "BM.100",
+   "\\text{item}\\ 21(\\mathrm d)"
+  ],
+  [
+   6422,
+   "BM.100",
+   "Req-seg: HistLog \u00a7II items 7, 20, 21(d), deficits $1'$, 4, 6, 12 (pointers)"
+  ],
+  [
+   6505,
+   "BM.101",
+   "Req-seg: HistLog \u00a7II item 7, deficit 12 (pointers)"
+  ],
+  [
+   6574,
+   "BM.102",
+   "\\ \\text{HistLog \u00a7II Q7's derived no-go}"
+  ],
+  [
+   6591,
+   "BM.102",
+   "\\ \\text{Q7}"
+  ],
+  [
+   6646,
+   "BM.103",
+   "\\ \\text{HistLog \u00a7II Q11}"
+  ],
+  [
+   6651,
+   "BM.103",
+   "\\ \\text{HistLog \u00a7II Q9}"
+  ],
+  [
+   6669,
+   "BM.103",
+   "Req-seg: HistLog \u00a7II Q1', Q9, Q11, item 19, deficits $1'$, 11 (pointers)"
+  ],
+  [
+   6867,
+   "BM.106",
+   "\\ \\text{HistLog \u00a7II Q11}"
+  ],
+  [
+   6873,
+   "BM.106",
+   "\\ \\text{Q9}"
+  ],
+  [
+   6888,
+   "BM.106",
+   "Req-seg: HistLog \u00a7II Q9, Q11, item 19, deficits 4, 11 (pointers)"
+  ],
+  [
+   6943,
+   "BM.107",
+   "\\ \\text{HistLog \u00a7II.4}"
+  ],
+  [
+   6957,
+   "BM.107",
+   "\\ \\text{deficit}\\ 1'"
+  ],
+  [
+   6957,
+   "BM.107",
+   "\\ \\text{Q11}"
+  ],
+  [
+   6957,
+   "BM.107",
+   "\\ \\text{deficit 11}"
+  ],
+  [
+   6957,
+   "BM.107",
+   "\\text{deficits}\\ 6,\\ 4"
+  ],
+  [
+   6957,
+   "BM.107",
+   "\\text{item}\\ 21(\\mathrm d)"
+  ],
+  [
+   6973,
+   "BM.107",
+   "\\text{HistLog \u00a7II.4}"
+  ],
+  [
+   7082,
+   "BM.108",
+   "Req-seg: HistLog \u00a7II Q10, deficit $1'$ (pointers)"
+  ],
+  [
+   7254,
+   "BM.110",
+   "Req-seg: HistLog \u00a7II Q9, Q11, deficit 11 (pointers)"
+  ],
+  [
+   7316,
+   "BM.111",
+   "Req-seg: HistLog \u00a7II items 7, 13 (pointers)"
+  ],
+  [
+   7385,
+   "BM.112",
+   "Req-seg: HistLog \u00a7II Q11, deficit 11 (pointers)"
+  ],
+  [
+   7455,
+   "BM.113",
+   "Req-seg: HistLog \u00a7II Q11, item 20, deficit 11 (pointers)"
+  ],
+  [
+   7534,
+   "Def-BM.17",
+   "Req-seg: HistLog \u00a7II (R3), (R8) (pointers)"
+  ],
+  [
+   7584,
+   "BM.114",
+   "Req-seg: HistLog \u00a7II Q9, deficits $1'$, 3 (pointers)"
+  ],
+  [
+   7683,
+   "BM.115",
+   "Req-seg: HistLog \u00a7II (R3), deficit $1'$ (pointers)"
+  ],
+  [
+   7822,
+   "BM.117",
+   "\\ (\\mathrm{R3})"
+  ],
+  [
+   7828,
+   "BM.117",
+   "Req-seg: HistLog \u00a7II (R3), item 7, deficits $1'$, 12 (pointers)"
+  ],
+  [
+   7868,
+   "BM.118",
+   "\\ (\\mathrm{R8})"
+  ],
+  [
+   7880,
+   "BM.118",
+   "\\ \\text{deficit}\\ 1'"
+  ],
+  [
+   7880,
+   "BM.118",
+   "\\text{deficits}\\ 6,\\ 4"
+  ],
+  [
+   7880,
+   "BM.118",
+   "\\text{item}\\ 21(\\mathrm d)"
+  ],
+  [
+   7888,
+   "BM.118",
+   "Req-seg: HistLog \u00a7II items 7, 13, 20, 21(d), Q9, Q10, Q11, \u00a7II.4, deficits $1'$, 3, 4, 6, 11, 12, residues (R1)\u2013(R7) (pointers)"
+  ],
+  [
+   7947,
+   "Def-BM.18",
+   "\\ \\text{item 17}"
+  ],
+  [
+   7947,
+   "Def-BM.18",
+   "\\text{deficit}\\ 1'"
+  ],
+  [
+   7951,
+   "Def-BM.18",
+   "Req-seg: HistLog \u00a7II item 17, deficit $1'$ (pointers)"
+  ],
+  [
+   8191,
+   "BM.122",
+   "\\ \\text{item 17}"
+  ],
+  [
+   8200,
+   "BM.122",
+   "Req-seg: HistLog \u00a7II item 17, deficits $1'$, 3 (pointers)"
+  ],
+  [
+   8262,
+   "BM.123",
+   "\\ \\text{item 17}"
+  ],
+  [
+   8262,
+   "BM.123",
+   "\\text{deficit}\\ 1'"
+  ],
+  [
+   8271,
+   "BM.123",
+   "Req-seg: HistLog \u00a7II item 17, Q9, deficits $1'$, 3 (pointers)"
+  ],
+  [
+   8334,
+   "Def-BM.19",
+   "Req-seg: HistLog \u00a7II item 7, (R1), (R2) (pointers)"
+  ],
+  [
+   8374,
+   "BM.124",
+   "Req-seg: HistLog \u00a7II item 19, (R2), deficit 6 (pointers)"
+  ],
+  [
+   8444,
+   "BM.125",
+   "Req-seg: HistLog \u00a7II item 7, (R1), (R2), deficits 6, 12 (pointers)"
+  ],
+  [
+   8507,
+   "BM.126",
+   "Req-seg: HistLog \u00a7II Q7, deficits 2, 3 (pointers)"
+  ],
+  [
+   8558,
+   "BM.127",
+   "\\ \\text{item 16(b)}"
+  ],
+  [
+   8565,
+   "BM.127",
+   "Req-seg: HistLog \u00a7II (R3), item 16(b), deficit $1'$ (pointers)"
+  ],
+  [
+   8630,
+   "BM.128",
+   "Req-seg: HistLog \u00a7II Q11, (R7) (pointers)"
+  ],
+  [
+   8700,
+   "BM.129",
+   "Req-seg: HistLog \u00a7II (R3), deficits $1'$, 3 (pointers)"
+  ],
+  [
+   8749,
+   "BM.130",
+   "\\ \\text{deficit}\\ 1'"
+  ],
+  [
+   8749,
+   "BM.130",
+   "\\ \\text{item 17}"
+  ],
+  [
+   8749,
+   "BM.130",
+   "\\text{deficit}\\ 1'"
+  ],
+  [
+   8749,
+   "BM.130",
+   "\\text{deficits}\\ 6,\\ 4"
+  ],
+  [
+   8749,
+   "BM.130",
+   "\\text{item}\\ 21(\\mathrm d)"
+  ],
+  [
+   8759,
+   "BM.130",
+   "Req-seg: HistLog \u00a7II items 7, 13, 16(b), 17, 19, 20, 21(d), Q7, Q9, Q11, \u00a7II.4, (R1)\u2013(R9), deficits $1'$, 2, 3, 4, 6, 11, 12 (pointers)"
+  ],
+  [
+   8819,
+   "BM.131",
+   "Req-seg: HistLog \u00a7II item 7, item 21(b) (pointers)"
+  ],
+  [
+   8887,
+   "BM.132",
+   "Req-seg: HistLog \u00a7II items 13, 21(b) (pointers)"
+  ],
+  [
+   8963,
+   "Def-BM.20",
+   "\\ \\text{HistLog \u00a7II item 17's blocker, discharged as a declared identification}"
+  ],
+  [
+   8974,
+   "Def-BM.20",
+   "Req-seg: HistLog \u00a7II item 17 (pointer)"
+  ],
+  [
+   9009,
+   "BM.134",
+   "Req-seg: HistLog \u00a7II item 17 (pointer)"
+  ],
+  [
+   9053,
+   "BM.135",
+   "Req-seg: HistLog \u00a7II items 20 (deficits 9, 10), Q9, Q10 (pointers)"
+  ],
+  [
+   9096,
+   "BM.136",
+   "\\text{item 12}"
+  ],
+  [
+   9096,
+   "BM.136",
+   "\\ \\text{item 21}(\\mathrm d)"
+  ],
+  [
+   9101,
+   "BM.136",
+   "Req-seg: HistLog \u00a7II items 12, 21(d), Q11, residues (R3), (R7$'$) (pointers)"
+  ],
+  [
+   9230,
+   "BM.139",
+   "\\text{HistLog \u00a7II item 16(d)}"
+  ],
+  [
+   9254,
+   "BM.139",
+   "Req-seg: HistLog \u00a7II item 16(b)\u2013(e) (pointers)"
+  ],
+  [
+   9302,
+   "BM.140",
+   "Req-seg: HistLog \u00a7II item 7, item 20 (deficit 12) (pointers)"
+  ],
+  [
+   9349,
+   "BM.141",
+   "Req-seg: HistLog \u00a7II residue (R6) (pointer)"
+  ],
+  [
+   9442,
+   "BM.143",
+   "\\ \\text{HistLog \u00a7II Q7's derived no-go}"
+  ],
+  [
+   9449,
+   "BM.143",
+   "\\ \\text{item 12}"
+  ],
+  [
+   9449,
+   "BM.143",
+   "\\ \\text{item 21}(\\mathrm d)"
+  ],
+  [
+   9449,
+   "BM.143",
+   "\\text{item 12}"
+  ],
+  [
+   9449,
+   "BM.143",
+   "\\ \\text{item 21}(\\mathrm d)"
+  ],
+  [
+   9454,
+   "BM.143",
+   "\\ \\text{item 21(b)}"
+  ],
+  [
+   9455,
+   "BM.143",
+   "\\ \\text{item 21(i)}"
+  ],
+  [
+   9456,
+   "BM.143",
+   "\\text{item 12}"
+  ],
+  [
+   9456,
+   "BM.143",
+   "\\ \\text{item 21(d)}"
+  ],
+  [
+   9457,
+   "BM.143",
+   "\\ \\text{item 13}"
+  ],
+  [
+   9458,
+   "BM.143",
+   "\\ \\text{item 21(a)}"
+  ],
+  [
+   9460,
+   "BM.143",
+   "\\text{HistLog \u00a7II, \u00a7III, \u00a7V updated}"
+  ],
+  [
+   9463,
+   "BM.143",
+   "Req-seg: HistLog \u00a7II items 7, 12, 13, 16(c), 21(a), 21(b), 21(d), 21(i), Q7, residues (R1)\u2013(R10), deficits 4, 6 (pointers)"
+  ],
+  [
+   9486,
+   "BM.144",
+   "(item 17)"
+  ],
+  [
+   9486,
+   "BM.144",
+   "(Q10)"
+  ],
+  [
+   9486,
+   "BM.144",
+   "(item 19)"
+  ],
+  [
+   9486,
+   "BM.144",
+   "(item 16)"
+  ],
+  [
+   9512,
+   "BM.144",
+   "Req-seg: HistLog \u00a7II items 5, 7, 12, 13, 16, 17, 19, 20, 21, Q7, Q10, Q11, residues (R1)\u2013(R10), deficits 2, 3, 4, 6, 9, 10, 11, 12 (pointers)"
+  ],
+  [
+   9601,
+   "BM.146",
+   "Req-seg: HistLog \u00a7II item 13 (pointer)"
+  ],
+  [
+   9799,
+   "BM.151",
+   "\\ \\text{HistLog \u00a7II Q7's no-go}"
+  ],
+  [
+   9805,
+   "BM.151",
+   "Req-seg: HistLog \u00a7II items 13, Q7, A \u00a70.2a (pointers)"
+  ],
+  [
+   9851,
+   "BM.152",
+   "Req-seg: HistLog \u00a7II items 7, 12, 13, 21, Q7, deficits 2, 3, 4, 6 (pointers)"
+  ]
+ ],
+ "Census.md": [
+  [
+   104,
+   "FT.32",
+   "\\text{Open Gaps 7}"
+  ],
+  [
+   107,
+   "FT.32",
+   "(Open Gaps 5)"
+  ],
+  [
+   588,
+   "FT.64",
+   "Open Gaps 13"
+  ],
+  [
+   1106,
+   "FT.84",
+   "(Open Gaps 12)"
+  ]
+ ]
+}
