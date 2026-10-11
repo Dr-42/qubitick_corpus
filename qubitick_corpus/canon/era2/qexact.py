@@ -173,6 +173,7 @@ class Poly:
         for i,b in enumerate(o.c): r[i] += b
         return Poly(r)
     def __sub__(s, o): return s + Poly([-b for b in o.c])
+    def __neg__(s): return Poly([-b for b in s.c])
     def __eq__(s, o):
         if not isinstance(o, Poly): return NotImplemented
         d = s - o

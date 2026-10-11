@@ -15,8 +15,45 @@ declaration issues, §Cal-AT is empty, and no clause of Parts 1–4 is modified 
 ## Run
 
 ```bash
-cd canon/era2 && python3 run_all_era2.py     # -> 13 checkers, 0 failures, exit 0
+cd canon/era2 && python3 run_all_era2.py     # -> 23 checkers, 431 exact markers, 0 failures, exit 0
 ```
+
+**Tier index.** AT.1–AT.8 (Tier AT.1) the coherence census and the split · AT.9–AT.15 (AT.2) the
+bit/qubit tensor form · AT.16–AT.20 (AT.3) the capacity censor · AT.21–AT.28 (AT.4) the
+CP-assimilated tensor and subnetwork equivalence · AT.29–AT.38 (AT.5) the boundary-invariance
+survey, the shell, and the calibration floor · **AT.39 (AT.6) the closure row**.
+
+**AT.40 — the gap-closure pass: eight more rows closed.**
+- **AT-O19**: the five extrema at `ε_q = ⅛` are **ONE equation** — `d/dp[p(1−p)] = 1−2p = 0` and
+  `(1−p)²−p² = 2p−1 = 0` are the same linear equation. Its structural meaning: **`ε_q = ⅛ ⟺ x₊ = x₋
+  ⟺ Q = Qᵀ`**, i.e. the Janus master generator is **self-adjoint** and its stationary measure
+  **uniform**.
+- **AT-O12**: BM.149(1)'s two capacity faces are **provably independent** (two witnesses, one
+  failing each way). "Two faces of one capacity" is a *role* statement, not an identity.
+- **AT-O18**: `E_int = |R|` is a cardinality, hence exactly additive; BM.17's `2+2+2 = 6` is the
+  witness. No correction term.
+- **AT-O8**: **no-go** — the Poisson side has no tensor form, since `δK = γρ + log Z_γ·I` and
+  `log Z_γ` is not linear in `ρ`. **The asymmetry is the duality's content**: Haar is a linear
+  rank-2 idempotent tensor, Poisson is a nonlinear spectral flow.
+- **AT-O9/O11**: `dim End_SU(2)((ℂ²)^⊗n) = Σm_j² = C_n`, the **Catalan number** (1,2,5,14,42,132,
+  429,1430); `n=2` reproduces AT.12 exactly. At `n=4` there are **13 free invariants against the
+  metric's 10 coordinates** — so AT-O11 is a **DICTIONARY gap, not an invariant gap**.
+- **AT-O23b**: the shell's own read is the **signature-flip magnitude** `σ_shell(k) = −N² =
+  k_crit/k − 1`, whose maximum **equals the shell's thickness** `k_crit − 1 = G/(4π) − 1`.
+- **AT-O7**: the checker is **written**, not proposed — `1−𝔲 = −0.902113 < 0` against
+  `ℛ_max/ℛ_min > 0`; fails on the present text, passes on the fix.
+
+**The sharpened open list, in priority order:**
+1. **(AT-O14/O16)** compute `dim 𝒦_{n≥4}` — CT0.14's own method; **the only row that could unlock
+   the locked sector**. Cheap and decisive.
+2. **(AT-O4)** the EM sealing grammar on BM.110(1)'s δ-seal template — the largest genuine
+   construction; unblocks hydrogen (P5.1).
+3. **(AT-O11)** extend CT1.12's dictionary past the pair arena to `n=4`.
+4. **(AT-O7)** land the BM.140(6) pin and the re-citation-pinning convention.
+5. **(AT-O13)** Kerr, once **(AT-O3)** issues `(ϰ,β)`.
+**By nature / by design, not gaps:** (AT-O2) the slicing choice is gauge; (AT-O3) `(ϰ,β)` is
+calibration. **Hard-barred:** (AT-O5) the lepton mass, by BM.140(5)'s incommensurability. **Closed:** AT-O1, O10, O15, O16, O17, O20, O21, O22,
+O23, O24, O25.
 
 ## The arithmetic covenant
 

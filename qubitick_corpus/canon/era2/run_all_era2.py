@@ -19,7 +19,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 GATES = ["validate_against_canon.py", "census_L5.py"]          # must pass first
 HELPERS = {"qexact.py", "run_all_era2.py"}
 
-PASS_RE = re.compile(r"\[(EXACT|OK  |COHERENT)\]|ALL PASS|ALL REPRODUCE")
+PASS_RE = re.compile(r"\[(EXACT|OK  |COHERENT|CLOSED)\]|ALL PASS|ALL REPRODUCE")
 FAIL_RE = re.compile(r"\[FAIL|\[  BROKEN|Traceback")
 
 def run(path):

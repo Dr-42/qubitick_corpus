@@ -221,22 +221,41 @@ could expose.
 
 ---
 
-## 6. Session ledger
+## 6. Session ledger (final)
 
 ```
-turns                    9
-repository state         cloned at 05330c1, suite reproduced 80/80 ALL GREEN independently
-checkers written         12   (canon/era2/)
-exact markers            228, 0 failures
-canon defects found      1    (AT.7: BM.140(6), a sign error in a boxed statement, unchecked)
-bridge slots closed      1    (beta_31 = h, coefficient ln2)
-claims I withdrew        6    (AT.8(6)(i)-(vi), on the record)
-bugs of mine caught      8    (all by gates, none by inspection)
-declarations issued      0
-P4 additions             0
-measured values used     0    (every [EXT] figure was a scoring target, never an input)
-marked specializations   1    ((S), the shift additivity, not adopted)
+turns                       14
+repository state            cloned at 05330c1; frozen suite reproduced 80/80 ALL GREEN independently
+tiers written               6   (AT.1-AT.39, across five tier files + the closure row)
+checkers written           22   (canon/era2/)
+exact markers             412,  0 failures,  run_all_era2.py exit 0
+canon defects found         1   (AT.7: BM.140(6), a sign error in a boxed statement, unchecked)
+bridge slots constructed    1   (beta_31 = h, coefficient ln2 forced)
+open rows closed           11   (AT-O1, O10, O15, O16, O17, O20, O21, O22, O23, O24, O25)
+open rows remaining        16   (AT-O2..O9, O11..O14, O18, O19, O23b)
+claims I withdrew          11   (AT.39(4), on the record)
+bugs of mine caught        12   (all by gates, none by inspection)
+declarations issued         0
+P4 additions                0
+calibration parameters added 0
+measured values used        0   (every [EXT] figure was a scoring target, never an input)
+marked specializations      1   ((S), reclassified by AT.34 to "derived up to one calibration scale")
 ```
+
+**The headline results, ranked by how much I'd stand behind them:**
+
+1. **AT.7** — BM.140(6) is provably false as written (`50/(1−𝔲) < 0` for a quantity `> 0`) and is
+   unchecked by the suite. Highest confidence; a two-line checker fixes it.
+2. **AT.4/AT.5** — every materialized edge is mixed, and the longitudinal shift is
+   ledger-determined in closed form. Three re-cited definition rows and one line of algebra.
+3. **AT.1** — `β₃₁ = 𝔥` with coefficient `ln2` forced by `ln4 = 2ln2`.
+4. **AT.35(6)** — `S(r_s) = πE_int²ln2 = G/2`, with the `4π` from Census FT.63(4)'s *discrete*
+   total defect. Bekenstein–Hawking recovered with no smooth limit.
+5. **AT.34** — `|Rot| = 2E` forces arc-transitivity; the shift reduces `6E → 3 → 2 → 1`.
+6. **AT.12/AT.15** — the bit is the carrier's unique gauge invariant, conjugate to the *volume*
+   mode, not the shift.
+7. **AT.6** — the magnetic functional and its attenuation theorem. Rests on marked `(S)`, so the
+   least load-bearing, though AT.34 has since reclassified `(S)`.
 
 **Recommended next move.** (AT-O1) — the homogeneity step: whether FT.66(1)'s `Aut(Γ_S)`
 channel-permutation action can be promoted from motivation to proof for the shift direction
