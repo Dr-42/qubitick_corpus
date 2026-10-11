@@ -16,12 +16,12 @@ declaration issues, §Cal-AT is empty, and no clause of Parts 1–4 is modified 
 | `qexact.py` | shared exact-arithmetic core (see below) |
 | `duality.py` | shared View1↔View2 duality core — the dictionary rules (D1)–(D6): sector→ADM (CT1.12≡BM.34(1)), the AT.5(1) closed form, the flat/drag split, holonomy reads, exact polygons (`Quad(√d)`), the H_ω doublet over `Gauss(i)` |
 | `SESSION_SUMMARY_AND_REVIEW.md` | session ledger, the model's error profile, and interaction review notes |
-| the 31 `*.py` checkers | the machine verification (29 content checkers + the 2 validation gates); each cites the canon tags it reproduces or extends |
+| the 32 `*.py` checkers | the machine verification (30 content checkers + the 2 validation gates); each cites the canon tags it reproduces or extends |
 
 ## Run
 
 ```bash
-cd canon/era2 && python3 run_all_era2.py     # -> 31 checkers, 551 exact markers, 0 failures, exit 0
+cd canon/era2 && python3 run_all_era2.py     # -> 32 checkers, 564 exact markers, 0 failures, exit 0
 ```
 
 **Tier index.** AT.1–AT.8 (Tier AT.1) the coherence census and the split · AT.9–AT.15 (AT.2) the
@@ -125,19 +125,49 @@ the drag/spin-orbit polygon sector is derived, and the exact missing definition 
 section e↦F_e (the polygon's symmetry gives the forced *line*, not a *section*). Candidate tag
 **AT.46**; discovery record `era2/SPIN_HOLONOMY.md`; tier consolidation pending.
 
+**Session 4: rung 4 and the electroweak curl.** `rung4_ew_curl.py` (**13/13 exact**, candidates
+AT.50/AT.51): **dim 𝒦^(D⁻) = 1 by a four-row squeeze** — lower bound CT0.14's frozen strictness
+𝒦₃⊂𝒦_{n≥4}, upper bound the scalar-sink rows (CT4.4 "no internal directions", D4.1 "SINGLE
+possibility space" — the ⊕ collapses, CT4.6, CT4.4a(1)) — hence **dim 𝒦₄ = 26 and the flag
+TERMINATES** (dim 𝒦_n = 26 for every n≥4; the method re-executed: the census reproduces
+(6,16,17,25) on the nose). The lock is a **BICONDITIONAL**: D⁻∈𝒜(n) ⟺ n≥4 ⟺ 2^{n+1}≥32>16=C_cap
+⟺ NOT channel-admissible (verified n=0..16) — activation and admissibility are disjoint at every
+rung. The adjudication lands on a **third branch**: at n≥4 the formal projection does NOT
+annihilate the sink (𝒦^(D⁻)⊆𝒦_n by D2.3) — nonzero as a formal object — but ι₄ is unrealized
+[CT4.4a(1)], accessible vertex sets are {V₀..V₃} [CT0.11], and every accessible mask runs at rung
+≤3 [AT.16(4),(5)]: **NONZERO-BUT-UNREACHABLE**, and even formally the sink is structureless
+(CT4.4/4.5/4.7; BM.143(1)). **AT-O14/O16 CLOSED**; AT-O11 becomes fully decidable (AT.40's own
+condition "once dim 𝒦_{n≥4} is known" is met). The Architect's electroweak hypothesis is verified
+as **assembled derived structure**: 𝒦^(EM)=Z(u(2))=1 vs F_W=su(2)=3 (3+1=4=dim u(2)),
+co-activated at every EM rung (𝒜(2)=𝒜(1)∪{EM} — no rung with EM on, W off); the curl mechanism in
+four derived steps — topology-blind containment [Def-H.32(1)], the **branch gate** (ΣWᵢ²=2Π_ℛ,
+WᵢΠ_𝒱=0, machine 4×4 over ℚ(i): the weak curls only the aligned branch), **cover mediation** (lone
+cycles amplitude-dead [FT.106(2)]; dissolved digons live at winding one, 802/4796 [FT.106(3)]), and
+the **Gram closure-detector**: M=¼NᵀN with N=[[g,0,0,0],[0,g,0,0],[0,0,g,g']] — PSD rank 3,
+spectrum {g²,g²,0,g²+g'²}/4 [BM.36], kernel line (0,0,g′,−g) = the "photon" profile: G(c)=‖Nc‖²/4
+= 0 **iff** kernel — a curled photon profile stays massless at every coupling, every off-kernel
+profile curls into a pole mass (family circle strictly positive via the SOS
+A₀−B₀=(3/8)(g−g′/3)²+g′²/48, verified coefficient-wise in ℚ[g,g′]). **The bound:** a
+colour-neutral curl reaches the **polygon** ladder (2D floors, Θ_R=0 [FT.54(4)]) but NOT platonic
+solids — the 3D seals are ε/δ junctions on **colour** slots [D3.9/CT3.17a(1)] and the EW seed is
+colour-neutral [EW.32: T_a𝗏=0]: "polygon or platonic" SPLITS — polygons yes, platonic iff colour
+attachments are present. Discovery record `era2/RUNG4_EW_CURL.md` (repo root); tier consolidation
+(AT.50/AT.51 → TierAT9) pending the Architect's word.
+
 **The sharpened open list, in priority order:**
-1. **(AT-O14/O16)** compute `dim 𝒦_{n≥4}` — CT0.14's own method; **the only row that could unlock
-   the locked sector**. Cheap and decisive.
-2. **(AT-O28)** the global Dirac-type operator — **two enumerated slots away** (AT.47/AT.48):
+1. **(AT-O28)** the global Dirac-type operator — **two enumerated slots away** (AT.47/AT.48):
    the marked lift (Open Gaps 19) + one base frame per floor from the 6-frame shortlist; the
    skeleton's chiral-odd graded shape is derived, and its spatial gammas are gauge-carrying by the
    maximality theorem.
-3. **(AT-O11)** extend CT1.12's dictionary past the pair arena to `n=4`.
-4. **(AT-O7)** land the BM.140(6) pin and the re-citation-pinning convention.
-5. **(AT-O13)** Kerr, once **(AT-O3)** issues `(ϰ,β)`.
-6. **(AT-O26)** the level-price read rule of AT.44(8iv) — if ever adopted, a logged declaration
+2. **(AT-O11)** extend CT1.12's dictionary past the pair arena to `n=4` — **now fully decidable**:
+   AT.40 sharpened it to "which invariant is conjugate to which coordinate … once `dim 𝒦_{n≥4}` is
+   known", and session 4 made it known (**26**); 13 free invariants at n=4 against the
+   26-dimensional mask space — the conjugacy question is well-posed.
+3. **(AT-O7)** land the BM.140(6) pin and the re-citation-pinning convention.
+4. **(AT-O13)** Kerr, once **(AT-O3)** issues `(ϰ,β)`.
+5. **(AT-O26)** the level-price read rule of AT.44(8iv) — if ever adopted, a logged declaration
    (BM.30(5) pattern); a closure-phase act.
-7. **(AT-O27)** `ε_q`'s value — ⅛ is derived as the unique distinguished point (now four ways),
+6. **(AT-O27)** `ε_q`'s value — ⅛ is derived as the unique distinguished point (now four ways),
    its **adoption** is ¬issued [P5]; calibration-era content.
 **By nature / by design, not gaps:** (AT-O2) the slicing choice is gauge; (AT-O3) `(ϰ,β)` is
 calibration; **(AT-O29)** a native vector EM read — proved absent (EM is a stack aspect with zero
@@ -148,6 +178,9 @@ calibration/Gram-currency. AT.43(R3) — met by AT.44. **Closed at Tier AT.8:** 
 anomalous moment — **closed as structure**: the drag/spin-orbit sector derived (AT.46), the frame
 section reduced to two enumerated slots (AT.47), the moment coupling constructed natively with the
 anomalous read `(2|q| splitting; (−1)^ℵ dressing)` and the vector channel a proved no-go (AT.48);
+**Closed in session 4 (AT.50-candidate):** (AT-O14/O16) `dim 𝒦_{n≥4}` = **26** by the squeeze, the
+flag terminated, the lock a biconditional, the rung-4 projection nonzero-but-unreachable — the
+locked sector is provably unreadable at every accessible rung.
 the continuous anomaly number is calibration-species by P5 design. **Closed earlier:** AT-O1, O7 (checker
 written), O8, O9, O10, O12, O15, O16, O17, O18, O19, O20, O21, O22, O23, O23b, O24, O25.
 
