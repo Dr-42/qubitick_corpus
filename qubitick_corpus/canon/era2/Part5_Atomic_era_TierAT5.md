@@ -2,9 +2,9 @@
 
 **Level.** 5. **Era.** 2 (the Atomic era). **Tier.** AT.5 — the boundary-invariance survey:
 the coarse-graining principle, the per-aspect and per-rung census, and complete invariance tested.
-**Tags.** AT.29–AT.32. **Status.** discovery-phase working tier. **No declaration issues;
+**Tags.** AT.29–AT.34. **Status.** discovery-phase working tier. **No declaration issues;
 §Cal-AT stays empty; no clause of Parts 1–4 is modified or retracted.**
-**Machine.** `canon/era2/boundary_census.py` → **18/18 exact**, exit 0. Arithmetic: integers,
+**Machine.** `canon/era2/boundary_census.py` → **18/18 exact**; `canon/era2/ato22.py` → **16/16 exact** (AT.33); `canon/era2/ato1.py` → **14/14 exact** (AT.34). Exit 0. Arithmetic: integers,
 `Fraction`, **exhaustive enumeration of all $2^n$ sign assignments**. No floating point.
 **Charter.** Part 5 cites Parts 1–4 and earlier AT-tags only.
 
@@ -196,10 +196,152 @@ derived — which would be the last ansatz in the edifice removed.
 
 ---
 
+### AT.33 — AT-O22 closed: $w_i$-invariance is $\neg$ a corollary, and AT.5's nullity is class-relative
+
+**Thm.**
+$$(1)\quad\textbf{the question:}\qquad\text{does }w_i\text{-invariance across observationally equivalent representatives follow from AT.32(1)? If so, specialization (S) retires.}$$
+$$(2)\quad\textbf{AT.5's closed form has FIVE inputs, and exactly two are class functions:}\qquad (w\!\cdot\!\Delta x)(e)=\frac{\mathfrak h^2\kappa_e/\Omega^2+(\Delta x^0)^2-M_{ij}\Delta x^i\Delta x^j}{2\varkappa\beta\,\Delta x^0}$$
+$$\begin{array}{l|l|l|l}
+\text{the input} & \text{on the minimal-edge class} & \text{on the general all-nonnull class} & \text{a class function?}\\ \hline
+\kappa_e & \equiv1\ \textbf{POINTWISE}\ [\mathrm{FT.24}(4);\ \mathrm{FT.34}(4);\ \mathrm{D1.1}\ \text{Comm-min}] & \text{free in }\mathbb Z_{\ge1}\ \text{per edge}\ [\mathrm{FT.34}\ \text{hyp (ii)}] & \text{floor: YES / general: NO}\\
+\Delta x^0 & 1\ \text{tick}\ [\mathrm{D0.7};\ \mathrm{CT0.3}] & 1\ \text{tick} & \textbf{YES, universal}\\
+\Omega=e^{\alpha_\Omega a_{00}} & \text{arena}\ [\mathrm{D2.1};\ \mathrm{CT1.12}] & \text{arena} & \textbf{NO}\\
+M_{ij}=\delta_{ij}+\varkappa q_{ij} & \text{arena} & \text{arena} & \textbf{NO}\\
+\Delta x^i & \text{the hop; }\kappa_e=g_{\mu\nu}\dot x^\mu\dot x^\nu+O(\mathfrak h)\ \text{SAMPLES it} & \text{the hop} & \textbf{NO}\end{array}$$
+$$(3)\quad\textbf{the answer:}\qquad\boxed{\ \textbf{NO.}\ \ w_i\text{-invariance is }\neg\textbf{ a corollary of AT.32(1)}\ }$$
+$$\mathrm{AT.32}(1)\ \text{makes the ACCESSIBLE CONTENT a class function};\qquad \Omega,\ M_{ij},\ \Delta x^i\ \textbf{are not accessible reads}\ [\mathrm{AT.30}(5)],$$
+$$\text{so AT.32(1) does not constrain them, so }(w\!\cdot\!\Delta x)(e)\ \text{is }\neg\text{a class function, so }w_i\ \text{is }\neg\text{invariant across representatives};$$
+$$(4)\quad\textbf{the consequence:}\qquad\boxed{\ \textbf{specialization (S) does NOT retire, and (AT-O1) remains genuinely needed}\ }$$
+$$(5)\quad\textbf{the floor class is EXTREMAL, not arbitrary — three independent characterizations:}\qquad(\mathrm i)\ \kappa_e\equiv1\ \text{pointwise}\iff\bar\kappa=1\iff\mathrm{CT1.29}'\text{s rate}\ S=\tfrac{A}{\mathfrak h^2}\ln2\ \textbf{holds EXACTLY}\qquad[\mathrm{FT.34}(2)];$$
+$$(\mathrm{ii})\ \ \Lambda_c:=\sum_{e\in c}\sqrt{\kappa_e},\qquad \Lambda_c^2\le L\,\Theta(c),\qquad \textbf{equality}\iff\kappa_e\ \textbf{uniform}\qquad[\mathrm{FT.33}(4);\ \text{machine: exact integer witnesses}];$$
+$$(\mathrm{iii})\ \ \text{``at fixed }(\Theta,L)\ \textbf{uniform floors MAXIMIZE the bridge ratio}''\qquad[\mathrm{FT.33}(4)];\qquad \kappa=1\ \textbf{is attained, the floor is tight}\qquad[\mathrm{FT.24}(4)];$$
+$$(6)\quad\textbf{the reduction on the floor class:}\qquad\kappa_e\equiv1,\ \Delta x^0=1\implies\boxed{\ (w\!\cdot\!\Delta x)(e)=\frac{\mathfrak h^2/\Omega^2+1-M_{ij}\Delta x^i\Delta x^j}{2\varkappa\beta}\ }$$
+$$\textbf{three of the five inputs become class-universal; the residual arena dependence is only }(\Omega,\ M_{ij},\ \Delta x^i);$$
+$$(7)\quad\textbf{REFINEMENT OF AT.5 — the nullity is CLASS-RELATIVE:}\qquad\begin{array}{l|l|l|l}
+& \text{the constraints} & \text{rank} & \text{nullity}\\ \hline
+\textbf{floor class}\ (\kappa_e\equiv1\ \text{known}) & \text{one equation PER EDGE, known RHS} & E & \mathbf{2E}\\
+\textbf{general class}\ (\text{only sums accessible}) & \text{one per independent closed chain }+\Theta_{\mathrm{int}} & \beta_1+1 & \mathbf{3E-\beta_1-1}\end{array}$$
+$$\begin{array}{c|ccccc}
+& \text{tetra} & \text{cube} & \text{octa} & \text{dodeca} & \text{icosa}\\ \hline
+E & 6 & 12 & 12 & 30 & 30\\
+\beta_1=F-1 & 3 & 5 & 7 & 11 & 19\\
+\text{floor-class nullity }2E & 12 & 24 & 24 & 60 & 60\\
+\textbf{general-class nullity} & \mathbf{14} & \mathbf{30} & \mathbf{28} & \mathbf{78} & \mathbf{70}\end{array}\qquad\text{polygon }P_n:\ 2n\ \text{vs}\ 2n-2$$
+$$\textbf{AT.5's nullity }2E\ \textbf{is correct ON THE FLOOR CLASS and understates the freedom on the general class. A scope correction, }\neg\textbf{a refutation.}$$
+$$(8)\quad\textbf{(AT-O1) SHARPENS from an ansatz to a finite machine-checkable question:}$$
+$$\boxed{\ \text{does }\operatorname{Aut}(\Gamma_S)\ \text{act on the directed edges with a COMMON spatial direction read?}\ }$$
+$$\text{YES}\implies\omega_i\ \text{is forced up to the arena's own conformal and spatial modes, and (S) becomes a THEOREM on the floor class};$$
+$$\text{NO}\implies\text{(S) is a genuine read-specification and must be logged as a Part-5 declaration requirement};$$
+$$\text{either way it is FINITE: }\operatorname{Aut}(\Gamma_S)\ \text{is a known finite group on all five Platonic skeletons and the directed-edge orbits are enumerable}\ [\text{Census FT.66}(1)];$$
+$$(9)\quad\textbf{the T-parity closure, and why the floor class still cannot fix the sign:}\qquad\Omega\ (D^+),\ M_{ij}\ (G,H)\ \text{are all T-EVEN};\qquad w_i\ \textbf{is T-ODD}\ [\mathrm{AT.2}(3),(4)];$$
+$$\text{so (6)'s reduction relates a T-ODD quantity to T-EVEN arena data divided by }(\varkappa,\beta),\ \text{which are P4 core with values}\neg\text{issued};$$
+$$\boxed{\ \textbf{the floor-class reduction does NOT determine the shift's SIGN}\ —\ \text{and that unfixed sign is exactly AT.3(6)'s new observable}\ }$$
+$$(10)\quad\textbf{status:}\qquad\textbf{derived:}\ (2),(5),(6),(7),(9);\qquad\textbf{closed with answer NO:}\ \text{(AT-O22)};\qquad\textbf{corrected:}\ \mathrm{AT.5}(6)\text{'s rank statement, which now carries a class qualifier};\qquad\textbf{sharpened:}\ \text{(AT-O1)}. $$
+
+**Req.** D0.7, D1.1, CT0.3 (Part 1); CT1.29, D2.1, CT1.12 (Part 2); AT.2(3),(4), AT.3(6), AT.5(1),(3),(4),(6), AT.6, AT.15(4),(5), AT.30(5), AT.32(1),(2) (this tier); Def-H.9(3), FT.22, FT.24(4), FT.33(1),(4), FT.34 hyp (ii), FT.34(2),(4), FT.46(2) (Part 3); Def-BM.4(1), Def-BM.5(1), BM.149(2), Census FT.63(2), Census FT.66(1) (Part 4); exact Cauchy–Schwarz certificates at integer witnesses, exact integer nullity arithmetic [math; machine: `ato22.py` 16/16].
+
+**Pf.**
+$$(3):\ \text{AT.32(1) constrains the accessible content; }\Omega,M_{ij},\Delta x^i\ \text{are absent from AT.30(5)'s invariant column and present in no accessible read, so two representatives may share the boundary triple, }|R|\ \text{and the rung while differing in them};$$
+$$(5\mathrm{ii}):\ \Lambda_c^2=(\sum_e\sqrt{\kappa_e})^2\le L\sum_e\kappa_e=L\,\Theta(c)\ \text{by Cauchy–Schwarz, with equality}\iff\sqrt{\kappa_e}\ \text{proportional to }1\iff\kappa_e\ \text{uniform}\ [\text{machine: equality at }(1,1),(1,1,1,1),(4,4,4),(9,9,9),(4,4,4,4);\ \text{strict at }(1,4),(1,1,4),(1,4,9)];$$
+$$(7):\ \text{the floor class supplies }E\ \text{equations with known RHS }(\kappa_e\equiv1);\ \text{the general class supplies only }\beta_1\ \text{chain windings plus }\Theta_{\mathrm{int}},\ \text{i.e. }\beta_1+1\ \text{sums},\ \text{against }3E\ \text{shift coordinates}. \blacksquare$$
+
+**Phys.** The question was whether the last ansatz in the edifice could be retired by a
+corollary. It cannot, and the reason is exact: the longitudinal shift is a closed-form function of
+five inputs, and three of them — the conformal mode, the spatial metric and the hop direction —
+are arena data that the generalised invariance leaves free. Making the accessible content a class
+function does not make the arena a class function.
+
+Two things improve anyway. The floor class is not a convenience; it is the *extremal* class,
+characterized three independent ways — it is the unique class on which CT1.29's area-entropy rate
+holds exactly, it is the Cauchy–Schwarz equality case, and it maximizes the bridge ratio at fixed
+winding and length. On it, three of the five inputs become class-universal and the residual
+freedom is just $(\Omega, M_{ij}, \Delta x^i)$. And AT.5's nullity needs a class qualifier: $2E$ on
+the floor class, $3E-\beta_1-1$ on the general one — a scope correction, with the general class
+strictly freer at every one of the five solids.
+
+So (AT-O1) stops being a vague homogeneity assumption and becomes a finite question about
+$\operatorname{Aut}(\Gamma_S)$'s action on directed edges: does it carry a common spatial direction
+read? If yes, (S) is a theorem on the floor class; if no, (S) must be logged as a Part-5
+declaration. Both are decidable by enumeration over five known finite groups.
+
+One closure the reduction cannot reach, and it is the right one to leave open: all three residual
+inputs are T-even while the shift is T-odd, so the floor-class formula relates a T-odd quantity to
+T-even data over $(\varkappa,\beta)$, whose values are not issued. **The sign of the shift stays
+unfixed** — which is precisely the freedom AT.3(6) identified as the magnetic read's new
+observable content. A theory that fixed it here would have contradicted its own magnetism.
+
+---
+
+### AT.34 — (AT-O1) closed with answer YES: the homogeneity step is a theorem, and (S) is derived up to one calibration scale
+
+**Thm.** *No group enumeration is used beyond the tetrahedron ($K_4$, all $4!=24$
+permutations). Every input is a canon order.*
+$$(1)\quad\textbf{the canon's own orders:}\qquad |\operatorname{Aut}(\Gamma_S)|=(24,48,48,120,120),\qquad |\operatorname{Rot}|=(12,24,24,60,60)\qquad[\text{Census FT.65}(1)];$$
+$$E=(6,12,12,30,30)\qquad[\mathrm{Def\text{-}H.20}];\qquad \boxed{\ |\operatorname{Rot}|\ =\ 2E\ \ \textbf{EXACTLY, for all five}\ }\qquad |\operatorname{Aut}|=2|\operatorname{Rot}|;$$
+$$(2)\quad\textbf{the arc stabilizer in the rotation group is TRIVIAL:}\qquad\text{a rotation fixing the directed edge }(u\to v)\ \text{must fix }u,v\ \text{individually and preserve direction;}$$
+$$\text{the only rotation axis associated with an edge is the one through its midpoint and the centre, and the half-turn about it SWAPS }u\ \text{and}\ v\ —\ \textbf{it reverses the arc};$$
+$$\therefore\ \operatorname{Stab}_{\operatorname{Rot}}(\text{arc})=\{\mathrm{id}\}\qquad[\text{machine: verified on }K_4];$$
+$$(3)\quad\textbf{arc-transitivity, by orbit-stabilizer and arithmetic alone:}\qquad |\operatorname{orbit}(\text{arc})|=\frac{|\operatorname{Rot}|}{|\operatorname{Stab}_{\operatorname{Rot}}|}=\frac{2E}{1}=2E=\#\{\text{arcs}\};$$
+$$\boxed{\ \operatorname{Rot}\ \textbf{acts SIMPLY TRANSITIVELY on the arcs};\qquad \operatorname{Aut}(\Gamma_S)\ \textbf{is ARC-TRANSITIVE, all five solids}\ }$$
+$$(4)\quad\textbf{the arc stabilizer in the full group:}\qquad |\operatorname{Stab}_{\operatorname{Aut}}(\text{arc})|=\frac{|\operatorname{Aut}|}{2E}=2\qquad\text{for all five}\quad(24/12,\ 48/24,\ 48/24,\ 120/60,\ 120/60);$$
+$$(5)\quad\textbf{the stabilizer element is a REFLECTION, not a half-turn:}\qquad\text{it has order }2\ \text{and is}\neg\text{a half-turn by (2), so it is orientation-reversing;}$$
+$$\text{a reflection in }\mathbb R^3\ \text{has eigenvalues}(+1,+1,-1),\ \chi=+1,\ \text{and fixes its mirror PLANE};$$
+$$\boxed{\ \dim(\mathbb R^3)^{\operatorname{Stab}(\text{arc})}=\frac{\chi(\mathrm{id})+\chi(h)}{|\operatorname{Stab}|}=\frac{3+1}2=2\ }\qquad[\text{machine on the tetrahedron: }\det=-1,\ \operatorname{tr}=+1,\ \dim\ker(M-I)=2,\ \text{exact over }\mathbb Q];$$
+$$\textbf{the mirror plane CONTAINS the arc direction};$$
+$$(6)\quad\textbf{the reduction, step by step:}\qquad\text{an }\operatorname{Aut}\text{-invariant per-edge shift assignment }w:\text{arcs}\to\mathbb R^3\ \text{is}$$
+$$\begin{array}{l|l|l}
+\text{the stage} & \text{the reason} & \text{free parameters}\\ \hline
+\text{per arc, unrestricted} & 3\ \text{components}\times2E\ \text{arcs} & 6E\\
+\text{floor-constant} & \text{arc-transitivity}\ (3) & 3\\
+\text{in the mirror plane} & \text{the reflection stabilizer}\ (5) & 2\\
+\textbf{on shell} & \text{AT.5's longitudinal }w\!\cdot\!\Delta x\ \text{constraint, and the mirror plane contains the arc direction} & \mathbf{1}\end{array}$$
+$$\boxed{\ \textbf{ONE free parameter per floor: the SCALE of the shift along a DETERMINED line}\ }$$
+$$(7)\quad\textbf{the verdict on (AT-O1) and on specialization (S):}\qquad\textbf{ANSWER YES on the floor class.}\ \ \text{The direction }\omega_i\ \textbf{is forced, up to scale, by}\ \operatorname{Aut}(\Gamma_S)\text{'s arc-transitivity}+\text{the reflection stabilizer}+\mathrm{AT.5}'\text{s longitudinal constraint};$$
+$$\boxed{\ (\mathrm S)\ \textbf{is RECLASSIFIED from ``marked specialization,}\neg\textbf{adopted'' to ``DERIVED UP TO ONE CALIBRATION SCALE PER FLOOR''}\ }$$
+$$(8)\quad\textbf{the remaining scale is calibration, not structure:}\qquad\text{it rides on }(\varkappa,\beta),\ \text{P4 core, values}\neg\text{issued}\ [\mathrm{C4};\ \mathrm{\S Cal\text{-}2}];$$
+$$\text{and by AT.33(9)/AT.15 it CANNOT be fixed by any carrier read: the shift is T-ODD while every carrier-side invariant is T-EVEN};$$
+$$\text{the same disposition as }\mathfrak h\ [\mathrm{P1}]\ \text{and}\ e_0\ [\mathrm{EM.25}(7)];$$
+$$(9)\quad\textbf{the reduction table, exact:}\qquad\begin{array}{c|ccccc}
+& \text{tetra} & \text{cube} & \text{octa} & \text{dodeca} & \text{icosa}\\ \hline
+\mathrm{AT.33}\ \text{floor nullity}\ 2E & 12 & 24 & 24 & 60 & 60\\
+\textbf{after (AT.34)} & \mathbf1 & \mathbf1 & \mathbf1 & \mathbf1 & \mathbf1\end{array}$$
+$$(10)\quad\textbf{status:}\qquad\textbf{derived:}\ (1)\text{--}(7),(9);\qquad\textbf{closed with answer YES:}\ (\mathrm{AT\text{-}O1});\qquad\textbf{reclassified:}\ (\mathrm S);\qquad\textbf{calibration:}\ (8)\text{'s scale}. $$
+
+**Req.** D0.7, D1.6, P1, P4 (Part 1); C4, §Cal-2, CT1.12, EM.25(7) (Part 2); AT.2(3),(4), AT.3(6), AT.5(1),(3), AT.15(4),(5), AT.33(6),(9) (this tier); Def-H.20, Census FT.63(2), Census FT.65(1), Census FT.66(1) (Parts 3–4); orbit-stabilizer, the character formula for a fixed subspace $\dim V^H=\frac1{|H|}\sum_{h\in H}\chi(h)$, exact $3\times3$ linear algebra over `Fraction`, exhaustive $K_4$ permutation census [math; machine: `ato1.py` 14/14].
+
+**Pf.**
+$$(1):\ \text{Census FT.65}(1)\text{'s orders against Def-H.20's cardinals: }2E=(12,24,24,60,60)=|\operatorname{Rot}|\ [\text{machine: exact integers}];$$
+$$(2),(3):\ \text{the half-turn about the edge-midpoint axis maps }(u\to v)\ \text{to}\ (v\to u);\ \text{verified on }K_4\ \text{by exhaustive search over all }24\ \text{permutations, with the rotation subgroup identified as }A_4\ \text{by parity};\ \text{orbit-stabilizer then gives the whole arc set};$$
+$$(5):\ \det=-1\ \text{and}\ \operatorname{tr}=+1\ \text{are the reflection invariants (a half-turn has }\operatorname{tr}=-1);\ \text{the tetrahedron's vertices }(1,1,1),(1,-1,-1),(-1,1,-1),(-1,-1,1)\ \text{are rational, so the realization is solved exactly over }\mathbb Q;\ \text{the dodecahedron and icosahedron share }\operatorname{Aut}=A_5\times\mathbb Z_2\ \text{and the same }|\operatorname{Aut}|/(2E)=2;$$
+$$(6):\ \text{the mirror plane of the stabilizer reflection contains the arc direction, so AT.5's longitudinal constraint, which fixes }w\!\cdot\!\Delta x,\ \text{removes one of the plane's two dimensions}. \blacksquare$$
+
+**Phys.** This closes the last ansatz in the edifice, and it closes it with arithmetic rather than
+computation: the canon already records that each Platonic rotation group has exactly as many
+elements as the skeleton has directed edges — $|\operatorname{Rot}| = 2E$ — and that single numerical
+fact, with the observation that a half-turn reverses an arc, forces the rotation group to act
+simply transitively on arcs. Arc-transitivity then collapses a per-edge vector field to one
+vector; the stabilizer being a reflection confines that vector to a plane; and the on-shell
+longitudinal condition, whose direction lies in that plane, confines it to a line.
+
+So specialization (S) was never really an assumption. Its homogeneity step is a theorem, and what
+it adds beyond the symmetry is a single number per floor — the magnitude of the shift along a
+direction the symmetry has already fixed. That is the same status as $\mathfrak h$ and $e_0$:
+dimensionful calibration, not structural freedom. And by AT.15/AT.33(9) no carrier read can fix
+it, because the shift is T-odd and every carrier invariant is T-even — which is precisely why the
+magnetic read is a new observable rather than a repackaging.
+
+The whole Level 5 chain now runs with **one** calibration parameter in the magnetic sector
+instead of an ansatz: network → spine → metric → shift direction (derived) → shift scale
+(calibration) → the split → the magnetic functional and its attenuation theorem.
+
+---
+
 ## §Open-AT additions from Tier AT.5
 
 | row | content | locus |
 |---|---|---|
-| (AT-O22) | **AT-O20 may already follow from AT.32(1)**: the longitudinal `w·Δx` reads off `(κ_e, Δx⁰)`, both ledger data and hence class functions, and the transverse part is gauge. Check whether `w_i`-invariance across representatives is a *corollary* rather than a theorem needing proof — and if so retire specialization (S) | AT.32(6); AT.5; AT.6 |
+| ~~(AT-O22)~~ | **CLOSED by AT.33, answer NO.** `Ω`, `M_ij`, `Δx^i` are arena data, not accessible reads, so AT.32(1) does not constrain them. (S) does **not** retire. Also **refines AT.5(6)**: the nullity is class-relative, `2E` on the floor class and `3E−β₁−1` on the general one | AT.33 |
 | (AT-O23) | **the envelope/horizon shell**: AT.31(6) proves `Δx_B < 𝔥 ≤ r_s` for every admissible `E_int`, so there is a chart-formed shell strictly outside the breaking locus. Whether that shell has a derived read — an area, an entropy, or a membrane — is open, and BM.149(3)'s one-way membrane is the natural candidate | AT.31(6); BM.148(1),(4); BM.149(3) |
+| ~~(AT-O1)~~ | **CLOSED by AT.34, answer YES.** `|Rot| = 2E` [Census FT.65(1)] + the half-turn reverses an arc ⟹ `Rot` acts **simply transitively on arcs** ⟹ `Aut` is arc-transitive; the stabilizer is a **reflection**, so `dim = 2`; AT.5's longitudinal constraint then leaves **ONE** parameter per floor. **(S) reclassified: derived up to one calibration scale.** No enumeration of the higher solids needed | AT.34 |
+| (AT-O25) | **the sign of the shift** is unfixed by the floor-class reduction, since `Ω, M_ij, Δx^i` are T-even, `w_i` is T-odd, and `(ϰ,β)` are P4 core with values ¬issued. Whether any formed read fixes the sign — or whether it is irreducibly calibration — is open, and it is the same question as the magnetic observable's magnitude | AT.33(9); AT.3(6); §Cal-2 |
 | (AT-O24) | **aspect membership as an interior-sensitive datum**: AT.30(3) shows 14 of 32 five-edge chains have `q=0` with nonzero interior activity. Whether that interior sensitivity is itself bounded — i.e. whether the *set* of admissible memberships is a class function even though the criterion is not — is open and is the sharpest form of the completeness question | AT.30(3),(4); FT.20; FT.21(i) |
