@@ -298,7 +298,7 @@ emit("""
   3. The metric is already closed where it matters. g(G) = 1/(1+G) is SELECTED
      (BM.133(4)), the lapse N(k,E) is DERIVED (BM.132), f(k) is DERIVED (BM.88),
      and the running coupling e(r,E) is COMPLETE up to e_0 alone (BM.133(6)).
-     The A.1 dressing formula's factor content was therefore right; what it lacked
+     The AT.1 dressing formula's factor content was therefore right; what it lacked
      was a derivation of the multiplicative form and of any sector coefficient c.
      With g selected, the honest statement is:
 

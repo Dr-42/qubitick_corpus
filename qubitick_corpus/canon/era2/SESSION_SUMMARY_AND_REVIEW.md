@@ -11,31 +11,31 @@ interaction. Nothing here is flattery; the error accounting in §3 is the useful
 
 | artifact | content |
 |---|---|
-| `canon/era2/Part5_Atomic_era_TierA1.md` | **Tier A.1**, tags A.1–A.8, canon format (Thm/Req/Pf/Phys), plus §Cal-A and §Open-A |
+| `canon/era2/Part5_Atomic_era_TierAT1.md` | **Tier AT.1**, tags AT.1–AT.8, canon format (Thm/Req/Pf/Phys), plus §Cal-AT and §Open-AT |
 | `canon/era2/run_all_era2.py` | the tier's runner; gates first, exit 0 iff green |
 | `canon/era2/*.py` (12 checkers) | 228 exact markers, 0 failures |
 | `era2_review/`, `era2/` (working) | the discovery-phase record, including the withdrawn claims |
 
 **Substantive results, in order of how much I'd stand behind them:**
 
-1. **A.7 — a real defect in the frozen canon.** BM.140(6) re-cites BM.82(3)'s span as
+1. **AT.7 — a real defect in the frozen canon.** BM.140(6) re-cites BM.82(3)'s span as
    `50/(1−𝔲)` after BM.140(3) redefined `𝔲 = 2cos(π/10)`, giving **−55.43** for a quantity
    provably `> 0`. Provably false, no measurement needed, and **unchecked by the suite** — the
    quartic coefficients appear nowhere in `verification/checks/`. Loci: `Part4:9273`,
    `Summary:9677`. This is the highest-confidence output of the session.
-2. **A.1 — `β₃₁` constructed.** `β₃₁ = 𝔥`, coefficient `ln2` forced by `ln4 = 2·ln2` and
+2. **AT.1 — `β₃₁` constructed.** `β₃₁ = 𝔥`, coefficient `ln2` forced by `ln4 = 2·ln2` and
    `E_int = 2E_bidir + E_uni`. Def-H.39's "unconstructed" was a citation-direction artifact.
    By-product: BM.91's `ln(4/3)` transport term *is* the real-branch relative entropy.
-3. **A.4/A.5 — every materialized edge is mixed, and the longitudinal shift is derived.** From
+3. **AT.4/AT.5 — every materialized edge is mixed, and the longitudinal shift is derived.** From
    D0.7 + FT.24 + D1.6 alone. The closed form for `(w·Δx)(e)` round-trips exactly. The
    transverse freedom is the momentum-constraint gauge. **This is the result I'd most expect to
    survive scrutiny**, because it uses three re-cited definition rows and one line of algebra.
-4. **A.2 — the metric's 10 coordinates split 7+3 along CT1.1's `(S,T)` boundary.** CT1.12a(2)'s
+4. **AT.2 — the metric's 10 coordinates split 7+3 along CT1.1's `(S,T)` boundary.** CT1.12a(2)'s
    `5+1+1+3` apportionment *is* CT1.1's block structure. The shift is T-odd by index structure.
-5. **A.3/A.6 — the split and the magnetic functional.** The split is observer-relative
+5. **AT.3/AT.6 — the split and the magnetic functional.** The split is observer-relative
    (verified: one `F`, five observers, `E²` varies ~3000×, `I₁` and `I₂` identical), it's the
    first formed read odd under `w → −w` alone, and it satisfies an attenuation theorem with
-   crystallized value `2nc/√(1+4c²n²)`. **A.6 rests on marked specialization (S)**, so it is the
+   crystallized value `2nc/√(1+4c²n²)`. **AT.6 rests on marked specialization (S)**, so it is the
    least load-bearing of the five.
 
 **Epistemic status, stated plainly.** All of this is *internal coherence* plus exact arithmetic.
@@ -114,7 +114,7 @@ caught it. I should have checked A8 before framing a conclusion as a force requi
 measured hierarchies and reported "shortfalls of 695.5× and 544.0×". HistLog §V.32 and
 Def-H.39's nomenclature rule make those **prices, not masses**. I had not read §V.32.
 
-**(d) Adjudicating during discovery.** My first response to A.1 was a seven-count rejection. Two
+**(d) Adjudicating during discovery.** My first response to AT.1 was a seven-count rejection. Two
 of the seven counts were correct and useful; the framing was wrong for the phase, and Count 3 was
 flatly mistaken (BM.133).
 
@@ -157,12 +157,12 @@ HistLog item 20's twelve-deficit list is level-local but reads as current. A one
 times. The corpus already does this well elsewhere — FT.89 carries an explicit supersession
 remark pointing at FT.158, and that remark is *exactly* why I got the Koide question right.
 
-**(iii) Pin re-citations, not just sources.** A.7 exists because the suite checks BM.82(3) but
+**(iii) Pin re-citations, not just sources.** AT.7 exists because the suite checks BM.82(3) but
 not BM.140(6)'s restatement of it. A convention — every boxed numeric re-citation gets an
 assertion, however trivial — would have caught it. The two-line test I proposed
 (`1−𝔲 < 0` and `ℛ_max/ℛ_min > 0` are disjoint) is the shape.
 
-**(iv) Prefix discovery-phase material with a status marker.** A.1 arrived as `**Thm.** … **Pf.**
+**(iv) Prefix discovery-phase material with a status marker.** AT.1 arrived as `**Thm.** … **Pf.**
 Follows directly from …`. The format invited adjudication and the proof invited a verdict. Had it
 arrived as `**Conj. (C-live)** …`, I'd have gone straight to testing it. The
 `CONJECTURE_REGISTER.md` vocabulary I drafted (`C-live / C-sharp / C-flat / C-dead / C-promoted`,
@@ -189,7 +189,7 @@ The framework is unusually disciplined, and I don't mean that as courtesy. Most 
 checkable is *your* machinery, not mine: the exact-arithmetic covenant, the acyclic citation law,
 the `[EXT]` quarantine, the derived/marked/adopted distinctions, the phantom-gap
 reclassifications, the supersession remarks. When I found `β₃₁` constructible, it was because
-Def-H.39 had specified exactly what a construction must supply. When I found A.7, it was because
+Def-H.39 had specified exactly what a construction must supply. When I found AT.7, it was because
 BM.82(3) was machine-checked and BM.140(6) wasn't — a gap only visible because the rest is
 covered. A sloppy corpus would not have permitted either finding.
 
@@ -215,7 +215,7 @@ verify, and the verification is real. But coherence is not the same as contact. 
 BM.140(5)/BM.83's incommensurability theorem says `ρ_B` can never be derived — so at least one of
 those will have to be fixed against measurement eventually. That's a design choice you've made
 deliberately and it's defensible; I flag it only because a framework this internally tight can
-start to *feel* confirmed, and the feeling is not evidence. The A.7 find is the right kind of
+start to *feel* confirmed, and the feeling is not evidence. The AT.7 find is the right kind of
 result to keep chasing: it's the corpus being wrong about itself in a way only exact checking
 could expose.
 
@@ -228,9 +228,9 @@ turns                    9
 repository state         cloned at 05330c1, suite reproduced 80/80 ALL GREEN independently
 checkers written         12   (canon/era2/)
 exact markers            228, 0 failures
-canon defects found      1    (A.7: BM.140(6), a sign error in a boxed statement, unchecked)
+canon defects found      1    (AT.7: BM.140(6), a sign error in a boxed statement, unchecked)
 bridge slots closed      1    (beta_31 = h, coefficient ln2)
-claims I withdrew        6    (A.8(6)(i)-(vi), on the record)
+claims I withdrew        6    (AT.8(6)(i)-(vi), on the record)
 bugs of mine caught      8    (all by gates, none by inspection)
 declarations issued      0
 P4 additions             0
@@ -238,10 +238,10 @@ measured values used     0    (every [EXT] figure was a scoring target, never an
 marked specializations   1    ((S), the shift additivity, not adopted)
 ```
 
-**Recommended next move.** (A-O1) — the homogeneity step: whether FT.66(1)'s `Aut(Γ_S)`
+**Recommended next move.** (AT-O1) — the homogeneity step: whether FT.66(1)'s `Aut(Γ_S)`
 channel-permutation action can be promoted from motivation to proof for the shift direction
 `ω_i`. It is the only remaining ansatz in (S), it is a finite-group computation over the five
-Platonic skeletons, and it is fully machine-checkable. If it closes, A.6 stops resting on a marked
+Platonic skeletons, and it is fully machine-checkable. If it closes, AT.6 stops resting on a marked
 specialization and becomes derived. If it fails, (S) is genuinely a read-specification and should
 be logged as a Part-5 declaration requirement rather than carried as an ansatz.
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-bit_qubit.py -- Tier A.2: the TENSOR FORM of the bit/qubit distinction, framed through
+bit_qubit.py -- Tier AT.2: the TENSOR FORM of the bit/qubit distinction, framed through
 BM.131's Haar-Poisson duality. NO GLOBAL TICK IS INTRODUCED.
 
 The Imaginator's direction, verified rather than trusted:
