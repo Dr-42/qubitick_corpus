@@ -125,7 +125,7 @@ Two author-directed revisions, recorded in `HistLog.md` §V.31 and
 
 ## License and citation
 
-See [`LICENSE.CODE`](LICENSE.CODE) [`LICENSE.CORPUS`](LICENSE.CORPUS) and [`AI_POLICY`](`AI_POLICY.md`)
+Released under the **BSD-2-Clause License** — see [`LICENSE`](LICENSE).
 
 ```
 The Qubitick Corpus, v1.0, canon revision 1 (2026). A machine-verified,
