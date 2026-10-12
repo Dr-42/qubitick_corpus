@@ -1,6 +1,10 @@
 # Level 7 — the Anthropic era
 
 **Not opened.** Placeholder for the third level of Era 2, following Level 6 (the Isotopic era).
+Note the session-12 level-map row: a **molecular level is deferred** by the same directive that
+renamed Level 6 (Isotopic's IT.4 "molecular necessity" clause is the derived theorem motivating
+it); whether it slots between Isotopic and Anthropic or after Anthropic is the Architect's act —
+recorded, not pre-empted [IT.15(3)].
 
 When this level opens it inherits the era's shape and discipline (see `../README.md`):
 
