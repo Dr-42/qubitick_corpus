@@ -1,17 +1,19 @@
 # `era2/` — Era 2 · Levels 5–7 (Atomic · Molecular · Anthropic)
 
-**The Era 2 workspace.** Discovery-phase material for the three levels that follow the frozen
-v1.0 canon (Levels 1–4, Parts 1–4 in `/canon`). **Nothing here is frozen canon.** Nothing is
-adopted, no declaration issues, §Cal stays empty at every level, and no clause of Parts 1–4 is
-modified, retracted or renumbered. Promotion of any level is a closure-phase act (running the
-era-chain and citation-closure gates, regenerating `index/`, `tags.json`, `Summary.md`).
+**The Era-2 half of the two-halves repository** (the sibling half is `/era1` — the frozen v1.0
+canon, Levels 1–4). Three levels follow the v1.0 canon: **Level 5 (Atomic) is CLOSED** — twelve
+tiers, tags AT.1–AT.63, closed at AT.63 (Tier AT.12); Levels 6–7 (Molecular, Anthropic) are
+unopened. **Nothing here is frozen canon.** Nothing was adopted, no declaration issued, §Cal
+stays empty at every level, and no clause of Parts 1–4 is modified, retracted or renumbered.
+Promotion into the frozen canon's `index/`, `tags.json`, `Summary.md` is an **Era-2-closure act**
+(after Levels 6–7), deliberately not taken at Level-5 closure [AT.63(4)].
 
 ## Layout
 
 ```
 era2/
 ├── README.md                  ← this file: the era overview
-├── level5_atomic/             ← Level 5 — the Atomic era (ACTIVE, sessions 1–5, tags AT.1–AT.55)
+├── level5_atomic/             ← Level 5 — the Atomic era (CLOSED at AT.63, sessions 1–8, tags AT.1–AT.63)
 │   ├── README.md              ← the level's status ledger, session notes, open rows
 │   ├── SESSION_SUMMARY_AND_REVIEW.md
 │   ├── tiers/                 ← the tier documents in canon format (Part5_Atomic_era_*.md)
@@ -29,8 +31,8 @@ machine, `discovery/` = the working notes). Levels 6–7 inherit this shape when
 ## Run (Level 5)
 
 ```bash
-cd era2/level5_atomic/checks && python3 run_all_era2.py     # -> 33 checkers, 587 exact markers, 0 failures, exit 0
-cd era2/level5_atomic/checks && python3 check_era2_format.py # -> the tier-document format + citation gate
+cd era2/level5_atomic/checks && python3 run_all_era2.py     # -> 37 checkers, 643 exact markers, 0 failures, exit 0
+cd era2/level5_atomic/checks && python3 check_era2_format.py # -> 14 tier documents PASS; every citation attested
 ```
 
 The runner is level-scoped by location: each level's `checks/` carries its own runner; an
@@ -53,3 +55,9 @@ era-level aggregator, if ever wanted, is a closure-phase tool.
   (`canon/era2/*.py`, `era2/*.md`). Those files now live under `era2/level5_atomic/`
   (`checks/`, `tiers/`, `discovery/`); the citations are historical records and are left
   untouched. The mapping table lives in `level5_atomic/README.md`.
+- **Two-halves note (Level-5 closure, AT.63(5)):** the frozen v1.0 canon and its verification
+  suite moved to `/era1` (`era1/canon/`, `era1/verification/` — sibling-locked by symlinks).
+  Historical citations of `canon/...` and `verification/...` in the tier documents resolve to
+  `era1/canon/...` and `era1/verification/...`; they are left untouched as written. The
+  publication pipeline (`/source` → `/docs`) and the frozen archive (`/working_markdowns/`)
+  stayed at the root; exactly four live path constants were updated, no frozen content changed.

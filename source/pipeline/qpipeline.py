@@ -23,7 +23,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PKG = os.path.dirname(os.path.dirname(HERE))          # source/pipeline -> package root
-SRC = os.path.join(PKG, "canon")                      # the living revised canon
+SRC = os.path.join(PKG, "era1", "canon")             # the living revised canon (era-1 half)
 OUT = os.path.join(PKG, "source")
 TOOLS = os.path.join(PKG, "working_markdowns", "tools")
 

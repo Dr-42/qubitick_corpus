@@ -18,7 +18,7 @@ tex:
 	$(PYTHON) pipeline/build_all.py --tex-only
 
 verify:
-	cd ../verification && $(PYTHON) run_all.py
+	cd ../era1/verification && $(PYTHON) run_all.py
 
 clean:
 	rm -rf ../build

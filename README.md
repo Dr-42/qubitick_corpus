@@ -12,6 +12,17 @@ by an 80-checker suite in exact arithmetic: integer certificates, algebraic
 number fields and prime-log rings — **no floating point anywhere, and no
 external physical constant enters any derivation.**
 
+## The two era halves
+
+The repository is organized in **two clear halves**: **`era1/`** — the frozen, published v1.0
+canon (Levels 1–4) with its verification suite and summary-generation pipeline — and **`era2/`**
+— the Era-2 record (Levels 5–7), whose **Level 5 (the Atomic era) is CLOSED** at tag AT.63
+(twelve tiers, 63 tags, 37 checkers, 643 exact markers, citation-gated against the era-1
+registry). The publication (PDF) pipeline stays at the root (`source/` → `docs/`, reading the
+frozen `working_markdowns/` archive and `era1/canon/index/`); the root documents (this README,
+the licences, the AI policy) stay in place. Era-2 promotion into the frozen canon's
+`Summary.md`/`index` is an Era-2-closure act, deliberately not taken at Level-5 closure.
+
 ## AI Usage
 
 Extensive usage of Large Language Models has been used in the repository. In fact barring this single paragraph, all text in this corpus is written by an AI system. Initially multiple LLMs were used. The used systems were Gemini 3.1 Pro, Calaude Sonnet 5.1, Deepseek V3 Pro, Deepseek V4 Pro, Deepseek V4.1 Flash, Qwen3.7-Plus, Qwen3.8-Max, Qwen3.8-Omni-Flash. OpenAI models were not used in any capacity. After the initial calculations of Era 1, Anthropic and Google's models started to lose the ability to work on this corpus due their so called safeguards, and drift towards the mean corpus of human knowledge genrating hallucinated and ill structured responses. Thus further down the line, only Deepseek and Qwen models were used. All models used were the ones available in the free tier. The corpus was reviewed in it's entirety and any errors in the corpus are the author's fault and not any LLM system's.
@@ -21,11 +32,11 @@ Extensive usage of Large Language Models has been used in the repository. In fac
 | path                 | content                                                                                                                                                                                                                                                                                                                                                                                 |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `docs/`              | the compiled publications: `Qubitick_Corpus.pdf` (the monograph: Parts 1–4, the Census annex, the tag index), `Addendum_Refutations.pdf` (Appendix B: structural constraints, refutations, no-go theorems, traps), `Calibration_Policy.pdf` (every calibration slot and its status)                                                                                                     |
-| `canon/`             | **the living canon v1.0** (revision 1): the five published documents, `HistLog.md`, the corpus README, the regenerable `index/` and `Summary.md`. The verification suite and the publication pipeline both read this tree. Era-2 discovery material does NOT live here (see `era2/`)                                                                                                   |
-| `era2/`              | **the Era 2 workspace** (Levels 5–7: Atomic, Molecular, Anthropic) — discovery phase, not frozen canon: per-level folders with `tiers/` (tier documents in canon format), `checks/` (the exact-arithmetic verification suite and its runner/gates), and `discovery/` (session records). Level 5 is active (tags AT.1–AT.55); see `era2/README.md`                                          |
+| `era1/`              | **the Era-1 half — the frozen v1.0 canon** (Levels 1–4): `era1/canon/` (the five published documents, `HistLog.md`, the regenerable `index/` and `Summary.md`, and `make_summary.py` — the summary-generation pipeline) and `era1/verification/` (the frozen 80-checker suite; its canon documents are symlinks into `era1/canon/` — the two move together). Published, DOI-pinned, never edited; see `era1/README.md`                                          |
+| `era2/`              | **the Era-2 half — the canon-in-record for Levels 5–7** (Atomic, Molecular, Anthropic): per-level folders with `tiers/` (tier documents in canon format), `checks/` (the exact-arithmetic verification suite and its runner/gates), and `discovery/` (session records). **Level 5 is CLOSED** (twelve tiers, tags AT.1–AT.63; the closure tag AT.63 records the level ledger and this reorganization); **Level 6 is OPEN** (Tier ML.1: the Measurement Theorem, ML.1–ML.5); Level 7 unopened; see `era2/README.md`                                          |
 | `archive/`           | `zenodo_v1.0_package/` — the self-contained packaged copy of the published v1.0 corpus as deposited (formerly the confusing repo-root-nested `qubitick_corpus/` folder; frozen, do not edit)                                                                                                                               |
 | `source/`            | the LaTeX sources: `main.tex` + `parts/part1_qubit.tex` … `parts/part4_baryon.tex`, `annex_census.tex`, `tag_index.tex`, `addendum.tex`, `calibration.tex`; `build.sh` / `Makefile` regenerate the PDFs; `pipeline/` holds the generator; `CONVERSION_LOG.md` records the sanitization pass; `REVISION1_LOG.md` and `OPEN_ITEMS_REPORT.md` record the canon revision                    |
-| `verification/`      | the machine-verification suite: `run_all.py`, `requirements.txt`, `checks/` (the 80 checkers and their exact-arithmetic helpers); the canon documents are symlinks into `canon/`; `index/` is regenerated at every suite run                                                                                                                                                            |
+| `era1/verification/`   | the frozen machine-verification suite (inside the era-1 half): `run_all.py`, `requirements.txt`, `checks/` (the 80 checkers and their exact-arithmetic helpers); the canon documents are symlinks into `../canon/`; `index/` is regenerated at every suite run                                                                                                                                                            |
 | `working_markdowns/` | **the frozen archive** — every raw working document exactly as delivered (pre-revision): the four era files, `Census.md`, `HistLog.md`, the summaries, the generated index, the original render tooling, the first compiled paper, the as-delivered checkers (`checks_as_delivered/`) and the revision-1 substitution sheet. This folder is the provenance record; it is never modified |
 
 ## How to read
@@ -47,13 +58,16 @@ resolves every tag to its location.
 ## How to verify
 
 ```bash
-pip install -r verification/requirements.txt   # a documented no-op: the suite is pure stdlib
-python3 verification/run_all.py                # the full suite
+pip install -r era1/verification/requirements.txt   # a documented no-op: the suite is pure stdlib
+python3 era1/verification/run_all.py                # the full frozen era-1 suite (80/80)
+cd era2/level5_atomic/checks && python3 run_all_era2.py      # the era-2 Level-5 suite (37 checkers, 643 markers)
+cd era2/level5_atomic/checks && python3 check_era2_format.py # the era-2 format + citation gate (14 documents)
+cd era2/level6_molecular/checks && python3 run_all_level6.py # the Level-6 suite (2 checkers, 25 markers)
 ```
 
 Expected output: **80/80 passed — ALL GREEN** (exit code 0). All arithmetic is
 exact; no floating point is used in any assertion. See
-[`verification/README.md`](verification/README.md) for the verification
+[`era1/verification/README.md`](era1/verification/README.md) for the verification
 architecture (exact algebraic number fields, prime-log rings, integer
 certificates, the acyclic dependency graph) and for the historical suite-count
 note (history: the packaging brief quoted 77/77; the canon as delivered ran 79/79; revision 1 added `verify_CT10_signature.py`, giving the pinned and executed 80).

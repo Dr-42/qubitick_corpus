@@ -31,7 +31,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))                 # era2/level5_atomic/checks
 TIERS_DIR = os.path.normpath(os.path.join(HERE, "..", "tiers"))   # the Part5 tier documents
 LEVEL5_README = os.path.normpath(os.path.join(HERE, "..", "README.md"))
-CANON_DIR = os.path.normpath(os.path.join(HERE, "..", "..", "..", "canon"))   # .../canon
+CANON_DIR = os.path.normpath(os.path.join(HERE, "..", "..", "..", "era1", "canon"))   # .../era1/canon
 CANON = ["Part1_Qubit_era.md", "Part2_Bosonic_era.md", "Part3_Fermion_era.md",
          "Part4_Baryomesonic_era.md", "Census.md"]
 

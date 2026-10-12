@@ -20,7 +20,7 @@ import re
 import sys
 
 _PKG = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-REG_PATH = os.path.join(_PKG, "canon", "index", "tags.json")
+REG_PATH = os.path.join(_PKG, "era1", "canon", "index", "tags.json")
 
 def load_registry():
     return json.load(open(REG_PATH, encoding="utf-8"))
@@ -163,7 +163,7 @@ def parse_file(path, registry):
 
 if __name__ == "__main__":
     reg = load_registry()
-    base = os.path.join(_PKG, "canon")
+    base = os.path.join(_PKG, "era1", "canon")
     files = ["Part1_Qubit_era.md","Part2_Bosonic_era.md","Part3_Fermion_era.md",
              "Part4_Baryomesonic_era.md","Census.md"]
     seen = set()

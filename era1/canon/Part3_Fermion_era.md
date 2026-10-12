@@ -1,0 +1,6535 @@
+# $\langle qu(b(i(t|t))ick)\rangle$ — **Part 3 · Fermion\_era** — Bound Chains, Termini, Floors, Carriers, Channels
+
+**Dep.** Part 1 (axioms, conventions, qubit-era definitions, calibration, pair canon, ledger dynamics L0–L5); Part 2 (definitions D2.1–D4.3, geometry, electroweak, electromagnetic, colour, saturation) — cited by tag at use. Annex cited row-wise: **Census.md** (the computed data cells: the Category-B tags FT.28, FT.32, FT.35, FT.42–FT.45, FT.49–FT.51, FT.63–FT.65, FT.69, FT.76, FT.78, FT.81, FT.83, FT.84, FT.96, FT.98, FT.99, FT.105, FT.114, FT.120). Format: Part 1 §0.4.
+**Namespace.** This part owns: Def-H.1–Def-H.43; FT.1–FT.114 (structural tags), FT.116–FT.131, FT.133–FT.139, FT.141–FT.145, FT.153–FT.160. Tiers F.1–F.42, F.44 in series order.
+**DAG law.** Citations resolve to Parts 1–2, Census cells, or earlier tags of this part; the marked forward pointers are scope conditions cited at use (the FT.14→FT.22/FT.24 pattern). No citation of Part 4.
+**0.1 Conventions and units.** Bits regime: $D_{\mathrm{tick}}(n)=n{+}1$ bits [CT0.5]; one pair channel supplies $C_{\mathrm{cap}}=16$ register directions per tick [CT0.6, D0.9] $=4$ bits of Shannon content [C10: register count $\ne$ bit throughput]; all entropy/flux bounds in nats via $\ln2$ [C9]. $\widehat{ds}^{\,2}$ is dimensionless [D1.6, CT1.19a]; $\mathfrak h$ is the single free scale [D2.9, CT2.11]. Geodesic and continuum-limit forms inherit CT2.6's hypotheses (i)–(iii) at the point of use.
+**0.2 Resolution rules.** (i) This canon carries no ledger citations: every citation resolves to a tag of Parts 1–2, a Census cell, or a [math]/[machine] justification. (ii) Scope tokens: “Comm-min”, “Eff” mark the fixed-phase read of the tiers that carry them; both premises are dissolved at corpus level; a tag carrying them retains its fixed-phase scope, and the dynamic-phase translation is: quantization reads apply to the antialigned content ($\Theta\to\Theta_{\mathcal P}$ [CT1.19b]), with the uniform-antialigned specialization $\mathcal P=E_{\mathcal R}$ reproducing the literal forms [Def-EM.20, EM.20]. (iii) “M1/M2” are the materialization scope clauses of Def-H.20 (spectral hypotheses, constitutive of the Platonic cards). (iv) The interface surface of this part is Def-H.35–Def-H.43 and the constitutive/scope clauses cited therein.
+**0.3 Machine verification.** `checks/run_all.py`; the per-tier content checkers `checks/verify_H_*.py` (exact arithmetic, no floating point); the era-structure checker `checks/verify_era_structure.py`.
+
+---
+
+## §Cal-F — Free internal parameters of the fermion era (P4-class)
+
+Policy: Part 1 §E (P4: free internal configuration parameters, $\neg$constants of the theory; P5: no external identification; P1: $\mathfrak h$ the single free dimensionful scale). Every entry: dimensionless internal configuration data unless a dimension is stated; no value is fitted to external data; any numerical use beyond the loci listed requires a logged declaration first.
+
+| parameter | locus | dimension | consumers |
+| --- | --- | --- | --- |
+| $r=x_+/x_-$ (Janus rate ratio; equivalently $x_\pm$) | Def-H.26; FT.68(5); FT.70–FT.71 | $\mathfrak q^0$ | the flicker ensemble; the equilibrium form $p=x_+/(x_++x_-)$ is derived [FT.108(4)], the ratio is the datum |
+| $\hat\mu^2$ | Def-H.37(1) | $\mathfrak q^2$ [EW.33 packaging; D2.9] | the leading-order pole read [FT.33] |
+| $\hat\mu'^2$ | Def-H.37(2) | $\mathfrak q$ [FT.54(4)] | the exact pole read [FT.54(4); Census FT.76] |
+| $\alpha$ (Ansatz-B formal temperature) | Def-H.28 | $\mathfrak q^0$ | class masses $m_B=(K-\alpha\ln\Omega)\ln2/\mathfrak h$; no value declared; Ansatz-B results stand as exact $(K,a,b)$ classes |
+| $\mu$ (family-channel overall scale) | FT.113; FT.119 | — | channel spectra; every ratio is $\mu$-free |
+| $\mu_\nu$ (rung-one channel scale) | FT.143 | — | the rung-one spectrum; ratios exact, scale undeclared |
+| $t,u,x_\pm,y_d,z_d,\tau_{\mathcal R},\tau_{\mathcal V}$ (formal fugacities) | Def-H.32(3) | $\mathfrak q^0$ | formal indeterminates over $\mathbb Q$; specializations marked at use [FT.108(4); Cor L0a] |
+
+
+## Tier F.1 — Information Flux and Measurement Primitivity
+
+### Def-H.1 — Observer–subnetwork channel
+
+**Def.** $o\in\mathcal Q$ a single node; $\Sigma\subset\mathcal Q$, $\Sigma\cap\{o\}=\varnothing$. The channel is
+$$
+\gamma(o,\Sigma):=\bigl\{e\in\mathcal R:\ e\ \text{has one endpoint}\ o,\ \text{the other in}\ \Sigma\bigr\}\ \cup\ \bigcup_{P}E(P),
+$$
+the union over every valid real-edge path $P$ from $o$ to $\Sigma$ lying entirely in $\mathcal Q\setminus\Sigma$ except its terminal edge. Always:
+$$
+\gamma(o,\Sigma)\cap\bigl(\Sigma\setminus\partial\Sigma\bigr)=\varnothing\qquad(\text{no internal edge of}\ \Sigma\ \text{is ever a member}).
+$$
+Hop and tick counts over an interval: $ \delta h(\gamma):=\sum_{e\in\gamma}\delta h(e)$ [D0.6]; $ \delta\tau(\gamma)$ identically from D0.7. Bookkeeping extension of A2 by summation over the boundary edge set — $\neg$new primitive (uses A2, D0.6, D0.7 only).
+
+**Rmk (no internal-reaching reading).** The alternative reading of the second clause — once $o$ touches $\Sigma$, all of $\Sigma$'s internal edges qualify — is **excluded on citation-discipline grounds**: CT1.29 defines $\partial\mathcal B$ as a *separating* real-edge surface, and CT4.9/CT4.8 prove from A2 that externally accessible content is capped by boundary registers alone. Def-H.1 extends A2 without new primitives, so it cannot overturn closed theorems. Reductio: the internal reading collapses $I_{\mathrm{hid}}\to0$ for any well-connected $\Sigma$ with one external contact, contradicting CT4.8's generically-nonzero area law.
+
+---
+
+---
+
+### Def-H.2 — Physical (metric) channel separation
+
+**Def.** In a region where $g_{\mu\nu}=\Omega^2\bar g_{\mu\nu}$ [CT1.12] is defined:
+$$
+\Delta\ell(\gamma):=\int_\gamma\sqrt{\bar g_{ij}\,dx^i\,dx^j}\;\Omega;\qquad
+\Delta t(\gamma):=\int_\gamma\Omega\,dx^0 .
+$$
+**Rmk (role of $D^+$).** $\Omega=e^{\alpha_\Omega a_{00}}$ [CT1.12] and $F_{D^+}=\Lambda\mathbb I$ acts along the same central $E_0$ direction [CT1.25]: $D^+$'s contribution to channel separation is carried inside $\Omega$; $\neg$additive term. Built entirely from CT1.12's proven components; $\neg\exists$ new free parameter beyond $(\alpha_\Omega,\beta,\varkappa)$ [P4].
+
+---
+
+---
+
+### Def-H.3 — Extractable information
+
+**Def.**
+$$
+I_{o\leftarrow\Sigma}(\gamma):=\sup\bigl\{\mathsf E_{\mathrm{tr}}(\gamma'):\ \gamma'\subseteq\gamma\ \text{valid transit configuration over the interval}\bigr\},
+$$
+the supremum of transit entropy carried [EM.7: $\mathsf E_{\mathrm{tr}}=\delta h\ln2$, extended additively over $\gamma$]. The identification of extractable information with carried transit entropy is constitutive of this definition; coherence with the computed cards: channel payload stays FT.1-bounded [FT.36(2)], tuple labels are superselection data [Def-H.15(4)].
+
+---
+
+---
+
+### FT.1 — Information flux bound
+
+**Thm.** *(observer-channel form; the chain-level bound itself — jaws, entropy read, threshold, sharpness — is CT0.6a (Part 1)):*
+$(1)$ **Observer-channel extension.** With $\mathsf B(\gamma):=$ CT0.6a's bound evaluated on $\gamma$'s hop/tick counts [D0.6, D0.7]:
+$$
+I_{o\leftarrow\Sigma}(\gamma)\ \le\ \mathsf B(\gamma)\qquad[\mathrm{Def\text{-}H.3}:\ \text{the sup over valid transit subconfigurations inherits the memberwise bound}]
+$$
+$(2)$ **Geodesic gauge form.** Geodesic $\gamma$, slowly varying $\Omega,\bar g_{ij}$: $ \delta h=\Delta\ell/(\Omega\,\mathfrak h)$, $ \delta\tau=\Delta t/\Omega$ [Def-H.2], hence
+$$
+I_{o\leftarrow\Sigma}(\gamma)\ \le\ \frac{1}{\Omega}\,\min\Bigl(\frac{\Delta\ell(\gamma)}{\mathfrak h},\ 4\,\Delta t(\gamma)\Bigr)\ln2 .
+$$
+
+**Req.** Def-H.1–H.3; CT0.6a (Part 1); D0.6, D0.7; CT2.6 step 5 (**C**, piecewise smoothness).
+
+**Pf.**
+$$
+(1):\ \mathrm{Def\text{-}H.3}:\ I_{o\leftarrow\Sigma}(\gamma)=\sup\bigl\{\mathsf E_{\mathrm{tr}}(\gamma'):\ \gamma'\subseteq\gamma\ \text{valid transit configuration over the interval}\bigr\};\qquad\text{each}\ \gamma'\ \text{is an admissible transit path configuration}:\ \mathsf E_{\mathrm{tr}}(\gamma')\le\mathsf B(\gamma')\ [\mathrm{CT0.6a}]
+$$
+$$
+\text{the bound is monotone in}\ (\delta h,\delta\tau):\ \gamma'\subseteq\gamma\implies\mathsf B(\gamma')\le\mathsf B(\gamma)\implies\sup\le\mathsf B(\gamma)
+$$
+$$
+(2):\ \text{substitution}\ \delta h=\Delta\ell/(\Omega\mathfrak h),\ \delta\tau=\Delta t/\Omega\ [\mathrm{Def\text{-}H.2};\ \mathrm{CT2.6}\ \text{step}\ 5]\implies\text{physical form}.\ \blacksquare
+$$
+
+**Phys.** Knowledge through a channel is squeezed by two independent jaws — total edge entropy (spatial) and per-tick capacity (temporal). The jaws and their sharpness are pure ledger arithmetic at the foundation layer (CT0.6a); what this theorem adds is the observer-channel sup read (Def-H.1–H.3 layer) and $D^+$'s $1/\Omega$ rescaling of the physical form.
+
+---
+
+---
+
+### FT.2 — Exhaustiveness of the real-edge measurement primitive
+
+**Thm.** Within A1–A9, the only axiom-level mechanism increasing $o$'s information about $\Sigma$ is the addition of valid real edges to $\gamma(o,\Sigma)$ [Def-H.1]. Hence FT.1's bound is exhaustive over every axiomatic route to knowledge, and any two coarse-graining procedures on the same $\gamma$ yield the same bound.
+
+**Req.** A1–A9; C11, C12; D0.10; Def-H.1.
+
+**Pf.**
+$$
+\mathrm{A2}:\ C(p,q)=1\mathfrak q\ \text{is the only channel-defining pair relation};\qquad\mathrm{A4}:\ \mathcal R\text{-membership is the sole knowability criterion}
+$$
+$$
+\mathrm{A5}\ [\mathrm{C11}:\ \text{node-level}\ \rho\mapsto U\rho U^\dagger,\ U\sim\mu_\star(\mathrm{SU}(2))]:\ \text{undriven single-node evolution};\ U\notin\mathfrak L:\ \text{structurally unrecorded}\implies\neg\text{readable}
+$$
+$$
+\mathrm{A6}\ [\mathrm{D0.3}:\ \mathcal T\ \text{on operators};\ \text{variance clause reserved}]:\ \text{internal map on an existing}\ \rho;\ \neg\exists\ \text{new inter-node relation}
+$$
+$$
+\mathrm{A7}:\ \phi:E_{\mathcal R}\to\Phi\ \text{defined only on existing real edges}:\ \text{structure carried by an edge},\ \neg\text{a means of establishing one}
+$$
+$$
+\mathrm{A8}\ [\mathrm{D0.10},\ \mathrm{C12}:\ Z\ \text{sums over}\ \mathfrak C(\mathcal R)]:\ \text{classifies, weights, sums existing configurations};\ \neg\text{manufactures edges}
+$$
+$$
+\mathrm{A9}:\ \text{global solution-membership condition}:\ \text{meta-level},\ \neg\text{per-observer channel}
+$$
+$$
+\implies\neg\exists\ \text{route to}\ o\text{'s knowledge of}\ \Sigma\ \text{bypassing real-edge membership}\ [\mathrm{A2},\mathrm{A4}].\ \blacksquare
+$$
+
+**Phys.** Measurement in this corpus has exactly one primitive: the real edge. Every claim about observation, information and hiding reduces to channel edge-counts — which is what makes the fermion program computational.
+
+---
+
+---
+
+### FT.3 — Unresolvability of $D^-$-sourced subnetwork structure
+
+**Thm.** $\Sigma,\Sigma'$ with $(\delta h,\delta\tau)$-identical channels to $o$, $\Sigma$ containing a $D^-$-configured node ($n\ge4$, CT4.1) and $\Sigma'$ none:
+$$
+I_{o\leftarrow\Sigma}(\gamma)=I_{o\leftarrow\Sigma'}(\gamma);\qquad
+I_{o\leftarrow\Sigma''}(\gamma)=I\bigl(\delta h(\gamma),\delta\tau(\gamma)\bigr)\ \ \forall\Sigma''\in[\gamma],
+$$
+$$
+[\gamma]:=\bigl\{\Sigma'':\ \gamma(o,\Sigma'')\ \text{has hop/tick counts}\ (\delta h(\gamma),\delta\tau(\gamma))\bigr\}\qquad(\text{exact and total over}\ [\gamma]).
+$$
+
+**Req.** Def-H.1, Def-H.3; EM.7 (Part 2); FT.1.
+
+**Pf.**
+$$
+\mathrm{EM.7}:\ D^-\text{-sourced edges}=\text{ordinary real edges}:\ \text{identical received data}\ (\neg\exists\ D^-\text{-emission rule})
+$$
+$$
+\mathrm{FT.1}:\ I\ \text{bounded by a function of}\ (\delta h,\delta\tau)\ \text{only}:\ \neg\text{reference to internal node count/topology/rung structure}
+$$
+$$
+\text{hypothesis}:\ (\delta h,\delta\tau)\ \text{identical}\implies\text{bounds identical};\qquad
+\mathrm{Def\text{-}H.3}:\ I=\sup\ \text{over configurations constrained only by these bounds}\implies I\ \text{identical on}\ [\gamma].\ \blacksquare
+$$
+
+**Cor FT.3.1 (computational form).** For any candidate fermion terminus $f$:
+$$
+I_o(f)\ \le\ \min\bigl(\delta h(\gamma(o,f)),\ 4\,\delta\tau(\gamma(o,f))\bigr)\ln2,
+$$
+and this bound is the only quantity distinguishing $f$ from any terminus sharing its channel signature.
+
+**Phys.** Locked ($D^-$) structure is invisible from outside by construction: two subnetworks differing arbitrarily in locked content but sharing a channel signature are observationally identical. Darkness is indistinguishability, exactly.
+
+---
+
+---
+
+
+## Tier F.2 — The Fermion Definition
+
+### Def-H.4 — Fermion
+
+**Def.** Let $c$ be a Janus-closed oriented chain [D1.4]: $\partial c=0\wedge\#J^+=\#J^-$ — a **bound** chain, hence fermionic content by D1.5 — realized at rung $n(v)\ge2$. A **fermion** is the terminus (basepoint) $v\in\{s(c),t(c)\}$ of $c$: a bound-chain endpoint, at either end, for any admissible $\delta h(c)$, characterized externally by whatever transit (bosonic-content, D1.5) channels connect $v$ to an observer [Def-H.1, Def-H.3] and by which aspects of A8 act nontrivially there.
+
+**Rmk (floor: $\delta h(c)\ge2$, $n(v)\ge2$).** A $\delta h=1$/rung-1 instance is **excluded by Parts 1–2**:
+$$
+\mathrm{A1}:\ p\ne q\implies\neg\exists\ \text{self-loops};\qquad
+\mathrm{D1.4}:\ \text{closed}\iff\partial c=t(c)-s(c)=0\implies s(c)=t(c)=v
+$$
+$$
+\implies\delta h(c)=1\ \text{closed chain}=\text{self-loop}=\bot\implies\delta h(c)\ge2\ (\text{minimal closed chain}=\text{2-cycle}\ p\to q\to p)
+$$
+$$
+\text{closed chain based at}\ v\implies v\ \text{has}\ \ge1\ \text{in- and}\ \ge1\ \text{out-edge}\implies n(v)\ge2\ [\mathrm{D0.8}]
+$$
+$$
+\mathrm{D1.5}:\ \text{open propagating chains}=\text{transit}=\text{bosonic content}\implies\text{rung-1 nodes on open chains are}\ \neg\text{fermion termini}.
+$$
+There is *one* object — the bound-chain terminus — varying only in $\delta h(c)\ge2$; FT.14's hypothesis $\delta h(c)\ge2$ is canonical, not ad hoc. No new primitive: $s(c),t(c)$ [D1.4], Janus-closed [D1.3], bosonic aspect [A8]; this definition fixes the referent of *fermion* in the corpus; consumers: FT.4, FT.28, FT.144(1). Terminology per D1.5: the closed chain *is* the fermionic content; what is bosonic/transit is the external channel connecting the terminus to an observer (Def-H.1/Def-H.3), not the chain itself. The floor is computed on in Tier F.8 (FT.24).
+
+---
+
+---
+
+### FT.4 — External state characterization of a fermion terminus
+
+**Thm.** $v$ a fermion [Def-H.4], $\gamma(o,v)$ per Def-H.1:
+$$
+I_o(v)\le\min\bigl(\delta h(\gamma(o,v)),\ 4\,\delta\tau(\gamma(o,v))\bigr)\ln2,
+$$
+and this bound is the entire externally available description: $v,v'$ with the same $(\delta h,\delta\tau)$ are observationally identical to $o$.
+
+**Req.** Def-H.1, Def-H.4; FT.1, FT.3.
+
+**Pf.**
+$$
+\mathrm{Def\text{-}H.4}:\ v=\text{single vertex}=\text{degenerate case}\ \Sigma=\{v\}\implies\mathrm{FT.1}\ \text{applies}
+$$
+$$
+\mathrm{FT.3}/\mathrm{Cor\ FT.3.1}:\ I\ \text{constant on}\ [\gamma];\quad\mathrm{Def\text{-}H.4}\ \text{constrains}\ \neg\text{internal structure}\implies v,v'\ \text{with equal signature indistinguishable}.\ \blacksquare
+$$
+
+**Cor FT.4.1 (state-counting ceiling).** Externally distinguishable states through a fixed channel signature:
+$$
+N_{\mathrm{states}}\le2^{\,\min(\delta h,\ 4\,\delta\tau)}\qquad\bigl(=\min(\delta h,4\,\delta\tau)\ \text{bits of externally resolvable state}\bigr).
+$$
+$\neg$yet a derivation of spin, generation number, or any specific quantum number — a ceiling on the labels any channel could support.
+
+**Phys.** A fermion seen from outside is its channel signature and nothing more: the corpus's measurement theory turns "particle" into "equivalence class of subnetworks under $(\delta h,\delta\tau)$".
+
+---
+
+---
+
+
+## Tier F.3 — Information Flux as Rate
+
+### Def-H.5 — Information flux
+
+**Def.**
+$$
+\mathcal F(\gamma):=\frac{I_{o\leftarrow\Sigma}(\gamma)}{\delta\tau(\gamma)}\quad[\text{nats/tick};\ \mathrm{C9}];\qquad
+\mathcal F_{\mathrm{phys}}(\gamma):=\frac{I_{o\leftarrow\Sigma}(\gamma)}{\Delta t(\gamma)}=\frac{\mathcal F(\gamma)}{\Omega}\quad[\Delta t=\Omega\,\delta\tau,\ \Omega\ \text{constant along}\ \gamma,\ \mathrm{Def\text{-}H.2}].
+$$
+**Rmk ($\Omega$-dependence).** $\mathcal F$ is $\Omega$-invariant (pure graph rate); $\mathcal F_{\mathrm{phys}}\propto1/\Omega$; $\Omega$ is set by $D^+$ [CT1.12, CT1.25] — the precise mechanism coupling information flux to geometry.
+
+---
+
+---
+
+### Def-H.6 — Information flux density
+
+**Def.** $N_\perp$ parallel real edges (transverse width); $ A_\perp=N_\perp\,\mathfrak h^2$ [CT1.29]; $ \mathcal F_\rho(\gamma):=\dfrac{\mathcal F(\gamma)}{A_\perp(\gamma)}$ (local, per unit area).
+
+---
+
+---
+
+### FT.5 — Flux bound (rate form of FT.1)
+
+**Thm.**
+$$
+\mathcal F(\gamma)\le\min\!\Bigl(\frac{\delta h(\gamma)}{\delta\tau(\gamma)}\ln2,\ \ C_{\mathrm{cap}}\ln2\Bigr)=\min\!\Bigl(\frac{\delta h}{\delta\tau},\ 4\Bigr)\ln2;\qquad
+\mathcal F_{\mathrm{phys}}(\gamma)\le\frac{1}{\Omega}\min\!\Bigl(\frac{\delta h}{\delta\tau},\ 4\Bigr)\ln2 .
+$$
+
+**Req.** FT.1; Def-H.2, Def-H.5.
+
+**Pf.** Divide FT.1 by $\delta\tau$; both constraints apply to every member of the supremum set [FT.1]; convert via $\Delta t=\Omega\,\delta\tau$. $\blacksquare$
+
+**Phys.** The hop-rate caps flux combinatorially; the 4-bit channel caps it per tick; geometry ($\Omega$, i.e. $D^+$) rescales the physical rate without touching the combinatorial one.
+
+---
+
+---
+
+### FT.6 — Conformal invariance of combinatorial flux
+
+**Thm.** $g_{\mu\nu}\mapsto\Omega'^2g_{\mu\nu}:\quad\mathcal F(\gamma)\ \text{invariant};\qquad\mathcal F_{\mathrm{phys}}\mapsto\mathcal F_{\mathrm{phys}}\cdot\Omega/\Omega'.$
+
+**Req.** Def-H.5; CT0.9 (Part 1); D0.7.
+
+**Pf.** $\mathcal F=I/\delta\tau$; $I$ bounded by edge counts [CT0.9], $\delta\tau$ a tick count [D0.7]: both $\Omega$-free [combinatorial]; $\mathcal F_{\mathrm{phys}}=\mathcal F/\Omega$ [Def-H.5]. $\blacksquare$
+
+**Phys.** The ledger rate is conformally blind; only the physical rate feels $D^+$ — information bookkeeping is pre-geometric.
+
+---
+
+---
+
+### FT.7 — Universal flux density bound
+
+**Thm.**
+$$
+\mathcal F_\rho(\gamma)\le\frac{\ln2}{\mathfrak h^2}\quad\text{per tick};\qquad
+\mathcal F_{\rho,\mathrm{phys}}(\gamma)\le\frac{1}{4\,\Omega\,G_N}\quad\text{per unit proper time}.
+$$
+
+**Req.** CT0.9 (Part 1); EM.7 (Part 2); CT1.29, CT2.9 (Part 2); Def-H.2, Def-H.6.
+
+**Pf.**
+$$
+\text{each of}\ N_\perp\ \text{parallel edges}\le\ln2\ \text{per tick}\ [\mathrm{CT0.9},\mathrm{EM.7}]\implies\mathcal F\le N_\perp\ln2
+$$
+$$
+A_\perp=N_\perp\mathfrak h^2\ [\mathrm{CT1.29}]\implies\mathcal F_\rho\le\frac{N_\perp\ln2}{N_\perp\mathfrak h^2}=\frac{\ln2}{\mathfrak h^2}\qquad(N_\perp\ \text{cancels}:\ \text{universal})
+$$
+$$
+\mathfrak h^2=4G_N\ln2\ [\mathrm{CT2.9}];\quad/\Omega\ [\mathrm{Def\text{-}H.5}]:\quad\mathcal F_{\rho,\mathrm{phys}}\le\frac{\ln2}{\Omega\cdot4G_N\ln2}=\frac{1}{4\,\Omega\,G_N}.\ \blacksquare
+$$
+
+**Cor FT.7.1 (Bekenstein rate bound).** The universal flux-density bound is the Bekenstein entropy bound expressed as a rate: maximal information flux density $1/(4G_N)$ per unit proper time, up to the conformal factor; $D^+$ modulates the ceiling locally.
+
+**Phys.** One bit per hop-area per tick — universally, independent of channel width — and in physical units the quarter-$G_N$ law appears as a *rate*. No dependence on the detailed form of $G(e)$ at any rung: safe from the rung-3 edge-structure question.
+
+---
+
+---
+
+### FT.8 — Flux-mediated coarse-graining connection
+
+**Thm.** Coarse-graining $\Sigma\to v$ is geometry-dependent: surviving information is bounded by the boundary flux, which depends on the geometry along $\gamma$ (via $\Omega$, $\mathfrak h$).
+
+**Req.** FT.5, FT.7; Def-H.5, Def-H.6.
+
+**Pf.** Coarse-graining $:=$ replace $\Sigma$'s internals by a terminus, retaining only what flows through $\gamma(o,v)$; retained rate $\le\mathcal F_{\mathrm{phys}}(\gamma)$ [FT.5], density $\le\ln2/(\Omega\mathfrak h^2)$ [FT.7] — both geometry-dependent $\implies$ same $\Sigma$, different ambient geometry $\Rightarrow$ different surviving content: coarse-graining is geometry-mediated, $\neg$ purely combinatorial. $\blacksquare$
+
+**Phys.** This is the bridge the fermion construction needs: what a particle "keeps" of its subnetwork under coarse-graining is set by the geometry of the channel through which it is seen.
+
+---
+
+---
+
+---
+
+
+## Tier F.4 — Rung-Dependent Edge Structure
+
+### Def-H.7 — Rung-dependent edge data
+
+**Def.** $G^{(n)}(e)$ rung-dependent; EM part [D3.5, EM.16] for $n\ge2$:
+$$
+G^{(n)}_{\mathrm{EM}}(e)=\sigma_e\,\exp\!\bigl(i\,\alpha_{\mathrm{EM}}^{(n)}\,\widehat{ds}^{\,2}(e)\bigr),\qquad
+\alpha_{\mathrm{EM}}^{(n)}=\pi\quad[\mathrm{FT.9};\ \mathrm{EM.20}\ \text{under Comm-min}+\text{Eff}].
+$$
+**On-shell/off-shell scope [FT.22–FT.25; CT1.19a].** On edges of materialized minimal bound chains — and, pending the completion argument, on on-shell edges generally: $\widehat{ds}^{\,2}(e)\in\mathbb Z$ [FT.24], hence the geometric factor $e^{i\pi\widehat{ds}^{\,2}(e)}=(-1)^{\widehat{ds}^{\,2}(e)}\in\{\pm1\}$ and $G(e)\in\{+1,-1\}$; on every materialized closed chain, the loop product is $+1$ [FT.22: $\Theta(c)\in2\mathbb Z$]. On generic off-shell configurations in $Z$'s summation domain: $\widehat{ds}^{\,2}(e)$ is a generic $O(1)$ real [CT1.19a] and $G(e)$ retains the full phase $e^{i\pi\widehat{ds}^{\,2}(e)}$ — materialization selects the integer sublattice, exactly as CT2.5 selects discrete spectra from continuous operator families.
+$$
+\begin{array}{c|c|c}
+\text{rung} & \text{active stack aspects} & \text{edge data}\\ \hline
+2 & \mathrm{EM} & \sigma_e\ (\text{sign})\ +\ (-1)^{\widehat{ds}^{\,2}(e)}\ (\text{geometric parity, on-shell})\ [\mathrm{FT.9},\ \mathrm{FT.24}]\\
+3 & \mathrm{EM}+\mathrm{strong} & \sigma_e\ +\ \widehat{ds}^{\,2}(e)\in\mathbb Z\ (\text{on-shell})\ +\ \tau(e):\ \text{colour transport label}\ [\mathrm{CT3.11};\ \mathrm{Def\text{-}H.17}]\ —\ \neg\exists\ \text{independent strong phase}\ [\mathrm{FT.29}(2)]\\
+\ge4 & \mathrm{EM}+\mathrm{strong}+D^- & +\ D^-\ \text{saturation content}\ [\mathrm{D4.1},\ \mathrm{CT4.1}]\ (\text{locked})
+\end{array}
+$$
+On the minimal real edge alone ($\widehat{ds}^{\,2}(e)=1$ [D1.1, Comm-min]), $G(e)=-\sigma_e$ needs only EM.20/FT.9 — no Tier F.8 input. Rung-3 strong factor: $G^{(3)}(e)=G^{(2)}(e)\otimes\tau(e)$ [Def-H.17, FT.29] — the slot algebra's $\mathfrak u(1)$ centre *is* the EM phase already carried by $G^{(2)}$ [CT3.7], so the strictly new strong content is the traceless $\mathfrak{su}(3)$ label, observable only in singlet sealings [FT.29(3)].
+
+---
+
+---
+
+### FT.9 — EM part of edge weight is rung-stable
+
+**Thm.** $ \alpha_{\mathrm{EM}}^{(n)}=\alpha_{\mathrm{EM}}^{(2)}=\pi\quad(n=2,3,\ge4;\ \text{under EM.20's scope tokens Comm-min}+\text{Eff}).$
+
+**Req.** EM.17, EM.18, EM.19, EM.20 (Part 2); CT0.14 (Part 1); CT3.7, CT3.10 (Part 2); D4.1.
+
+**Pf.**
+$$
+\mathrm{EM.20}\ [\text{Comm-min}+\text{Eff}]:\ \alpha_{\mathrm{EM}}^{(2)}=\pi
+$$
+$$
+\mathrm{EM.18}:\ \alpha^{(3)}=\alpha^{(2)}:\quad Y_{\mathrm{asp}}F_{\mathrm{strong}}Y_{\mathrm{asp}}=\mathcal P^{(\mathrm{EM})}F_{\mathrm{strong}}\mathcal P^{(\mathrm{EM})}=0\ [\mathrm{CT0.14}:\ \mathcal K^{(\mathrm{strong})}\perp\mathcal K^{(\mathrm{EM})}]
+$$
+$$
+\text{independently}:\ \mathfrak T(T_a)=0\ [\mathrm{CT3.7}]\implies\mathfrak T(F_{\mathrm{strong}})=0\ [\mathrm{CT3.10}]
+$$
+$$
+\mathrm{EM.19}:\ n\ge4:\ \ Y_{\mathrm{asp}}F_{D^-}Y_{\mathrm{asp}}=0\ [\mathrm{D4.1}:\ F_{D^-}\ \text{acts only on}\ n\ge4;\ \ \mathrm{CT0.11}:\ \mathcal K_2\ \neg\text{oversubscribed};\ \mathrm{CT0.14}:\ \perp]
+$$
+$$
+\mathrm{EM.17}:\ \alpha^{(n)}=\mathfrak T\bigl(Y_{\mathrm{asp}}\mathbf F_M^{(n)}Y_{\mathrm{asp}}\bigr)/\mathfrak T\bigl(Y_{\mathrm{asp}}\bigr);\quad Y_{\mathrm{asp}}\mathbf F_M^{(n)}Y_{\mathrm{asp}}=Y_{\mathrm{asp}}\mathbf F_M^{(2)}Y_{\mathrm{asp}}\implies\alpha^{(n)}=\alpha^{(2)}=\pi.\ \blacksquare
+$$
+
+**Phys.** The binary geometric phase of every real edge is the same $\pi$ at every accessible rung: colour and saturation add structure without touching the electromagnetic bit.
+
+---
+
+---
+
+### FT.10 — Confinement is a global sum-restriction
+
+**Thm.**
+$$
+Z^{(3)}(\mathcal R)=\sum_{\substack{C\in\mathfrak C(\mathcal R):\ \text{colour-sealed}}}\ \sum_\sigma\mathcal J(C)\!\!\prod_{e\in E(C)}\!\!G^{(3)}(e)\ (-1)^{\aleph(\sigma,C)}\qquad[\mathrm{D0.10},\ \mathrm{C12}];
+$$
+confinement restricts the summation domain; $\neg$modification of any individual edge weight.
+
+**Req.** CT3.17, CT3.18, CT3.22 (Part 2); CT2.3, CT2.5 (Part 2); FT.9; D0.10.
+
+**Pf.**
+$$
+\mathrm{CT3.18}:\ \mathcal P_M^{(3)}\ \text{admits only colour-sealed}\ C\ (\delta^i{}_j,\varepsilon_{ijk},\varepsilon^{ijk}\ \text{contractions},\ \mathrm{CT3.17});\qquad
+\mathrm{CT3.22}:\ \neg\exists\ \text{isolated triplet pole}
+$$
+$$
+\text{free-index}\ C\notin\operatorname{Im}\mathcal P_M^{(3)};\quad\mathrm{CT2.5}:\ \text{poles}=\text{eigenvalue conditions on}\ \mathbf F_M^{(3)};\quad\mathrm{CT2.3}:\ \mathbf F_M^{(3)}\big|_{\mathcal K_3^\perp}=0\implies\text{excluded}\ C:\ \neg\text{pole}
+$$
+$$
+G^{(3)}(e)=G^{(2)}(e)\otimes|i(e)\rangle\text{-label}:\ \text{per-edge weight unmodified}\ [\mathrm{FT.9}]\implies\text{confinement}=\text{domain restriction}.\ \blacksquare
+$$
+
+**Phys.** Confinement acts globally — on which configurations exist in the sum — not locally on edge amplitudes: the partition function itself only contains colour singlets.
+
+---
+
+---
+
+
+## Tier F.5 — Spin–Charge Decomposition via Complete Force Operator
+
+### FT.11 — Complete force operator charge audit
+
+**Thm.** Per-aspect charge determination for $\mathbf F$ [A8]:
+$$
+\begin{array}{c|c|c}
+\text{aspect} & \text{independent charge?} & \text{basis}\\ \hline
+F_{\mathrm{EM}} & \text{yes} & \mathrm{EM.9}:\ q_{\mathrm{EM}}=(\sigma_s-\sigma_t)/2\in\{-1,0,+1\},\ \text{additive end-charge}\\
+F_{\mathrm{strong}} & \text{no (confined)} & \mathrm{CT3.22};\ \mathfrak T(T_a)=0\ [\mathrm{CT3.7}];\ \mathfrak T(F_{\mathrm{strong}})=0\ [\mathrm{CT3.10}]\\
+F_G & \text{yes} & \mathrm{D2.5}:\ m^2=\text{pole displacement}\\
+F_H & \text{yes (via mass)} & \mathrm{EW.13}:\ H=h\Sigma;\ \mathrm{EW.20},\mathrm{EW.33}\\
+F_{D^+} & \text{no} & \mathrm{D4.3}:\ \Lambda\mathbb I,\ \neg\text{config.-dependent}\\
+F_{D^-} & \text{no} & \mathrm{CT4.4}:\ \neg\text{gauge structure}\\
+F_{J^\pm} & \text{no} & \mathrm{CT0.7}:\ \text{seals},\ \neg\text{charges}\\
+F_W & \text{no} & \mathrm{FT.12}:\ \text{no weak self-charge}
+\end{array}
+$$
+
+**Req.** A8, C8; CT0.7, CT0.12 (Part 1); D2.5, D4.3; CT3.7, CT3.10, CT3.22 (Part 2); CT4.4 (Part 2); EW.13, EW.20, EW.33 (Part 2); EM.9 (Part 2); FT.12.
+
+**Pf.**
+$$
+\mathrm{A8}\ [\mathrm{C8}]:\ \mathbf F=\mathbf F_{(+,\mathcal R)}\oplus\mathbf F_{(-,\mathcal R)}\oplus\mathbf F_{(+,\mathcal V)}\oplus\mathbf F_{(-,\mathcal V)}\oplus\mathbf F_{\mathrm{st}};\quad\mathbf F_{(-,\mathcal R)}=F_{W^+}\oplus F_{W^-}\oplus F_Z
+$$
+$$
+\mathrm{CT0.12}:\ \text{pair aspects exhaust}\ 16=2^{C_{\mathrm{cap}}}\ \text{states}\ (3{+}3{+}5{+}3{+}1{+}1);\quad\text{stack aspects act on vertex/slot registers}\ [\mathrm{CT0.12\ Rmk}]
+$$
+$$
+\text{rows}:\ \text{as cited (each row one frozen-corpus tag)};\quad F_W:\ \mathrm{FT.12}.\ \blacksquare
+$$
+
+**Phys.** A complete audit of which forces can carry an independently readable charge: only EM (boundary-readable), gravity and Higgs (as mass). Everything else is structurally chargeless — the input to the spin–charge split.
+
+---
+
+---
+
+### FT.12 — Weak has no self-charge
+
+**Thm.** The weak sector produces $\neg$independent abelian charge; its charge content reduces entirely to $Q=W_3+Y$ (the EM generator).
+
+**Req.** EW.3, EW.22, EW.36, EW.36a (Part 2); D3.4.
+
+**Pf.**
+$$
+\mathrm{EW.22}:\ \ker M^2=\operatorname{span}\{Q\}_{(W_3,Y)},\ \ Q:=W_3+Y\ \ (1\text{-dim})
+$$
+$$
+\mathrm{EW.36}:\ \operatorname{spec}Q|_{\mathcal H_{\mathsf v}}=\{0,+1\};\quad\omega\ [\mathrm{D2.6}]:\ \{0,-1\};\quad\text{alphabet}=\{-1,0,+1\}=\mathrm{D3.4}\ \text{end-charge alphabet}
+$$
+$$
+\mathrm{EW.36a}:\ Q=W_3+Y;\quad W_3\ \text{alone}\ \neg\text{charge};\quad Q=\text{EM generator}
+$$
+$$
+\mathfrak{su}(2)\ \text{nonabelian},\ Z(\mathfrak{su}(2))=\{0\}\ [\mathrm{EW.3}:\ [W_i,W_j]=i\epsilon_{ijk}W_k]\implies\neg\exists\ \text{central}\ \mathfrak u(1)\subseteq\mathfrak{su}(2)\implies\neg\text{independent abelian weak charge}.\ \blacksquare
+$$
+
+**Phys.** Weak carries no charge of its own — its only abelian direction *is* electromagnetism. Chargelessness of the weak sector is a Lie-algebra fact (centre-free $\mathfrak{su}(2)$), not a convention.
+
+---
+
+---
+
+### FT.13 — Weak $=$ spin (algebraically)
+
+**Thm.** $W_i=\tfrac12\bigl(\sigma_i^{(p)}+\sigma_i^{(q)}\bigr)=$ total-spin generators of the pair; Casimir eigenvalues $2=j(j{+}1)|_{j=1}$ on $\vee^2$, $0$ on $\wedge^2$; $W_i\in\mathcal E_{+-}$ (weak sector). Hence weak $\equiv$ spin, algebraically.
+
+**Req.** CT0.7a, CT1.1, CT1.2 (Part 1).
+
+**Pf.** Identities [CT1.2 (definition), CT0.7a (Casimir), CT1.1 (sector)]. $\blacksquare$
+
+**Phys.** With FT.12 (no self-charge), the weak sector's entire coarse-grained contribution is spin — a positive identification, not a residual.
+
+---
+
+---
+
+### Def-H.8 — Spin (emergent weak contribution)
+
+**Def.** For a fermion terminus $v$ [Def-H.4, $\delta h(c)\ge2$]: spin $:=$ the coarse-grained emergent-spacetime property arising from the weak sector's contribution to $c$. Justification: weak has no self-charge [FT.12] $\Rightarrow$ its contribution cannot be charge; $W_i$ are total-spin generators [FT.13] $\Rightarrow$ the contribution *is* spin.
+**Rmk (coarse-graining hierarchy).** Pre-dimensionally: spin $=$ interior edge phase carried by the weak sector. Coarse-grained to the terminus: interior hidden [FT.3] $\Rightarrow$ cumulative interior phase manifests as an intrinsic localized quantum number. Further coarse-grained along a geodesic: angular momentum.
+
+---
+
+---
+
+### FT.14 — Spin–charge decomposition
+
+**Thm.** $c$ oriented chain, $\delta h(c)\ge2$ [Def-H.4], proper separation $\Delta\ell(c)$ [CT1.12]. Decompose $N_{\mathrm{visible}}=\delta h(c)$ bits under the complete force audit [FT.11]:
+$$(1)\ \ N_{\mathrm{spin}}=N_{\mathrm{weak}};\qquad(2)\ \ N_{\mathrm{charge}}=N_{\mathrm{visible}}-N_{\mathrm{weak}};\qquad(3)\ \ f_{\mathrm{charge}}=\frac{N_{\mathrm{charge}}}{N_{\mathrm{visible}}},\quad f_{\mathrm{spin}}=\frac{N_{\mathrm{weak}}}{N_{\mathrm{visible}}};$$
+$$
+\mathfrak h\to0,\ \Delta\ell\ \text{fixed}\ [\mathrm{CT1.19}]:\quad f_{\mathrm{charge}}\to0,\quad f_{\mathrm{spin}}\to1 .
+$$
+
+**Req.** A1, A2, A4; C8, C9, C10; CT0.1, CT0.6, CT0.7, CT0.9 (Part 1); CT1.12, CT1.19, CT1.25 (Part 2); D3.5; EW.13, EW.17 (Part 2); EM.9, EM.16 (Part 2); FT.9; FT.22–FT.24 (on-shell line-element quantization — the parity-read step below is scoped to materialized edges); FT.11, FT.12, FT.13; Def-H.8; rung-2 decomposition (Def-H.8 attribution clause; the counting half is derived — EM.9/D3.4 end registers). Table evaluated at $\Omega\equiv1$ (stated simplification, not a general claim).
+
+**Pf.**
+$$
+\text{qubit}\to\text{bit}:\ \ \mathrm{A1}:\ \mathcal H_q\cong\mathbb C^2;\ \ \mathrm{A2}:\ C(p,q)=1\mathfrak q;\ \ \mathrm{CT0.6}:\ C_{\mathrm{cap}}=4\ \text{bits}\ (16\ \text{states});\ \ \mathrm{A4}/\mathrm{CT0.1}:\ \text{dichotomy};\ \ \mathrm{CT0.7}:\ \text{reality}=\text{swap grading}
+$$
+$$
+\mathrm{CT0.9}:\ \Phi=\{0,\pi\},\ \sigma_e\in\{\pm1\}:\ 1\ \text{bit per real edge}\ (\mathbb C^2\to\mathbb Z_2\ \text{reduction}:\ \text{primordial node-level entropy cost});\quad\mathrm{C9}:\ 1\ \text{bit}=\ln2\ \text{nats}
+$$
+$$
+N_{\mathrm{visible}}=\delta h(c)\ \text{bits};\qquad\mathrm{Def\text{-}H.2}\,/\,\mathrm{CT1.19}\ (\text{geodesic}):\ \delta h(c)=\Delta\ell(c)/(\Omega\,\mathfrak h)\ \ [\Omega\equiv1\ \text{in the table below}]
+$$
+$$
+\mathrm{D3.5}/\mathrm{EM.16},\ \mathrm{FT.9}\,(\alpha_{\mathrm{EM}}=\pi),\ \mathrm{FT.24}\,(\widehat{ds}^{\,2}\in\mathbb Z\ \text{on-shell}):\quad G^{(n)}(e)=\sigma_e\,(-1)^{\widehat{ds}^{\,2}(e)}\in\{\pm1\}:\ \text{one transit bit per materialized edge, factored into two register reads}
+$$
+$$
+\text{sign read}\ \sigma_e\to\text{charge (additive boundary read, EM.9)};\qquad\text{parity read}\ (-1)^{\widehat{ds}^{\,2}}\to\text{holonomy (cumulative read; per-edge}\ \alpha=\pi\ [\mathrm{FT.9}]\ \text{with on-shell integrality}\ [\mathrm{FT.24}/\mathrm{FT.25}])
+$$
+$$
+\text{bookkeeping}:\ \text{the per-edge visible datum is the product}\ G^{(n)}(e)\in\{\pm1\}\ —\ \text{one bit};\quad N_{\mathrm{visible}}=\delta h(c)\ \text{counts exactly these}\ [\mathrm{CT0.9}],\ \neg\text{the two factors separately}
+$$
+$$
+\sigma_e\ \text{and}\ (-1)^{\widehat{ds}^{\,2}(e)}\ \text{are its two factor registers}\ [\mathrm{CT0.9}\ \text{vs}\ \mathrm{FT.24}],\ \text{separately readable only where not cancelled by the other}:\ \text{signs at the ends}\ [\mathrm{EM.9}],\ \text{parity cumulatively}\ [\mathrm{D1.7}];\quad\text{the full geometric ledger}\ \kappa_e\in\mathbb Z\ [\mathrm{FT.24}]\ \text{exceeds the binary weight}
+$$
+$$
+\mathrm{FT.11}:\ \text{audit};\qquad\mathrm{FT.12}:\ \text{weak}\ \neg\text{charge};\qquad\mathrm{FT.13}:\ W_i=\text{spin}\implies N_{\mathrm{spin}}=N_{\mathrm{weak}}\ (\text{positive identification})
+$$
+$$
+N_{\mathrm{charge}}=N_{\mathrm{visible}}-N_{\mathrm{weak}}\quad(\text{decomposition})
+$$
+$$
+\text{metric dependence (general, }\Omega\ \text{restored)}:\ \ \Delta\ell=\Omega\sqrt{\bar g_{ij}\Delta x^i\Delta x^j},\ \ \Omega=e^{\alpha_\Omega a_{00}},\ \ a_{00}\leftrightarrow D^+\ [\mathrm{CT1.12},\mathrm{CT1.25}]\implies D^+\ \text{enters via}\ \Omega;\qquad\delta h(c)=\Delta\ell(c)/(\Omega\mathfrak h)\ \text{throughout — the table's}\ \Omega\equiv1\ \text{is a simplification, not the general relation}
+$$
+$$
+\mathfrak h\to0,\ \Delta\ell\ \text{fixed}:\ \ \text{charge}=\text{boundary effect}\ (O(1)\ \text{edge data});\ \ \text{spin}=\text{bulk}\ (\delta h-O(1)\to\infty)\implies f_{\mathrm{charge}}\to0,\ f_{\mathrm{spin}}\to1
+$$
+$$
+\textbf{rung-2 decomposition}\ (\text{Def-H.8 attribution};\ \text{counting}:\ \text{FT.41(a)},\ \text{forward}):\ \ N_{\mathrm{weak}}=\delta h(c)-2\ (\text{interior edges}),\ \ N_{\mathrm{charge}}=2\ (\text{end bits};\ \mathrm{EM.9}\ \text{reads exactly the two end signs})
+$$
+$$
+\begin{array}{c|c|c|c|c}
+\delta h(c) & \Delta\ell\ (\Omega\equiv1) & f_{\mathrm{charge}} & f_{\mathrm{spin}} & \text{content}\\ \hline
+2 & 2\mathfrak h & 1 & 0 & \text{pure charge}\\
+3 & 3\mathfrak h & 2/3 & 1/3 & \text{minimal spin}\\
+4 & 4\mathfrak h & 1/2 & 1/2 & \text{equal}\\
+\to\infty & \to\infty & \to0 & \to1 & \text{pure spin}
+\end{array}\qquad(\text{general}\ \Omega:\ \text{multiply the}\ \Delta\ell\ \text{column by}\ \Omega)\ \blacksquare
+$$
+
+**Phys.** The visible bit budget of a bound chain splits into charge (its two ends — a boundary effect) and spin (its interior — a bulk effect): long chains are dominated by spin, and the continuum limit is a spin/holonomy limit. The split is a positive identification via the complete force audit, not a subtraction residue.
+
+---
+
+---
+
+### Def-H.9 — Subnetwork coarse-graining projection
+
+**Def.** $\Sigma$ bounded subnetwork, designated terminus $v$ [Def-H.4]. $\mathcal M(\Sigma):=$ valid microscopic configurations (signs $\sigma_e$ [CT0.9], geometric data $\widehat{ds}^{\,2}(e)$ [D1.6] — integer on-shell [FT.24–FT.25], generic $O(1)$ real off-shell [CT1.19a] — subject to rung masks and Janus balance D1.3). Projection $\Pi_v:\mathcal M(\Sigma)\to\mathcal Q_v=(q,\mathbf S,m_{\mathrm{hid}})$:
+$$(1)\ \ q:=\tfrac12(\sigma_s-\sigma_t)\ [\mathrm{EM.9}];
+$$
+$$(2)\ \ E_{\mathrm{tot}}(C):=|\Sigma|\,\ln2,\quad|\Sigma|:=\#\{\text{real edges touching}\ \Sigma,\ \text{internal}+\text{boundary}\}\ \ (\text{ledger-retained bits, locked content included}\ [\mathrm{CT4.3}]);
+$$
+$$
+E_{\mathrm{vis}}(\gamma):=\min\bigl(\delta h(\gamma),\ 4\,\delta\tau(\gamma)\bigr)\ln2\ [\mathrm{FT.1}];\qquad
+I_{\mathrm{hid}}:=E_{\mathrm{tot}}-E_{\mathrm{vis}};\qquad
+m_{\mathrm{hid}}:=I_{\mathrm{hid}}/\mathfrak h;
+$$
+$$(3)\ \ \Theta_{\mathrm{int}}(C):=\!\!\sum_{e\in\Sigma\setminus\partial\Sigma}\!\!\widehat{ds}^{\,2}(e);\qquad
+\mathrm{Hol}_{\mathrm{int}}:=e^{i\pi\Theta_{\mathrm{int}}}=(-1)^{\Theta_{\mathrm{int}}}\in\{\pm1\}
+$$
+$$
+[\text{on-shell}\ \Theta_{\mathrm{int}}\in\mathbb Z\ \text{— derived from materialization, not postulated}:\ \mathrm{FT.25};\ \alpha=\pi:\ \mathrm{FT.9}];
+$$
+$$
+\mathbf S:\ \text{the}\ \mathfrak{su}(2)\ \text{Casimir label}\ j(j{+}1)\ \text{associated with}\ \mathrm{Hol}_{\mathrm{int}}\ \text{under the weak action}\ [\mathrm{FT.13}]\quad(\text{the extraction rule is application-layer content}).
+$$
+**Dimensional check.** $[I_{\mathrm{hid}}]=\mathfrak q^0$ (information); $[\mathfrak h]=\mathfrak q^{-1/2}$ [D2.9] $\Rightarrow[m_{\mathrm{hid}}]=\mathfrak q^{+1/2}=$ energy [CT2.1] $\checkmark$ (machine: `verify_H.py`).
+**Notation.** $m_{\mathrm{hid}}$ — the informational mass read — is kept symbolically distinct from the pole mass $m$ of D2.5/EW.19 ($m^2:=$ pole displacement): the two are different constructions, and their identification or relation is nowhere assumed in this document.
+
+---
+
+---
+
+### FT.15 — Coarse-graining invariance
+
+**Thm.** $C_1,C_2\in\mathcal M(\Sigma)$ sharing boundary signature $(\delta h,\delta\tau)$, boundary charge $q$, and $\Theta_{\mathrm{int}}$:
+$$
+\Pi_v(C_1)=\Pi_v(C_2)\qquad(\text{invariance under internal rearrangement}).
+$$
+
+**Req.** Def-H.9; EM.9 (Part 2); FT.1; FT.13. The $\mathbf S$ clause additionally requires FT.25's on-shell scope for $\Theta_{\mathrm{int}}$ ($\mathrm{Hol}_{\mathrm{int}}$ well-definedness); the $q,m_{\mathrm{hid}}$ clauses do not.
+
+**Pf.**
+$$
+q=\tfrac12(\sigma_s-\sigma_t):\ \text{boundary signs only}\ [\mathrm{EM.9}]\implies q(C_1)=q(C_2)
+$$
+$$
+m_{\mathrm{hid}}=(|\Sigma|\ln2-E_{\mathrm{vis}})/\mathfrak h:\ \ |\Sigma|\ \text{fixed volume datum};\ E_{\mathrm{vis}}=f(\delta h,\delta\tau)\ [\mathrm{FT.1}]\implies m_{\mathrm{hid}}(C_1)=m_{\mathrm{hid}}(C_2)
+$$
+$$
+\mathbf S\ \text{from}\ \mathrm{Hol}_{\mathrm{int}}=(-1)^{\Theta_{\mathrm{int}}}\ [\mathrm{FT.25}]:\ \Theta_{\mathrm{int}}(C_1)=\Theta_{\mathrm{int}}(C_2)\implies\mathbf S(C_1)=\mathbf S(C_2)\ \ (\text{same weak action},\ \mathrm{FT.13})
+$$
+$$
+\implies\Pi_v\ \text{depends only on}\ (\delta h,\delta\tau,\sigma_s,\sigma_t,\Theta_{\mathrm{int}}):\ \neg\text{internal topology},\ \neg\text{phase distribution}.\ \blacksquare
+$$
+
+**Cor FT.15.1 (self-averaging).** $(q,\mathbf S,m_{\mathrm{hid}})$ are the unique self-averaging macroscopic observables of $\Sigma$: as temperature depends only on total kinetic energy, invariant under permutation of molecular velocities, the fermionic quantum numbers depend only on boundary channel capacity and total internal holonomy — invariant under permutation of individual internal edge phases.
+
+**Phys.** A coarse-grained fermion forgets everything about its internal wiring except three numbers: its boundary charge, its hidden-information mass, and (on-shell, FT.25) a spin label built from total internal holonomy. Two microscopically different internal configurations that agree on boundary data and total holonomy are the same particle from outside — coarse-graining here plays exactly the role bulk thermodynamic variables play for a gas of molecules.
+
+---
+
+---
+
+### FT.16 — The single-vertex hidden-information gap is generic; strong's signature is contraction-incompleteness
+
+**Thm.** $v$ observed by a single neighbour through one incident edge ($\delta\tau\ge1$):
+$$
+I_{\mathrm{hid}}(\{v\})=(n(v)-1)\ln2\qquad(\text{aspect-blind});
+$$
+$\neg$strong-specific (nonzero already at $n=2$, where strong $\notin\mathcal A(2)$ [CT0.13]); strong's distinguishing signature is structural: contraction-completeness [CT3.17/18/22], $\neg$ a bit count.
+
+**Req.** CT0.6, CT0.9, CT0.13 (Part 1); CT1.29 (Part 2); CT3.17, CT3.18, CT3.22 (Part 2); D3.3, D3.9; Def-H.1, Def-H.9; FT.1, FT.10.
+
+**Pf.**
+$$
+\Sigma=\{v\},\ n(v)=n:\ \ E_{\mathrm{tot}}=n\ln2\ [\mathrm{Def\text{-}H.9};\ 1\ \text{bit per incident edge},\ \mathrm{CT0.9}]
+$$
+$$
+o\ \text{single neighbour}:\ \gamma=\{1\ \text{edge}\},\ \delta h=1:\ \ E_{\mathrm{vis}}=\min(1\cdot\ln2,\ \delta\tau\cdot4\ln2)=\ln2\ (\delta\tau\ge1)\ [\mathrm{FT.1}]
+$$
+$$
+\implies I_{\mathrm{hid}}=(n-1)\ln2;\qquad n=1,2,3,4:\ 0,\ \ln2,\ 2\ln2,\ 3\ln2
+$$
+$$
+n=2:\ I_{\mathrm{hid}}>0\ \wedge\ \mathrm{strong}\notin\mathcal A(2)\ [\mathrm{CT0.13}]\implies I_{\mathrm{hid}}\ \text{aspect-blind}\ (\text{Def-H.1 locality})
+$$
+$$
+\text{full access}:\ \delta h=n:\ \ E_{\mathrm{vis}}=\min(n,4\,\delta\tau)\ln2\overset{n\le3,\ \delta\tau\ge1}{=}n\ln2=E_{\mathrm{tot}}\implies I_{\mathrm{hid}}\to0\ \ \forall\ \text{accessible rung}\ [\mathrm{CT0.6}:\ O(n)=0]
+$$
+$$
+\text{asymmetry}\ [\mathrm{CT3.22},\ \mathrm{CT3.18}]:\ \ F_{\mathrm{EM}}\ \text{at}\ v=f_v\ (\text{own two signs};\ \text{complete locally},\ \mathrm{D3.3});
+$$
+$$
+\text{colour at}\ v:\ \text{physical only contracted}\ (\delta^i{}_j,\varepsilon_{ijk},\varepsilon^{ijk};\ \text{baryon}:3\ \text{triplets},\ \text{meson}:\ 3\oplus\bar3\ [\mathrm{D3.9}]);\ \ \text{isolated triplet}:\ \text{norm}\ 0,\ \neg\text{pole}\ [\mathrm{CT3.22}]
+$$
+$$
+\implies I_{\mathrm{hid}}\ \neg\text{carvable per-aspect by subtraction (aspect-blind; vanishes under full access)};\qquad
+\text{strong's signature}=\text{contraction-completeness}\ (\text{constructed: Def-H.10},\ \mathrm{FT.18}\text{--}\mathrm{FT.19}).\ \blacksquare
+$$
+
+**Phys.** Hidden information at a vertex is generic bookkeeping, not a force fingerprint: it vanishes under full local access for every accessible rung. What genuinely distinguishes the strong sector is that its observables are incomplete until contracted against partners possibly outside the object — the seed of confinement as an information-theoretic property.
+
+---
+
+---
+
+### Def-H.35 — Channel-visible content (the boundary-transport read)
+
+**Def.** $\Sigma$ a finite vertex set; $o\notin\Sigma$ a single external vertex whose only contact is its own incident edges into $\Sigma$, so $\gamma(o,\Sigma)=E_{\mathrm{bd}}$ [Def-H.1], over an interval $(\delta h,\delta\tau)$ [D0.6, D0.7]. The **channel-visible content** of $\Sigma$ to $o$ is the boundary registration sum
+$$
+E_{\mathrm{vis}}(\gamma)\ :=\ \sum_{e\in E_{\mathrm{bd}}}1\ \text{bit}\ =\ |E_{\mathrm{bd}}|\ln2\ \ \text{nats}\qquad[\mathrm{CT0.9}:\ 1\ \text{real edge}=1\ \text{bit};\ \mathrm{D1.1}:\ \text{registrations are classical edge data};\ \mathrm{C9}],
+$$
+attained whenever a hop schedule within the channel capacity exists [$\delta h\le4\,\delta\tau$ jaw, CT0.6a; attainment on boundary sets: FT.153]. $I_{\mathrm{hid}}:=E_{\mathrm{tot}}-E_{\mathrm{vis}}$ [Def-H.9(2)] is evaluated with $E_{\mathrm{vis}}$ of this definition.
+**Locus-separation clause (constitutive).** Two distinct reads exist in the corpus and are never interchanged:
+$(1)$ **the edge-transport read** (this definition): content carried across a boundary edge by a hop. A hop reads only the edge's own registration [D1.9: tick/transport locality — $\operatorname{dom}\subseteq\{v\}\cup\{e\ni v\}$, pre/post-tick data only, $\neg\exists$ read at edge-distance $>1$]; the registration lives in the pair channel of the edge's endpoints [A2: $C(p,q)=1\mathfrak q$ per pair; CT0.4: real $=$ registered].
+$(2)$ **the vertex-access read** [CT4.9(1)]: content accessible *at* a vertex $v$ — capped, $S(v)\le3\ln2$ for accessible $v$ ($n\le3$ [CT0.11]); at locked $v$ ($n\ge4$) the excess is absorbed and retained in the ledger [CT4.1, CT4.3, D4.2: retained, $\neg$accessible; D1.11].
+The cap of $(2)$ bounds reads at vertices; it does not bound transports across edges: a locked boundary vertex retains its excess under $(2)$ while each incident real boundary edge carries its own pair-channel registration under $(1)$. The two reads answer different questions — “what can $o$ receive through $\gamma$” versus “what is accessible at $v$” — and every theorem states which it uses.
+
+---
+
+### FT.153 — Boundary-schedule attainment
+
+**Thm.** Single-contact setting [Def-H.35]: $\gamma(o,\Sigma)=E_{\mathrm{bd}}$, $\delta h(\gamma)=|E_{\mathrm{bd}}|$. If $|E_{\mathrm{bd}}|\le4\,\delta\tau(\gamma)$ [CT0.6a capacity jaw], then a valid transit configuration $\gamma'\subseteq\gamma$ exists whose hop schedule carries every boundary registration within $\delta\tau$ ticks at $\le4$ hops/tick; hence
+$$
+E_{\mathrm{vis}}(\gamma)=|E_{\mathrm{bd}}|\ln2=\min\bigl(\delta h(\gamma),\,4\,\delta\tau(\gamma)\bigr)\ln2=\mathsf B(\gamma)\qquad[\mathrm{FT.1}'\text{s bound met with equality};\ \mathrm{Def\text{-}H.3}'\text{s sup attained}],
+$$
+regardless of the lock status of the boundary vertices. On channels whose edges are bound-locked in every configuration the transit domain is empty and the received content is $0$ (attainment vacuous; the bound trivially valid) [FT.36(2) clause].
+
+**Req.** Def-H.1, Def-H.3, Def-H.35; A2; D0.10, D1.1, D1.5, D1.9; CT0.4, CT0.6a, CT0.9 (Part 1); CT4.3 (Part 2); EM.5, EM.6, EM.7 (Part 2); FT.1; the schedule construction generalized by FT.36(2) (forward pointer, Tier F.13).
+
+**Pf.**
+$$
+E_{\mathrm{bd}}=\{e_1,\dots,e_m\},\ m\le4\,\delta\tau:\ \text{partition into}\ \lceil m/4\rceil\le\delta\tau\ \text{per-tick groups of}\ \le4
+$$
+$$
+\text{per group: run transit (photon) content on the group's edges}\ [\mathrm{EM.5},\mathrm{EM.6}:\ \text{trivial chains}\subseteq V_2\ \text{valid transit content};\ \mathrm{D1.5}:\ \text{open propagating}=\text{transit};\ \mathrm{D0.10}:\ \mathfrak C(\mathcal R)\ \text{admits transit assignments}]
+$$
+$$
+\text{each hop carries its edge's registration bit}\ [\mathrm{CT0.9};\ \mathrm{D1.1}];\qquad\text{hops read edge data only}\ [\mathrm{D1.9}]:\ \neg\text{vertex read invoked}\implies\text{lock status of endpoints irrelevant to the transport}\ [\mathrm{Def\text{-}H.35}\ \text{locus separation};\ \mathrm{CT4.3}:\ \text{retained excess stays ledger-internal}]
+$$
+$$
+\mathsf E_{\mathrm{tr}}(\gamma')=m\ln2\ [\mathrm{EM.7}\ \text{additive}];\qquad\mathrm{FT.1}:\ \sup\le\min(m,4\,\delta\tau)\ln2=m\ln2;\qquad\text{construction attains}\ \implies E_{\mathrm{vis}}=m\ln2.\ \blacksquare
+$$
+
+**Phys.** The channel bound is not merely valid on boundary sets but reached: the observer receives the full boundary registration sum, scheduled at channel speed — four bits per tick — and vertex locks eat none of it, because a hop reads its edge and never its vertex. This is the attainment half of the internal-edge lemma's hypotheses; FT.36(2) generalizes the same construction to arbitrary channels.
+
+---
+
+### FT.17 — Internal-edge lemma
+
+**Thm.** $\Sigma$ finite vertex set; $o\notin\Sigma$ a single external vertex whose only contact is its own incident edges into $\Sigma$ (so $\gamma(o,\Sigma)=$ the $E_{\mathrm{bd}}$ boundary edges; no internal edges). Hypotheses: $E_{\mathrm{bd}}\le4\,\delta\tau(\gamma)$ [channel-capacity jaw, CT0.6a: the channel does not clip $o$'s view]; channel-visible content per Def-H.35's edge-transport read, attained by FT.153. Then
+$$
+I_{\mathrm{hid}}(\Sigma)=E_{\mathrm{int}}\,\ln2\qquad(\text{exactly; aspect-blind}).
+$$
+
+**Req.** CT0.6, CT0.9 (Part 1); CT1.29 (Part 2); CT4.2, CT4.3, CT4.9 (Part 2); D4.2; Def-H.1, Def-H.9; FT.1.
+
+**Pf.**
+$$
+\mathrm{Def\text{-}H.9}\ (|\Sigma|=\text{internal}+\text{boundary}:\ \text{internal-only reading gives}\ I_{\mathrm{hid}}<0\ \text{on proper sub-selections}):\quad E_{\mathrm{tot}}=(E_{\mathrm{int}}+E_{\mathrm{bd}})\ln2\ [\mathrm{CT0.9}/\mathrm{CT1.29}\ \text{counting};\ \text{locked content retained},\ \mathrm{CT4.3}]
+$$
+$$
+\delta h(\gamma)=E_{\mathrm{bd}};\qquad E_{\mathrm{vis}}=\min\bigl(E_{\mathrm{bd}},\ 4\,\delta\tau\bigr)\ln2\overset{\text{hyp}}{=}E_{\mathrm{bd}}\ln2\ (\delta\tau\ge1)
+$$
+$$
+\text{hyp 2 (Def-H.35)}:\ E_{\mathrm{vis}}=\text{actual accessible content}\ (\neg\text{merely an upper bound})
+$$
+$$
+I_{\mathrm{hid}}=E_{\mathrm{tot}}-E_{\mathrm{vis}}=(E_{\mathrm{int}}+E_{\mathrm{bd}})\ln2-E_{\mathrm{bd}}\ln2=E_{\mathrm{int}}\ln2.\ \blacksquare
+$$
+
+**Cross-checks** (independently computed; machine: `verify_H.py`):
+1. Oriented 3-cycle, external observer: $E_{\mathrm{int}}=3$, $E_{\mathrm{bd}}=1\le4\cdot1\ \checkmark\Rightarrow I_{\mathrm{hid}}=3$ bits.
+2. Bidirectional 3-vertex face $\{A,B,C\}$ of the bidirectional $K_4$ ("tetrahedron", $n(v)=6$), observed by $D$: $E_{\mathrm{int}}=6$, $E_{\mathrm{bd}}=6$: hypothesis requires $\delta\tau\ge2$ ($6\le4\cdot2=8$). Vertices oversubscribed ($n=6\ge4$): their excess is locked but *retained* [CT4.3, D4.2] and counted in $E_{\mathrm{tot}}$; Def-H.35's locus separation concerns channel-visible content only. $I_{\mathrm{hid}}=6$ bits.
+3. Asymmetric single-point contact (whole $K_4$, $\Sigma=\{A,B,C,D\}$, external $o$ joined only to $A$ by one bidirectional pair): $E_{\mathrm{int}}=\binom42\times2=12$, $E_{\mathrm{bd}}=2\le4\cdot1\ \checkmark$; $A$'s own accessible content 2 bits $<3$ [CT4.9] $\checkmark\Rightarrow I_{\mathrm{hid}}=12$ bits, $m_{\mathrm{hid}}=12\ln2/\mathfrak h$ [Def-H.9]. *(note [FT.62(4)]: at the corrected directed rung $n(A)=8$ the contact vertex is locked; the per-vertex-cap check is carried by Def-H.35's locus separation and CT4.3 retention — $I_{\mathrm{hid}}=12$ bits unchanged.)*
+
+**Rmk (where the $I_{\mathrm{hid}}$ comes from).** Not $D^-$ (binding constraint is the channel bound, reached before per-vertex caps bind) and not colour (the algebra never references $\mathcal A(n)$): $I_{\mathrm{hid}}$ — and hence $m_{\mathrm{hid}}=I_{\mathrm{hid}}/\mathfrak h$ — is exactly $\Sigma$'s own internal connectivity, invisible to any single exterior observer by Def-H.1 alone. A purely topological fact, prior to any question of which forces act where. Cross-check 3 shows independence of contact distribution.
+
+**Phys.** Mass, in this reading, is nothing but the information a single external vantage point cannot recover about a subnetwork's inside — a topological fact about connectivity, not a substance. The three cross-checks show the same total hidden content surviving no matter how the internal edges are arranged or where the single external contact point sits, as long as the channel-capacity hypothesis holds: hiddenness here is a property of the boundary/interior split, not of any particular internal configuration.
+
+---
+
+---
+
+---
+
+
+## Tier F.5b — The Mass-Read Registry and the Tilt Composition
+
+### Def-H.39 — The mass-read registry; bridge slots
+
+**Def.** The corpus's mass reads form a registry of species; a **bridge** between two species is a map carrying a dimensional factor (a power of $\mathfrak h$) and a numeric coefficient. The registry records the loci; no bridge is constructed, and none may be silently assumed. **Nomenclature rule.** Every occurrence of *mass* in this corpus names one read of this registry at the species declared at its locus; no unqualified *mass* crosses species; a computed variant value is a *price* — an exact named functional of the declaring data — and $\neg$a mass read.
+$$(1)\ \text{informational}:\quad m_{\mathrm{hid}}=I_{\mathrm{hid}}/\mathfrak h\qquad[\mathrm{Def\text{-}H.9}(2);\ \mathrm{FT.16},\mathrm{FT.17};\ \ [m_{\mathrm{hid}}]=\mathfrak q^{+1/2}];$$
+$$(2)\ \text{pole/defect}:\quad m^2_{\mathrm{pole}}\qquad[\mathrm{Def\text{-}H.37}\ \text{— forward pointer, Tier F.17};\ \mathrm{D2.5}\ \text{vocabulary};\ \ [m^2_{\mathrm{pole}}]=\mathfrak q];$$
+$$(3)\ \text{inertial/tilt — the Lyapunov-contraction read}:\quad m_i^2(q)=\Delta S(q)\qquad[\mathrm{L3}(4),\mathrm{L4};\ \text{Part 1: the deficit accumulated under the L1 contraction law};\ \text{dimensionless nats}];$$
+$$(4)\ \text{sector-expectation}:\quad m^2_B(q,S)\qquad[\mathrm{Def\text{-}H.32}(6)\ \text{— forward pointer, Tier F.36};\ \text{dimensionless nats}];$$
+$$(5)\ \text{1-loop}:\quad m_i^2=V_{\mathrm{eff}}(\varepsilon_q^{(i)})/8\qquad[\mathrm{Def\text{-}H.31}(6)\ \text{— forward pointer, Tier F.35};\ \mathrm{L3}(2):\ V=8\,\Delta S;\ \text{dimensionless nats}].$$
+**Bridge slots.** $\beta_{31}$ (inertial$\leftrightarrow$informational): unconstructed — a construction must supply the power of $\mathfrak h$ and the per-edge numeric coefficient reconciling L4's deficits (exact rationals, state-dependent: the branch-state values $(\tfrac34,\tfrac1{12})$ [FT.107(2) — forward pointer]) with FT.17's $\ln2$-per-hidden-bit count; the read-identification locus (“the same object read differently”, at pair level versus subnetwork level) is this slot. $\beta_{21}$, $\beta_{23}$ (pole$\leftrightarrow$informational / inertial): the relating-equation locus. **Kind discipline:** a dimensionless-nats read and a dimensionful read are comparable only through a constructed $\beta$ [FT.89(2) — forward pointer]; any quantitative use of a bridge requires its construction first.
+**Ceilings (derived; cited at use).** Species (2): $m^2_{\mathrm{pole}}\in[0,4\hat\mu'^2]$ [FT.76(3) — forward pointer]; the cover-ladder read $K=2|\mathcal C|\le3V/2$ [FT.79(2) — forward pointer]; the form-factor species $M\le c_wV$ [FT.97(5) — forward pointer]; species (5): bare range linear in cell size, composed-tilt range exponential in $E_{\mathrm{int}}$ under Def-H.40 [FT.104(2) — forward pointer]; species (4): $\le\tfrac32B(B-1)$, quadratic in budget [FT.107(4) — forward pointer].
+
+---
+
+### Def-H.40 — Chain-level tilt composition
+
+**Def.** Let $c$ be a materialized bound chain / floor with $E_{\mathrm{int}}$ internal edges [Def-H.9]. Ledger facts (derived): every internal edge entered $\mathcal R$ through exactly one $J^+$ seal [D1.2: crystallization $n_{\mathcal R}:0\to1$; D1.4: chain edges $\in E_{\mathcal R}$]; every A4 crystallization event applies exactly one Gibbs tilt step to the pair state of that event [L0(2), its declared theorem-local dynamical scope]; the ledger counts tilt steps [L0(4)].
+**Composition clause (constitutive scope).** The tilt steps of $c$'s sealing history compose on one chain-level aggregate state object — the per-event iteration of L0(4)'s $k$-event law — giving the chain's Lyapunov composition
+$$
+V_{E_{\mathrm{int}}}\ :=\ \bigl(1-\tfrac\gamma4\bigr)^{2E_{\mathrm{int}}}V_0\qquad[\mathrm{L2}\ \text{per-step law iterated};\ \gamma=1-4\varepsilon_q\in(0,1],\ \mathrm{D0.3};\ \mathrm{CT0.8}],
+$$
+sharp point $\gamma=1$ (D0.4): $\ V_{E_{\mathrm{int}}}=(\tfrac9{16})^{E_{\mathrm{int}}}V_0$ [exact rationals, L2].
+**Read.** The fermion-mass read of the contraction rate is species (3) of Def-H.39 [L3(4): $m_i^2=\Delta S$]; its composed range is the exponential species of Def-H.39's ceiling row [FT.104(2)].
+**Scope clauses.** (i) The aggregate state object is this definition's sole non-derived locus: the inventory's states are pair states [A1]; L0(4) proves the $k$-event iteration on one pair channel; the chain-level aggregate extends that iteration to the chain's sealing history. (ii) No calibration claim: no datum fixes $(\tfrac9{16})^{E_{\mathrm{int}}}$ to any observed hierarchy [P1, P5]. (iii) No particle-family identification [FT.77, FT.79(4)–(6); Census FT.84(2)]. (iv) The read is dimensionless nats; comparison with dimensionful species requires Def-H.39's $\beta$ slots.
+
+---
+
+### FT.154 — The tilt-composition law
+
+**Thm.** Under Def-H.40, for a materialized bound chain with $E_{\mathrm{int}}$ internal edges and tilt strength $\gamma\in(0,1]$:
+$$(1)\quad\textbf{event count:}\ \ \text{the chain's tilt-step count is exactly}\ E_{\mathrm{int}};$$
+$$(2)\quad\textbf{per-step contraction:}\ \ V'=\bigl(1-\tfrac\gamma4\bigr)^2V+O(\delta\rho^3)\qquad[\mathrm{L2}];$$
+$$(3)\quad\textbf{composition:}\ \ V_{E_{\mathrm{int}}}=\bigl(1-\tfrac\gamma4\bigr)^{2E_{\mathrm{int}}}V_0\ \text{with per-step remainders accumulated};\qquad\gamma=1:\ \ V_{E_{\mathrm{int}}}=\bigl(\tfrac9{16}\bigr)^{E_{\mathrm{int}}}V_0;$$
+$$\text{eigenvalue composition:}\ \ \mu_k=\bigl(1-\tfrac\gamma4\bigr)^k\mu_0+O(\mu_0^2)\ \ \text{after}\ k\ \text{recorded events}\qquad[\mathrm{L0}(4)];$$
+$$(4)\quad\textbf{range consequences:}\ \ \text{the composed read's spans and thresholds are the exact arithmetic of}\ \bigl(\tfrac{16}9\bigr)^{E_{\mathrm{int}}}\ \text{tabulated at}\ \mathrm{FT.104}(2)\ (\text{forward pointer, Tier F.35}).$$
+
+**Req.** Def-H.40; Def-H.9 ($E_{\mathrm{int}}$); D0.3, D0.4, D1.2, D1.4; CT0.8; L0(1), L0(2), L0(4); L2; L3(4) (Part 1); exact rational arithmetic.
+
+**Pf.**
+$$
+(1):\ e\ \text{internal}\implies e\in E_{\mathcal R}\ [\mathrm{D1.4}]\implies e\ \text{crossed the A4 criterion once, at its}\ J^+\ \text{seal}\ [\mathrm{D1.2}:\ n_{\mathcal R}:0\to1;\ \mathrm{CT0.3}:\ \text{seal increments}]
+$$
+$$
+\mathrm{L0}(2):\ \text{one tilt step per event};\qquad\mathrm{L0}(4):\ |\mathfrak L(\tau_n)|=\textstyle\sum_{k<n}n_{\mathrm{real\_out}}(\tau_k)\ \text{is the tilt-step count}\ [\text{exact integer recursion},\ \mathrm{A6},\mathrm{A7}];\qquad\text{Def-H.40's aggregate scope composes the chain's sealing history}\implies\#\text{steps}=E_{\mathrm{int}}
+$$
+$$
+(2):\ \mathrm{L2}\ \text{verbatim}:\ V'-V=-\tfrac{\gamma(8-\gamma)}{16}V+O(\delta\rho^3)=-[1-(1-\tfrac\gamma4)^2]V+O(\delta\rho^3)
+$$
+$$
+(3):\ \text{iteration of}\ (2)\ E_{\mathrm{int}}\ \text{times under Def-H.40's composition clause}\ [\mathrm{L0}(4):\ \tilde{\mathcal T}_\gamma^{\,k}\ \text{composition};\ \text{interleaved Haar draws spectrally inert},\ \mathrm{L0}(1)];\qquad\gamma=1:\ (1-\tfrac14)^2=\tfrac9{16}\ [\mathrm{L2};\ \text{exact rationals}]
+$$
+$$
+\mu_k:\ \mathrm{L0}(4)\ \text{verbatim (induction on L2's}\ \mu'=(1-\tfrac\gamma4)\mu+O(\mu^2))
+$$
+$$
+(4):\ \text{arithmetic table of}\ \mathrm{FT.104}(2)\ \text{re-cited};\ \text{its thresholds}\ E_{\mathrm{int}}\ge16/27/35/42\ \text{and the proportionality obstruction are computed there under this law}.\ \blacksquare
+$$
+
+**Phys.** The ledger gives a chain exactly one contraction event per internal edge, and each event contracts by an exact rational factor — so the geometric law $(\tfrac9{16})^{E_{\mathrm{int}}}$ at sharp crystallization is seal arithmetic, not a fitted model: the count comes from the ledger recursion, the factor from the tilt's exact leading law, and the definition supplies only the aggregate on which the count composes. The mass interpretation of the rate is the registry's inertial species; the exponential range it buys is priced, with its obstruction, at FT.104(2).
+
+---
+
+
+## Tier F.6 — Subnetwork-Level Force Structure: Confinement and the Active Aspect Set
+
+### FT.18 — Contraction-completeness is not $\Sigma$-local
+
+**Thm.** $\Sigma\supseteq\{v_1,v_2,v_3\}$ triplet-carrying [D3.8], no antitriplet in $\Sigma$. $\exists\,C,C'\in\mathcal M(U)$ [D2.11] with $C|_\Sigma=C'|_\Sigma$ (identical restriction) such that $\mathcal C(\Sigma;C)=1$ and $\mathcal C(\Sigma;C')=0$ [Def-H.10]. Contraction-completeness is $\neg$ a function of $\mathcal M(\Sigma)$ alone.
+
+**Req.** A1; D2.11, D3.8, D3.9; CT3.17, CT3.18 (Part 2); **hypothesis (stated, not derived from A1 alone):** $U\setminus\Sigma$ contains further triplet carriers $w_1,w_2$ available to seal with $v_1$ — A1's countable infinitude of $\mathcal Q$ secures infinitely many vertices but not that any are unsealed triplet carriers positioned to form $C'$; this is an additional genericity assumption.
+
+**Pf.**
+$$
+U\setminus\Sigma\ \text{contains further triplet carriers}\ w_1,w_2\ [\text{hypothesis, above}]
+$$
+$$
+C:\ \{v_1,v_2,v_3\}\ \text{sealed as one baryon}\ \varepsilon_{ijk}q_1^iq_2^jq_3^k\ \text{inside}\ \Sigma\ [\mathrm{D3.9}]:\ \text{valid}\ [\mathrm{CT3.18}];\ \ \partial_{\mathrm{col}}(\Sigma;C)=\varnothing
+$$
+$$
+C':\ v_1\ \text{sealed with}\ w_1,w_2\notin\Sigma;\ \ v_2,v_3\ \text{sealed elsewhere in}\ U\setminus\Sigma:\ \text{equally valid};\ \ \pi_{C'}(v_i)\not\subseteq\Sigma\ \forall i\implies\partial_{\mathrm{col}}(\Sigma;C')=\{v_1,v_2,v_3\}
+$$
+$$
+C|_\Sigma=C'|_\Sigma\ (\text{same vertices, edges, attachments, local entries})\implies\mathcal C\ \text{undetermined by}\ \Sigma\text{-local data}.\ \blacksquare
+$$
+
+**Rmk.** The colour-sector analogue of D2.11's dangling-boundary condition being a *global* fact: whether an end is sealed depends on whether its partner exists somewhere — no $\Sigma$-local inspection certifies it.
+
+**Phys.** Whether a colour-carrying vertex reads as "confined within $\Sigma$" or "open toward the rest of $U$" is not a fact about $\Sigma$'s own microstate at all — it is a fact about the ambient universe's contraction pattern, which $\Sigma$-local data cannot see. Confinement bookkeeping is therefore irreducibly non-local in exactly the sense D2.11 already makes boundary-sealing non-local.
+
+---
+
+---
+
+### Def-H.10 — Colour boundary and the contraction-completeness projector
+
+**Def.** $C\in\mathcal M(U)$ valid. For $v\in\mathrm{Colour}(U):=\{u\in\mathcal Q:\ u\ \text{carries a colour attachment}\ [\mathrm{D3.8}]\}$, let $\pi_C(v)\subseteq\mathrm{Colour}(U)$ be the other members of $v$'s elementary invariant contraction group under $C$ (one for a meson pair via $\delta^i{}_j$; two for a (anti)baryon triple via $\varepsilon_{ijk}/\varepsilon^{ijk}$). $\pi_C$ total on $\mathrm{Colour}(U)$ for valid $C$ [CT3.18 + D2.11 applied to the colour ledger]. For $\Sigma$: $\mathrm{Colour}(\Sigma):=\mathrm{Colour}(U)\cap\Sigma$;
+$$
+\partial_{\mathrm{col}}(\Sigma;C):=\{v\in\mathrm{Colour}(\Sigma):\ \pi_C(v)\not\subseteq\Sigma\};\qquad
+\mathcal C(\Sigma;C):=\begin{cases}1&\partial_{\mathrm{col}}(\Sigma;C)=\varnothing\\ 0&\text{otherwise}\end{cases};
+$$
+$$
+\Pi_{\mathcal C}(\Sigma;C):=\mathcal C(\Sigma;C)\cdot\mathbb I_\Sigma^{(\mathrm{strong})}\qquad(\text{Hermitian idempotent};\ \text{matches}\ \mathcal P_M^{(n)}\ [\mathrm{CT0.14}]\ \text{and}\ \Pi_v\ [\mathrm{Def\text{-}H.9}]).
+$$
+**Rmk (why $\mathcal C$ is defined on $\pi_C$).** A predicate counting only $\mathcal M(\Sigma)$-internal data is insufficient (FT.18): $\mathcal C$ is defined on the contraction partners $\pi_C$ — manifestly a function of the ambient configuration $C$, not of $\mathcal M(\Sigma)$ alone.
+
+---
+
+---
+
+### FT.19 — Confinement is an all-or-nothing subnetwork property
+
+**Thm.**
+$$
+F_{\mathrm{strong}}^\Sigma(C):=\Pi_{\mathcal C}(\Sigma;C)\,F_{\mathrm{strong}}\big|_\Sigma\,\Pi_{\mathcal C}(\Sigma;C);\qquad
+\mathcal C(\Sigma;C)=0\implies F_{\mathrm{strong}}^\Sigma(C)=0
+$$
+— regardless of how many colour-carrying vertices $\Sigma$ contains, and even if $|\partial_{\mathrm{col}}(\Sigma;C)|=1$.
+
+**Req.** Def-H.9, Def-H.10; CT2.5, CT2.8 (Part 2); CT3.2, CT3.18, CT3.22 (Part 2); D3.1.
+
+**Pf.**
+$$
+\mathcal C=0:\ \exists v\in\mathrm{Colour}(\Sigma):\ \pi_C(v)\not\subseteq\Sigma\ [\mathrm{Def\text{-}H.10}]\implies v\ \text{has}\ \neg\text{partner inside}\ \Sigma:\ \text{uncontracted index relative to}\ \Sigma
+$$
+$$
+\mathrm{CT3.18}:\ \text{uncontracted index}=\text{dangling colour-ledger boundary}\implies\text{mask-excluded}\ (\text{same argument with}\ \Sigma\ \text{as ambient})
+$$
+$$
+\mathrm{CT3.22}:\ \text{excluded}\implies\neg\text{pole}\ [\mathrm{CT2.5}]\ \wedge\ \text{physical norm}\ 0\ [\mathrm{CT2.8}]:\ v\text{'s}\ \Sigma\text{-restricted colour state}=\text{null vector}
+$$
+$$
+\Sigma\text{'s colour sector}=\bigotimes_{\mathrm{Colour}(\Sigma)}\ (\text{slot spaces})\ [\mathrm{D3.1},\mathrm{CT3.2}]:\ \text{one null factor}\implies\text{whole product null}\implies F_{\mathrm{strong}}\big|_\Sigma\text{'s matrix elements vanish}
+$$
+$$
+\implies\Pi_{\mathcal C}=0\implies F_{\mathrm{strong}}^\Sigma=0\cdot F_{\mathrm{strong}}\big|_\Sigma\cdot0=0.\ \blacksquare
+$$
+
+**Rmk.** Sharpens FT.16 step 4 to subnetworks: unlike EM's $f_v$ (additive, per-vertex local [D3.3, CT3.22]), strong's observability on $\Sigma$ is $\neg$gradable — one unsealed attachment anywhere zeroes $\Sigma$'s *entire* colour sector. No conflict with FT.15: the tuple $(q,\mathbf S,m_{\mathrm{hid}})$ never carried a strong component [FT.11]; $\mathcal C$ tracks admissibility, not a value.
+
+**Rmk (definition interface).** Def-H.9's $\mathcal M(\Sigma)$ is subject to rung masks $+$ Janus balance only, $\neg$ colour-sealing explicitly: an $\mathcal M(\Sigma)$-microstate with an incomplete attachment is not excluded by Def-H.9 yet has zero physical norm when $\Sigma$ is examined alone. Whether to weight $\mathcal M(\Sigma)$ by $\mathcal C(\Sigma;C)$ or keep $\Pi_{\mathcal C}$ as a downstream filter is **decided (FT.39(3))**: the downstream filter is the corpus-consistent placement — pre-weighting would delete physical EM/$G$/$H$ reads of valid ambient restrictions that seal outside $\Sigma$ [FT.18]; Def-H.9 stands unweighted.
+
+**Phys.** Strong interactions are the one place in this decomposition where a subnetwork cannot certify its own physical activity from what it contains: one dangling colour attachment anywhere zeroes the whole sector, regardless of how many other colour-carrying vertices sit safely paired inside $\Sigma$. This is stronger than the usual notion of a boundary effect — it is not that strong force is *weaker* at an unsealed boundary, it is that the entire subnetwork's colour amplitude vanishes identically.
+
+---
+
+---
+
+### Def-H.11 — Active aspect set of a subnetwork
+
+**Def.**
+$$
+\mathcal A(\Sigma;C):=\bigl\{A\in\mathbf F:\ A\ \text{contributes nonzero physically observable content to}\ \Sigma\text{'s coarse-grained description under}\ C\bigr\},
+$$
+read against two channels: nonzero value in $\Sigma$'s coarse-grained tuple $(q,\mathbf S,m_{\mathrm{hid}})$ [Def-H.9] (*charge-type*), or nonzero surviving support under $\Pi_{\mathcal C}(\Sigma;C)$ [FT.19] (*selection-type*: strong). Subnetwork analogue of D1.12's $\mathcal A(n)$: $\mathcal A(n)$ asks which aspects act nontrivially on one vertex's slot algebra; $\mathcal A(\Sigma)$ asks which survive coarse-graining and masking as observables on $\Sigma$ as a whole.
+
+---
+
+---
+
+### Def-H.36 — The scalar-row fold (the H read at $\Sigma$-level)
+
+**Def.** The coarse-grained tuple $(q,\mathbf S,m_{\mathrm{hid}})$ [Def-H.9] carries no independent H slot. The $\Sigma$-level observable content of the scalar-trace-mode aspect — $F_H=\operatorname{span}\{\Sigma\}$, $\dim F_H=1$ [A8, CT0.12] — is read through the mass component:
+$$
+\mathrm H\in\mathcal A(\Sigma;C)\iff\text{the G-row criterion holds}\ \bigl(I_{\mathrm{hid}}(\Sigma;o)\ne0\bigr)\qquad[\mathrm{FT.20}\ \text{table}].
+$$
+**Derived grounds (cited; the fold is the read convention this definition constitutes).** $H=h\,\Sigma$ [EW.13]; the scalar background enters the pole masses only via $M^2\propto h_0^2$ [EW.20, EW.33] — H's tuple-level contribution is via the mass read; $h_0$ remains a P4-class datum [P4].
+**Distinctness clause.** The fold is a read convention for the coarse-grained tuple, $\neg$ a block identification: $\mathcal K^{(H)}$ remains a distinct block inside $\mathcal K_\Sigma$ [Def-H.15 — forward pointer, Tier F.9; Census FT.28(4)].
+
+---
+
+### FT.20 — Reduction of $\mathcal A(\Sigma)$ to proven per-aspect criteria
+
+**Thm.**
+$$
+\begin{array}{c|c|c|c}
+\text{aspect} & \in\mathcal A(\Sigma;C)\iff & \text{locality} & \text{basis}\\ \hline
+\mathrm{EM} & \exists v\in\Sigma:\ f_v\ne0 & \Sigma\text{-local, additive} & \mathrm{D3.3},\ \mathrm{EM.9},\ \mathrm{CT3.22}\ \text{step 4}\\
+G\ (\text{mass}) & I_{\mathrm{hid}}(\Sigma;o)\ne0 & \text{observer-relative}\ (\text{inherits Def-H.9}) & \mathrm{Def\text{-}H.9},\ \mathrm{FT.16},\ \mathrm{FT.17}\\
+H & \text{folded into}\ G\ [\mathrm{Def\text{-}H.36}] & \text{as}\ G & \mathrm{EW.13},\ \mathrm{EW.20},\ \mathrm{EW.33}\\
+W\ (\text{spin}) & \Theta_{\mathrm{int}}(\Sigma)\ne0\implies\Sigma\setminus\partial\Sigma\ne\varnothing\ \ (\text{one-directional}) & \Sigma\text{-local, intrinsic} & \mathrm{Def\text{-}H.9}(3),\ \mathrm{FT.13},\ \mathrm{FT.25}\\
+D^+ & \text{never (independently)} & \text{uniform} & \mathrm{D4.3}\\
+D^- & \text{never (independently)} & — & \mathrm{CT4.4}\\
+J^\pm & \text{never} & \text{seals},\ \neg\text{charges} & \mathrm{CT0.7}\\
+\mathrm{strong} & \mathrm{Colour}(\Sigma)\ne\varnothing\ \wedge\ \mathcal C(\Sigma;C)=1 & \text{genuinely global} & \mathrm{Def\text{-}H.10},\ \mathrm{FT.19}
+\end{array}
+$$
+
+**Req.** FT.11, FT.13, FT.16–FT.19; Def-H.9–H.11; FT.25; all cited tags.
+
+**Pf.** All rows but strong $=$ FT.11's audit extended verbatim to general $\Sigma$ (their bases reference per-vertex/uniform facts only, never size or topology); $G=$ Def-H.9's mass definition (already general); $H=$ fold into the mass read [Def-H.36; grounds: EW.13 $H=h\Sigma$; EW.20/EW.33: $M^2\propto h_0^2$ — H's tuple-level contribution is via mass]; $W=$ Def-H.9(3): $\Theta_{\mathrm{int}}\ne0\implies\Sigma$ has $\ge1$ internal edge carrying nonzero $\widehat{ds}^{\,2}$ (converse fails: a sum of nonzero terms can cancel, so $\ge1$ internal edge does not imply $\Theta_{\mathrm{int}}\ne0$); strong $=$ FT.19. $\blacksquare$
+
+**Rmk (the point of the exercise).** Exactly one aspect — strong — requires genuinely non-$\Sigma$-local data for activity: confinement [CT3.22] is the only aspect-defining mechanism in the corpus requiring contraction against data possibly outside the object described [D3.9]. $J$ and $D^-$ never appear in $\mathcal A(\Sigma)$ despite local presence in $\mathcal A(n)$: they are structural/bookkeeping aspects (seals, locks), not observables — a distinction $\mathcal A(n)$'s representation-theoretic definition never needed, but observability-based $\mathcal A(\Sigma)$ must draw.
+
+**Phys.** Collapsing $\mathcal A(\Sigma)$ to per-aspect activity criteria makes explicit what kind of fact each force *is*: EM and mass/spin are things a subnetwork simply has, readable off its own boundary and interior; strong confinement is instead a fact about how $\Sigma$ sits inside the rest of the universe. This table is the subnetwork-level generalization of $\mathcal A(n)$ that the coarse-graining program needs next — the single-vertex active-aspect question, answered for arbitrary bounded regions.
+
+---
+
+---
+
+
+## Tier F.7 — The Coarse-Grained Slot Algebra: $\mathcal A(\Sigma)$ Properly Derived
+
+### Def-H.12 — Coarse-grained slot algebra
+
+**Def.** $\Sigma$ a bounded subnetwork, $\partial\Sigma:=\{e\in\mathcal R:\ e$ has exactly one endpoint in $\Sigma\}$ [D2.11/CT1.29 separating-surface reading, as already used in Def-H.9(2)/Def-H.10]. Let $N(\Sigma):=|\partial\Sigma|$. The **coarse-grained slot algebra** of $\Sigma$ is
+$$
+\mathcal H_{\mathrm{slot}}(\Sigma):=\operatorname{span}_{\mathbb C}\{|e\rangle:\ e\in\partial\Sigma\}\cong\mathbb C^{N(\Sigma)},
+$$
+one basis ket per boundary edge — the direct generalization of D3.1's "one ket per incident real edge," taken over $\Sigma$'s external interface in place of a single vertex's incident set.
+
+**Degenerate-case check ($\Sigma=\{v\}$).** $\Sigma=\{v\}$ has no internal edges [A1: $p\ne q$, no self-loops, so no edge has both endpoints in $\{v\}$] $\implies\partial\Sigma=$ the full incident edge set of $v$ $\implies N(\Sigma)=n(v)$ [D0.8] $\implies\mathcal H_{\mathrm{slot}}(\Sigma)=\mathcal H^{(n(v))}_{\mathrm{slot}}$ exactly [D3.1]. The construction specializes to the single-vertex slot algebra on the nose, not merely by analogy.
+
+**Rmk (relation to $N_{\mathrm{visible}}$).** At a single tick ($\delta\tau=1$), $\delta h(e)=1$ per real edge [CT0.9], so $N(\Sigma)=\delta h(\gamma(o,\Sigma))=N_{\mathrm{visible}}$ [FT.1, Def-H.9] for any single external observer whose channel is exactly $\partial\Sigma$: the slot-algebra dimension and the already-established externally-visible bit count coincide. No new counting primitive introduced.
+
+---
+
+---
+
+### Def-H.13 — Compositional bridge map $\iota_\Sigma$
+
+**Def.** For each $e\in\partial\Sigma$, let $w_e$ be $e$'s endpoint outside $\Sigma$, with its own rung $n(w_e)$, existing bridge map $\iota_{n(w_e)}$ [D2.12], and $e$'s own edge-local pair-channel decomposition [CT0.12, rung-independent, fixed 16-dim block]. Define $\iota_\Sigma:\mathfrak u(N(\Sigma))\to\mathcal K$ by requiring, on the slot direction $|e\rangle$, that $\iota_\Sigma$ **factor through** the pair $\bigl(\text{CT0.12's block for }e,\ \iota_{n(w_e)}\bigr)$:
+$$
+\iota_\Sigma\big|_{|e\rangle}:=\bigl(\text{CT0.12 pair-block map for }e\bigr)\,\otimes\,\iota_{n(w_e)}\qquad(e\in\partial\Sigma),
+$$
+extended linearly across $\partial\Sigma$. **No independent embedding is postulated**: every component of $\iota_\Sigma$ is inherited, edge-by-edge, from machinery that already exists at the single-edge (CT0.12) and single-vertex (D2.12) level.
+
+**"Strictly new at $\Sigma$" (generalizes D3.2).** A piece of $\mathfrak u(N(\Sigma))$ is strictly new at $\Sigma$ iff it does **not** factor through $\iota_\Sigma$ as defined above — i.e. iff it is a genuinely collective effect of $\Sigma$'s boundary edges taken together, not a sum/tensor of independent single-edge and single-vertex facts already accounted for at lower structural levels. This is the precise sense in which the coarse-graining machine treats $\Sigma$ "as a single quantum object": an aspect belongs to $\mathcal A(\Sigma)$ properly only if its action on $\mathcal H_{\mathrm{slot}}(\Sigma)$ resists the boundary-edgewise factorization $\iota_\Sigma$ provides for free.
+
+**Degenerate-case check.** At $\Sigma=\{v\}$, $\partial\Sigma$ is $v$'s own incident edge set and each $w_e$ ranges over $v$'s neighbours; $\iota_\Sigma$ reduces to exactly the rung-$n(v)$ construction CT0.13 already performs (its Pf. builds $\mathfrak u(n)$ directly from the slot algebra and reads off $S$-even/odd blocks — the same data $\iota_\Sigma$ assembles edge-by-edge here). $\iota_{\{v\}}=\iota_{n(v)}$.
+
+**Rmk (strictly new at $\Sigma$ — first counts).** Def-H.13's filter evaluated at small $N(\Sigma)$: $N=1$: $\mathfrak u(1)$ factors per-edge entirely — nothing strictly new; single-contact floors carry no collective boundary mode.
+
+---
+
+---
+
+### FT.21 — $\mathcal A(\Sigma)$'s charge-type rows, properly derived
+
+**Thm.** $(i)$ **EM — boundary-exact.** FT.20's EM-row *observable* is boundary-expressible: the tuple read $q=\tfrac12(\sigma_s-\sigma_t)$ [Def-H.9(1), EM.9] reads end signs on $\partial\Sigma$'s terminal edges, and interior vertex activity telescopes into end reads [EM.9b (Part 2): the identity, with its type-$(1,1)$ domain] — so the row's criterion ($\exists v\in\Sigma:\ f_v\ne0$) can exceed what is separately observable at the boundary, while its observable content factors through $\iota_\Sigma$'s per-edge CT0.12 factor [Def-H.13]. $(ii)$ **$G/H$ — boundary-expressible modulo one declared interior label.** $I_{\mathrm{hid}}(\Sigma;o)=(E_{\mathrm{int}}+E_{\mathrm{bd}})\ln2-E_{\mathrm{vis}}$, where $E_{\mathrm{bd}}=N(\Sigma)=\dim\mathcal H_{\mathrm{slot}}(\Sigma)$ [Def-H.12 Rmk] and $E_{\mathrm{vis}}=\min(\delta h(\gamma),4\,\delta\tau)\ln2$ is a boundary/channel sum [FT.1]; $E_{\mathrm{int}}=|\Sigma\setminus\partial\Sigma|$ is $\Sigma$'s own interior volume datum — a single integer carried as a c-number label alongside $\mathcal H_{\mathrm{slot}}(\Sigma)$, of the same species as Def-H.15(4)'s superselection labels $(\Theta_{\mathrm{int}},k)$, and $\neg$factored through $\iota_\Sigma$ edge-wise. $(iii)$ Consequently both rows are instances of CT0.13's active-aspect machine on $\mathcal H_{\mathrm{slot}}(\Sigma)$ — EM exactly, $G/H$ modulo the declared interior label — not case-by-case arithmetic extensions.
+
+**Req.** Def-H.9(1)–(2), Def-H.12, Def-H.13, Def-H.15(4); FT.1, FT.20 (EM and $G$ rows); D2.12, D3.1, D3.2, D3.3; CT0.12, CT0.13 (Part 1); EM.9, EM.9b (**E**; telescoping identity; H-side record: `verify_H_ASigma.py`).
+
+**Pf.**
+$$
+\mathrm{EM}:\ q=\tfrac12(\sigma_s-\sigma_t)\ [\mathrm{Def\text{-}H.9}(1),\ \mathrm{EM.9}]:\ \text{end signs on}\ \partial\Sigma\text{'s terminal edges}\implies\text{boundary read}
+$$
+$$
+\text{interior telescoping}:\ \mathrm{EM.9b}\ (\text{E})\ [\text{H-side record}:\ \mathrm{verify\_H\_ASigma.py}]
+$$
+$$
+G:\ I_{\mathrm{hid}}=(E_{\mathrm{int}}+E_{\mathrm{bd}})\ln2-E_{\mathrm{vis}}\ [\mathrm{Def\text{-}H.9}(2),\ \mathrm{FT.17}\ \text{form}];\quad E_{\mathrm{bd}}=N(\Sigma)=\dim\mathcal H_{\mathrm{slot}}(\Sigma)\ [\mathrm{Def\text{-}H.12}\ \mathrm{Rmk}];\quad E_{\mathrm{vis}}=\text{boundary/channel sum}\ [\mathrm{FT.1}];\quad E_{\mathrm{int}}=|\Sigma\setminus\partial\Sigma|=\Sigma\text{'s fixed volume datum}
+$$
+$$
+\implies\text{EM row factors through}\ \iota_\Sigma\ \text{exactly};\quad G\ \text{row factors through}\ \iota_\Sigma\ \text{extended by the c-number label}\ E_{\mathrm{int}}\ [\mathrm{Def\text{-}H.15}(4)\ \text{pattern}];\quad\text{both are instances of CT0.13's machine on}\ \mathcal H_{\mathrm{slot}}(\Sigma),\ \neg\text{separate arguments}.\ \blacksquare
+$$
+
+**Rmk (why the $W$/spin row resists boundary treatment — and where its quantization comes from instead).** FT.20's row $W$ depends on $\Theta_{\mathrm{int}}(\Sigma)=\sum_{e\in\Sigma\setminus\partial\Sigma}\widehat{ds}^{\,2}(e)$ [Def-H.9(3)] — a sum over **internal** edges, which are by construction outside $\mathcal H_{\mathrm{slot}}(\Sigma)$'s span [Def-H.12]. The spin/holonomy datum is therefore not expressible in $\iota_\Sigma$'s boundary-edgewise vocabulary: it is a global fact about $\Sigma$, structurally of the same kind as colour contraction-completeness (FT.18/FT.19: non-locality in ambient data). Contrast FT.21(ii): $E_{\mathrm{int}}$ is a *fixed* volume label, while $\Theta_{\mathrm{int}}$ is configuration-dependent interior data — the $W$ row resists even the label-extended factorization. Tier F.8 supplies the quantization this structure calls for: internal-edge line elements are quantized neither by boundary factorization nor by a single-edge reality-line argument (which reaches $\sigma_e$ [CT0.9], not the metric coordinates), but by the corpus's own materialization condition on closed chains (FT.22, via EW.18/CT2.5) evaluated on bound structures — at the fermion floor yielding per-edge integrality (FT.23–FT.24) and a well-defined $\mathrm{Hol}_{\mathrm{int}}$ (FT.25). The internal-edge slot object itself: Def-H.14.
+
+**Phys.** $\Sigma$ becomes a single quantum object exactly to the extent that its boundary edges can be treated as one composite slot register — and the EM read turns out to be expressible in that register exactly, the mass read modulo $\Sigma$'s own interior volume label $E_{\mathrm{int}}$ (clause (ii)), inherited edge-by-edge from machinery already proven at the single-edge and single-vertex level, with nothing new postulated. Spin is different in kind: it is a fact about $\Sigma$'s *inside*, invisible to the boundary register by construction — and its quantization accordingly comes from the global materialization condition on closed chains (Tier F.8), not from boundary-register arithmetic.
+
+---
+
+---
+
+
+## Tier F.8 — Line-Element Quantization from Materialization
+
+### Def-H.14 — General-edge sector space (internal-edge slot object)
+
+**Def.** For any real edge $e$ (boundary or internal to any $\Sigma$), let $\mathcal E(e):=\mathcal E_{++}(e)\oplus\mathcal E_{+-}(e)\subset\mathfrak H(\mathbb C^4)_e$ be $e$'s own $S$-even pair sector [CT1.1, CT1.2] — the space with coordinates $(a_{00}(e),q_{ij}(e),w_i(e))$ [D2.1] that already fix $g_{\mu\nu}(e)$ [CT1.12] and hence $\widehat{ds}^{\,2}(e)$ [D1.6]. For $\Sigma$ a bounded subnetwork:
+$$
+\mathcal H_{\mathrm{slot}}^{\mathrm{int}}(\Sigma):=\bigoplus_{e\in\Sigma\setminus\partial\Sigma}\mathcal E(e),\qquad\dim_{\mathbb R}\mathcal H_{\mathrm{slot}}^{\mathrm{int}}(\Sigma)=10\,|\Sigma\setminus\partial\Sigma|.
+$$
+**No bridge map needed.** Unlike $\iota_\Sigma$ [Def-H.13], which had to reach across each boundary edge to the *external* endpoint's vertex-level bridge map $\iota_{n(w_e)}$ (because a boundary edge's far side is genuinely outside $\Sigma$), $\mathcal E(e)$ is already fully edge-local [CT0.12: rung-independent, fixed 16-dim block] — it references neither endpoint's rung nor vertex-level slot algebra. An internal edge's two endpoints are both already inside $\Sigma$, which is exactly why no external anchor is available or needed: $\mathcal E(e)$ is defined identically whether $e$ is internal or a boundary edge, and $\mathcal H_{\mathrm{slot}}^{\mathrm{int}}(\Sigma)$ is simply this data restricted to $\Sigma\setminus\partial\Sigma$.
+
+**Degenerate-case check ($\Sigma=\{v\}$).** No internal edges [A1, as in Def-H.12] $\implies\mathcal H_{\mathrm{slot}}^{\mathrm{int}}(\{v\})=0$, consistent with Def-H.12's finding at the same degenerate case.
+
+**Rmk (relation to $\Theta_{\mathrm{int}}$).** $\Theta_{\mathrm{int}}(\Sigma)=\sum_{e\in\Sigma\setminus\partial\Sigma}\widehat{ds}^{\,2}(e)$ [Def-H.9(3)] is, by CT1.12/D1.6, a fixed function of the coordinates of $\mathcal H_{\mathrm{slot}}^{\mathrm{int}}(\Sigma)$ together with the embedding data $\{\Delta x_e^\mu\}$. The internal-edge slot object is therefore exactly this space: compositional, edge-local, and implicit in Def-H.9(3).
+
+**Rmk (ambient continuity).** $\mathcal E(e)$ is a continuous configuration arena: $a_{00}\in\mathbb R$ unrestricted [CT1.12], $\widehat{ds}^{\,2}(e)$ a generic $O(1)$ real [CT1.19a]. CT0.9's reality-line mechanism — the corpus's edge-level discreteness result for $\phi_e$ — acts on the 1-dimensional single-qubit line $\wedge^2\mathcal H_q$ [$\dim\mathcal H_q=2$, A1], not on these coordinates [CT0.9 Req/Pf]; a reality-line analogue cannot reach $\widehat{ds}^{\,2}$. It does not need to: the corpus's pole mechanism (CT2.5) already produces discreteness from continuous families — EW.18 quantizes wrapping loops by exactly this route. FT.22–FT.25 compute that mechanism on bound chains.
+
+---
+
+---
+
+### FT.22 — Loop quantization of materialized bound chains
+
+**Thm.** Let $c$ be a closed chain [D1.4] that **materializes** — contributes a spectral pole of the masked resolvent $Z(\mathcal R,n)$ [D2.4, D2.5, CT2.5] at the rung $n$ of its active mask [D1.12, CT0.13]; instances: materialized wrapping chains [EW.17, EW.18], bound chains of fermion realizations [Def-H.4, D1.5]. Then the spiral holonomy around $c$ is single-valued:
+$$
+\operatorname{Hol}_{\mathrm{spiral}}(c)=e^{i\Phi(c)}=+1,\qquad\Phi(c)=\alpha\,\Theta(c)=2\pi k,\quad k\in\mathbb Z\ \ (\text{winding});
+$$
+and under EM.20's scope tokens (Comm-min $+$ Eff), with rung stability [FT.9: $\alpha_{\mathrm{EM}}=\pi$ at every accessible rung]:
+$$
+\Theta(c)=\sum_{e\in c}\widehat{ds}^{\,2}(e)=2k\in2\mathbb Z .
+$$
+On rung-3 wrapping chains this reduces verbatim to EW.18 (consistency check).
+
+**Req.** D1.4, D1.5, D1.7; D2.4, D2.5; CT2.5; EW.17, EW.18 (mechanism; domain generalized from wrapping chains to materialized closed chains — the single H-level step, flagged in Pf); EM.20 (Comm-min, Eff; A §0.2a); FT.9; Def-H.4; D1.12, CT0.13.
+
+**Pf.**
+$$
+\mathrm{D1.7}:\ \Theta(\gamma)=\textstyle\sum_{e\in\gamma}\widehat{ds}^{\,2}(e),\ \Phi=\alpha\Theta,\ \operatorname{Hol}_{\mathrm{spiral}}=e^{i\Phi}\ \text{are defined for every chain};\qquad\mathrm{EW.17}:\ \text{transport around a closed cycle multiplies the eigenmode by}\ \operatorname{Hol}_{\mathrm{spiral}}
+$$
+$$
+\mathrm{CT2.5}\ (\text{as applied in EW.18}):\ \text{pole}=\text{eigenvalue condition on a single-valued eigenmode}\implies e^{i\Phi(c)}=1;\qquad\text{winding freedom}\ [\mathrm{EW.18}]:\ \Phi(c)=2\pi k,\ k\in\mathbb Z
+$$
+$$
+\text{domain step (H-level, flagged)}:\ \mathrm{EW.17}\text{'s rung-3 restriction is an existence claim about wrapping chains};\ \mathrm{CT2.5}\text{'s single-valuedness step is chain-generic}\implies\text{the domain extends to every materialized closed chain with no added premise}
+$$
+$$
+\mathrm{EM.20}\ (\text{Comm-min}+\text{Eff}):\ \alpha=\pi;\qquad\mathrm{FT.9}:\ \alpha^{(n)}=\pi\ \forall\ \text{accessible rungs}\implies\Phi(c)=\pi\,\Theta(c)=2\pi k\implies\Theta(c)=2k\in2\mathbb Z.\ \blacksquare
+$$
+
+**Rmk (oddness of $\alpha$).** $\Theta(c)$ is constrained exactly when $\alpha/\pi$ is odd: Comm-min alone gives $\alpha\in\pi\mathbb Z$ [EM.20], and even branches ($\alpha\in2\pi\mathbb Z$) leave $\Theta(c)$ unconstrained. Eff — the corpus's sole effectivity hypothesis — is what selects $\alpha=\pi$ and makes the quantization bite.
+
+**Rmk (sign-factor separation).** Following EW.18, single-valuedness is imposed on the spiral/geometric transport; the registration signs $\sigma_e$ and the wall parity $(-1)^{\aleph}$ are ledger data of the weight $w(C)$ [A8, CT0.9, D3.3], not of the geometric eigenmode transport.
+
+**Rmk (area language, scoped).** $\Theta(c)\,\mathfrak h^2=\sum_{e\in c}\kappa_e\,\mathfrak h^2$ is the $\kappa$-*weighted accumulated line element* along $c$ — dimensionally an area, and equal to CT1.29's pierced-edge area $A=n_{\mathcal R}\,\mathfrak h^2$ exactly on the minimal-edge class $\kappa_e\equiv1$ [FT.31(4): $\Theta=\delta h$]. It is $\neg$the metric-enclosed area of $c$: the floor loop (2-cycle) traces a degenerate out-and-back locus — zero enclosed area — yet carries $\Theta=2\kappa\ne0$, because $ds^2$ is quadratic, hence orientation-blind [FT.23–FT.24]. Nor is $\sqrt{\Theta}\,\mathfrak h$ a proper length of an inhomogeneous path: proper length reads $\sum_e\sqrt{\kappa_e}\,\mathfrak h$ (sum of square roots $\ne$ square root of the sum). Program-level "cell"/"enclosed area" phrasing must be read as this weighted accumulation.
+
+**Phys.** Every bound structure that appears in the spectrum obeys a Bohr–Sommerfeld-type selection rule: its loop line-element sum is an even integer. In continuum language [CT1.19, CT2.9]: $\oint_c ds^2=\Theta(c)\,\mathfrak h^2=2k\,\mathfrak h^2=8k\,G_N\ln2$ — the accumulated line element of an on-shell loop is an even multiple of the Bekenstein bit-area $\mathfrak h^2$ [CT1.29, CT2.9]; on the minimal-edge class this equals CT1.29's pierced-edge area [FT.31(4)], in general it is a $\kappa$-weighted accumulation, $\neg$a metric-enclosed area (Rmk below). Smooth geometry unfolds as the large-$k$ limit; integrality persists at every scale as the rule selecting which loops materialize.
+
+---
+
+---
+
+### FT.23 — Orientation-evenness of the line element
+
+**Thm.** For a bidirectional channel — both orientations $e_{pq}=(p,q)$, $e_{qp}=(q,p)$ in $\mathcal R$:
+$$
+\widehat{ds}^{\,2}(e_{pq})=\widehat{ds}^{\,2}(e_{qp}).
+$$
+
+**Req.** D1.6; CT2.6 (charts; $g_{\mu\nu}$ a single smooth field on $M$; hypotheses (i)–(iii)); CT1.12 ($g_{\mu\nu}$ built entirely from $S$-even sector data); CT1.1, CT1.2, C3 ($\mathcal E_{++},\mathcal E_{+-}$ are $S$-even); CT0.7(2) ($S(X)=\mathbb S X\mathbb S$: the swap action); endpoint-difference displacement [math].
+
+**Pf.**
+$$
+\mathrm{CT2.6}\ \text{charts}:\ \Delta x_e:=x_{t(e)}-x_{s(e)}\implies\Delta x_{e_{qp}}=-\Delta x_{e_{pq}}\ \ (\text{all four components})\qquad[\text{consistent with CT1.19's}\ \Delta x^\mu_e=\mathfrak h\,\dot x^\mu(\lambda_e)+O(\mathfrak h^2)]
+$$
+$$
+g_{\mu\nu}(e)\ \text{built solely from}\ (a_{00},q_{ij},w_i)\in\mathcal E_{++}\oplus\mathcal E_{+-}\ [\mathrm{CT1.12},\ \mathrm{D2.1}];\qquad\mathcal E_{++},\ \mathcal E_{+-}\ \text{are}\ S\text{-even}\ [\mathrm{CT1.1},\ \mathrm{CT1.2},\ \mathrm{C3}]
+$$
+$$
+S(X)=\mathbb S X\mathbb S\ [\mathrm{CT0.7}(2)];\qquad SX=X\implies\mathbb S X\mathbb S=X:\ \text{metric data invariant under}\ p\leftrightarrow q\implies g_{\mu\nu}(e_{pq})=g_{\mu\nu}(e_{qp})\ \ (\text{same channel locus}\ [\mathrm{CT2.6}])
+$$
+$$
+\mathrm{D1.6}:\ ds^2(e)=g_{\mu\nu}(e)\,\Delta x^\mu_e\Delta x^\nu_e\ \text{is quadratic in}\ \Delta x:\ \text{every monomial has}\ \Delta x\text{-degree}\ 2\implies\Delta x\mapsto-\Delta x\ \text{fixes}\ ds^2
+$$
+$$
+(\text{incl. the shift cross-term}\ 2g_{0i}\Delta x^0\Delta x^i:\ \text{both factors flip});\qquad\implies ds^2(e_{pq})=ds^2(e_{qp})\implies\widehat{ds}^{\,2}(e_{pq})=\widehat{ds}^{\,2}(e_{qp})\quad[\mathrm{D1.6}:\ /\mathfrak h^2].\ \blacksquare
+$$
+
+**Phys.** Both orientations of one channel carry a single geometric datum: the line element is a property of the channel; orientation lives in the registration signs and transport order, not in the metric. This is what lets the minimal closed chain — the 2-cycle — speak about one number $\widehat{ds}^{\,2}$.
+
+---
+
+---
+
+### FT.24 — The minimal fermion pins the geometry quantum
+
+**Thm.** Let $c=(e_1,e_2)$, $e_1=(p,q)$, $e_2=(q,p)$, be a materialized 2-cycle — the minimal closed chain [A1 excludes self-loops; D1.4; Def-H.4 floor: $\delta h(c)\ge2$]. Write $\widehat{ds}^{\,2}(e_1)=\widehat{ds}^{\,2}(e_2)=:\kappa$ [FT.23]. Then:
+$$(1)\quad\Theta(c)=2\kappa\in2\mathbb Z\ \ [\mathrm{FT.22}]\implies\kappa\in\mathbb Z\qquad(\text{per-edge integrality at the materialized fermion floor});
+$$
+$$(2)\quad ds^2(e)=\kappa\,\mathfrak h^2\in\mathfrak h^2\,\mathbb Z\qquad(\text{line element quantized in hop quanta}\ [\mathrm{D1.6}]);
+$$
+$$(3)\quad\mathfrak h^2=4\,G_N\ln2\ \ [\mathrm{CT2.9}]\implies ds^2(e)=4\kappa\,G_N\ln2\qquad(\text{interval quantum}=\text{one Bekenstein bit-area}\ [\mathrm{CT1.29}]\ \text{per unit}\ \kappa);
+$$
+$$(4)\quad\text{minimal real edge}\ [\mathrm{D1.1},\ \text{Comm-min}]:\ \kappa=1\ \text{attained}\ (\text{floor tight});\qquad\kappa=0\iff\text{null edge}\ [\mathrm{CT1.19a}]\ (\text{degenerate floor};\ \text{all-null transit chains are the trivial chains}=\text{photons/gluons}\ [\mathrm{D1.7},\ \mathrm{D3.7}]);\qquad\kappa<0:\ \text{timelike}\ [\mathrm{CT1.12}:\ \operatorname{sig}(g)=(-,+,+,+)].
+$$
+
+**Req.** FT.22, FT.23; A1; D1.1, D1.4, D1.6, D1.7; Def-H.4; CT1.12, CT1.19a, CT1.29, CT2.9 (Part 2); D3.7; EM.20's scope tokens (inherited via FT.22).
+
+**Pf.**
+$$
+(1):\ \Theta(c)=\widehat{ds}^{\,2}(e_1)+\widehat{ds}^{\,2}(e_2)=2\kappa\ [\mathrm{FT.23}];\qquad\mathrm{FT.22}:\ \Theta(c)\in2\mathbb Z\implies\kappa\in\mathbb Z
+$$
+$$
+(2):\ \mathrm{D1.6}:\ ds^2(e)=\widehat{ds}^{\,2}(e)\,\mathfrak h^2=\kappa\,\mathfrak h^2;\qquad(3):\ \mathrm{CT2.9}\ \text{substitution};\quad\mathrm{CT1.29}:\ S=\frac{A\ln2}{\mathfrak h^2}\ \text{at}\ A=\mathfrak h^2:\ S=\ln2=1\ \text{bit per unit}\ \kappa
+$$
+$$
+(4):\ \mathrm{D1.1}:\ \text{minimal real edge has}\ \widehat{ds}^{\,2}=1\implies\kappa=1;\qquad\mathrm{CT1.19a}:\ \widehat{ds}^{\,2}=0\iff\Delta x_e\ \text{null};\quad\mathrm{D1.7}/\mathrm{D3.7}:\ \text{all-null chains}=\text{photons/gluons}
+$$
+$$
+\kappa\in\mathbb Z\ \wedge\ \operatorname{sig}(g)=(-,+,+,+)\ [\mathrm{CT1.12}]\implies\kappa<0\ \text{admissible (timelike edges)}.\ \blacksquare
+$$
+
+**Rmk (two integer reads at the floor).** The materialized minimal bound structure carries two derived integer reads: the geometric winding $\kappa=\Theta(c)/2$ [FT.22, clause (1)] and the informational mass $m_{\mathrm{hid}}=I_{\mathrm{hid}}/\mathfrak h$ [Def-H.9(2), FT.17: $I_{\mathrm{hid}}=E_{\mathrm{int}}\ln2$, an internal-edge count].
+
+**Phys.** Computing the smallest fermion the corpus allows — the materialized 2-cycle — settles the $ds^2$ question on-shell: geometry comes in integer multiples of the hop area, and the hop area is itself the calibrated information quantum $4G_N\ln2$. The spacetime quantum is not a new postulate; it is the fermion floor read through the corpus's own pole condition. Off-shell configurations in $Z$ keep their generic continuous $\widehat{ds}^{\,2}$ [CT1.19a]: integrality is a property of the spectrum, not of the summation domain — exactly as in CT2.5.
+
+---
+
+---
+
+### FT.25 — Internal holonomy is well-defined on-shell
+
+**Thm.** $\Sigma$ a bounded subnetwork [Def-H.9]. Then:
+$$(1)\quad\Sigma\setminus\partial\Sigma\ \text{decomposes edge-disjointly into materialized closed chains}\ \{c_i\}:\qquad\Theta_{\mathrm{int}}(\Sigma)=\sum_i\Theta(c_i)\in2\mathbb Z,\qquad\mathrm{Hol}_{\mathrm{int}}=(-1)^{\Theta_{\mathrm{int}}}=+1\ \ [\mathrm{FT.22}];
+$$
+$$(2)\quad\text{every internal edge carries on-shell integer line element}\ [\mathrm{FT.24}]:\qquad\Theta_{\mathrm{int}}(\Sigma)\in\mathbb Z,\qquad\mathrm{Hol}_{\mathrm{int}}=(-1)^{\Theta_{\mathrm{int}}}\in\{\pm1\}\ \ \text{well-defined};
+$$
+$$(3)\quad\text{the surviving on-shell integer label is the winding}\ k(c)=\Theta(c)/2\in\mathbb Z\ \ [\mathrm{FT.22}];\ \ \text{at the floor}\ k=\kappa\ \ [\mathrm{FT.24}(1)];\ \ \text{full materialized loops have}\ \mathrm{Hol}_{\mathrm{spiral}}=+1,\ \text{so the binary}\ \mathrm{Hol}_{\mathrm{int}}\ \text{is nontrivial only on partial-chain internal sets (proper subsets of materialized chain edges), where}\ \Theta_{\mathrm{int}}\ \text{is a partial sum of integers with free parity}.
+$$
+
+**Req.** FT.22, FT.24; Def-H.9, Def-H.14; D1.7; FT.9 ($\alpha=\pi$); CT1.19a (off-shell contrast).
+
+**Pf.**
+$$
+(1):\ \text{edge-disjoint decomposition}:\ \Theta_{\mathrm{int}}=\!\!\sum_{e\in\Sigma\setminus\partial\Sigma}\!\!\widehat{ds}^{\,2}(e)=\sum_i\sum_{e\in c_i}\widehat{ds}^{\,2}(e)=\sum_i\Theta(c_i)\in2\mathbb Z\ \ [\mathrm{FT.22}];\qquad(-1)^{2\mathbb Z}=+1
+$$
+$$
+(2):\ \text{finite sum of integers}\ [\mathrm{FT.24}];\qquad\mathrm{Hol}_{\mathrm{int}}=e^{i\pi\Theta_{\mathrm{int}}}=(-1)^{\Theta_{\mathrm{int}}}\ \text{well-defined}\ [\alpha=\pi:\ \mathrm{FT.9}]
+$$
+$$
+(3):\ k:=\Theta/2\in\mathbb Z\ [\mathrm{FT.22}];\quad\text{floor}:\ \Theta=2\kappa\implies k=\kappa\ [\mathrm{FT.24}(1)];\qquad\text{full loop}:\ \mathrm{Hol}_{\mathrm{spiral}}=e^{i\pi\cdot2k}=+1
+$$
+$$
+\text{partial set}\ P\subsetneq E(c):\ \Theta_{\mathrm{int}}=\sum_{e\in P}\widehat{ds}^{\,2}(e)\in\mathbb Z\ \text{by}\ (2),\ \text{parity free}\ (\text{witness}: c\ \text{with per-edge}\ (1,1,1,3),\ \Theta=6\in2\mathbb Z;\ P=\text{first three}:\ \Theta_{\mathrm{int}}=3,\ \mathrm{Hol}_{\mathrm{int}}=-1;\ \texttt{verify\_H\_ds2.py}).\ \blacksquare
+$$
+
+**Rmk (no layer-local integrality postulate).** No layer-local postulate of general-edge line-element integrality — $\widehat{ds}^{\,2}(e)\in\mathbb Z$ for *every* real edge — is used. Its on-shell content is derived (FT.22–FT.25, from the corpus's own materialization mechanism); its off-shell generalization is neither derivable nor needed — every use site in this document (Def-H.7, Def-H.9(3), FT.14's parity read, FT.15's $\mathbf S$ clause, FT.20 row $W$) concerns bound/fermion content and is scoped on-shell at its site. The axioms remain self-contained: no step above adds a premise beyond the corpus's declared ones (Comm-min, Eff — A §0.2a).
+
+**Rmk (spin-extraction consequence).** For $\Sigma$ swept entirely by fermion chains, clause (1) forces $\mathrm{Hol}_{\mathrm{int}}=+1$ on-shell: the *parity* of a full materialized loop cannot carry the spin label. The live candidates are the integer data — the winding $k(c)$, partial-sum $\Theta_{\mathrm{int}}$ [clause (3)], weak-sector insertion multiplicities [FT.13], the transported seed's $j=\tfrac12$ carrier [EW.32].
+
+**Phys.** The internal geometric ledger of a coarse-grained fermion is integer-valued wherever the corpus's own spectral condition reaches: loops materialize in even hop-area quanta, the minimal loop is exactly one quantum per channel, and Def-H.9's binary holonomy label is a well-defined derived object rather than a postulate-conditional one. The remaining question is not whether on-shell geometry is quantized — it is — but which integer label carries spin, and how far the on-shell sublattice extends across the graph.
+
+---
+
+---
+
+
+## Tier F.9 — The Activated Aspect Operator: $\mathcal A(\Sigma)$ as a Computable Mask
+
+### Def-H.15 — Coarse-grained aspect space and masked force operator
+
+**Def.** $\Sigma$ a bounded subnetwork; $C\in\mathcal M(U)$ the ambient configuration [D2.11].
+$$(1)\quad\mathcal K_\Sigma(C):=\bigoplus_{A\in\mathcal A(\Sigma;C)}\mathcal K^{(A)}\qquad[\text{the aspect blocks of D2.3; membership by FT.20's criteria table}];$$
+$$(2)\quad\mathcal P_M^{(\Sigma)}(C):\mathcal K\to\mathcal K_\Sigma(C)\qquad(\text{orthogonal projection}\ [\mathrm{D2.3}/\mathrm{CT2.2}\ \text{pattern}]);$$
+$$(3)\quad\mathbf F_M^{(\Sigma)}(C):=\mathcal P_M^{(\Sigma)}\,\mathbf F\,\mathcal P_M^{(\Sigma)}\qquad[\mathrm{A8}/\mathrm{C7},\ \mathrm{CT2.3}\ \text{pattern}],$$
+with the strong summand admissibility-filtered:
+$$F_{\mathrm{strong}}\ \longmapsto\ \Pi_{\mathcal C}(\Sigma;C)\,F_{\mathrm{strong}}\big|_\Sigma\,\Pi_{\mathcal C}(\Sigma;C)\qquad[\mathrm{Def\text{-}H.10},\ \mathrm{FT.19}];$$
+$$(4)\quad\text{realization}:\ \iota_\Sigma\ [\mathrm{Def\text{-}H.13}]\ \text{maps}\ \mathfrak u(N(\Sigma))\ \text{into}\ \mathcal K_\Sigma\text{'s boundary-coupled part}\ [\mathrm{FT.21}];\ \text{on-shell internal labels}\ (\Theta_{\mathrm{int}},k)\ [\mathrm{FT.25},\ \mathrm{FT.22}]\ \text{superselect the}\ W/G\ \text{reads of Def-H.9's tuple; off-shell, blocks carry arena data}\ [\mathrm{CT1.19a},\ \mathrm{Def\text{-}H.18}].$$
+**Rmk (configuration-relativity).** Unlike the rung masks $\mathcal P_M^{(n)}$ [D2.3], which are state-independent, $\mathcal K_\Sigma(C)$ depends on the ambient configuration $C$ — FT.20's criteria read $f_v$, $I_{\mathrm{hid}}$, $\Theta_{\mathrm{int}}$, $\mathcal C(\Sigma;C)$, which are state data.
+
+---
+
+---
+
+### Def-H.16 — Coarse-grained resolvent and the $\Sigma$-spectrum
+
+**Def.**
+$$Z(\mathcal R,\Sigma):=\Bigl\langle\mathrm{out}\Bigl|\bigl(1-\mathbf F_M^{(\Sigma)}\bigr)^{-1}\Bigr|\mathrm{in}\Bigr\rangle\qquad[\mathrm{D2.4}\ \text{pattern};\ \mathrm{D2.8}\ \text{sheet}],$$
+with $|\mathrm{in}\rangle,|\mathrm{out}\rangle$ read on boundary-channel states via $\iota_\Sigma$ [Def-H.13] — a constitutive clause of this definition (the $\iota_\Sigma$ boundary-state identification). Poles of $Z(\mathcal R,\Sigma)$ $:=$ the $\Sigma$-spectrum [D2.5 pattern]: pole $\iff1\in\operatorname{spec}\mathbf F_M^{(\Sigma)}$ [CT2.5 pattern]; residues $=$ transition amplitudes; $m^2:=$ pole displacement [D2.5]. A bound chain $c$ interior to $\Sigma$ **materializes** (FT.22's sense) iff it contributes to a pole of $Z(\mathcal R,\Sigma)$: FT.22's single-valuedness condition *is* this resolvent's eigenmode condition [CT2.5 as applied in EW.18].
+**Rmk (two pole readings, scoped).** The corpus reads "pole" two ways. **(i) On/off eigenvalue condition** — pole $\iff1\in\operatorname{spec}\mathbf F_M$ [CT2.5]: no momentum label required; this is the reading Def-H.16/FT.26/FT.28(7) use, and FT.22's single-valuedness is exactly this reading applied to the chain's spiral transport. **(ii) Displacement value** — D2.5's "$m^2:=$ pole displacement" vocabulary presupposes a $k^2$-parametrized resolvent family; it is a corpus-wide definitional layer (D2.4's own $Z(\mathcal R,n)$ likewise carries no explicit $k$), whose values are extracted in **D** by a transport-defect computation, not a literal momentum-space two-point function: EW.33's $\mathcal U=\exp\bigl(i\oint\sum_Ac_A\mathcal G_A\,d\ell\bigr)=1+i\,\ell_\gamma\sum_Ac_A\mathcal G_A+O(c^2)$ — the *weak/gauge* transport, an object distinct from the spiral factor $e^{i\Phi}$ constrained to $+1$ on-shell by EW.18/FT.22; the two conditions coexist on the same materialized wrapping chains [EW.18 $\wedge$ EW.20: $m_W^2>0$]. At the $\Sigma$-level, reading (ii) is **not yet constructed**: the premise-free candidate is an EW.33-pattern defect with one interface transfer choice; a literal momentum-space resolvent would need a new declared choice.
+
+---
+
+---
+
+### FT.26 — Structural transfer: the $\Sigma$-mask inherits CT2.3–CT2.5
+
+**Thm.** $\mathbf F_M^{(\Sigma)}(C)$ is: $(1)$ Hermitian; $(2)$ block-diagonal, $\mathbf F_M^{(\Sigma)}=\bigoplus_{A\in\mathcal A(\Sigma;C)}F_A\big|_{\mathcal K^{(A)}}$, the strong summand $\equiv0$ whenever $\mathcal C(\Sigma;C)=0$; $(3)$ finite-dimensional with
+$$\dim\mathcal K_\Sigma\ \le\ 1+5+1+3+8\ =\ 18\ <\ \infty .$$
+Hence the spectral theorem applies and $Z(\mathcal R,\Sigma)$ has simple poles exactly at $1\in\operatorname{spec}\mathbf F_M^{(\Sigma)}$, residues $-\langle\mathrm{out}|P_a|\mathrm{in}\rangle$ — CT2.5's statement transferred verbatim with $n\mapsto\Sigma$.
+
+**Req.** Def-H.15, Def-H.16; A8; CT0.12, CT0.14 (block dimensions); CT2.2, CT2.3, CT2.4, CT2.5 (Part 2); FT.19, FT.20; spectral theorem [math].
+
+**Pf.**
+$$
+(1):\ \bigl(\mathcal P\mathbf F\mathcal P\bigr)^\dagger=\mathcal P^\dagger\mathbf F^\dagger\mathcal P^\dagger=\mathcal P\mathbf F\mathcal P\quad[\mathrm{CT2.3}\ \text{Pf pattern}:\ \mathcal P_M^{(\Sigma)}\ \text{orthogonal}\ [\mathrm{D2.3}\ \text{pattern}],\ \mathbf F^\dagger=\mathbf F]
+$$
+$$
+(2):\ \mathrm{A8}:\ \mathbf F=\bigoplus_AF_A,\ \operatorname{supp}F_A\subseteq\mathcal K^{(A)};\qquad\text{block-subset projection retains exactly the members}\ [\mathrm{CT2.4}\ \text{Pf pattern}]
+$$
+$$
+\text{strong summand}:\ \mathcal C(\Sigma;C)=0\implies\Pi_{\mathcal C}=0\implies F_{\mathrm{strong}}^\Sigma=0\ \ [\mathrm{FT.19}\ \text{Thm};\ \mathrm{Def\text{-}H.15}(3)]
+$$
+$$
+(3):\ \mathcal A(\Sigma;C)\subseteq\{\mathrm{EM},G,H,W,\mathrm{strong}\}\ [\mathrm{FT.20}:\ J^\pm,D^\pm\ \text{never}]\implies\dim\mathcal K_\Sigma\le1+5+1+3+8=18\ [\mathrm{CT0.12},\ \mathrm{CT0.14}:\ \dim\mathcal K^{(\mathrm{EM})}=1,\ \dim\mathcal K^{(\mathrm{strong})}=8]
+$$
+$$
+\text{finite-dim Hermitian}\implies\text{spectral decomposition}\implies(1-\mathbf F_M^{(\Sigma)})^{-1}=\sum_a\frac{P_a}{1-\lambda_a}:\ \text{poles}\iff\lambda_a=1;\ \ \mathrm{D2.8}\ \text{sheet}\ [\mathrm{CT2.5}\ \text{Pf, verbatim}].\ \blacksquare
+$$
+
+**Rmk (the observability deficit, in dimensions).** The rung-3 mask carries $\dim\mathcal K_3=25$ [CT0.14]; the maximal observable $\Sigma$-mask carries $18$. The deficit $25-18=7=3+3+1$ is exactly $J^+\oplus J^-\oplus D^+$ [CT0.12] — the structural aspects FT.20 reclassifies as non-observable (seals, uniform centre). At the $\Sigma$-level, action and observability are different masks, and the difference is a measurable dimension.
+
+**Phys.** A coarse-grained subnetwork now has the same spectral machine a single vertex has: a Hermitian masked force on a finite aspect space, a resolvent whose poles are the $\Sigma$-particles, and confinement built into the block structure — one unsealed colour attachment anywhere and the entire strong summand vanishes [FT.19]. This is the activation of $\mathcal A(\Sigma)$: membership is a computable nonzero block, not merely a criteria table.
+
+---
+
+---
+
+### FT.27 — Single-vertex degeneration; action versus observable
+
+**Thm.** At $\Sigma=\{v\}$: $(a)$ the spaces degenerate on the nose — $\mathcal H_{\mathrm{slot}}(\{v\})=\mathcal H^{(n(v))}_{\mathrm{slot}}$ [Def-H.12], $\mathcal H^{\mathrm{int}}_{\mathrm{slot}}(\{v\})=0$ [Def-H.14], $\iota_{\{v\}}=\iota_{n(v)}$ [Def-H.13]; $(b)$ FT.20's criteria evaluated at $\{v\}$ agree with CT0.13's active set on the EM row (for type-$(1,1)$ states), and refine it on four rows — each refinement a proven fact, not a deviation:
+$$
+\mathrm{EM}\in\mathcal A(\{v\};C)\iff f_v\ne0\qquad(\text{CT0.13's type-}(1,1)\ \text{condition}\ [\mathrm{D3.3}]);
+$$
+$$
+G\in\mathcal A(\{v\};C)\iff I_{\mathrm{hid}}(\{v\};o)\ne0\iff n(v)\ge2\qquad[\mathrm{FT.16}:\ I_{\mathrm{hid}}=(n{-}1)\ln2]\ —\ \text{refines}\ G\in\mathcal A(1):\ \text{at}\ n=1\ \text{the block acts but no observable exists};
+$$
+$$
+W\in\mathcal A(\{v\};C)\iff\text{never}\qquad[\Theta_{\mathrm{int}}(\{v\})=0:\ \text{empty sum},\ \mathrm{Def\text{-}H.14}]\ —\ \text{weak acts from rung}\ 1\ [\mathrm{CT0.13}]\ \text{but its observable is born only at the bound floor}\ (\mathrm{FT.28});
+$$
+$$
+\text{strong}\in\mathcal A(\{v\};C)\iff\text{never}\qquad[\text{case split}:\ \mathrm{Colour}(\{v\})=\varnothing\ (v\ \text{colourless})\implies\text{FT.20's first conjunct fails}\ \wedge\ F_{\mathrm{strong}}\big|_{\{v\}}=0\ (\neg\exists\ \text{colour content});\quad\mathrm{Colour}(\{v\})=\{v\}\implies\pi_C(v)\subseteq\{v\}\ \text{impossible}\ [\mathrm{A1}:\ \text{partners distinct}]\implies\mathcal C(\{v\};C)=0\implies\text{block}\equiv0\ [\mathrm{FT.19}]]\ \text{—}\ \text{either way the strong block is zero at a single vertex};\ \text{the smallest colour-observable}\ \Sigma\ \text{is the sealed meson-type pair}\ [\mathrm{D3.9},\ \mathrm{CT3.17};\ \text{realized at}\ \mathrm{FT.28}\ \mathrm{Rmk}];
+$$
+$$
+J^\pm,D^\pm\notin\mathcal A(\{v\};C)\ \ \forall n\qquad[\mathrm{FT.20}\ \text{reclassification}].
+$$
+
+**Req.** Def-H.10, Def-H.12, Def-H.13, Def-H.14, Def-H.15; A1; CT0.13 (Part 1); D0.8, D3.1, D3.3, D3.8, D3.9; CT3.11, CT3.17 (Part 2); FT.16, FT.19, FT.20.
+
+**Pf.**
+$$
+(a):\ \text{degenerate-case checks of Def-H.12/Def-H.13/Def-H.14, verbatim}
+$$
+$$
+(b):\ \text{FT.20's table at}\ \Sigma=\{v\}:\ \ \mathrm{EM}\ \text{row}=f_v\ne0\ [\mathrm{D3.3}];\qquad G\ \text{row}:\ I_{\mathrm{hid}}(\{v\};o)=(n{-}1)\ln2\ne0\iff n\ge2\ [\mathrm{FT.16}]
+$$
+$$
+W\ \text{row}:\ \Sigma\setminus\partial\Sigma=\varnothing\ [\mathrm{A1}:\ \neg\exists\ \text{self-loops}]\implies\Theta_{\mathrm{int}}=0\ (\text{empty sum}):\ \text{criterion cannot fire}
+$$
+$$
+\text{strong row (case split)}:\qquad\mathrm{Colour}(\{v\})=\varnothing\ (v\ \text{colourless},\ \text{e.g.}\ n(v)\ne3\ [\mathrm{D3.1}]):\ \text{FT.20's first conjunct fails}\ \wedge\ F_{\mathrm{strong}}\big|_{\{v\}}=0\ (\neg\exists\ \text{colour content to act on}\ [\mathrm{D3.8}])\implies\text{block}\equiv0
+$$
+$$
+\mathrm{Colour}(\{v\})=\{v\}\ (v\ \text{colour-carrying}):\ \pi_C(v)\ne\varnothing\ \text{requires a distinct partner}\ [\mathrm{A1}:\ p\ne q]\implies\pi_C(v)\not\subseteq\{v\}\implies\partial_{\mathrm{col}}(\{v\};C)=\{v\}\implies\mathcal C(\{v\};C)=0\ [\mathrm{Def\text{-}H.10}]\implies\text{block}\equiv0\ [\mathrm{FT.19}]
+$$
+$$
+\text{deltas vs.}\ \mathrm{CT0.13}\ \text{are exactly}:\ G@n{=}1\ (\text{acts},\ \neg\text{observable}\ [\mathrm{FT.16}]);\ \ W@\neg\exists\text{-interior}\ (\text{acts},\ \neg\text{observable});\ \ \text{strong@single vertex}\ (\text{acts at}\ n{=}3\ [\mathrm{CT0.13}],\ \neg\text{observable}:\ \text{colourless}\ —\ \neg\exists\text{content};\ \text{colour-carrying}\ —\ \text{partner distinctness}\ [\mathrm{A1}]);\ \ J^\pm,D^\pm\ (\text{structural reclassification}\ [\mathrm{FT.20}\ \mathrm{Rmk};\ \mathrm{CT0.7}/\mathrm{FT.11}\ \text{seals-}\neg\text{charges};\ \mathrm{FT.3}/\mathrm{CT4.4}\ D^-\ \text{darkness}]) — \text{each a proven fact}.\ \blacksquare
+$$
+
+**Rmk (the birth of spin).** The weak observable requires an interior edge; the first interior exists at the bound-structure floor (2-cycle, Def-H.4). A single vertex has weak *action* but no weak *observable*: spin — already identified algebraically as the weak contribution [FT.13, Def-H.8] — is an observable of coarse-graining itself.
+
+**Phys.** At a single vertex the activated operator reduces to the rung machine CT0.13–CT2.5 on everything observable, and the four deviations are theorems, not defects: gravity becomes observable exactly when something can be hidden ($n\ge2$), spin exactly when something can wind (bound floor), colour exactly when a sealing partner is inside the region read — never at one vertex, whether colourless (no content to act on) or colour-carrying (no inside partner), and seals and locks are never observable at all. Action and observability are two different masks — H now carries both.
+
+---
+
+---
+
+
+## Tier F.10 — The Strong Edge Weight
+
+### Def-H.17 — Strong edge transport
+
+**Def.** For $e\in E_{\mathcal R}$ incident on colour-carrying vertices (rung-3 attachments [D3.8]):
+$$
+G^{(3)}(e)\ :==\ G^{(2)}(e)\ \otimes\ \tau(e),\qquad
+G^{(2)}(e)=\sigma_e\,e^{i\pi\,\widehat{ds}^{\,2}(e)}\quad[\mathrm{D3.5},\ \mathrm{FT.9}],
+$$
+$\tau(e):=$ the slot-index transport of $e$ on $\mathcal H^{(3)}_{\mathrm{slot}}\cong\mathbb C^3$ [D3.1, CT3.2], acting in the defining representation [CT3.11(2)–(3): triplet $\mapsto U^i{}_jq^j$, antitriplet $\mapsto r_j(U^{-1})^j{}_i$, $U\in SU(3)$], algebra image in $\iota_3(\mathfrak u(3))$ [D2.12]. Strictly-new strong content: $\pi(\tau)\in\mathfrak{su}(3)$, $\pi(X)=X-\tfrac{\mathfrak T(X)}{3}I_3$ the trace projection [CT3.7, D3.2] — the $\mathfrak u(1)$ centre of $\mathfrak u(3)$ is EM's, spent at rung 2 [CT3.7, CT3.13; CT0.13 step $n{=}3$], and already carried by $G^{(2)}$'s phase factor.
+
+---
+
+---
+
+### FT.29 — Strong weight: factorization, no $\alpha_{\mathrm{strong}}$, observable sealing
+
+**Thm.**
+$$(1)\quad\text{factorization}:\ G^{(3)}(e)=G^{(2)}(e)\otimes\tau(e)\ [\mathrm{Def\text{-}H.17}],\qquad\alpha_{\mathrm{EM}}^{(3)}=\alpha_{\mathrm{EM}}^{(2)}=\pi\ [\mathrm{EM.18},\ \mathrm{CT3.10}];$$
+$$(2)\quad\text{non-existence}:\ \neg\exists\ \text{per-edge abelian strong phase coefficient}\ (\text{an}\ ``\alpha_{\mathrm{strong}}\text{''})\ [\textbf{CT3.10a (F)}:\ \text{trace route};\ \text{eight-dimensional obstruction to a scalar coefficient read};\ \text{non-canonicity of}\ \mathfrak u(1)\subseteq\mathfrak{su}(3)\ \text{choices (explicit}\ SU(3)\ \text{witnesses)};\ \text{centre identification via CT3.7/CT3.13}];
+$$
+$$(3)\quad\text{observable content}:\ \text{under any pole read}\ [\mathrm{CT2.5}],\ \tau(e)\text{-factors survive only inside invariant contractions}\ \{\delta^i{}_j,\varepsilon_{ijk},\varepsilon^{ijk}\}\ [\mathrm{CT3.17}];\ \text{free indices are mask-annihilated}\ [\mathrm{CT3.18}];\ \text{isolated triplets have}\ \neg\text{pole and norm}\ 0\ [\mathrm{CT3.22},\ \mathrm{CT2.8}];\ \text{at}\ \Sigma\text{-level the strong summand is gated by}\ \Pi_{\mathcal C}(\Sigma;C)\in\{0,1\}\ [\mathrm{FT.19},\ \mathrm{FT.26}(2)].\ \text{Hence the effective strong weight of any materialized configuration}=(\text{its}\ G^{(2)}\ \text{factors})\times(\text{singlet-sealing factor}):\ \neg\exists\ \text{per-edge strong phase read}.
+$$
+
+**Req.** Def-H.17; D2.12, D3.1, D3.2, D3.5, D3.8, D3.9; CT0.13, CT0.14 (Part 1); CT2.5, CT2.8 (Part 2); CT3.2, CT3.4, CT3.7, CT3.8, CT3.9, CT3.10, CT3.10a, CT3.11, CT3.13, CT3.17, CT3.18, CT3.22 (Part 2); EM.17, EM.18, EM.20 (Part 2); FT.9, FT.10, FT.19, FT.26.
+
+**Pf.**
+$$
+(1):\ \mathrm{Def\text{-}H.17};\qquad\text{coefficient stability}:\ \mathrm{EM.18}\ [\mathrm{CT0.14}:\ \mathcal K^{(\mathrm{strong})}\perp\mathcal K^{(\mathrm{EM})}]\ \wedge\ \mathrm{CT3.10}\ [\mathfrak T(F_{\mathrm{strong}})=0:\ \text{independent argument}]\implies\alpha^{(3)}=\alpha^{(2)}=\pi\ [\mathrm{FT.9}/\mathrm{EM.20}]
+$$
+$$
+\text{consistency}:\ \mathrm{FT.10}\ \text{Pf already computes with this factorization}\ (G^{(3)}=G^{(2)}\otimes\text{label}:\ \text{per-edge weight unmodified})
+$$
+$$
+(2):\ \mathrm{CT3.10a}\ (\text{F})
+$$
+$$
+(3):\ \mathrm{CT3.17}:\ \forall\ \text{invariants}=\text{combinations of}\ \{\delta,\varepsilon,\bar\varepsilon\};\qquad\mathrm{CT3.18}:\ \mathcal P_M^{(3)}\big|_{\text{free index}}=0\implies\neg\text{pole}\ [\mathrm{CT2.5}]
+$$
+$$
+\mathrm{CT3.22}:\ \text{isolated triplet norm}\ 0\ [\mathrm{CT2.8}];\qquad\mathrm{FT.19}/\mathrm{FT.26}(2):\ \Pi_{\mathcal C}\ \text{gates the entire}\ \Sigma\text{-level summand};\qquad\text{sealed}:\ \tau\text{-content enters as singlet contraction amplitudes only}\ [\mathrm{CT3.17},\ \mathrm{D3.9}].\ \blacksquare
+$$
+
+**Rmk (stipulation-dependence).** The centre *identification* route — the unique canonical centre is EM's — cites CT3.7's reading of D2.12's realization clause ("the abstract isomorphism class lies in $\iota_m(\mathfrak u(m))$"): the one stipulative layer in the chain [CT3.13: $\neg\exists$ ninth gluon mode]. The non-existence core (trace route; dimension obstruction; non-canonicity witnesses) is independent of that reading, and the theorem's force does not rest on the identification.
+
+**Rmk (three routes to discreteness).** The corpus's quantization mechanisms are now three, on three different objects: **(R1) reality line** — CT0.9: $\sigma_e\in\{\pm1\}$, single-qubit $\wedge^2\mathcal H_q$; **(R2) materialization** — EW.18/FT.22–FT.25: $\kappa,k,\Theta_{\mathrm{int}}\in\mathbb Z$, pole single-valuedness on loops; **(R3) selection** — CT3.18/FT.19: admissibility $\in\{0,1\}$, mask annihilation of free colour. The strong edge weight is governed by R3 alone: it registers no per-edge number. (Cross-ref: FT.30's verdict column.)
+
+**Phys.** The strong edge weight is the EM weight tensored with a colour-transport label — and the label carries no Abelian phase of its own (non-existence frozen: CT3.10a). Colour becomes observable only sealed into singlets: the per-edge strong "quantum" is the sealing itself. Confinement is not a force law added to $G(e)$; it is the observable content of $G(e)$'s strong factor.
+
+---
+
+---
+
+
+## Tier F.11 — Sector Quantum Audit and the Continuum Ledger
+
+### Def-H.18 — Arena and spectrum (the two-locus vocabulary)
+
+**Def.** The **arena** of a quantity $:=$ the configuration domain over which $Z(\mathcal R)$ sums [A8, C12: $\mathfrak C(\mathcal R)$] — off-shell; continuous wherever CT1.12/CT1.19a make it so. The **spectrum** of a quantity $:=$ its values on materialized configurations — those contributing to poles of the masked resolvent [D2.4, CT2.5; $\Sigma$-level: Def-H.16] — on-shell. **Two-locus principle** (vocabulary for an already-proven distinction): discreteness claims in this corpus are spectrum claims; continuity claims are arena claims. One and the same object may be continuous in the arena and quantized in the spectrum — CT2.5 (continuous operator families, discrete pole set) and FT.22–FT.25 (continuous $\mathcal E(e)$ arena [Def-H.14 Rmk], integer winding spectrum) are the two proven instances. Vocabulary only — no new premise.
+
+---
+
+---
+
+### FT.30 — Pair-channel sector quantum audit: $\bigl((5{+}3{+}1)+(3{+}3)+1\bigr)$
+
+**Thm.** The $16$ pair-channel registers [CT0.6] tile as $(G_5+W_3+H_1)+(J^+_3+J^-_3)+D^+_1$ [CT0.12, CT1.1, CT1.2], and CT1.12's metric dictionary decomposes block-wise:
+$$
+g_{\mu\nu}\ \leftrightarrow\ \underbrace{\hat h_{ij}\ (5)}_{G:\ \text{spin-2 shear}}\ \oplus\ \underbrace{\Sigma_{\mathrm{tr}}\ (1)}_{H:\ \text{volume mode}}\ \oplus\ \underbrace{a_{00}\ (1)}_{D^+:\ \Omega\ \text{conformal}}\ \oplus\ \underbrace{w_i\ (3)}_{W:\ \text{shift}};\qquad
+J^\pm\ (S\text{-odd}):\ 0\ \text{metric coordinates}\ [\mathrm{Def\text{-}H.14}:\ \mathcal E(e)\ \text{is}\ S\text{-even}].
+$$
+Independent-quanta audit:
+$$
+\begin{array}{c|c|c|c}
+\text{block} & \text{arena data} & \text{spectrum data} & \text{independent quantum?}\\ \hline
+G\ (5) & \text{continuous shear}\ [\mathrm{CT1.12}] & \text{winding}\ \kappa,k\in\mathbb Z\ [\mathrm{FT.22}/\mathrm{FT.24}],\ \text{unit}\ \mathfrak h^2=4G_N\ln2\ [\mathrm{CT2.9}] & \textbf{yes — geometric}\ (\text{joint read, }\neg\text{per-block})\\
+W\ (3) & \text{shift}\ w_i\ [\mathrm{CT1.12}];\ \text{Casimir fixed}:\ \vee^2\,j{=}1,\ \wedge^2\,j{=}0\ [\mathrm{CT0.7a}];\ \text{seed}\ j{=}\tfrac12\ [\mathrm{EW.32}] & \text{integer labels}\ k,\ \Theta_{\mathrm{int}}\ [\mathrm{FT.25}(3),\ \mathrm{FT.28}(2)] & \textbf{candidate — spin}\ (\text{extraction open, Gaps 11});\ \neg\text{self-charge}\ [\mathrm{FT.12}]\\
+H\ (1) & h_0\ \text{seed background},\ \text{continuous P4 data}\ [\mathrm{EW.13},\ \mathrm{P4}];\ M^2\propto h_0^2\ [\mathrm{EW.33}] & \text{via mass read only}\ [\mathrm{FT.20}\ \text{row}\ H,\ \mathrm{Def-H.36}] & \text{no — continuous configuration datum}\\
+J^+\ (3) & \text{seals}\ n_{\mathcal R}:0\to1\ [\mathrm{D1.2}];\ S\text{-odd}=\text{reality grading}\ [\mathrm{CT0.7}] & \neg\text{observable}\ [\mathrm{FT.20}] & \text{no — structural};\ \#J^+=\#J^-\ [\mathrm{D1.3}/\mathrm{D2.11}];\ \neg\text{charges}\ [\mathrm{FT.11}]\\
+J^-\ (3) & \text{dissolution seals}\ [\mathrm{D1.2}] & \neg\text{observable}\ [\mathrm{FT.20}] & \text{no — structural, as}\ J^+\\
+D^+\ (1) & \Lambda\ \text{uniform centre}\ [\mathrm{A8},\ \mathrm{D4.3}];\ w=-1\ [\mathrm{CT1.25}];\ \Omega\ \text{channel entry}\ [\mathrm{Def\text{-}H.2}] & \neg\text{observable independently}\ [\mathrm{FT.20}] & \text{no — P4 datum}\\ \hline
+\multicolumn{4}{c}{\text{stack aspects (outside the}\ 16\ [\mathrm{CT0.12\ Rmk}]):}\\
+\mathrm{EM} & \sigma_e\ \text{binary}\ [\mathrm{CT0.9}];\ q\in\{-1,0,+1\}\ [\mathrm{EM.9}/\mathrm{D3.4}] & \text{parity}\ (-1)^\kappa\ \text{on-shell}\ [\mathrm{FT.24}] & \textbf{yes — charge}\ (\text{R1 reality line})\\
+\text{strong} & \tau(e)\ \text{defining-rep label}\ [\mathrm{Def\text{-}H.17}];\ \neg\exists\ \text{per-edge phase}\ [\mathrm{FT.29}(2)] & \text{singlet sealing}\ \{0,1\}\ [\mathrm{FT.19}/\mathrm{FT.29}(3)] & \textbf{yes — admissibility}\ (\text{R3 selection})\\
+D^- & \text{locked content}\ [\mathrm{D4.2}] & \neg\text{observable}\ [\mathrm{FT.3},\ \mathrm{CT4.4}] & \text{no}
+\end{array}
+$$
+**Verdict.** Independent quanta exist in exactly three read classes, one per discreteness route [FT.29 Rmk]: **(R1)** binary registration — reality line [CT0.9]: $\sigma_e$, $q$, $(-1)^{\aleph}$; **(R2)** integer winding — materialization [EW.18, FT.22–FT.25]: $\kappa$, $k$, $\Theta_{\mathrm{int}}$, unit $\mathfrak h^2=4G_N\ln2$ [CT2.9, CT1.29]; **(R3)** singlet admissibility — mask selection [CT3.18, FT.19]: $\{0,1\}$. No pair-channel block carries a block-local quantum: the geometric quantum is a *joint* $S$-even read — $\widehat{ds}^{\,2}(e)=g_{\mu\nu}(e)\Delta x^\mu_e\Delta x^\nu_e/\mathfrak h^2$ [D1.6] mixes all ten metric coordinates across $G,H,D^+,W$ — and the $\bigl((5{+}3{+}1)+(3{+}3)+1\bigr)$ blocks are the arena decomposition of that read.
+
+**Rmk (the emergence chain, assembled).** How spacetime "truly emerges", in six cited steps: (1) per-edge $S$-even data $(a_{00},q_{ij},w_i)\leftrightarrow$ metric dictionary $g_{\mu\nu}$ [CT1.12, D2.1 — block-wise per this Thm]; (2) coarse-grained ledger averages $\to$ smooth $(M,g)$ under hypotheses (i)–(iii) [CT2.6]; (3) line-element sums $\to$ path integrals, rel. error $O(\mathfrak h)$ [CT1.19]; (4) on-shell selection: $\oint_c ds^2\in2\mathfrak h^2\mathbb Z$ [FT.22], per-edge integers at the floor [FT.24], classical limit $=$ large-$k$ [FT.31(3)]; (5) stationary set of the ledger sum $=$ classical geometry [CT1.20], Einstein–Hilbert closure [CT1.21, CT2.7], calibration $\mathfrak h^2=4G_N\ln2$ [CT2.9]; (6) particles $=$ poles of the $\Sigma$-resolvent [Def-H.16, FT.26]. Two loci throughout [Def-H.18]: the arena continuous, the spectrum integer — no step adds a premise beyond the corpus's declared set (A §0.2a).
+
+**Req.** CT0.6, CT0.7, CT0.7a, CT0.12, CT0.14 (Part 1); CT1.1, CT1.2, CT1.12, CT1.19, CT1.20, CT1.21, CT1.25, CT1.29, CT2.5, CT2.6, CT2.7, CT2.9 (Part 2); D1.2, D1.3, D1.6, D2.11, D4.2, D4.3; EW.13, EW.18, EW.32, EW.33 (Part 2); EM.9 (Part 2); CT3.18, CT3.22 (Part 2); CT4.4 (Part 2); FT.3, FT.9, FT.11, FT.12, FT.20, FT.22, FT.24, FT.25, FT.29; Def-H.2, Def-H.14, Def-H.17, Def-H.18; P4.
+
+**Pf.**
+$$
+\text{tiling}:\ \mathrm{CT0.12}\ \text{table}:\ 3{+}3{+}5{+}3{+}1{+}1=16=C_{\mathrm{cap}}\ [\mathrm{CT0.6}];\qquad\text{sector parities}:\ \mathrm{CT1.1}/\mathrm{CT1.2}:\ \mathcal E_{++}=\{E_0,\Sigma,\hat E^{ij}\}\ (1{+}1{+}5),\ \mathcal E_{+-}=\{W_i\}\ (3),\ \mathcal E_{-+}=\{J_i\}\ (3),\ \mathcal E_{--}=\{K_i\}\ (3)
+$$
+$$
+\text{dictionary blocks}:\ a_{00}\sim E_0=D^+\ \text{block};\ \ \Sigma_{\mathrm{tr}}\sim\Sigma=H\ \text{block};\ \ \hat h_{ij}\sim\hat E^{ij}=G\ \text{block};\ \ w_i\sim W_i=W\ \text{block}\quad[\mathrm{CT1.12}\ \text{table}\ +\ \mathrm{CT0.12}\ \text{block table};\ \mathrm{D2.1}\ \text{coefficients}]
+$$
+$$
+J^\pm:\ S\text{-odd}\ [\mathrm{CT1.1}]\implies\notin\mathcal E(e)=\mathcal E_{++}\oplus\mathcal E_{+-}\ [\mathrm{Def\text{-}H.14}]\implies0\ \text{metric coordinates}
+$$
+$$
+\text{table rows}:\ \text{as cited (each cell one frozen-corpus or proven-H tag)}
+$$
+$$
+\neg\text{block-locality}:\ \widehat{ds}^{\,2}(e)=g_{\mu\nu}\Delta x^\mu\Delta x^\nu/\mathfrak h^2\ [\mathrm{D1.6}]\ \text{with}\ g_{\mu\nu}\ \text{spanning all four blocks}\ [\mathrm{CT1.12}\ \text{dictionary}]\implies\kappa\ \text{is a joint read}.\ \blacksquare
+$$
+
+**Phys.** Read the 16-matrix as the ledger's periodic table: nine $S$-even force directions build the metric arena (shear $+$ volume $+$ conformal $+$ shift), six $S$-odd directions make and unmake the reality of edges, one centre rescales uniformly — and not one of those blocks holds a quantum by itself. The quanta live in the reads: a sign at registration, a winding at materialization, a sealing at selection. That is the precise sense in which spacetime "truly emerges": an $S$-even arena on which materialization writes the integers, while the $S$-odd sectors run the registration that makes edges — and hence geometry — exist at all.
+
+---
+
+---
+
+### FT.31 — The continuum limit survives on-shell quantization
+
+**Thm.** Let $\{c_{\mathfrak h}\}$ be a family of materialized chains [FT.22] with $L=\mathfrak h\,n_{\mathcal R}$ fixed, $\mathfrak h\to0$ [CT1.19's regime]. Then:
+$$(1)\quad\text{per edge}:\ \ \kappa_e=g_{\mu\nu}\dot x^\mu\dot x^\nu(\lambda_e)+O(\mathfrak h)\ \wedge\ \kappa_e\in\mathbb Z\ \text{on-shell}\ [\mathrm{FT.24}\ \text{scope}]:\ \text{integers sampling a smooth function with}\ O(\mathfrak h)\ \text{slack};$$
+$$(2)\quad\text{sums}:\ \ \sum_e\kappa_e\mathfrak h^2=\sum_e ds^2(e)\ \text{identically}\ [\mathrm{D1.6}]\implies\mathrm{CT1.19}\ \text{applies verbatim}:\ \text{abs. error}\ O(\mathfrak hL),\ \text{rel.}\ O(\mathfrak h):\ \text{integrality adds no error term — selection acts on family membership, not on sums};$$
+$$(3)\quad\text{selection in the limit}:\ \ \oint_c ds^2\in2\mathfrak h^2\mathbb Z\ [\mathrm{FT.22}\ \mathrm{Phys}];\qquad k=\frac{1}{2\mathfrak h^2}\oint_c ds^2\to\infty\ \text{at fixed classical loop}:\ \text{the lattice is classically invisible, quantally exact};$$
+$$(4)\quad\text{floor relating equation (Gaps 2, minimal-edge class)}:\ \ \kappa_e\equiv1\ [\mathrm{D1.1},\ \text{Comm-min}]\implies\Theta(c)=\delta h(c)\ \text{and}\ \ \frac{S_{\mathrm{reg}}(c)}{\oint_c ds^2}=\frac{\delta h\ln2}{\delta h\,\mathfrak h^2}=\frac{\ln2}{\mathfrak h^2}=\frac{S_{\min}}{A_{\min}}\qquad[\mathrm{CT0.9},\ \mathrm{C9},\ \mathrm{CT1.29}].$$
+
+**Req.** FT.22, FT.24; CT1.19, CT1.19a (Part 2); CT2.6 hypotheses (i)–(iii) (inherited); D1.1, D1.6, D1.7; CT0.9 (Part 1); C9; CT1.29; Comm-min (via D1.1/EM.20).
+
+**Pf.**
+$$
+(1):\ \mathrm{CT1.19}\ \text{Pf}:\ \Delta x^\mu_e=\mathfrak h\,\dot x^\mu(\lambda_e)+O(\mathfrak h^2)\implies\widehat{ds}^{\,2}(e)=g_{\mu\nu}\dot x^\mu\dot x^\nu(\lambda_e)+O(\mathfrak h);\qquad\text{on-shell}\ \widehat{ds}^{\,2}(e)=\kappa_e\in\mathbb Z\ [\mathrm{FT.24}]
+$$
+$$
+(2):\ \kappa_e\mathfrak h^2=ds^2(e)\ \text{by definition}\ [\mathrm{D1.6}:\ \widehat{ds}^{\,2}=ds^2/\mathfrak h^2]\implies\text{the sums are the same sums}:\ \mathrm{CT1.19}\ \text{unmodified}
+$$
+$$
+(3):\ \Theta(c)\mathfrak h^2=\sum_e ds^2(e)\to\oint_c ds^2\ [\mathrm{CT1.19}]\ \wedge\ \Theta(c)=2k\ [\mathrm{FT.22}]\implies\oint_c ds^2\in2\mathfrak h^2\mathbb Z\ \text{at leading order};\qquad\oint\ \text{fixed},\ \mathfrak h\to0:\ k\to\infty
+$$
+$$
+(4):\ \kappa_e\equiv1\implies\Theta=\sum_e1=\delta h(c)\ [\mathrm{D1.7}];\qquad S_{\mathrm{reg}}(c)=\delta h\cdot\ln2\ [\mathrm{CT0.9}/\mathrm{C9}:\ 1\ \text{real edge}=1\ \text{bit}];\qquad\oint_c ds^2=\Theta\mathfrak h^2=\delta h\,\mathfrak h^2
+$$
+$$
+\frac{S_{\mathrm{reg}}}{\oint ds^2}=\frac{\delta h\ln2}{\delta h\,\mathfrak h^2}=\frac{\ln2}{\mathfrak h^2};\qquad\mathrm{CT1.29}:\ S_{\min}=\ln2\ (1\ \text{edge}),\ A_{\min}=\mathfrak h^2\ (1\ \text{hop area})\implies\frac{S_{\min}}{A_{\min}}=\frac{\ln2}{\mathfrak h^2}:\ \text{identical}.\ \blacksquare
+$$
+
+**Rmk (decoupling of the continuum hypotheses).** The continuum-limit layer — CT2.6's hypotheses (i)–(iii), CT1.19's convergence — is now fully decoupled from line-element quantization: the hypotheses concern smoothness of $g$ and cell refinement (**arena**); quantization concerns materialization (**spectrum**) [Def-H.18]. Neither supports nor threatens the other, and no result of this document makes the continuum limit depend on a discreteness postulate.
+
+**Phys.** Quantized summands do not break the Riemann machine: the integers $\kappa_e$ track the smooth sample $g_{\mu\nu}\dot x^\mu\dot x^\nu$ to $O(\mathfrak h)$ per edge, so CT1.19's convergence passes through untouched and the on-shell condition becomes, in the continuum, the Bohr–Sommerfeld rule $\oint ds^2\in2\mathfrak h^2\mathbb Z$. At the minimal-edge floor the information/area relating equation $\ln2/\mathfrak h^2$ is an identity — one bit per hop area [CT1.29] is the same statement as one winding quantum per minimal edge. Classical spacetime is the large-winding limit of an integer ledger.
+
+---
+
+---
+
+
+## Tier F.12 — The Cycle Floor Family, the Defect Bridge, and Composite Floors
+
+### Def-H.19 — Stationary, stable, and unstable jumps (vocabulary)
+
+**Def.** A **jump** $:=$ a transit path between two termini in the emergent chart [D0.6, CT2.6] — program vocabulary, no new structure. A **stationary jump**: $\delta\!\int_\gamma ds^2=0$ among fixed-endpoint variations — an affinely parametrized geodesic of $g_{\mu\nu}$ [CT1.20's stationary-phase read; Euler–Lagrange for $\int g_{\mu\nu}\dot x^\mu\dot x^\nu d\lambda$ — math]. A **stable jump**: a stationary jump that is a local minimum of $\int ds^2$ on its interval (no conjugate points [math: Morse/Synge]); **unstable**: stationary but saddle or maximal. Lorentzian read [CT1.12: $\operatorname{sig}=(-,+,+,+)$]: on timelike paths, minimizing $\int ds^2$ is *maximizing* proper time — the classical stable trajectory; on spacelike paths, shortest length. Program vocabulary (constitutive; Morse-theoretic [math]); the "relatively stable" idiom of program notes means: measured against the other stationary paths with the same endpoints — an internal comparison, no external scale.
+**No coupling to materialization is asserted.** CT1.20's stationary phase weights minima and saddles alike (every $\delta\Phi=0$ configuration dominates non-stationary ones); whether the pole condition [CT2.5] or the defect criterion [FT.33] *selects* the stable subclass is a theorem-shaped open question, not a definition. **(refinement [Def-H.24(5), FT.66]):** for degenerate stationary families (isometry orbits) the vocabulary is Morse–Bott — "stable" $:=\operatorname{ind}_B=0$ on a clean critical manifold, "unstable" $:=\operatorname{ind}_B\ge1$; and the coupling question is answered: no index criterion operates on closed chains within the weight inventory [FT.66(2)–(3)], and absolute index-0 selection is *inadmissible* for bound chains on Synge-class slices [FT.66(4)]; the open-channel residue is tracked under Open Gaps 13.
+
+---
+
+---
+
+### FT.33 — The defect bridge: pole-side mass candidate in well-posed ratio form
+
+**Thm.** Under Def-H.37(1) (interface transfer: the floor fermion's pole displacement takes EW.33's leading-order defect form for the seed $\mathsf v$ [EW.32] weak-transported around its materialized bound chain), for a materialized **spacelike** single-contact cycle floor $\Sigma_L$ with $\kappa_e>0$:
+$$(1)\quad m_{\mathrm{pole}}^2(\Sigma_L)=\hat\mu^2\,\ell_c^2\;G(c),\qquad\ell_c=\mathfrak h\,\Lambda_c,\quad\Lambda_c:=\sum_{e\in c}\sqrt{\kappa_e}\ \ (\text{dimensionless});$$
+$$G(c)=\sum_{A,B}c_Ac_B\operatorname{Re}\langle\mathcal G_A\mathsf v,\mathcal G_B\mathsf v\rangle\ \ [\mathrm{EW.33};\ \mathrm{EW.20}\ \text{Gram data}];\qquad\hat\mu^2>0:\ \text{floor-independent residue packaging}\ \varkappa^2\beta^2h_0^2\ \ [\mathrm{EW.33}\ \text{with}\ \ell^2\ \text{factored out}];$$
+$$(2)\quad\frac{m_{\mathrm{pole}}^2}{m_{\mathrm{hid}}^2}=\frac{\hat\mu^2\,\mathfrak h^4\,G(c)}{(\ln2)^2}\cdot\Bigl(\frac{\Lambda_c}{L}\Bigr)^{2}\ \in\ \mathfrak q^0\qquad[\text{well-posed};\ m_{\mathrm{hid}}^2=L^2(\ln2)^2/\mathfrak h^2\ \ \mathrm{FT.32}(1)];$$
+$$(3)\quad\textbf{length-universality}:\ \text{at fixed}\ \kappa\text{-profile shape and Gram data the ratio is independent of}\ L;\quad\text{uniform}\ \kappa:\ \text{ratio}=\frac{\hat\mu^2\mathfrak h^4G(c)}{(\ln2)^2}\,\kappa\ —\ \text{linear in the edge quantum, floor-free};$$
+$$(4)\quad\text{Cauchy–Schwarz}:\ \Lambda_c^2\le L\,\Theta(c),\ \text{equality}\iff\kappa_e\ \text{uniform}\ [\text{math}]\implies\text{at fixed}\ (\Theta,L):\ \text{uniform floors maximize the bridge ratio};$$
+$$(5)\quad h_0=0\implies\hat\mu^2=0\implies m_{\mathrm{pole}}^2=0\ \ [\mathrm{EW.33}]\ \wedge\ m_{\mathrm{hid}}\ne0\ \ [\mathrm{FT.32}(1)]:\ \text{the two reads decouple without the scalar background};$$
+$$(6)\quad\textbf{kernel coherence}:\ c\in\ker M^2=\operatorname{span}\{Q\}\ [\mathrm{EW.22}]\implies G(c)=0\implies m_{\mathrm{pole}}^2=0\ [\mathrm{EW.33}:\ \text{Gram PSD}]\ —\ \text{charge-aligned (photon-direction) transport is defect-massless at every floor, matching}\ m_\gamma^2=0\ [\mathrm{EM.6}].$$
+No identification $m_{\mathrm{pole}}=m_{\mathrm{hid}}$ is asserted; the ratio is the bridge datum.
+
+**Req.** Def-H.37(1) (forward pointer — Tier F.17); EW.20, EW.22, EW.32, EW.33 (Part 2); EM.6 (Part 2); FT.23, FT.24, FT.32; Def-H.2, Def-H.9(2); D1.6; CT2.9 (Part 2); D2.9 (units); Cauchy–Schwarz [math].
+
+**Pf.**
+$$
+(1):\ \mathrm{EW.33}:\ \mathcal U=\exp\bigl(i\oint\textstyle\sum_Ac_A\mathcal G_A\,d\ell\bigr)=1+i\,\ell_c\sum_Ac_A\mathcal G_A+O(c^2);\qquad\mathrm{CT2.5}\ \text{read}\ [\mathrm{EW.33}]:\ m^2=\|(\mathcal U-1)\mathsf v\|^2=\ell_c^2\,G(c)+O(c^3)
+$$
+$$
+\ell_c=\textstyle\sum_e\sqrt{\kappa_e}\,\mathfrak h\ [\mathrm{Def\text{-}H.2}\ \text{piecewise-straight length};\ \mathrm{FT.24}(2):\ ds^2(e)=\kappa_e\mathfrak h^2,\ \text{spacelike}\ \kappa_e>0];\qquad\hat\mu^2:\ \mathrm{EW.33}\ \text{packaging},\ \ell^2\ \text{factored out}\ [\mathrm{Def\text{-}H.37(1)}]
+$$
+$$
+(2):\ \frac{m_{\mathrm{pole}}^2}{m_{\mathrm{hid}}^2}=\frac{\hat\mu^2\mathfrak h^2\Lambda_c^2\,G}{L^2(\ln2)^2/\mathfrak h^2}=\frac{\hat\mu^2\mathfrak h^4G}{(\ln2)^2}\Bigl(\frac{\Lambda_c}{L}\Bigr)^2;\qquad[\hat\mu^2]=\frac{[m^2]}{[\ell^2]}=\mathfrak q\cdot\mathfrak q=\mathfrak q^2\ [\mathrm{EW.33}\ \text{packaging};\ \mathrm{D2.9}]\implies[\hat\mu^2\mathfrak h^4]=\mathfrak q^0\ \checkmark
+$$
+$$
+(3):\ \text{uniform}\ \kappa:\ \Lambda_c=L\sqrt\kappa\implies(\Lambda_c/L)^2=\kappa\ [\text{exact squaring},\ \neg\text{numerical roots}];\quad L\ \text{cancels}
+$$
+$$
+(4):\ \bigl(\sum_e\sqrt{\kappa_e}\bigr)^2\le L\sum_e\kappa_e=L\,\Theta\ [\text{Cauchy–Schwarz};\ \text{equality}\iff\sqrt{\kappa_e}\ \text{proportional to}\ 1\iff\kappa\ \text{uniform}]
+$$
+$$
+(5):\ \mathrm{EW.33}:\ \mu_\star^2=c_W\varkappa^2\beta^2h_0^2,\ \ h_0=0\implies M^2\equiv0;\qquad\mathrm{FT.32}(1):\ m_{\mathrm{hid}}=L\ln2/\mathfrak h\ \neg\text{references}\ h_0
+$$
+$$
+(6):\ G(c)=c^{\mathsf T}\bigl(M^2/\mu_\star^2\bigr)c\ [\mathrm{EW.20}/\mathrm{EW.33}];\quad M^2\ \text{PSD}\ [\mathrm{EW.33}:\ \text{Gram}]\implies G(c)=0\iff c\in\ker M^2=\operatorname{span}\{Q\}\ [\mathrm{EW.22}];\qquad Q\text{-aligned}=\text{photon direction}\ [\mathrm{D3.10}:\ A=\sin\theta_WW_3+\cos\theta_WY;\ \mathrm{EW.24}]\implies m_{\mathrm{pole}}^2=0\ [\mathrm{EM.6}\ \text{consistency}].\ \blacksquare
+$$
+
+**Rmk (wrapping-chain consistency).** On rung-3 wrapping chains, Def-H.37(2)s formula *is* EW.33 verbatim — the transfer adds nothing there; FT.33's content is the ratio against $m_{\mathrm{hid}}$ and its floor-universality. The Gram quadratic form $G(c)$ remains configuration data (the chain's weak-transport profile $c_A$); floor-independence in clause (3) is at fixed $G$ and fixed profile shape. **Genericity upgrade:** on-shell rigidity [FT.38(2), forward] makes uniform-$\kappa$ — hence clauses (3)–(4) — continuum-generic within the integrality classes, not a specialization.
+
+**Phys.** If the fermion's pole mass is the seed's failure to return to itself around the bound chain, then the informational and pole reads of mass are bridged by a single dimensionless ratio: a fixed P4/Gram factor times the squared mean root of the edge quanta. Cycle length drops out completely — the ladder of hidden bits and the ladder of geometric length grow at exactly the same rate — and the ratio is maximized by uniform floors, vanishes with the scalar background, and vanishes identically on charge-aligned transport, reproducing the massless photon at every floor. The integers enter the bridge as $\overline{\sqrt\kappa}^{\,2}$: the one place where the discrete ledger meets irrational lengths.
+
+---
+
+---
+
+### FT.34 — Round-trip quantization between floors; integrality propagation; sealing partition rule
+
+**Thm.** Let $\Sigma^{(1)},\Sigma^{(2)}$ carry materialized 2-cycles $c_1,c_2$ [$\Theta(c_i)=2\kappa_i$, $\kappa_i\in\mathbb Z$: FT.24], and let $P,P'$ be connector chains with $\Gamma:=c_1\cup P\cup c_2\cup P'$ a valid closed chain [D1.4: concatenation, Janus balance], edge-disjoint union. If $\Gamma$ materializes:
+$$(1)\quad\Theta(P)+\Theta(P')=\Theta(\Gamma)-2\kappa_1-2\kappa_2\in2\mathbb Z\qquad[\mathrm{FT.22},\ \mathrm{D1.7}\ \text{additivity}];$$
+$$(2)\quad P'=\bar P\ (\text{same bidirectional channels reversed}\ [\mathrm{FT.23}\ \text{per edge}]):\quad\Theta(P)\in\mathbb Z;\qquad d_{12}:=\Theta(P)=\textbf{geometric distance (integer)};$$
+$$(3)\quad\textbf{additive winding law}:\ k(\Gamma)=\frac{\Theta(\Gamma)}{2}=\kappa_1+\kappa_2+d_{12}=k(c_1)+k(c_2)+d_{12}\qquad[\mathrm{FT.25}(3):\ k=\kappa\ \text{at 2-cycle floors}];$$
+$$(4)\quad\textbf{round-trip integrality (propagation lemma)}:\ \text{let}\ e,\bar e\ \text{be both real},\ \Gamma\ \text{materialized closed with edge multiset}\ \{e,\bar e\}\sqcup E_0,\ E_0\ \text{decomposing edge-disjointly into materialized closed chains}:\quad2\kappa_e=\Theta(\Gamma)-\Theta(E_0)\in2\mathbb Z\implies\kappa_e\in\mathbb Z;$$
+$$(5)\quad\textbf{sealing partition rule}\ [\textbf{CT3.17a(1) (F)}]:\ \text{the group-size structure of sealed colour-attachment sets, and the non-sealing of a lone attachment}.$$
+
+**Req.** FT.22, FT.23, FT.24, FT.25; D1.4, D1.7; Def-H.10; CT3.17, CT3.17a (Part 2); FT.19, FT.27; elementary number theory [math].
+
+**Pf.**
+$$
+(1):\ \mathrm{D1.7}:\ \Theta(\Gamma)=\Theta(c_1)+\Theta(P)+\Theta(c_2)+\Theta(P')\ (\text{edge-disjoint});\qquad\mathrm{FT.22}:\ \Theta(\Gamma)\in2\mathbb Z;\quad\mathrm{FT.24}(1):\ \Theta(c_i)=2\kappa_i\in2\mathbb Z
+$$
+$$
+\implies\Theta(P)+\Theta(P')=\Theta(\Gamma)-2(\kappa_1+\kappa_2)\in2\mathbb Z-2\mathbb Z=2\mathbb Z
+$$
+$$
+(2):\ P'=\bar P:\ \Theta(P')=\Theta(P)\ [\mathrm{FT.23}\ \text{applied per edge of}\ P]\implies2\Theta(P)\in2\mathbb Z\implies\Theta(P)\in\mathbb Z;\qquad d_{12}:=\Theta(P)
+$$
+$$
+(3):\ k(\Gamma)=\Theta(\Gamma)/2=(2\kappa_1+2\kappa_2+2d_{12})/2=\kappa_1+\kappa_2+d_{12}\in\mathbb Z
+$$
+$$
+(4):\ \Theta(\Gamma)=\kappa_e+\kappa_{\bar e}+\Theta(E_0)=2\kappa_e+\Theta(E_0)\ [\mathrm{FT.23}:\ \kappa_{\bar e}=\kappa_e;\ \mathrm{D1.7}];\qquad\Theta(\Gamma)\in2\mathbb Z\ [\mathrm{FT.22}];\quad\Theta(E_0)=\sum_i\Theta(c_i)\in2\mathbb Z\ [\mathrm{FT.22}\ \text{per chain}]
+$$
+$$
+\implies2\kappa_e\in2\mathbb Z\implies\kappa_e\in\mathbb Z
+$$
+$$
+(5):\ \mathrm{CT3.17a}\ (\text{F}).\ \blacksquare
+$$
+
+**Rmk (scope of the distance).** Clause (2)'s integer distance requires the *bidirectional* round-trip closure: a single-orientation connector gives only the symmetrized constraint $\Theta(P)+\Theta(P')\in2\mathbb Z$ — the one-way open path remains unconstrained (no winding without closure; the handoff-level claim "$\int_\gamma ds^2=2k\mathfrak h^2$ for geodesics between jumps" holds only for the closed round-trip, where it reads $\oint_\Gamma ds^2=2k(\Gamma)\mathfrak h^2$). Refinement: the quantization *law* is refinement-exact [FT.22 at every level]; the integer *value* scales as $\mathfrak h\to0$ — the classical limit is large $k$ [FT.31(3)].
+
+**Phys.** Two floor fermions joined by a bidirectional channel measure their separation in integers: the round-trip's line-element sum is even-quantized, the one-way accumulation is an integer, and the composite loop's winding number is the *sum* of the two floor windings and the distance between them — an additive composition law for the geometric ledger. The same clause propagates integrality: any bidirectional channel that closes through materialized floors into a materialized loop inherits $\kappa\in\mathbb Z$ — the on-shell sublattice grows outward from the 2-cycle floors. (The colour sealing partition rule: CT3.17a(1) (Part 2).)
+
+---
+
+---
+
+
+## Tier F.13 — Gap-Closure Pass: Flux Ledger, Relating Equation, Rigidity, Confinement Converse, Core Charge, Aspect Ledger
+
+### FT.36 — Flux ledger completion
+
+**Thm.** $(1)$ **Saturation locus.** Jaw/threshold arithmetic — where the temporal jaw binds, and the threshold $=$ the channel constant: CT0.6a (Part 1). In FT.1's geodesic slowly-varying gauge ($\delta h=\Delta\ell/(\Omega\mathfrak h)$, $\delta\tau=\Delta t/\Omega$, $\Omega>0$ [CT1.12]) the locus reads
+$$\frac{\Delta\ell(\gamma)}{\Delta t(\gamma)}=4\,\mathfrak h\qquad(\text{channel speed}=4\ \text{hop lengths per tick}),$$
+with $\Omega$ cancelling: **the saturation scale is a conformal invariant** [FT.6 pattern]; only the saturated value is $\Omega$-modulated ($\mathcal F=4\ln2$, $\mathcal F_{\mathrm{phys}}=4\ln2/\Omega$ [FT.5, Def-H.5]).
+$(2)$ **Attainment (FT.36(2) discharged).** Whenever Def-H.3's transit domain is nonempty, its sup is attained by an explicit photon-content schedule: partition $\gamma$'s edges into per-tick groups of $\le4$; run transit (photon) content [EM.5, EM.6: trivial chains $\subseteq V_2$; D1.5: open propagating $=$ transit] on $\mathsf B(\gamma)/\ln2$ scheduled hops [FT.1's contracted notation] — per-tick group capacity: CT0.6a's sharpness clause (Part 1) — $\mathsf E_{\mathrm{tr}}=\delta h'\ln2$ [EM.7] $\Rightarrow\sup=\mathsf B(\gamma)$ [FT.1's bound met with equality]. On channels whose edges are bound-locked in every configuration the transit domain is empty and $I=0$ (attainment vacuous; bound trivially valid).
+$(3)$ Hence FT.1/FT.3/FT.4/FT.5's bounds are sup-attained equalities on exhibited configurations wherever transit content is admissible.
+
+**Req.** FT.1, FT.5, FT.6; Def-H.2, Def-H.3, Def-H.5; C9; CT0.6a (Part 1); CT1.12 (Part 2); D0.10, D1.5; EM.5, EM.6, EM.7 (Part 2).
+
+**Pf.**
+$$
+(1):\ \text{jaw/threshold arithmetic}:\ \mathrm{CT0.6a}\ (\text{B});\qquad\frac{\delta h}{\delta\tau}=\frac{\Delta\ell/(\Omega\mathfrak h)}{\Delta t/\Omega}=\frac{\Delta\ell}{\mathfrak h\,\Delta t}\ [\Omega>0\ \text{cancels};\ \mathrm{CT1.12}:\ \Omega=e^{\alpha_\Omega a_{00}}>0]
+$$
+$$
+\text{locus}:\ \delta h/\delta\tau=4\iff\Delta\ell/\Delta t=4\mathfrak h\quad(\text{dimension check in hop exponents}:\ [\Delta\ell]=\mathfrak h^1,\ [\Delta t]=\mathfrak h^0\ [\mathrm{D1.8}:\ x^0=\tau_n\ \text{tick count}]\ \checkmark)
+$$
+$$
+(2):\ \gamma'\subseteq\gamma\ \text{with}\ \delta h'=\min(\delta h,4\,\delta\tau)\ \text{hops carrying photon content is a valid transit configuration}\ [\mathrm{D0.10}:\ \mathfrak C(\mathcal R)\ \text{admits transit assignments};\ \mathrm{D1.5};\ \mathrm{EM.5}/\mathrm{EM.6}]:\ \mathsf E_{\mathrm{tr}}(\gamma')=\delta h'\ln2\ [\mathrm{EM.7}]
+$$
+$$
+\text{schedule exactness (per-tick groups at channel capacity)}:\ \mathrm{CT0.6a}\ (\text{B});\qquad\sup\ge\min(\delta h,4\,\delta\tau)\ln2\ \wedge\ \mathrm{FT.1}:\ \sup\le\ \text{same}\implies\text{equality, attained}
+$$
+$$
+(3):\ \text{from}\ (2)\ \text{at each bound's locus}.\ \blacksquare
+$$
+
+**Phys.** The flux ledger closes: the crossover where knowledge switches from space-limited to time-limited is the conformally invariant channel speed — four hop lengths per tick, the same four that is the channel's bit capacity — and the bound is *reached*, not merely valid, by photon schedules running the ledger at capacity. What FT.36(2) assumed, FT.36 exhibits.
+
+---
+
+---
+
+### FT.37 — The relating equation, complete
+
+**Thm.** For a materialized closed chain $c$ [FT.22], with $S_{\mathrm{reg}}(c)=\delta h(c)\,\ln2$ [CT0.9, C9] and $A_{\mathrm{loop}}(c):=\oint_c ds^2=\Theta(c)\,\mathfrak h^2=2k\,\mathfrak h^2$ [D1.6, FT.22], and mean edge quantum $\bar\kappa(c):=\Theta(c)/\delta h(c)$:
+$$\frac{S_{\mathrm{reg}}(c)}{A_{\mathrm{loop}}(c)}=\frac{\ln2}{\mathfrak h^2}\cdot\frac{1}{\bar\kappa(c)}=\frac{\delta h(c)\,\ln2}{2k\,\mathfrak h^2};\qquad
+\frac{S_{\mathrm{reg}}}{A_{\mathrm{loop}}}=\frac{S_{\min}}{A_{\min}}=\frac{\ln2}{\mathfrak h^2}\ [\mathrm{CT1.29}]\iff\Theta(c)=\delta h(c)\ (\bar\kappa=1).$$
+On all-nonnull per-edge-integer chains [FT.24/FT.34(4) scope]: $\bar\kappa\ge1$, with equality $\iff\kappa_e\equiv1$; null edges or class-(iii) rational profiles [FT.38(3)] admit $\bar\kappa<1$ (witness $(1,1,0)$: $\bar\kappa=\tfrac23$).
+
+**Req.** FT.22, FT.24, FT.31, FT.34; CT0.9 (Part 1); C9; CT1.29 (Part 2); D1.6, D1.7.
+
+**Pf.**
+$$
+\frac{S_{\mathrm{reg}}}{A_{\mathrm{loop}}}=\frac{\delta h\ln2}{\Theta\,\mathfrak h^2}=\frac{\ln2}{\mathfrak h^2}\cdot\frac{\delta h}{\Theta};\qquad\Theta=2k\ [\mathrm{FT.22}]\implies\text{second form};\qquad\bar\kappa:=\Theta/\delta h\implies\text{first form}
+$$
+$$
+\mathrm{CT1.29}\ \text{at the single-edge floor}:\ S_{\min}=\ln2,\ A_{\min}=\mathfrak h^2\implies\text{rate}\ \ln2/\mathfrak h^2;\qquad\text{recovered}\iff\delta h/\Theta=1
+$$
+$$
+\text{integer non-null profiles}:\ \kappa_e\ge1\implies\Theta=\sum\kappa_e\ge\delta h\implies\bar\kappa\ge1,\ =\iff\kappa_e\equiv1;\qquad(1,1,0):\ \Theta=2,\ \delta h=3:\ \bar\kappa=\tfrac23<1.\ \blacksquare
+$$
+
+**Phys.** The loop-area/qubit-power identification is complete: CT1.29's one-bit-per-hop-area rate holds for every materialized loop, deformed by exactly the loop's own mean edge quantum. Minimal-edge loops are the undeformed case; the winding $k$ reads the deformation in the second form. Gap 2's "completeness unresolved" is resolved: the correction factor *is* derived data.
+
+---
+
+---
+
+### FT.38 — Non-geodesic tightening and on-shell rigidity
+
+**Thm.** $(1)$ **Tightening.** For any spacelike path $\gamma$ with on-shell integer edge data $\kappa_e\in\mathbb Z_{\ge1}$ [FT.24/FT.34(4) scope]:
+$$I_{o\leftarrow\Sigma}(\gamma)\ \le\ \min\bigl(\delta h(\gamma),\ 4\,\delta\tau(\gamma)\bigr)\ln2\ \le\ \min\Bigl(\frac{\Delta\ell(\gamma)}{\mathfrak h},\ 4\,\delta\tau(\gamma)\Bigr)\ln2,\qquad\Delta\ell(\gamma)=\mathfrak h\sum_{e\in\gamma}\sqrt{\kappa_e}\ \ [\mathrm{Def\text{-}H.2},\ \mathrm{D1.6},\ \mathrm{FT.24}(2)],$$
+with no geodesic and no slow-variation hypothesis; spatial equality $\iff\kappa_e\equiv1$. FT.1's geodesic physical form is the special case; the bound is tightest on stable jumps [Def-H.19: local $\Delta\ell$-minimizers; Morse — math].
+$(2)$ **On-shell rigidity.** In CT1.19's family regime ($L=\mathfrak h n_{\mathcal R}$ fixed, $\mathfrak h\to0$, $g$ smooth along $\gamma$ [CT2.6]): $\kappa_e=f(\lambda_e)+O(\mathfrak h)$ with $f:=g_{\mu\nu}\dot x^\mu\dot x^\nu$ continuous [CT1.19's Pf, midpoint Taylor; per-edge remainder uniform]. For per-edge-integer classes (i)/(ii) : $\exists\,\mathfrak h_0$ such that $\forall\,\mathfrak h<\mathfrak h_0$, $\kappa_e$ is **constant along each connected materialized chain** — signature included (spacelike $\kappa\ge1$, null $0$, timelike $\kappa\le-1$ are $\ge1$ apart). Hence uniform-$\kappa$ is continuum-generic on-shell: FT.33(3)'s length-universality and FT.33(4)'s Cauchy–Schwarz equality are the generic on-shell case, not specializations; signature changes are confined to $O(\mathfrak h)$ boundary layers.
+$(3)$ **Rational ladder (class-(iii) arena).** Without per-edge integrality, FT.22 alone permits uniform $\kappa\in(2/L)\mathbb Z$ on an $L$-cycle ($\Theta=L\kappa\in2\mathbb Z$; witness $L=3$, $\kappa=\tfrac23$, $\Theta=2$): per-edge integrality is special to $L=2$ [FT.24: $2\mathbb Z/2=\mathbb Z$] and round-trip-closed channels [FT.34(4)]; clause (2)'s integer-step argument does not reach spacings $2/L<1$.
+
+**Req.** FT.1, FT.22, FT.24, FT.33, FT.34; Def-H.2, Def-H.19; D1.6; CT0.9 (Part 1); CT1.12, CT1.19 (Part 2); CT2.6 hypotheses (inherited); integer/rational arithmetic, Morse minimality [math].
+
+**Pf.**
+$$
+(1):\ \mathrm{FT.1}\ \text{first form: hypothesis-free};\qquad\kappa_e\ge1\implies\sqrt{\kappa_e}\ge1\implies\Delta\ell/\mathfrak h=\sum_e\sqrt{\kappa_e}\ \ge\ \delta h\implies\text{chain};\qquad\text{equality}\iff\kappa_e\equiv1
+$$
+$$
+\Delta\ell(\gamma)=\mathfrak h\textstyle\sum\sqrt{\kappa_e}:\ \text{per-edge}\ g\text{-length}\ \sqrt{ds^2(e)}=\sqrt{\kappa_e}\,\mathfrak h\ [\mathrm{FT.24}(2),\ \text{spacelike}];\ \text{piecewise additivity}\ [\mathrm{Def\text{-}H.2}];\qquad\text{stable jumps minimize}\ \Delta\ell\ \text{locally}\ [\mathrm{Def\text{-}H.19};\ \text{math}]
+$$
+$$
+(2):\ |\kappa_{e+1}-\kappa_e|\le|f(\lambda_{e+1})-f(\lambda_e)|+2C\mathfrak h\le\bigl(\tfrac{\sup|f'|}{L}+2C\bigr)\,\mathfrak h\ \to0;\qquad\mathfrak h<\bigl(\tfrac{\sup|f'|}{L}+2C\bigr)^{-1}\implies|\kappa_{e+1}-\kappa_e|<1\wedge\kappa\in\mathbb Z\implies\kappa_{e+1}=\kappa_e
+$$
+$$
+\text{signature}:\\ \kappa\ge1\ \vee\ \kappa=0\ \vee\ \kappa\le-1\ \text{pairwise distance}\ \ge1\implies\text{constancy includes signature}
+$$
+$$
+(3):\ \Theta=L\kappa\in2\mathbb Z\ [\mathrm{FT.22}]\implies\kappa\in(2/L)\mathbb Z;\qquad L=3:\ \kappa=\tfrac23:\ \Theta=2\in2\mathbb Z\ \wedge\ \kappa\notin\mathbb Z;\qquad L=2:\ \kappa\in2\mathbb Z/2=\mathbb Z\ [\mathrm{FT.24}\ \text{recovered}].\ \blacksquare
+$$
+
+**Rmk (scope discipline).** Clause (2) upgrades the uniform-$\kappa$ regime to generic on-shell status *within the integrality classes*; class (iii) is exactly where rigidity can fail — a second structural signature distinguishing the classes (the first being FT.34(4)'s round-trip criterion). FT.32(6)'s uniform/all-nonnull regimes are scoped accordingly.
+
+**Phys.** The information bound needs no geodesic: any spacelike on-shell path obeys it with its own proper length, tightest along stable jumps. And the continuum limit does not erode the integer ledger — a slowly varying geometry cannot move an integer, so materialized chains of the integrality classes become uniformly quantized along their length in the classical regime: integrality plus smoothness equals rigidity. Where integrality is not yet derived, the ledger can refine to spacing $2/L$ — and that is precisely the open frontier.
+
+---
+
+---
+
+### FT.39 — Confinement converse, singlet diagonal, and filter placement
+
+**Thm.** $(1)$ **Converse (Gap 8).** $\Pi_{\mathcal C}(\Sigma;C)=\mathcal C(\Sigma;C)\cdot\mathbb I$ with $\mathcal C\in\{0,1\}$ [Def-H.10: scalar idempotent] $\implies F_{\mathrm{strong}}^\Sigma(C)=\mathcal C\cdot F_{\mathrm{strong}}\big|_\Sigma$ [FT.19's definition]. Hence $\mathcal C=1\implies F_{\mathrm{strong}}^\Sigma=F_{\mathrm{strong}}\big|_\Sigma\ne0$ for nonzero aspect data ($f_a\ne0$ [CT3.9, CT3.10]) on $\ge1$ colour slot — generic nonvanishing with exact exception locus $\{f=0\}\ \cup\ \{\mathrm{Colour}(\Sigma)=\varnothing\}$. At support level [Def-H.11's selection-type read]: $\Pi_{\mathcal C}=\mathbb I\ne0$ whenever $\mathcal C=1$ — unconditional.
+$(2)$ **Singlet diagonal (consistency).** On sealed (singlet) states the Lie action annihilates: $T_a|\text{singlet}\rangle=0$ [CT3.15, CT3.17 invariance] $\implies\langle\text{singlet}|F_{\mathrm{strong}}|\text{singlet}\rangle=0$ — consistent with FT.11 (no independent colour charge) and CT3.22 (colour is not an end-charge): the strong block's nonzero content is the admissibility structure and the gluon mode count [CT3.13], not singlet expectation values.
+$(3)$ **Filter placement (Gap 9, decision derived).** Def-H.9's $\mathcal M(\Sigma)$ must **not** be pre-weighted by $\mathcal C(\Sigma;C)$: its members are restrictions $C|_\Sigma$ of valid ambient configurations [FT.18's setup; D2.11], whose colour sealing is ambient-global [CT3.18] — $\mathcal C(\Sigma;C)=0$ records that $\Sigma$'s partners lie outside [FT.18's non-locality], not that $C$ is invalid. Pre-weighting would delete the EM/$G$/$H$ reads of externally-sealed configurations, contradicting their colour-independence [FT.11, FT.21(i)–(ii)]; the downstream $\Pi_{\mathcal C}$ filter [Def-H.15(3)] zeroes exactly the strong block [FT.19] and keeps the rest — the corpus-consistent placement. CT2.8(3)'s null-quotient handles *universe-level* invalidity [CT3.18], a different question from $\Sigma$-relativity.
+
+**Req.** Def-H.9, Def-H.10, Def-H.11, Def-H.15; FT.11, FT.18, FT.19, FT.21; D2.11; CT2.8 (Part 2); CT3.9, CT3.10, CT3.13, CT3.15, CT3.17, CT3.18, CT3.22 (Part 2).
+
+**Pf.**
+$$
+(1):\ \mathcal C\in\{0,1\}\implies\mathcal C^2=\mathcal C\implies\Pi_{\mathcal C}F\Pi_{\mathcal C}=\mathcal C\,F\big|_\Sigma;\qquad\mathcal C=1:\ F^\Sigma=F\big|_\Sigma;\quad T_a\ne0\ \text{on}\ \mathbb C^3\ [\mathrm{CT3.9}:\ \text{explicit basis}]\ \wedge\ \text{slot present}\implies F\big|_\Sigma\ne0\ \text{for}\ f\ne0
+$$
+$$
+(2):\ \varepsilon_{ijk}U^i{}_aU^j{}_bU^k{}_c=\varepsilon_{abc}\det U=\varepsilon_{abc}\ [\mathrm{CT3.15}];\quad\delta^i{}_j\ \text{likewise}\ [\mathrm{CT3.17}]\implies\text{singlets fixed under}\ SU(3)\implies\mathfrak{su}(3)\ \text{annihilates them}
+$$
+$$
+(3):\ \text{validity is ambient}\ [\mathrm{D2.11};\ \mathrm{CT3.18}:\ \mathcal P_M^{(3)}\ \text{excludes free indices at universe level}];\qquad\mathrm{FT.18}:\ \exists\,C,C'\in\mathcal M(U)\ \text{valid with}\ C|_\Sigma=C'|_\Sigma,\ \mathcal C(\Sigma;C)=1,\ \mathcal C(\Sigma;C')=0
+$$
+$$
+C'\ \text{valid yet}\ \Sigma\text{-unsealed}:\ \text{pre-weighting deletes}\ C'|_\Sigma\ \text{entirely} — \text{but its EM}/G/H\ \text{reads are physical and colour-independent}\ [\mathrm{FT.21}]\implies\text{pre-weighting loses physical data};\qquad\text{downstream}\ \Pi_{\mathcal C}:\ \text{strong block}\to0\ [\mathrm{FT.19}],\ \text{rest kept}.\ \blacksquare
+$$
+
+**Phys.** Confinement is now a two-sided exact statement at subnetwork level: the colour block lives precisely when the region self-seals, dies entirely when any attachment reaches outside, and even when alive its singlet-diagonal read vanishes — colour is never a number a sealed object carries, only the grammar of how it composes with its environment. And the filter belongs downstream: sealing is a fact about $\Sigma$'s embedding, so it must gate $\Sigma$'s strong block, never erase $\Sigma$'s other reads.
+
+---
+
+---
+
+### FT.40 — Closed-core charge read
+
+**Thm.** For a closed oriented chain $c$ based at $v=s(c)=t(c)$ with first edge $e_1$ (out of $v$) and last edge $e_k$ (into $v$) [D1.4's ordered tuple]:
+$$q_{\mathrm{core}}(c;v):=\frac{\sigma_{e_1}-\sigma_{e_k}}{2}\ \in\ \{-1,0,+1\}\qquad[\mathrm{D3.4}\ \text{applied to closed}\ c;\ \mathrm{CT0.9}:\ \text{per-edge independent registers};\ \mathrm{EM.9}:\ \text{alphabet, all values attained}]$$
+is well-defined; under basepoint/orientation reversal [D2.6's $\omega$: $s\leftrightarrow t$, charge $\mapsto$ $-$charge]: $q_{\mathrm{core}}\mapsto-q_{\mathrm{core}}$ — the corpus's own charge-conjugation law, verbatim on the core read. At the 2-cycle floor: $q_{\mathrm{core}}=(\sigma_{e_1}-\sigma_{e_2})/2$ at base $p$, negated at base $q$. The closed core is therefore **not** charge-neutral by closure; its ternary read is basepoint data, and the observer-facing charge remains the EM.9 end-read of the full transit chain through the channel [Def-H.4].
+
+**Req.** D1.4, D2.6, D3.4; CT0.9 (Part 1); EM.9 (Part 2); FT.28, Def-H.4.
+
+**Pf.**
+$$
+\mathrm{D3.4}\ \text{is stated for oriented chains}\ c\ \text{generally};\ \text{closed}\ c\ \text{has}\ s(c)=t(c)=v\ \text{with distinguished first/last edges}\ [\mathrm{D1.4}:\ c=(e_1,\dots,e_k)\ \text{ordered}]\implies\sigma_{s(c)}:=\sigma_{e_1},\ \sigma_{t(c)}:=\sigma_{e_k}\ \text{well-defined}
+$$
+$$
+\mathrm{CT0.9}:\ \sigma_{e_1},\sigma_{e_k}\in\{\pm1\}\ \text{independent registers};\qquad\mathrm{EM.9}:\ \text{ternary alphabet},\ \text{all attained}
+$$
+$$
+\text{rebase/orientation reversal}:\ e_1\leftrightarrow e_k\ \text{roles swap}\implies q\mapsto-q\qquad[\mathrm{D2.6}:\ \omega\ \text{maps charge}\mapsto\text{-charge}:\ \text{consistent}].\ \blacksquare
+$$
+
+**Phys.** A fermion core carries a ternary charge datum — the basepoint sign difference — that flips under reversal exactly as the corpus's orientation involution demands. What an observer measures through a channel remains the end-read of the full transit chain; the core datum is the bound ledger's contribution to that read, not an independent free charge [CT3.22's asymmetry untouched: this is registration-sign data, not colour].
+
+---
+
+---
+
+### FT.41 — The per-aspect ledger
+
+**Thm.** $(a)$ **Charge count derived.** EM.9/D3.4's read consumes exactly the two end registers of a chain; $N_{\mathrm{charge}}=2$ in FT.14's decomposition is a theorem and $N_{\mathrm{weak}}=\delta h-2$ its arithmetic complement. the residual interface content is the *attribution* clause of Def-H.8 (interior weight bits read through the weak/spin channel [Def-H.8]) — reduced — Def-H.8's attribution clause.
+$(b)$ **Colour ledger counted.** The sealing grammar of $\mathrm{Colour}(\Sigma)$ — admissible groupings [FT.34(5), Def-H.10], closed form, small-$N$ counts $g$, and attachment-type refinement — is **CT3.17a(2)–(3) (F)**. The ledger read defined here: $N_{\mathrm{strong}}(\Sigma):=\log_2 g\bigl(|\mathrm{Colour}(\Sigma)|\bigr)$ — the sealing-pattern information of the grammar count (a registration-type ledger, per the trichotomy below).
+$(c)$ **Gravity/Higgs ledger reframed.** $G$'s on-shell ledger is the integer $\kappa$-profile modulo the single loop constraint [FT.22]: $L-1$ free integers on a materialized $L$-cycle — unbounded, hence $\neg$bit-type [C10: bit counts attach to finite registered alternative sets]; $H$'s ledger is the continuous P4 datum $h_0$ [EW.13, P4]. Per-aspect "bit counts" are well-posed exactly for the registration-type ledgers $(a),(b)$ — the trichotomy answers the original question.
+$(d)$ **Strictly new at $\Sigma$, first counts [Def-H.13's filter].** $N(\Sigma)=1$: $\mathfrak u(1)$ factors per-edge entirely — nothing strictly new; single-contact floors carry no collective boundary mode. $N(\Sigma)=2$: $\dim\mathfrak u(2)=4$, factored diagonal $=2$, strictly new $=N^2-N=2$ real dimensions — the off-diagonal boundary mixings $|e_1\rangle\langle e_2|+\mathrm{h.c.}$, $i(|e_1\rangle\langle e_2|-\mathrm{h.c.})$: a collective inter-contact exchange mode, first available at two-contact floors [FT.28's variant Rmk].
+
+**Req.** EM.9 (Part 2); D3.4, D3.8; CT0.9, CT0.13 (Part 1); C10; CT3.17, CT3.17a (Part 2); FT.14, FT.22, FT.28, FT.34; Def-H.8, Def-H.10, Def-H.13; EW.13 (Part 2); P4.
+
+**Pf.**
+$$
+(a):\ \mathrm{EM.9}'\text{s table reads}\ (\sigma_s,\sigma_t)\ \text{only};\ \mathrm{D3.4}'\text{s formula references no interior register}\implies\text{count}=2;\qquad N_{\mathrm{visible}}=\delta h\ [\mathrm{FT.14}]\implies N_{\mathrm{weak}}=\delta h-2\ \text{arithmetic}
+$$
+$$
+(b):\ \text{grammar}+\text{counts}+\text{type refinement}:\ \mathrm{CT3.17a}\ (\text{F});\qquad N_{\mathrm{strong}}\ \text{read}:\ \text{definition on the cited counts}\ [\mathrm{C10}/\mathrm{C9}]
+$$
+$$
+(c):\ \kappa\text{-profile}:\ L\ \text{integers},\ 1\ \text{constraint}\ \Theta\in2\mathbb Z\ [\mathrm{FT.22}]\implies L{-}1\ \text{free integers},\ \text{unbounded}\implies\neg\text{finite register count}\ [\mathrm{C10}];\qquad h_0\in\mathbb R\ [\mathrm{P4}]
+$$
+$$
+(d):\ \iota_\Sigma\ \text{edge-wise}\ [\mathrm{Def\text{-}H.13}]:\ \text{factored subalgebra}=\bigoplus_e\mathfrak u(1)_e:\ \dim=N;\qquad\dim\mathfrak u(N)=N^2\implies\text{strictly new}=N^2-N:\ N{=}1:\ 0;\quad N{=}2:\ 2\ \text{off-diagonal generators}.\ \blacksquare
+$$
+
+**Phys.** "How many bits per force?" now has a typed answer: charge costs two end bits (theorem); colour costs the log of the sealing grammar [counts: CT3.17a(2) (Part 2)]; gravity keeps an unbounded integer ledger; Higgs keeps a continuous dial. And collective boundary structure — genuinely new physics at $\Sigma$ — begins at exactly two contacts, in two dimensions of exchange modes: the first place where a subnetwork can do something its edges cannot.
+
+---
+
+---
+
+---
+
+
+## Tier F.14 — Platonic Floor Cards: The Five Solids as Fermion Floors
+
+### Def-H.20 — Platonic floors (setup vocabulary)
+
+**Def.** Let $S$ be a Platonic solid with 1-skeleton $\Gamma_S$: $V$ vertices, $E$ undirected edges, $F$ faces of uniform length $L$ ($FL=2E$), regular vertex degree $d$ ($Vd=2E$); cardinals [math]:
+$$\text{tetrahedron}\ (4,6,4,3);\quad\text{cube}\ (8,12,6,3);\quad\text{octahedron}\ (6,12,8,4);\quad\text{dodecahedron}\ (20,30,12,3);\quad\text{icosahedron}\ (12,30,20,5).$$
+The **Platonic floor** $\Sigma_S$ $:=$ the bounded subnetwork on $\Gamma_S$'s vertex set whose real-edge content realizes every undirected edge as a **bidirectional channel** (both orientations in $\mathcal R$) — the full bidirectional 1-skeleton. Variants: **dark** ($\partial\Sigma_S=\varnothing$: no observer contact [Def-H.1]) and **single-contact observed** (one external $o$ joined by exactly one real edge to one $v_1$). Card hypotheses, declared at each use: **(M1)** every face cycle materializes [FT.22's scope]; **(M2)** every bidirectional pair materializes as a 2-cycle [FT.24's scope] — both are spectral questions the corpus does not decide (FT.32's Status pattern). Sub-floor vocabulary: $\Sigma_{\min}$ is the $E{=}1$ cell [FT.28], $\Sigma_{12}$ the $E{=}3$ cell [FT.35], the cycle ladder $\Sigma_L$ the unidirectional family [FT.32].
+
+---
+
+---
+
+
+## Tier F.15 — The Regular-Polygon Floors: Full Ladder, Sectors, and the Non-Existence Ceiling
+
+### FT.46 — Distinctness is unbounded: no upper limit on distinct regular polygons
+
+**Thm.** $(1)$ **Combinatorial distinctness.** The regular $n$-gons are pairwise non-isomorphic for all $n\ge3$ ($n$ is the complete invariant of the 1-skeleton); $\Sigma_{P_n}$ is a valid bounded subnetwork configuration class for every $n$ [A1: $\mathcal Q$ countably infinite supplies vertices; D1.2: seals supply edges; no mask or capacity clause restricts $n(v)=4$ bidirectional vertices — oversubscription is absorbed and retained [CT4.1, CT4.3; rung correction, FT.62], CT0.6: $O(4)=16$ uniform].
+$(2)$ **Ledger injectivity.** On the uniform-$\kappa$ minima, the card invariants separate every member:
+$$m_{\mathrm{hid}}(n)=\frac{2n\ln2}{\mathfrak h}\ \text{strictly increasing};\qquad E_{\mathrm{int}}(n)=2n\ \text{injective};\qquad\beta_1(n)=n+1\ \text{injective};\qquad\text{null-carrying dimension}\ n-2\ \text{injective};$$
+$$\Theta_{\min}(n)=\begin{cases}2 & \text{spacelike-or-null / signature-mixed}\\ n+(n\ \mathrm{mod}\ 2) & \text{strictly-spacelike}\\ n\ \text{or}\ 2n & \text{uniform (even/odd)}\end{cases}\quad\text{regime-separating};\qquad\text{lattice index}=2\ \forall n\ [\mathrm{FT.45}(3)]\ (\text{uniform, non-separating}).$$
+**No upper limit exists on the number of distinct regular-polygon floors.**
+$(3)$ **Embeddability (declared, scoped).** For every $n$ there exist configurations in which $\Sigma_{P_n}$ embeds: A1's countable infinitude, A2's channel universality ($C(p,q)=1\,\mathfrak q$ for all pairs), and D1.2's seal dynamics impose no cardinality bound; the A4 reality test is threshold data, not a prohibition. This is a configuration-class existence statement, not a claim about any particular solution of A9.
+$(4)$ **Non-degeneracy of the ladder.** $m_{\mathrm{hid}}$ and $\beta_1$ increase by fixed steps ($2\ln2/\mathfrak h$ and $1$); $\Theta_{\min}$ is constant ($2$) in the null-carrying/mixed regimes, but those floors are separated by the null-carrying dimension $n-2$; the parity lattice index is constant ($2$) — the family's parity ledger is uniform, and distinctness rides on rank, mass, and null structure, not sector count. No two members are ledger-degenerate.
+
+**Req.** A1, A2; D0.8, D1.2; CT0.5, CT0.6, CT0.11 (Part 1); FT.42, FT.45; Def-H.20; graph-isomorphism fact for cycles [math].
+
+**Pf.**
+$$
+(1):\ C_n\not\cong C_m\ (n\ne m):\ \text{vertex/edge counts differ}\ [\text{math}];\qquad\text{validity}:\ \Sigma_{P_n}\ \text{is a finite bounded vertex set with real-edge content}\ [\mathrm{D0.10}\ \text{configuration class}];\ \ \neg\exists\ \text{clause in}\ \mathrm{A1}\text{--}\mathrm{A9}\ \text{bounding}\ n
+$$
+$$
+\mathrm{CT0.6}:\ O(2)=0:\ \text{no oversubscription at any polygon vertex, dark}\ [\mathrm{FT.45}(2)]
+$$
+$$
+(2):\ m_{\mathrm{hid}}(n)=2n\ln2/\mathfrak h\ [\mathrm{FT.45}(1)]:\ n\mapsto2n\ \text{injective};\qquad\beta_1(n)=n+1\ [\mathrm{FT.45}(3)];\qquad\text{null-carrying dimension}\ n-2\ \text{injective};\qquad\text{regime table}\ [\mathrm{FT.45}(4)]
+$$
+$$
+(3):\ \text{declared embedding clause}\ [\text{see Req}]:\ \text{A1 countable infinitude},\ \text{A2 pair universality},\ \text{D1.2 seals};\qquad\text{no cardinality obstruction in}\ \mathrm{A1}\text{--}\mathrm{A9}
+$$
+$$
+(4):\ \text{direct from the regime table and}\ (2).\ \blacksquare
+$$
+
+**Rmk (what "distinct" does not yet mean).** Clause (2) separates the floors as *ledger objects*. No generation claim is made here.
+
+**Phys.** The regular-polygon family is unlimited: every $n$ gives a valid, uniformly minimally-locked, colourless fermion floor with its own mass rung, its own winding rank $n{+}1$, and its own null-carrying dimension. If the polygon ladder is ever read as a family structure, nothing in the axioms caps its length — the cap, if any, must come from the spectrum side, not the ledger side.
+
+---
+
+---
+
+### FT.47 — No geometric ceiling: the Gauss–Bonnet bound binds area, never $n$
+
+**Thm.** $(1)$ **Gauss–Bonnet area bound.** A geodesic $n$-gon enclosing a topological disk in a smooth Riemannian surface of constant curvature $\bar K$, interior angles $\alpha_i$:
+$$\sum_{i=1}^n\alpha_i=(n-2)\pi+\bar K\,A\qquad[\text{Gauss–Bonnet};\ \text{geodesic edges}:\ \kappa_g\equiv0;\ \text{math}],$$
+and convexity ($\alpha_i<\pi\ \forall i$) forces $\bar K A<2\pi$ — a bound on the **enclosed area per polygon, with no $n$-dependence**.
+$(2)$ **Model-geometry existence — every $n\ge3$, no ceiling.** Flat ($\bar K=0$): the Euclidean regular $n$-gon, $\alpha=\frac{(n-2)\pi}{n}\in(0,\pi)$ for every $n\ge3$ [math]. Spherical ($\bar K>0$): for every $A\in(0,2\pi/\bar K)$ a convex regular geodesic $n$-gon with $\alpha=\frac{(n-2)\pi+\bar KA}{n}\in\bigl(\frac{(n-2)\pi}{n},\pi\bigr)$ exists for every $n\ge3$ [math: polar construction on $S^2$; small-area members are convex]. Hyperbolic ($\bar K<0$): every $\alpha\in\bigl(0,\frac{(n-2)\pi}{n}\bigr)$ is realized by a unique regular $n$-gon of area $A=\frac{n\alpha-(n-2)\pi}{\bar K}>0$, for every $n\ge3$ [math].
+$(3)$ **Local existence in the general emergent geometry.** CT2.6's spatial slices are smooth Riemannian in the perturbative regime [CT1.12: $\bar g_{ij}\succ0$]; every point has a convex normal neighborhood [math: standard existence], inside which any $n\ge3$ points on a small geodesic circle join by unique minimizing geodesics — an **equilateral geodesic $n$-gon for every $n$**. Exact regularity (equal angles too) needs a local symmetry hypothesis; equilateral local existence does not.
+$(4)$ **Transfer.** Nothing in A1–A9 or Parts 1–3's definitions/theorems bounds polygon $n$: CT2.7's dynamics (Einstein–Hilbert, $\Lambda$ a P4 datum) fixes $\bar K$ per solution but no polygon ceiling — for $\bar K\le0$ clause (2) is global, for $\bar K>0$ local (small-area members), in every case for all $n\ge3$. The corpus's only numeric caps bind different objects: per-vertex accessibility ($n(v)\le3$ unoversubscribed [CT0.11, CT4.1] — polygon floors sit at $n(v)\in\{2,3\}$ [FT.45(2)], never touching it) and the spectrum (M1$_n$/M2$_n$ materialization — solution data, not a bound on $n$).
+$(5)$ **Verdict.** The question "do distinct regular polygons have an upper limit" is answered **no** at all three levels — combinatorial [FT.46], model-geometric (clause 2), local emergent-geometric (clause 3) — with the two bounds that do exist precisely located: the Gauss–Bonnet area bound (per polygon, curvature-signed) and the materialization filter (spectral, per solution).
+
+**Req.** FT.45, FT.46; Def-H.19 (geodesic vocabulary); CT1.12, CT2.6, CT2.7 (Part 2); CT0.11 (Part 1); CT4.1 (Part 2); Gauss–Bonnet, model-geometry polygon constructions, convex-normal-neighborhood existence [math].
+
+**Pf.**
+$$
+(1):\ \text{Gauss–Bonnet on the enclosed disk}:\ \int_{\partial}\kappa_g\,ds+\iint\bar K\,dA+\sum_i(\pi-\alpha_i)=2\pi\ [\text{math}];\qquad\kappa_g\equiv0\ [\text{geodesic edges}]\implies\sum_i\alpha_i=(n-2)\pi+\bar KA
+$$
+$$
+\alpha_i<\pi\ \forall i\implies\sum_i\alpha_i<n\pi\implies(n-2)\pi+\bar KA<n\pi\implies\bar KA<2\pi\qquad(n\text{-free})
+$$
+$$
+(2):\ \bar K=0:\ \alpha=\tfrac{(n-2)\pi}{n}\in(0,\pi)\ \forall n\ge3;\qquad\bar K>0:\ A\in(0,2\pi/\bar K)\implies\alpha\in\bigl(\tfrac{(n-2)\pi}{n},\pi\bigr):\ \text{convex valid}\ \forall n\ \ [\text{constructions cited}]
+$$
+$$
+\bar K<0:\ A=\tfrac{n\alpha-(n-2)\pi}{\bar K}>0\iff\alpha<\tfrac{(n-2)\pi}{n};\qquad\bigl(0,\tfrac{(n-2)\pi}{n}\bigr)\ne\varnothing\ \forall n\ge3\ \text{and lies inside}\ (0,\pi)
+$$
+$$
+(3):\ \text{convex normal neighborhoods exist}\ [\text{math}];\quad\text{within one}:\ \exists!\ \text{minimizing geodesic per point pair}\implies\text{equilateral}\ n\text{-gons}\ \forall n\ge3\ (\text{vertices on a small geodesic circle})
+$$
+$$
+(4)\text{--}(5):\ \mathrm{CT2.6}:\ (M,g)\ \text{smooth};\ \mathrm{CT1.12}:\ \bar g_{ij}\succ0\ \text{perturbatively};\quad\neg\exists\ n\text{-bounding clause in Parts 1–3};\quad\mathrm{CT2.7}/\mathrm{P4}:\ \bar K\ \text{solution data};\qquad\mathrm{FT.45}(2):\ n(v)\in\{2,3\}\ \forall\ \text{polygon floors}.\ \blacksquare
+$$
+
+**Rmk (what a real ceiling would require).** An upper limit on the polygon family could only arise from the *spectral* side: a proof that M1$_n$/M2$_n$ fails for large $n$ in every valid universe (e.g. if $Z(\mathcal R,\Sigma_{P_n})$'s pole structure [Def-H.16] degenerated with $n$). The program-note intuition "higher levels make the impossible possible" receives its precise counterpart here: the levels (larger $n$) are always *valid*; what remains undetermined per level is *materialization*.
+
+**Phys.** Ask the ledger how large a polygon floor can be and the answer is unbounded — every $n$ is a valid, distinct, lock-free configuration class. Ask the geometry and the answer is again unbounded: Gauss–Bonnet caps the *area* a geodesic polygon can enclose ($\bar KA<2\pi$), never its number of sides; flat and hyperbolic slices realize every regular $n$-gon globally, positively curved slices realize small ones locally. The only gate left is spectral — which polygons materialize — and that gate is the corpus's own open question, not a ceiling.
+
+---
+
+---
+
+### FT.48 — Stability structure of floor-to-floor channels (Gap 18, partial)
+
+**Thm.** Let $\gamma$ be a channel path between two floor termini, on-shell (edges of integrality classes (i)/(ii) ) in the continuum regime of CT1.19/CT2.6.
+$(1)$ **Stationarity is geodesy.** $\delta\!\int_\gamma ds^2=0$ among fixed-endpoint variations $\iff$ $\gamma$ is an affinely parametrized geodesic of $g_{\mu\nu}$ [CT1.20's stationary-phase locus; FT.31(2): the on-shell sums *are* the Riemann sums, so the ledger's stationary condition and the metric's Euler–Lagrange equation coincide; math].
+$(2)$ **Two-sided distance law.** For a bidirectional round-trip connector $P$ of $m$ channels [FT.34(2)]: the ledger side is the integer distance $d_{12}=\Theta(P)=\sum_{e\in P}\kappa_e\in\mathbb Z$; the metric side is the proper length $\ell(P)=\mathfrak h\sum_{e\in P}\sqrt{\kappa_e}$ [FT.33(1) pattern, spacelike]. They are bound by
+$$\ell(P)^2\ \le\ m\cdot d_{12}\cdot\mathfrak h^2\qquad[\text{Cauchy–Schwarz};\ \text{math}],\qquad\text{equality}\iff\kappa_e\ \text{uniform on}\ P;$$
+uniform connectors obey $\ell^2=m\,d_{12}\,\mathfrak h^2$ exactly. Both sides are derived: the integer from materialization [FT.34(2)], the length from the metric dictionary [D1.6, FT.24(2)] — two reads of one channel, dimensionally consistent ($[\ell^2]=[\mathfrak h^2]=\mathfrak q^{-1}$, $d_{12}$ dimensionless).
+$(3)$ **Stable-channel trichotomy.** Within a fixed endpoint class in the emergent geometry [Def-H.19 vocabulary]: index-0 stationary channels (no conjugate points) are exactly the local $\ell$-minimizers [math: Morse/Synge]; on-shell with $\kappa_e>0$, local $\ell$-minimality at fixed channel count $m$ coincides with local $d_{12}$-minimality along uniform families [clause (2): $\ell^2=m\,d_{12}\,\mathfrak h^2$ strictly monotone in $d_{12}$ at fixed $m$]. Saddle/maximal stationary channels exist wherever conjugate points do; CT1.20's stationary phase weights them *alike* with the minima.
+$(4)$ **Derived vs. application-layer.** Clauses (1)–(3) close the variational side of the stability program: stable channels are geodesics, their ledger distance is integer, and the two distance reads are Cauchy–Schwarz-bound with equality at uniformity. The selection side — whether the pole condition [CT2.5/Def-H.16] or the defect criterion [FT.33] *selects* index-0 channels — remains open : it requires fluctuation-sign/Maslov-type structure on the $Z$ side, which Parts 1–3 does not develop.
+
+**Req.** FT.22, FT.24, FT.31, FT.33, FT.34, FT.38; Def-H.19; D1.6; CT1.19, CT1.20, CT2.5, CT2.6 (Part 2); Cauchy–Schwarz, Morse/Synge basics [math].
+
+**Pf.**
+$$
+(1):\ \mathrm{FT.31}(2):\ \sum_e\kappa_e\mathfrak h^2=\sum_e ds^2(e)\ \text{identically}\implies\text{stationary locus of the ledger phase}\ \Phi=\pi\Theta\ [\mathrm{FT.9}/\mathrm{EM.20}]\ =\ \text{stationary locus of}\ \textstyle\int g_{\mu\nu}\dot x^\mu\dot x^\nu d\lambda\ [\mathrm{CT1.19}]
+$$
+$$
+\delta\!\int g_{\mu\nu}\dot x^\mu\dot x^\nu d\lambda=0\iff\text{geodesic, affinely parametrized}\ [\text{Euler–Lagrange};\ \text{math}]
+$$
+$$
+(2):\ d_{12}=\Theta(P)=\sum_e\kappa_e\in\mathbb Z\ [\mathrm{FT.34}(2)];\qquad\ell(P)=\mathfrak h\sum_e\sqrt{\kappa_e}\ [\mathrm{D1.6}/\mathrm{FT.24}(2):\ ds^2(e)=\kappa_e\mathfrak h^2,\ \text{spacelike};\ \text{piecewise additivity}\ \mathrm{Def\text{-}H.2}]
+$$
+$$
+\bigl(\textstyle\sum_e\sqrt{\kappa_e}\bigr)^2\le m\sum_e\kappa_e\ [\text{Cauchy–Schwarz};\ \text{equality}\iff\sqrt{\kappa_e}\ \text{constant}]\implies\ell^2\le m\,d_{12}\,\mathfrak h^2;\qquad[\ell^2]=\mathfrak q^{-1}=[m\,d_{12}\,\mathfrak h^2]\ \checkmark\ [\mathrm{D2.9}]
+$$
+$$
+(3):\ \text{index-0}\iff\text{local}\ \ell\text{-minimizer}\ [\text{Morse/Synge};\ \mathrm{Def\text{-}H.19}];\qquad\text{uniform families at fixed}\ m:\ \ell^2=m\,d_{12}\,\mathfrak h^2\ \text{strictly monotone in}\ d_{12}\implies\text{minimizers coincide}
+$$
+$$
+(4):\ \mathrm{CT1.20}:\ \delta\Phi=0\ \text{configurations dominate},\ \delta\Phi\ne0\ \text{cancel pairwise}:\ \text{minima and saddles weighted alike};\qquad\neg\exists\ \text{fluctuation-sign machinery in Parts 1–3}\implies\text{selection open}.\ \blacksquare
+$$
+
+**Rmk (the generator program's two distance claims, resolved).** "The geometric distance between stable jumps is the winding/integer $k$" holds *for closed materialized loops* [FT.22, FT.34(2)–(3)] and *fails for open one-way geodesics* — an open path has no winding and no derived quantization (FT.22 is closed-chain; class-(iii) edges stay continuous ). Clause (2) is the correct two-sided replacement: the integer ledger distance and the metric proper length are distinct reads of the same connector, Cauchy–Schwarz-bound, equal-in-square only at uniformity. The "mass $=$ geometric distance" identification is likewise not claimed: $m_{\mathrm{hid}}$ counts bits, $d_{12}$ counts quanta; their bridge is the FT.33 ratio under Def-H.37(1), not an equality.
+
+**Phys.** A channel between two fermion floors carries two distances at once: an integer the ledger can only write in whole quanta, and a length the metric reads in generally irrational square roots — locked together by Cauchy–Schwarz, equal only when every hop carries the same quantum. Stable channels are the geodesics; the integer distance is the ledger's shadow of the metric one. The single thing the corpus cannot yet say is whether nature prefers the stable ones: that is the selection problem, and it is named.
+
+---
+
+---
+
+
+## Tier F.16 — Composition, Enumeration, and the Spin-Connection Obstruction
+
+### FT.52 — Spin extraction: the constraint system, uniqueness of the stretched rule, and the localized obstruction
+
+**Thm.** Let $R$ be an extraction rule in the sense of Def-H.9(3) — assigning admissible $\mathfrak{su}(2)$ labels $j$ to on-shell internal ledger data, under the weak action [FT.13]. Then:
+$$(1)\quad R\ \text{cannot factor through}\ \mathrm{Hol}_{\mathrm{int}}\ \text{alone on chain-swept interiors}:\ (-1)^{\Theta_{\mathrm{int}}}=+1\ \text{on-shell}\ [\mathrm{FT.25}(1)];$$
+$$(2)\quad R\ \text{must respect composition}:\ k(\Gamma)=k_1+k_2+d_{12}\ [\mathrm{FT.34}(3),\ \mathrm{FT.50}(2)]\ \text{and}\ k_f\text{-sums}\ \sum_fk_f=K_S\ [\mathrm{FT.43}(1)]\implies\text{the stretched values add}:\ \text{any rank-1 additive}\ R\ \text{satisfies}\ R(k_1{+}k_2)=R(k_1){+}R(k_2)\ \text{on aligned compositions}\ [\text{math}:\ \text{Cauchy equation on}\ \mathbb Z];$$
+$$(3)\quad\textbf{uniqueness of the stretched rule}:\ \text{the unique rank-1 additive rule anchored at the seed}\ R(1)=\tfrac12\ [\mathrm{EW.32}]\ \text{is}\ R(k)=k/2\ \text{on the nonnegative winding cone},\ \text{with admissible labels}\ j=|k|/2\ (\text{admissibility correction}:\ \mathfrak{su}(2)\ \text{labels require}\ j\ge0,\ \text{and the Casimir distinguishes}\ \pm k/2:\ (-\tfrac32)(-\tfrac12)=\tfrac34\ne\tfrac{15}{4}=(\tfrac32)(\tfrac52)\ —\ \text{the absolute value is forced, machine-witnessed};\ \text{stretched additivity holds where all contributions are}\ \ge0\ —\ \text{spacelike-dominant compositions};\ k\ \text{is a signature datum, not orientation}\ [\mathrm{FT.23}]);\qquad k\ \text{odd}\Rightarrow j\in\tfrac12+\mathbb Z_{\ge0},\quad k\ \text{even}\Rightarrow j\in\mathbb Z_{\ge0};$$
+$$(4)\quad\textbf{the obstruction}:\ \text{promoting}\ R(k)=k/2\ \text{from candidate to theorem requires one missing lemma — a corpus-level spin connection}: \text{an identification of the weak transport holonomy}\ \mathcal U_c=\mathrm P\exp\bigl(i\oint_c\textstyle\sum_Ac_A\mathcal G_A\,d\ell\bigr)\ [\mathrm{EW.33}] \text{with the frame rotation of the emergent metric along}\ c\ [\mathrm{CT1.13}\text{--}\mathrm{CT1.17}'\text{s Levi-Civita data lifted to the}\ SU(2)\ \text{carrier}\ [\mathrm{EW.32}]].$$
+$$\text{Parts 1–3 contains every ingredient but the lift}:\ g_{\mu\nu}\leftrightarrow(a_{00},q_{ij},w_i)\ \text{dictionary with}\ w_i\ \text{in the}\ W\ \text{block}\ [\mathrm{CT1.12},\ \mathrm{FT.30}];\ \ \Gamma^\lambda{}_{\mu\nu},\ R^\rho{}_{\sigma\mu\nu}\ [\mathrm{CT1.13},\ \mathrm{CT1.14}];\ \ W_i=\tfrac12(\sigma_i^{(p)}+\sigma_i^{(q)})\ \text{total-spin generators}\ [\mathrm{FT.13},\ \mathrm{CT1.2}];\ \ \text{seed transport}\ [\mathrm{EW.32}/\mathrm{EW.33}]\ —\ \text{but}\ \neg\exists\ \text{tag constructing the spinor connection or tying}\ \oint\text{(weak)}\ \text{to}\ \oint\text{(frame rotation)}. \text{Without it,}\ k\ \text{(geometric winding)}\ \text{and}\ j\ \text{(weak Casimir)}\ \text{are independently derived integers/half-integers with no derived bridge};$$
+$$(5)\quad\textbf{verdict}:\ j=k/2\ \text{remains the leading candidate}\ —\ \text{it passes every available consistency test}:\ (1)\ \text{parity triviality (it reads}\ k,\ \neg\text{parity});\ (2)\ \text{additive composition}\ [\mathrm{FT.34}(3)];\ (3)\ \text{seed anchor}\ R(1)=\tfrac12\ [\mathrm{EW.32}];\ (4)\ \text{half-integrality from odd winding}\ [\text{clause}(3)].\ \text{Promotion blocked exactly at Open Gaps 19 (spin connection)}\ —\ \text{not at any arithmetic step}.$$
+
+**Req.** FT.13, FT.25, FT.33, FT.34, FT.43, FT.50; Def-H.8, Def-H.9(3); CT1.2 (Part 1); CT1.12, CT1.13, CT1.14 (Part 2); EW.32, EW.33 (Part 2); Cauchy functional equation on $\mathbb Z$, Clebsch–Gordan basics [math].
+
+**Pf.**
+$$
+(1):\ \mathrm{FT.25}(1):\ \Theta_{\mathrm{int}}\in2\mathbb Z\ \text{on chain-swept interiors}\implies(-1)^{\Theta_{\mathrm{int}}}\equiv+1:\ \text{constant}\implies\neg\text{label-carrying}
+$$
+$$
+(2):\ \text{aligned composition}:\ k(\Gamma)=k_1+k_2+d_{12}\ [\mathrm{FT.34}(3)];\quad\text{additive}\ R:\ R(k(\Gamma))=R(k_1)+R(k_2)+R(d_{12})\ \text{required for the stretched (maximal-weight) component of the CG decomposition}\ [\text{math}:\ j_{\max}=j_1+j_2]
+$$
+$$
+(3):\ R:\ \mathbb Z\to\tfrac12\mathbb Z\ \text{additive}\implies R(k)=k\,R(1)\ [\text{Cauchy on}\ \mathbb Z];\qquad R(1)=\tfrac12\ [\mathrm{EW.32}\ \text{anchor}]\implies R(k)=k/2;\qquad\text{parity claims immediate}
+$$
+$$
+(4):\ \text{ingredient inventory as stated}:\ \mathrm{CT1.12}\ (\text{dictionary}),\ \mathrm{CT1.13}/\mathrm{CT1.14}\ (\text{Levi-Civita data}),\ \mathrm{FT.13}/\mathrm{CT1.2}\ (W_i\ \text{as spin generators}),\ \mathrm{EW.32}/\mathrm{EW.33}\ (\text{seed transport});\qquad\text{the lift}\ \Gamma\mapsto\omega^{ab}{}_\mu\mapsto SU(2)\ \text{connection on}\ \mathcal H_{\mathsf v}:\ \neg\exists\ \text{in Parts 1–3}\ [\text{tag inventory complete}]
+$$
+$$
+(5):\ \text{conjunction of}\ (1)\text{--}(4).\ \blacksquare
+$$
+
+**Rmk (why this is progress, not failure).** Before this tier, "$j=k/2$" was one candidate among four. After it: every rank-1 additive rule *is* $k/2$ (uniqueness), all available consistency tests are passed, and the single missing link is named, located, and minimal — a spin-connection lemma, not a new postulate and not a search space. Gap 11 is reduced to Gap 19; Gap 19 is a construction question about lifting existing corpus data (CT1.13's $\Gamma$, EW.32's carrier), which is exactly the kind of step A §0.2a admits as [math]-class work if executed without new physical input.
+
+**Phys.** If the weak transport of the seed around a bound chain is the frame rotation of the geometry the chain lives in, then spin is half the winding: odd windings give half-integer spin, even windings integer spin, aligned compositions add — and the whole fermion program's spin question reduces to one unbuilt bridge between two objects the corpus already has. The bridge is named; it is not yet built, and nothing here claims it is.
+
+---
+
+---
+
+
+## Tier F.17 — The Stationarity Loop: Constancy, the Spin Connection, and the No-Go
+
+### FT.53 — Geodesic constancy: the stationary on-shell ledger is constant-quantum
+
+**Thm.** $(1)$ **Conservation.** Along any affinely parametrized geodesic of $g_{\mu\nu}$ [CT2.6]: $\frac{d}{d\lambda}\bigl(g_{\mu\nu}\dot x^\mu\dot x^\nu\bigr)=2\,g_{\mu\nu}\dot x^\mu(\nabla_{\dot x}\dot x)^\nu=0$ [math] — the sampled quantity $\kappa(\lambda)=g_{\mu\nu}\dot x^\mu\dot x^\nu$ is constant along the path.
+$(2)$ **Constancy of the stationary on-shell ledger.** In CT1.19's regime, materialized chains contributing to the semiclassical spectrum sit at $\delta\Phi=0$ [CT1.20: $\delta\Phi\ne0$ cancels pairwise; $\delta\Phi=0$ dominates] $=$ geodesy [FT.48(1)]; CT1.19's sampling $\kappa_e=g_{\mu\nu}\dot x^\mu\dot x^\nu(\lambda_e)+O(\mathfrak h)$ then gives $\kappa_e=\kappa_0+O(\mathfrak h)$ with a single constant $\kappa_0$; on integrality-class edges [FT.24/FT.34(4): $\kappa_e\in\mathbb Z$] and small $\mathfrak h$: $\kappa_e=\kappa_0\in\mathbb Z$ **exactly** — FT.38(2)'s rigidity strengthened from eventual-local to exact-global on the stationary locus, without the integer-step $\varepsilon$-argument.
+$(3)$ **Equality saturation.** On stationary on-shell channels: FT.33(4)'s Cauchy–Schwarz inequality and FT.48(2)'s two-sided law hold with **equality**: $\Lambda_c=L\sqrt{\kappa_0}$, $\ell^2=m\,d_{12}\,\mathfrak h^2$, $\overline{\sqrt\kappa}^{\,2}=\kappa_0$ — the FT.33 bridge ratio becomes a single-integer function: $m_{\mathrm{pole}}^2/m_{\mathrm{hid}}^2=\hat\mu^2\mathfrak h^4G(c)\,\kappa_0/(\ln2)^2$.
+$(4)$ **Semiclassical exclusion of class (iii).** FT.38(3)'s rational non-uniform ladders ($\kappa_e\in(2/L)\mathbb Z$, varying) require $\kappa(\lambda)$ non-constant along the chain $\Rightarrow$ [contrapositive of (1)] non-geodesic support $\Rightarrow$ off-stationary $\Rightarrow$ pairwise cancellation in $Z$ [CT1.20] $\Rightarrow$ no semiclassical spectral contribution.
+
+**Req.** FT.22, FT.24, FT.31, FT.33, FT.34, FT.38, FT.48; CT1.12, CT1.19, CT1.20, CT2.6 (Part 2); D1.6; geodesic conservation, contrapositive logic [math].
+
+**Pf.**
+$$
+(1):\ \tfrac{d}{d\lambda}g_{\mu\nu}\dot x^\mu\dot x^\nu=(\partial_\rho g_{\mu\nu})\dot x^\rho\dot x^\mu\dot x^\nu+2g_{\mu\nu}\dot x^\mu\ddot x^\nu=2g_{\mu\nu}\dot x^\mu(\ddot x^\nu+\Gamma^\nu{}_{\rho\sigma}\dot x^\rho\dot x^\sigma)=2g_{\mu\nu}\dot x^\mu(\nabla_{\dot x}\dot x)^\nu=0\ [\text{math};\ \Gamma\ \text{from}\ \mathrm{CT1.13}]
+$$
+$$
+(2):\ \mathrm{CT1.20}:\ \text{spectral dominance at}\ \delta\Phi=0;\quad\mathrm{FT.48}(1):\ \delta\Phi=0\iff\text{geodesy (on-shell)};\quad\mathrm{CT1.19}\ \text{Pf}:\ \kappa_e=g(\dot x,\dot x)(\lambda_e)+O(\mathfrak h)\xrightarrow{(1)}\kappa_0+O(\mathfrak h);\quad\kappa_e\in\mathbb Z\wedge|\kappa_e-\kappa_0|<\tfrac12\ (\mathfrak h\ \text{small})\implies\kappa_e=\kappa_0\ \forall e
+$$
+$$
+(3):\ \kappa_e\equiv\kappa_0:\ \Lambda_c=\textstyle\sum_e\sqrt{\kappa_0}=L\sqrt{\kappa_0};\quad\bigl(\textstyle\sum\sqrt{\kappa_e}\bigr)^2=L^2\kappa_0=L\sum_e\kappa_e:\ \text{Cauchy–Schwarz equality}\ [\mathrm{FT.33}(4)];\quad\text{connector of}\ m\ \text{channels}:\ d_{12}=m\kappa_0,\ \ell=\mathfrak h\,m\sqrt{\kappa_0}\implies\ell^2=\mathfrak h^2m^2\kappa_0=m\,d_{12}\,\mathfrak h^2\ [\mathrm{FT.48}(2)\ \text{equality}];\quad\overline{\sqrt\kappa}^{\,2}=\kappa_0
+$$
+$$
+(4):\ \kappa\ \text{non-constant along}\ c\overset{(1)}{\implies}\neg\text{geodesic}\overset{\mathrm{FT.48}(1)}{\implies}\neg\text{stationary}\overset{\mathrm{CT1.20}}{\implies}\text{pairwise cancellation};\qquad\text{residue}:\ \text{finite-}\mathfrak h\ \text{non-stationary poles}\ [\text{Open Gaps 13}/18]
+$$
+$$
+\text{bridge ratio at}\ (3):\ \frac{m_{\mathrm{pole}}^2}{m_{\mathrm{hid}}^2}=\frac{\hat\mu^2\mathfrak h^4G(c)}{(\ln2)^2}\,\overline{\sqrt\kappa}^{\,2}\ [\mathrm{FT.33}(2)]\xrightarrow{\kappa\equiv\kappa_0}\frac{\hat\mu^2\mathfrak h^4G(c)\,\kappa_0}{(\ln2)^2}.\ \blacksquare
+$$
+
+**Rmk (what became exact).** Three inequalities/qualifiers of the earlier passes were artifacts of allowing non-stationary profiles: FT.33's "$\overline{\sqrt\kappa}^{\,2}$ (CS-maximal at uniform)", FT.48(2)'s "$\le$", and FT.38(2)'s "eventually locally constant". On the stationary on-shell locus all three are equalities/identities: uniformity is not generic — it is *forced* by geodesy plus conservation.
+
+**Phys.** The classical limit does more than make windings large: it makes them rigid. A materialized chain that survives to the continuum is a geodesic, and a geodesic samples one number — its constant quantum $\kappa_0$ — so the ledger of the stationary sector is a single integer per chain, the distance laws become equalities, and the exotic rational ladders live only in the cancelling off-stationary foam.
+
+---
+
+---
+
+### Def-H.21 — The spin connection on the emergent geometry (construction)
+
+**Def.** On a spatial slice of CT2.6's $(M,g)$ [CT1.12: $\bar g_{ij}\succ0$ perturbatively], within a convex normal neighborhood [FT.47(3)] or, globally, on any orientable slice [math: orientable 3-manifolds are spin]:
+$$(1)\quad\text{orthonormal frames}\ e_a=e_a{}^\mu\partial_\mu,\quad g_{\mu\nu}e_a{}^\mu e_b{}^\nu=\delta_{ab}\ (\text{spatial});\qquad(2)\quad\text{Levi-Civita connection}\ \Gamma^\lambda{}_{\mu\nu}\ [\mathrm{CT1.13}]\ \to\ \text{spin connection}\ \omega_\mu{}^{ab}=e^a{}_\lambda\nabla_\mu e^{b\lambda}\ [\text{math}];$$
+$$(3)\quad SU(2)\to SO(3)\ \text{double cover}\ [\text{math}]\ \to\ \mathfrak{su}(2)\text{-connection}\ \tilde\omega;\qquad(4)\quad\text{carrier}:\ \mathcal H_{\mathsf v}\cong\mathbb C^2\ [\mathrm{EW.32}],\ \text{with}\ W_i\mapsto\tfrac12\sigma_i\ [\mathrm{EW.32}/\mathrm{CT1.2}:\ \text{the corpus's own basis match}];$$
+$$(5)\quad\text{spinor holonomy around a closed loop}\ c:\ \mathcal U^{\mathrm{spin}}_c=\mathrm P\exp\bigl(i\!\oint_c\tilde\omega\bigr)\in SU(2);\qquad(6)\ \text{frame rotation angle}\ \Theta_R(c):\ \text{the}\ SO(3)\ \text{angle of the projected holonomy};\ \text{for}\ c=\partial S,\ S\ \text{disk-like in a constant-curvature slice}:\ \Theta_R=\iint_S K\,dA\ [\text{Gauss–Bonnet};\ \text{math}].$$
+**No physical identification is made here**: $\mathcal U^{\mathrm{spin}}$ is *not* asserted to be EW.33's weak transport $\mathcal U$ (couplings $c_A$, P4 data) — that identification is the declared content of Def-H.37(2), and the obstruction to deriving it is Open Gaps 19. The construction is [math]-class over derived corpus objects [CT1.13, CT2.6, EW.32]; it adds no premise. A5/C11's node-level $SU(2)$ action is the corpus precedent for $SU(2)$ carriers.
+
+---
+
+---
+
+### Def-H.37 — The defect-transfer interface
+
+**Def.** The pole-side mass read of a materialized bound chain. Two clauses:
+$(1)$ **Leading-order transfer.** For $c$ a materialized **spacelike** bound chain with weak-transport profile $c_A$ over the seed generator set [EW.33's $c_A$; EW.32's seed $\mathsf v\in\mathcal H_{\mathsf v}$], the chain's pole displacement takes EW.33's defect form for the seed weak-transported around $c$:
+$$
+m^2_{\mathrm{pole}}(c)=\hat\mu^2\,\ell_c^2\,G(c),\qquad
+G(c)=\sum_{A,B}c_Ac_B\operatorname{Re}\langle\mathcal G_A\mathsf v,\mathcal G_B\mathsf v\rangle\ \ [\mathrm{EW.33}\ \text{Gram data};\ \mathrm{EW.20}],
+$$
+with $\hat\mu^2>0$ the floor-independent residue packaging $\varkappa^2\beta^2h_0^2$ (EW.33's $c_W$ with $\ell^2$ factored out), $[\hat\mu^2]=\mathfrak q^2$ [EW.33 packaging; D2.9; Cal-F], and uniform coupling profile along the chain (EW.33's own leading-order regime).
+$(2)$ **Holonomy refinement.** The transfer of $(1)$ is Def-H.21's spin-connection holonomy: $\mathcal U_c=\mathcal U^{\mathrm{spin}}_c$ with frame angle $\Theta_R(c)$ [Def-H.21(5)–(6)]; then exactly
+$$
+m^2_{\mathrm{pole}}(c)=\hat\mu'^2\cdot4\sin^2\!\Bigl(\frac{\Theta_R(c)}{4}\Bigr),\qquad[\hat\mu'^2]=\mathfrak q\ \ [\mathrm{FT.54}(4)\ \text{packaging pattern};\ \text{Cal-F}],
+$$
+and clause $(2)$ implies clause $(1)$ at leading order under the matching $\hat\mu'^2\Theta_R^2/4=\hat\mu^2\ell_c^2G(c)$ — recorded, not imposed [FT.54(2), FT.33].
+**Interface status.** The non-derived content of this definition is exactly: the extension of EW.33's defect read from wrapping-chain gauge modes [EW.33's locus] to materialized bound-chain termini, the holonomy identification of $(2)$, and the two P4-class residues ($\hat\mu^2$, $\hat\mu'^2$; Cal-F). All further content is forced: the exact state- and axis-independent shape $4\sin^2(\cdot/4)$ [FT.54(1)]; EW.33 as its Taylor term [FT.54(2)]; the exclusion of rational-coupling combinatorial replacements [FT.73(2)–(3) — forward pointer, Tier F.24]; the range ceiling $[0,4\hat\mu'^2]$ [FT.76(3) — forward pointer, Tier F.26]. Minimality audit: FT.155.
+**Locus clause.** No identification $m_{\mathrm{pole}}=m_{\mathrm{hid}}$ is asserted anywhere; the read registry and its bridge slots: Def-H.39. On rung-3 wrapping chains clause (1) is EW.33 verbatim — the transfer adds nothing there [FT.33 Rmk].
+
+---
+
+### FT.54 — Exact holonomy-defect formula and the closed-form pole side (under Def-H.37(2))
+
+**Thm.** $(1)$ **Exact SU(2) defect (state- and axis-independent).** For $U=\cos\phi\,\mathbb I+i\sin\phi\,\hat n\cdot\vec\sigma\in SU(2)$ and any unit $v\in\mathbb C^2$:
+$$(U-1)^\dagger(U-1)=\bigl(2-2\cos\phi\bigr)\mathbb I=4\sin^2\!\bigl(\tfrac\phi2\bigr)\,\mathbb I\qquad\implies\qquad\|(U-1)v\|^2=2-2\cos\phi\ [\text{math; exact Pauli algebra}].$$
+$(2)$ **EW.33 recovered as Taylor term.** Any traceless Hermitian $X=\vec x\cdot\vec\sigma$ satisfies $X^2=|\vec x|^2\mathbb I$; with $U=e^{iX}$, $\phi=|\vec x|$: defect $=2-2\cos|\vec x|=|\vec x|^2+O(|\vec x|^4)=\|Xv\|^2+O(X^4)$ — EW.33's leading-order defect $\ell_\gamma^2\|\sum_Ac_A\mathcal G_A\mathsf v\|^2$ is the expansion of the same exact quantity [consistency derived, not assumed].
+$(3)$ **Spin-connection holonomy.** $\mathcal U^{\mathrm{spin}}_c=U(\phi=\Theta_R(c)/2)$ [Def-H.21(5)–(6); double cover: frame angle $\Theta_R$, spinor angle $\Theta_R/2$; sign convention irrelevant — $\cos$ even] $\Rightarrow$ defect$_{\mathrm{spin}}(c)=2-2\cos\bigl(\tfrac{\Theta_R(c)}{2}\bigr)=4\sin^2\bigl(\tfrac{\Theta_R(c)}{4}\bigr)$.
+$(4)$ **Closed-form pole side (Def-H.37(2)).** Under Def-H.37(2) (clause (1)'s defect transport is the spin-connection holonomy):
+$$m_{\mathrm{pole}}^2(c)=\hat\mu'^2\cdot4\sin^2\!\Bigl(\frac{\Theta_R(c)}{4}\Bigr),\qquad[\hat\mu'^2]=[m^2]=\mathfrak q\ [\mathrm{EW.33}\ \text{packaging pattern}];$$
+for geodesic polygonal loops bounding disk-like $S$ in constant-curvature slices: $\Theta_R=\bar KA=\sum_i\alpha_i-(n-2)\pi$ [Gauss–Bonnet; FT.47(1)] — mass from the angle defect. Bridge ratio (Gap 7's well-posed object):
+$$\frac{m_{\mathrm{pole}}^2}{m_{\mathrm{hid}}^2}=\frac{4\,\hat\mu'^2\,\mathfrak h^2\,\sin^2(\Theta_R/4)}{E_{\mathrm{int}}^2\,(\ln2)^2}\in\mathfrak q^0\qquad[\text{dimension check}:\ [\hat\mu'^2\mathfrak h^2]=\mathfrak q\cdot\mathfrak q^{-1}=\mathfrak q^0].$$
+$(5)$ **Exact witness.** Unit-sphere octant triangle ($n=3$, $\alpha_i=\pi/2$, $A=\pi/2$): $\Theta_R=\pi/2$; defect $=2-2\cos(\pi/4)=2-\sqrt2\in\mathbb Q(\sqrt2)$ — an exact irrational ledger value, in the corpus's own radical-arithmetic class [checks/README pattern].
+
+**Req.** Def-H.37(2) (clause 4 only); Def-H.21; EW.32, EW.33 (Part 2); FT.47(1); FT.33, FT.42(1), FT.45(1) ($m_{\mathrm{hid}}$ forms); D2.9, CT2.9 (**C**, units); Pauli algebra, half-angle identities, Gauss–Bonnet [math].
+
+**Pf.**
+$$
+(1):\ U^\dagger U=\mathbb I\implies(U-1)^\dagger(U-1)=2\mathbb I-U-U^\dagger;\qquad U+U^\dagger=2\cos\phi\,\mathbb I\ (\text{since}\ i\sin\phi\,\hat n\cdot\vec\sigma\ \text{is antihermitian})\implies(2-2\cos\phi)\mathbb I
+$$
+$$
+\|(U-1)v\|^2=\langle v|(U-1)^\dagger(U-1)|v\rangle=(2-2\cos\phi)\|v\|^2=2-2\cos\phi;\qquad2-2\cos\phi=4\sin^2(\phi/2)\ [\text{half-angle};\ \text{math}]
+$$
+$$
+(2):\ X=\vec x\cdot\vec\sigma:\ X^2=(\vec x\cdot\vec x)\mathbb I\ [\text{Pauli};\ \text{math}];\quad e^{iX}=\cos|x|\,\mathbb I+i\sin|x|\,\hat x\cdot\vec\sigma\implies\text{defect}=2-2\cos|x|=|x|^2+O(|x|^4)=\|Xv\|^2+O(X^4)\ [\|v\|=1]
+$$
+$$
+\mathrm{EW.33}:\ \|(U-1)\mathsf v\|^2=\ell_\gamma^2\|\textstyle\sum c_A\mathcal G_A\mathsf v\|^2+O(c^3)=\text{the same expansion with}\ X=\ell_\gamma\textstyle\sum c_A\mathcal G_A
+$$
+$$
+(3):\ \text{Def-H.21}(5)\text{--}(6):\ \phi=\Theta_R/2;\qquad(4):\ \text{Def-H.37(2)}\ \text{substitution};\quad\Theta_R=\bar KA=\sum\alpha_i-(n-2)\pi\ [\mathrm{FT.47}(1),\ \text{Gauss–Bonnet}];\qquad\text{ratio}:\ m_{\mathrm{hid}}^2=E_{\mathrm{int}}^2(\ln2)^2/\mathfrak h^2\ [\mathrm{FT.42}(1)\ \text{template}]
+$$
+$$
+(5):\ \sum\alpha=3\cdot\tfrac\pi2,\ (n-2)\pi=\tfrac\pi2\implies\Theta_R=\tfrac\pi2;\qquad2-2\cos\tfrac\pi4=2-\sqrt2;\qquad(2-\sqrt2)(2+\sqrt2)=2\ \checkmark\ [\mathbb Q(\sqrt2)\ \text{exact}].\ \blacksquare
+$$
+
+**Rmk (Def-H.37(1) vs Def-H.37(2)).** Def-H.37(1) (leading order, weak-coupling profile $c_A$) and Def-H.37(2) (exact, spin-connection) agree to leading order when $\hat\mu'^2\Theta_R^2/4=\hat\mu^2\ell_c^2G(c)$ — a matching condition on the P4-class packaging (Cal-F), recorded not imposed.
+
+**Phys.** If the fermion's pole mass is the seed's failure to return to itself under frame transport, then it is a pure trigonometric function of the curvature flux the loop encloses — $4\sin^2(\Theta_R/4)$, exact, axis-free, state-free — and on geodesic polygons the curvature flux is the angle defect, the oldest invariant in geometry. The octant's mass ledger entry is $2-\sqrt2$: the first exact irrational number in the program's cards.
+
+---
+
+---
+
+### FT.55 — The no-go and the surviving spin realization
+
+**Thm.** $(0)$ **Admissibility (correction).** Throughout this tier and FT.52, the admissible spin label is $j=|k|/2$ with carrier $\mathrm{Sym}^{|k|}$: $\mathfrak{su}(2)$ labels require $j\ge0$ and the Casimir $j(j{+}1)$ distinguishes $\pm k/2$; stretched additivity is confined to the nonnegative cone (spacelike-dominant compositions) [FT.52(3) patched form]. $(1)$ **Calibration no-go.** The identification $\Theta_R(c)=2\pi k(c)$ (frame-holonomy angle $=$ winding $\times2\pi$) is **ruled out** as a corpus relation: $k=\oint ds^2/(2\mathfrak h^2)$ carries $\mathfrak h$-weight $-2$ [FT.31(3); D2.9], while $\Theta_R=\iint_S K\,dA$ is $\mathfrak h$-weight $0$ for fixed classical regions [Def-H.21(6)]; a proportionality between quantities of different calibration weight is not $\mathfrak h$-free and hence not a derived pure-number relation [CT2.11's criterion]. Consequently **the spin label cannot be read as the spin-connection holonomy angle of the same loop**.
+$(2)$ **The surviving realization.** FT.52's unique rank-1 additive rule $R(k)=k/2$ has exactly one natural representation-theoretic realization: $j=|k|/2\iff$ carrier $\mathrm{Sym}^{|k|}(\mathcal H_{\mathsf v})$ — the $(|k|{+}1)$-dimensional irreducible $\mathfrak{su}(2)$ representation [math: classification; $k\ge0$ on the cone of clause (0)]. It satisfies every derived constraint: anchor $\mathrm{Sym}^1=\mathcal H_{\mathsf v}$, $j=\tfrac12$ [EW.32]; composition $\mathrm{Sym}^{k_1}\otimes\mathrm{Sym}^{k_2}\supseteq\mathrm{Sym}^{k_1+k_2}$ as maximal weight [math: Clebsch–Gordan] $=$ FT.34(3)'s additive winding law $k(\Gamma)=k_1+k_2+d_{12}$ on the stretched channel; parity triviality respected (the rule reads $k$, not $\mathrm{Hol}_{\mathrm{int}}$) [FT.52(1)]; half-integrality from odd $k$ [FT.52(3)].
+$(3)$ **Scope consistency.** Elementary floors carry small $k$ [FT.28: $k=\kappa=1$ floor; FT.45/FT.42 minima: $k=O(1)$] $\Rightarrow$ small $j$; the large-$k$ regime is the classical-geometry limit [FT.31(3)], not particle territory — no macroscopic-spin contradiction.
+$(4)$ **Residual, relocated.** What remains missing for promotion is neither the connection (Def-H.21 constructs it) nor the algebra (FT.52 settles it): it is a **ledger mechanism assigning $\mathrm{Sym}^k(\mathcal H_{\mathsf v})$ to a materialized chain of winding $k$** — a $k$-fold symmetric seed-tensoring tied to the winding count. EW.32 transports *one* qubit around the chain; nothing in Parts 1–3 tensors it $k$ times.
+
+**Req.** FT.22, FT.28, FT.31, FT.34, FT.45, FT.52; Def-H.21; D2.9; CT2.11 (Part 2); EW.32 (Part 2); $\mathfrak{su}(2)$ representation classification, Clebsch–Gordan maximal weight [math].
+
+**Pf.**
+$$
+(1):\ k=\Theta/2,\ \Theta\mathfrak h^2=\oint ds^2\ [\mathrm{FT.22}/\mathrm{FT.31}(3)]\implies[k]=[\mathfrak h^{-2}]=\mathfrak q^{+1}\Rightarrow k\ \text{has}\ \mathfrak h\text{-weight}-2;\qquad[\Theta_R]=\mathfrak h^0\ [\text{Def-H.21}(6):\ K\,dA\ \text{classical}]
+$$
+$$
+\Theta_R=2\pi k\ \text{would require a constant of weight}\ +2\ \text{in}\ \mathfrak h:\ \neg\text{pure number}\implies\neg\text{derived relation}\ [\mathrm{CT2.11}:\ \text{rescaling}\ \mathfrak h\mapsto\lambda\mathfrak h\ \text{is a symmetry};\ \text{predictions are}\ \mathfrak h\text{-free ratios}]
+$$
+$$
+(2):\ \dim\mathrm{Sym}^k(\mathbb C^2)=k+1;\quad\text{highest weight}=k\cdot\tfrac12=\tfrac k2\ [\text{math}];\qquad\mathrm{Sym}^{k_1}\otimes\mathrm{Sym}^{k_2}=\bigoplus_{j=|k_1-k_2|/2}^{(k_1+k_2)/2}\mathcal D_j\supset\mathrm{Sym}^{k_1+k_2}\ [\text{CG};\ \text{math}]
+$$
+$$
+\text{anchor}:\ k=1:\ \mathrm{Sym}^1=\mathcal H_{\mathsf v}\cong\mathbb C^2,\ j=\tfrac12\ [\mathrm{EW.32}];\qquad\text{constraints}:\ \mathrm{FT.52}(1)\text{--}(3)\ \text{each verified above}
+$$
+$$
+(3):\ \text{floor minima}:\ k\in\{1,2,3\}\ [\mathrm{FT.28}(2),\ \mathrm{FT.45}(4),\ \mathrm{FT.42}(5)\ \text{uniform minima}]\implies j\in\{\tfrac12,1,\tfrac32\};\qquad k\to\infty:\ \text{classical regime}\ [\mathrm{FT.31}(3)]
+$$
+$$
+(4):\ \text{inventory}:\ \text{connection}\ [\text{Def-H.21}]\ \checkmark;\ \ \text{algebra}\ [\mathrm{FT.52}]\ \checkmark;\ \ \text{tensoring mechanism}:\ \neg\exists\ \text{tag}\ [\text{Parts 1–3 inventory}].\ \blacksquare
+$$
+
+**Rmk (why the no-go is progress).** Before this tier, "read spin from holonomy" was an open direction among several. The calibration argument closes it with a weight mismatch — the same kind of dimensional discipline that bars the malformed comparison. What survives is sharper and smaller: one construction question, with its target representation already unique.
+
+**Phys.** The geometry refuses to hand over spin directly: the frame's rotation angle and the ledger's winding number live at different calibration weights, and no constant can bridge them. What the ledger can do is count copies — a winding-$k$ chain as $k$ symmetric copies of the seed qubit, spin $k/2$, combining exactly as windings compose. The rule is unique, the space is unique, the anchor is the corpus's own seed; only the copying machine is missing.
+
+---
+
+---
+
+
+## Tier F.18 — Native Rungs, Boundary Exchange Shape, and the Admissibility Correction
+
+### FT.56 — Native ladder rungs, the spin–orbit decomposition, and the missing map
+
+**Thm.** $(1)$ **The bottom rungs are native.** The candidate spin carriers for $j=0,\tfrac12,1$ are existing corpus objects with the correct dimensions $2j{+}1$ and Casimir labels:
+$$j=0:\ \wedge^2\mathcal H_q\cong\mathrm{Sym}^0\ (\text{trivial},\ 1\text{-dim})\ —\ \text{the reality line}\ [\mathrm{A3},\ \mathrm{CT0.7}(1):\ \Pi_{\mathcal V}=\tfrac14(E_0-\Sigma),\ \mathfrak T\Pi_{\mathcal V}=1;\ \text{Casimir}\ 0\ [\mathrm{CT0.7a}];\ \sigma_e\ \text{lives here}\ [\mathrm{CT0.9}]];$$
+$$j=\tfrac12:\ \mathcal H_{\mathsf v}\cong\mathbb C^2,\ W_i\mapsto\tfrac12\sigma_i\ —\ \text{the transported seed}\ [\mathrm{EW.32}];$$
+$$j=1:\ \vee^2\mathcal H_q=\mathrm{Sym}^2(\mathcal H_q)\ (3\text{-dim})\ —\ \text{the pair channel's reality sector}\ [\mathrm{A3}:\ \mathcal H_p\otimes\mathcal H_q=\vee^2\oplus\wedge^2;\ \mathrm{CT0.7}(1):\ \Pi_{\mathcal R}=\tfrac14(3E_0+\Sigma),\ \mathfrak T\Pi_{\mathcal R}=3;\ \mathrm{CT0.7a}:\ \textstyle\sum_iW_i^2\big|_{\vee^2}=2=1(1{+}1)];$$
+$$\text{and the reality grading is the placement rule}:\ \text{real edges carry}\ \vee^2\text{-weight}\ [\mathrm{A4}:\ |\Pi_{\mathcal V}\rho_{pq}|\le\varepsilon_q]\ —\ \text{the symmetric square is the corpus's own}\ \textbf{real}\ \text{sector}.$$
+$(2)$ **Spin–orbit decomposition of the additive law.** $k(\Gamma)=k_1+k_2+d_{12}$ [FT.34(3)] reads, under the stretched rule on the nonnegative cone [FT.52(3), corrected form]: $j(\Gamma)=j(c_1)+j(c_2)+j_{\mathrm{rel}}$, $j_{\mathrm{rel}}=d_{12}/2$ — the connector's distance quanta contribute as a *relative* (orbital-type) term, the floors' own windings as intrinsic terms. On the cone this is exactly maximal-weight Clebsch–Gordan composition [math]; $\Theta$'s orientation-blindness [FT.23] makes $k$ (hence $j_{\mathrm{rel}}$) a **signature datum** — negative only for timelike-dominant connectors, where the cone condition fails and the read is out of scope.
+$(3)$ **The missing map, stated exactly.** EW.32 transports *one* qubit around a materialized chain, regardless of its winding; no tag in Parts 1–3 (inventory) couples a $\Theta$-type ledger count to carrier multiplicity. What any candidate map winding $\to$ carrier must satisfy: (i) $k{=}1\mapsto\mathcal H_{\mathsf v}$ [EW.32 anchor]; (ii) $k{=}2$ must land in the channel's own reality sector $\vee^2=\mathrm{Sym}^2$ [clause (1) — the rung exists natively; the map must select it]; (iii) nonnegative-cone additivity [clause (2)]; (iv) admissibility $j=|k|/2$ [admissibility correction]. Gap 19 is exactly the construction of a map satisfying (i)–(iv) — or a no-go on such maps, which would reopen FT.52's constraint list to higher-rank rules.
+
+**Req.** A3, A4; CT0.7, CT0.7a, CT0.9, CT1.2 (Part 1); EW.32 (Part 2); FT.13, FT.23, FT.34, FT.52, FT.55; Def-H.8; $\wedge^2\cong\mathrm{Sym}^0$, $\vee^2\cong\mathrm{Sym}^2$ of $\mathbb C^2$, maximal-weight CG [math].
+
+**Pf.**
+$$
+(1):\ \dim\wedge^2=\tbinom{2}{2}=1,\ \dim\vee^2=3\ [\mathrm{A3};\ \mathrm{CT0.7}(1):\ \mathfrak T\Pi_{\mathcal V}=1,\ \mathfrak T\Pi_{\mathcal R}=3];\qquad\textstyle\sum_iW_i^2=\tfrac32E_0+\tfrac12\Sigma\ [\mathrm{CT0.7a}]
+$$
+$$
+\Sigma=2\mathbb S-E_0\ [\mathrm{CT0.7}(1):\ \mathbb S=\tfrac12(E_0+\Sigma)]\implies\textstyle\sum_iW_i^2\big|_{\vee^2}=\tfrac32+\tfrac12(2\cdot1-1)=2;\qquad\big|_{\wedge^2}=\tfrac32+\tfrac12(2(-1)-1)=0\qquad[\text{machine}:4\times4\ \text{exact}]
+$$
+$$
+2=1(1{+}1)\implies j=1\ \text{on}\ \vee^2;\quad0=0(0{+}1)\implies j=0\ \text{on}\ \wedge^2\ [\mathrm{CT0.7a}\ \text{verbatim}];\qquad\mathcal H_{\mathsf v}:\ j=\tfrac12\ [\mathrm{EW.32}];\qquad\dim=2j{+}1:\ 1,2,3\ \checkmark
+$$
+$$
+(2):\ \mathrm{FT.34}(3)\ \text{additivity}+\ \text{stretched rule on the cone}\ [\mathrm{FT.52}(3)\ \text{form}]:\ j(\Gamma)=\tfrac{k_1+k_2+d_{12}}{2}=j_1+j_2+j_{\mathrm{rel}};\qquad\mathrm{Sym}^{k_1}\otimes\mathrm{Sym}^{k_2}\supseteq\mathrm{Sym}^{k_1+k_2}\ [\text{maximal weight};\ \text{math}]
+$$
+$$
+\text{sign of}\ k:\ \Theta=\sum\kappa_e\ \text{orientation-blind}\ [\mathrm{FT.23}]\implies k<0\iff\text{timelike-dominant}\ [\mathrm{CT1.12}\ \text{signature}]\ —\ \text{cone fails};\ \text{read out of scope}
+$$
+$$
+(3):\ \mathrm{EW.32}:\ \text{carrier}=\mathbb C^2\ \text{per chain}\ (\neg\text{per winding unit});\qquad\text{tag inventory}:\ \neg\exists\ \text{multiplicity coupling};\qquad(i)\text{--}(iv):\ \text{as stated}.\ \blacksquare
+$$
+
+**Rmk (why native rungs matter).** Before this tier, "$j=k/2$" was a rule looking for carriers. The carriers for its first three values are now located *inside the frozen structure*: the virtual line, the seed, and the real sector of every pair channel — with the reality grading (A4/CT0.7) already deciding which of $\mathrm{Sym}^0/\mathrm{Sym}^2$ is "real". The missing map does not have to invent representation spaces; it has to select among existing ones.
+
+**Phys.** The bottom of the spin ladder is not hypothetical: spin 0 is the ledger's virtual line, spin ½ is the seed it transports, spin 1 is the symmetric square its own reality test selects — three objects Parts 1–2 already proved, wearing the exact dimensions and Casimiers the winding rule asks for. Composite floors add their windings like angular momenta, with the channel between them contributing the relative term. What is still missing is the one mechanism that would say *why* a winding-$k$ loop carries $k$ symmetric copies — and that mechanism is now the whole of the question.
+
+---
+
+---
+
+### FT.57 — The boundary exchange algebra: root-space shape
+
+**Thm.** $(1)$ **Decomposition.** For $N:=N(\Sigma)\ge1$: $\mathfrak u(N)=\mathfrak u(1)_{\mathrm{center}}\oplus\mathfrak{su}(N)$ [math; CT3.5's pattern at $N{=}3$]; relative to $\iota_\Sigma$'s factored diagonal $\bigoplus_e\mathfrak u(1)_e$ [Def-H.13: edge-wise assembly]:
+$$\text{factored}=\text{diagonal}\ (N\ \text{dims},\ \text{incl. the centre});\qquad\text{strictly new}=\mathfrak{su}(N)\setminus\text{Cartan}=\text{root spaces}:\ (N^2{-}1)-(N{-}1)=N^2-N\ \ [\text{matches FT.41(d) exactly}].$$
+$(2)$ **Shape at $N=2$.** The strictly-new sector $\{|e_1\rangle\langle e_2|+\mathrm{h.c.},\ i(|e_1\rangle\langle e_2|-\mathrm{h.c.})\}$ [FT.41(d)] is, with the factored traceless diagonal, an $\mathfrak{su}(2)$ triplet: $E_\pm=\tfrac12(\sigma_1\pm i\sigma_2)$, $[E_+,E_-]=\sigma_3$, $[\sigma_3,E_\pm]=\pm2E_\pm$ [math; machine-exact over $\mathbb Q(i)$] — the raising/lowering (charged-current) shape of D3.10's $W^\pm=\tfrac1{\sqrt2}(W_1\mp iW_2)$ [C8: $F_W=F_{W^+}\oplus F_{W^-}\oplus F_Z$], as algebra shape, not as identification.
+$(3)$ **Hosting question, localized.** Which aspect block $\mathcal K^{(A)}$ the exchange modes land in under $\iota_\Sigma$ is **not determined by the current tags**: Def-H.13 defines $\iota_\Sigma$ by a factorization *requirement*, not by explicit matrices; the image of the root spaces in $\mathcal K=\bigoplus_A\mathcal K^{(A)}$ needs an explicit edge-block realization of Def-H.13's assembly [CT0.12 blocks $\otimes$ $\iota_{n(w_e)}$] — one named construction away. Candidates remain: a second EM-type centre read is *excluded* by (1)–(2) (the exchange sector is nonabelian root-space, not central); a $W$-type hosting matches the charged-current shape; a genuinely new collective aspect remains possible.
+
+**Req.** Def-H.13; FT.41(d); CT0.12; CT3.5 (**F**, pattern); C8; D3.10; $\mathfrak u(N)$ decomposition, $\mathfrak{su}(2)$ commutators [math].
+
+**Pf.**
+$$
+(1):\ \mathfrak u(N)=\mathfrak{su}(N)\oplus\mathfrak u(1)_{\mathrm{center}}\ [\text{math};\ \mathrm{CT3.5}\ \text{at}\ N{=}3];\qquad\iota_\Sigma|_{|e\rangle}=(\text{CT0.12 block})\otimes\iota_{n(w_e)}\ [\mathrm{Def\text{-}H.13}]\implies\text{diagonal}\ \bigoplus_e\mathfrak u(1)_e\ \text{factored}
+$$
+$$
+\dim\mathfrak{su}(N)=N^2{-}1,\ \dim\text{Cartan}=N{-}1\implies\dim\text{root spaces}=N^2-N\ [\text{math}]=\text{FT.41(d)'s strictly-new count}\ \checkmark
+$$
+$$
+(2):\ N=2:\ E_\pm=\tfrac12(\sigma_1\pm i\sigma_2):\ [E_+,E_-]=\tfrac14[\sigma_1+i\sigma_2,\ \sigma_1-i\sigma_2]=\tfrac14(-2i[\sigma_1,\sigma_2])=\tfrac14(-2i\cdot2i\sigma_3)=\sigma_3\ [\mathrm{CT1.2}\text{-pattern commutators};\ \text{machine over}\ \mathbb Q(i)]
+$$
+$$
+[\sigma_3,E_\pm]=\pm2E_\pm\ [\text{machine}];\qquad\text{shape match to}\ W^\pm\ [\mathrm{D3.10}:\ \text{same raising/lowering combinations}]
+$$
+$$
+(3):\ \mathrm{Def\text{-}H.13}\ \text{is a factorization requirement};\ \neg\exists\ \text{explicit matrix tag for}\ \iota_\Sigma\ [\text{inventory}]\implies\text{image decomposition in}\ \mathcal K\ \text{undetermined};\qquad\text{centre read excluded}:\ \text{exchange sector nonabelian by}\ (2).\ \blacksquare
+$$
+
+**Phys.** The first genuinely collective structure of the coarse-graining program — the thing a subnetwork can do that no single edge can — has the algebraic shape of a charged current: raising and lowering operators flipping slot excitation between boundary contacts, completing an $\mathfrak{su}(2)$ with the factored diagonal. Two contacts can exchange; one cannot. Where this exchange lives among the forces is the next named construction, not a guess: the nonabelian shape already rules out the abelian candidate.
+
+---
+
+---
+
+### Def-H.22 — The explicit boundary realization (corolla and separated patterns)
+
+**Def.** For $\Sigma$ with $N:=N(\Sigma)$ boundary edges $\partial\Sigma=\{e_1,\dots,e_N\}$, $\mathcal H_{\mathrm{slot}}(\Sigma)=\operatorname{span}\{|e_i\rangle\}$ [Def-H.12], $\iota_\Sigma$ is made explicit by contact pattern:
+**(a) Corolla** (all boundary edges share one external vertex $w$; slots edge-labelled [A7: $\tau(v)$ records incident edges; D0.8] $\Rightarrow$ canonical inclusion $\mathcal H_{\mathrm{slot}}(\Sigma)\hookrightarrow\mathcal H^{(n(w))}_{\mathrm{slot}}$, equality iff $n(w)=N$):
+$$\iota_\Sigma^{\mathrm{cor}}:=\iota_{n(w)}\big|_{\mathfrak u(N)}\qquad[\mathrm{D2.12}\ \text{applied to the subalgebra on the included slots}].$$
+**(scope [FT.59])**: the formula is defined exactly for $n(w)\le3$ — at $n(w)\ge4$ no realization $\iota_{n(w)}$ exists [CT4.4 Pf(b): slot algebras realized only for $n\le3$]; the corolla read then degenerates to the registration/sealing ledger ($\sigma_e$, chain-local $f_v$, $q_{\mathrm{core}}$, $\mathcal C$) plus $D^-$-absorption [D4.1, D4.2], with the collective $\mathfrak u(N)$ wholly unhosted [FT.59(4)].
+**(b) Separated** (boundary edges with distinct external vertices $w_1\ne w_2\cdots$): only the factored diagonal is defined — each edge's $\mathfrak u(1)_e$ maps through its own CT0.12 block and $\iota_{n(w_e)}$'s centre [D2.12: centre $\mapsto\mathcal K^{(\mathrm{EM})}$]; since $\dim\mathcal K^{(\mathrm{EM})}=1$ [CT0.14], all edge centres share one image line:
+$$\iota_\Sigma^{\mathrm{sep}}\Bigl(\sum_ec_eD_e\Bigr)=\Bigl(\sum_ec_e\Bigr)Y_{\mathrm{asp}}\qquad[\mathrm{EM.2}:\ \mathfrak T(Y_{\mathrm{asp}})=1];\qquad\text{off-diagonal}\ |e_i\rangle\langle e_j|\ (i\ne j):\ \neg\exists\ \text{factored image (no cross-vertex bridge in the inventory)}.$$
+No new choice is declared: (a) is the canonical edge-labelled slot inclusion composed with D2.12; (b) is forced by the 1-dimensional EM block. Every computed floor instantiates a pattern: single-contact floors [FT.28/FT.32/FT.42]: $N=1$; the face floor [FT.49]: corolla, $N=6$, $n(D)=6$ (equality) — in the void regime $n(w)\ge4$ [FT.59(4a)]: no realization, exchange sector kernel/absorbed; the two-contact $\Sigma_{\min}$ variant [FT.28 Rmk]: separated, $N=2$.
+
+---
+
+---
+
+### FT.58 — Hosting classification and the no-hosting theorem
+
+**Thm.** $(1)$ **Corolla hosting follows the CT0.13 ladder at the contact vertex.** Under Def-H.22(a): the centre of $\mathfrak u(N)$ maps to $\mathcal K^{(\mathrm{EM})}$ [D2.12]; and:
+$$n(w)=2:\quad\iota_\Sigma(\mathfrak{su}(2))\subseteq\operatorname{span}\{W_i\}=\mathcal K^{(W)}\qquad[\mathrm{CT1.4}:\ W_i\ \text{close}\ \mathfrak{su}(2);\ \mathrm{D2.12}];$$
+$$n(w)=3:\quad\iota_\Sigma(\mathfrak{su}(3))=\mathcal K^{(\mathrm{strong})}\qquad[\mathrm{D2.12}:\ \iota_3(\mathfrak{su}(3))\ \text{spans}\ \mathcal K^{(\mathrm{strong})};\ \mathrm{CT3.7}/\mathrm{CT3.8}:\ 8=8];$$
+$$\text{the exchange generators host}\ \textbf{literally}:\quad\frac{\lambda_1+i\lambda_2}{2}=E_{12}\ (3\times3\ \text{matrix unit}):\ \ |e_1\rangle\langle e_2|\ \mapsto\ \text{the}\ \lambda_1,\lambda_2\ \text{directions};\quad D_1-D_2\mapsto\lambda_3\text{-type}\ [\mathrm{CT3.9};\ \text{machine}];$$
+$$n(w)\ge4:\ \textbf{resolved (FT.59)}\ —\ \neg\exists\ \iota_n\ \text{realization at all for}\ n\ge4\ [\mathrm{CT4.4}\ \text{Pf}(b):\ \text{slot algebras realized only for}\ n\le3];\ \text{the suggested strong-hosting of}\ \mathfrak{su}(3)\ \text{subalgebras is impossible}\ [\mathrm{FT.59}(3)];\ \text{such corollas are wholly kernel}/D^-\text{-absorbed}\ [\mathrm{FT.59}(1),(4)].$$
+$(2)$ **Separated contacts: the collective part is unhosted.** Under Def-H.22(b): $\operatorname{im}\iota_\Sigma^{\mathrm{sep}}=\mathcal K^{(\mathrm{EM})}$ (the total centre read, 1-dim); $\ker\iota_\Sigma^{\mathrm{sep}}\supseteq$ traceless diagonal ($D_1-D_2$: the two edge centres coincide in the 1-dim block); the off-diagonal exchange generators ($N^2-N$ dims [FT.41(d), FT.57(1)]) have **no factored image and no derived host**: no tag bridges distinct vertex slot algebras [inventory]. Ledger at $N=2$: $4=1\ (\text{image})+1\ (\text{kernel})+2\ (\text{unhosted})$.
+$(3)$ **No-hosting theorem ($N\ge4$).** The observable aspect capacity is $\mathcal K_{\mathrm{pair}}^{\mathrm{obs}}\oplus\mathcal K_{\mathrm{stack}}^{\mathrm{obs}}$ with $\dim\mathcal K_{\mathrm{pair}}^{\mathrm{obs}}=5{+}1{+}3=9$ [$G,H,W$; $J^\pm,D^\pm$ never observable — FT.20] and $\dim\mathcal K_{\mathrm{stack}}^{\mathrm{obs}}=1{+}8=9$ [EM, strong; $D^-$ never — FT.20], the two commuting (distinct registers [CT0.12 Rmk]). For $N\ge4$: $\mathfrak{su}(N)$ is simple [math] with $\dim=N^2-1\ge15>9$; any Lie homomorphism $\varphi:\mathfrak{su}(N)\to\mathcal K_{\mathrm{pair}}^{\mathrm{obs}}\oplus\mathcal K_{\mathrm{stack}}^{\mathrm{obs}}$ has projections $\pi_{\mathrm{pair}}\circ\varphi$, $\pi_{\mathrm{stack}}\circ\varphi$ that are homomorphic images of a simple algebra (the factors commute) — hence trivial or injective; injective is impossible by dimension ($15>9$); therefore $\varphi\equiv0$ on $\mathfrak{su}(N)$: **the entire collective nonabelian boundary algebra maps to zero under every Lie-type-respecting hosting** [D2.12/D3.2's realization semantics] — not partially hosted: wholly kernel. The centre $\mathfrak u(1)$ still hosts in EM.
+$(4)$ **Capacity ceiling, exact.** Nontrivial Lie hosting of $\mathfrak{su}(N)$ exists within the current inventory only for $N\le3$ [$\dim\mathfrak{su}(3)=8\le9$; $N{=}2$: $W$-hosting, $N{=}3$: strong-hosting, both realized by (1)]. For $N\ge4$ the coarse-grained read either kernels the collective structure (FT.26's mask keeps only hosted blocks) or the aspect inventory must grow by declaration — no derivation in Parts 1–3 supplies it. The kernel *is* the coarse-graining: $\dim\mathfrak u(N)=N^2$ vs $\dim\mathcal K_\Sigma\le18$ [FT.26(3)] forces $\ker\ne0$ already at $N=5$ by dimension alone.
+
+**Req.** Def-H.13, Def-H.22; Def-H.15, Def-H.16; FT.20, FT.26, FT.41(d), FT.57; D2.12, D3.1, D3.2, D3.9; A7, D0.8; CT0.12 (Rmk), CT0.13, CT0.14 (Part 1); CT1.4 (Part 1); CT3.7, CT3.8, CT3.9 (Part 2); EM.2 (Part 2); simplicity of $\mathfrak{su}(N)$, projection argument for commuting factors [math].
+
+**Pf.**
+$$
+(1):\ \text{corolla inclusion canonical}\ [\mathrm{A7}/\mathrm{D0.8}:\ \text{slots edge-labelled}]\implies\iota_\Sigma^{\mathrm{cor}}=\iota_{n(w)}|_{\mathfrak u(N)}\ [\mathrm{Def\text{-}H.22}(a)];\qquad n(w)=2:\ \iota_2(\mathfrak{su}(2))=\operatorname{span}\{W_i\}\ [\mathrm{CT1.4},\ \mathrm{D2.12}];\quad n(w)=3:\ \iota_3(\mathfrak{su}(3))\ \text{spans}\ \mathcal K^{(\mathrm{strong})}\ [\mathrm{D2.12}],\ \dim\ 8=8\ [\mathrm{CT3.8}]
+$$
+$$
+\text{literal exchange hosting}:\ \lambda_1=E_{12}+E_{21},\ \lambda_2=-iE_{12}+iE_{21}\ [\mathrm{CT3.9}\ \text{explicit basis}]\implies\tfrac12(\lambda_1+i\lambda_2)=\tfrac12(E_{12}+E_{21}+E_{12}-E_{21})=E_{12}\ [\text{machine}]
+$$
+$$
+(2):\ \dim\mathcal K^{(\mathrm{EM})}=1\ [\mathrm{CT0.14}]\implies\iota_\Sigma^{\mathrm{sep}}(D_1),\ \iota_\Sigma^{\mathrm{sep}}(D_2)\ \text{collinear}\ [\mathrm{EM.2}\ \text{normalization}]\implies D_1-D_2\in\ker;\qquad\text{off-diagonals}:\ \mathrm{Def\text{-}H.13}'\text{s factorization is per-edge}\ [\text{CT0.12 block}\otimes\iota_{n(w_e)}]\implies|e_1\rangle\langle e_2|\ \text{has no per-edge form};\ \neg\exists\ \text{cross-vertex bridge tag}
+$$
+$$
+(3):\ \mathcal K^{\mathrm{obs}}=\mathcal K_{\mathrm{pair}}^{\mathrm{obs}}\oplus\mathcal K_{\mathrm{stack}}^{\mathrm{obs}},\ [\mathcal K_{\mathrm{pair}}^{\mathrm{obs}},\mathcal K_{\mathrm{stack}}^{\mathrm{obs}}]=0\ [\mathrm{CT0.12}\ \mathrm{Rmk}:\ \text{distinct registers}];\quad\dim=9,\ 9\ [\mathrm{CT0.12}\ \text{block table};\ \mathrm{FT.20}:\ J^\pm,D^\pm,D^-\ \text{never}]
+$$
+$$
+\varphi:\ \mathfrak{su}(N)\to\mathcal K^{\mathrm{obs}}\ \text{Lie hom.}:\ \pi_{\mathrm{pair}}\circ\varphi\ \text{hom. image of simple}\implies\ker=\{0\}\ \vee\ \mathfrak{su}(N);\quad\ker=\{0\}\implies\dim\mathfrak{su}(N)\le9\implies N^2-1\le9\implies N\le3;\qquad N\ge4:\ \text{both projections trivial}\implies\varphi\equiv0
+$$
+$$
+(4):\ N\le3:\ \text{realized by}\ (1);\qquad N\ge4:\ (3);\qquad\dim\ \text{forcing}:\ N^2>18\iff N\ge5:\ \ker\ne0\ \text{for any linear map}\ [\mathrm{FT.26}(3)].\ \blacksquare
+$$
+
+**Rmk (what would change the verdict).** Clause (3) is an inventory theorem, not a permanent barrier: a declared exchange block $\mathcal K^{(\mathrm{exch})}$ (new aspect candidate, interface-definition species) or a derived cross-vertex bridge would reopen hosting for separated contacts and $N\ge4$ corollas. Neither is constructed or declared here; the theorem states exactly what the *current* inventory forces. Note the physical reading of the corolla cases: at $n(w)=2$ the exchange flip is the environment vertex's own weak isospin flip [CT1.4] — the "collective mode of $\Sigma$" is an environment mode in disguise; only separated contacts (and large corollas) carry structure with no home in the existing forces.
+
+**Phys.** The coarse-graining machine has a hard collective ceiling, and it is the colour algebra: two boundary contacts exchange through the weak block, three through the colour block — four and beyond, the entire nonabelian exchange structure falls into the kernel of every available read. The kernel is not a defect; it is what coarse-graining means at the operator level. Whether nature's larger boundaries declare a new block or simply forget their exchange structure is the sharpest extension question the program has produced — and it is now a theorem that the existing sixteen registers cannot answer it.
+
+---
+
+---
+
+
+## Tier F.19 — The Three Tails: Realization Non-Existence, the Multiplicity Map, and the Selection Obstruction
+
+### FT.59 — The $\iota_{n\ge4}$ specification: non-existence, persistence refuted, hosting ceiling
+
+**Thm.** $(1)$ **Non-existence (the specification question is void).** D2.12 defines $\iota_n:\mathfrak u(n)\to\mathcal K$ as the *aspect realization* of the rung-$n$ slot algebra. For $n\ge4$ no such realization exists: slot algebras are realized only for $n\le3$ [CT4.4 Pf clause (b), via CT3.20/CT0.11: $n\ge4\implies\neg$channel-admissible $\implies$ slot algebra $\neg$realized], and the locked sector that receives rung-$\ge4$ content carries no gauge structure — no generators, no internal directions [CT4.4; D4.1: $F_{D^-}$ a single possibility space; D4.2: absorption at rate $\propto O(n)$]. Hence D2.12's silence at $n\ge4$ is a non-existence consequence, not an underdetermination: **the unique derived read of rung-$n\ge4$ slot content is $D^-$-absorption at the ledger level** (locked, retained [CT4.3], never observable [FT.3, FT.20, D1.11]), while the observable reads at such vertices proceed through data that never required $\iota_n$: registration signs $\sigma_e$ and chain-local pass-through reads $f_v$ [CT0.9, D3.3, FT.21(i)], core charges [FT.40], and sealing configuration data [D3.8, CT3.17, Def-H.10].
+$(2)$ **Lie-theoretic backup (if a linear $\iota$ were posited anyway).** Any Lie-homomorphic $\iota_n$, $n\ge4$, has $\iota_n(\mathfrak{su}(n))=0$: (a) observable side — $\mathfrak{su}(n\ge4)$ simple with $\dim=n^2-1\ge15>9=\max\dim$ observable factor [FT.58(3): every Lie-type-respecting hosting into $\mathcal K^{\mathrm{obs}}=9\oplus9$ is trivial]; (b) non-observable blocks admit no image either: $J^\pm$ spans are not Lie-closed ($[J_i,J_j]=i\epsilon_{ijk}W_k\notin\operatorname{span}\{J\}$ [CT1.6, CT1.9; machine over $\mathbb Q(i)$]) and a simple image inside $\operatorname{span}\{J_i\}$ is abelian-or-zero; $H$, $\mathrm{EM}$, $D^+$ blocks are $1$-dim abelian (simple nonabelian $\mathfrak{su}(n\ge4)$ has no nonzero abelian homomorphic image [math]); $G$ has $\dim5<15$; $D^-$ has no gauge structure [CT4.4]. Block-wise realization semantics [D2.12/D3.2: the isomorphism class must lie in an aspect block or the pair blocks of CT0.12] excludes spread embeddings: no single block contains an $\mathfrak{su}(n\ge4)$ isomorphism class ($\dim\le9<15$ in every block; $\mathfrak{su}(4)\not\subseteq\mathfrak{su}(3)$ [math: classification]). The centre read survives only where $\iota_n$ exists ($n\le3$): at $n\ge4$ the EM row runs on registration data, as in (1).
+$(3)$ **Persistence refuted (FT.58(1)'s conditional branch resolved).** "Strong-hosting of $\mathfrak{su}(3)$ subalgebras at $n(w)\ge4$" is impossible: $\mathfrak{su}(3)_{ijk}\subset\mathfrak{su}(n\ge4)$ [machine: explicit matrix-unit embedding, bracket-closed inside the $15$-dim traceless span, CT1.9] together with (1)/(2) forces any hosted image of a slot $\mathfrak{su}(3)$ subalgebra at $n\ge4$ to vanish. CT0.13's "rung-3 structure persists" at $n\ge4$ is therefore necessarily **activation-level, not $\iota$-image-level**: strong $\in\mathcal A(n\ge4)$ means three-slot sealing substructures remain available as *configuration* data — attachments [D3.8], invariant contractions [CT3.17], the $\mathcal C$-projector [Def-H.10], the grammar $g$ [FT.41(b)] — not that $\iota_n$ hosts anything. **Hosting dies at rung 3; sealing persists at every rung.**
+$(4)$ **Corollaries.** (a) *Face floor settled*: $\Sigma_\triangle$'s corolla contact has $n(D)=6$ [FT.49(5)]: no realization $\iota_6$ exists; its $30$-dim exchange sector [$\mathfrak u(6)=36=1+35$; strictly new $=30$: FT.49(8), FT.41(d)] is wholly unhosted — kernel under Lie semantics, $D^-$-absorbed ledger content under CT4.4's, observationally identical [FT.20: neither contributes an observable]. The first computed cell in this regime. (b) *Hosting ceiling, exact*: a corolla exchange algebra hosts nontrivially iff $N(\Sigma)\le n(w)\le3$: $N=2\to W$-hosted, $N=3\to$ strong-hosted literally [FT.58(1)]; every $n(w)\ge4$ corolla and every separated $N\ge2$ contact [FT.58(2)] is unhosted. FT.58(4)'s capacity ceiling $\mathfrak{su}(3)$ is now also the *realization* ceiling. (c) *Def-H.22(a) scope correction*: the corolla formula $\iota_\Sigma^{\mathrm{cor}}=\iota_{n(w)}|_{\mathfrak u(N)}$ is defined exactly for $n(w)\le3$; at $n(w)\ge4$ it is void, replaced by the absorption read of (1) — patched in place. The same domain restriction applies to Def-H.13's per-edge factor $\iota_{n(w_e)}$: a boundary edge whose external endpoint has rung $\ge4$ contributes no $\iota$-factor — its read is registration-plus-sealing data. Among computed cells only the face floor exercises the case (all six boundary edges end at $D$, $n(D)=6$); every other computed floor has environment contacts at $n(w_e)\in\{1,2\}$. (d) *Two ledgers, no identification*: the algebra-kernel ledger ($\dim\mathfrak{su}(n)=n^2-1$ unhosted) and the register-absorption ledger ($O(n)=2^{n+1}-16$ locked registers/tick [CT0.5, CT0.6, D4.2]) are different counts, both growing in $n$; neither converts into the other.
+
+**Req.** D2.12, D3.1, D3.2, D3.3, D3.8; D4.1, D4.2; A7; CT0.5, CT0.6, CT0.9, CT0.11, CT0.13, CT0.14 (Part 1); CT1.4, CT1.6, CT1.7, CT1.9 (Part 1); CT3.17, CT3.20 (Part 2); CT4.1, CT4.3, CT4.4 (Part 2); FT.3, FT.20, FT.21, FT.40, FT.41(b),(d), FT.49, FT.58; Def-H.10, Def-H.13, Def-H.22; simplicity of $\mathfrak{su}(N\ge4)$, absence of nonzero abelian images of simple algebras, $\mathfrak{su}(4)\not\subseteq\mathfrak{su}(3)$ [math].
+
+**Pf.**
+$$
+(1):\ \mathrm{CT4.4\ Pf}(b):\ \text{gauge structure arises only from pair blocks or slot algebras}\ \mathfrak u(n);\quad\text{slot algebras realized only for}\ n\le3\ [\mathrm{CT3.20}/\mathrm{CT0.11}:\ 2^{n+1}>16\Rightarrow\neg\text{admissible}]
+$$
+$$
+n\ge4:\ \text{slot content}\to F_{D^-}\ [\mathrm{D4.1}:\ \oplus_{n\ge4}F_n\ \text{receives}\ \forall\ \text{configs at rung}\ \ge4];\quad\mathrm{CT4.4}:\ F_{D^-}\ \text{scalar sink},\ \neg\exists\ \text{gauge generators};\quad\text{absorption rate}\propto O(n)\ [\mathrm{D4.2}];\ \text{locked}\ \neg\text{accessible}\ [\mathrm{D1.11},\mathrm{FT.3}]
+$$
+$$
+\text{observable reads without}\ \iota_n:\ \sigma_e\ [\mathrm{CT0.9}];\quad f_v\ \text{chain-local}\ [\mathrm{D3.3},\ \mathrm{FT.21}(i)\ \text{telescoping}];\quad q_{\mathrm{core}}\ [\mathrm{FT.40}];\quad\text{sealing}\ [\mathrm{D3.8},\mathrm{CT3.17},\mathrm{Def\text{-}H.10}]
+$$
+$$
+(2a):\ \mathrm{FT.58}(3)\ \text{verbatim};\qquad(2b):\ [J_1,J_2]=iW_3\notin\operatorname{span}_{\mathbb R}\{J_i\}\ [\mathrm{CT1.6};\ \text{machine}:\ \operatorname{rk}_{\mathbb Q(i)}\{J_1,J_2,J_3,W_3\}=4]
+$$
+$$
+\text{simple}\ \mathfrak{su}(n\ge4):\ \text{hom. image}=0\ \vee\ \cong\mathfrak{su}(n)\ [\ker=\text{ideal};\ \text{math}];\quad\dim\ \text{of every aspect block}\le9<15\ [\mathrm{CT0.12},\mathrm{CT0.14}:\ 3,3,5,3,1,1,1,8];\quad\text{abelian blocks}: 0\ \text{image}\ [\text{math}]
+$$
+$$
+\text{spread embeddings}:\ \mathrm{D3.2}\ \text{semantics}=\text{isomorphism class in a block};\ \mathfrak{su}(n\ge4)\ \text{in no block}\ (2a),(2b);\qquad\text{pair-total reading excluded by}\ \mathrm{CT4.4}\ (\text{Rmk below})
+$$
+$$
+(3):\ \mathfrak{su}(3)_{123}\hookrightarrow\mathfrak{su}(4)\ \text{by matrix units}\ [\text{machine}:\ 8\text{-dim},\ \text{bracket-closed inside}\ \mathfrak{su}(4)=\operatorname{span}\{\Sigma,\hat E^{ij},W_i,J_i,K_i\},\ \dim15\ [\mathrm{CT1.9}]];\quad\iota(\mathfrak{su}(3)_{123})\subseteq\iota(\mathfrak{su}(n))=0
+$$
+$$
+\mathrm{CT0.13}:\ \mathcal A(n\ge4)=\mathcal A(3)\cup\{D^-\}\ \text{is an activation statement}\ [\mathrm{D1.12}];\quad\text{sealing data at}\ n\ge4:\ \mathrm{D3.8}\ \text{attachments},\ \mathrm{CT3.17}\ \text{contractions},\ \mathrm{Def\text{-}H.10}\ \mathcal C,\ \mathrm{FT.41}(b)\ g:\ \text{configuration ledger},\ \neg\iota\text{-image}
+$$
+$$
+(4a):\ n(D)=6\ [\mathrm{FT.49}(5)];\ (1)\Rightarrow\neg\exists\,\iota_6;\quad\dim\mathfrak u(6)=36=1+35;\quad\text{exchange}=30\ [\mathrm{FT.49}(8)];\quad\text{observational identity}:\ \mathrm{FT.20}\ (D^-\ \text{never}),\ \mathrm{FT.58}(3)\ (\text{Lie}: 0)
+$$
+$$
+(4b):\ \mathrm{FT.58}(1)\ (n(w)\in\{2,3\})+(1)\text{--}(3)\ (n(w)\ge4)+\mathrm{FT.58}(2)\ (\text{separated});\qquad(4c):\ \mathrm{Def\text{-}H.22}(a)\ \text{composition requires}\ \iota_{n(w)}\ [\mathrm{D2.12}]\implies\text{domain}\ n(w)\le3
+$$
+$$
+(4d):\ n^2-1\ \text{vs}\ 2^{n+1}-16:\ \text{different growth, different registers}\ [\mathrm{CT0.5}/\mathrm{CT0.6}\ \text{vs}\ \dim\mathfrak{su}(n)].\ \blacksquare
+$$
+
+**Rmk (the D3.2 "pair blocks" clause, disambiguated).** D3.2's realization test admits isomorphism classes lying "in $\iota_m(\mathfrak u(m))$ *or in the pair blocks of CT0.12*". Read against the pair *total* — $\mathfrak H(\mathbb C^4)\cong\mathfrak u(4)$ [CT1.9], which does contain $\mathfrak{su}(4)$ as a subalgebra — a hypothetical rung-4 slot collective could be called "already realized". That reading is foreclosed by CT4.4, which derives *non-realization* of slot algebras at $n\ge4$ from channel inadmissibility, and by CT0.13, whose derived value $\mathcal A(n\ge4)=\mathcal A(3)\cup\{D^-\}$ [D1.12: derived, $\neg$stipulated] contains no $\mathfrak{su}(4)$-type aspect for a spread image to be read as: the masked force operator is block-diagonal [FT.26(2), CT2.3/CT2.4 pattern], so a spread image would have no aspect whose block carries it. The ambiguity is recorded here and resolved by citation, not by choice.
+
+**Rmk (what survives at the locked rungs).** Nothing observable is lost *by this theorem* — the observable content of a rung-$n\ge4$ vertex was already exactly the registration/sealing ledger [FT.20's criteria never invoke $\iota_n$ for EM/$G$/$H$/strong rows; FT.21(i)]. What is settled is the collective boundary algebra: beyond three slots (or three boundary contacts at a corolla) it has no home in the aspect inventory — the kernel *is* the coarse-graining [FT.58(3) Rmk], now with the mechanism named: absorption without structure [CT4.4].
+
+**Phys.** Ask what the fourth slot's algebra maps to and the corpus answers: nothing — not because the map is unknown, but because a vertex that deep in saturation has no realized slot algebra at all; its content falls into a structureless dark sink at an exponential rate while its registration signs and sealing patterns, the only reads any observer ever had, continue unchanged. Colour's three is a ceiling twice over: capacity forbids a fourth accessible slot, and realization forbids a fourth slot's algebra even where the slots exist. The tetrahedron-face floor, with six boundary edges corolled at a rung-6 vertex, is the first computed object whose entire thirty-dimensional collective boundary structure is provably dark.
+
+---
+
+---
+
+### Def-H.38 — The multiplicity–winding coupling
+
+**Def.** A materialized closed bound chain $c$ [D1.5: bound content fermionic; FT.22: materialized] with winding $k(c)=\Theta(c)/2\ge0$ [FT.22, FT.25(3); the nonnegative (spacelike-dominant) cone, FT.52(3)] carries $k(c)$ symmetric copies of the transported seed:
+$$
+\textbf{multiplicity rule (constitutive clause):}\qquad \operatorname{copies}(c)\ :=\ k(c),
+$$
+realized on the carrier $\Psi(c)=\mathrm{Sym}^{k(c)}(\mathcal H_{\mathsf v})$ with the diagonal transport $\mathcal U_c^{\otimes k}\big|_{\mathrm{Sym}^k}$ [Def-H.23 — immediate below; EW.32: $\mathcal H_{\mathsf v}\cong\mathbb C^2$ the transported seed].
+**Derived content (not part of the interface).** Uniqueness of $\Psi$ given the rule [FT.52(3), FT.55(2), FT.60(2)]; the four conditions (i)–(iv), including the corpus-pinned placement at $k{=}2$ — real $\iff$ support in $\vee^2$ at $\varepsilon_q=0$, so two real-registered seeds grade symmetric [FT.60(1); A4, CT0.7, CT0.8]; the Casimir ladder $\tfrac k2(\tfrac k2{+}1)$ generalizing CT0.7a [FT.60(3)]; the weight ladder and the defect multiplets [FT.60(4)–(5), under Def-H.37(2)]; composition as maximal-weight Clebsch–Gordan on the cone [FT.60(6)]; the spin label $j=|k|/2$ [FT.55(2), FT.60(1)(iv)].
+**Minimality (derived).** The coupling is irreducible to prior corpus content: EW.32 transports one seed per chain regardless of winding; the uniform-minimal triangle ($k=3$) carries no three materialized winding-$1$ subloops; admissible decompositions are basis-relative [FT.60(7a)–(b) — forward pointers in-tier]. One integer coupling; no construction below it.
+**Scope.** Bound chains on the nonnegative cone only; transit/trivial chains excluded — photon helicity [EM.8] is a transit-side read, no identification. Carriers for $k\ge3$ ($\dim\ge4$) exceed the registered pair-channel inventory [CT0.12: blocks $3,3,5,3,1,1$] — no aspect claim at $k\ge3$; the inventory-extension question is application-layer content [FT.60(8)].
+
+---
+
+### Def-H.23 — The winding-multiplicity carrier map (under Def-H.38)
+
+**Def.** For $c$ a **materialized closed bound chain** [D1.5: bound content fermionic; FT.22: materialized] with winding $k(c)=\Theta(c)/2\ge0$ [FT.22, FT.25(3)] — the nonnegative (spacelike-dominant) cone [FT.52(3) form]:
+$$
+\Psi(c)\ :=\ \mathrm{Sym}^{k(c)}\bigl(\mathcal H_{\mathsf v}\bigr)\ \subseteq\ \mathcal H_{\mathsf v}^{\otimes k(c)}\qquad[\mathrm{Def-H.38}:\ \text{multiplicity}=\text{winding};\ \ \mathcal H_{\mathsf v}\cong\mathbb C^2\ \text{the transported seed},\ \mathrm{EW.32}],
+$$
+where $\mathrm{Sym}^{k}$ is the common $(+1)$-eigenspace of all pairwise swaps on $\mathcal H_{\mathsf v}^{\otimes k}$ [math: the symmetric subspace; the swaps act as CT0.7's $\mathbb S$ on each tensor pair, adjacent transpositions generating $S_k$], and transport is the **diagonal action** $\mathcal U_c^{\otimes k}\big|_{\mathrm{Sym}^k}$ of EW.32's seed transport $\mathcal U_c$ around $c$ [EW.32, EW.33; Def-H.21(5) for the spin-connection form]. Boundary cases: $k=0$: $\mathrm{Sym}^0=\mathbb C$, the trivial carrier — representation-identified with $\wedge^2\cong\mathrm{Sym}^0$ [FT.56(1)], $\neg$subspace-identified; scope note: all-null trivial chains are transit objects (photons/gluons [D1.7, D3.7]) whose helicity content is a transit-side read [EM.8] — outside $\Psi$, no identification made. $k<0$ (timelike-dominant): outside the cone, $\Psi$ undefined [FT.52(3); FT.56(2)]. **Interface status (Def-H.38).** The corpus proves one seed transported per chain regardless of winding [EW.32]; the coupling *multiplicity $=k(c)$* is Def-H.38's constitutive clause — FT.60(7) proves it irreducible to decomposition, so the clause is load-bearing, not packaging.
+
+---
+
+---
+
+### FT.60 — The multiplicity map: conditions, ladders, basis-relativity, and the honesty witnesses
+
+**Thm.** Under Def-H.38, with Def-H.21's spin connection and EW.32's normalization:
+$(1)$ **The four conditions hold.** $\Psi$ satisfies FT.56(3)(i)–(iv): (i) $k{=}1:\ \mathrm{Sym}^1=\mathcal H_{\mathsf v}$, $j=\tfrac12$ [EW.32 anchor]; (ii) $k{=}2:\ \mathrm{Sym}^2=\vee^2\mathcal H_{\mathsf v}$ — the channel's own reality sector, with projector $\Pi_{\mathcal R}=\tfrac14(3E_0+\Sigma)$ [CT0.7(1); A3] — and the *placement* is corpus-pinned: real $\iff$ support in $\vee^2$ at $\varepsilon_q=0$ [A4, CT0.8], so once two seeds share a materialized (real) register their symmetric grading is forced [CT0.7 Phys: reality $=$ Bose exchange symmetry]; only the multiplicity is interface content [Def-H.38]; (iii) cone-additivity: $\mathrm{Sym}^{k_1}\otimes\mathrm{Sym}^{k_2}\supseteq\mathrm{Sym}^{k_1+k_2}$ as maximal weight [math: CG] $=$ the additive winding law on the stretched channel [FT.34(3), FT.50(2), FT.56(2)]; (iv) admissibility: carrier dimension $k+1=2j+1$ with $j=|k|/2$ on the cone [FT.52(3) form; FT.55(0)].
+$(2)$ **Uniqueness.** Any carrier assignment satisfying (i)–(iv) equals $\Psi$: the $(k{+}1)$-dim irreducible $\mathfrak{su}(2)$-module is unique up to isomorphism [math: classification; FT.55(2)] and the anchor fixes the seed [EW.32]. Gap 19's map exists and is unique under Def-H.38.
+$(3)$ **Casimir ladder (CT0.7a generalized).** With $W_i\mapsto$ total-spin generators on $\mathcal H_{\mathsf v}$ [EW.32/CT1.2: the corpus's own basis match] and the induced diagonal action on $\mathrm{Sym}^k$:
+$$
+\textstyle\sum_i\bigl(W_i^{(k)}\bigr)^2=\frac{k}{2}\Bigl(\frac{k}{2}+1\Bigr)\,\mathbb I_{k+1}\qquad[\text{machine: exact rational matrices,}\ k\le6;\ \text{physics normalization}\ W=\tfrac12\cdot\text{generators}],
+$$
+recovering the native rungs verbatim: $k{=}0:\ 0$ on $\wedge^2$; $k{=}1:\ \tfrac34$ on the seed; $k{=}2:\ 2$ on $\vee^2$ — CT0.7a's eigenvalues are the $k\le2$ instances of one ladder [FT.56(1) extended from three rungs to all].
+$(4)$ **Weight ladder.** For $\mathcal U=\exp(i\phi\,\hat n\cdot\vec\sigma)$ [FT.54's convention]: $\mathrm{Sym}^k(\mathcal U)$ has eigenvalues $e^{im\phi}$, $m\in\{k,k-2,\dots,-k\}$ — i.e. $\mathfrak{su}(2)$-weights $m/2\in\{j,j-1,\dots,-j\}$ at $j=k/2$, character $\sum_m e^{im\phi}$; on spin-connection transport $\phi=\Theta_R/2$ [Def-H.21(6)] [machine: diagonal transport over $\mathbb Q(i)$ at exact circle points; Laurent identity $(t^m-1)(t^{-m}-1)=2-t^m-t^{-m}$].
+$(5)$ **Defect multiplet ladder (under Def-H.37(2)).** The CT2.5 defect read $\|(\mathcal U^{(k)}-1)\psi\|^2$ on the weight-$m$ vector [$m=k-2r$ in the $\phi$-labelling]:
+$$
+m^2_{\mathrm{pole}}(m)=\hat\mu'^2\bigl(2-2\cos(m\,\Theta_R/2)\bigr)=4\,\hat\mu'^2\sin^2\bigl(m\,\Theta_R/4\bigr),\qquad m\in\{k,k-2,\dots,-k\};
+$$
+$k{=}1$ reproduces FT.54(4) exactly and its *state-independence is special to the seed* ($m=\pm1$ agree by evenness); $k\ge2$ **splits into a multiplet**; every even $k$ carries a weight $m{=}0$ that is defect-massless at every curvature flux — the kernel coherence of FT.33(6)/FT.54 generalized to a standing zero of the ladder [machine: exact over $\mathbb Q(i)$; Chebyshev identity $2-2\cos(m\phi)=2-2T_m(\cos\phi)$ verified as integer-polynomial recursion].
+$(6)$ **Composition at carrier level.** For $\Gamma=c_1\cdot P\cdot c_2\cdot\bar P$ materialized with $d_{12}=\Theta(P)\ge0$: $\Psi(\Gamma)=\mathrm{Sym}^{k_1+k_2+d_{12}}\subseteq\mathrm{Sym}^{k_1}\otimes\mathrm{Sym}^{k_2}\otimes\mathrm{Sym}^{d_{12}}$ as maximal weight [math: CG] — the spin–orbit decomposition $j(\Gamma)=j_1+j_2+j_{\mathrm{rel}}$, $j_{\mathrm{rel}}=d_{12}/2$ [FT.56(2)], now an inclusion of carriers, on the cone.
+$(7)$ **Two honesty witnesses.** (a) *Basis-relativity*: the carrier assignment is per-chain, and a floor admits several admissible chain decompositions with the same total winding but different tensor carriers — witness (machine): the tetrahedron at uniform $\kappa_0=2$: the digon basis (M2) gives six chains of $k=2$: $\bigotimes^6\mathrm{Sym}^2$, dimension $3^6=729$; the face basis (M1) gives four faces of $k_f=3$: $\bigotimes^4\mathrm{Sym}^3$, dimension $4^4=256$; both have $\sum k=12=K_S$ [FT.43(1)'s sum rule is the invariance mechanism]. **Decomposition-invariant content**: $K_S$ and the stretched total $j_{\max}=K_S/2$ (and per-chain multisets up to the homology choice); the full floor-level tensor product is basis-relative — recorded, no canonical choice imposed. Only edge-disjoint decompositions [FT.25(1)] (the digon basis) support an unrestricted $\otimes$; face bases overlap on channels and their $\otimes$ is formal. (b) *Irreducibility of the multiplicity datum*: $\Psi$ is not "count materialized subloops" — the uniform-minimal triangle has $k=3$ [FT.45(4): $\kappa\equiv2$, $\Theta=6$] yet carries no materialized winding-$1$ *face* subloop ($\kappa\equiv1$ gives $\Theta=3$, odd, off-shell [FT.22; machine]), and the profile identity $(2,2,2)=(1,1,0)+(0,1,1)+(1,0,1)$ decomposes into null-carrying digon-supported profiles — different chains, not three winding-$1$ loops. EW.32 transports one seed per chain regardless of $k$; no tag ties tensor multiplicity to winding [FT.56(3)]. Def-H.38's single datum is therefore genuinely new — a transfer of exactly Def-H.37(2)s species.
+$(8)$ **Inventory consequence, flagged.** $\mathrm{Sym}^k$ for $k\ge3$ ($\dim\ge4$) lies in multi-seed tensor spaces with no counterpart among the frozen $16$ pair registers [CT0.12 block dimensions $3,3,5,3,1,1$: no $4$-dim irreducible] nor the stack blocks: the carriers for $k\ge3$ exist as [math] objects on $\mathcal H_{\mathsf v}^{\otimes k}$ but exceed the registered aspect inventory — an inventory-extension consequence of Def-H.38, recorded here and joined to Gap 16's residue-(b) declaration question ($\mathcal K^{(\mathrm{exch})}$-species). No aspect claim is made for $k\ge3$ carriers.
+
+**Req.** Def-H.38; Def-H.23, Def-H.21; EW.32, EW.33 (Part 2); A3, A4; CT0.7, CT0.7a, CT0.8, CT0.12 (Part 1); CT1.2 (Part 1); CT2.5 (Part 2); D1.5, D1.7, D3.7; EM.8 (Part 2); FT.22, FT.25, FT.33, FT.34, FT.43, FT.45, FT.49, FT.50, FT.52, FT.54, FT.55, FT.56; $\mathfrak{su}(2)$ classification, Clebsch–Gordan, symmetric-subspace characterization, Chebyshev recursion [math].
+
+**Pf.**
+$$
+(1):\ \mathrm{Sym}^1=\mathcal H_{\mathsf v}\ [\text{math}];\ j=\tfrac12\ [\mathrm{EW.32}];\qquad\mathrm{Sym}^2(\mathbb C^2)=\vee^2\ [\mathrm{A3}];\ \Pi_{\mathcal R}=\tfrac14(3E_0+\Sigma),\ \mathfrak T=3\ [\mathrm{CT0.7}(1);\ \text{machine regression}]
+$$
+$$
+\varepsilon_q=0:\ (p,q)\in\mathcal R\iff\operatorname{supp}\rho_{pq}\subseteq\vee^2\ [\mathrm{CT0.8}]:\ \text{two real-registered seeds grade symmetric}\ [\mathrm{CT0.7\ Phys};\ \text{math}:\ \text{common}\ {+}1\ \text{eigenspace of transpositions}=\mathrm{Sym}^k]
+$$
+$$
+\mathrm{CG}:\ \mathrm{Sym}^{k_1}\otimes\mathrm{Sym}^{k_2}=\bigoplus_{j=|k_1-k_2|/2}^{(k_1+k_2)/2}\mathcal D_j\supseteq\mathrm{Sym}^{k_1+k_2}\ [\text{math}];\qquad k(\Gamma)=k_1+k_2+d_{12}\ [\mathrm{FT.34}(3),\mathrm{FT.50}(2)]
+$$
+$$
+(2):\ \dim=k+1\ \wedge\ \text{irreducible}\ [\text{math}]\implies\text{unique isomorphism type per}\ k;\quad R(1)=\tfrac12\ \text{anchor}\ [\mathrm{EW.32}];\quad j=|k|/2\ [\mathrm{FT.52}(3)]
+$$
+$$
+(3):\ \text{monomial basis}\ x^{k-r}y^r:\ H=x\partial_x-y\partial_y,\ E=x\partial_y,\ F=y\partial_x:\ [H,E]=2E,\ [H,F]=-2F,\ [E,F]=H\ [\text{machine},\ k\le6]
+$$
+$$
+\textstyle\sum_i(W_i^{(k)})^2=\tfrac12(EF+FE+\tfrac12H^2)=\tfrac k2(\tfrac k2+1)\,\mathbb I\ [\text{machine exact over}\ \mathbb Q];\qquad k=0,1,2:\ 0,\tfrac34,2\ [\mathrm{CT0.7a}\ \text{eigenvalues recovered}]
+$$
+$$
+(4):\ \mathcal U=\exp(i\phi\hat n\cdot\vec\sigma):\ \text{eigenvalues}\ e^{\pm i\phi}\ \text{on}\ \mathcal H_{\mathsf v}\implies e^{i(k-2r)\phi}\ \text{on}\ \mathrm{Sym}^k\ [\text{math};\ \text{machine over}\ \mathbb Q(i),\ \text{diagonal}\ \mathcal U,\ \text{exact circle points}]
+$$
+$$
+(5):\ \mathrm{CT2.5}\ \text{defect read}\ [\mathrm{EW.33}\ \text{pattern}]:\ \|(U^{(k)}-1)\psi_m\|^2=|e^{im\phi}-1|^2=2-2\cos(m\phi);\quad\phi=\Theta_R/2\ [\mathrm{Def\text{-}H.21}(6)]
+$$
+$$
+k=1:\ m=\pm1:\ 2-2\cos(\Theta_R/2)=4\sin^2(\Theta_R/4)\ [\mathrm{FT.54}(4)\ \text{recovered};\ \text{both weights equal}];\qquad m=0\ (k\ \text{even}):\ 2-2\cos0=0\ \text{exactly}
+$$
+$$
+2-2\cos(m\phi)=2-2T_m(\cos\phi):\ T_0=1,\ T_1=c,\ T_{m+1}=2cT_m-T_{m-1}\ [\text{machine integer-polynomial recursion over}\ \mathbb Q]
+$$
+$$
+(6):\ (1)\text{'s CG at three factors on the cone};\qquad d_{12}\ge0\ [\mathrm{FT.34}(2)\ \text{spacelike connector}]
+$$
+$$
+(7a):\ \kappa_0=2\ \text{tetrahedron}\ [\mathrm{FT.42}(5)]:\ \text{digons}\ \Theta=2\kappa_0=4,\ k=\kappa_0=2\ [\mathrm{FT.24}(1),\mathrm{FT.25}(3)],\ 6\ \text{chains};\ \text{faces}\ \Theta_f=2L=6,\ k_f=3,\ 4\ \text{faces};\ \sum=12=K_S\ [\mathrm{FT.43}(1)]
+$$
+$$
+\dim:\ 3^6=729\ne256=4^4\ [\text{machine}];\qquad j_{\max}=K_S/2=6\ \text{both bases}\ [\text{stretched};\ \text{math}]
+$$
+$$
+(7b):\ \kappa\equiv1\ \text{on}\ 3\text{-cycle}:\ \Theta=3\notin2\mathbb Z\ [\mathrm{FT.22}];\qquad(2,2,2)=(1,1,0)+(0,1,1)+(1,0,1)\ [\text{machine}];\ (1,1,0)\text{-class null-carrying}\ [\mathrm{FT.45}(4)]
+$$
+$$
+(8):\ \dim\mathrm{Sym}^3=4;\quad\mathrm{CT0.12}\ \text{blocks}\ \{3,3,5,3,1,1\}:\ \neg\exists\ 4\text{-dim irreducible register block};\quad\text{no aspect claim made}.\ \blacksquare
+$$
+
+**Rmk (Def-H.38 and the no-go, consistent).** FT.55(1) ruled out $\Theta_R=2\pi k$ — spin as the frame-holonomy *angle* of the same loop. Def-H.38 makes no such identification: the winding enters as *copy count* of the transported seed, and the transport phases are EW.32-side data; under Def-H.37(2) the defect ladder (5) reads in $\Theta_R$ at fixed weight $m$ with no $k$–$\Theta_R$ proportionality anywhere — the calibration weights stay separate ($[k]=\mathfrak h$-weight $-2$; $[\Theta_R]=0$; $[\hat\mu'^2]=\mathfrak q$). The no-go constrains the *form* of the read; Def-H.38 supplies the *multiplicity*; they meet only in (5), consistently.
+
+**Rmk (relation to Def-H.37(1)).** Def-H.37 fixes the defect *transfer* (pole side $=$ transport defect of the seed); Def-H.38 fixes the defect *carrier* (which space the seed's copies occupy).
+
+**Phys.** A winding-$k$ fermion loop carries $k$ symmetric copies of the qubit the corpus already transports — spin $k/2$, Casimir $\tfrac k2(\tfrac k2+1)$, a multiplet of $k+1$ weights, and, if the pole mass is the transport defect, a mass multiplet $4\hat\mu'^2\sin^2(m\Theta_R/4)$ whose middle state is exactly massless whenever $k$ is even. The bottom three rungs are not added structure: they are the virtual line, the seed, and the real sector of the pair channel — objects Parts 1–2 already proved, wearing the labels CT0.7a already computed. What the declaration contributes is one number tied to another: copies $=$ winding. That the tie cannot be unpacked from anything already proven is itself proven — the triangle's minimal winding of three has no three subloops to count.
+
+---
+
+---
+
+### FT.61 — The selection side: phase inventory, index-blindness, and the two exits (Gap 18)
+
+**Thm.** $(1)$ **Complete on-shell phase inventory.** For a configuration $C$ with on-shell integer edge data [FT.24/FT.34(4) scope], A8's weight assembles as
+$$
+w(C)=\mathcal J(C)\prod_{e\in E(C)}G(e)\cdot(-1)^{\aleph(\sigma,C)},\qquad\mathcal J(C)=1\ [\mathrm{D3.6}:\ (+1)\text{-factors only}],\qquad G(e)=\sigma_e\,e^{i\pi\kappa_e}\ [\mathrm{D3.5},\ \mathrm{FT.9}:\ \alpha=\pi;\ \mathrm{EM.20}],
+$$
+so the full phase is $\Phi(C)=\pi\bigl(\Theta(C)+\aleph(\sigma,C)+n_-(\sigma)\bigr)\ (\mathrm{mod}\ 2\pi)$ with $n_-:=\#\{e:\sigma_e=-1\}$: **the path-sum phase has exactly three $\mathbb Z_2$ registers — geometric ($\Theta$), wall ($\aleph$ [D3.3]), sign ($n_-$)** [CT0.9, CT0.10: the sign structures are independent; machine: exhaustive on $\Sigma_{\min}$ configurations].
+$(2)$ **Geometric triviality on-shell.** On materialized closed chains $\Theta\in2\mathbb Z$ [FT.22] $\implies(-1)^{\Theta}=+1$: the surviving weight phase of any materialized-loop configuration is registration-only, $(-1)^{\aleph+n_-}$ — *no variational continuous component remains in the on-shell phase*. In particular the stationary channels of CT1.20's semiclassical locus carry constant $\kappa_0$ [FT.53(2)] and their complete geometric ledger record is the single integer $\kappa_0$ (plus $\delta h$ and $\Theta=2k$).
+$(3)$ **Index-blindness witness.** There exist CT2.6-class geometries and pairs of closed geodesics $(\gamma_A,\gamma_B)$ with *identical* ledger records and *different* Morse indices: witness $M=S^2(R)\times S^1(2R)$ with the product metric [math: smooth complete Riemannian 3-manifold — a spatial-slice class in Def-H.21's sense; whether emergent dynamics realizes this slice is P4/solution data, recorded not claimed]: $\gamma_A=$ a great circle traversed twice — length $4\pi R$, Morse index $3$ [math: Morse index theorem; conjugate points at arc-distances $\pi R,2\pi R,3\pi R$ in the open interval; iterates of $S^2$ great circles: index $2m-1$]; $\gamma_B=\{\mathrm{pt}\}\times S^1(2R)$ — length $2\pi\cdot2R=4\pi R$ (equal), Morse index $0$ [flat factor; product formula; $\pi_1$-nontrivial so index $0$ is admissible — Synge's obstruction applies only to simply-connected slices]. At ledger scale $\mathfrak h=2\pi R/N$: both discretize to $\kappa\equiv1$ minimal-edge chains with $\delta h=\Theta=2N\in2\mathbb Z$ [FT.31(4), FT.22: materialization-eligible], $\sigma\equiv+1\implies\aleph=0,\ n_-=0$; by (1) both weights are $+1$, and $|w|^2=1$ for both [CT2.8's norms equally blind]. **No function of the weight data separates index $0$ from index $\ge1$ stationary channels.** *([FT.66(2)]: both witness members are degenerate — they sit in clean isometry-orbit critical manifolds ($\mathcal C_A=\mathbb{RP}^2\times S^1\times S^1$, nullity $4$; $\mathcal C_B=S^2\times S^1$, nullity $3$); the Bott indices remain distinct ($3$ vs $0$), the monodromy types differ ($I_2$ semisimple vs unipotent parabolic, Jordan-separated at identical trace/det), and the records and weights above are unchanged: this clause holds with "Morse index" read throughout as "Bott index" [Def-H.24].)*
+$(4)$ **Two exits (theorem-shaped localization).** A selection criterion implementing "stable jumps materialize" [Def-H.19 vocabulary] must read the Morse index [math: index is the fluctuation-sign datum]. By (1)–(3) no weight-level or ledger-level read can supply it, and the mask/pole side reads stationary channels only through hosted blocks and superselection labels $(\Theta_{\mathrm{int}},k,q_{\mathrm{core}},m_{\mathrm{hid}},\mathcal C)$ [FT.26, Def-H.15(4), FT.58's inventory] — every entry index-blind by (2). Hence Gap 18's selection side is closed *against the current inventory*, with exactly two exits: **(a)** a new variational registration — a per-channel conjugate-point/Jacobi count appended to the ledger (a interface-definition species extending D0.7's retained-event vocabulary; nothing of the kind exists [inventory]) — **(reclassification [FT.66(3)]: the datum is reconstructable in principle from the ambient configuration's metric content [CT1.20's $C\mapsto g_{\mu\nu}(C)$; CT1.12/CT1.14/CT2.6] and eventually constant in $\mathfrak h$ away from bifurcation loci; the gap is a structural *coupling* — no A8/D2.11/D2.3/CT2.5 clause reads it — not a registration gap; exit (a) becomes a declared weight extension $w\mapsto w\,(-1)^{\operatorname{ind}_B}$, interface-definition species, not adopted)**; or **(b)** a spectral-side argument — positivity structure on $Z(\mathcal R,\Sigma)$ [CT2.8/CT2.5/Def-H.16] constraining which stationary families contribute poles without per-channel signs (not constructed; CT2.8 supplies norms, not pole-selection). The earlier "bridge construction" residue decomposes accordingly: the *leading* bridge is derived — materialization $\iff$ pole $\iff$ single-valued eigenmode at constant-$\kappa$ stationary channels [Def-H.16 closing line; FT.22; FT.53(2); CT2.5] — and the *next order* (fluctuation prefactors and signs) requires exactly (a) or (b).
+$(5)$ **Consistency with CT1.20.** The witness pair sits inside CT1.20's own statement: stationary points dominate and are weighted alike — (3) upgrades "alike" from an absence of distinction to an identity of weights, at every ledger scale. Gap 13's finite-$\mathfrak h$ residue [FT.53(4)] inherits the localization: the excluded class-(iii) profiles were killed by *non-stationarity*; index-$\ge1$ stationary saddles are killed by nothing available.
+
+**Req.** A8; D0.7, D1.7, D2.7, D3.3, D3.5, D3.6; CT0.9, CT0.10 (Part 1); CT1.20, CT2.5, CT2.6, CT2.8 (Part 2); EM.20 (**E**; via FT.9's $\alpha=\pi$); FT.9, FT.22, FT.24, FT.26, FT.31, FT.34, FT.48, FT.53, FT.58; Def-H.15, Def-H.16, Def-H.19, Def-H.21; P4; Morse index theorem, conjugate-point counts for sphere iterates, product formula, Synge [math].
+
+**Pf.**
+$$
+(1):\ \mathcal J(C)=\prod_{J^+}(+1)\prod_{J^-}(+1)^*=1\ [\mathrm{D3.6}];\qquad G(e)=\sigma_e\exp(i\alpha_{\mathrm{EM}}\widehat{ds}^{\,2}(e))=\sigma_e(-1)^{\kappa_e}\ [\mathrm{D3.5};\ \mathrm{FT.9}/\mathrm{EM.20}:\ \alpha=\pi;\ \kappa_e\in\mathbb Z\ \text{on-shell}]
+$$
+$$
+\prod_eG(e)=(-1)^{n_-}\cdot(-1)^{\Theta}\ [\mathrm{D1.7}:\ \Theta=\textstyle\sum_e\widehat{ds}^{\,2}(e)];\qquad w\text{-phase}=(-1)^{\Theta+\aleph+n_-};\qquad\text{independence of registers}\ [\mathrm{CT0.10}];\ \text{machine}:\ 24/24\ \Sigma_{\min}\ \text{configurations}
+$$
+$$
+(2):\ \Theta\in2\mathbb Z\ [\mathrm{FT.22}]\implies(-1)^\Theta=1;\qquad\text{stationary record}:\ \kappa_e\equiv\kappa_0\ [\mathrm{FT.53}(2)];\quad\Theta=2k\ [\mathrm{FT.22}];\quad\delta h\ [\mathrm{D0.6}]
+$$
+$$
+(3):\ \ell(\gamma_A)=2\cdot2\pi R=4\pi R=\ell(\gamma_B);\qquad\text{index}(\gamma_A)=\#\{j\pi R:\ 1\le j\le2m-1,\ m=2\}=3\ [\text{Morse index thm.; machine: integer count}]
+$$
+$$
+\text{index}(\gamma_B)=0\ [\text{flat factor},\ \text{product formula};\ \gamma_B\ \text{generates}\ \pi_1\implies\neg\text{contractible}\implies\neg\text{Synge-forced}];\qquad\mathfrak h=2\pi R/N:\ \delta h=\ell/\mathfrak h=2N\ \text{both};\ \kappa\equiv1\implies\Theta=\delta h\ [\mathrm{FT.31}(4)]
+$$
+$$
+\text{ledger records}:\ (\kappa_0,\delta h,\Theta,\sigma,\aleph)=(1,2N,2N,+1,0)\ \text{both};\qquad w=(+1)\ \text{both by}\ (1);\quad|w|^2=1\ \text{both}\ [\mathrm{CT2.8}(2)\ \text{norm side}];\qquad 3\ne0
+$$
+$$
+(4):\ \text{index}=\text{sign of fluctuation determinant}\ [\text{math}];\quad(1)\text{--}(3):\ \neg\exists\ \text{weight function distinguishing};\quad\text{mask reads}:\ \mathrm{FT.26}(2)\ \text{block-diagonal on}\ \mathcal A(\Sigma;C),\ \text{labels}\ \mathrm{Def\text{-}H.15}(4):\ \text{all from}\ (2)\text{'s record}
+$$
+$$
+\text{exits}:\ (a)\ \mathrm{D0.7}\ \text{ledger}=\text{retained events};\ \neg\exists\ \text{variational datum}\ [\text{inventory}];\quad(b)\ \mathrm{CT2.8}:\ \langle A|A\rangle=\sum|w|^2\ge0:\ \text{norms};\ \neg\exists\ \text{per-saddle phase/pole-selection tag}
+$$
+$$
+(5):\ \mathrm{CT1.20}:\ \delta\Phi=0\ \text{dominates, weighted alike};\quad(3)\ \text{exhibits the "alike" as identical weights};\qquad\mathrm{FT.53}(4):\ \text{class-(iii) excluded by non-stationarity},\ \neg\text{by index}.\ \blacksquare
+$$
+
+**Rmk (scope of the witness).** The witness geometry is offered within the smooth-geometry class the ledger program works in [CT2.6's hypotheses are regularity clauses on $(M,g)$; Def-H.21 operates on arbitrary orientable slices]. If emergent dynamics were later shown to realize only simply-connected or curvature-restricted slices, the witness would need rebuilding in that class — the *structural* half of the theorem (clauses (1)–(2): the on-shell phase has no variational component at all, and the stationary record is one integer) is witness-independent and would survive any such restriction.
+
+**Phys.** On-shell, the ledger's phase bookkeeping is finished: geometry contributes nothing (its factor is $+1$ on every materialized loop), and what remains — wall crossings and registration signs — is classical data fixed before the variation ever happens. Two loops can then be indistinguishable to the last bit of weight while one is the stablest path in the geometry and the other a thrice-unstable saddle: on a sphere-times-circle they are the same length, the same hop count, the same everything the ledger writes down. No reading of the sum can prefer the minimum; only new variational bookkeeping or a positivity argument from the spectrum side can — and both are named, neither is built.
+
+---
+
+---
+
+---
+
+
+## Tier F.20 — The Bidirectional Rung Audit and the Platonic Physical Cards
+
+### FT.62 — The bidirectional rung audit (correction theorem)
+
+**Thm.** $(1)$ **Convention re-derivation; floor-card rungs.** The directed-rung law — $n(v)=\partial^{\leftarrow}(v)+\partial^{\rightarrow}(v)$ counts *directed real edges* [D0.8, A7]; the tick load is built from $\Phi^n\times\Phi^n$ sign configurations on the $n$ incident real edges [CT0.5 Pf; CT0.9: one bit per *directed* real edge]; every bidirectional channel contributes both orientations — is **CT0.11b (B)**. Floor-card rows [FT.28(5)'s explicit enumeration $n(p)=3=2{+}1$; Def-H.20's bidirectionality]:
+$$
+\text{single-directed-edge contact}:\ n(v_1)=2d+1;\qquad\text{bidirectional contact}:\ n(v_1)=2d+2;
+$$
+$$
+\text{polygon}\ \Sigma_{P_n}:\ \text{dark}\ n(v)=4\ \forall v\ (\text{type}\ (2,2)),\ \text{contact}\ n(v_1)=5;\qquad\text{Platonic}\ \Sigma_S:\ \text{dark}\ n(v)=2d\in\{6,6,8,6,10\}.
+$$
+$(2)$ **Corrected lock table** [$O(n)=\max(0,2^{n+1}-16)$: CT0.6]:
+$$
+\begin{array}{c|c|c|c|c|c}
+S & d & O(2d)\ \text{dark/vertex} & O(2d{+}1)\ \text{contact} & \sum_vO\ \text{dark} & \sum_vO\ \text{obs (1 edge)}\\ \hline
+\text{tetrahedron} & 3 & 112 & 240 & 448 & 576\\
+\text{cube} & 3 & 112 & 240 & 896 & 1024\\
+\text{octahedron} & 4 & 496 & 1008 & 2976 & 3488\\
+\text{dodecahedron} & 3 & 112 & 240 & 2240 & 2368\\
+\text{icosahedron} & 5 & 2032 & 4080 & 24384 & 26432
+\end{array}
+$$
+bidirectional-contact variants: contact $O(2d{+}2)\in\{496,496,2032,496,8176\}$, sums $\{832,1280,4512,2624,30528\}$ [machine].
+$(3)$ **Saturation universality; the trichotomy retracted and replaced.** Universality — bidirectional real-edge subgraphs of channel degree $\ge2$ saturate: $D^-$-configured [CT4.1], content locked, retained, and counted [CT4.3, D4.2], inaccessible [D1.11] — the uniform minimal-saturation $2$-regular family (exactly one channel quantum over budget, length-independent), the degree-graded ladder, and the exact lock-free characterization (the *unidirectional* family on bidirectional skeletons): **CT4.1a (G)** [with CT0.11b (Part 1)]. The retraction record — FT.42(2)'s "accessibility trichotomy by degree" and FT.45(2)'s "no lock at any $n$ — the unlimited-accessibility family" are **retracted**, replaced by the frozen ladder above, with $\Sigma_{\min}$ ($n\in\{2,3\}$) and $\Sigma_L$ ($n\le3$) as its floor instances: $O=0$ [FT.28(5), FT.32(2) — unchanged by this audit]. Duality splitting survives and sharpens [FT.44(2) corrected]: cube $112$ vs octahedron $496$; dodecahedron $112$ vs icosahedron $2032$ — saturation grade splits both dual pairs.
+$(4)$ **Invariance theorem.** $E_{\mathrm{int}}$, $I_{\mathrm{hid}}$, $m_{\mathrm{hid}}$, $\Theta_{\mathrm{int}}$, $K_S$, the $\kappa$-lattices and their indices, the winding sum rule, $g(V)$, $\Pi$, $S_{\mathrm{hid}}$, and every defect/holonomy entry are functions of edge-, channel-, and face-counts and of $\kappa$-profiles — none references $n(v)$: FT.42(1),(3),(4),(5) (lock columns excepted), FT.43, FT.44(1),(4), FT.45(1),(3),(4), FT.49–FT.51 stand unchanged [machine: value-by-value re-derivation]. The observed-variant information counts stand on retention: locked vertices retain and count [CT4.3; FT.17 cross-check 2 precedent]; the CT4.9(1) "visible $<3$" arithmetic anchors in FT.42(1)'s Pf (and FT.17 cross-check 3's) are **re-scoped**: at corrected contact rungs $n\ge7$ the contact vertex is locked, so its channel-visible content is governed by Def-H.35's locus-separation clause (per-vertex caps do not further reduce channel-visible content) and CT4.9(2)'s boundary form — not by CT4.9(1)'s accessible-vertex branch. Results unchanged; anchors corrected.
+$(5)$ **Type ledger and the EM row (scope note).** Bidirectional-skeleton vertices with $d\ge2$ channels have type $(d,d)$ [D0.8/A7]; D3.3's literal $f_v$ domain (type-$(1,1)$ vertices) is empty on dark polygon and Platonic floors (the digon $\Sigma_{\min}$ keeps type-$(1,1)$ vertices — $\Sigma_{\min}$'s and $\Sigma_L$'s EM rows are untouched by this audit): the EM row of FT.42(4)/FT.20 evaluates on observed variants through chain-local pass-through reads along transit chains (chain-local telescoping: EM.9b (Part 2); EM.9 end-reads); dark floors carry the registration registers ($q_{\mathrm{core}}$ per closed core [FT.40]) with no channel read at all [FT.3].
+$(6)$ **Materialization sharpening.** M1/M2 at Platonic/polygon vertices are now explicitly spectral hypotheses at *locked* vertices ($n=2d\ge4$): strictly stronger than the text suggested. No contradiction with EW.17 (whose rung-$3$ claim concerns wrapping chains at channel-admissible vertices — a different existence locus): face/digon materialization, if it occurs, occurs through the generic CT2.5/Def-H.16 mechanism.
+
+**Req.** D0.8, D0.9; A7; CT0.5, CT0.6, CT0.9, CT0.10, CT0.11, CT0.11b (Part 1); CT4.1, CT4.2, CT4.3, CT4.9, CT4.1a (Part 2); EM.9b (Part 2); D1.11, D4.1, D4.2; FT.3, FT.17, FT.20, FT.21, FT.28, FT.32, FT.40, FT.42–FT.45, FT.49–FT.51; Def-H.20; EW.17 (Part 2); CT2.5 (Part 2); Def-H.16.
+
+**Pf.**
+$$
+(1):\ \text{general law}:\ \mathrm{CT0.11b}\ (\text{B});\qquad\text{cells re-enumerated}\ [\text{machine}:\ \Sigma_{\min},\ \Sigma_L,\ \Sigma_{12},\ \Sigma_\triangle,\ \text{bowtie},\ \text{patch unchanged}]
+$$
+$$
+(2):\ O(n)=2^{n+1}-16\ (n\ge4)\ [\mathrm{CT0.6}];\quad\text{table arithmetic}\ [\text{machine}:\ O(6)=112,O(7)=240,O(8)=496,O(9)=1008,O(10)=2032,O(11)=4080,O(12)=8176]
+$$
+$$
+(3):\ \text{general ladder/universality}:\ \mathrm{CT4.1a}\ (\text{G});
+$$
+$$
+\text{unidirectional cells}:\ \mathrm{FT.28}(5):\ n\in\{2,3\};\ \mathrm{FT.32}(2):\ n\le3:\ O=0\ [\mathrm{CT4.1a}(4)];\qquad\text{dual pairs}:\ O(6)=112\ne496=O(8);\quad112\ne2032=O(10)
+$$
+$$
+(4):\ \text{each quantity's defining formula inspected}:\ \mathrm{FT.42}(1)\ (E_{\mathrm{int}}=2E),\ (3)\ (\Theta_{\mathrm{int}}=2K_S),\ (5)\ (\text{face regimes}:\ \kappa\text{-data}),\ \mathrm{FT.43}\ (\text{incidence}),\ \mathrm{FT.41}(b)\ (g(V)=V\text{-grammar}),\ \mathrm{FT.49}\text{--}\mathrm{FT.51}:\ \neg\exists\ n(v)\ \text{reference};\qquad\text{retention}:\ \mathrm{CT4.3}/\mathrm{D4.2}
+$$
+$$
+\text{anchor re-scope}:\ \mathrm{CT4.9}(1)\ \text{reads}\ \text{accessible}(v);\quad n\ge7:\ \neg\text{accessible}\ [\mathrm{CT0.11}]\implies\text{hypothesis check passes to Def-H.35 (interface clause)} + \mathrm{CT4.9}(2)\ [\text{boundary form}]
+$$
+$$
+(5):\ \text{type}(d,d):\ \partial^{\leftarrow}=\partial^{\rightarrow}=d\ [\mathrm{D0.8}];\quad\mathrm{D3.3}\ \text{domain};\qquad\mathrm{FT.21}(i)\ \text{chain-local telescoping}\ [\text{machine in}\ \mathrm{verify\_H\_ASigma}\ \text{record}];\qquad(6):\ \mathrm{Def\text{-}H.20}\ \text{M1/M2 declared};\ \mathrm{EW.17}:\ \text{rung-3 wrapping locus}.\ \blacksquare
+$$
+
+**Rmk (integrity ledger).** The fork entered with FT.42(2) ("dark $n(v)=d$") and FT.45(2) ("$n(v)=2$"), was inherited by the then-current summary claims ("$d{=}3$ solids run lock-free in the dark"; "the unlimited-accessibility family"), and survived because the later cells (face floor, bowtie, patch) were computed with the *correct* directed convention — so no theorem built on FT.49/FT.50 is affected, and the two conventions never met in one computation until this pass. All affected clauses are patched in place with (rung correction) markers; the retracted epithets are recorded here and at their sites. This is the document's fourth recorded self-catch (after the mod-4 anomaly, the earlier $\sigma_2$/tuple-sum pair, and the display-balance latent defect) — and the first that changes a *physical* qualitative claim: saturation is universal on bidirectional skeletons.
+
+**Phys.** Count the ledger's own bits and the picture inverts: a bidirectional channel is two real edges, each with its own registration sign, and a vertex hosting even two of them already exceeds the channel budget. There are no clean-running bidirectional floors — polygons saturate at exactly one quantum over budget per vertex, solids by degree — and the old trichotomy collapses into a single law with a graded shadow. What survives untouched is everything the integers were made of: masses, windings, lattices, sealings, defects. The lock column was the only column that miscounted, and the correction makes the dark sector larger, not smaller.
+
+---
+
+---
+
+
+## Tier F.22 — The Bott Correction: Degenerate Witnesses Re-Evaluated, Reconstructability, and the Selection Dilemma
+
+### Def-H.24 — Bott index, clean critical manifolds, and monodromy type for ledger channels (construction)
+
+**Def.** Let $\gamma$ be a stationary channel [Def-H.19: $\delta\!\int ds^2=0$; FT.48(1)/FT.53(2): geodesic, constant $\kappa_0$] in a CT2.6 slice $(M,g)$ of the emergent geometry, closed (bound side) or fixed-endpoint (transit side). All items below are [math] constructions on derived data — $g$ from sector coordinates [CT1.12, D2.1], $\Gamma$ [CT1.13], $R^\rho{}_{\sigma\mu\nu}$ [CT1.14], sampling [CT1.19], coarse-graining [CT2.6 hypotheses (i)–(iii)] — no new physical input, in Def-H.21's construction class:
+$(1)$ **Critical manifold.** $\mathcal C\ni\gamma$: the connected component of the stationary locus of the energy/ledger functional $\Theta\leftrightarrow\int ds^2$ [FT.31(2): the functionals coincide on-shell] in the coarse-grained loop space (closed case: free loops; transit case: fixed-endpoint paths). Isometry orbits of $(M,g)$ through $\gamma$ lie in $\mathcal C$; phase-shift and translation families likewise.
+$(2)$ **Normal Hessian and Bott index.** $N_\gamma:=T_\gamma\Lambda/T_\gamma\mathcal C$ the normal space; $Q_\gamma$ the second variation (index form) restricted to periodic normal sections:
+$$
+Q_\gamma(V,V)=\int_0^L\Bigl(|\nabla_{\dot\gamma}V|^2-\bigl\langle R(V,\dot\gamma)\dot\gamma,\ V\bigr\rangle\Bigr)\,dt\qquad[R\ \text{from CT1.14 data};\ \text{math}],
+$$
+$$
+\operatorname{ind}_B(\gamma):=\dim(\text{maximal negative-definite subspace of}\ Q_\gamma),\qquad\operatorname{nul}(\gamma):=\dim\ker Q_\gamma;
+$$
+$\gamma$ is **clean** iff $\ker Q_\gamma$ equals the orbit/tangential nullity (all kernel directions integrate into $\mathcal C$) — equivalently $\mathcal C$ is a nondegenerate critical submanifold [math: Morse–Bott]. $\mathcal C$-constant $\operatorname{ind}_B$; the naive Morse data of FT.61/Def-H.19 are the $\operatorname{nul}=0$ special case.
+$(3)$ **Equivariant refinement (recorded, not needed scalar-wise).** Where $(M,g)$ carries an isometry group $\mathcal G$ with $\mathcal C=\mathcal G\cdot\gamma$ (the witness case), the normal Hessian is $\mathcal G_\gamma$-equivariant and the nullity carries the isotropy representation [math: equivariant Morse–Bott theory]; the selection-relevant scalar of stationary-phase weighting over $\mathcal C$ is the sign $(-1)^{\operatorname{ind}_B(\gamma)}$ with amplitude $\int_{\mathcal C}|\det{}'Q|^{-1/2}$ [math: Bott's explicit formula] — the sign datum Gap 18 asked about.
+$(4)$ **Monodromy type.** The linearized Poincaré return map $P_\gamma$ on the symplectic normal space of the geodesic flow ($2(n{-}1)$-dim; $2$-dim for surface slices): semisimple/elliptic ($|\operatorname{tr}|<2$ or diagonalizable), parabolic-unipotent ($P\ne I$, $(P-I)^2=0$), hyperbolic ($|\operatorname{tr}|>2$), or $P=I$ (fully degenerate). Iterates: $\operatorname{ind}_B(\gamma^m)$ is determined by $P_\gamma$'s conjugacy class through Bott's iteration theory [math]; for $P=I$ on a surface the ladder follows from first principles by normal-mode counting — $\operatorname{ind}_B(\gamma^m)=2m-1$ (FT.66(2), machine), matching the classical spherical iterate indices [math: Bott's computation for great circles; cited as consistency, not re-derived here].
+$(5)$ **Vocabulary fold.** Def-H.19's "stable" $:=$ $\operatorname{ind}_B=0$ (clean), "unstable" $:=$ $\operatorname{ind}_B\ge1$; the interface content of Def-H.19 shrinks accordingly (the Morse-theoretic vocabulary is now [math]-constructed; only the *non-coupling* clause remains declared — itself narrowed in part by FT.66(4)'s derived anti-coupling for absolute rules on closed chains).
+
+---
+
+---
+
+### FT.66 — The Bott correction: witness re-evaluation, reconstructability, and the inadmissibility of absolute selection
+
+**Thm.** $(1)$ **Framework.** Under Def-H.24, stationary ledger channels carry the Bott data $(\operatorname{ind}_B,\operatorname{nul},\mathcal C,[P_\gamma])$; for degenerate (isometry-orbit) families the stationary-phase weight is Bott's: sign $(-1)^{\operatorname{ind}_B}$, amplitude over $\mathcal C$ [Def-H.24(3); math]. The naive conjugate-point count of FT.61(3) is the fixed-endpoint special case; for closed channels the periodic count and the orbit quotient must replace it — executed in (2).
+$(2)$ **The witness, re-evaluated (degeneracy critique absorbed; blindness Bott-stable).** On $M=S^2(R)\times S^1(2R)$ [FT.61(3)'s geometry]:
+$$
+\gamma_A\ (m{=}2\ \text{great circle}):\quad\mathcal C_A=\mathbb{RP}^2\times S^1_{\mathrm{phase}}\times S^1_{\mathrm{trans}}\ (\dim 4),\qquad\operatorname{ind}_B=3\ (=2m{-}1),\qquad\operatorname{nul}=4\ (\text{clean}),\qquad P_{\gamma_A}=I_2;
+$$
+$$
+\gamma_B\ (\text{fiber circle}):\quad\mathcal C_B=S^2\times S^1_{\mathrm{phase}}\ (\dim 3),\qquad\operatorname{ind}_B=0\ (\forall\ \text{iterates}),\qquad\operatorname{nul}=3\ (\text{clean}),\qquad P_{\gamma_B}=\begin{pmatrix}1&L\\0&1\end{pmatrix}\ (\text{unipotent, parabolic});
+$$
+derivations (machine, exact): $\gamma_A$'s normal modes on the rank-1 normal bundle: $Q$-eigenvalues $\lambda_n\propto n^2-m^2$ on period-$L=2\pi Rm$ Fourier modes — negatives $\{|n|<m\}$: $2m-1$ of them; zeros $\{|n|=m\}$: the $2$-dim $\mathbb{RP}^2$ family motion; plus phase and translation tangents: $\operatorname{nul}=4=\dim\mathcal C_A$ — independent cross-check: Bott's iteration theorem at $P=I$ [math]. $\gamma_B$'s normal bundle is the trivial $TS^2$-pair with vanishing mixed curvature [product; math]: $Q=\int|J'|^2\succeq0$, kernel $=$ the $2$ constant basepoint fields: $\operatorname{ind}_B=0$, $\operatorname{nul}=3=\dim\mathcal C_B$; monodromy from $J=a+bt$: unipotent, iterates $\bigl(\begin{smallmatrix}1&mL\\0&1\end{smallmatrix}\bigr)$, Jordan type separating it from $P_{\gamma_A}=I_2$ at identical trace/det $(2,1)$ [machine]. **Verdicts**: (a) the Bott indices still differ, $3$ vs $0$, and the semiclassical signs would differ, $(-1)^3=-1$ vs $(-1)^0=+1$; (b) the ledger records and weights remain identical at every scale $\mathfrak h=2\pi R/N$: $(\kappa_0,\delta h,\Theta,n_-,\aleph)=(1,2N,2N,0,0)$, $w=+1$ both [FT.61(1),(3) re-run]; (c) hence **FT.61(3)–(4) hold with "Morse index" read as "Bott index"** — index-blindness of the weight inventory is Bott-stable, and the monodromy type (a conjugacy-class datum strictly finer than the index) is equally unregistered: no factor of $w(C)$ [A8; FT.61(1)'s complete inventory] can carry $(-1)^{\operatorname{ind}_B}$ or $[P_\gamma]$. (d) *Homotopy-class note*: $\gamma_A$ is contractible, $\gamma_B$ is not — the class is combinatorially present in the configuration [D0.10: $E(C)$ ordered], but (i) no validity/weight/mask clause reads it [A8, D2.11, D2.3/CT2.4: inventory], and (ii) it is not the index: within a fixed free homotopy class, stationary members of different $\operatorname{ind}_B$ exist [math: length-tuning by intermediate value + neck-deformation focusing], so no class read implements index selection.
+$(3)$ **Reconstructability, and the true shape of exit (a).** The ambient configuration determines the metric: $C\mapsto g_{\mu\nu}(C)$ [CT1.20's own grouping map; CT1.12: $g$ from per-edge sector coordinates $(a_{00},q_{ij},w_i)$ [D2.1, D1.6, Def-H.14's arena]], sampled at $O(\mathfrak h)$ [CT1.19], coarse-grained to $(M,g)$ under CT2.6's hypotheses; hence $R^\rho{}_{\sigma\mu\nu}$ [CT1.14] along and near the channel, the normal Jacobi operator, and $(\operatorname{ind}_B,\operatorname{nul},[P_\gamma])$ are **in-principle functionals of the ambient configuration** in the CT2.6 regime — the datum is reconstructable, *not* missing. Integer-valuedness plus $O(\mathfrak h)$ convergence gives eventual $\mathfrak h$-stability away from clean-bifurcation loci [FT.38(2)'s rigidity pattern; machine: minimal mode gap $|n^2-m^2|\ge1$ in scaled units — perturbations below half the gap cannot flip signs]; at the loci themselves the index jumps — those are precisely the finite-$\mathfrak h$ residue /18. What is missing is a **structural coupling**: no clause of A8's weight [FT.61(1)], D2.11's validity, D2.3's masks, or CT2.5's pole condition reads the datum; and the resolvent side is *sign-free by hermiticity* — poles are conditions $\lambda_a=1$ on a real spectrum with residues $-\langle\mathrm{out}|P_a|\mathrm{in}\rangle$ [FT.26(1), CT2.5]: no per-saddle sign can live there without extending the structure. FT.61(4)'s exit (a) is accordingly reclassified: from "new variational registration (interface-definition species extending D0.7)" to "**a declared weight extension** $w\mapsto w\cdot(-1)^{\operatorname{ind}_B}$ (interface-definition species; well-definedness in the continuum regime supplied by the eventual-constancy lemma above) — constructible, not adopted here"; exit (b) (spectral-side positivity) unchanged, not constructed.
+$(4)$ **The selection dilemma (absolute index-0 rules are inadmissible for closed chains).** Let a floor's ambient slice realization be a topological sphere carrying $K\ge0$ with $K>0$ somewhere — the class instantiated by every Platonic cone-sphere realization: faces flat, conical defects $\delta_v>0$ at vertices, total $V\delta_v=4\pi>0$ [FT.63(4); smoothed approximation; math]. On any such slice:
+$$
+\text{every non-constant closed geodesic has}\ \operatorname{ind}_B\ge1\qquad[\text{math: Synge/shortening — every closed geodesic on}\ S^2\ \text{bounds a disk and is exceeded by the disk-sweep};\ \text{machine: the latitude-push second variation}\ L''(0)=-2\pi/R<0\ \text{exactly},\ \text{and the round-sphere ladder}\ 2m{-}1\ge1\ \forall m].
+$$
+Hence an absolute selection rule — "index-0 stationary channels materialize; $\operatorname{ind}_B\ge1$ channels are suppressed" — admits **no** closed stationary channel on such a slice. Dilemma against M1/M2 (declared face/digon materialization [Def-H.20]): **horn 1** — if the declared materializations contribute semiclassically [FT.53(2)'s regime: stationary $=$ geodesic support], the absolute rule suppresses them all, contradicting M1 — the rule is inadmissible; **horn 2** — if they do not (Platonic face loops are corner loops of the cone metric, $\neg$geodesic: non-stationary in the smooth read), then closed-loop materialization lives entirely in the finite-$\mathfrak h$ non-stationary residue [FT.53(4)], where no stationary-index criterion applies at all — stability selection is *vacuous* for bound chains. On either horn, **"stable jumps materialize" is refuted as the mechanism for closed (bound) chains** in this curvature class.
+$(5)$ **Verdict.** The four sub-questions  now carry derived answers: variational side — closed [FT.48(1)–(3)]; weight/ledger blindness — closed [FT.61(1)–(3)], Bott-stable [(2) here]; reconstructability — settled [(3) here]: the datum exists in principle, the coupling does not, and the resolvent side is sign-free; selection for **closed chains** — answered **negatively** [(4)]: no index criterion can operate, and the absolute rule is inadmissible against M1. This residue is the chain's honest end: closing it further requires a construction or declaration outside the frozen inventory — the same species boundary as Def-H.37(1)/Def-H.37(2)/Def-H.38.
+$(6)$ **Folds.** Def-H.19's vocabulary reads as Morse–Bott [Def-H.24(5)] — its [math] content constructed; the non-coupling clause is narrowed in part by clause (4)'s derived anti-coupling for absolute closed-chain rules; FT.48(3)'s trichotomy is scoped to clean fixed-endpoint problems (conjugate endpoints degenerate: read via Def-H.24); FT.61(3)–(4) hold per (2)–(3).
+
+**Req.** Def-H.19, Def-H.21, Def-H.24; A8; D0.10, D1.6, D2.1, D2.3, D2.11; CT1.12, CT1.13, CT1.14, CT1.19, CT1.20, CT2.3, CT2.4, CT2.5, CT2.6, CT2.8 (Part 2); FT.22, FT.26, FT.31, FT.33, FT.38, FT.48, FT.53, FT.61, FT.62, FT.63; Def-H.14, Def-H.16, Def-H.20; M1/M2 (interface clause); Def-H.19; Morse–Bott theory, Bott's iteration theorem for spherical geodesics, Synge's theorem / disk-sweep shortening, Jordan-form conjugacy invariants, Gauss–Bonnet for cone metrics, intermediate-value length tuning [math].
+
+**Pf.**
+$$
+(1):\ \mathrm{Def\text{-}H.24}(2)\text{--}(3);\qquad\text{stationary-phase over a clean critical manifold}:\ \text{sign}=(-1)^{\operatorname{ind}_B},\ \text{amplitude}=\textstyle\int_{\mathcal C}|\det{}'Q|^{-1/2}\ [\text{math: Bott}]
+$$
+$$
+(2)\ \gamma_A:\ Q\ \text{on periodic normal sections}:\ V=e^{2\pi i nt/L}e_2(t):\ Q(V)=(\tfrac{n^2}{m^2}-1)\tfrac1{R^2}\|V\|^2\ [\text{Jacobi}\ f''+R^{-2}f=0\ \text{on the sphere};\ \text{math}]\implies\operatorname{ind}_B=\#\{|n|<m\}=2m-1,\ \ker=\{|n|=m\}:\dim2
+$$
+$$
+\operatorname{nul}(\gamma_A)=2+1+1=4=\dim(\mathbb{RP}^2\times S^1\times S^1)\ [\text{orbit tangents};\ \text{machine}];\qquad\text{consistency}:\ \text{periodic count}=\text{fixed-endpoint conjugate count}=\#\{j\pi R:\ 1\le j\le2m-1\}=2m-1\ [\text{machine}];\ \text{ladder}\ 1,3,5,\dots\ \text{matches the classical spherical iterates}\ [\text{math}]
+$$
+$$
+\gamma_B:\ R(\cdot,\dot\gamma_B)\dot\gamma_B|_{TS^2}=0\ [\text{product curvature};\ \text{math}]\implies J=a+bt;\ \text{periodic}\implies b=0;\quad Q=\int|J'|^2\succeq0\implies\operatorname{ind}_B=0;\quad\operatorname{nul}=2+1=3=\dim(S^2\times S^1)
+$$
+$$
+P_{\gamma_A}=I_2:\ J(2\pi R)=J(0)\cos2\pi+RJ'(0)\sin2\pi=J(0)\ [\cos2\pi=1,\sin2\pi=0\ \text{exact}];\qquad P_{\gamma_B}^m=\bigl(\begin{smallmatrix}1&mL\\0&1\end{smallmatrix}\bigr)\ [\text{machine: integer powers}]
+$$
+$$
+\text{Jordan separation}:\ P_{\gamma_A}-I=0\ \wedge\ P_{\gamma_B}-I\ne0\ \wedge\ (P_{\gamma_B}-I)^2=0:\ \neg\text{conjugate despite}\ \operatorname{tr}=2,\det=1\ \text{both}\ [\text{machine}]
+$$
+$$
+\text{blindness}:\ \text{records}\ (1,2N,2N,0,0)\ \text{equal},\ w=(+1)\ \text{equal}\ [\mathrm{FT.61}(1),(3);\ \text{machine re-run}];\qquad(-1)^3\ne(-1)^0;\quad\neg\exists\ \text{factor of}\ w(C)\ \text{carrying it}\ [\mathrm{FT.61}(1)\ \text{inventory complete}]
+$$
+$$
+(2d):\ \pi_1(S^2\times S^1)=\mathbb Z:\ \gamma_A\mapsto0,\ \gamma_B\mapsto1\ [\text{math}];\qquad\text{class unread}:\ \mathrm{A8}\ w(C)\ \text{factors},\ \mathrm{D2.11}\ \text{clauses},\ \mathrm{D2.3}\ \text{blocks}:\ \neg\exists\ \text{homotopy entry}\ [\text{inventory}]
+$$
+$$
+\text{class}\ne\text{index}:\ \text{fixed class},\ \text{neck-bump family}:\ L_{\text{over}}(t)\ \text{continuous},\ \text{crosses}\ L_{\text{flat}}\ [\mathrm{IVT}];\ \text{focusing gives}\ \operatorname{ind}_B\ge1\ \text{on the over-route}\ [\text{math: comparison}]
+$$
+$$
+(3):\ C\mapsto g_{\mu\nu}(C)\ [\mathrm{CT1.20}\ \mathrm{Pf}\ \text{step 1};\ \mathrm{CT1.12}/\mathrm{D2.1}:\ \text{sector coordinates};\ \mathrm{Def\text{-}H.14}:\ \text{edge arena}];\quad\Gamma\ [\mathrm{CT1.13}],\ R\ [\mathrm{CT1.14}]\implies Q_\gamma,\ P_\gamma\ \text{determined in the CT2.6 regime}
+$$
+$$
+\text{stability}:\ \lambda\text{-gaps}\ge1\ \text{in scaled units}\ [\text{machine}:\ \min|n^2-m^2|=1];\quad|\Delta\lambda|=O(\mathfrak h)\ [\mathrm{CT1.19}]\implies\exists\mathfrak h_0:\ \text{signs fixed}\ \forall\mathfrak h<\mathfrak h_0\ [\mathrm{FT.38}(2)\ \text{pattern}]
+$$
+$$
+\text{no reader}:\ \mathrm{A8}\ [\mathrm{FT.61}(1)];\quad\mathrm{D2.11}:\ \text{closedness/Janus/mask};\quad\mathrm{CT2.5}/\mathrm{FT.26}(1):\ \text{Hermitian}\implies\lambda_a\in\mathbb R,\ \text{pole}=\{\lambda_a=1\}:\ \text{sign-free}
+$$
+$$
+(4):\ \text{cone sphere}:\ K=0\ \text{on faces},\ \delta_v>0\ \text{at vertices},\ \textstyle\sum\delta_v=4\pi\ [\mathrm{FT.63}(4);\ \text{machine}];\quad\text{smoothing}:\ K\ge0,\ K>0\ \text{somewhere}\ [\text{math}]
+$$
+$$
+\text{Synge}:\ \text{closed geodesic}\ \gamma\ \text{bounds a disk}\ D:\ \text{disk-sweep shortening}\implies\operatorname{ind}_B\ge1\ [\text{math}];\qquad\text{machine instances}:\ L''(0)=-2\pi/R<0;\quad2m-1\ge1\ \forall m\ge1
+$$
+$$
+\text{horn 1}:\ \text{absolute rule}\implies\neg\exists\ \text{admissible closed stationary channel}\implies\text{M1's semiclassical reading empty}:\ \text{rule inadmissible};\qquad\text{horn 2}:\ \text{face loops}=\text{corner loops}\ [\text{interior angles}<\pi\ \text{at cone vertices}]:\ \neg\text{geodesic}\implies\text{finite-}\mathfrak h\ \text{residue}\ [\mathrm{FT.53}(4)]
+$$
+$$
+(4a):\ \pi_1=0\implies\text{single free class}:\ \text{class-min}=\text{global min}=\text{constant loops (degenerate)}\ [\text{math}];\qquad(4b):\ \text{open minimizers exist}\ [\mathrm{FT.48}(3):\ \text{index-0}\iff\text{local}\ \ell\text{-minimizer, clean case}]
+$$
+$$
+(5):\ \text{conjunction of FT.48, FT.61, (2)--(4)};\qquad(6):\ \text{registry/patch moves as listed}.\ \blacksquare
+$$
+
+**Rmk (what would reverse the verdicts).** Clause (2)'s blindness is an inventory theorem: a derived cross-vertex or cross-channel bridge registering curvature along channels would reopen it — none exists [inventory; FT.59's absorption picture at locked rungs points the other way]. Clause (4) is conditional on (i) M1/M2 (interface clause) and (ii) the Synge-class slice realization of the floors — the class their own defect cards instantiate [FT.63(4)]; a flat or negatively curved ambient realization of a Platonic floor would evade the dilemma's horn structure (index-0 closed geodesics exist there [flat tori; math]) — but then the floor's *own* cone-sphere ledger ($\sum\delta_v=4\pi$) would not be the ambient curvature read, and the defect card's $\Theta_R$ values would belong to a different geometric object than the channels' Jacobi data: recorded as a coherence condition any such alternative must address, not dismissed.
+
+**Rmk (the adversarial exchange, recorded).** The critique — degenerate witnesses invalidate naive-index statements — is correct as to framework and void as to conclusion: the witness pair is clean Morse–Bott, the indices survive the correction unchanged ($3$ vs $0$), and every downstream claim of FT.61 holds with the refined index. The correction nevertheless produced three results the naive framing could not reach: the reconstructability lemma (exit (a) reclassified), the Jordan-type refinement (monodromy strictly finer than index, equally unregistered), and the Synge dilemma (absolute selection inadmissible, not merely unavailable) — the critique is folded in as FT.66, per the program's rigor-both-ways practice.
+
+**Phys.** Two loops can wind through the geometry side by side, one thrice-unstable and one the very floor of its class, and the ledger writes down the same four symbols for both — not because the ledger is coarse, but because stability is a fact about the space around the loop, and the loop's own record carries only its length quanta and its signs. Worse for the hopeful selector: on any sphere-like slice with the Platonic floors' own positive curvature budget, *no* closed geodesic is stable at all — every one of them can be shortened somewhere — so a rule that materialized only stable closed loops would materialize nothing, contradicting the very floors the program computes. Stability, then, cannot be the gate for bound chains; it remains a live candidate only for open jumps between termini, where short arcs genuinely minimize — and there the gate, if any, is either a declared sign carried by the weight or a positivity fact on the spectrum side. Both are named; neither is built; the boundary is exactly the species boundary of this document's other interface transfers.
+
+---
+
+---
+
+
+## Tier F.23 — The Virtual Bypass: Path Integration over Crystallization Patterns
+
+### Def-H.25 — Skeleton configuration sums and the bypass vocabulary
+
+**Def.** A **skeleton** $\Gamma$ $:=$ a finite bidirectional potential-edge set — the 1-skeletons of Def-H.20 (Platonic floors) and FT.45 (polygon floors), or any finite subgraph thereof. A **crystallization pattern** is a subset $R\subseteq E_{\mathrm{dir}}(\Gamma)$ [A4 per directed pair; D0.1: $\mathcal R$ membership is per-pair]; at $v$: $k_v:=\#\{e\in R: e\ni v\}=\partial^{\leftarrow}_R(v)+\partial^{\rightarrow}_R(v)$ [D0.8], potential degree $n(v)=| \{e\in E_{\mathrm{dir}}(\Gamma): e\ni v\} |$. Classification [CT0.11, CT4.1]: $v$ **channel-admissible** $\iff k_v\le3$; $v$ **$D^-$-locked** $\iff k_v\ge4$. A pattern is a **bypass configuration** iff every vertex is admissible while some has $n(v)\ge4$; the **bypass deficit** at $v$ is $n(v)-k_v$ (the virtual edges at $v$). The **skeleton configuration sum** (A8's weight restricted to skeleton-supported configurations [A8, D0.10], at CT1.20's grouping layer):
+$$
+Z_\Gamma\ :=\ \sum_{R\subseteq E_{\mathrm{dir}}(\Gamma)}\ \sum_{\sigma\in\{\pm1\}^R} w(R,\sigma),\qquad w(R,\sigma)=\mathcal J\cdot\prod_{e\in R}G(e)\cdot(-1)^{\aleph(\sigma,R)},\qquad G(e)=\sigma_e\,e^{i\pi\kappa_e}\ [\mathrm{D3.5},\ \mathrm{FT.9}],
+$$
+split $Z_\Gamma=Z_{\mathrm{byp}}(\Gamma)+Z_{\mathrm{lock}}(\Gamma)$ by lock status (any $k_v\ge4$). **Scope declarations, marked at every use**: **(S1)** minimal-edge class $\kappa_e\equiv1$ on real edges [D1.1, Comm-min]; for general on-shell integer $\kappa$: every theorem below is unchanged with values scaled by $(-1)^{\sum_e\kappa_e}$ — the cover classification is $\kappa$-independent. **(S2)** $\aleph$ in D3.3's literal type-$(1,1)$ domain; $\aleph_v=0$ at all other types; the chain-local extension [FT.21(i), Open Gaps 16(d)] would change the survivor class — flagged load-bearing (Rmk of FT.67). **(S3)** seal/Janus bookkeeping suppressed: the sum is over static patterns; $\mathcal J=1$ identically [D3.6]; universe-level balance $\#J^+=\#J^-$ [D1.3, D2.11] is ambient data, not a skeleton constraint. **(S4)** virtual edges contribute weight $1$ and no phase — no registration exists for them [A4, D0.5/A7: $\phi_e$ is defined on $e\in E_{\mathcal R}$]. Finite skeleton $\Rightarrow$ finite sum: convergence is trivial; growth-rate statements are made per family (FT.68(7)).
+
+---
+
+---
+
+### FT.67 — The exact-cover theorem and the single-vertex bypass
+
+**Thm.** Under Def-H.25 with (S1)–(S4):
+$(1)$ **The $\aleph$ identity.** At a type-$(1,1)$ vertex $v$ with in-edge $e_\leftarrow$, out-edge $e_\rightarrow$: $(-1)^{\aleph_v}=(-1)^{|f_v|}=\sigma_{e_\leftarrow}\sigma_{e_\rightarrow}$ [D3.3: $f_v=\tfrac12(\sigma_\rightarrow-\sigma_\leftarrow)\in\{-1,0,1\}$; $\sigma$'s binary [CT0.9]; machine].
+$(2)$ **Exact-cover theorem.** For $e\in R$ let $\operatorname{cov}(e):=\#\{(1,1)\text{-type endpoints of }e\text{ in }R\}\in\{0,1,2\}$. Then the weight is the monomial
+$$
+w(R,\sigma)=(-1)^{\sum_e\kappa_e}\prod_{e\in R:\ \operatorname{cov}(e)\ \mathrm{even}}\sigma_e\ ,\qquad[\text{display correction: the}\ \sigma_e\text{-exponent is}\ 1+\operatorname{cov}(e),\ \text{so the surviving factors are the even-coverage edges — as this clause's own Pf records; classification and values unchanged}]
+$$
+and the sign sum evaluates exactly:
+$$
+\sum_{\sigma\in\{\pm1\}^R}w(R,\sigma)=\begin{cases}(-1)^{\sum_e\kappa_e}\,2^{|R|}=4^{\,|\mathcal C|}\,(-1)^{\sum\kappa} & \text{if}\ \operatorname{cov}(e)=1\ \forall e\in R\quad(\textbf{pass-through cover};\ \mathcal C:=\{(1,1)\text{-vertices}\}),\\[2pt] 0 & \text{otherwise,}\end{cases}
+$$
+with $|R|=2|\mathcal C|$ forced on covers [each center contributes its in- and out-edge; every edge once]. At (S1): value $=4^{|\mathcal C|}>0$. [Machine: exhaustive on the tetrahedron (all $4096$ patterns $=$ all $3^{12}$ (pattern,sign) pairs), on $P_3,P_4,P_5$ exhaustively, on the cube exhaustively for $K\le4$ ($12831$ configs) plus a deterministic stride sample.]
+$(3)$ **Structural corollaries (what cancels, what survives).** (a) Every directed cycle cancels: along a cycle of $(1,1)$-vertices each edge has $\operatorname{cov}=2$ — **no bound cell survives at the amplitude layer**: digons (the $\Sigma_{\min}$ pattern [FT.28]), directed cycles (the $\Sigma_L$ pattern [FT.32]), face boundaries, and the fully crystallized Def-H.20 floors (all vertices type $(d,d)$, $d\ge2$: no centers at all) all have $\sum_\sigma w=0$; (b) single real edges and length-1 threads cancel ($\operatorname{cov}=0$); (c) threads of length $\ge3$ cancel (interior edges double-covered); (d) **survivors $=$ V-thread networks**: each center $v\in\mathcal C$ pairs one in-edge $(s\to v)$ with one out-edge $(v\to t)$; non-centers are sources $(0,1)$, sinks $(1,0)$, or hubs of any type $\ne(1,1)$ — *including locked hubs* ($k\ge4$) whose every edge is paired by a distinct center; every survivor has even $|R|=2|\mathcal C|$ and value $4^{|\mathcal C|}$.
+$(4)$ **Single-vertex enumeration ($n\in\{4,5,6\}$, balanced types).** $2^n$ patterns, $\binom nk$ at size $k$; admissibility fractions
+$$
+f_{\mathrm{adm}}(4)=\tfrac{15}{16},\quad f_{\mathrm{adm}}(5)=\tfrac{13}{16},\quad f_{\mathrm{adm}}(6)=\tfrac{21}{32}\qquad\Bigl[\ =\sum_{k\le3}\binom nk/2^n\Bigr];
+$$
+sign-summed amplitudes: $Z_{\mathrm{byp}}^{\pm}(v,n)=1+4\,n_{\mathrm{in}}n_{\mathrm{out}}=(17,25,37)$ — vacuum $+$ the $\binom{n_{\mathrm{in}}}{1}\binom{n_{\mathrm{out}}}{1}$ pass-through patterns at $4$ each; **only $k\in\{0,2\}$ survive**; $Z_{\mathrm{lock}}^{\pm}(v,n)=0$ (locked $\Rightarrow$ type $\ne(1,1)$ $\Rightarrow$ uncovered). At $\sigma\equiv+1$: $Z_{\mathrm{byp}}=-\binom{n-1}{3}\in\{-1,-4,-10\}$, $Z_{\mathrm{lock}}=+\binom{n-1}{3}$, total $(1-1)^n=0$ [alternating partial-binomial identity; binomial theorem; machine]. Aspect activation per pattern [CT0.13]: $\mathcal A(0)=\{J\}$, $\mathcal A(1)=\{J,G,W,H,D^+\}$, $\mathcal A(2)=\mathcal A(1)\cup\{\mathrm{EM}\}$, $\mathcal A(3)\cup\{\text{strong}\}$; mask dimensions $\dim\mathcal K_k=(6,16,17,25)$ [CT0.14]; observable strong never fires at a single vertex [FT.27]; EM is state-dependent: $f_v\ne0$ on exactly half of the pass-through sign assignments [D3.3; machine].
+$(5)$ **Virtual bypass theorem (single-vertex form).** Every vertex of potential degree $n\ge4$ with $n_{\mathrm{in}},n_{\mathrm{out}}\ge1$ has strictly positive admissible-sector amplitude, $Z_{\mathrm{byp}}^{\pm}=1+4n_{\mathrm{in}}n_{\mathrm{out}}>0$, independent of the $\kappa$-class up to the global sign $(-1)^{\sum\kappa}$; its locked sector vanishes identically. **[scope: the locked-sector clause is a literal-domain (S2) theorem — in the chain-local domains E1/E2 of Def-H.27 an isolated locked vertex has strictly positive amplitude, $Z^{\pm}_{\mathrm{lock}}=(32,96,672)$ for $n=(4,5,6)$, with the locked digon-hub family at $(!a)4^a$ [FT.75(1)]. The bypass clause is domain-invariant.]** **$D^-$ locking is avoided with nonzero amplitude by partial crystallization** — the bypass mechanism is real at the amplitude layer, and its surviving content is exactly the pass-through (transit) sector [D1.5: open, propagating $=$ bosonic content].
+$(6)$ **Consistency anchors and the norm layer.** (a) The $k{=}2$ survivor is the $\Sigma_{\min}$ pass-through structure verbatim [FT.28(5): $q$ of type $(1,1)$]; (b) FT.61(1)'s phase inventory $e^{i\Phi}=(-1)^{\Theta+\aleph+n_-}$ is reproduced termwise inside the monomial of (2) [machine]; (c) **no conflict with positivity**: $|w(R,\sigma)|=1$ for every pair, so CT2.8's norms $\langle A|A\rangle=\sum|w|^2>0$ never cancel — the cancellations of (2)–(3) are amplitude-layer ($Z$) facts; the spectral layer [Def-H.16: poles of the masked resolvent] and the materialization declarations M1/M2 are untouched (the layer bridge is item 13's residue — see FT.68(4)).
+
+**Req.** A4, A7, A8; D0.1, D0.5, D0.8, D0.10, D1.1, D1.2, D1.3, D1.5, D2.11, D3.3, D3.5, D3.6; CT0.9, CT0.10, CT0.11, CT0.13, CT0.14 (Part 1); CT1.20, CT2.8 (Part 2); CT4.1, CT4.4 (Part 2); FT.9, FT.22, FT.24, FT.27, FT.28, FT.32, FT.61, FT.62; Def-H.16, Def-H.18, Def-H.20, Def-H.25; alternating partial-binomial sums [math].
+
+**Pf.**
+$$
+(1):\ \sigma\in\{\pm1\}\ [\mathrm{CT0.9}]:\ f_v=\tfrac12(\sigma_\rightarrow-\sigma_\leftarrow):\ |f_v|=1\iff\sigma_\rightarrow\ne\sigma_\leftarrow\iff\sigma_\leftarrow\sigma_\rightarrow=-1=(-1)^{|f_v|};\quad\sigma_\leftarrow=\sigma_\rightarrow:\ |f_v|=0,\ \sigma_\leftarrow\sigma_\rightarrow=+1\ \checkmark
+$$
+$$
+(2):\ w=(-1)^{\sum\kappa}\prod_{e\in R}\sigma_e\cdot\!\!\prod_{v\in\mathcal C}\!\!(\sigma_{e_\leftarrow(v)}\sigma_{e_\rightarrow(v)})\ [(1);\ \mathrm{D3.6}:\ \mathcal J=1]:\ \sigma_e\text{-exponent}=1+\operatorname{cov}(e)
+$$
+$$
+\operatorname{cov}(e)=0\ \text{or}\ 2\ \text{for some}\ e:\ \text{flip}\ \sigma_e:\ \text{summand}\mapsto-\text{summand},\ \text{involution on}\ \{\pm1\}^R\implies\text{sum}=0;\qquad\operatorname{cov}\equiv1:\ \text{every}\ \sigma_e\ \text{appears squared}\implies w=(-1)^{\sum\kappa}\ \sigma\text{-constant}
+$$
+$$
+\implies\sum_\sigma w=(-1)^{\sum\kappa}2^{|R|};\qquad|R|=2|\mathcal C|:\ \text{centers pair disjoint edges, covers all}\ [\text{each center reads exactly its 2 edges; each edge read once}];\quad(-1)^{2|\mathcal C|}2^{2|\mathcal C|}=4^{|\mathcal C|}\ \text{at}\ \kappa\text{-even sums}
+$$
+$$
+\kappa\text{-invariance}:\ \sigma_e\ \text{enters linearly}\ \forall\kappa_e\in\mathbb Z:\ \text{classification unaffected};\ \text{value scaled by}\ (-1)^{\sum\kappa}\ [\mathrm{S1}\ \text{scope}]
+$$
+$$
+(3a):\ \text{cycle}:\ \text{every vertex type}\ (1,1)\ \text{or higher along a closed walk};\ \text{cycle edges read by both endpoints when}\ (1,1)\ \text{at both}\implies\operatorname{cov}=2;\ \text{any non-}(1,1)\ \text{vertex on the cycle leaves its edges with}\ \operatorname{cov}\ne1\ \text{or forces type violation}\ [\text{machine-exhaustive}];\ \text{Def-H.20 floors}:\ \text{types}\ (d,d),\ d\ge2:\ \mathcal C=\varnothing,\ R\ne\varnothing\implies0
+$$
+$$
+(3b,c):\ \text{single edge}:\ \text{endpoints}\ (0,1),(1,0):\ \operatorname{cov}=0;\qquad\text{length-}\ge3\ \text{thread}:\ \text{interior vertices}\ (1,1)\ \text{read the shared interior edges twice}\implies\operatorname{cov}=2
+$$
+$$
+(3d):\ \text{cover}\iff\text{the pairing structure described};\ \text{hubs}:\ \text{non-centers with all edges center-covered},\ \text{any type}\ne(1,1),\ \text{locked allowed}\ [\text{machine witnesses: tetrahedron}\ K_{1,3}\ \text{stars},\ \text{cube locked coverings}]
+$$
+$$
+(4):\ \text{enumeration}\ [\text{machine exhaustive}];\qquad Z^{\pm}_{\mathrm{byp}}=1\ (\text{vacuum})+\binom{n_{\mathrm{in}}}1\binom{n_{\mathrm{out}}}1\cdot4\ [\text{pass-throughs};\ \text{single-vertex model: no accidental}(1,1)\ \text{non-centers}];\quad k\ge4:\ \text{type}\ne(1,1):\ 0\ [(2)]
+$$
+$$
+\sigma\equiv+1:\ w=(-1)^k\ [\aleph=0]:\ Z_{\mathrm{byp}}=\textstyle\sum_{k\le3}\binom nk(-1)^k=(-1)^3\binom{n-1}3\ [\text{math}];\quad Z_{\mathrm{lock}}=\textstyle\sum_{k\ge4}\binom nk(-1)^k=+\binom{n-1}3;\quad\text{total}=(1-1)^n=0
+$$
+$$
+\text{aspects}:\ \mathrm{CT0.13}\ \text{rows verbatim at}\ k;\ \dim\mathcal K_k\ [\mathrm{CT0.14}];\ \text{strong}\ \neg\text{observable at}\ \{v\}\ [\mathrm{FT.27}];\quad f_v\ne0\iff\sigma_\leftarrow\ne\sigma_\rightarrow:\ 2/4\ \text{of pass-through signs}\ [\mathrm{D3.3}]
+$$
+$$
+(5):\ 1+4n_{\mathrm{in}}n_{\mathrm{out}}>0\ \forall n_{\mathrm{in}},n_{\mathrm{out}}\ge1;\qquad(6):\ \text{anchors as cited};\ |w|=1:\ \text{CT2.8 norms cancellation-free}.\ \blacksquare
+$$
+
+**Rmk (domain sensitivity — load-bearing).** The exact-cover classification is a theorem *within scope (S2)*: it uses $\aleph_v$ at type-$(1,1)$ vertices only. A chain-local extension of $f_v$ to higher types [FT.21(i)'s telescoping reads] would let higher-type vertices pin edges, enlarging the survivor class (and un-cancelling some bound content). The computation therefore sharpens 16(d) from a bookkeeping question to an amplitude-level one: the two $\aleph$-domains give *provably different* path integrals. No extension is adopted or guessed here. **[both canonical chain-local extensions are now defined and computed exactly — Def-H.27 (E1 chain-dominant, E2 literal-forced), FT.74 (extended exact-cover theorems, brute-force verified), FT.75 (consequences: floor revival, lock revival, the even-$L$ parity theorem, the triangle census, norm-layer invariance). They remain computed variants, not adopted; (S2) stays the frozen domain of record.]**
+
+**Rmk (locked hubs — locking is not amplitude death).** Clause (3d) exhibits locked vertices *inside* surviving configurations: a hub threaded by pass-through centers carries nonzero amplitude while remaining $D^-$-configured — locked content is retained and counted [CT4.3], inaccessible [D1.11], and now: amplitude-visible only through the threads that cross it. The single-vertex vanishing $Z^{\pm}_{\mathrm{lock}}(v,n)=0$ is a statement about isolated vertices; joint skeletons admit locked survivors (tetrahedron: $448$; cube: $1\,150\,848$ [FT.68]).
+
+**Phys.** Sum the ledger's own signs over every way a skeleton can partially crystallize and a stark rule emerges: a configuration contributes if and only if its pass-through vertices tile its edges exactly once — every edge read by exactly one local phase-comparison, no edge read twice or never. Loops cannot be so tiled (their edges are read at both ends); neither can loose single edges. What survives is a gas of open two-step threads $s\to v\to t$, each contributing exactly $+4$, with locked hubs admissible only as threading junctions. Crystallization flicker therefore does not dress the solids — it dissolves them at the amplitude layer and leaves transit threads: existence, at this layer, is a perfect matching of edges onto pass-through comparisons.
+
+---
+
+---
+
+### FT.68 — Joint skeletons: tetrahedron, the polygon ladder, the cube; the layer dichotomy; flicker
+
+**Thm.** Under Def-H.25/FT.67 (same scopes):
+$(1)$ **Tetrahedron (exhaustive).** $V=4$, potential $n(v)=6$ [FT.62(1)], $12$ directed edges. Consistency (each directed edge real at both endpoints or virtual at both — reality is one global fact per pair [A4, D0.1]) reduces the $4$-tuple space $2^{24}$ to $2^{12}=4096$ joint patterns. Bypass configurations: $1230$; **bypass probability** $\tfrac{615}{2048}$; $K\le6$ forced ($\sum_vk_v=2K\le4\cdot3$); counts by $K$: $(1,12,66,220,435,408,88)$ for $K=0..6$ (all-patterns: the symmetric row $\binom{12}K$ minus locked); orbits under $S_4$: $70$ total, by $K$: $(1,1,5,13,23,21,6)$. Amplitudes:
+$$
+Z^{\pm}_{\mathrm{byp}}=1057=1+24\cdot4+60\cdot16,\qquad Z^{\pm}_{\mathrm{lock}}=448=12\cdot16+4\cdot64,\qquad Z^{\pm}_{\mathrm{all}}=1505;
+$$
+covering polynomials (zeta-derived values, FT.68(7)): $\mathcal Z_{\mathrm{byp}}(y)=1+24y+60y^2$, $\mathcal Z_{\mathrm{lock}}(y)=12y^2+4y^3$ — the locked sector includes the four fully bidirectional $K_{1,3}$ stars (locked $(3,3)$ hub threaded by three centers, $4^3=64$ each). **Effective mass** $m_{\mathrm{eff}}=\langle K\rangle\ln2/\mathfrak h$ (dark read: $E_{\mathrm{tot}}=K$ directed real edges [FT.17 dark pattern; Def-H.9(2)]), in three readings: (i) uniform over bypass configurations $\langle K\rangle=\tfrac{852}{205}$; (ii) amplitude-weighted $\bigl(\sum K|A_C|^2/\sum|A_C|^2\bigr)=\tfrac{62208}{15745}$; (iii) Cal-F equilibrium at $r{=}1$: equals (i). **Fractional contributions**: the equilibrium measure of a pattern with $K$ real edges is $p^K(1-p)^{12-K}$, $p=r/(1+r)$ — the per-$K$ coefficients above are the exact fractional-contribution table. Aspect-activation frequency over bypass configs by $\max_vk_v$: $(1,24,245,960)$ for $\max k=(0,1,2,3)$. Bound-content census (configurations containing $\ge1$): digons $501$, directed $3$-cycles $252$, directed $4$-cycles $90$ — with $\Theta\in\{2,3,4\}$ at (S1): digons and $4$-cycles are on-shell materializable candidates [$\Theta\in2\mathbb Z$: FT.22; $4$-cycles: $k=2$, $j=1$ under Def-H.38; digons: the $\Sigma_{\min}$ card, $j=\tfrac12$], $3$-cycles off-shell arena content [$\Theta=3$ odd; Def-H.18] — and **the bound cells themselves all cancel in amplitude** [FT.67(3a)]: standalone bound content is configuration-present, $Z$-absent. **(correction [FT.69(4)]: the census configurations are not all $Z$-absent — $48$ of the $501$ digon-containing bypass configurations are covers: dissolved digons inside thread networks [witness in FT.69(4)]; the $3$-cycle and $4$-cycle rows cancel completely — odd cycles never enter covers, and no tetrahedron cover contains a $4$-cycle [FT.69(3)].)** The fully crystallized floor cancels [machine].
+$(2)$ **Polygon ladder $P_n$ (potential $n(v)=4$; transfer matrix).** Bypass $\iff$ every vertex drops $\ge1$ of its $4$ directed edges. With channel states $s_i=(f_i,r_i)\in\{0,1\}^2$ and the vertex constraint $\operatorname{pop}(s_i)+\operatorname{pop}(s_{i+1})\le3$:
+$$
+B_{P_n}(t)=\operatorname{tr}\bigl(T(t)^n\bigr),\qquad T(t)[s][s']=t^{|s'|}\,[\,|s|+|s'|\le3\,]\qquad[\text{math: transfer matrix}],
+$$
+counts $n=3..10$: $(54,207,783,2970,11259,42687,161838,613575)$; fractions $(\tfrac{27}{32},\tfrac{207}{256},\tfrac{783}{1024},\tfrac{1485}{2048},\dots)$ decaying; the polynomials $B_{P_n}(t)$ are tabulated by the machine [zeta-derived values]. **Dynamical zeta**: $\operatorname{charpoly}T(1)=x^4-3x^3-3x^2$, $\det(I-zT(1))=1-3z-3z^2$ — the bypass counts satisfy the exact recursion $\operatorname{tr}_n=3\operatorname{tr}_{n-1}+3\operatorname{tr}_{n-2}$ [machine: $n=3..12$], growth rate $\lambda_{\max}=\tfrac{3+\sqrt{21}}2<4$: **the bypass fraction decays exponentially in $n$** — bypass is a finite-cell phenomenon in the thermodynamic limit (the amplitude sector itself keeps growing, at the covering growth rate). Sign-summed amplitudes (bypass, locked): $P_3$: $(25,48)$; $P_4$: $(353,64)$; $P_5$: $(1161,80)$; $P_6$: $(3121,1632)$; $P_7$: $(11929,10864)$; $P_8$: $(53825,43136)$; $P_9$: $(229417,159888)$; $P_{10}$: $(844881,775840)$ — the locked sector is nonzero for every $n\ge3$ (single-hub coverings exist on every polygon).
+$(3)$ **Cube (orbit-reduced; Directive bound respected).** Potential $n(v)=6$, $24$ directed edges, $\operatorname{Aut}$ of order $48$. Bypass configurations: $1\,580\,092$, by $K$: $(1,24,276,2024,10506,40296,115796,247704,383913,408464,270096,91392,9600)$ for $K=0..12$ (cap-admissible DP; $K\le12$ forced). **Orbit structure** (cap-aware Burnside DP over conjugacy classes): by $K$: $(1,1,11,49,250,863,2509,5211,8163,8571,5768,1922,245)$, total $33\,564>10^4$ — per the bounded-enumeration rule, orbits are reported by $K$ only, with individual weights computed for coverings alone. Covering polynomials: $\mathcal Z_{\mathrm{byp}}(y)=1+48y+648y^2+2672y^3+3624y^4$ ($6993$ configs), $\mathcal Z_{\mathrm{lock}}(y)=24y^2+728y^3+3192y^4+264y^5+4y^6$ ($4212$ configs); amplitudes $Z^{\pm}_{\mathrm{byp}}=1\,109\,313$, $Z^{\pm}_{\mathrm{lock}}=1\,150\,848$, $Z^{\pm}_{\mathrm{all}}=2\,260\,161$; the fully crystallized cube cancels. The exact-cover theorem is exhaustively verified for all bypass configs with $K\le4$ and stride-sampled beyond. Dodecahedron/icosahedron: **not run wholesale**; their covering enumeration (sparse by FT.67(3d)) is the natural next cell, deferred and recorded.
+$(4)$ **Layer dichotomy (the flicker hypothesis, resolved).** (a) *Bypass is real*: $Z^{\pm}_{\mathrm{byp}}>0$ on every computed skeleton — single vertex $1+n_{\mathrm{in}}n_{\mathrm{out}}\cdot4$, tetrahedron $1057$, polygons growing, cube $1\,109\,313$: the admissible sector of an $n\ge4$ skeleton has strictly positive amplitude at the A8 configuration-sum layer. (b) *What it produces*: the survivors are exactly open V-thread networks — $1$-dimensional transit-type content [D1.5: open propagating $=$ bosonic]; the effective dimensionality of the path-integrated bypass configuration is **thread-like: neither polygon-like $2$D (faces cancel) nor solid-like $3$D (solids cancel)**; its ledger reads are $m_{\mathrm{eff}}$ of (1), aspect activation concentrated at $\max k_v\in\{2,3\}$ ($\mathcal A\supseteq\{\mathrm{EM}\}$-capable and strong-*activated* patterns [CT0.13], with observable strong still requiring $\Sigma$-level sealing [FT.27, FT.20]). (c) *What it does not produce*: bound floors — $\Sigma_{\min}$, $\Sigma_L$, $\Sigma_{P_n}$, $\Sigma_S$ — cancel exactly at this layer [(FT.67(3a))]; they live at the spectral layer [Def-H.16 poles; M1/M2 declarations], where CT2.8's norms $\sum|w|^2$ are strictly positive and no cancellation occurs. (d) **Verdict on "the path integral fuzzes the flickering 2D shape into a higher-tier solid"**: flickering thread gas — *yes*, exact and strictly positive; fuzzing into solids — *no* at the amplitude layer **[scope: a literal-domain (S2) verdict — in the chain-local domains every computed Platonic floor and every even polygon floor carries strictly positive amplitude (tetra $2^{17}$, cube $2304\cdot2^{24}$, octa $72384\cdot2^{24}$; $4\cdot2^{2L}$ for even $L$, $0$ for odd), so the verdict is domain-relative [FT.75(2)]; the thread-gas clause and the norm-layer clause (c) are domain-invariant [FT.75(6)]]**; the solid floors enter through the spectral layer, and the bridge between the two layers is precisely the open residue  [FT.66(3)–(5): structural coupling absent; exit (b) not constructed]. No identification between layers is made or forced.
+$(5)$ **Flicker rate (Cal-F, declared).** The corpus supplies no $J^\pm$ rates — D1.2 is transition vocabulary, A5's draws are unrecorded, and no rate tag exists [inventory]. Declare $r:=\Gamma_{J^+}/\Gamma_{J^-}$ a free internal dynamics datum (P4-class, $\neg$constant of the theory) with per-edge independent detailed-balance equilibrium $p=r/(1+r)$ [Cal-F]. Then the vertex-admissibility fractions are the exact polynomials
+$$
+f_{\mathrm{adm}}(n,p)=\sum_{k\le3}\binom nk p^k(1-p)^{n-k}:\quad1-p^4\ (n{=}4),\quad1-5p^4+4p^5\ (n{=}5),\quad1-15p^4+24p^5-10p^6\ (n{=}6),
+$$
+with samples $f_{\mathrm{adm}}(6;r{=}1)=\tfrac{21}{32}$, $f_{\mathrm{adm}}(6;r{=}3)=\tfrac{347}{2048}$ [machine]; skeleton bypass probabilities are $B_\Gamma(p)=\sum_Kc_K\,p^K(1-p)^{|E_{\mathrm{dir}}|-K}$ with $c_K$ the by-$K$ counts of (1)–(3) — the exact fractional-contribution tables. Time-fraction reading: at equilibrium each vertex spends the fraction $f_{\mathrm{adm}}(n(v),p)$ of time channel-admissible; the fully crystallized Def-H.20 floor occupies measure $p^{2E}\to$ small as $p<1$ — the static floor is a measure-zero-corner of its own skeleton's flicker ensemble, while its spectral status is $p$-independent (declared, M1/M2).
+$(6)$ **Bott connection.** Amplitude survivors contain no closed chains [FT.67(3a)] $\Rightarrow$ no closed stationary channels at the amplitude layer $\Rightarrow$ Def-H.24's Bott data is *undefined on survivors* (no loops to index); the thread networks are transit-side objects, where fixed-endpoint index-0 minimizers exist [FT.48(3)] — the amplitude layer's survivor class and the variational layer's stable class are both transit-side, a derived consistency with FT.66(4b) ("stability is transit-side vocabulary"). Bound content inside bypass configurations (the census of (1)) carries its Bott datum at the spectral layer, where FT.66(4) applies unchanged: on Synge-class slices every closed geodesic has $\operatorname{ind}_B\ge1$ — **the bypass does not evade the selection dilemma; it relocates the surviving content to the one sector where index-0 stability exists**.
+$(7)$ **Convergence and zeta ledger.** Every $Z$ above is a finite exact integer (finite skeletons): the path integral converges trivially and has well-defined values — no regularization was needed and none is claimed. Derived zeta-type values recorded: polygon dynamical zeta $\det(I-zT(1))=1-3z-3z^2$ with recursion $\operatorname{tr}_n=3\operatorname{tr}_{n-1}+3\operatorname{tr}_{n-2}$ and $\lambda_{\max}=\tfrac{3+\sqrt{21}}2$; the covering polynomials $\mathcal Z_\Gamma(y)$ (tetrahedron/cube, per sector); the bypass polynomials $B_{P_n}(t)$, $n\le10$ — all exact integer data, machine-verified.
+
+**Req.** Def-H.25, Def-H.24; FT.17, FT.20, FT.22, FT.27, FT.28, FT.32, FT.42, FT.45, FT.48, FT.61, FT.62, FT.63, FT.66, FT.67; A4, A5, A8; D0.1, D0.10, D1.2, D1.5, D2.11; CT0.11, CT0.13 (Part 1); CT1.20, CT2.8 (Part 2); CT4.1, CT4.3 (Part 2); Def-H.16, Def-H.18, Def-H.20; M1/M2 and Def-H.38/Cal-F (interface rows; census and flicker clauses only); transfer matrices, Burnside with constraint DP, Newton recursions, binomial identities [math].
+
+**Pf.**
+$$
+(1):\ \text{consistency}:\ \text{reality per pair}\ [\mathrm{A4}/\mathrm{D0.1}]\implies\text{joint patterns}=2^{12};\qquad\text{counts/orbits/census}:\ \text{machine exhaustive}\ (4096\ \text{patterns};\ 3^{12}\ \text{sign pairs in the theorem checks})
+$$
+$$
+Z^{\pm}\ \text{values}:\ \mathrm{FT.67}(2)\ \text{value formula summed over covering classes}\ [\text{machine}:\ \text{two independent enumerators agree}];\qquad K_{1,3}\ \text{star hubs}:\ \text{witnesses exhibited}\ [\text{machine}]
+$$
+$$
+m_{\mathrm{eff}}:\ \text{readings (i)--(iii) computed from the census}\ [\text{machine exact rationals}];\qquad\text{fractional contributions}:\ \text{Bernoulli measure coefficients}\ [\mathrm{Cal-F}]
+$$
+$$
+(2):\ T(t)\ \text{construction}:\ \text{vertex constraint}\iff\operatorname{pop}(s_i)+\operatorname{pop}(s_{i+1})\le3;\qquad B_{P_n}(t)=\operatorname{tr}T(t)^n\ [\text{math}];\quad\text{cross-check}:\ \text{cap-DFS brute force},\ n\le6\ [\text{machine}]
+$$
+$$
+\operatorname{charpoly}T(1)=x^2(x^2-3x-3)\ [\text{machine: exact interpolation}];\qquad\det(I-zT)=z^4\,\mathrm{ch}(1/z)=1-3z-3z^2;\qquad\text{Newton}:\ \operatorname{tr}_n=3\operatorname{tr}_{n-1}+3\operatorname{tr}_{n-2}\ [\text{machine}\ n\le12]
+$$
+$$
+Z^{\pm}\ \text{per sector}:\ \text{covering enumeration (escape-pruned backtracking)},\ n\le10\ [\text{machine};\ \text{theorem verified exhaustively}\ n\le5]
+$$
+$$
+(3):\ \text{counts}:\ \text{cap-DP over}\ 24\ \text{edges}\ [\text{machine}];\qquad\text{orbits}:\ \text{Burnside, cap-aware DP per conjugacy class, memoized}\ [\text{machine}];\qquad33564>10^4:\ \text{STOP rule}:\ \text{counts by}\ K\ \text{only}\ (K\le12\ \text{automatic}),\ \text{weights for coverings only}
+$$
+$$
+(4):\ (a),(b):\ \mathrm{FT.67}(2),(3),(5)+\text{values of}\ (1)\text{--}(3);\qquad(c):\ \mathrm{FT.67}(3a)+\mathrm{CT2.8}(2);\qquad(d):\ \text{conjunction};\ \text{bridge}:\ \mathrm{FT.66}(3)\text{--}(5),\ \text{item}\ 13
+$$
+$$
+(5):\ \neg\exists\ \text{rate tag}\ [\text{inventory}];\qquad f_{\mathrm{adm}}(n,p)\ \text{expansion}:\ \text{machine-verified coefficient identities}\ \{1,-,\dots\};\qquad\text{samples exact}
+$$
+$$
+(6):\ \mathrm{FT.67}(3a)\implies\neg\exists\ \text{closed chains in survivors};\qquad\mathrm{FT.48}(3):\ \text{open minimizers};\qquad\mathrm{FT.66}(4):\ \text{spectral-layer bound unchanged}
+$$
+$$
+(7):\ \text{finiteness}:\ |E_{\mathrm{dir}}|<\infty\implies2^{|E|}\cdot2^{|E|}\ \text{finite sum};\qquad\text{zeta values as tabulated}\ [\text{machine}].\ \blacksquare
+$$
+
+**Rmk (relation to Def-H.20/FT.62 — no retraction).** The Def-H.20 floors are the fully crystallized points of their skeletons' pattern lattices; FT.62's rung and lock ledgers describe those points and are untouched. This tier adds the amplitude-layer anatomy of the *neighbourhood* those points sit in: the floor itself cancels in the sign sum, its bypass neighbourhood does not, and the two layers (amplitude/spectral) meet only through the open bridge . Nothing here identifies bypass survivors with named particles  or derives the J± rates (Cal-F remains declared).
+
+**Phys.** Let the edges of a locked skeleton flicker — crystallize, dissolve, crystallize — and sum the ledger's own weights over every pattern: the answer is a strict rule with a strict survivor. Only open two-step threads pass, each worth exactly four; every loop, every face, every fully grown solid sums to nothing. The tetrahedron's flicker ensemble weighs $1230$ admissible patterns at probability $615/2048$, and its amplitude budget — $1057$ of it — is spent entirely on thread networks threading sources, sinks, and the occasional locked hub. Polygons obey a two-term recursion with a rational zeta, $1-3z-3z^2$, and their admissible fraction dies exponentially with size: bypass is the physics of small cells. The cube's $1.58$ million admissible patterns collapse to $33{,}564$ symmetry orbits. And the old insight gets its two-layer answer: the flicker is real, and it is a gas of threads — the solids are not what the amplitude sums to; they are what the spectrum declares, on the other side of the one bridge this document has not built.
+
+---
+
+---
+
+
+## Tier F.24 — The Flicker Phase Structure, the Cycle Grammar of Covers, the Dust Equation of State, Face Decomposition, and the Bridge Audit
+
+### Def-H.26 — Flicker-ensemble phase reads
+
+**Def.** For a skeleton $\Gamma$ [Def-H.25] with $2E$ directed edges and equilibrium parameter $p\in[0,1]$ [$p=x_+/(x_++x_-)$: the unique stationary measure of the per-pair Janus generator — FT.108(4), forward pointer Tier F.36; $r:=x_+/x_-$ a P4-class rate datum (Cal-F); the per-edge independent Bernoulli scope is constitutive of the ensemble (CT4.5a-species ensemble scope)], the **flicker ensemble** is the Bernoulli product measure $\mu_p$ on crystallization patterns $R\subseteq E_{\mathrm{dir}}(\Gamma)$ (each directed edge real independently with probability $p$). Pattern-layer reads (all exact polynomials/rationals in $p$; $\neg$spectral reads):
+$$
+B_\Gamma(p):=\mu_p(\text{bypass})=\sum_K c_K\,p^K(1-p)^{2E-K}\quad[c_K:\ \text{cap census, CT0.11}];\qquad F_\Gamma(p):=p^{2E}\quad[\text{floor measure}];
+$$
+$$
+L_\Gamma(p):=1-B_\Gamma(p)\quad[\text{lock fraction}];\qquad \langle K\rangle_{\mathrm{byp}}(p):=\frac{\sum_K K\,c_K\,p^K(1-p)^{2E-K}}{B_\Gamma(p)};
+$$
+$$
+p^*_\Gamma:=\text{the unique root of }B_\Gamma(p)=F_\Gamma(p)\text{ in }(0,1)\ \ [\text{lockable }\Gamma;\ \text{FT.70(1)}];\qquad \langle\rho_{D^-}\rangle_\Gamma(p):=\sum_v O(n_v)\,\mu_p(k_v\ge4)\ \ [\mathrm{CT4.1},\mathrm{CT4.5}].
+$$
+**Rmk (layer scope).** Every read above is a $\mu_p$-average of pattern-layer ledger entries; the spectral layer (Def-H.16 poles; M1/M2 materialization) is $p$-independent by declaration, and the two layers meet only through the inter-family bridge (application-layer) [FT.68(4)]. Static census data ($c_K$ rows, coverings, crossovers as polynomial facts) are declaration-free; only the equilibrium *interpretation* uses Cal-F (as in FT.68(5)). $\langle\rho_{D^-}\rangle$ inherits CT4.5's per-configuration $w=0$ for its locked part; unlocked configurations carry channel stresses [CT1.22] outside this definition's scope.
+
+---
+
+---
+
+### FT.70 — The flicker phase diagram: unique crossover, computed boundaries, the polygon limit
+
+**Thm.** Under Def-H.26 (equilibrium readings under the Cal-F rate datum; the polynomial data declaration-free):
+$(1)$ **Existence and uniqueness of the phase boundary.** The admissible family is downward-closed (subsets of admissible patterns are admissible: $k_v$ decreases), nonempty ($\varnothing$), and proper (the floor is locked iff $\Gamma$ is lockable, i.e. $\max_v n(v)\ge4$). Hence $B_\Gamma$ is strictly decreasing on $(0,1)$ [math: monotone coupling; strictness witness: any $3$ edges at a vertex of $n(v)\ge4$ give an admissible $R$ with $R\cup\{e\}$ locked], while $F_\Gamma(p)=p^{2E}$ is strictly increasing; $B(0)-F(0)=1>0$, $B(1)-F(1)=c_{2E}-1=-1<0$. **Every lockable skeleton has a unique crossover $p^*_\Gamma\in(0,1)$**; non-lockable skeletons (all $n(v)\le3$: the digon, unidirectional cells) have $B\equiv1$: no interior boundary, thread gas at every $p<1$.
+$(2)$ **Computed boundaries** (exact dyadic isolating intervals of width $2^{-40}$; machine; decimal display $\approx$):
+$$
+p^*:\quad\text{icosa}\ 0.652034\ <\ \text{octa}\ 0.679217\ <\ \text{tetra}\ 0.723525\ <\ \text{dodeca}\ 0.724519\ <\ \text{cube}\ 0.725372\ <\ P_3\ 0.807901\ <\ P_5\ <\ P_7\ <\ P_9\ <\ \sqrt{\tfrac23}\ <\ P_{10}\ <\ P_8\ <\ P_6\ <\ P_4\ 0.819671 .
+$$
+Regions: $p<p^*_\Gamma$ thread-gas-dominant ($B>F$), $p>p^*_\Gamma$ floor-dominant ($F>B$); the locked fraction $L_\Gamma(p)=1-B_\Gamma(p)$ rises $0\to1$ across the diagram. The two degree-$\ge4$ solids cross earliest — the crossover order reproduces the lock-proneness order of clause (4).
+$(3)$ **Polygon limit, closed form.** $\operatorname{charpoly}T(t)=x^2\bigl(x^2-(1+2t)x-t^2(1+2t)\bigr)$ [machine: exact at $t\in\{1,2,\tfrac13,\tfrac52\}$; generalizes FT.68(2)'s $t{=}1$ value]. Asymptotically $B_{P_n}(p)\sim(1-p)^{2n}\lambda_{\max}(t)^n$, $t=p/(1-p)$: the crossing equation tends to $\lambda_{\max}(s)=s^2$, i.e. $s^4=2s^2(1+2s)$, i.e. $s^2-4s-2=0$ with $s=p/(1-p)$: $s=2+\sqrt6$ and
+$$
+p^*_\infty=\frac{s}{1+s}=\frac{2+\sqrt6}{3+\sqrt6}=\frac{\sqrt6}{3}=\sqrt{\tfrac23}\qquad\Bigl[\ \bigl(\sqrt\tfrac23\bigr)^2=\tfrac23;\ (2{+}\sqrt6)^2=10{+}4\sqrt6=4(2{+}\sqrt6){+}2\ \checkmark\ \text{in}\ \mathbb Z[\sqrt6]\Bigr],
+$$
+approached from below by odd $n$ and from above by even $n$ (interlaced; machine through $n=10$).
+$(4)$ **Lock-proneness order (the corrected "forbidden zone").** Exact identity [machine, symbolic $n=3..10$]:
+$$
+f_{\mathrm{adm}}(n{+}1,p)=f_{\mathrm{adm}}(n,p)-\binom{n}{3}p^4(1-p)^{n-3}\ <\ f_{\mathrm{adm}}(n,p)\qquad\forall p\in(0,1),
+$$
+so admissibility is strictly decreasing in potential degree: $f_{\mathrm{adm}}(2d,\tfrac12)=(1,\tfrac{15}{16},\tfrac{21}{32},\tfrac{93}{256},\tfrac{11}{64})$ for $2d=(2,4,6,8,10)$: digon $>$ polygons $>$ \{tetra, cube, dodeca\} $>$ octa $>$ icosa. **The proposed octahedron "forbidden zone" is refuted**: $f_{\mathrm{adm}}(8,p)\ge(1-p)^8>0$ for every $p<1$ and $318\,523$ admissible configurations exist at the cap level [(1)]. What is true: at fixed $p<1$ the octahedron/icosahedron are the most lock-prone Platonic skeletons, and $p=1$ locks *every* skeleton — the static floor is the $p\to1$ limit of its own ensemble [FT.68(5)], with amplitude zero there [FT.67(3a)].
+$(5)$ **Effective edge content.** $\langle K\rangle_{\mathrm{byp}}(p)$ is strictly increasing on the exact grid $p\in\{\tfrac1{20},\dots,\tfrac{19}{20}\}$ (machine: tetra, cube, icosa, $P_5$), with limits $0$ (vacuum-dominated, $p\to0$) and $K_{\max}=\lfloor3V/2\rfloor$ (top bypass row, $p\to1$); at $p=\tfrac12$: $\bigl(1,\tfrac{852}{205},\tfrac{3311952}{395023},\tfrac{2124600}{318523},\tfrac{4007491093935690}{191727103387307},\tfrac{215801166207}{15519497071}\bigr)$ for digon/tetra/cube/octa/dodeca/icosa (the tetra entry is FT.68(1)'s $m_{\mathrm{eff}}$ reading (i) verbatim — $p{=}\tfrac12$ is the uniform measure) and $\bigl(\tfrac83,\tfrac{248}{69},\tfrac{130}{29},\tfrac{296}{55},\tfrac{2618}{417},\tfrac{11344}{1581},\tfrac{896}{111},\tfrac{13588}{1515}\bigr)$ for $P_3..P_{10}$. The dark mass read is $m_{\mathrm{eff}}(p)=\langle K\rangle_{\mathrm{byp}}(p)\ln2/\mathfrak h$ [FT.68(1) pattern]: light at high flicker, heavy toward the static limit, exact at every $p$.
+
+**Req.** Def-H.25, Def-H.26; FT.42, FT.45, FT.62, FT.63, FT.67, FT.68; A4, D0.1; CT0.11 (Part 1); Cal-F (equilibrium readings); monotone coupling for product measures, transfer-matrix asymptotics, dyadic bisection [math].
+
+**Pf.**
+$$
+(1):\ R'\subseteq R:\ k_v(R')\le k_v(R):\ \text{downward-closed};\qquad\text{coupling}\ p_1<p_2:\ R_1\subseteq R_2:\ \mathbf 1_{\mathrm{adm}}(R_1)\ge\mathbf 1_{\mathrm{adm}}(R_2):\ B(p_1)\ge B(p_2)
+$$
+$$
+\text{strictness witness}:\ |R|=3\ \text{at}\ v,\ n(v)\ge4:\ R\ \text{admissible},\ R\cup\{e_v\}:\ k_v=4:\ \text{locked};\qquad B(0)=c_0=1,\ B(1)=c_{2E}=0\ [\text{floor locked}]
+$$
+$$
+(2):\ \text{exact integer bisection on}\ G(p)=B(p)-p^{2E}:\ G(m/2^{40})\ \text{as an integer via}\ 2^{40\cdot 2E}\ \text{clearing};\ \text{single sign flip on a 51-point grid}\ [\text{machine}]
+$$
+$$
+(3):\ T(t)\ \text{rows}\ (00,01,10)\ \text{equal on}\ \{00,01,10,11\}\text{-pattern}\implies\operatorname{charpoly}=x^2\chi_2,\ \chi_2=x^2-(1{+}2t)x-t^2(1{+}2t)\ [\text{machine at 4 exact}\ t];\quad\lambda_{\max}(s)=s^2\implies s^2=2(1{+}2s)
+$$
+$$
+s=2+\sqrt6>0;\qquad p^*_\infty=\tfrac s{1+s}=\tfrac{2+\sqrt6}{3+\sqrt6}\cdot\tfrac{3-\sqrt6}{3-\sqrt6}=\tfrac{\sqrt6}3;\qquad\bigl(\tfrac{\sqrt6}3\bigr)^2=\tfrac23
+$$
+$$
+(4):\ \text{binomial recursion}\ \mathrm{Bin}(n{+}1,p)=\mathrm{Bin}(n,p)+\mathrm{Ber}(p):\ f(n{+}1,p)=(1-p)f(n,p)+p\,P(\mathrm{Bin}(n,p)\le2)=f(n,p)-p\,P(\mathrm{Bin}(n,p)=3)
+$$
+$$
+p\,P(\mathrm{Bin}(n,p){=}3)=\binom n3p^4(1-p)^{n-3}>0\ \ \forall p\in(0,1),\ n\ge3\ [\text{machine: symbolic coefficient identity}]
+$$
+$$
+(5):\ \text{exact rational evaluation from}\ c_K\ \text{rows};\ \text{grid monotonicity machine};\ p\to0:\ c_0\ \text{term dominates}:\ \langle K\rangle\to0;\quad p\to1:\ c_{K_{\max}}\ \text{term dominates}.\ \blacksquare
+$$
+
+**Phys.** Let the crystallization rate run from never to always, and every skeleton shows the same two-phase portrait with one sharp boundary: below it the ledger's amplitude lives in a gas of open threads, above it in the static floor — and the boundary sits at an exactly computable flicker rate, about $0.72$ for the degree-three solids, earliest ($0.65$) for the icosahedron, latest for small polygons, converging for the polygon family to the closed value $\sqrt{2/3}$. No solid is forbidden from flickering: the octahedron's rumored "must lock" is false at every rate below one — it is only the *most* lock-prone per vertex, and at rate one everything locks, floors included, whose amplitude there is zero anyway. The effective dark mass of the gas climbs smoothly from nothing to the floor's own ledger as the flicker slows.
+
+---
+
+---
+
+### FT.71 — The flicker-dust equation of state
+
+**Thm.** Under Def-H.26 (equilibrium readings under the Cal-F rate datum), for every skeleton $\Gamma$:
+$(1)$ **Exact dust density.** Per-edge independence gives $k_v\sim\mathrm{Bin}(n(v),p)$, hence
+$$
+\langle\rho_{D^-}\rangle_\Gamma(p)=\sum_v O(n_v)\,\bigl(1-f_{\mathrm{adm}}(n_v,p)\bigr),\qquad O(n)=2^{n+1}-16\ \ [\mathrm{CT4.1};\ \mathrm{FT.62}(2)],
+$$
+an exact polynomial in $p$ with integer coefficients: Platonic values at $p=\tfrac12$: $\bigl(154,\ 308,\ \tfrac{15159}{8},\ 770,\ 20193\bigr)$ for (tetra, cube, octa, dodeca, icosa); polygon family the exact monomial $\langle\rho_{D^-}\rangle_{P_n}(p)=16\,n\,p^4$ (at $p{=}\tfrac12$: $n$); digon identically $0$ (never locks).
+$(2)$ **Anchors.** $\langle\rho_{D^-}\rangle_\Gamma(1)=\sum_vO(n_v)=$ FT.63(5)'s dark sums $(448, 896, 2976, 2240, 24384)$ exactly [machine]; $\langle\rho_{D^-}\rangle_\Gamma(0)=0$; strict increase on $(0,1)$ for lockable $\Gamma$ [clause (4)'s $f_{\mathrm{adm}}$ strict decrease, FT.70(4)].
+$(3)$ **The flicker modulates $\rho$, never $w$.** CT4.5 applies per configuration: every locked vertex contributes pressureless dust ($w=0$, source side, coupled to geometry through CT1.23 and nothing else). The ensemble's locked content is therefore dust at every $p$; the flicker parameter moves only the *density* — along the exact polynomial of (1). $D^+$'s $w=-1$ [CT1.25, D4.3] is configuration-independent and untouched: the CT4.6 contrast table holds ensemble-wise term by term.
+$(4)$ **No fluid.** The locked sector supports no further equation-of-state data: it is a structureless absorbing sink — one possibility space [D4.1], no gauge content [CT4.4], absorption one-way [CT4.2], content inaccessible [D1.11] and unresolvable [FT.3]. Statements assigning $D^-$ a pressure response, polarization, or re-emission have no defined ledger referent (the referent would contradict CT4.2/D1.11); "the vacuum is a $D^-$ fluid" is inadmissible as stated — what the corpus derives is: locked content gravitates as dust with the density computed here.
+
+**Req.** Def-H.26; FT.62, FT.63, FT.70; CT1.22, CT1.23, CT1.25 (Part 2); CT4.1, CT4.2, CT4.3, CT4.4, CT4.5, CT4.6 (Part 2); D1.11, D4.1, D4.2, D4.3; FT.3; binomial law under per-edge independence [math]; Cal-F (equilibrium readings).
+
+**Pf.**
+$$
+(1):\ \mu_p(k_v\ge4)=P(\mathrm{Bin}(n_v,p)\ge4)=1-f_{\mathrm{adm}}(n_v,p)\ [\text{per-edge independence, Def-H.26 scope}];\qquad\text{linearity of expectation over}\ v\ [\mathrm{CT4.5}:\ \rho_{D^-}=\textstyle\sum O(n)]
+$$
+$$
+O(2d)=2^{2d+1}-16:\ (16,112,496,2032)\ \text{at}\ 2d=(4,6,8,10)\ [\mathrm{FT.62}(2)\ \text{table}];\qquad P_n:\ \text{all}\ n(v)=4:\ \textstyle\sum_v16\,p^4=16np^4
+$$
+$$
+(2):\ p{=}1:\ 1-f_{\mathrm{adm}}=1:\ \textstyle\sum_vO(n_v)=(4\cdot112,\ 8\cdot112,\ 6\cdot496,\ 20\cdot112,\ 12\cdot2032)\ \checkmark;\qquad p{=}0:\ 0;\quad\text{monotone by FT.70(4)}
+$$
+$$
+(3):\ \text{CT4.5 per configuration};\ \text{mixture of}\ w{=}0\ \text{components is}\ w{=}0\ \text{on the locked part};\qquad(4):\ \text{cited tags exhaust the}\ D^-\ \text{inventory}\ [\text{Parts 1–2}];\ \text{no response read exists}.\ \blacksquare
+$$
+
+**Phys.** Shake a crystal at rate $r$ and its dark content has an exact expected density: zero when nothing crystallizes, the full retained-register sum $448\ldots24384$ per tick when everything does, and a smooth polynomial in between — $16np^4$ for a polygon ring, $\tfrac{15159}{8}$ for the octahedron at equal rates. Whatever the rate, that content gravitates the same way: pressureless dust on the source side of the field equations. The flicker changes how much sediment the ledger carries, never how the sediment weighs.
+
+---
+
+---
+
+### FT.72 — Two-fold face decomposition; the Bernoulli marginals ("coarse-grained fuzz as data")
+
+**Thm.** Let $\Sigma_S$ be a Platonic skeleton (sphere), $E,F$ its undirected edge/face counts, all arithmetic over $\mathrm{GF}(2)$.
+$(1)$ **Two-fold face-decomposition theorem.** The face-boundary map $\partial_2:\mathrm{GF}(2)^F\to\mathrm{GF}(2)^E$ has image exactly the cycle space $Z_1=\ker\partial_1$ (rank $\beta_1=F-1$ [FT.43(5), FT.64; machine: all five]) and kernel $\{0,\sum_f f\}$ (every edge lies in exactly two faces). Hence **every cycle $z\in Z_1$ has exactly two face-decompositions, $z=\partial_2 S=\partial_2(F\setminus S)$** — a set of faces and its complement. "Every subnetwork is a composition of triangles" holds exactly for the triangulated skeletons (tetrahedron $4$, octahedron $8$, icosahedron $20$ triangles [machine census]); the cube's faces are squares, and **the dodecahedron — girth $5$: zero triangles and zero $4$-cycles [machine] — admits no triangle decomposition within its skeleton at all**: its face grammar is pentagonal, and triangle compositions would require diagonals outside $\mathcal R$.
+$(2)$ **Hodge-type split (corrected form).** $Z_1=\mathrm{Cut}^\perp$ under the standard pairing; $\dim Z_1+\dim\mathrm{Cut}=\beta_1+(V{-}1)=E$ [Euler], but the sum is **not** direct in general: $j:=\dim(Z_1\cap\mathrm{Cut})=(2,3,3,5,5)$ for (tetra, cube, octa, dodeca, icosa) [machine]. A pattern $R$ is decomposable ($R\in Z_1+\mathrm{Cut}$: cycle content $+$ boundary content) iff its syndrome is orthogonal to $Z_1\cap\mathrm{Cut}$; the decomposition is unique up to $2^j$ gauge choices.
+$(3)$ **Exact Bernoulli marginals.** For $R\sim\mu_p$ [Def-H.26], with $q:=1-2p$:
+$$
+P_p(R\in Z_1)=\frac{1}{2^{V-1}}\sum_{c\in\mathrm{Cut}}q^{|c|},\qquad P_p(R\ \text{decomposable})=\frac{1}{2^{j}}\sum_{u\in Z_1\cap\mathrm{Cut}}q^{|u|},\qquad P_p(R\in\mathrm{Cut})=\frac{1}{2^{\beta_1}}\sum_{z\in Z_1}q^{|z|}
+$$
+[MacWilliams for $Z_1=\mathrm{Cut}^\perp$ and $(Z_1+\mathrm{Cut})^\perp=Z_1\cap\mathrm{Cut}$; machine: direct enumeration cross-check at $\beta_1\le5$]. At $p=\tfrac12$: $P(R\in Z_1)=2^{-(V-1)}=(\tfrac18,\tfrac1{128},\tfrac1{32},\tfrac1{524288},\tfrac1{2048})$ and $P(\text{decomposable})=2^{-j}=(\tfrac14,\tfrac18,\tfrac18,\tfrac1{32},\tfrac1{32})$; samples $p=\tfrac14$: $(\tfrac{27}{128},\tfrac{19}{64})$, $p=\tfrac34$: $(\tfrac{11}{128},\tfrac{19}{64})$ for the tetrahedron [machine table for all five].
+$(4)$ **Dual signatures at the Hodge level.** The intersection weight-enumerators of dual pairs coincide exactly: cube $\equiv$ octahedron $\{0{:}1,6{:}4,8{:}3\}$, dodeca $\equiv$ icosa $\{0{:}1,10{:}6,16{:}15,18{:}10\}$ [machine] — a new degeneracy of the FT.44 species — while the cut enumerators split them: the octahedron's cut space is even-weight (all degrees $4$: every star even; the subgraph-level echo of FT.63(3)'s black–white parity law) while the cube's carries odd stars (weight $3$).
+$(5)$ **"Fuzz as data", formalized.** The complete flicker datum of a skeleton is the measure $\mu_p$ on $\mathrm{GF}(2)^E$; every coarse-grained read computed in this document is a named marginal of it: $K\mapsto I_{\mathrm{hid}}$-type edge content [FT.68(1)], admissibility $\mapsto$ bypass/lock sectors [Def-H.25], cycle/cut class $\mapsto$ (3) above, cover support $\mapsto$ amplitude [FT.67(2)], winding lattices $\mapsto$ FT.64's index-$2^{F-1}$ sublattices (on-shell $\kappa$-side, not $\mu_p$-side — layer marked). No read is lost by coarse-graining that the measure retains; nothing in the measure is readable that the ledger's registers admit [C10 reality principle; FT.3 for locked content].
+
+**Req.** FT.43, FT.44, FT.63, FT.64, FT.67; Def-H.25, Def-H.26; D0.1; CT1.29 (Part 2); GF(2) linear algebra, MacWilliams identity, Euler characteristic [math]; Cal-F (only for clause (5)'s measure).
+
+**Pf.**
+$$
+(1):\ \text{each edge in exactly 2 faces (sphere)}\implies\partial_2\bigl(\textstyle\sum_f f\bigr)=0;\qquad\operatorname{rk}\partial_2\le\beta_1\ [\text{faces are cycles}];\ \operatorname{rk}\partial_2\ge F-1\ \text{and}\ \dim\ker\partial_2=1\ [\text{machine: elimination, all five}]
+$$
+$$
+\implies\operatorname{im}\partial_2\subseteq Z_1,\ \dim\operatorname{im}=F-1=\beta_1=\dim Z_1\ [\mathrm{FT.43}(5):\ \beta_1=E-V+1=F-1]\implies\operatorname{im}\partial_2=Z_1;\qquad\#\partial_2^{-1}(z)=|\ker\partial_2|=2
+$$
+$$
+\text{girth census}:\ \text{dodeca triangles}=0,\ 4\text{-cycles}=0\ [\text{machine}];\qquad\text{triangle counts}\ (4,0,8,0,20)\ \checkmark
+$$
+$$
+(2):\ Z_1=\ker\partial_1=(\operatorname{im}\partial_1^T)^\perp=\mathrm{Cut}^\perp\ [\text{linear algebra}];\qquad j=\dim Z_1+\dim\mathrm{Cut}-\dim(Z_1+\mathrm{Cut})\ [\text{machine ranks}]
+$$
+$$
+(3):\ \text{MacWilliams}\ W_{C^\perp}(x,y)=\tfrac1{|C|}W_C(y-x,y+x);\quad x=p,y=1-p:\ y-x=q,\ y+x=1;\qquad(Z_1+\mathrm{Cut})^\perp=Z_1^\perp\cap\mathrm{Cut}^\perp=\mathrm{Cut}\cap Z_1
+$$
+$$
+p=\tfrac12:\ q=0:\ \text{only the empty word survives}:\ 2^{-(V-1)},\ 2^{-j};\qquad\text{direct enumeration cross-check: tetra/cube}\ [\text{machine}]
+$$
+$$
+(4):\ \text{enumerator tables machine};\qquad\text{octa stars}:\ \deg=4\implies|\delta(v)|=4\ \text{even};\ \text{even cuts closed under}\ \triangle\implies\text{even-weight cut space};\ \text{cube stars}\ |3|\ \text{odd}
+$$
+$$
+(5):\ \text{marginal list as cited};\ \text{layer marks at each site}.\ \blacksquare
+$$
+
+**Rmk (relation to the proposal transcript).** The proposal "any network subgraph is a composition of triangles with free real/virtual choice per edge" is *corrected, not adopted*: the free binary choice per directed edge is exactly A4/D0.1/Def-H.25 (frozen and declared respectively); the composition theorem holds with each skeleton's own face type and a two-fold ambiguity per cycle; the triangle-only form fails on the cube (squares) and maximally on the dodecahedron (girth $5$). The proposal's ensemble sense — "the coarse-grained fuzz is the data about the system" — is clause (5): the measure is the datum, the ledger reads are its marginals.
+
+**Phys.** Every loop you can draw on a solid is a sum of faces in exactly two ways — a set of faces, or everything else. That is the whole content of "decomposing into triangles" where triangles exist, and on the dodecahedron no triangles exist to decompose into. Let the edges flicker independently and the fuzz becomes an exact probability measure: the chance that a random pattern is a pure cycle is one in $2^{V-1}$ at equal rates — one in half a million on the dodecahedron — and every ledger read this document has ever computed is a shadow of that single measure.
+
+---
+
+---
+
+### FT.73 — The bridge audit: dielectric non-existence, the field-degree no-go, and the surviving species
+
+**Thm.** On the proposed bridge program (a $D^-$-medium/drag mechanism equating $m_{\mathrm{hid}}$ with $m_{\mathrm{pole}}$, with $\alpha$ emerging as a screening factor):
+$(1)$ **Dielectric non-existence (inventory theorem).** A dielectric medium requires a polarization-response read (induced content vs applied read). The locked sector's complete inventory is: single possibility space [D4.1], absorption at rate $\propto O(n)$ [D4.2, CT4.1], one-way [CT4.2], retained and inaccessible [CT4.3, D1.11], no gauge structure [CT4.4], unresolvable [FT.3], never observable [FT.20], no slot realization at $n\ge4$ [FT.59]. **No response read exists**; $\varepsilon_{D^-}$ and "$D^-$ vacuum polarization" have no defined ledger referent, and any dynamics supplying one contradicts CT4.2/D1.11 — inadmissible from this part: no construction of Part 3 overturns a Parts 1–2 tag. The vacuum-side corpus data are instead: $\rho_\circ=\tfrac14 I$ [C11], $D^+=\Lambda\mathbb I$ with $w=-1$ [D4.3, CT1.25], $D^-$ dust with $w=0$ [CT4.5], and the entropy triangle's exhaustiveness [CT4.7, CT4.10] — the "equation of state of the vacuum" is computed, frozen, and two-sided.
+$(2)$ **Field-degree no-go (drag refuted).** Under Def-H.37(2) the pole-side factors at the five floors are $\{2,\ 2-\sqrt2,\ 1,\ 2-2\cos\tfrac\pi{10},\ 2-\sqrt3\}$ [FT.54(4), FT.63(6)], with minimal polynomials: $2\cos\tfrac\pi{10}$: $y^4-5y^2+5$ (irreducible over $\mathbb Q$: no rational root, no $\mathbb Z$-quadratic factor [machine]); $2-2\cos\tfrac\pi{10}$: $x^4-8x^3+19x^2-12x+1$ (irreducible [machine; FT.63 anchor re-derived]). Hence the five factors generate $\mathbb Q(\sqrt2,\sqrt3,\cos\tfrac\pi{10})$, of degree $16$ over $\mathbb Q$: writing $y=2\cos\tfrac\pi{10}$, $\mathbb Q(y)/\mathbb Q$ is Galois of group $\mathbb Z_4$ (generator $y\mapsto\sqrt5/y$; machine: $y\cdot\tfrac{\sqrt5}y=\sqrt5=2y^2-5$, $(\tfrac{\sqrt5}y)^2=\tfrac{5-\sqrt5}2$), with unique quadratic subfield $\mathbb Q(\sqrt5)$; and $\sqrt5\notin\mathbb Q(\sqrt2,\sqrt3)$ [$\sigma_2/\sigma_3$-averaging forces $\sqrt5\in\mathbb Q$, machine] — so the two quartics intersect in $\mathbb Q$ and $[\mathbb Q(\sqrt2,\sqrt3,y):\mathbb Q]=4\cdot4=16$. Any bridge formula $m^2_{\mathrm{pole}}=F(n_1,\dots,n_m;c_1,\dots,c_k)$ with $F$ rational over its arguments, the $n_i$ **integer-valued combinatorial ledger reads** (including $\rho_{D^-}=\sum O(n)$, lock counts, covering counts, $Z^\pm$, $K$-reads, $m_{\mathrm{hid}}\mathfrak h/\ln2$, $g(V)$, $\beta_1$) and finitely many declared constants $c_j\in K$ places every pole value in $K$: covering the five computed floors forces $[K:\mathbb Q]\ge16$. The $\Theta_R$-read (Def-H.37(2)) attains all five factors with $K=\mathbb Q$: **curvature coupling is the unique surviving bridge species within the computed read classes** [consistent with the form-uniqueness sharpening of FT.54(1): state-independence forces $m^2_{\mathrm{pole}}=F(\Theta_R)$].
+$(3)$ **Dual split and the exclusion of quadratic couplings.** The dual pairs share the informational mass — $m_{\mathrm{hid}}$: $24{=}24$ (cube/octa), $60{=}60$ (dodeca/icosa) [FT.44(2), FT.63(5)] — while the pole side splits both [FT.63(6)]: cube/octa by $(2-\sqrt2)/1\notin\mathbb Q$; dodeca/icosa because $2-2\cos\tfrac\pi{10}$ has degree $4$ over $\mathbb Q$ while $2-\sqrt3$ has degree $2$ (a rational ratio would place the quartic inside $\mathbb Q(\sqrt3)$). Stronger: even a *single declared quadratic* coupling cannot serve — all constants in one quadratic field $K_2$ would force $(2-\sqrt2)/(2-\sqrt3)=4-2\sqrt2+2\sqrt3-\sqrt6\in K_2$ [machine: exact in the $\{1,\sqrt2,\sqrt3,\sqrt6\}$ basis], which lies in no quadratic field ($\mathbb Q(\sqrt2,\sqrt3)$ has degree $4$ over $\mathbb Q$ and over $K_2$). Drag-type proposals ($m\propto$ locked-content reads, e.g. $\rho_{D^-}$: integers $896$ vs $2976$ on the cube/octa pair — the wrong splitting entirely: rational, against an irrational pole ratio) are refuted; the $\Theta_R$-read tracks both splittings natively.
+$(4)$ **The $\alpha$ flag.** EM.20 derives $\alpha_{\mathrm{EM}}^{(2)}=\pi$ under Comm-min+Eff — a pure number, independent of $\mathfrak h$, $G_N$, $\kappa$, and every P4 parameter [Eff: historical scope token — Part 3 §0.2(ii); HistLog §I.4]. The proposed "$\alpha\approx1/137$ as the medium's screening factor" contradicts the frozen calibration layer and presupposes the medium refuted in (1): recorded as an inadmissible ask; no screening computation exists or is constructed.
+$(5)$ **Adjudication summary (proposal transcript, audit pattern).** *Confirmed (already derived)*: per-edge binary freedom [A4, D0.1, Def-H.25]; the constraint surface $=$ the cap census [CT0.11; FT.68(1)–(3), FT.69(1)]; photon $=$ trivial chain [D3.7, frozen]; "mass $=$ time-averaged real edges" $=$ the $m_{\mathrm{eff}}$ reads [FT.68(1), FT.70(5)]; irrational mass hierarchy $=$ defect radicals [FT.63(6)]; triangle–triangle composition laws $=$ the bowtie/double-triangle/face cells [FT.49, FT.50]; locked content "sits there and gravitates" $=$ CT4.5 dust. *Corrected*: the octahedron "forbidden zone" [FT.70(4)]; "triangle minimal winding $k{=}1$" — the floor fermion is the digon ($k{=}1$, $j{=}\tfrac12$ [FT.28]); the triangle's minimal on-shell winding is $k{=}3$ ($\Theta{=}6$, $\kappa{\equiv}2$; $\kappa{\equiv}1$ gives $\Theta{=}3$, off-shell [FT.22, FT.32]); "tetrahedron $=3$ quarks $+$ singlet seal" — tetrahedron dark sealing is meson-only (even-$\varepsilon$ [FT.63(7)]); the first $\varepsilon$-phase is the face floor [FT.49]; "everything is triangles" [FT.72(1)]; "$3$ colours $=$ triangle edges" — colour is grounded at rung $3$ [D3.1, CT3.x] with the $\{2,3\}$-partition rule [FT.34(5)]; the triangle's $3$ edges supply the first $\varepsilon$-type *correspondence*, not the derivation. *Amplitude-layer verdict on the whole picture*: closed triangles cancel standalone [FT.67(3a)] and never occur inside covers [FT.69(3)(iv)] — the triangle-composition picture is spectral-layer content [Def-H.16, M1/M2], legitimate there and untouched by this tier; the two layers meet only at item 13's open bridge. *Inadmissible*: every particle/cosmological identification (electron/proton/pion/$\rho$/dark matter/black hole/orbitals) — items 5/12 discipline: no calibration data, no identifications, recorded not adopted.
+
+**Req.** FT.3, FT.20, FT.22, FT.28, FT.32, FT.44, FT.49, FT.50, FT.54, FT.57, FT.59, FT.63, FT.64, FT.67, FT.69–FT.72; Def-H.16; A8; D1.11, D3.1, D3.7, D4.1, D4.2, D4.3; CT1.25 (Part 2); CT3.17 (Part 2); CT4.1–CT4.7, CT4.10 (Part 2); EM.20 (Part 2); C11; Eff/Comm-min (inherited, declared at use); field-degree and irreducibility arguments [math].
+
+**Pf.**
+$$
+(1):\ \text{inventory list exhaustive over Parts 1–2's}\ D^-\ \text{tags}\ [\text{D4.1/D4.2};\ \mathrm{CT4.1\text{–}4.7};\ \mathrm{FT.3/FT.20/FT.59}];\quad\text{response read}\ \Rightarrow\ \text{accessible re-emission}\ \Rightarrow\ \neg\mathrm{CT4.2}\wedge\neg\mathrm{D1.11}
+$$
+$$
+(2):\ \text{irreducibility: rational-root test} + \mathbb Z\text{-quadratic ansatz}\ (bd{=}5;\ a{+}c{=}0;\ \ldots)\ \text{no solution}\ [\text{machine}];\quad\sqrt5\notin\mathbb Q(\sqrt2,\sqrt3):\ \sqrt5=a{+}b\sqrt2{+}c\sqrt3{+}d\sqrt6
+$$
+$$
+\sigma_2:\ b{=}d{=}0;\ \sigma_3:\ c{=}0;\ a^2{=}5\ \text{impossible in}\ \mathbb Q;\qquad[\mathbb Q(\sqrt2,\sqrt3):\mathbb Q]=4,\ [\mathbb Q(\cos\tfrac\pi{10}):\mathbb Q]=4,\ \cap=\mathbb Q\ \implies\ \text{compositum degree}\ 16
+$$
+$$
+F\ \mathbb Q\text{-rational in integer reads} + c_j\in K:\ \text{value field}\subseteq K;\qquad\text{five floors}\implies K\supseteq\mathbb Q(\sqrt2,\sqrt3,\cos\tfrac\pi{10})
+$$
+$$
+\mathbb Q(y)\ \text{Galois}\ \mathbb Z_4:\ y\mapsto\sqrt5/y:\ \text{unique quadratic subfield}\ \mathbb Q(\sqrt5)\ [\text{math};\ \text{machine}:\ 2y^2-5=\sqrt5];\quad\sqrt5\notin\mathbb Q(\sqrt2,\sqrt3)\implies\text{intersection}\ \mathbb Q\implies\text{degree}\ 16
+$$
+$$
+(3):\ (2{-}\sqrt2)(2{+}\sqrt3)=4{-}2\sqrt2{+}2\sqrt3{-}\sqrt6\ \text{[machine, basis}\ \{1,\sqrt2,\sqrt3,\sqrt6\}\text{]}:\ \text{all components}\ne0\implies\notin\ \text{any quadratic subfield}
+$$
+$$
+(4):\ \mathrm{EM.20}\ \text{verbatim};\qquad(5):\ \text{each row cited at its tag}.\ \blacksquare
+$$
+
+**Rmk (effect on Gap 7).** The no-go does not derive Def-H.37(1)/Def-H.37(2) — the transfer remains an interface clause — but it *exhausts the alternative species within computed reads*: a bridge exists in the inventory's language only as a curvature-coupling ($\Theta_R$-type) formula. Gap 7's residue narrows accordingly: derive or replace the Def-H.37(1)-family transfer itself; the search space for replacements no longer includes combinatorial/drag/dielectric candidates.
+
+**Phys.** Ask the ledger for a mechanism turning hidden bits into pole mass by dragging through the dark sediment, and the answer is a clean negative in two movements. The sediment cannot polarize: it absorbs, retains, and stays silent — that silence is a theorem, not a gap. And no counting formula can reach the pole side: the five solids' pole factors live in number fields of degree up to sixteen, while every combinatorial read is an integer. What survives is the one bridge the interface layer already fixes — mass from the angle defect of wrapped geometry — now alone in its class.
+
+---
+
+---
+
+
+## Tier F.25 — The Chain-Local $\aleph$-Domains: Extended Exact-Cover Theorems and the Domain-Relativity of the Amplitude Layer
+
+### Def-H.27 — The $\aleph$-domains: literal, chain-dominant, literal-forced
+
+**Def.** Let $R\subseteq E_{\mathrm{dir}}(\Gamma)$ be a crystallization pattern on a skeleton $\Gamma$ [Def-H.25] under scopes (S1), (S3), (S4). Three domains for the vertex-amplitude exponent $\aleph$ entering A8's weight $w=\mathcal J\prod_{e\in R}G(e)(-1)^{\aleph}$, $G(e)=\sigma_e e^{i\pi\kappa_e}$ [D3.5, FT.9]:
+**(a) Literal (S2) — frozen.** $\aleph_v=|f_v|$ [D3.3] at type-$(1,1)$ vertices of $R$, $f_v=\tfrac12(\sigma_{\rightarrow}-\sigma_{\leftarrow})$; $\aleph_v=0$ at every other type. No chain data. [This is the domain of FT.67–FT.73 and of the frozen corpus.]
+**(b) E1 — chain-dominant.** Configurations $(R,\sigma,D)$ with $D$ a **chain decomposition**: a partition of $R$ into directed walks (edge sequences with $t(e_i)=s(e_{i+1})$ [D1.4]). For each walk $c$: open ($s(c)\ne t(c)$) $\Rightarrow$ interior vertices $=$ all but the two endpoints; closed ($s(c)=t(c)$; D1.4's Janus clause is trivial at (S3)) $\Rightarrow$ **every** vertex of $c$ is interior, the start vertex included — arrival on the last edge, departure on the first (the **wrap read**). Then
+$$
+\aleph(\sigma,R,D)=\sum_{c\in D}\ \sum_{v\in\mathrm{int}(c)}\bigl|f_v(c)\bigr|,\qquad f_v(c)=\tfrac12\bigl(\sigma_{\mathrm{out}(c,v)}-\sigma_{\mathrm{in}(c,v)}\bigr)\ \text{in }c\text{'s own edges at }v,
+$$
+and $Z^{E1}_\Gamma=\sum_R\sum_D\sum_\sigma w^{E1}$.
+**(c) E2 — literal-forced.** At type-$(1,1)$ vertices the literal D3.3 read is retained *regardless of $D$* — the chain choice there is $\aleph$-gauge: such a vertex has a unique in- and a unique out-edge in $R$, so every passage through it gives the same $f_v$ and the datum is type-determined. At higher-type vertices the reads come from chain passages. Equivalently — and this is the form computed — the summed datum is the **partial-matching system** $M=(M_v)_{v\ \mathrm{higher}}$, each $M_v$ a partial matching between $\mathrm{in}_R(v)$ and $\mathrm{out}_R(v)$; the orbits of the induced partial bijection on $R$ are the chains, and an orbit that is a *path returning to its start vertex* is a closed chain in the sense of (b) and gains the wrap read there:
+$$
+\aleph(\sigma,R,M)=\sum_{v\ (1,1)}|f_v|+\sum_{v\ \mathrm{higher}}\ \sum_{(e,e')\in M_v}\bigl|f(e,e')\bigr|+\sum_{\mathrm{wraps}}|f|,
+\qquad Z^{E2}_\Gamma=\sum_R\sum_M\sum_\sigma w^{E2}.
+$$
+**Coverage convention (all three domains).** For $e\in R$ let $\operatorname{cov}_{\mathrm{dom}}(e):=\#\{\aleph\text{-reads of }e\text{ in the domain}\}$ (literal: the type-$(1,1)$ endpoints; E1: the walk-interior and wrap reads; E2: the forced literal reads, the $M$-passages, and the wraps). Since $(-1)^{\aleph_v}=\sigma_{\mathrm{in}}\sigma_{\mathrm{out}}$ [FT.67(1)] and $\prod_{e\in R}G(e)=(-1)^{\sum_e\kappa_e}\prod_{e\in R}\sigma_e$ at (S1),
+$$
+w^{\mathrm{dom}}=(-1)^{\sum_e\kappa_e}\prod_{e\in R}\sigma_e^{\,1+\operatorname{cov}_{\mathrm{dom}}(e)}
+=(-1)^{\sum_e\kappa_e}\!\!\prod_{e:\ \operatorname{cov}_{\mathrm{dom}}(e)\ \mathrm{even}}\!\!\sigma_e,
+\qquad
+\sum_\sigma w^{\mathrm{dom}}\ne0\iff\operatorname{cov}_{\mathrm{dom}}(e)\ \text{odd}\ \ \forall e\in R,
+$$
+the $\sigma_e$-exponent being $1+\operatorname{cov}_{\mathrm{dom}}(e)$ in every domain [FT.67(2)'s Pf, domain-blind]. **[typographical correction, applied in place at FT.67(2): its displayed monomial subscript read $\operatorname{cov}(e)$ *odd*; the exponent identity $1+\operatorname{cov}(e)$ recorded in its own Pf forces *even*. The classification, the values $4^{|\mathcal C|}(-1)^{\sum\kappa}$, the Pf, and every census built on them are unchanged — the slip is display-only.]**
+
+**Rmk (status).** Domains (b), (c) are **computed variants, not adopted**: Parts 1–2 define $\aleph$ by (a) [D3.3 via A8]; domains (b), (c) await the domain choice. The extension is *forced data* wherever the corpus itself uses chain-local pass-through reads — FT.21(i)'s telescoping identity, FT.62(5)'s observed-variant EM rows — so (b)/(c) are the two canonical completions of that usage to the weight; which (if either) governs A8's $\aleph$ is an author's declaration, not derivable here, and no interface definition is introduced (nothing below is used as a premise by any other tier; the literal-domain record of Tiers F.23–F.24 stands untouched). Both variants are evaluated under the same (S1)/(S3)/(S4) scopes; $\kappa$-invariance of the classifications and the $(-1)^{\sum\kappa}$ value scaling carry over verbatim [FT.67(2) Pf pattern].
+
+**Rmk (finiteness).** For finite $R$ the sets of walk partitions $D$ and of partial-matching systems $M$ are finite, so $Z^{E1}_\Gamma$, $Z^{E2}_\Gamma$ are finite sums over a finite skeleton — convergence trivial, as in Def-H.25.
+
+---
+
+---
+
+### FT.74 — The extended exact-cover theorems
+
+**Thm.** Under Def-H.27, at (S1); for general on-shell integer $\kappa$ every value below scales by $(-1)^{\sum_e\kappa_e}$ and no classification changes. Write $\varepsilon(R):=(-1)^{|R|}2^{|R|}$: on the support of either classifier $|R|$ is even [each thread contributes $2$ edges], so $\varepsilon(R)=2^{|R|}>0$ and the stated values are the exact amplitudes.
+$(1)$ **E1 classification.**
+$$
+\sum_D\ \sum_\sigma w^{E1}(R,\sigma,D)=N_{E1}(R)\cdot\varepsilon(R),
+$$
+where $N_{E1}(R)$ is the number of partitions of $R$ into **open directed $2$-threads** $s\to v\to t$ ($s\ne t$; the junction $v$ of any type — locked junctions included). Every other decomposition cancels: a walk of length $\ge3$ double-reads its interior edges; a length-$1$ walk leaves its edge unread ($\operatorname{cov}=0$); a closed walk double-reads every edge (all vertices interior, wrap included); a closed $2$-thread — a digon — is a closed chain [D1.4] and cancels by the same wrap read.
+$(2)$ **E2 classification.**
+$$
+\sum_M\ \sum_\sigma w^{E2}(R,\sigma,M)=N_{E2}(R)\cdot\varepsilon(R),
+$$
+with $N_{E2}(R)=0$ unless **(a)** no edge of $R$ joins two type-$(1,1)$ vertices (such an edge is read literally twice), and **(b)** every literal thread at a type-$(1,1)$ vertex is open — a literal thread whose two ends coincide is a closed chain [D1.4], and its wrap read double-reads both edges. Otherwise $N_{E2}(R)$ is the number of open-$2$-thread partitions of the **higher-only remainder** $R_{\mathrm{hh}}:=\{e\in R:\ \text{neither endpoint is type-}(1,1)\}$, junctions necessarily higher-type; the forced literal threads cover exactly the edges touching type-$(1,1)$ vertices, once each.
+$(3)$ **Pointwise order, and incomparability of the three domains.** $N_{E2}(R)\le N_{E1}(R)$ for every $R$ on every skeleton (an E2 structure maps injectively to its thread partition: forced literal threads are open by (2b), edges with a $(1,1)$ endpoint are covered exactly once by (2a)-(2b), and the $R_{\mathrm{hh}}$ threads are E1 threads) — machine-asserted with zero violations on $9472$ patterns (the tetrahedron and bidirectional $P_4/P_5/P_6$, exhaustively), together with $|R|$ even on both supports. The literal domain embeds into neither extension and neither into it. Witnesses (triples $(\mathrm{lit},E2,E1)$; machine: classifier $=$ brute-force sum on each row):
+$$
+\begin{array}{l|cccccc}
+R & \text{digon} & \text{dir. }3\text{-cycle} & \text{dir. }4\text{-cycle}^{*} & \text{double-thread hub} & \text{digon-pair hub} & \text{bidir }P_4\text{ floor}\\
+\hline
+(\mathrm{lit},E2,E1) & (0,0,0) & (0,0,0) & (0,0,32) & (0,32,32) & (16,0,16) & (0,1024,1024)
+\end{array}
+$$
+$^{*}$on the $4$-cycle skeleton. The **digon-pair hub** $R=\{(0{\to}1),(1{\to}0),(0{\to}2),(2{\to}0)\}$, types $\bigl((2,2),(1,1),(1,1)\bigr)$ — the FT.69(4)/FT.69(5) witness family — has literal value $16$, is killed by E2 (both literal threads are closed) and revived by E1 at the alternative threading $\{(2{\to}0),(0{\to}1)\},\{(1{\to}0),(0{\to}2)\}$: $N_{\mathrm{lit}}\not\le N_{E2}$. The **directed $4$-cycle** gives $N_{E2}=0<N_{E1}=2$ (strictness of (3)'s order). The **double-thread hub** $\{(0{\to}2),(1{\to}2),(2{\to}3),(2{\to}4)\}$ has literal value $0$ and extended value $32$: both extensions exceed the literal domain. **The digon — the $\Sigma_{\min}$ pattern [FT.28] — cancels in all three domains**: the minimal floor's absence from the amplitude layer is domain-invariant.
+$(4)$ **Equality locus.** On patterns with no type-$(1,1)$ vertex, E2 $\equiv$ E1 exactly (no literal reads exist; in particular on every fully crystallized floor, all of whose vertices are type $(d,d)$, $d\ge2$ [FT.62]). There the extended value is $N\cdot\varepsilon(R)$ with $N$ the open-thread partition count, and the literal value is $0$ whenever $R\ne\varnothing$ [FT.67(3a)].
+$(5)$ **Machine verification.** The classifications are verified against brute-force sign sums taken straight from Def-H.27's semantics — E1 by explicit enumeration of *all* walk partitions $D$ with interior/wrap reads, E2 by explicit enumeration of *all* partial-matching systems $M$ with orbit-wrap closure — on **every** pattern of seven families: the digon ($2^2$), the bidirectional triangle ($2^6$), bidirectional $P_4$ ($2^8$), the single-vertex stars $n\in\{4,5,6\}$ ($2^4,2^5,2^6$), and all tetrahedron patterns with $K\le4$ ($794$): **$2460$ pattern-domain checks, zero mismatches**.
+
+**Req.** Def-H.25, Def-H.27; FT.21, FT.22, FT.28, FT.62, FT.67, FT.68, FT.69; A4, A8; D0.1, D0.8, D1.4, D1.5, D3.3, D3.5; CT0.9 (Part 1); involution/sign-sum arguments, walk and partial-matching enumeration [math; machine].
+
+**Pf.**
+$$
+(1):\ \text{walk}\ (e_1,\dots,e_k),\ k\ge3:\ e_j\ (1<j<k)\ \text{read at both its ends}:\ 1+\operatorname{cov}=3:\ \sigma_{e_j}\mapsto-\sigma_{e_j}\ \text{involution}\implies0
+$$
+$$
+k=1:\ e_1\ \text{unread}:\ \operatorname{cov}=0:\ 1+\operatorname{cov}=1\implies0;\qquad\text{closed walk}:\ \text{every edge read at both ends (wrap at the start)}:\ \operatorname{cov}=2\implies0
+$$
+$$
+k=2\ \text{open}:\ \text{each edge read exactly once}:\ 1+\operatorname{cov}=2:\ w=\varepsilon(R)\ \sigma\text{-constant}:\ \sum_\sigma w=\varepsilon(R);\qquad k=2\ \text{closed (digon)}:\ \operatorname{cov}=2\implies0
+$$
+$$
+\text{surviving}\ D\iff\text{partition into open}\ 2\text{-threads};\quad\text{distinct surviving}\ D\ \text{give identical weights}\implies\text{count}\ N_{E1}(R);\qquad|R|=2\#D\implies\varepsilon(R)=2^{|R|}
+$$
+$$
+(2):\ v\ \text{type}(1,1):\ \text{literal read forced}:\ \text{covers both edges of}\ v;\quad e=(x{\to}y),\ x,y\ \text{both}(1,1):\ \operatorname{cov}=2\implies0
+$$
+$$
+v\ (1,1),\ \text{literal thread closed}:\ \text{walk}\ s\to v\to s:\ s(c)=t(c):\ \text{closed}\ [\mathrm{D1.4}]:\ \text{wrap read at}\ s:\ \text{both edges}\ \operatorname{cov}=2\implies0
+$$
+$$
+e=(x{\to}y),\ x\ (1,1),\ y\ \text{higher}:\ e\ \text{read literally at}\ x:\ \text{any}\ M\text{-read of}\ e\ \text{at}\ y:\ \operatorname{cov}=2\implies0:\ \text{surviving}\ M\ \text{pair only within}\ R_{\mathrm{hh}}
+$$
+$$
+\text{orbits of}\ M|_{R_{\mathrm{hh}}}:\ \text{as in}\ (1):\ \text{only open}\ 2\text{-threads survive};\quad\text{forced literal threads cover}\ R\setminus R_{\mathrm{hh}}\ \text{once each}\implies N_{E2}(R)=\#\{\text{open thread partitions of}\ R_{\mathrm{hh}}\}
+$$
+$$
+(3):\ N_{E2}\le N_{E1}:\ M\mapsto\{\text{literal threads}\}\cup\{R_{\mathrm{hh}}\ \text{threads}\}:\ \text{well-defined and injective by}\ (2);
+$$
+$$
+\text{witness rows}:\ \text{direct computation}\ [\text{machine}:\ \text{classifier}=\text{brute force on each}];\qquad(4):\ \text{no}(1,1)\ \text{vertices}:\ R_{\mathrm{hh}}=R:\ \text{E2 sum}=\text{E1 sum}\ [\text{as in}\ (1)]
+$$
+$$
+(5):\ \text{exhaustive enumeration as scoped}\ [\text{machine}].\ \blacksquare
+$$
+
+**Phys.** Let the ledger compare phases along chains instead of at vertex types, and the exact-cover rule keeps its shape — edges tiled by two-step threads, each read exactly once — but the tiling grammar changes: *who* may host a thread junction (any vertex, or only the over-subscribed ones) and *which* loops count as closed become the defining choices. The three grammars provably disagree, in both directions, on four-edge patterns. One verdict is common to all three: the digon alone still sums to zero — the minimal fermion floor's exclusion from the amplitude layer is not an artifact of the literal domain.
+
+---
+
+---
+
+### FT.75 — Domain-relativity of the amplitude layer: lock revival, floor revival, parity, and the invariant bridge gap
+
+**Thm.** Under Def-H.27/FT.74, at (S1):
+$(1)$ **Single vertex — the locked sector comes alive, in two closed forms.** For the balanced single-vertex star ($n_{\mathrm{in}}+n_{\mathrm{out}}=n\in\{4,5,6\}$, external endpoints simple), $Z^{\pm}_{\mathrm{byp}}$ is domain-invariant $=1+4n_{\mathrm{in}}n_{\mathrm{out}}=(17,25,37)$ [FT.67(5)], while
+$$
+Z^{\pm}_{\mathrm{lock}}:\quad\text{literal }0;\qquad E2=E1=\sum_{a\ge2}\binom{n_{\mathrm{in}}}a\binom{n_{\mathrm{out}}}a\,a!\,4^{a}=(32,\ 96,\ 672),
+$$
+totalling $(49,121,709)$ across both sectors. **FT.67(5)'s "its locked sector vanishes identically" is a literal-domain theorem**: in the chain-local domains an isolated locked vertex has strictly positive amplitude — the type-$(a,a)$ patterns thread *through the vertex itself*. Second family (the locked digon hub): a locked $(a,a)$ hub hosting $a$ digons with $a$ simple centres has
+$$
+\text{literal}=4^{a},\qquad E2=0\ \ (\text{every literal thread closed}),\qquad E1=\bigl(!a\bigr)\,4^{a},
+$$
+$!a$ the derangement number (each thread must leave its own centre: a fixed-point-free permutation of the $a$ digons), machine-verified for $a=2,3,4,5$ with brute force at $a\le3$: $(16,128,2304,45056)$ against literal $(16,64,256,1024)$. The tetrahedron's $16$ locked digon-covers are exactly the $a=2$ ($12$; value $16$) and $a=3$ ($4$; value $128$) instances [FT.69(5)].
+$(2)$ **Floor revival — the dichotomy is domain-relative.** Every fully crystallized floor has no type-$(1,1)$ vertex, so E2 $\equiv$ E1 there [FT.74(4)], and the extended amplitude is strictly positive whenever the thread-partition count is:
+$$
+N(\text{tetra floor})=32\ \ (\text{value}\ 2^{17}),\quad N(\text{cube floor})=2304\ \ (2304\cdot2^{24}),\quad N(\text{octa floor})=72384\ \ (72384\cdot2^{24})
+$$
+— versus literal amplitude $0$ [FT.67(3a)]. Dodecahedron/icosahedron floor counts deferred (branch enumeration beyond the bounded rule; recorded, not guessed). **Bidirectional polygon floors obey an exact parity theorem**:
+$$
+N\bigl(\Sigma_{P_L}\ \text{floor}\bigr)=\begin{cases}4 & L\ \text{even}\quad(\text{value}\ 4\cdot2^{2L}),\\[2pt] 0 & L\ \text{odd},\end{cases}
+$$
+machine-verified $L=3..10$ $(0,4,0,4,0,4,0,4)$. **FT.68(4)'s verdict "fuzzing into solids — no at the amplitude layer" is the literal-domain verdict; in the chain-local domains every computed even polygon floor and the three computed Platonic floors carry strictly positive amplitude** (odd polygon floors stay dead by parity; the dodecahedron/icosahedron floors are open counts, not known-zero).
+$(3)$ **Directed cycles split the domains.** The single-orientation directed cycle $C_L$: literal $0$; E2 $0$ for every $L\ge2$ (all vertices type-$(1,1)$: conditions (2a)-(2b) fail); E1 $=2\cdot2^{L}$ for even $L$ — the cycle's two perfect matchings — and $0$ for odd $L$ ($|R|$ odd). Machine: $L=3..10$, values $(0,32,0,128,0,512,0,2048)$. The on-shell winding ladder's even rungs [FT.22] are exactly the E1-survivors; the digon ($L=2$) is dead in all three [FT.74(3)].
+$(4)$ **Bound content returns — the triangle census, and the digon-cover split.** On the tetrahedron (exhaustive, all $4096$ patterns): $2397$ patterns contain a directed $3$-cycle; of those, nonzero amplitude — literal $0$, E2 $833$, E1 $1025$; restricted to the bypass sector: $0/40/88$ (the FT.68(1)/FT.69(4) anchor "$0$ nonzero of $252$" is the bypass-only carrier count and stands). Exhibit: $R=\{(0{\to}1),(0{\to}3),(1{\to}2),(2{\to}0)\}$, threads $\{0{\to}1{\to}2\},\{2{\to}0{\to}3\}$, E1 value $16$ (classifier $=$ brute force). **The cycle-alternation lemma [FT.69(3)] is a literal-domain theorem and fails in both extensions** — chain-local threading dissolves odd cycles into open threads. The digon rows split by sector (machine, exhaustive): the $48$ *bypass* digon-covers of FT.69(4) are killed by **both** extensions ($N_{E2}=N_{E1}=0$ on all $48$ — a dissolved digon's centre has no alternative threading), while the $16$ *locked* digon-covers are killed by E2 and kept by E1 [clause (1)'s derangement family].
+$(5)$ **Skeleton totals (exhaustive; the literal column reproduces the stored anchors exactly).**
+$$
+\begin{array}{l|ccc}
+& Z^{\pm}_{\mathrm{byp}} & Z^{\pm}_{\mathrm{lock}} & \#\text{nonzero (byp/lock)}\\
+\hline
+\text{tetra, lit} & 1057 & 448 & 85/16\\
+\text{tetra, E2} & 5921 & 966656 & 173/934\\
+\text{tetra, E1} & 6881 & 1001536 & 227/1166\\
+\hline
+P_3\ \text{bidir, lit/E2/E1} & 25/121/121 & 48/0/48 & 7/13/13\ \text{byp};\ 3/0/3\ \text{lock}\\
+P_4\ \text{bidir, lit/E2/E1} & 353/225/289 & 64/1536/2112 & 29/21/23;\ 4/9/13\\
+P_5\ \text{bidir, lit/E2/E1} & 1161/361/1801 & 80/5760/8400 & 51/31/61;\ 5/30/60\\
+P_6\ \text{bidir, lit/E2/E1} & 3121/3697/7985 & 1632/50944/80224 & 97/79/135;\ 21/67/154
+\end{array}
+$$
+The $P_3$ locked row exhibits the second incomparability at skeleton level: E2 kills every literal locked cover there (each is a digon-pair hub — a closed literal thread), E1 keeps all $48$.
+$(6)$ **Norm-layer invariance, with the exact configuration count.** In every domain every factor of $w$ is a sign — $|w(R,\sigma)|=|w(R,\sigma,D)|=|w(R,\sigma,M)|=1$ (machine: asserted on every $(R,D,\sigma)$ of the bidirectional triangle) — so CT2.8's norms $\sum|w|^2$ count configurations: strictly positive, cancellation-blind, and *form-identical across domains*. At the pattern-sign layer the count is exactly
+$$
+\#\{(R,\sigma)\}=\sum_{R\subseteq E_{\mathrm{dir}}}2^{|R|}=3^{\,|E_{\mathrm{dir}}(\Gamma)|}
+\qquad(\text{machine:}\ 3^6=729,\ 3^8=6561,\ 3^{12}=531\,441\ \text{for}\ P_3,P_4,\text{tetra}),
+$$
+each directed edge contributing (absent, $+$, $-$); the extended domains refine this set by an inner sum over $D$/$M$ and cannot change it. **Item 13's bridge question is therefore invariant under the $\aleph$-domain choice**: no domain rescues or worsens it — exit (b) must operate on resolvent structure in every domain alike.
+$(7)$ **Gap 16(d) verdict.** The $\aleph$-domain question of the EM row is now exact data: three domains, three provably distinct path integrals, a complete witness catalogue [(3)–(5)], the frozen answer unchanged (D3.3's literal domain governs A8's $\aleph$), and the two chain-local variants computed but not adopted. The residue — whether FT.62(5)'s observed-variant EM-row reads should govern the *weight* as well — is an author's declaration whose consequences are now fully priced on both sides.
+$(8)$ **What is not domain-relative.** The cap census $c_K$ [FT.69(1)], the admissibility fractions $f_{\mathrm{adm}}(n,p)$, the phase-diagram reads $B_\Gamma(p)$, $L_\Gamma(p)$, $p^*_\Gamma$, $\langle K\rangle_{\mathrm{byp}}(p)$ [Def-H.26, FT.70] and the dust equation of state $\langle\rho_{D^-}\rangle_\Gamma(p)$ with $w=0$ [FT.71, CT4.5] are counting/type-level objects: none involves $\aleph$, so all are identical in the three domains — the phase boundaries of FT.70(2) and the dust densities of FT.71 stand as computed. Only the amplitude-side sums $Z^{\pm}$, the survivor grammar, and the censuses built from them are domain-relative. Covering *enumeration* likewise splits: the literal covers of FT.69(2) are a proper subset of the E1-survivors on every computed skeleton [clause (5)].
+
+**Req.** Def-H.25, Def-H.26, Def-H.27; FT.21, FT.22, FT.28, FT.34, FT.45, FT.62, FT.63, FT.67, FT.68, FT.69, FT.70, FT.71, FT.74; A8; D1.4, D1.5, D3.3; CT2.8 (Part 2); CT4.1, CT4.5 (Part 2); perfect matchings of cycles, derangement counts, parity arguments [math]; machine: exhaustive enumeration as scoped.
+
+**Pf.**
+$$
+(1):\ \text{type}(a,a)\ \text{pattern at the star}:\ a!\ \text{bijections in}\leftrightarrow\text{out},\ \text{all threads open (distinct externals)}:\ a!\,4^{a};\quad\text{pattern count}\ \binom{n_{\mathrm{in}}}a\binom{n_{\mathrm{out}}}a
+$$
+$$
+\text{types}\ (a,b),\ a\ne b:\ |R|=a+b\ \text{odd or unthreadable}:\ 0;\qquad\text{locked}\iff a+b\ge4\iff a\ge2\ \text{on the balanced support}
+$$
+$$
+\text{digon hub}:\ \text{literal}=4^{a}\ [\mathrm{FT.67}(2),\ |\mathcal C|=a];\quad E2:\ \text{centre}\ c_i\ \text{type}(1,1),\ \text{thread}\ h\to c_i\to h\ \text{closed}\ [\mathrm{D1.4}]:\ N_{E2}=0\ [(2b)]
+$$
+$$
+E1:\ \text{a thread through the hub is}\ (c_i{\to}h),(h{\to}c_j),\ i\ne j:\ \text{partitions}=\text{fixed-point-free permutations}:\ N_{E1}=\ !a:\ \text{value}\ !a\cdot2^{2a}=\ !a\cdot4^{a}
+$$
+$$
+\text{tetrahedron instances}:\ a=2\ (12\ \text{covers}),\ a=3\ (4)\ [\mathrm{FT.69}(5);\ \text{machine}]
+$$
+$$
+(2):\ \text{floors}:\ \text{types}(d,d),\ d\ge2:\ \text{no}(1,1)\ \text{vertices}:\ E2\equiv E1\ [\mathrm{FT.74}(4)];\quad\text{counts}:\ \text{thread-partition enumeration}\ [\text{machine}]
+$$
+$$
+\text{parity}:\ \text{mixed thread at}\ i:\ \text{in-edge}\ (i{-}1{\to}i)\ [\text{fwd}]\ \text{with out-edge}\ (i{\to}i{-}1)\ [\text{bwd}]:\ \text{walk}\ i{-}1\to i\to i{-}1:\ \text{closed}:\ 0;\quad\text{likewise bwd-in with fwd-out}
+$$
+$$
+\implies\text{every thread pure-orientation}\ [\text{machine witness at}\ L{=}4:\ 4\ \text{partitions},\ \#\mathrm{FF}=\#\mathrm{BB}=L/2=2\ \text{in each}];\quad L=\#\text{fwd edges}=2\,\#\mathrm{FF}\implies L\ \text{even}
+$$
+$$
+\text{even}\ L:\ \text{tilings of a directed}\ L\text{-cycle by}\ 2\text{-paths}=\text{perfect matchings of}\ C_L=2\ [\text{math}]:\ N=2_{\mathrm{fwd}}\cdot2_{\mathrm{bwd}}=4;\qquad\text{odd}\ L:\ |R|=2L\ \text{even but}\ L\ne2\#\mathrm{FF}:\ N=0
+$$
+$$
+(3):\ C_L:\ \text{every vertex type}(1,1):\ \text{literal/E2 forced reads}:\ \operatorname{cov}=2\ \text{per edge}:\ 0;\qquad E1:\ \text{tilings of the directed cycle}:\ \text{even}\ L:\ 2;\ \text{odd}\ L:\ L\ne2\#\mathrm{FF}:\ 0
+$$
+$$
+(4),(5):\ \text{exhaustive machine enumeration with the FT.74 classifiers (brute-force verified)};\qquad\text{exhibit threads checked edge-by-edge}
+$$
+$$
+(6):\ |\sigma_e|=1,\ \bigl|(-1)^{\aleph}\bigr|=1,\ \mathcal J=1\ [(S3)]\implies|w|=1;\qquad\#\{(R,\sigma)\}=\textstyle\sum_k\binom{|E_{\mathrm{dir}}|}k2^{k}=(1+2)^{|E_{\mathrm{dir}}|}\ [\text{binomial theorem}]
+$$
+$$
+(7):\ \text{conjunction of}\ (1)\text{–}(6);\qquad(8):\ \text{each read named in Def-H.26/FT.69(1)/FT.71 is a}\ \mu_p\text{-average of type-level data}:\ \aleph\ \text{absent}.\ \blacksquare
+$$
+
+**Phys.** Let the phase-comparisons ride chains instead of vertex types, and the amplitude layer changes character: locked vertices acquire weight of their own — a single over-subscribed vertex hums with amplitude $32$, $96$, $672$ as its degree climbs, and a hub holding $a$ digons answers with the derangement count times its literal voice — and the fully grown crystals, silent in the literal ledger, ring out: the tetrahedron floor at $2^{17}$, the cube at $2304\cdot2^{24}$, the octahedron at $72384\cdot2^{24}$, every even polygon ring at four times its full register. Odd rings stay dark by a pure parity argument, triangles come back dissolved, and the digon stays dark in every grammar.
+
+---
+
+---
+
+
+## Tier F.26 — The Platonic Pole Spectrum: Exact Multiplets, the Bounded-Hierarchy Ceiling, and the SM-Hierarchy Audit
+
+### FT.155 — Minimality of the defect interface
+
+**Thm.** The non-derived content of Def-H.37 is exactly one positive scalar ($\hat\mu'^2$; equivalently $\hat\mu^2$ at leading order, related by the recorded matching) and the holonomy identification $\mathcal U_c=\mathcal U^{\mathrm{spin}}_c$. Precisely:
+$$(1)\quad\textbf{shape uniqueness:}\ \ \text{any state-independent defect read on}\ SU(2)\ \text{transport has the form}\ m^2_{\mathrm{pole}}=F(\Theta_R),\ \ F=4\hat\mu'^2\sin^2(\cdot/4)\ \text{exact},\ \sim\hat\mu'^2(\cdot)^2/4\ \text{leading}$$
+$$\qquad\bigl[\mathrm{FT.54}(1):\ (U-1)^\dagger(U-1)=4\sin^2(\tfrac\phi2)\,\mathbb I\ \text{axis- and state-free};\ \mathrm{FT.54}(2):\ X^2=|\vec x|^2\mathbb I\ \text{fixes the leading term};\ \mathrm{EW.33}\ \text{is that Taylor term}\bigr];$$
+$$(2)\quad\textbf{combinatorial exclusion:}\ \ \text{no rational-coupling formula on integer-valued combinatorial reads reaches the computed pole factors — the five Platonic factors}\ \{2,\ 2{-}\sqrt2,\ 1,\ 2{-}2\cos\tfrac\pi{10},\ 2{-}\sqrt3\}\ \text{generate a degree-}16\ \text{extension of}\ \mathbb Q$$
+$$\qquad\bigl[\mathrm{FT.73}(2)\text{–}(3):\ \text{irreducibility machine-verified};\ \sqrt5\notin\mathbb Q(\sqrt2,\sqrt3);\ \mathbb Q(2\cos\tfrac\pi{10})\ \text{has unique quadratic subfield}\ \mathbb Q(\sqrt5);\ \text{single quadratic couplings excluded by the exact ratio}\ 4{-}2\sqrt2{+}2\sqrt3{-}\sqrt6\bigr];$$
+$$\text{the}\ D^-\text{-drag/dielectric candidates are independently refuted by response non-existence}\ [\mathrm{FT.73}(1);\ \mathrm{CT4.2},\ \mathrm{D1.11},\ \mathrm{CT4.4}];$$
+$$(3)\quad\textbf{range:}\ \ \text{on the Platonic skeletons the read takes finitely many values in}\ [0,4\hat\mu'^2]\ (\text{period}\ P_S=4\pi/\delta_v;\ P_S/2+1\ \text{distinct values};\ \text{monotone to the ceiling});\ \text{widest intra-solid ratio}\ \sqrt{4/D_S}\le6.3925\ [\mathrm{FT.76}(3)];$$
+$$(4)\quad\textbf{rotor reparametrization:}\ \ \text{any}\ k^2/R^2\text{-type rotational mass formula is a reparametrization of Def-H.37(2)'s leading regime}\ (R^{-2}\equiv\hat\mu'^2\Theta_R^2/4),\ \neg\text{an independent mechanism};\ \text{its approximation error at the documented uniform-minimal windings is}\ 18.9\%\text{–}91.0\%\ [\mathrm{FT.87}(1),(4)].$$
+Hence the replacement search space of the interface contains no combinatorial, dielectric, or rotor species; the derivation of the transfer itself — why the seed's transport defect is the terminus's pole displacement — remains application-layer content.
+
+**Req.** Def-H.37; Def-H.21; EW.32, EW.33 (Part 2); FT.54(1)–(2); FT.73(1)–(3); FT.76(3); FT.87(1), (4); CT4.2, CT4.4 (Part 2); D1.11; field-degree and enclosure arithmetic [math; machine: `checks/verify_H_stationarity.py`, `checks/verify_H_phasediagram.py`, `checks/verify_H_polespectrum.py`, `checks/verify_H_tumbling.py` pins].
+
+**Pf.**
+$$
+(1):\ \mathrm{FT.54}(1)\ \text{verbatim}:\ \|(U-1)v\|^2=2-2\cos\phi\ \forall\ \text{unit}\ v,\ \text{axis-free}\implies F(\Theta_R)\ \text{shape with}\ \phi=\Theta_R/2\ [\mathrm{Def\text{-}H.21}(6)];\qquad(2):\ \mathrm{FT.54}(2)
+$$
+$$
+(2):\ \mathrm{FT.73}(2)\text{–}(3)\ \text{verbatim}:\ \text{degree-}16\ \text{extension}\ [y^4{-}5y^2{+}5,\ x^4{-}8x^3{+}19x^2{-}12x{+}1\ \text{irreducible};\ \text{machine}];\qquad\mathrm{FT.73}(1):\ \text{response non-existence}
+$$
+$$
+(3):\ \mathrm{FT.76}(3)\ \text{verbatim}:\ \text{finite value set, monotone cone, ceiling}\ 4\hat\mu'^2;\qquad(4):\ \mathrm{FT.87}(1):\ \text{Taylor identification};\ \mathrm{FT.87}(4):\ \text{error table}\ [\text{exact enclosures}]
+$$
+$$
+\text{search-space clause}: (1)\ \text{fixes the shape};\ (2)\ \text{excludes the combinatorial species};\ (4)\ \text{absorbs the rotor species};\ \text{the residue is the transfer's derivation}\.\ \blacksquare
+$$
+
+**Phys.** The defect interface is priced: one scalar and one identification, and every competing shape is excluded by theorem — each alternative mass formula the corpus has tested is either inside its Taylor regime, outside its range, or outside its field. What remains open is not the form of the transfer but its locus: why the seed's failure to return to itself around a bound chain is that chain's pole mass.
+
+---
+
+### FT.77 — The SM-hierarchy audit: a bounded-hierarchy negative result
+
+**Thm.** **External-data clause.** The three hierarchies compared below — charged leptons $1{:}207{:}3477$, up-type quarks $1{:}600{:}80000$, down-type quarks $1{:}20{:}900$ — are *supplied measured data* (2–3 significant figures). They enter no derivation, no definition and no corpus result; A §0.2 admits no imported measured value, and this document identifies no particles (Open Gaps 5/12). This clause is an **adjudication cell** in the FT.73(5) pattern: its output is a verdict about a proposed identification, not a physical claim.
+$(1)$ **Audit method, maximally generous to the hypothesis.** The comparison pool is *every* nonzero pole value of *every* solid at *every* weight of the full periodic ladder [FT.76(3)] — $(2,4,3,10,6)$ distinct values per solid, $25$ in all, $16$ distinct across the five solids, giving $120$ pairwise ratios and $\binom{16}{3}=560$ triples; no winding, no variant and no iterate is excluded — and ratios are taken in **mass** ($m=\sqrt{D}\,\hat\mu'$), since the ladder supplies $m^2$. A match requires an *aligned triple*: three pool values whose normalized ratios reproduce a family's two ratios simultaneously.
+$(2)$ **The ceiling obstruction.** The pool's mass ratios are bounded above by $\sqrt{4/D_{\mathrm{dodeca}}}=6.392453\ldots$ [FT.76(3)] while the smallest top-ratio among the three families is $900$. Hence **no aligned triple can match any SM family**; the best achievable discrepancy factors are
+$$
+\times140.79\ (\text{down-type}),\qquad\times543.92\ (\text{charged leptons}),\qquad\times12514.76\ (\text{up-type}),
+$$
+exhaustive over all $560$ triples (machine). Pairwise, the closest single ratio is the pool maximum against the families' minimum ($m_\tau/m_\mu=16.797$): $\times2.63$ — within an order of magnitude, and structurally void: it pairs the two extremes and extends to no triple.
+$(3)$ **The dimension trap, disclosed.** Comparing $m^2$-ratios to SM *mass* ratios — dimensionally wrong — produces the only near-coincidences available: $20.431729$ vs $m_s/m_d=20$ ($\times1.0216$); $40.863458$ vs $m_b/m_s=45$ ($\times1.1012$); $14.928203$ vs $m_\tau/m_\mu=16.797$ ($\times1.1252$). All three are rejected: the ladder computes $m^2_{\mathrm{pole}}$, and Def-H.37(2) supplies no square-root reassignment.
+$(4)$ **Structural failures, independent of any fitting.** (a) The tetrahedron's multiplet is fully degenerate [FT.76(5a)] — it cannot carry a three-member family in either variant. (b) Even-$k$ multiplets contain an exactly massless weight [FT.76(5b)] — no charged SM fermion is massless, so the cube in (A) and the octahedron in (B) are excluded as family carriers outright. (c) Only two multiplets in the entire audit have three distinct masses — dodecahedron $k_f=5$ (A) and icosahedron $k_{vf}=5$ (B) — with mass ratios $1{:}2.902113{:}4.520147$ and $1{:}2.732051{:}3.732051$; their best discrepancies are $\times199.11$ and $\times241.15$ (down-type), $\times769$ and $\times932$ (leptons), $\times17699$ and $\times21436$ (up-type). (d) Five solids against three generations, with both dual pairs degenerate in $m_{\mathrm{hid}}$/$\Pi$ [FT.44(1)] and split only on the pole side [FT.76(8)]: no solid-to-generation assignment is available without calibration data the corpus does not supply. (e) Two of the four readings of $\Theta_R$ named by FT.63(4)/(6) give identically zero pole mass [FT.76(1)].
+$(5)$ **Quantitative distance.** Reaching even the least hierarchical family ($1{:}900$ in mass) with the ceiling $\max=4\hat\mu'^2$ would require a lightest defect value $D\le4/810000=1/202500=4.938\times10^{-6}$, i.e. — exactly, since $D=4\sin^2(\delta_v/4)$ — a cone defect $\delta_v\le4\arcsin\tfrac1{900}=4.4444\times10^{-3}$ rad $=0.2546^\circ$. The smallest Platonic defect is $\delta_v=\pi/5=36^\circ$: the available defects are a factor $45\pi=141.37$ too **large** in angle and $19822$ too large in $D$ — equivalently, the Platonic mass span is $140.79$ times too *small*. The two shortfalls agree to $0.5\%$ because $m\propto\delta_v$ at small angles. The obstruction is one of scale, not of pattern.
+$(6)$ **Verdict.** The hypothesis "Platonic vertex defects $=$ SM family hierarchies" **fails at the pole-mass layer**, conditionally on Def-H.37(2)/Def-H.38 and the vertex-figure convention, and — by the ceiling argument of (2) — unconditionally on the winding choice and on which solid is assigned to which family. No match is claimed, no parameter is fitted, and no identification is made. What survives as corpus content: the exact bounded multiplets of FT.76, the ceiling theorem, and the sharpened form of Gap 7's residue — **any replacement for the Def-H.37(2) transfer must supply a dynamical range of at least three orders of magnitude if it is ever to reach observed mass hierarchies; the defect species, on the Platonic skeletons, supplies at most $6.4\times$.**
+
+**Req.** FT.44, FT.60, FT.63, FT.73, FT.76; Def-H.37(2), Def-H.38; A §0.2 (policy); Open Gaps 5/12/16(e); external measured hierarchies (comparison only, marked); exhaustive triple search, ratio bounds [machine].
+
+**Pf.**
+$$
+(1):\ \text{pool}=\bigcup_S\{D(m,S)\ne0:\ 0\le m<P_S/2\}:\ (2,4,3,10,6)\ \text{per solid},\ 25\ \text{in all},\ 16\ \text{distinct across solids}
+$$
+$$
+(2):\ \max_{\text{pool}}\ \text{mass ratio}=\sqrt{4/D_{\mathrm{dodeca}}}=6.392453\ldots<16.797=\min\ \text{SM ratio}:\ \text{every pairwise discrepancy}\ge\times2.63
+$$
+$$
+\text{triples}:\ \text{normalized top ratio}\le6.392453:\ \text{discrepancy}\ge900/6.392453=140.7910:\ \text{exhaustive over all}\ 560\ [\text{machine}]
+$$
+$$
+(3):\ \text{direct evaluation of the stated pairs};\qquad\text{rejection}:\ [m^2_{\mathrm{pole}}]\ \text{is a squared mass by Def-H.37(2)}\ \text{— no reassignment declared}
+$$
+$$
+(4a)\text{–}(4c):\ \text{multiplet cardinalities and ratios from FT.76}(2),(7)\ [\text{machine}];\qquad(4d):\ \mathrm{FT.44}(1),(2);\qquad(4e):\ \mathrm{FT.76}(1)
+$$
+$$
+(5):\ D\le4/900^2=1/202500;\qquad D=4\sin^2(\delta/4)\le1/202500\iff\sin(\delta/4)\le\tfrac1{900}\iff\delta\le4\arcsin\tfrac1{900}
+$$
+$$
+x\le\arcsin x\le x+x^3\ (0<x\le\tfrac12):\ \delta\in[\tfrac1{225},\ \tfrac1{225}+\tfrac{4}{729\cdot10^6}]=[4.4444\times10^{-3},\ 4.44445\times10^{-3}]\ \text{rad}\ [\text{certified}]
+$$
+$$
+D_{\mathrm{dodeca}}\cdot202500=19822.11\ldots;\qquad(\pi/5)\,/\,4\arcsin\tfrac1{900}=45\pi=141.3716\ldots;\qquad\sqrt{19822.11}=140.791\ \checkmark
+$$
+$$
+(6):\ \text{conjunction of}\ (2)\text{–}(5).\ \blacksquare
+$$
+
+**Phys.** Take the five solids, give each the interface defect formula (Def-H.37(2)) and the interface symmetric-power carrier (Def-H.38), and ask whether the numbers look like a family of quarks or leptons. They do not, and the reason is not a bad choice of solid or winding: the formula can only ever return values between zero and four times one scale, because a cone defect is an angle and angles are bounded. A hierarchy of one to a thousand needs a dynamical range the geometry does not have. The honest output is therefore a boundary — the defect transfer, on these skeletons, is a spectrum of order one, and any future version of it that hopes to speak about observed masses must bring its range from somewhere else.
+
+---
+
+---
+
+
+## Tier F.27 — The Cover Orbit Decomposition: the Ansatz Split, the Combinatorial Ceiling, and the Bridge Census
+
+### Def-H.28 — Cover classes, and the two class-mass ansätze
+
+**Def.** Let $\Gamma$ be a skeleton [Def-H.25] with directed edge set $E_{\mathrm{dir}}(\Gamma)$ and automorphism group $\operatorname{Aut}(\Gamma)$ acting on vertices, hence on $E_{\mathrm{dir}}(\Gamma)$ by $(a,b)\mapsto(p(a),p(b))$. A **cover class** (orbit class) is an $\operatorname{Aut}(\Gamma)$-orbit $\mathcal O$ of crystallization patterns $R\subseteq E_{\mathrm{dir}}(\Gamma)$; its **multiplicity** is $\Omega_{\mathcal O}=|\mathcal O|$, with $\Omega_{\mathcal O}\cdot|\operatorname{Stab}(R)|=|\operatorname{Aut}(\Gamma)|$ [orbit–stabilizer] and hence $\Omega_{\mathcal O}\mid|\operatorname{Aut}(\Gamma)|$. Invariants of a class (all constant on $\mathcal O$, machine-verified): $K=|R|$; admissibility ($k_v\le3\ \forall v$) and lock status; cover status and $|\mathcal C|$; amplitude $4^{|\mathcal C|}$ [FT.67(2)]; the canonical directed-cycle content of $R$ (its **signature**: which cycles the cover shadows); the aspect mask $\mathcal A(\max_v k_v)$ and observable mask dimension [CT0.13, CT0.14]. The two class-mass reads:
+$$
+\textbf{A (corpus-native)}:\quad m_A(\mathcal O)=K\,\frac{\ln2}{\mathfrak h}\qquad[\text{FT.68}(1)/\text{FT.70}(5)\text{'s}\ \langle K\rangle\ln2/\mathfrak h\ \text{read, per class};\ \neg\text{new datum}],
+$$
+$$
+\textbf{B (external ansatz, NOT a corpus read)}:\quad m_B(\mathcal O)=\Bigl(K-\alpha\ln\Omega_{\mathcal O}\Bigr)\frac{\ln2}{\mathfrak h},\qquad\alpha\ \text{a formal parameter, no value declared}.
+$$
+**Rmk (B's exact form).** $\Omega\mid|\operatorname{Aut}|$ and $|\operatorname{Aut}|=2^3\cdot3$ (tetrahedron, $24$) or $2^4\cdot3$ (cube, $48$) force $\Omega=2^a3^b$, so $\ln\Omega=a\ln2+b\ln3$ **exactly** and every Ansatz-B mass lies in the $\mathbb Q$-span of $\{1,\ln2,\ln3\}$ with the single free coefficient $\alpha$: $(K,a,b)$ is a complete exact label. No floating-point logarithm is evaluated anywhere. The corpus supplies no free-energy/entropic mass read (CT4.7/CT4.10's entropy triangle and FT.71's dust equation of state are not mass formulas), so B is recorded as an *ansatz*, computed as directed, never adopted, and no result below is used as a premise by any other tier.
+**Rmk ($p$-independence, verified).** Because $K$ is constant on $\mathcal O$, the directive's orbit-wise weighted average reduces identically:
+$$
+\langle K\rangle_{\mathcal O}=\frac{\sum_{\sigma\in\mathcal O}K\,p^{K}(1-p)^{|E|-K}}{\sum_{\sigma\in\mathcal O}p^{K}(1-p)^{|E|-K}}=K\qquad\forall p\in(0,1),
+$$
+so Ansatz A is $p$-independent by proof, not by observation. What Cal-F's $r$ (hence $p=r/(1+r)$) does move is the *measure* of each class, $\mu_p(\mathcal O)=\Omega_{\mathcal O}\,p^{K}(1-p)^{|E|-K}$, and with it every ensemble read — FT.70(5)'s $\langle K\rangle_{\mathrm{byp}}(p)$, FT.71's $\langle\rho_{D^-}\rangle_\Gamma(p)$, and the phase boundary $p^*_\Gamma$ [FT.70(2)]. Class masses and class weights are different objects; only the latter flicker.
+
+---
+
+---
+
+### FT.79 — The combinatorial ceiling and the cover-hierarchy audit (second clean negative)
+
+**Thm.** Under Def-H.28; the SM hierarchies of clause (4) are **external measured data**, marked, entering no derivation and no identification (A §0.2).
+$(1)$ **Ansatz A spectrum (exact).** Cover masses are $m_A=2|\mathcal C|\ln2/\mathfrak h$ [FT.67(2): $|R|=2|\mathcal C|$ on covers], so the nonzero values are the even ladder $K\in\{2,4,6\}$ (tetrahedron) and $\{2,4,6,8,10,12\}$ (cube); pooled, $6$ distinct masses with exactly $11$ pairwise ratios
+$$
+\Bigl\{\tfrac65,\tfrac54,\tfrac43,\tfrac32,\tfrac53,2,\tfrac52,3,4,5,6\Bigr\}\subset\mathbb Q,
+$$
+lightest $2\ln2/\mathfrak h$, heaviest $12\ln2/\mathfrak h$, median $7$ (of the distinct values) / $8$ (orbit-weighted on the cube). Every ratio is a quotient of integers $\le6$.
+$(2)$ **The ceiling theorem.** For any cover on any skeleton $\Gamma$: $K=2|\mathcal C|$ [FT.67(2)]; admissibility gives $\sum_vk_v=2K\le3V$ [CT0.11], so
+$$
+|\mathcal C|\le\tfrac{3V}{4}\ (\text{bypass}),\qquad |\mathcal C|\le V\ (\text{locked, centres are distinct vertices}),
+$$
+and the widest Ansatz-A mass ratio available on $\Gamma$ is $\le3V/4$ (bypass) or $\le V$ (locked). Spanning $1{:}R$ therefore **requires** $V\ge4R/3$ (bypass) or $V\ge R$ (locked):
+$$
+\begin{array}{c|cccccc}
+R & 20 & 207 & 600 & 900 & 3477 & 80000\\
+\hline
+V\ge\ (4R/3) & 27 & 276 & 800 & 1200 & 4636 & 106667
+\end{array}
+$$
+against $V=4$ (tetrahedron, max ratio $3$) and $V=8$ (cube, max ratio $6$). The cover sector's dynamic range is bounded by **skeleton size**, exactly as the pole sector's was bounded by the defect angle [FT.76(3)] — and both bounds evaluate to $\approx6$ on the computed cells.
+$(3)$ **Ansatz B: no $\alpha$-free hierarchy.** The classes are the $(K,a,b)$ triples with $\ln\Omega=a\ln2+b\ln3$: $18$ on the tetrahedron's bypass sector — $19$ including its two locked cover classes, the extra one being $(K,a,b)=(6,2,0)$ — with $K\le6$, $a\le3$, $b\le1$, and $14$ on the cube's cover sector with $K\le12$, $a\le4$, $b\le1$, so $m_B/\!(\ln2/\mathfrak h)=K-\alpha(a\ln2+b\ln3)$ lies between $K-\alpha\ln|\operatorname{Aut}|$ and $K$. A ratio exceeding (2)'s bound can arise only where some class's mass passes through zero, i.e. at the tuned values $\alpha=K/(a\ln2+b\ln3)$ — a finite set, one per class, at each of which the ratio is *infinite* rather than $207$. **The signature structure does not supply the $\ge3$ orders of magnitude required by Gap 7's residue**: the informational datum is capped by $3V/2$ and the entropic one by $\ln|\operatorname{Aut}|\le\ln48$; what the signature supplies is degeneracy, not range.
+$(4)$ **The audit (external data: charged leptons $1{:}207{:}3477$; up-type $1{:}600{:}80000$; down-type $1{:}20{:}900$).** Pool $=\{2,4,6,8,10,12\}$ (all cover masses of both skeletons, both sectors):
+- pairwise, the closest cover ratio to each SM ratio is always the pool maximum $6$, giving discrepancies $\times2.7995$ (vs $m_\tau/m_\mu=16.797$), $\times3.333$ (vs $20$), $\times7.5$ (vs $45$), $\times22.22$ (vs $133.3$), $\times34.5$ (vs $207$), $\times100$ (vs $600$), $\times150$ (vs $900$), $\times579.5$ (vs $3477$), $\times13333.3$ (vs $80000$). The best, $\times2.7995$, is within an order of magnitude and is structurally void: it pairs our maximum with their minimum and extends to no triple.
+- aligned triples, exhaustive: the best is $(2,4,12)\mapsto1{:}2{:}6$ against every family, with discrepancy $\times150$ (down-type), $\times579.5$ (leptons), $\times13333.3$ (up-type). **No aligned triple is within a factor of $10$**, and the floor is exact: $900/6=150$.
+$(5)$ **Dimension trap #2, disclosed and rejected.** The amplitudes $4^{|\mathcal C|}\in\{1,4,16,64,256,1024,4096\}$ *do* span $3.6$ orders, and produce the only near-coincidences in the whole audit: $256$ vs $207$ ($\times1.2367$), $4096$ vs $3477$ ($\times1.1780$), $16$ vs $16.797$ ($\times1.0498$), $1024$ vs $900$ ($\times1.1378$), $64$ vs $45$ ($\times1.4222$). All are rejected: $4^{|\mathcal C|}$ is the $Z$-weight of FT.67(2), not a mass; no corpus tag maps an amplitude to a mass, Def-H.37(2)/Def-H.38 declare no such read, and the square-root-corrected values ($16,64,4,32,8$) miss by $\times4.2$–$\times54$. Same species as the $m^2$-vs-$m$ trap [FT.77(3)] — recorded because it is exactly what a forced fit would seize on.
+$(6)$ **Verdict.** The cover hypothesis fails at the mass layer, for a structural reason dual to FT.77's and with no parameter fitted: the observable-sector masses are the even ladder $2|\mathcal C|\ln2/\mathfrak h$ capped by the cap census, so the reachable ratio range is $\le\max(3V/4,V)$ — six on the cube, three on the tetrahedron, against SM spans of $20$–$80000$. The messiness is genuine but sits in the degeneracies ($\Omega$ up to $48$; $264$ cube cover classes; $21$ signatures; chirality pairs), and degeneracy carries no hierarchy. **Neither the roof nor the fuzz yields the SM spectrum on the computed skeletons**; both sectors point to the same requirement — a much larger subnetwork ($V\ge1200$ for the down-type family alone) or a mass read of a different species.
+
+**Req.** Def-H.25, Def-H.28; FT.44, FT.67, FT.68, FT.69, FT.70, FT.76, FT.77, FT.78; A §0.2 (policy); CT0.11 (Part 1); CT1.20 (Part 2); cap-census bound, exhaustive triple search, exact rational ratios [math; machine]. External SM hierarchies: comparison only, marked at (4).
+
+**Pf.**
+$$
+(1):\ |R|=2|\mathcal C|\ [\mathrm{FT.67}(2)];\qquad\text{ratios}=\{b/a:\ a<b\in\{2,4,6,8,10,12\}\}:\ \binom62=15\ \text{pairs},\ 11\ \text{distinct values}
+$$
+$$
+(2):\ 2K=\textstyle\sum_vk_v\le3V\ [\mathrm{CT0.11}:\ k_v\le3];\qquad|\mathcal C|\le V:\ \text{centres are distinct vertices, each contributing its two edges}
+$$
+$$
+\text{ratio}\le|\mathcal C|_{\max}/1;\qquad|\mathcal C|_{\max}\ge R\implies V\ge\tfrac{4R}3\ (\text{bypass}),\ V\ge R\ (\text{locked});\qquad\text{cube}:\ \tfrac{3\cdot8}4=6\ \checkmark
+$$
+$$
+(3):\ \Omega\mid|\operatorname{Aut}|=2^a3^b\implies\ln\Omega=a\ln2+b\ln3;\qquad m_B=0\iff\alpha=K/(a\ln2+b\ln3):\ \text{finitely many tuned values}
+$$
+$$
+\alpha\ \text{away from them}:\ |m_B|\ge\min_{\text{classes}}|K-\alpha L|>0:\ \text{ratios bounded by}\ \tfrac{K_{\max}+\alpha\ln48}{\min|K-\alpha L|}:\ \text{no}\ \alpha\text{-free large ratio}
+$$
+$$
+(4):\ \text{exhaustive over the pool}:\ 11\ \text{pairwise},\ \binom63=20\ \text{triples per family};\qquad\text{floor}:\ 900/6=150\ \text{exactly}
+$$
+$$
+(5):\ \text{direct evaluation of the stated pairs};\qquad\text{rejection}:\ 4^{|\mathcal C|}\ \text{is}\ Z\text{-weight}\ [\mathrm{FT.67}(2)],\ \neg\text{mass read}
+$$
+$$
+(6):\ \text{conjunction of}\ (2)\text{–}(5).\ \blacksquare
+$$
+
+**Phys.** Ask the covers for a mass spectrum and they answer with the even ladder two, four, six, eight, ten, twelve — six notes, all ratios of small integers, exactly the kind of clean answer the combinatorial hypothesis was meant to avoid. The reason is not that the covers are simple; there are two hundred and sixty-four of them on the cube alone, in chiral pairs, shadowing ten different cycle patterns. It is that a mass counted in crystallized edges cannot outrun the edge budget: three edges per vertex, four vertices, twelve in all. Hierarchy of the observed kind needs either a thousand-vertex subnetwork or a different question.
+
+---
+
+---
+
+### FT.80 — The bridge census: covers are amplitude-real, norm-real, and spectrally un-indexed
+
+**Thm.** Under Def-H.16/Def-H.28, at (S1)–(S4):
+$(1)$ **What a cover class supplies, exactly.** For every class $\mathcal O$: the real-edge set and $K$; $|\mathcal C|$ open V-threads (each centre pairs one in-edge with one out-edge [FT.67(3d)]) $=$ transit content, bosonic-side by D1.5; the dissolved even closed chains with their exact $\delta h$ [D0.6: $\delta h=\#\{e\in\gamma\}$] $=2$ (tetrahedron) and $\in\{2,4\}$ (cube); the aspect mask $\mathcal A(\max_vk_v)$ and observable mask dimension $\in\{6,16,17,25\}$ [CT0.13, CT0.14]; the amplitude $4^{|\mathcal C|}\ne0$ [FT.67(2)]; and the CT2.8 norm weight $\Omega\cdot2^{K}$ (the class's $(R,\sigma)$ count, cancellation-blind).
+$(2)$ **What it does not supply.** Def-H.16's resolvent $Z(\mathcal R,\Sigma)=\langle\mathrm{out}|(1-\mathbf F_M^{(\Sigma)})^{-1}|\mathrm{in}\rangle$ with pole $\iff1\in\operatorname{spec}\mathbf F_M^{(\Sigma)}$ takes as arguments a **subnetwork $\Sigma$ with an observer channel $C$** (Def-H.1/Def-H.13, Def-H.16), the **colour data** that $\Pi_{\mathcal C}$ requires (FT.19/FT.27 — not determined by a crystallization pattern), and a **materialization** clause for whatever bound chains are to contribute poles (Def-H.16's own iff; M1/M2 species). None of the three is a function of $R$: no rule of Parts 1–3 maps a crystallization pattern to a $(\Sigma,C)$ pair with colour assignment.
+$(3)$ **Census (machine, every class).** Tetrahedron $7/7$ and cube $264/264$ cover classes have: transit content $|\mathcal C|\cdot\Omega$ threads ($180$ and $40\,200$ thread instances); bound-chain candidates exactly the even cycles ($84$ and $14\,832$ instances; every $\delta h\ge2$, satisfying Def-H.4's floor, at rung $n(v)=6\ge2$); amplitude nonzero; norm weight nonzero; and **zero spectral poles constructible within the declared inventory**. Covers are therefore neither amplitude ghosts nor poles: they are amplitude-real and norm-real, spectrally *un-indexed*.
+$(4)$ **The exact resolvent condition a declaration would have to supply** (recorded, **not** adopted). Item 13's exit (b) is constructible only as a triple of declarations: (i) a rule $\mathcal O\mapsto(\Sigma(\mathcal O),C(\mathcal O))$; (ii) colour data making $\Pi_{\mathcal C}(\Sigma;C)$ computable, hence $F^{\Sigma}_{\mathrm{strong}}$ and the mask $\mathbf F_M^{(\Sigma)}$ [FT.19, FT.26]; (iii) a materialization clause for dissolved cycles (M2-species), after which the pole condition is exactly $1\in\operatorname{spec}\mathbf F_M^{(\Sigma(\mathcal O))}$ with FT.22's single-valuedness on each materialized chain. This is a interface-definition species extension of Def-H.16; it is enumerated here and **not** introduced.
+$(5)$ **Content bifurcation (the $\delta h/\delta\tau$ question).** The split is structural and exact, but it is a *content-type* split, not a statistics theorem: every cover decomposes as $|\mathcal C|$ transit threads (D1.5: bosonic content) plus dissolved even closed chains (D1.5: fermionic content *if materialized*; Def-H.4's termini are then candidate fermion loci, their $\delta h\ge2$ and rung $\ge2$ floors both satisfied). $\delta h$ is exact per chain ($2$ or $4$); $\delta\tau$ is a **schedule** datum (D0.7: retained ledger updates) that $R$ does not determine — Cal-F declares the flicker *rates* $r=\Gamma_{J^+}/\Gamma_{J^-}$, not per-tick schedules — so the "finite $\delta h$ with $\delta\tau=0$ persistence" test is not evaluable from a pattern alone. The corpus contains no exchange operator and no permutation representation of particle interchange, so **the spin–statistics connection remains an external reading**; what is derived here is the bound/transit content split per class, and the FT.1/FT.38 flux bound $I\le\min(\delta h/\mathfrak h,4\delta\tau)\ln2$ applies to it only once a schedule is declared.
+$(6)$ **Consistency with the selection side.** Covers contain no *materialized* closed chain, hence carry no Bott datum [Def-H.24, FT.66(4)]; their content sits wholly in the transit sector, which is the one sector where index-$0$ stability exists on such slices [FT.48(3), FT.66(4b)] — FT.68(4)(d)'s verdict recovered at class level, and the reason the cover sector is where any future selection mechanism would have to act.
+
+**Req.** Def-H.1, Def-H.4, Def-H.13, Def-H.16, Def-H.24, Def-H.25, Def-H.28; FT.1, FT.19, FT.22, FT.26, FT.27, FT.38, FT.40, FT.48, FT.66, FT.67, FT.68, FT.78; D0.6, D0.7, D1.5, D2.6; A8; CT2.5, CT2.8 (Part 2); CT0.13, CT0.14 (Part 1); Def-H.16, Cal-F (referenced); census by exhaustive class enumeration [machine].
+
+**Pf.**
+$$
+(1):\ \text{each centre pairs one in- with one out-edge}\implies|\mathcal C|\ \text{threads}\ [\mathrm{FT.67}(3d)];\qquad\delta h(\gamma)=\#\{e\in\gamma\}\ [\mathrm{D0.6}]
+$$
+$$
+\text{norm weight}:\ \#\{(R,\sigma):\ R\in\mathcal O\}=\Omega\cdot2^{K}\ [\text{per-edge binary freedom}];\qquad|w|=1\ [\mathrm{FT.67}(6c)]
+$$
+$$
+(2):\ \text{arguments of}\ Z(\mathcal R,\Sigma):\ (\Sigma,C,\text{colour},\text{materialization});\quad R\mapsto\Sigma:\ \neg\exists\ \text{rule in Parts 1–3}\ [\text{inventory}]
+$$
+$$
+\Pi_{\mathcal C}\ \text{needs}\ \mathrm{Colour}(\Sigma)\ \text{and its sealing}\ [\mathrm{FT.19},\mathrm{FT.27}]:\ \text{colour is slot-algebra data},\ \neg\text{a crystallization datum}
+$$
+$$
+(3):\ \text{exhaustive per class}\ [\text{machine}];\qquad\text{amplitude}\ne0:\ \mathrm{FT.67}(2);\qquad\text{norm}>0:\ \mathrm{CT2.8},\ |w|=1
+$$
+$$
+(4):\ \text{Def-H.16's pole condition read with its own argument list};\qquad\text{FT.22 single-valuedness on materialized chains}
+$$
+$$
+(5):\ \mathrm{D1.5}\ \text{bound/transit}=\text{closed/open};\qquad\text{Def-H.4 floor}:\ \delta h\ge2\ \checkmark\ (2,4),\ n(v)\ge2\ \checkmark\ (6)
+$$
+$$
+\delta\tau:\ \text{schedule datum}\ [\mathrm{D0.7}];\quad\text{Cal-F supplies the rate datum},\ \neg\text{schedules};\qquad\neg\exists\ \text{exchange operator in the inventory}\implies\text{statistics external}
+$$
+$$
+(6):\ \neg\exists\ \text{materialized closed chain on a cover}\implies\neg\exists\ \operatorname{ind}_B\ \text{datum}\ [\mathrm{FT.66}(4)];\qquad\text{transit sector}:\ \mathrm{FT.48}(3).\ \blacksquare
+$$
+
+**Phys.** Ask whether the roof hangs from the fuzz, and the census answers precisely: the fuzz is real where the ledger can see it — every cover class carries nonzero amplitude and nonzero norm, thousands of open threads, and thousands of dissolved even loops with exact hop counts — and silent where a particle is defined. A pole needs a subnetwork, an observer channel, colour sealing and a materialization clause; a crystallization pattern supplies none of the four. So the covers are not ghosts and not particles: they are the amplitude-and-norm substrate on which a declaration would have to place a spectrum. The content split they *do* carry is clean: everything threading is transit-side, every dissolved loop is a bound-side candidate with two or four hops, and the statistics names attached to those two sides remain vocabulary until an exchange structure is declared.
+
+---
+
+---
+
+
+## Tier F.28 — The Full-SM Completeness Audit: Particle Content, the Gauge Blocks, the Rung Ledger, and the Deficit Table
+
+### Def-H.29 — Completeness-audit vocabulary: read classes, census statuses, the external-data clause
+
+**Def.** A **read class** is a species of quantity the corpus can attach to a configuration, chain or subnetwork:
+**(R1) binary registration** — $\sigma_e\in\{\pm1\}$ [CT0.9, A7/A8], the end-charge $q_{\mathrm{EM}}(c)=\tfrac12(\sigma_{s(c)}-\sigma_{t(c)})\in\{-1,0,+1\}$ [D3.4, EM.9], the vertex phase-comparison $f_v$ and $(-1)^{\aleph_v}$ [D3.3, FT.67(1)], the edge weight $G(e)=\sigma_e e^{i\pi\kappa_e}$ [D3.5].
+**(R2) integer winding and ledger** — $\widehat{ds}^{\,2}$, $\Theta(\gamma)$ [D1.6, D1.7], the on-shell quantum $\kappa_e\in\mathbb Z$ [FT.22], the winding $k$ and $\Theta_{\mathrm{int}}$ [FT.25(3), FT.34, FT.43], $\delta h$ [D0.6], the spin ladder $j=|k|/2$ on $\mathrm{Sym}^k$ carriers [CT0.7a, EW.32, FT.52, FT.55, FT.60, Def-H.38].
+**(R3) singlet admissibility** — the sealing indicator $\mathcal C(\Sigma;C)\in\{0,1\}$ and its idempotent $\Pi_{\mathcal C}$ [Def-H.9, Def-H.10, FT.19, CT3.18, CT3.22], with the partition rule ($|\mathrm{Colour}(\Sigma)|$ into $2$s and $3$s) [FT.34(5), CT3.17].
+Observability is decided per aspect by FT.20's criteria table and FT.26's mask ($\dim\mathcal K_\Sigma\le18$), not by block membership [CT0.12/CT0.13/CT0.14].
+**Census statuses.** An SM entry is **PRESENT** iff a cited tag supplies a read for it; **PARTIAL** iff a read exists for part of its defining data (e.g. the representation but not the chirality); **ABSENT** iff no read exists — and every ABSENT is either a *machine-checked inventory fact* (a scan of the frozen Parts 1–2 text for the defining vocabulary) or a *cited structural no-go*. The **completeness fraction** is $(\#\mathrm{PRESENT}+\tfrac12\#\mathrm{PARTIAL})/\#\mathrm{entries}$.
+**External-data clause.** Every SM datum used in this tier — field content, representation dimensions, hypercharge assignments, anomaly sums, parameter counts, the mass hierarchies of FT.77/FT.79 — is *external measured or textbook data*, marked at each use, entering no derivation and no definition (A §0.2; P5: $\neg\exists$ quantity identified with a measured external constant; the comparison procedure is "fix $\mathfrak h$ once, read P2 $\wedge$ P3, the result is a test of A9"). No species is identified with a corpus object.
+**Rmk (citation correction).** The audit proposal attributed the read classes and the independent-quanta verdict to "FT.33/FT.34". In the current numbering those are the defect bridge and the round-trip quantization; the read classes are as listed above, and the independent-quanta audit is **FT.30** (with FT.31's continuum ledger), the pair-channel sector audit **FT.11/FT.12**, and the block decomposition **FT.30**'s $(G_5+W_3+H_1)+(J^+_3+J^-_3)+D^+_1$ tiling of the $16$ registers [CT0.12, CT1.1]. Recorded so that no future pass inherits the mis-citation.
+
+---
+
+---
+
+### FT.82 — Gauge-block reconstruction (audit pass B): the algebra closes, the coupling structure does not
+
+**Thm.** Under Def-H.29:
+$(1)$ **The register arithmetic** (all derived, zero freedom [P2]): $\dim\mathfrak H(\mathbb C^4)=16=(7,3,3,3)$ [CT1.1]; the aspect–capacity match $3{+}3{+}5{+}3{+}1{+}1=16=C_{\mathrm{cap}}$ [CT0.12]; the pair-channel tiling $(G_5{+}W_3{+}H_1)+(J^+_3{+}J^-_3)+D^+_1=16$ [FT.30]; the mask flag $\dim\mathcal K_n=(6,16,17,25)$ strict [CT0.14]; the observable bound $\dim\mathcal K_\Sigma\le1{+}5{+}1{+}3{+}8=18$ [FT.26(3)].
+$(2)$ **$\mathfrak{su}(2)$ closes exactly** on the $W(3)$ block: with $W_i=\sigma_i/2$ over $\mathbb Q(i)$, $[W_i,W_j]=i\varepsilon_{ijk}W_k$ (all $9$ pairs, machine), $\mathfrak T(W_i)=0$, and EW.32's uniform normalization $\mathfrak T(\mathcal G_A\mathcal G_B)=\tfrac12\delta_{AB}$ on $\{W_1,W_2,W_3,Y\}$ with $Y=\sigma_0/2$ (all $16$ pairs, machine). The carrier is $\mathcal H_{\mathsf v}\cong\mathbb C^2$ — a genuine doublet read [EW.32].
+$(3)$ **$\mathfrak{su}(3)$ closes exactly** on the colour algebra: in the matrix-unit (root-space) basis $\{E_{12},E_{21},E_{13},E_{31},E_{23},E_{32},H_1,H_2\}$ over $\mathbb Q$ — all $8$ traceless, all $64$ commutators in the span, the Jacobi identity on all $8^3$ triples, $[H_1,H_2]=0$, the $A_2$ root system $\{(2,-1),(1,1),(-1,2)\}\cup(-)$ in the $(H_1,H_2)$ basis, and a nondegenerate Killing form (machine, exact rationals). $\dim=8=3^2{-}1$ [CT3.8], $N_{\mathrm{gluon}}=8$ with **no ninth mode** — the $\mathfrak u(3)$ centre is allocated to $F_{\mathrm{EM}}$ [CT3.13] — and $N_{\text{colour}}=3=\log_2C_{\mathrm{cap}}-1$ is *derived from A2 $+$ CT0.9, not chosen* [CT3.20]. FT.58's hosting identity $(\lambda_1+i\lambda_2)/2=E_{12}$ re-verified over $\mathbb Q(i)$.
+$(4)$ **The electroweak identities hold as exact polynomial identities** in $\mathbb Q[g,g',s]/(s^2-g^2-g'^2)$ (machine): EW.20's mass matrix in $(W_1,W_2,W_3,Y)$ has $W_{1,2}$ decoupled and a neutral block of **rank one** — $\det=0$ exactly, $\operatorname{tr}=g^2+g'^2=:m_Z^2$ (times $\mu_\star^2/4$ [EW.33]), null vector $(g',g)$, massive vector $(g,-g')$ [EW.23]; hence **the photon is exactly massless as the null direction** and $A=\sin\theta_WW_3+\cos\theta_WY$, $Z=\cos\theta_WW_3-\sin\theta_WY$ [D3.10, EW.24] with $\cos\theta_W=g/s$; $m_W=m_Z\cos\theta_W$ [P2] and $e=gg'/s=g\sin\theta_W=g'\cos\theta_W$, $1/e^2=1/g^2+1/g'^2$ [EW.35] — all verified with denominators cleared. The seed satisfies $W_3\mathsf v=-\tfrac12\mathsf v$, $Y\mathsf v=+\tfrac12\mathsf v$ [EW.20] and $T_a\mathsf v=0$ for $a=1..8$ [EW.32] — **the vev is a weak doublet component and a colour singlet**, exactly the SM pattern.
+$(5)$ **The $\mathrm U(1)$ direction** lives in EW.8 (the abstract generator $Y$ with three realizations: slot, aspect, $\dots$), D3.10/EW.24 (the mixing), and CT0.14's $\dim\mathcal K^{(\mathrm{EM})}=1$; EM.20 fixes the *phase coefficient* $\alpha_{\mathrm{EM}}=\pi$ (a pure number under Comm-min $+$ Eff), which is **not** the fine-structure constant — the coupling is $e=g\sin\theta_W$ [EW.35], a P4-dependent quantity whose *value* is not derived. (This is the standing trap recorded in FT.73(5): comparing $\pi$ to $1/137$ is a category error.)
+$(6)$ **Independent quanta: the SM's particle–boson picture is not reproduced.** FT.30's audit stands at block level: $G(5)$ is an independent quantum only as a *joint geometric read* (winding $\kappa,k\in\mathbb Z$; unit $\mathfrak h^2=4G_N\ln2$ [CT2.9/P3]); $W(3)$ is a *candidate* spin quantum with extraction closed under Def-H.38 [FT.55/FT.56/FT.60]; $H(1)$ is **not** an independent quantum (a continuous configuration datum, read only through the mass fold [Def-H.36, FT.20's $H$ row]); $J^\pm$ are structural and $\neg$observable [FT.20]; $D^+$ is uniform [D4.3]. So gauge bosons emerge as **aspect-block reads with per-aspect observability criteria** [FT.20], not as quanta of a gauged symmetry acting on chiral matter.
+$(7)$ **Two structural mismatches, derived not assumed.** (a) **No gauged chiral coupling**: the blocks act on the $16$-dimensional pair-channel register [CT0.6/CT0.12] and on slot algebras [D3.1, CT3.20]; nothing in Parts 1–2 couples a gauge block to a chiral fermion multiplet, because no chiral fermion multiplet exists [FT.81(5)]. The SM's defining feature — $\mathrm{SU}(2)$ acting on left-handed doublets only — has no read. (b) **The scalar block is $1$-dimensional**: $\dim F_H=1$ [CT0.12, derived: all $16$ directions allocated] against the SM Higgs doublet's $4$ real dof; the *counting* of the Higgs mechanism is nonetheless right ($\operatorname{rk}M^2=3$: three massive vectors, one massless), because the breaking is carried by $\mu_\star^2\propto h_0^2$ [EW.33] rather than by four scalar fields.
+$(8)$ **The colour ceiling is the SM's own largest factor.** Slot algebras are realized only for $n\le3$ [CT3.20/CT4.4, P2's $n_{\max}=3$], so $\mathfrak{su}(3)$ is simultaneously the hosting ceiling and the realization ceiling [FT.58/FT.59]; at $n\ge4$, $D^-$ carries **no gauge structure at all** — no nonabelian and no abelian algebra, no generator contributed [CT4.4, derived from CT0.12's full allocation]. Hence the corpus cannot host a gauge factor larger than $\mathfrak{su}(3)$, which is exactly the SM's largest — a structural coincidence worth recording, and a hard bound against any GUT-scale reading.
+
+**Req.** Def-H.29; A2, A8; C7, C8; D2.3, D3.1, D3.2, D3.10, D4.1, D4.3; CT0.5–CT0.14 (Part 1); CT1.1, CT1.2, CT1.10–CT1.12, CT2.9 (Part 2); CT3.2, CT3.7–CT3.9, CT3.13, CT3.17–CT3.22 (Part 2); CT4.1, CT4.4 (Part 2); EW.8, EW.13, EW.20, EW.22–EW.24, EW.27, EW.32, EW.33, EW.35 (Part 2); EM.9, EM.17–EM.20 (Part 2); FT.11, FT.12, FT.19, FT.20, FT.26, FT.27, FT.30, FT.31, FT.52–FT.60; P2, P3, P4; Pauli/Gell-Mann basis facts, root-space and Killing-form criteria, rank-one matrix facts [math; machine].
+
+**Pf.**
+$$
+(1):\ \text{each sum asserted exactly}\ [\text{machine}];\qquad 7+3+3+3=16=3+3+5+3+1+1=(5+3+1)+(3+3)+1
+$$
+$$
+(2):\ \sigma_i\sigma_j=\delta_{ij}+i\varepsilon_{ijk}\sigma_k\implies[\tfrac{\sigma_i}2,\tfrac{\sigma_j}2]=i\varepsilon_{ijk}\tfrac{\sigma_k}2;\qquad\mathfrak T(\tfrac{\sigma_A}2\tfrac{\sigma_B}2)=\tfrac14\cdot2\delta_{AB}=\tfrac12\delta_{AB}
+$$
+$$
+(3):\ [E_{ij},E_{kl}]=\delta_{jk}E_{il}-\delta_{li}E_{kj};\quad[H_1,H_2]=0;\quad[H_i,E_\alpha]=\alpha(H_i)E_\alpha;\quad\text{span closure by exact coordinate solve}
+$$
+$$
+\text{Killing}:\ K_{ab}=\textstyle\sum_{c}\operatorname{tr}(\operatorname{ad}_{E_c}\operatorname{ad}_{E_{\bar c}})\ \text{form};\ \det\ne0\implies\text{semisimple}\ [\text{machine, exact Fractions}]
+$$
+$$
+(\lambda_1+i\lambda_2)/2=(E_{12}{+}E_{21}+i(-iE_{12}{+}iE_{21}))/2=E_{12}\ \checkmark\ [\mathrm{FT.58}]
+$$
+$$
+(4):\ M^2_{\mathrm{neutral}}=\tfrac{\mu_\star^2}4(g,-g')^{\mathsf T}(g,-g'):\ \det=0,\ \operatorname{tr}=g^2+g'^2;\quad M^2(g',g)^{\mathsf T}=0;\quad M^2(g,-g')^{\mathsf T}=(g^2+g'^2)(g,-g')^{\mathsf T}
+$$
+$$
+m_W^2s^2=g^2(g^2+g'^2)=m_Z^2g^2\implies m_W=m_Z\cos\theta_W;\qquad e^2s^2=g^2g'^2\iff\tfrac1{e^2}=\tfrac1{g^2}+\tfrac1{g'^2}
+$$
+$$
+W_3\mathsf v=-\tfrac12\mathsf v,\ Y\mathsf v=+\tfrac12\mathsf v:\ \text{direct}\ 2\times2\ \text{multiplication over}\ \mathbb Q(i);\qquad T_a\mathsf v=0\ [\mathrm{EW.32}]
+$$
+$$
+(5)\text{–}(8):\ \text{each row cites its tag};\qquad(7a):\ \text{inventory scan}\ [\mathrm{FT.81}(5)];\qquad(7b):\ \mathrm{CT0.12}\ \text{allocation}
+$$
+$$
+(8):\ \mathrm{CT4.4}\ \text{Pf}:\ (a)\ 16\ \text{pair directions fully allocated}\implies\neg\exists\ \text{direction for}\ D^-;\ (b)\ \text{slot algebras only}\ n\le3.\ \blacksquare
+$$
+
+**Phys.** Ask whether the sixteen registers rebuild the Standard Model's gauge group, and the arithmetic says yes in a way that is not a naming trick: an eight-dimensional colour algebra that closes with the right root system and no ninth gluon, a three-dimensional weak algebra whose doublet carries the vacuum exactly where the Standard Model puts it, and a neutral block of rank one whose null direction is the photon — with $\sin\theta_W$, $\cos\theta_W$ and $e$ falling out as polynomial identities rather than fits. Ask instead whether those blocks *act on matter* the way a gauge group does, and the answer is no: there is no chiral multiplet for them to act on, the scalar block is one-dimensional instead of four, and the quanta are aspect reads with observability criteria, not gauge bosons coupled to fermions. The gauge skeleton is derived; the coupling to chiral matter is absent.
+
+---
+
+---
+
+
+## Tier F.29 — Gravitational Reads in Three States, the Flicker Ripple, and the Tumbling-Model Adjudication
+
+### Def-H.30 — The three shape states
+
+**Def.** For a skeleton $\Gamma$ [Def-H.25] with potential degrees $n(v)$:
+**(S0) VV / all-virtual.** $R=\varnothing$: every potential edge virtual, $n_{\mathcal R}=0$, every pair at $\rho_\circ=\tfrac14 I$ [A5, CT0.2]. The shape-derived vacuum.
+**(S1) flicker / bypass.** $R\ne\varnothing$ admissible: $k_v\le3$ at every vertex [CT0.11], i.e. the bypass sector of Def-H.25, with its ensemble reads at $p$ [Def-H.26, Cal-F] and its cover sub-sector [FT.67(2)].
+**(S2) $D^-$ trapped.** Some vertex locked ($k_v\ge4$), up to the fully crystallized floor $R=E_{\mathrm{dir}}(\Gamma)$: content absorbed at rate $\propto O(n)$ [CT4.1/D4.2], retained in $\mathfrak L$ and **not accessible** [D1.11/CT4.3], with no accessible pole [CT4.2].
+**Rmk (status).** The three states are the proposal's Punnett vocabulary (VV / RV,VR / RR) mapped onto corpus objects; the mapping is recorded, not adopted as a definition of anything physical. S1 and S2 are Def-H.25's own sectors; S0 is CT0.2's vacuum restricted to a skeleton's potential-edge set.
+
+---
+
+---
+
+### FT.85 — Vacuum census, baseline equality, and the constructible gravitational reads
+
+**Thm.** Under Def-H.30:
+$(1)$ **Vacuum census.** The corpus declares exactly three scalar extremes and proves there is no fourth: the **Janus vacuum** $n_{\mathcal R}=0$ with $(S_{\mathrm{raw}},S_{\mathfrak L})=(\ln4\ \text{per pair (max, argmax unique}=\tfrac14I),0)$ [CT0.2, CT4.7(1)]; **$D^+$** with $(0,0)$ — a *pure*, uniform, non-configuration-dependent scalar [CT4.7(2), D4.3], $w=-1$ [CT1.25]; **$D^-$ locked** with $(\min_{\mathrm{acc}},\max\wedge\neg\text{accessible})$ [CT4.7(3), D1.11, CT4.2, CT4.3]; and $\neg\exists$ a fourth extreme [CT4.10], $F_H$ being a dynamical field [EW.27].
+$(2)$ **Baseline equality (proven, not measured).** For every shape $S$: $S_{\mathfrak L}(\mathrm{VV}(S))=n_{\mathcal R}\ln2=0=S_{\mathfrak L}(V_{\mathrm{raw}})$ [CT1.29]; $\Delta S_{\mathrm{raw}}=0$ on both sides [CT0.2: every pair at the argmax]; $m_{\mathrm{hid}}=S_{\mathfrak L}/\mathfrak h=0$ [FT.44(4)]; $\rho_{D^-}=0$ [CT4.5's iff]; and CT1.29's $S_{\partial\mathcal B}$ has no argument (no closed real-edge surface). Hence
+$$
+m_g^2\bigl(\mathrm{VV}(S)\bigr)=m_g^2\bigl(V_{\mathrm{raw}}\bigr)\quad\forall S,
+$$
+on every constructible read, and $\Delta S_{\text{vacuum polarization}}(S)\equiv0$. The reason is registration, not arithmetic: virtual pairs carry **no registration** [A7/D0.5: $\phi_e$ is defined on $e\in E_{\mathcal R}$; A5: the sole ledger exclusion is the Haar draw; Def-H.25(S4): virtual edges weight $1$, no phase]. Honest remark: the *absolute* raw entropy is $|\mathrm{pairs}|\cdot\ln4$ and is shape-dependent; the *deficit* is shape-independent and zero. The raw vacuum's mass reads vanish from three independent derived reads — nothing is set to zero by hand.
+$(3)$ **$m_g^2:=\Delta S$ is not constructible.** (a) The inventory contains no inertial/gravitational mass distinction and no equivalence theorem (`inertial`, `Lyapunov`, `maximal mixing`, `equivalence principle`, `Theorem 11`: count $0$ in Parts 1–2); (b) $\Delta S_{\mathrm{raw}}$ of a *registered* configuration is bounded but undetermined — A4/D0.4 force a real pair strictly below $\ln4$ and no tag declares its $\rho$, so $\Delta S_{\mathrm{raw}}\in(0,n_{\mathcal R}\ln4]$ with no value; (c) the dimensionally correct entropy-based mass$^2$ *density* is $S/A=\ln2/\mathfrak h^2$ [CT1.29/CT2.9], a **state-independent constant** [FT.37: corrected by $1/\bar\kappa$], so state-dependence can enter only through $A$ or $\bar\kappa$.
+$(4)$ **The constructible reads, used for every table below.** (i) $m_{\mathrm{hid}}=S_{\mathfrak L}/\mathfrak h=E_{\mathrm{int}}\ln2/\mathfrak h$ — the universal taxonomy law [FT.44(4)] — with $m_{\mathrm{hid}}^2=E_{\mathrm{int}}^2(\ln2)^2/\mathfrak h^2$, dimension $\mathfrak q$ [D2.9/CT2.1]; (ii) the locked sector's stress-energy $T^{(D^-)}_{\mu\nu}=\rho_{D^-}u_\mu u_\nu$, $p=0$, $w=0$, $\rho_{D^-}=\sum_{v\ \mathrm{locked}}O(n_v)\ge0$ [CT4.1/CT4.5] — the corpus's one derived gravitational source; (iii) $S_{\partial\mathcal B}=A\ln2/\mathfrak h^2=A/(4G_N)$ with $A=n_{\mathcal R}(\partial\mathcal B)\mathfrak h^2$ and $G_N=\mathfrak h^2/(4\ln2)$, $\kappa^2=8\pi G_N$ **derived** [CT1.29/CT2.9/P3], bounded by CT4.9 ($\le3$ bits per accessible vertex; $S_{\mathrm{acc}}(\mathcal B)\le A/\mathfrak h^2$ bits); (iv) the pole side $m^2_{\mathrm{pole}}=4\hat\mu'^2\sin^2(\Theta_R/4)$ under Def-H.37(2) [FT.54/FT.76] — which is also what a two-patch field-source read reduces to on the cone metric [Def-H.21/FT.47], i.e. clause (iii) of the audit's B3 is already bounded [FT.76(3)].
+$(5)$ **The source criterion, exact.** $\rho_{D^-}>0\iff\exists v:\ k_v\ge4$ [CT4.5's iff] — machine-exhaustive over the tetrahedron's $4096$ and $P_4$'s $256$ patterns. Consequences: **every S1 configuration has exactly zero dark-dust stress-energy**, and only S2 states are dust sources; those are retained-but-inaccessible [CT4.2/CT4.3/D1.11], amplitude-zero in the literal domain [FT.67(3a)] and revived only in the chain-local domains [FT.75(2)]. So the flicker gas does not gravitate through $D^-$ at all; its only mass read is informational.
+$(6)$ **The state table** ($14$ shapes; $\langle K\rangle$ at $p=\tfrac12$ reproduces FT.70(5)/FT.68(1) verbatim):
+$$
+\begin{array}{c|ccc|ccc}
+& \multicolumn3{c|}{m_{\mathrm{hid}}\,\mathfrak h/\ln2} & \multicolumn3{c}{\rho_{D^-}}\\
+\text{shape} & \text{S0} & \text{S1}\ \langle K\rangle(\tfrac12) & \text{S2}\ E_{\mathrm{int}} & \text{S0} & \text{S1} & \text{S2}\\
+\hline
+\text{digon} & 0 & 1 & 2 & 0 & 0 & 0\ (n(v)=2\ \text{never locks})\\
+P_3..P_{10} & 0 & \tfrac83,\tfrac{248}{69},\tfrac{130}{29},\tfrac{296}{55},\tfrac{2618}{417},\tfrac{11344}{1581},\tfrac{896}{111},\tfrac{13588}{1515} & 2n & 0 & 0 & 16n\\
+\text{tetra} & 0 & \tfrac{852}{205} & 12 & 0 & 0 & 448\\
+\text{cube} & 0 & \tfrac{3311952}{395023} & 24 & 0 & 0 & 896\\
+\text{octa} & 0 & \tfrac{2124600}{318523} & 24 & 0 & 0 & 2976\\
+\text{dodeca} & 0 & \tfrac{4007491093935690}{191727103387307} & 60 & 0 & 0 & 2240\\
+\text{icosa} & 0 & \tfrac{215801166207}{15519497071} & 60 & 0 & 0 & 24384
+\end{array}
+$$
+with $S_{\mathfrak L}=(\text{that row})\cdot\ln2$, $A/\mathfrak h^2=E_{\mathrm{int}}$ in S2, and per-sector entropies **not available** (clause (7)).
+$(7)$ **No per-sector $\Delta S_A$.** Four cited reasons: no declared state $\Psi_X$ for a crystallization pattern, so $\|F_A\Psi_X\|^2$ has no argument; FT.30's audit leaves only the $G$ block with a geometric read and marks it **joint** ($\neg$ per-block); $H$, $J^\pm$, $D^+$ are explicitly not independent quanta [FT.30]; CT0.14/FT.26 supply block *dimensions* $(6,16,17,25)$ and the $\le18$ observable bound, which is all the sector map can carry. The only declared per-register decomposition is $S_{\mathfrak L}=K\ln2=\sum_{e\in R}\ln2$ [CT0.9: one real edge $=$ one bit] — machine-verified per configuration.
+
+**Req.** Def-H.25, Def-H.26, Def-H.30; FT.16, FT.30, FT.37, FT.44, FT.47, FT.54, FT.63, FT.67, FT.70, FT.71, FT.75, FT.76; A4, A5, A7; D0.5, D1.11, D4.2, D4.3; CT0.2, CT0.9, CT0.11, CT0.12, CT0.14 (Part 1); CT1.22, CT1.25, CT1.29, CT2.1, CT2.8, CT2.9 (Part 2); CT4.1–CT4.5, CT4.7, CT4.9, CT4.10 (Part 2); P1, P3, P5; Gibbs lemma [math]; exhaustive pattern enumeration [machine].
+
+**Pf.**
+$$
+(1):\ \text{CT4.7's three extremes with CT4.10's exhaustiveness};\qquad(2):\ n_{\mathcal R}=0\implies S_{\mathfrak L}=0\ [\mathrm{CT1.29}];\ \rho_{pq}=\tfrac14I\ \forall(p,q)\ [\mathrm{A5},\mathrm{CT0.2}]
+$$
+$$
+\text{registration}:\ \phi_e\ \text{defined on}\ e\in E_{\mathcal R}\ [\mathrm{A7},\mathrm{D0.5}];\quad\text{virtual weight}\ 1,\ \text{no phase}\ [\mathrm{Def\text{-}H.25(S4)}]
+$$
+$$
+(3a):\ \text{inventory scan};\qquad(3b):\ \mathrm{A4}/\mathrm{D0.4}:\ \text{real}\iff|\Pi_{\mathcal V}\rho|>\varepsilon_q:\ \text{strict sub-maximality, no declared}\ \rho
+$$
+$$
+(3c):\ S/A=\ln2/\mathfrak h^2\ [\mathrm{CT1.29}+\mathrm{CT2.9}:\ A/(4G_N)=A\ln2/\mathfrak h^2];\qquad\text{FT.37}:\ S_{\mathrm{reg}}/A_{\mathrm{loop}}=(\ln2/\mathfrak h^2)/\bar\kappa
+$$
+$$
+(4):\ [\mathrm{FT.44}(4)]:\ m_{\mathrm{hid}}=E_{\mathrm{int}}\ln2/\mathfrak h\ \text{on every computed cell};\qquad[\mathrm{CT4.5}]:\ T^{(D^-)}=\rho u u,\ p=0
+$$
+$$
+(5):\ \mathrm{CT4.5}\ \text{iff}:\ \rho_{D^-}=0\iff\neg\exists v:\ n(v)\ge4;\qquad\text{S1 admissible}\implies k_v\le3\ \forall v\ [\mathrm{CT0.11}]\implies\rho_{D^-}=0
+$$
+$$
+(6):\ \langle K\rangle_{\mathrm{byp}}(\tfrac12)=\frac{\sum_K Kc_K2^{-2E}}{\sum_Kc_K2^{-2E}}\ [\text{cap census, exact}];\qquad\rho_{D^-}(\text{floor})=V\cdot O(2d)\ [\mathrm{FT.63}(5)]
+$$
+$$
+(7):\ \text{the four cited obstructions};\qquad S_{\mathfrak L}=\sum_{e\in R}\ln2\ [\mathrm{CT0.9}].\ \blacksquare
+$$
+
+**Phys.** Ask the corpus for the weight of empty space and it answers with a proof rather than a parameter: the vacuum is a state of maximal raw information with no ledger content at all, and a shape whose edges are all still virtual is that same vacuum — not a slightly different one. Mass enters only where edges crystallize, one bit each, and gravity's own coupling is fixed by the single scale. The trapped sector is the only place with a derived stress-energy: pressureless dust that curves geometry while remaining, by theorem, out of reach. The flickering gas between the two carries information and amplitude but sources no dust whatsoever.
+
+---
+
+---
+
+### FT.86 — The flicker ripple: ultralocal raw dynamics, cap-induced alternation, and the quantum–classical gradient
+
+**Thm.** Under Def-H.26/Def-H.30 at $p=\tfrac12$ (every value exact; general $p$ by the same census):
+$(1)$ **The raw flicker has no spatial ripple.** $\mu_p$ is a Bernoulli **product** measure on directed edges [Def-H.26], so every connected edge–edge correlation vanishes identically: $\langle x_ex_{e'}\rangle=p^2=\langle x_e\rangle\langle x_{e'}\rangle$ for $e\ne e'$ (machine-exhaustive on $P_3$, $P_4$). Any waviness in the flicker geometry is **constraint-induced**, not dynamical.
+$(2)$ **The admissible flicker carries an exact period-2 alternating ripple.** Conditioning on admissibility ($k_v\le3$, CT0.11) couples neighbours; the connected correlations, by *true ring distance* (the two directions of one undirected edge are distance $0$ — a digon — not distance $1$), are exact rationals alternating in sign:
+$$
+\begin{array}{c|cccccc}
+& d=0 & d=1 & d=2 & d=3 & d=4 & d=5\\
+\hline
+P_4 & -\tfrac{133}{4761} & -\tfrac{64}{4761} & +\tfrac{28}{4761} & & & \\
+P_8 & -\tfrac{71068}{2499561} & -\tfrac{33124}{2499561} & +\tfrac{6928}{2499561} & -\tfrac{1504}{2499561} & +\tfrac{604}{2499561} & \\
+P_{10} & -\tfrac{1631509}{57380625} & -\tfrac{760384}{57380625} & +\tfrac{158716}{57380625} & -\tfrac{33184}{57380625} & +\tfrac{7216}{57380625} & -\tfrac{2884}{57380625}
+\end{array}
+$$
+Short-distance values converge to $L$-independent limits ($d{=}0\to-0.0284331$, $d{=}1\to-0.0132516$): the cap makes neighbouring crystallizations anticorrelate and next-nearest correlate.
+$(3)$ **The decay rate is the corpus's own transfer matrix.** With $\operatorname{charpoly}T(1)=x^2-3x-3$ [FT.68(2)/FT.70(3)], $\lambda_{1,2}=(3\pm\sqrt{21})/2$ and
+$$
+\frac{\lambda_2}{\lambda_1}=\frac{\sqrt{21}-5}{2}=-0.2087122\ldots\in\mathbb Q(\sqrt{21}),\qquad \xi=-1/\ln|\lambda_2/\lambda_1|=0.6382\ \text{directed edges},
+$$
+matching the measured ratios $C(2)/C(1)=-\tfrac{39679}{190096}=-0.2087314$ ($P_{10}$, **4 significant figures**) and $C(3)/C(2)=-\tfrac{8296}{39679}=-0.2090779$ (3 s.f.); $P_9$ gives $-\tfrac{2759}{13225}=-0.208620$. The **negative sign of $\lambda_2/\lambda_1$ is the alternation**. Deviations grow near the antipode ($d\approx L/2$) as finite-size wrap.
+$(4)$ **Exact moments from the cap census** (never a Bernoulli proxy): $\langle K\rangle$, $\langle K^2\rangle$, $\sigma_K^2$ for all $14$ shapes, with $\sigma_K^2/\sigma_{K,\mathrm{ind}}^2$ (the **cap factor**, $\sigma^2_{\mathrm{ind}}=2Ep(1-p)=E/2$) equal to $1$ for the digon (the cap never binds at $n(v)=2$), $\to0.7002$ for large polygons, and $0.155$–$0.373$ for the solids (icosa $0.1547$, octa $0.2228$). Anchors: digon $\langle K\rangle=1,\langle K^2\rangle=\tfrac32,\sigma^2=\tfrac12$; $P_3$: $\tfrac83,\tfrac{73}9,1$.
+$(5)$ **The ripple in the mass reads.** $\Delta S=S_{\mathfrak L}=K\ln2\Rightarrow\delta(\Delta S)=\sigma_K\ln2$ exactly; $\delta(m_{\mathrm{hid}})/m_{\mathrm{hid}}=\sigma_K/\langle K\rangle$ and $\delta(m_{\mathrm{hid}}^2)/m_{\mathrm{hid}}^2=2\sigma_K/\langle K\rangle$ (the factor $2$ exact). The raw-vacuum and VV baselines give **identical** $\delta(m_g^2)$ — by FT.85(2)'s proof, not by numerical agreement.
+$(6)$ **Quantum–classical gradient.** $\sigma_K/\langle K\rangle$ decreases monotonically from the digon's $1/\sqrt2=0.707107$ (exact) through $P_3$'s $3/8=0.375$ (exact) to the icosahedron's $0.10955$; the $1/\sqrt{\langle K\rangle}$ law holds with a **family-dependent coefficient** $\sigma_K/\sqrt{\langle K\rangle}$: $1/\sqrt2$ (digon), $0.6124$ ($P_3$), $0.6248$ converged ($P_4$–$P_{10}$), $0.41$–$0.52$ (solids) — the deviation from the binomial $1/\sqrt2$ being exactly the cap factor. **Near-pure-wave limit:** $\sigma_K/\langle K\rangle=1$ requires a *single* directed edge at $p=\tfrac12$ — amplitude-zero [FT.67(3b): $\operatorname{cov}=0$], hence not a bound shape. No shape in the inventory is near-pure-wave.
+$(7)$ **No frequency is constructible; one period is derived.** the Cal-F rate datum is the ratio $r=\Gamma_{J^+}/\Gamma_{J^-}$ and per-edge detailed balance, and records that the corpus supplies no $J^\pm$ *rates*, so $f_{\mathrm{ripple}}=\Gamma_{\mathrm{tot}}/2\pi$, $\tau_c=1/\Gamma_{\mathrm{tot}}$ are reported **in units of the undeclared total rate** and no absolute frequency is claimed. Rate-free and derived: one $J^\pm$ event changes $(n_{\mathcal R},\delta h,\delta\tau)$ by $(\pm1,\pm1,\pm1)$ [CT0.3], so **in ledger-tick units $\tau_c=1$ tick** and the Lorentzian half-width is $1$ rad/tick; propagation obeys $\delta\tau\ge\delta h/4$ (at most $4$ hops/tick) [FT.1/FT.38, CT0.6, EM.5–7]. Leading order (single-flip granularity) the cap correlation renormalizes the Lorentzian **amplitude** by the cap factor and leaves the **width** at $\Gamma_{\mathrm{tot}}$; the full constrained spectrum is multi-timescale and not constructible without rates.
+$(8)$ **Self-modulation is not constructible.** A tick-rate/field coupling $r_q(g_q)$ has no referent: `clock`, `dilation`, `tick rate`, `r_q`, `g_q`, `local rate`, `running coupling`, `beta function` all count $0$ in Parts 1–2. The corpus has the conformal factor $\Omega=e^{\alpha_\Omega a_{00}}$ and the shift $N_i=\beta w_i$ [CT1.12], and $\delta\tau$ is defined as retained ledger updates along real edges [D0.7], but nothing couples the two. Logged as a gap (a new interface-definition species), not adopted.
+$(9)$ **The trapped sector does not ripple.** CT4.5's own Pf: locked $\Rightarrow$ no accessible pole [CT4.2] $\Rightarrow$ no propagating mode $\Rightarrow\mathsf E_{\mathrm{tr}}=0\Rightarrow T^{\mathrm{tr}}=0$ — S2 states are **non-oscillatory by theorem** (pure dust, $p=0$, $w=0$).
+
+**Req.** Def-H.26, Def-H.30; FT.1, FT.38, FT.67, FT.68, FT.70, FT.85; D0.7, D1.2; CT0.3, CT0.6, CT0.11 (Part 1); CT1.22, CT1.29 (Part 2); CT4.2, CT4.5 (Part 2); EM.5–EM.7 (Part 2); CT1.12; Cal-F; transfer-matrix spectra, exhaustive enumeration [math; machine].
+
+**Pf.**
+$$
+(1):\ \mu_p=\bigotimes_e\mathrm{Bernoulli}(p)\ [\mathrm{Def\text{-}H.26}]\implies\langle x_ex_{e'}\rangle=p^2\ \forall e\ne e'\ [\text{machine-exhaustive}]
+$$
+$$
+(2):\ \text{conditioning on}\ \{k_v\le3\}\ [\mathrm{CT0.11}]:\ \langle\cdot\rangle_{\mathrm{byp}}=\langle\cdot\,\mathbf1_{\mathrm{adm}}\rangle/B_\Gamma(p):\ \text{exact rationals by enumeration}
+$$
+$$
+(3):\ \det(xI-T(1))=x^2(x^2-3x-3)\ [\mathrm{FT.68}(2)];\quad\lambda_2/\lambda_1=(3-\sqrt{21})/(3+\sqrt{21})=(\sqrt{21}-5)/2\ \text{in}\ \mathbb Q(\sqrt{21})
+$$
+$$
+(4):\ \text{cap-DP census rows}\ [\mathrm{FT.68}(3),\mathrm{FT.69}(1)];\qquad\sigma^2=\langle K^2\rangle-\langle K\rangle^2\ \text{exact}
+$$
+$$
+(5):\ \Delta S=K\ln2\ [\mathrm{CT1.29}]\ \text{linear in}\ K;\qquad m_{\mathrm{hid}}^2\propto K^2\implies\text{relative ripple}\times2
+$$
+$$
+(6):\ \text{binomial reference}\ \sigma/\sqrt{\langle K\rangle}=\sqrt{1-p}=1/\sqrt2;\qquad\text{cap factor}=\sigma^2/\sigma^2_{\mathrm{ind}}
+$$
+$$
+(7):\ \mathrm{CT0.3}:\ J^\pm=(\pm1,\pm1,\pm1);\qquad\mathrm{FT.1}/\mathrm{FT.38}:\ I\le\min(\Delta\ell/\mathfrak h,4\delta\tau)\ln2
+$$
+$$
+(8):\ \text{inventory scan};\qquad(9):\ \mathrm{CT4.5}\ \text{Pf verbatim}.\ \blacksquare
+$$
+
+**Phys.** A flickering shape does not shimmer the way intuition suggests. Edge by edge its raw dynamics is completely uncorrelated — there is no wave in the dynamics at all. The waviness is created by the *budget*: because no vertex may hold more than three crystallized edges, a real edge here forbids one there, and the forbiddenness propagates around the ring with an exact alternation, negative–positive–negative, dying away by a factor of one fifth per step. That single number is the same eigenvalue ratio the corpus derived for its polygon transfer matrix years earlier, now showing up as a physical ripple. Smaller shapes ripple harder, and the ripple fades as the shape grows — a quantum-to-classical gradient with no parameter in it. What no shape achieves is pure wave: that would take a single edge, and a single edge is nothing at all.
+
+---
+
+---
+
+### FT.87 — The tumbling-model adjudication (external proposal, row by row)
+
+**Thm.** **External-data and status clause.** The proposal adjudicated here ("tumbling/rotor masses, Regge trajectories, shell magic numbers, weak $\pm2$ parity shift, cover class $=$ generation, $\ln Z$ as Yukawa, calibration from a measured lepton mass") is *external*; its SM comparisons are marked [EXT]; nothing below is adopted, and no particle is identified. Verdicts:
+$(1)$ **The rotor term is not new physics — it is Def-H.37(2) leading order.** $4\sin^2(m\Theta_R/4)=\tfrac{m^2\Theta_R^2}{4}\bigl(1-\tfrac{x^2}{3}+\tfrac{2x^4}{45}+\cdots\bigr)$, $x=m\Theta_R/4$ (both Taylor coefficients machine-exact in $\mathbb Q$), so the proposed slope $1/R^2$ **is** the declared coefficient $\hat\mu'^2\Theta_R^2/4$ [FT.54/FT.60(5), EW.33 recovered as its Taylor term]. Consequences: the rotor inherits Def-H.37(2)s conditional status, and it inherits **FT.76(3)'s ceiling** — the sine saturates at $4$, so no winding ladder of this species can grow without bound.
+$(2)$ **Two dimension traps (flagged, as the proposal's own rules require).** (a) $m^2=m^2_{\mathrm{static}}+\hbar^2k^2/(2I)$ adds an *energy* ($\mathfrak q^{1/2}$) to a *mass squared* ($\mathfrak q$); (b) $k^2/R^2$ with $R$ an edge count is $\mathfrak q^0$, not $\mathfrak q$ — repaired only as $k^2/(R^2\mathfrak h^2)$; (c) $I=\Delta S\cdot R^2$ has dimension $\mathfrak q^{-1}$ where a moment of inertia is $\mathfrak q^{-1/2}$. Same species as FT.77's $m^2$-vs-$m$ and FT.79's amplitude-vs-mass traps.
+$(3)$ **"Regge verified linear for all 12 shapes" is a tautology.** $m^2=m^2_{\mathrm{static}}+(4/R^2)j^2$ with $j=|k|/2$ is linear in $j^2$ *by algebra*, so the check cannot fail. The derived read is **not** linear in $j^2$: its successive slopes in $j^2$ vary (cube $1.4142,0,-0.4714$; octa $1.5,-0.75,0$; dodeca $0.3633,0.2939,0.1959$; icosa $0.8660,0.4330,0$), and the tetrahedron's ladder is **exactly flat** ($4\sin^2(m\pi/4)=2$ for every odd $m$ [FT.76(5a)]).
+$(4)$ **The quadratic form is a poor approximation where it is used.** At the documented uniform-minimal windings the exact-to-quadratic ratio is $0.8106$ (cube, dodeca, icosa: $18.9\%$ error), $0.4053$ (octa: $59.5\%$), $0.0901$ (tetra: $91.0\%$); the exact values reproduce FT.76(2)'s top weights $(2,2,4,2,2)$ — an independent cross-check of both sides.
+$(5)$ **Shell "magic numbers" collide with a proven no-go.** Extra-stable rotational levels would require a weight-level selection criterion, and FT.66(4)'s dilemma plus FT.61/FT.66(2)'s blindness theorems prove that **no weight/ledger criterion can select** among equal-record stationary variants on the Platonic curvature class; nuclear magic numbers are external data with no corpus referent. The proposal's stability islands are not constructible.
+$(6)$ **The moment-of-inertia table is exact but embedding-dependent.** $I=KR^2$ reproduces $(0.8889,2.0000,\text{ratio }2.25)$, $(1.5585,4.5000,2.8873)$, $(6.2882,18.0000,2.8625)$ for $R^2=(\tfrac13,\tfrac38,\tfrac34)$ (machine). The **ratios are embedding-free** — $R^2$ cancels and the ratio equals $E_{\mathrm{int}}/\langle K\rangle$, FT.87's own within-shape state ratio — but $I$ itself needs a Euclidean circumradius, an *embedding* datum the corpus does not supply (Def-H.21/FT.47/FT.54 give an intrinsic piecewise-flat cone metric; `circumradius` counts $0$). The "cold dark matter" conclusion is already derived without it ($w=0$ dust [CT4.5]; $T^{\mathrm{tr}}=0$; not accessible [D1.11/CT4.2/CT4.3]; FT.86(9)) and the cosmological name is inadmissible [FT.73(5), items 5/12].
+$(7)$ **Composite tumbling: the spin side is derived, the mass side is not.** Winding additivity $k(\Gamma)=k_1+k_2+d_{12}$ [FT.34(3)], the cone's CG range $|k_1-k_2|\le k\le k_1+k_2$ [FT.52(3)] and maximal-weight composition [FT.60(6)] support the aligned/anti-aligned structure, and under Def-H.38 three seeds give $\mathrm{Sym}^3$ ($j=\tfrac32$) plus mixed-symmetry $j=\tfrac12$ — the proposal's "aligned $j=3/2$ / mixed $j=1/2$" pair **is** corpus-consistent. But the splitting $\Delta m^2=k^2/R^2$ is the undeclared rotor of (1)–(2); the ratio $(3^2-1^2)/(2^2-0^2)=2$ against [EXT] $\approx1.1$ is a factor $1.8$ discrepancy, not the "factor-of-2 match" claimed; and the state labels are identifications.
+$(8)$ **The weak $\pm2$ shift.** No tag supplies $\varepsilon_W$, and "parity" collides with the corpus's $\mathbb Z_2$ *ledger* parity [FT.64's cut-space classes] — spacetime parity has no read (`left-handed`, $P_L$, $P_R$, $\gamma_5$: count $0$). What *is* legitimate: $\chi=\operatorname{sign}(k)$ is a **C-odd orientation read**, the coordinate that FT.78(6)'s chiral cover pairs lack — the missing ledger named there, of FT.40's $q_{\mathrm{core}}$ species. A $\chi$-dependent splitting would split those pairs; promoting it to a mass read needs a declared projector (Open item 20, deficit 1) and is not adopted.
+$(9)$ **The Yukawa replacement is refuted, on its own numbers.** $4^{|\mathcal C|}$ for $|\mathcal C|=1,2,3$ is $(4,16,64)$, **not** the claimed $(8,1056,1109312)$; those are $(8,\ Z_{\mathrm{byp}}(\text{tetra})-1,\ Z_{\mathrm{byp}}(\text{cube})-1)=(8,1056,1109312)$ — total bypass amplitudes of **three different skeletons**, contradicting "the same topological core wrapped in 1, 2 or 3 layers" (and $8$ matches no cover-census value). $\ln Z$ spans $1:3.35:6.70$ against [EXT] $1:207:3477$ — short by $\times519$, so the "right order of magnitude" claim is refuted by the proposal's own arithmetic. $\ln Z$ is also **ill-defined** as an entropy: $Z$ is a signed sum $(-1)^{\sum\kappa}4^{|\mathcal C|}$ [FT.67(2)] vanishing on most patterns, while the corpus's ledger entropy is $S_{\mathfrak L}=n_{\mathcal R}\ln2$ [CT1.29]. Using $\ln Z$ as a mass is precisely the amplitude-to-mass smuggle the proposal's own rule 4 forbids [FT.79(5)].
+$(10)$ **Foreign labels.** `Theorem 11`, `equivalence principle`, `N10`, `OP8`, `OP10`, `K-machine`, `moment of inertia`, `rigid rotor`, `Regge`, `tumbling`, `magic number`, `shell model`, `circumradius`: all count $0$ in Parts 1–2. Where such a label names something real, the real object is cited instead (OP10's involutions $\to$ FT.88; "mass lives in the trace" has no referent; the equivalence principle is FT.85(3)'s non-constructibility result).
+$(11)$ **The calibration phase is refused.** Fixing $\mathfrak h$ from a measured lepton mass violates P1 (one free dimensionful scale, fixed once), P5 ($\neg\exists$ quantity identified with a measured external constant) and the proposal's own rule 3. Not executed.
+$(12)$ **Verdict.** The tumbling model supplies **no mechanism that escapes the two ceilings**: its mass term is Def-H.37(2)s small-angle regime (bounded by FT.76(3)), its size datum is undeclared, its shell stability is excluded by FT.66(4), and its generation mechanism is an amplitude read the rules forbid. Open item 20's deficits 1 (chirality), 2 (Yukawa) and 3 (generations) are **not closed** by it; the genuinely new constructible content is FT.88's involution algebra and the C-odd orientation coordinate of clause (8).
+
+**Req.** FT.20, FT.22, FT.34, FT.40, FT.44, FT.47, FT.52, FT.54, FT.60, FT.61, FT.64, FT.66, FT.67, FT.68, FT.70, FT.73, FT.76–FT.79, FT.85, FT.86; Def-H.21, Def-H.24, Def-H.30; D2.6, D2.7; CT0.9, CT0.11 (Part 1); CT1.12, CT1.29 (Part 2); CT4.5 (Part 2); EW.33; EM.9; Def-H.37(2), Def-H.38, P1, P5; Taylor series in $\mathbb Q$, exhaustive enumeration, dimensional analysis in $\mathfrak q$-exponents [math; machine]. External proposal and [EXT] comparisons marked.
+
+**Pf.**
+$$
+(1):\ \sin x=\sum_j(-1)^jx^{2j+1}/(2j)!\implies4\sin^2x=4x^2-\tfrac43x^4+\tfrac{8}{45}x^6-\cdots:\ \text{coefficients machine-exact in}\ \mathbb Q
+$$
+$$
+\text{slope identification}:\ \tfrac{m^2\Theta_R^2}{4}\hat\mu'^2\equiv\tfrac{m^2}{R^2}\implies R^{-2}=\hat\mu'^2\Theta_R^2/4\ [\text{no new datum}]
+$$
+$$
+(2):\ [m^2]=\mathfrak q,\ [\hbar^2k^2/(2I)]=\mathfrak q^{1/2},\ [k^2/R^2]=\mathfrak q^0,\ [\Delta S R^2]=\mathfrak q^{-1}\ne[\ I\ ]=\mathfrak q^{-1/2}\ [\mathrm{D2.9}]
+$$
+$$
+(3):\ j=|k|/2\implies(4/R^2)j^2=k^2/R^2:\ \text{the ansatz itself};\qquad\text{derived read}:\ \text{slopes in}\ j^2\ \text{non-constant}\ [\text{machine}]
+$$
+$$
+(4):\ 4\sin^2(k_f\delta_v/4)=(2,2,4,2,2)\ [\mathrm{FT.76}(2)];\quad4x^2=(22.207,2.467,9.870,2.467,2.467):\ \text{ratios as stated}
+$$
+$$
+(5):\ \mathrm{FT.66}(4)\ \text{dilemma}+\mathrm{FT.61}/\mathrm{FT.66}(2)\ \text{blindness}\implies\neg\exists\ \text{weight-level selection criterion}
+$$
+$$
+(6):\ I=KR^2:\ \text{exact Fractions};\qquad I_{S2}/I_{S1}=E_{\mathrm{int}}/\langle K\rangle:\ R^2\ \text{cancels}
+$$
+$$
+(7):\ \mathrm{FT.34}(3),\mathrm{FT.52}(3),\mathrm{FT.60}(6);\qquad2\otimes2\otimes2=4\oplus2\oplus2:\ j\in\{\tfrac32,\tfrac12\}\ [\mathrm{Def-H.38}:\ \mathrm{Sym}^3]
+$$
+$$
+(9):\ 4^{|\mathcal C|}=(4,16,64);\quad1056=1057-1,\ 1109312=1109313-1\ [\mathrm{FT.68}(1),(3)];\quad\ln(1109312)/\ln8=6.6937
+$$
+$$
+(10),(11):\ \text{inventory scan};\qquad\mathrm{P1}/\mathrm{P5}\ \text{verbatim};\qquad(12):\ \text{conjunction}.\ \blacksquare
+$$
+
+**Phys.** The proposal is a good instinct aimed at the wrong layer. Rotation as a mass generator is exactly the right shape of idea — and the corpus already contains its leading term, hiding inside the declared defect formula, where it is bounded by four and therefore cannot build a hierarchy. What survives the audit is smaller and more useful: winding adds like the proposal says, three seeds compose into the spin pair it guessed, and the left/right tumble it wanted is a real coordinate the ledger already has — the orientation sign that pairs cover classes. What does not survive is the shortcut: reading a partition function as a Yukawa coupling, or fixing the one free scale from a measured mass.
+
+---
+
+---
+
+### FT.88 — The involution algebra of the two declared reversals
+
+**Thm.** Let $\omega$ [D2.6] and $\Theta_{\mathfrak L}$ [D2.7] be the corpus's two declared involutions.
+$(1)$ **$\omega$ on patterns.** $\omega$ reverses orientation: $s(c)\leftrightarrow t(c)$, charge $\mapsto-$charge, chirality $\mapsto-$chirality [D2.6]. On a skeleton it acts as $R\mapsto R^{\mathrm T}=\{(b,a):(a,b)\in R\}$, with $\omega^2=1$ (machine: on all patterns sampled and on the tetrahedron's full orbit set), and $\omega\notin\operatorname{Aut}(\Gamma)$ — no vertex permutation induces it [FT.78(6)], where it was shown to exchange the two $\Omega=24$ dissolved-digon cover classes.
+$(2)$ **$\Theta_{\mathfrak L}$ on registrations.** $\Theta_{\mathfrak L}$ reverses ledger order with $J^+\leftrightarrow J^-$ and $G(e)\mapsto G(e)^\ast$ [D2.7], i.e. $\sigma_e$ fixed and $\kappa_e\mapsto-\kappa_e$ on the edge weight $G(e)=\sigma_e e^{i\pi\kappa_e}$ [D3.5]; $\mathcal J(C)\mapsto\mathcal J(C)^\ast$ [D3.6].
+$(3)$ **The algebra.** $\omega$ acts on the *edge set* and $\Theta_{\mathfrak L}$ on the *phase/ledger order*: disjoint data, hence they commute, and
+$$
+\langle\omega,\Theta_{\mathfrak L}\rangle\cong\mathbb Z_2\times\mathbb Z_2
+$$
+on skeleton registration data, with the four classes $(1,\ \omega,\ \Theta_{\mathfrak L},\ \omega\Theta_{\mathfrak L})$. $\omega$ is charge-odd [D2.6; FT.40's $\omega$-covariance of $q_{\mathrm{core}}$]; $\Theta_{\mathfrak L}$ is charge-even and phase-odd.
+$(4)$ **Scope, and what this is not.** The inventory contains no C, P or T *operator*, no Lorentzian field algebra and no spinor bundle, so no CPT theorem is claimed or claimable; $\mathbb Z_2\times\mathbb Z_2$ is the exact group generated by the two declared reversals and nothing more. In particular $\omega$ is **not** a chirality projector: it is an orientation reversal whose fixed-point set is empty on chiral pairs [FT.78(6)], whereas a projector needs an eigenspace decomposition of a *state* space that the corpus does not supply for patterns (application-layer content). The proposal's $\chi=\operatorname{sign}(k)$ is the $\omega$-odd coordinate of $(3)$: a legitimate C-odd ledger read, still not a projector.
+
+**Req.** D2.6, D2.7, D3.5, D3.6; FT.40, FT.64, FT.78; CT0.9 (Part 1); group generation, exhaustive pattern enumeration [math; machine].
+
+**Pf.**
+$$
+(1):\ (R^{\mathrm T})^{\mathrm T}=R;\qquad\omega\in\operatorname{Aut}\iff\exists p:\ (p(a),p(b))=(b,a)\ \forall(a,b):\ p(a)=b\wedge p(b)=a\ \forall\ \text{pairs}:\ \bot\ \text{for}\ |V|\ge3
+$$
+$$
+\text{machine}: \#\{p\in\operatorname{Aut}:\ p\ \text{induces the reversal}\}=0\ \text{on the tetrahedron}
+$$
+$$
+(2):\ \mathrm{D2.7}\ \text{verbatim};\qquad G(e)^\ast=\sigma_e e^{-i\pi\kappa_e}\ [\sigma_e\in\{\pm1\}\ \text{real},\ \mathrm{CT0.9}]
+$$
+$$
+(3):\ \text{disjoint supports}\implies[\omega,\Theta_{\mathfrak L}]=0;\qquad\omega^2=\Theta_{\mathfrak L}^2=1\implies\mathbb Z_2\times\mathbb Z_2
+$$
+$$
+(4):\ \text{inventory scan (no C/P/T operator)};\qquad\text{projector needs}\ \Psi\ \text{eigenspaces}:\ \neg\exists\ \text{declared}\ \Psi_X\ [\mathrm{FT.85}(7)].\ \blacksquare
+$$
+
+**Phys.** The corpus has exactly two mirrors: one flips every arrow in the graph, the other runs the ledger backwards and conjugates every phase. They do not interfere — one acts on edges, the other on phases — so together they make the smallest possible non-cyclic group, four elements. That group already knows which cover shapes are left-handed and which are right-handed, and it already knows that charge changes sign in the first mirror. It is not the CPT of a field theory, and it is not a chirality projector; it is the exact amount of reversal structure the axioms declare, no more.
+
+---
+
+---
+
+
+## Tier F.30 — The Koide Adjudication, the Resolution Ladder, and the Minimal Bridge Declaration
+
+### FT.89 — The Koide/phase-boundary adjudication: exact arithmetic, category trap
+
+**Thm.** Under Def-H.26/FT.70, with the Koide constant external and marked:
+$(1)$ **The arithmetic is exact and re-verified.** $p^*_\Gamma$ is the unique root of $B_\Gamma(p)=p^{2E}$ in $(0,1)$ [FT.70(1)]; rational bisection of width $2^{-44}$ reproduces all eight documented polygon values ($0.807901$, $0.819671$, $0.815219$, $0.817028$, $0.816269$, $0.816596$, $0.816452$, $0.816517$ for $n=3..10$); $(p^*_n)^2$ **interlaces** $\tfrac23$ (odd $n$ below, even above) with deviations $1.40\times10^{-2},\ 2.09\times10^{-3},\ 3.72\times10^{-4},\ 7.23\times10^{-5}$ at $n=3,5,7,9$; and in $\mathbb Z[\sqrt6]$
+$$
+s=2+\sqrt6:\ s^2-4s-2=0\ \checkmark;\qquad p^*_\infty=\frac{s}{1+s}=\frac{(2+\sqrt6)(3-\sqrt6)}{(3+\sqrt6)(3-\sqrt6)}=\frac{\sqrt6}{3}\ \checkmark;\qquad (p^*_\infty)^2=\frac{6}{9}=\frac23\ \textbf{exactly}.
+$$
+So the observation's arithmetic premise is **true and exact**, not approximate.
+$(2)$ **Category verdict: TRAP, on four independent grounds.**
+**(a) Kind mismatch.** $p^*_\infty$ is a *probability* — the crossing point of the flicker ensemble's bypass measure with its floor measure [Def-H.26, FT.70(1)], conditional on the Cal-F rate datum's equilibrium reading. $Q$ [EXT] is a *mass-ratio functional* of three charged-lepton masses. Both are dimensionless; dimensionless is not a kind — P2/P5 keep derived dimensionless numbers, free configuration parameters and measured constants strictly separate.
+**(b) No referent.** The corpus has **no lepton mass read at all**: no Yukawa sector, no lepton species, no flavour index [FT.81(5); item 20's deficits 1–3]. $Q$ therefore cannot be formed inside the corpus, and no map connects the two sides.
+**(c) Precedent.** FT.73(5) already adjudicated this exact species — $\alpha_{\mathrm{EM}}=\pi$, a derived pure number and a *phase coefficient* [EM.20], against $1/137$, a *coupling* — and ruled the comparison inadmissible. The ruling transfers verbatim: a derived dimensionless corpus number is not comparable to a measured dimensionless ratio without a declared map.
+**(d) Cap contingency (new, machine).** $\tfrac23$ is **not universal — it is the cap-3 value**. Repeating the identical construction with cap $c=2$ gives $(p^*_\infty)^2\to0.508004\ldots$ ($P_6,P_8,P_{10}$: $0.508193$, $0.508021$, $0.508004$), and with $c=4$ every pattern is admissible so $B\equiv1$ and **no interior boundary exists** [FT.70(1)]. Hence $(p^*_\infty)^2=\tfrac23$ is a function of $C_{\mathrm{cap}}=16$ and $D_{\mathrm{tick}}(n)=2^{n+1}$ at $n=3$ [CT0.5, CT0.6, CT0.11] — a combinatorial output of the admissibility ceiling. Genericity: $\tfrac23$ is already a derived corpus value elsewhere ($\delta_v/\pi=\tfrac23$ for the octahedron [FT.63(4)]) and is the ratio of the two smallest integers $>1$.
+$(3)$ **Sequence-to-generations: refuted.** $(p^*_n)^2$ approaches $\tfrac23$ with *shrinking*, alternating deviations; a generation hierarchy requires *growing* separation. Moreover $n$ is a polygon side count (not a generation index) and the family supplies $\ge8$ values, not $3$.
+$(4)$ **The A3 sub-questions, answered negatively.** (a) The transfer matrix's characteristic polynomial $x^2(x^2-3x-3)$ [FT.68(2)] has roots $(3\pm\sqrt{21})/2$ — exactly **one positive** number, the other negative, plus a double zero — so it cannot supply a three-component mass vector. (b) The $45^\circ$ cone condition ($\cos45^\circ=1/\sqrt2$) and FT.86(6)'s single-edge relative ripple $\sigma_K/\langle K\rangle=1/\sqrt2$ are the same *number* of different kinds (a cone angle versus a binomial standard deviation at $p=\tfrac12$): flagged, not used.
+$(5)$ **Verdict.** Coincidence; closed. The equality $(p^*_\infty)^2=\tfrac23$ stands as a derived exact fact about the cap-3 polygon ensemble; its identification with the Koide constant is inadmissible on grounds (a)–(d). No structural claim, no identification, nothing adopted.
+
+**Req.** Def-H.26; FT.63, FT.68, FT.70, FT.73, FT.81, FT.86; CT0.5, CT0.6, CT0.11 (Part 1); Cal-F, P2, P5; EM.20 (Part 2); external Koide constant (marked); exact bisection over $\mathbb Q$, exact arithmetic in $\mathbb Z[\sqrt6]$, cap-parameterized transfer enumeration [math; machine].
+
+**Pf.**
+$$
+(1):\ B_\Gamma(p)-p^{2E}\ \text{strictly decreasing/increasing}\implies\text{unique root}\ [\mathrm{FT.70}(1)];\quad\text{bisection width}\ 2^{-44}\ [\text{machine}]
+$$
+$$
+s^2-4s-2=(2+\sqrt6)^2-4(2+\sqrt6)-2=(10+4\sqrt6)-(8+4\sqrt6)-2=0;\qquad\tfrac{s}{1+s}=\tfrac{6-\sqrt6-2\cdot 6+2\sqrt6+\cdots}{}\ \to\ \text{rationalize}:\ \tfrac{\sqrt6}{3}
+$$
+$$
+(2d):\ \text{cap-}c\ \text{admissibility}:\ k_v\le c:\ \text{the transfer constraint}\ \operatorname{pop}(s_i)+\operatorname{pop}(s_{i+1})\le c\ \text{changes}\ T(t)\implies\lambda_{\max},\ p^*\ [\text{machine}]
+$$
+$$
+c=4\ge2+2:\ \text{no pattern excluded}:\ B\equiv1:\ \neg\exists\ \text{interior crossing}\ [\mathrm{FT.70}(1)];\qquad c=3:\ \text{the documented value}\ \tfrac23
+$$
+$$
+(3):\ |(p^*_n)^2-\tfrac23|\ \text{decreasing and alternating}\ [\text{machine, exact intervals}];\qquad n\ne\text{generation index}
+$$
+$$
+(4a):\ x^2-3x-3=0\implies x=(3\pm\sqrt{21})/2:\ \sqrt{21}>3\implies\text{one positive root};\qquad(4b):\ \text{kind distinction}
+$$
+$$
+(5):\ \text{conjunction of}\ (2)\text{–}(4).\ \blacksquare
+$$
+
+**Phys.** A number fell out of the polygon flicker — two thirds, exactly — and the same number is famous in lepton physics. The audit says: keep the number, drop the bridge. Two thirds here is what happens when a ring of four-way vertices is capped at three crystallized edges; cap it at two and the same machinery hands back one half; cap it at four and the phase boundary disappears altogether. A constant that moves with a bookkeeping cap cannot be the same object as a ratio of particle masses, and the corpus has no lepton masses to compare with in any case.
+
+**Rmk (supersession of the classification clause).** The classification content of clauses (2d) and (5) — $\tfrac23$ as a mere cap-combinatorial output, and the verdict ``coincidence; no structural claim'' on the Koide-form structure — is superseded by FT.158(5): $\tfrac23=\tfrac{3-1}{3}$ is the doublet/triplet decomposition ratio of the spatial seal triad under its inner $C_3$ rotation subgroup [FT.111(1); FT.158(1)–(2)], and the Koide-form channel angle $\delta_\ell=\tfrac29=(\tfrac23)/3$ [FT.112] has its provenance derived from the three spatial directions [FT.158(2)–(4)]. Clause (1)'s arithmetic, clause (3)'s refutation, clause (4)'s negatives, and the inadmissibility grounds (2a)–(2c) are unchanged and standing: the identification of derived rationals with measured mass ratios remains inadmissible without a declared map [P1, P5].
+
+---
+
+---
+
+### FT.90 — The resolution ladder: no-hair from the channel bound, and the chiral merger refuted
+
+**Thm.** Under FT.3/FT.4/FT.15 with C10/CT0.6:
+$(1)$ **The no-hair theorem is already proved, and it is stronger than a limit.** FT.4: $I_o(v)\le\min(\delta h(\gamma),4\delta\tau(\gamma))\ln2$, and this bound *is the entire externally available description* — $v,v'$ with the same $(\delta h,\delta\tau)$ are observationally identical. FT.3: for **every** $\Sigma''\in[\gamma]$, $I_{o\leftarrow\Sigma''}(\gamma)=I(\delta h(\gamma),\delta\tau(\gamma))$ exactly and totally, *including whether $\Sigma''$ contains $D^-$-configured nodes*. So the collapse of internal structure is not a large-$\delta h$ effect: it holds at every $\delta h$. **Correction to the submitted framing:** the budget *grows* with $\delta h$, so merging is tightest at *small* $\delta h$; what is $\delta h$-independent is the invisibility of the internals.
+$(2)$ **The resolution ladder, exact.** With the saturating schedule $\delta\tau=\lceil\delta h/4\rceil$ (at most $4$ hops per tick [FT.1/FT.38, CT0.6, EM.5–7], attained by photon schedules [FT.36(2)]), the budget is $\min(\delta h,4\delta\tau)=\delta h$ bits, so
+$$
+|\mathrm{Res}(\delta h)|\le2^{\delta h}:\qquad\delta h=1,2,3,4,5\ \mapsto\ 2,4,8,16,32\ \text{alternatives},
+$$
+and at $\delta h=4$ the bit budget equals $C_{\mathrm{cap}}=16$ registers exactly [CT0.6]. C10's warning is load-bearing: the **register cost** of $|X|$ alternatives is $|X|$, their **Shannon content** $\log_2|X|$ — the two budgets are different quantities and must not be identified.
+$(3)$ **Exact thresholds for the computed class counts.** The hop distance at which the budget first covers a class count:
+$$
+\begin{array}{c|cccccc}
+\text{target} & \text{tetra configs} & \text{tetra classes} & \text{tetra covers} & \text{cube configs} & \text{cube classes} & \text{cube covers}\\
+\hline
+\# & 1230 & 70 & 7 & 1\,580\,092 & 33\,564 & 264\\
+\min\delta h & 11 & 7 & 3 & 21 & 16 & 9
+\end{array}
+$$
+with $P_8$'s $42\,687$ admissible configurations at $\delta h\ge16$. Merge factors at $\delta h=4$ (budget $16$): tetrahedron $1230/16=615/8$, cube $1\,580\,092/16=395\,023/4$.
+$(4)$ **What survives at every resolution.** FT.15's invariant tuple $\Pi_v(C)=(q,S,m_{\mathrm{hid}})$ — invariance under internal rearrangement given a shared signature $(\delta h,\delta\tau,q,\Theta_{\mathrm{int}})$ — together with the aspect set $\mathcal A(\Sigma;C)$ and $\dim\mathcal K_\Sigma\le18$ [FT.20/FT.26]. Precisely: $\mathrm{Res}(\infty)$ does **not** equal the tuple because resolution is not the limit that removes the internals; FT.3 removes them at *every* resolution, and the ladder of (2) bounds how many *classes* a channel can separate.
+$(5)$ **The chiral merger is NOT forced by FT.15.** Sign-dependence of the tuple, component by component: $S=j=|k|/2$ [FT.52/FT.55, FT.60] — **sign-blind**; $m_{\mathrm{hid}}=E_{\mathrm{int}}\ln2/\mathfrak h$ [FT.16/FT.44(4)] — **sign-blind**; $q=q_{\mathrm{core}}=\tfrac12(\sigma_{e_1}-\sigma_{e_k})\mapsto-q_{\mathrm{core}}$ under $\omega$ [FT.40, D2.6] — **sign-sensitive**. Moreover FT.15's *hypothesis* already requires equal $q$, so the theorem never merges states of differing $q$. Hence a Dirac-type merger of a chiral pair would require **declaring $q$ unobservable** (or a coarser invariant): a new declaration, not a consequence. This is the same C-odd coordinate identified in FT.78(6)/FT.87(8), and no projector exists to split or merge on it [FT.84(1) deficit 1; FT.87(8)].
+$(6)$ **The "information cost of generations" question: premise void, legitimate version exact.** The submitted $(8,1056,1109312)$ and $\ln Z$ gaps rest on FT.87(9)'s refuted identification (those are $(8,Z^{\rm tetra}_{\mathrm{byp}}-1,Z^{\rm cube}_{\mathrm{byp}}-1)$, three different skeletons) and $\ln$ of a *signed* sum is not an entropy [FT.67(2); the corpus entropy is $S_{\mathfrak L}=n_{\mathcal R}\ln2$, CT1.29] — an amplitude-to-entropy smuggle, void. Legitimate and derived: distinguishing $N$ classes costs $N$ registers and $\log_2N$ bits [C10], so $N=3$ costs $3$ registers / $\log_23$ bits and is available at $\delta h\ge2$. **The obstacle to generations is the absence of a label, not channel capacity** [item 20 deficit 3]. The Compton-like length $1/m_{\mathrm{hid}}=\mathfrak h/(K\ln2)$ exists [D2.9], but the threshold $\delta h\ge\lceil\log_2\#\text{classes}\rceil$ depends only on the class count, so **no Compton-wavelength relation arises**.
+
+**Req.** FT.1, FT.3, FT.4, FT.15, FT.16, FT.20, FT.26, FT.36, FT.38, FT.40, FT.44, FT.52, FT.55, FT.60, FT.67, FT.78, FT.79, FT.86, FT.87; Def-H.1, Def-H.9; D0.6, D0.7, D2.6, D2.9; CT0.6, CT1.29 (**B/C**); C10; exact bisection and enumeration [math; machine].
+
+**Pf.**
+$$
+(1):\ \mathrm{FT.4}\ \text{Thm verbatim (bound + totality of the description)};\qquad\mathrm{FT.3}:\ I_{o\leftarrow\Sigma''}=I(\delta h,\delta\tau)\ \forall\Sigma''\in[\gamma]\ \text{exact and total}
+$$
+$$
+\text{direction of the budget}:\ \min(\delta h,4\delta\tau)\ \text{non-decreasing in}\ \delta h\implies\text{merging tightest at small}\ \delta h
+$$
+$$
+(2):\ \delta\tau=\lceil\delta h/4\rceil\implies4\delta\tau\ge\delta h\implies\min=\delta h;\qquad2^4=16=C_{\mathrm{cap}}\ [\mathrm{CT0.6}];\qquad\mathrm{C10}:\ |X|\ne\log_2|X|
+$$
+$$
+(3):\ \min\{\delta h:2^{\delta h}\ge N\}=\lceil\log_2N\rceil:\ \lceil\log_21230\rceil=11,\ \lceil\log_270\rceil=7,\ \lceil\log_27\rceil=3,\ \lceil\log_21580092\rceil=21,\ \lceil\log_233564\rceil=16,\ \lceil\log_2264\rceil=9
+$$
+$$
+(4):\ \mathrm{FT.15}\ \text{invariance}+\mathrm{FT.20}'\text{s criteria}+\mathrm{FT.26}(3)'s\ \le18\ \text{bound}
+$$
+$$
+(5):\ j=|k|/2\ [\mathrm{FT.52}/\mathrm{FT.55}];\qquad q_{\mathrm{core}}\mapsto-q_{\mathrm{core}}\ [\mathrm{FT.40}];\qquad\mathrm{FT.15}\ \text{hypothesis includes equal}\ q
+$$
+$$
+(6):\ \mathrm{C10}:\ \text{register cost}=|X|;\quad\lceil\log_23\rceil=2;\qquad1/m_{\mathrm{hid}}=\mathfrak h/(K\ln2):\ [\mathfrak q^{-1/2}]=\text{length}\ [\mathrm{D2.9}].\ \blacksquare
+$$
+
+**Phys.** The corpus already contains a no-hair theorem, and it is blunt: whatever sits behind the channel — including whether the far side is a locked, saturated tower — the observer receives a number of bits fixed by the channel's own hop and tick counts, and nothing else. Resolution is a budget that doubles per hop, so the ladder is exact: two alternatives at one hop, sixteen at four (which is precisely the register capacity of a single channel quantum), and seven hops to tell apart the seventy shapes of a tetrahedron. What no amount of resolution recovers is handedness of the internal kind: the tuple forgets the sign of the winding in its spin and mass entries but remembers it in its charge entry, so left and right stay distinct until somebody declares the charge unreadable — and that is a decision, not a theorem.
+
+---
+
+---
+
+### FT.91 — The minimal spectral-bridge form
+
+**Thm.** Under Def-H.16/FT.80(4):
+$(1)$ **The three declarations restated.** Item 13's exit (b) requires exactly: **(i)** a rule $\mathcal O\mapsto(\Sigma(\mathcal O),C(\mathcal O))$ assigning a subnetwork and observer channel to a cover class; **(ii)** colour data making $\Pi_{\mathcal C}(\Sigma;C)$ computable [FT.19/FT.27]; **(iii)** a materialization clause for the class's dissolved even cycles (M2 species), after which the pole condition is the existing one, $1\in\operatorname{spec}\mathbf F_M^{(\Sigma)}$ [Def-H.16/CT2.5] with FT.22's single-valuedness on each materialized chain.
+$(2)$ **No poles without a declaration.** A cover pattern supplies $R$, $|\mathcal C|$ open threads, the dissolved even cycles with their $\delta h$, the aspect mask and the norm weight $\Omega2^K$ [FT.80(1)] — and none of $\Sigma$, $C$, colour, materialization. The amplitude $4^{|\mathcal C|}$ is a weight in $Z_\Gamma$ [Def-H.25/FT.67(2)], not an eigenvalue of any declared operator, and $|w|=1$ [FT.67(6c)/FT.75(6)] makes the norm layer a *count*, not a spectrum.
+$(3)$ **Minimality refinement (new).** For **colour-free** covers, $\mathrm{Colour}(\Sigma)=\varnothing\implies\text{strong}\notin\mathcal A(\Sigma;C)$ [FT.20's criterion] and the strong summand of $\mathbf F_M^{(\Sigma)}$ is $\equiv0$ [FT.26(2)] — so declaration **(ii) is vacuous**. Declaration **(iii)** is needed only for the *bound/fermionic* side, and covers carry no materialized closed chain [FT.80(6)]. Hence the **minimal bridge is (i) alone, restricted to colour-free covers**.
+$(4)$ **The candidate, stated exactly — NOT adopted.**
+**The minimal bridge map.** For a cover class $\mathcal O$ on a skeleton $\Gamma$ and an observer $o\notin\operatorname{supp}(\mathcal O)$: $\Sigma(\mathcal O):=$ the vertex support of any representative $R\in\mathcal O$; $C(\mathcal O):=$ the boundary channel induced by $\gamma(o,\Sigma(\mathcal O))$ [Def-H.1]; the spectral side of $\mathcal O$ is $Z(\mathcal R,\Sigma(\mathcal O))$ with poles at $1\in\operatorname{spec}\mathbf F_M^{(\Sigma(\mathcal O))}$ [Def-H.16], aspects by FT.20's criteria.
+- **Declares:** one map (cover classes $\to$ subnetwork $+$ channel). No mass formula, no materialization, no colour data, no rates, no second scale.
+- **Buys:** a spectral side on the same objects that carry amplitude, so the inter-family bridge becomes computable; class-invariance is preserved because the vertex support is $\operatorname{Aut}(\Gamma)$-invariant.
+- **Costs / forbids:** (a) the resulting spectrum is **observer-relative**, inheriting Def-H.9/FT.3's observer-relativity of $m_{\mathrm{hid}}$ (consistent, but it must be stated); (b) **no fermionic poles** — the bound side still needs (iii); (c) it **lifts no ceiling**: $\dim\mathcal K_\Sigma\le18$ [FT.26(3)], and any Def-H.37(2)-based values remain bounded by FT.76(3); (d) traps barred: $4^{|\mathcal C|}$, $\Omega$, $Z^\pm$ are never masses or eigenvalues [FT.79(5)]; $\delta h$ is never a scale [D0.8]; aspects come from FT.20's criteria, never from block membership [FT.27].
+$(5)$ **Compatibility.** With FT.90: **compatible** — the declaration adds no resolution, it only names $\Sigma$ and $C$, so FT.3/FT.4's bounds continue to apply to whatever is read; a bridge cannot exceed the channel budget. With FT.89: **vacuous** — the Koide comparison yields nothing admissible, so no compatibility condition arises.
+$(6)$ **Adoption status.** The map is constructed; no tag of Parts 1–4 imports it; its species is a **map**, contrasted with the transfer interfaces Def-H.37/Def-H.38 and the Cal-F dynamics datum. Its consequences are enumerable in advance: the pole set of each colour-free cover class, the observer-relativity of that set, and the exact statement of which classes remain spectrally empty.
+
+**Req.** Def-H.1, Def-H.9, Def-H.16, Def-H.25, Def-H.30; FT.3, FT.19, FT.20, FT.22, FT.26, FT.27, FT.67, FT.75, FT.76, FT.79, FT.80, FT.89, FT.90; CT2.5, CT2.8 (Part 2); D0.8, D1.11; no external data.
+
+**Pf.**
+$$
+(1):\ \mathrm{FT.80}(4)\ \text{verbatim};\qquad(2):\ \text{argument list of}\ Z(\mathcal R,\Sigma)\ \text{vs the data a pattern supplies}\ [\mathrm{FT.80}(1)]
+$$
+$$
+4^{|\mathcal C|}\ \text{is}\ Z_\Gamma\text{'s weight}\ [\mathrm{FT.67}(2)];\qquad|w|=1\implies\sum|w|^2=\#\text{configurations}\ [\mathrm{FT.75}(6),\ \mathrm{CT2.8}]
+$$
+$$
+(3):\ \mathrm{Colour}(\Sigma)=\varnothing\implies\text{strong}\notin\mathcal A(\Sigma;C)\ [\mathrm{FT.20}]\ \wedge\ F^{\Sigma}_{\mathrm{strong}}\equiv0\ [\mathrm{FT.26}(2)]\implies(ii)\ \text{vacuous}
+$$
+$$
+\text{covers carry no materialized closed chain}\ [\mathrm{FT.80}(6)]\implies(iii)\ \text{not required for transit-side poles}
+$$
+$$
+(4):\ \operatorname{supp}(R)\ \text{is}\ \operatorname{Aut}\text{-invariant}\implies\Sigma(\mathcal O)\ \text{well-defined on the class};\qquad o\notin\Sigma\ [\mathrm{Def\text{-}H.1}]
+$$
+$$
+\text{observer-relativity}:\ \mathrm{Def\text{-}H.9}/\mathrm{FT.3};\qquad\text{bound}:\ \mathrm{FT.26}(3);\qquad(5),(6):\ \text{conjunction}.\ \blacksquare
+$$
+
+**Phys.** The bridge from "the fuzz has amplitude" to "the fuzz has a particle" needs one thing named: which subnetwork a cover class *is*, seen from which outside point. Everything else — the pole condition, the aspect criteria, the mask bound — is already proved and waiting. Colour-free covers need nothing further, because a colourless subnetwork has no strong block to seal; covers with colour would need the sealing data too, and anything fermionic would need the materialization clause as well. The declaration is small, its consequences are enumerable before it is made, and it lifts no ceiling: it would give the flicker gas a spectrum, not a hierarchy.
+
+---
+
+---
+
+
+## Tier F.31 — The Native Clifford Census, the Weak-Chirality Pincer, and the Reversal Census of the Covers
+
+### FT.92 — EW.5 is convention-exact: re-verification and the rigidity of the named basis
+
+**Thm.** In the Pauli basis of $\mathfrak H(\mathbb C^4)$ [A3, CT1.1], with CT1.2's definitions verbatim ($E_0=\sigma_0\otimes\sigma_0$, $\Sigma=\sum_i\sigma_i\otimes\sigma_i$, $W_i=\tfrac12(\sigma_0\otimes\sigma_i+\sigma_i\otimes\sigma_0)$, $J_i=\tfrac12(\sigma_j\otimes\sigma_k-\sigma_k\otimes\sigma_j)$ cyclic, $K_i=\tfrac12(\sigma_0\otimes\sigma_i-\sigma_i\otimes\sigma_0)$, $E^{ij}=\tfrac12(\sigma_i\otimes\sigma_j+\sigma_j\otimes\sigma_i)$), as **exact matrix equalities over $\mathbb Q(i)$** (no tolerance, no floats):
+$(1)$ **The frozen identities all hold exactly as stated.** CT1.3 ($[E_0,\cdot]=0$: 16 brackets); CT1.4 ($[W_i,W_j]=i\epsilon_{ijk}W_k$: all 6 ordered pairs); CT1.5 ($[\Sigma,J_i]=4iK_i$, $[\Sigma,K_i]=-4iJ_i$, $[\Sigma,W_i]=0$: 9); CT1.6 ($[J_i,J_j]=[K_i,K_j]=i\epsilon_{ijk}W_k$: 12); CT1.7 ($[J_i,K_j]=i(\delta_{ij}\Sigma-E^{ij})$: 9, each with all three $W$-components exactly zero); CT1.8 ($[W_i,J_j]=i\epsilon_{ijk}J_k$, $[W_i,K_j]=i\epsilon_{ijk}K_k$: 12); **EW.5 both clauses at all nine $(i,j)$**: $[K_j,[\Sigma,J_i]]=4\epsilon_{ijk}W_k$ and $[J_j,[\Sigma,K_i]]=-4\epsilon_{ijk}W_k$ (diagonal $i=j$: both sides exactly $0$); Cor CT0.7a ($\sum_iW_i^2=\tfrac32E_0+\tfrac12\Sigma=2\Pi_{\mathcal R}$; $\sum_iW_i^2|_{\wedge^2}=0$); CT0.7(1) ($\mathbb S=\tfrac12(E_0+\Sigma)$ as matrices, $\Pi_{\mathcal R/V}$ idempotent, orthogonal, sum $I_4$, traces $3/1$, ranks $3/1$); the associative relation $\Sigma^2=3E_0-2\Sigma$; $[S,T]=0$ on all 16 basis elements with $\eta=(-,+,+,+)$ [A3]; the full $(S,T)$ parity table of CT1.2 ($W\in\mathcal E_{+-}$, $J\in\mathcal E_{-+}$, $K\in\mathcal E_{--}$, $E_0,\Sigma,E^{ij}\in\mathcal E_{++}$: 17 generators).
+$(2)$ **The phase-convention premise is refuted.** CT1.6 holds with $+i\epsilon_{ijk}W_k$ **exactly** in the frozen convention — there is no "up to a sign" residue to fix; EW.5's own Pf is the two-line consequence $[K_j,4iK_i]=4i\cdot i\,\epsilon_{jik}W_k=4\epsilon_{ijk}W_k$, and D's header already lists EW.5 among the tags machine-verified by `verify_D.py` in exact complex-rational arithmetic. **No edit was made or is needed** (Parts 1–2 are frozen; this clause is an layer-local re-verification record).
+$(3)$ **Convention rigidity (new).** The group of diagonal sign redefinitions $(J,K,W,\Sigma,E)\mapsto(\lambda_JJ,\lambda_KK,\lambda_WW,\lambda_\Sigma\Sigma,\lambda_EE)$, $\lambda\in\{\pm1\}$, preserving every identity of clause (1) *including the associative relation $\Sigma^2=3E_0-2\Sigma$ and the definition $\mathbb S=\tfrac12(E_0+\Sigma)$* (with $E_0=I_4$ fixed, being the unit) is exactly
+$$
+\{\mathrm{id},\ \operatorname{Ad}(\mathbb S)\}\cong\mathbb Z_2,\qquad \operatorname{Ad}(\mathbb S):\ (J_i,K_i)\mapsto(-J_i,-K_i),\quad W_i,\Sigma,E^{ij},E_0\ \text{fixed}
+$$
+(machine: exactly $2$ of the $32$ sign maps survive). Proof chain: $\Sigma^2$-relation $\Rightarrow\lambda_\Sigma=1$; CT1.5 $\Rightarrow\lambda_J=\lambda_K$; CT1.7's $\Sigma$-coefficient $\Rightarrow\lambda_J\lambda_K=\lambda_\Sigma=1$ and its $E$-coefficient $\Rightarrow\lambda_E=1$; CT1.6 $\Rightarrow\lambda_W=\lambda_J^2=1$. **EW.5 is invariant under the nontrivial element** (each clause maps to itself); the naming exchange $J\leftrightarrow K$ maps clause 1 to clause 2 and is *excluded* by the same associative relation. Hermiticity excludes continuous phases ($e^{i\varphi}K_i$ Hermitian $\Rightarrow\varphi\in\{0,\pi\}$ — the sign enumeration is exhaustive). So the convention space of the named basis is one $\mathbb Z_2$, both members satisfy every frozen identity exactly, and the requested "fix" is vacuous — what the audit adds is the rigidity statement itself.
+
+**Req.** A3; C1, C2, C3; CT0.7, CT0.7a, CT1.1–CT1.8 (Part 1); EW.4, EW.5 (Part 2); exact $\mathbb Q(i)$ matrix arithmetic, exhaustive sign enumeration [math; machine].
+
+**Pf.**
+$$
+(1):\ \text{each identity evaluated entrywise over}\ \mathbb Q(i)\ \text{from CT1.2's definitions; zero residual}\ [\text{machine: suite §A}]
+$$
+$$
+(2):\ \mathrm{CT1.6}\ \text{Thm verbatim};\qquad [K_1,K_2]=\tfrac14\bigl(2i\,\sigma_0\otimes\sigma_3+2i\,\sigma_3\otimes\sigma_0\bigr)=iW_3\ \checkmark\ (+i,\ \text{exact})
+$$
+$$
+(3):\ \Sigma^2=3E_0-2\Sigma\ \wedge\ \lambda_\Sigma\Sigma\ne0\implies\lambda_\Sigma^2\Sigma^2=3E_0-2\lambda_\Sigma\Sigma\implies\lambda_\Sigma=1;\qquad \mathrm{CT1.5}:\ \lambda_\Sigma\lambda_J=\lambda_K,\ \lambda_\Sigma\lambda_K=\lambda_J
+$$
+$$
+\mathrm{CT1.7}:\ \lambda_J\lambda_K=\lambda_\Sigma=1\ \wedge\ \lambda_J\lambda_K=\lambda_E;\qquad \mathrm{CT1.6}:\ \lambda_J^2=\lambda_K^2=\lambda_W;\qquad\mathrm{CT1.4}:\ \lambda_W^2=\lambda_W\implies\lambda_W=1
+$$
+$$
+\implies(\lambda_J,\lambda_K,\lambda_W,\lambda_\Sigma,\lambda_E)\in\{(1,1,1,1,1),(-1,-1,1,1,1)\};\qquad \operatorname{Ad}(\mathbb S)J_i\mathbb S=-J_i\ [\mathrm{CT0.7}(3):\ J\ S\text{-odd}]\ \blacksquare
+$$
+
+**Phys.** The electroweak backbone was accused of a sign slip; the audit finds the opposite of a slip — a lock. Once the identity generator, the exchange scalar's associative square, and the swap definition are held fixed, the only remaining freedom in the whole named basis is the simultaneous flip of the two Janus triplets, which is the swap conjugation itself, and every frozen identity — including both clauses of the second-order Higgs-to-weak pathway — reads identically in both conventions. There is no phase to choose.
+
+---
+
+---
+
+### FT.93 — The native Clifford census and the weak-chirality pincer (Tasks 1–3)
+
+**Thm.** On $\mathfrak H(\mathbb C^4)$ with CT1.2's basis and CT0.7's $\mathbb S$, $\Pi_{\mathcal R}=\tfrac14(3E_0+\Sigma)$, $\Pi_{\mathcal V}=\tfrac14(E_0-\Sigma)$:
+$(1)$ **Clifford frames are native (positive, new).** Among the $15$ non-identity Pauli products (each Hermitian, squaring to $+I_4$, traceless) there are exactly **$30$ pairwise-anticommuting $4$-frames** (unordered; $720$ ordered, $24$ orderings per frame). For every frame: $\gamma_{\mathcal F}$ is Hermitian, $\gamma_{\mathcal F}^2=I_4$, $\operatorname{Tr}\gamma_{\mathcal F}=0$, $\{\gamma_{\mathcal F},e_i\}=0$; the $16$ real products $\{e_{i_1}\cdots e_{i_r}\}$ are $\mathbb R$-linearly independent (rank $16$ on the example frame) — the frame generates a real subalgebra $\cong Cl(4,0)$ acting on $\mathbb C^4\cong\mathbb R^8$, **with no new axiom** (A3's Pauli facts + CT1.1's basis suffice). The override's items 1–6 are verified with two precisions: $\gamma_{\mathcal F}$ is *frame-dependent* — every ordering sign flip flips $\gamma_{\mathcal F}$ ($12/12$ witness), and $15$ distinct values occur (below) — so "$\gamma_5=\omega$" names a *choice*, not a canonical element; and A3's $\eta=(-,+,+,+)$ labels the $T$-involution only — it enters no Clifford relation (the signature is Euclidean, $e_i^2=+I_4$, as the override requires; no Minkowski structure is used anywhere).
+$(2)$ **The full pseudoscalar catalog (exhaustive).** All $15$ values are attained, **each by exactly $2$ frames**, in three species:
+$$
+\begin{array}{c|c|c|c|c}
+\text{species} & \gamma_{\mathcal F}\ (\text{up to sign}) & (S,T) & \text{commuting}\ W_i & [\gamma_{\mathcal F},\mathbb S]\\
+\hline
+\text{mixed}\ (6) & \sigma_0\otimes\sigma_i\ /\ \sigma_i\otimes\sigma_0 & (\neg\text{definite},-) & W_i\ \text{only} & \pm2iJ_i\\
+\text{diagonal}\ (3) & \sigma_i\otimes\sigma_i & (+,+)\in\mathcal E_{++} & W_i\ \text{only}\ (\text{acomm.}\ W_j,W_k) & 0\\
+\text{off-diag. spatial}\ (6) & \sigma_i\otimes\sigma_j\ (i\ne j) & (\neg\text{definite},+) & \text{none}\ (\text{acomm.}\ W_k,\ k=6{-}i{-}j) & \mp2iK_k\ (k=6{-}i{-}j)
+\end{array}
+$$
+The example frame of the override, $\mathcal F_0=(\sigma_1\otimes\sigma_2,\ \sigma_2\otimes\sigma_2,\ \sigma_3\otimes\sigma_2,\ \sigma_0\otimes\sigma_1)$, gives exactly
+$$
+\gamma_{\mathcal F_0}=\sigma_0\otimes\sigma_3=\operatorname{diag}(1,-1,1,-1);\qquad
+P^{(\mathcal F_0)}_+=\operatorname{diag}(0,1,0,1);\qquad
+P^{(\mathcal F_0)}_-=\operatorname{diag}(1,0,1,0),
+$$
+both idempotent, orthogonal, summing to $I_4$, trace $2$, rank $2$ — the requested exact matrix forms. **No $\gamma_{\mathcal F}$ commutes with more than one $W_i$; none anticommutes with more than two.**
+$(3)$ **The pincer (the sharpened deficit-1 obstruction).** No chirality grade on the pair register can be weak-covariant, from either side:
+**(a) commuting side.** $\{M:[M,W_i]=0\ \forall i\}=\operatorname{span}_{\mathbb C}\{\Pi_{\mathcal R},\Pi_{\mathcal V}\}$ (complex dimension $2$ — Schur on $3\oplus1$; machine-solved exactly). Its involutions are $\pm\Pi_{\mathcal R}\pm\Pi_{\mathcal V}$ with traces $3a+b\in\{\pm4,\pm2\}$; a pseudoscalar needs $\operatorname{Tr}=0$ (general: $\operatorname{Tr}(e_1e_2e_3e_4)=-\operatorname{Tr}(e_2e_3e_4e_1)$) — $3a+b=0\wedge a^2=b^2=1$ has **no solution**.
+**(b) anticommuting side.** $\{M:\{M,W_i\}=0\ \forall i\}=\mathbb C\cdot\Pi_{\mathcal V}$ **exactly** (complex dimension $1$; machine-solved): rank $1$, trace $1$ — singular, never an involution. Structural reason: invertible $M$ with $\{M,W_i\}=0$ makes $\operatorname{Ad}(M)$ a Lie automorphism equal to $-\mathrm{id}$ on $\mathfrak{su}(2)$, but $-\mathrm{id}$ reverses the bracket ($[W_1,W_2]=iW_3\mapsto-iW_3\ne iW_3$) — contradiction.
+**(c) exhaustive.** Every one of the $15$ attained $\gamma_{\mathcal F}$ fails (a) and (b) explicitly: $[\gamma_{\mathcal F},W_i]\ne0$ for some $i$ and $\{\gamma_{\mathcal F},W_i\}\ne0$ for some $i$ — all verified entrywise.
+**(d) seed side.** On the actual matter carrier $\mathcal H_{\mathsf v}\cong\mathbb C^2$ with $W_i\mapsto\tfrac12\sigma_i$ [EW.32]: $\{m:[m,\sigma_i]=0\}=\mathbb C\cdot I_2$ and $\{m:\{m,\sigma_i\}=0\}=\{0\}$ — the weak seed representation is **irreducible**: no nontrivial projector on the matter carrier commutes with the weak action, and no grade anticommutes with it either.
+$(4)$ **Task 2's claim refuted, per frame and in general.** For $\mathcal F_0$: $W_1,W_2$ *flip* the chiral halves ($P_\mp W_{1,2}P_\pm\ne0$ entrywise) and $W_3$ (the only commuting one) preserves them with $P_-W_3P_-=\operatorname{diag}(1,0,0,0)$ — nonzero, non-scalar on the $2$-dimensional image: "annihilates or acts trivially on the right eigenspace" is false for every $i$. In general, no frame can make a chiral half weak-inactive: $W_iP=0\ \forall i$ forces $\operatorname{im}P\subseteq\bigcap_i\ker W_i=\wedge^2$ [clause (5)], which is $1$-dimensional, while $\operatorname{rank}P^{(\mathcal F)}_\pm=2$. Hence **$SU(2)_L$-type chiral coupling is NOT natively derivable**, and B6's target $8+7=15$ is not reachable: on $\mathbb C^4\otimes(\mathbb C^3\oplus\mathbb C^1)$ the native counts are $8+8=16$; the missing right state is the [EXT] SM species fact ($\nu_R$ absent — no species list, no neutrino read: application-layer data).
+$(5)$ **The native selectivity that does exist (positive, derived).** The weak force grades the pair arena by **$S$-parity**, not by chirality: $W_i\Pi_{\mathcal V}=0$ exactly $\forall i$ (the weak annihilates the singlet $\wedge^2$), $\sum_iW_i^2=2\Pi_{\mathcal R}$ [Cor CT0.7a] (spin $1$ on $\vee^2$, spin $0$ on $\wedge^2$) — a $3$-active/$1$-inactive split, and $\bigcap_i\ker W_i=\operatorname{im}\Pi_{\mathcal V}$ exactly (machine: the joint kernel is the $1$-dimensional singlet line). This is a *force-arena* selectivity; matter chirality would have to grade a carrier on which the gauge action is trivial — the opposite pattern.
+$(6)$ **Task 3, exactly.** $[\gamma_{\mathcal F},\mathbb S]=0\iff\gamma_{\mathcal F}=\pm\sigma_i\otimes\sigma_i$ — the $S$-aligned chiralities are exactly the three *diagonal* ones, and they live in $\mathcal E_{++}$, the gravity/Higgs block [CT1.1, CT1.2], each anticommuting with the two non-own $W$'s (never weak-covariant). The full commutator table is clause (2)'s last column; example: $[\sigma_0\otimes\sigma_3,\ \mathbb S]=2iJ_3$ — **chirality rotates into the Janus seal sector** under the swap. The $S$-aligned three are never weak-covariant either: $[\sigma_3\otimes\sigma_3,\ W_1]=2iE^{23}$ exactly (machine) — the weak rotation turns an $S$-aligned chirality into gravitational shear. The two splittings provably do not align: $\operatorname{rank}(P^{(\mathcal F_0)}_\pm\Pi_{\mathcal R})=2$, $\operatorname{rank}(P^{(\mathcal F_0)}_\pm\Pi_{\mathcal V})=1$ — each chiral half cuts the triplet $2{+}1$ and the singlet $1{+}1$... (the singlet line meets *both* halves), so neither grading refines the other, and $P^{(\mathcal F_0)}_\pm\notin\operatorname{span}\{\Pi_{\mathcal R},\Pi_{\mathcal V}\}$ ($[P_\pm,\mathbb S]\ne0$). The override's hypothesis — "left-handed fermions are the S-even/S-odd states the Weak force can see" — is **false as stated**: the weak-visible split is $(\vee^2,\wedge^2)=(3,1)$ by $S$-parity, while every chiral split is $(2,2)$; the dimensions alone forbid the identification.
+$(7)$ **Diagnosis and relocation (the chirality deficit: the synthesis).** The override's correction is accepted where it is true: the "missing spinor bundle" framing was too strong — fiberwise, the Clifford algebra and its chiral projectors are **constructible from A1/A3 with no declaration** (clause (1)), and Def-H.14's $\mathcal E(e)\subset\mathfrak H(\mathbb C^4)_e$ already makes the register a per-edge arena bundle. But $\mathbb C^4$ is the **internal/force arena**: it carries the weak as $3\oplus1$ (clause (5)), while a Dirac-type $\gamma_5$ must commute with the gauge action on a *spacetime-side* factor. The pincer (clause (3)) is the exact incompatibility: no element of $\operatorname{End}(\mathbb C^4)$ is simultaneously a pseudoscalar and weak-scalar, and the matter carrier $\mathbb C^2$ is weak-irreducible. **Deficit 1 is therefore relocated, not closed**: what is missing is not matrices but a spacetime spin factor (a carrier on which the gauge action is trivial and a Clifford module over the emergent geometry acts) — and a global Dirac-type operator would additionally require a per-edge frame assignment $e\mapsto\mathcal F_e$ (fiberwise frames exist by clause (1); the assignment is undeclared datum) coupled to the EW.32 transport. Recorded in item 21 as an enumerated would-be declaration, **not adopted, no declaration-entry number** (the pincer blocks the chiral use regardless of the assignment, and no computable consequence was identified). The reversal structure declared by the corpus remains exactly $\langle\omega,\Theta_{\mathfrak L}\rangle\cong\mathbb Z_2\times\mathbb Z_2$ [FT.88]; the $15$ register-level $\mathbb Z_2$-grades $\gamma_{\mathcal F}$ are new *constructible* objects with no declared coupling to $\omega$ or $\Theta_{\mathfrak L}$ (different spaces: patterns vs fiber).
+$(8)$ **The inventory gloss.** The No Dirac/Clifford algebra is *declared*, but $Cl(4,0)$ frames are *derived* (clause (1)) — the question was never the algebra; it is the weak-covariant grade (clause (3), proven absent here) and the spacetime factor (clause (7), absent from the inventory). The chirality-projector non-constructibility result stands, on the proven pincer.
+
+**Req.** A1, A3; C1, C2, C3; CT0.6, CT0.7, CT0.7a, CT0.12, CT0.14, CT1.1, CT1.2, CT1.4–CT1.8 (Part 1); EW.5, EW.32 (Part 2); Def-H.14; FT.78(6), FT.84, FT.87(8), FT.88, FT.89(2), FT.90(5); frame enumeration, exact kernel solves over $\mathbb Q(i)$, exhaustive catalog verification [math; machine]. External SM counts ($8/7/15$, $\nu_R$): marked, used in no derivation.
+
+**Pf.**
+$$
+(1):\ \#\{\text{4-subsets of the }15\}=1365;\qquad\text{pairwise }\{e_a,e_b\}=0\ \text{filter}\implies30\ [\text{machine}]
+$$
+$$
+\gamma_{\mathcal F}^2=(-1)^{\binom42}e_1^2e_2^2e_3^2e_4^2\cdot(\text{reordering sign})=I_4;\qquad\operatorname{Tr}\gamma=-\operatorname{Tr}\gamma=0;\qquad\text{rank}_{\mathbb R}\{e_{i_1}\!\cdots e_{i_r}\}=16
+$$
+$$
+(2):\ \text{Pauli-coefficient extraction}\ \operatorname{Tr}(\gamma P_{\mu\nu})/4:\ \text{single}\ \pm P_{\mu\nu}\ \text{per frame};\qquad\text{frame multiplicity }2\ \text{per value}\ [\text{machine, all }30]
+$$
+$$
+(3a):\ \text{exact nullspace of the }96\times32\ \text{real system}\ [M,W_i]=0:\ \dim_{\mathbb R}4=\dim_{\mathbb C}2;\qquad M=a\Pi_{\mathcal R}+b\Pi_{\mathcal V}:\ M^2=I\Rightarrow a^2=b^2=1;\ \operatorname{Tr}M=0\Rightarrow3a+b=0:\ \varnothing
+$$
+$$
+(3b):\ \text{exact nullspace of}\ \{M,W_i\}=0:\ \dim_{\mathbb C}1=\mathbb C\cdot\Pi_{\mathcal V}\ (\operatorname{rk}1,\operatorname{Tr}1);\qquad \operatorname{Ad}(M)=-\mathrm{id}\ \neg\in\operatorname{Aut}(\mathfrak{su}(2)):\ [W_1,W_2]=iW_3\ne0
+$$
+$$
+(3d):\ 2\times2\ \text{exact solves}:\ \dim_{\mathbb C}\{m:[m,\sigma_i]=0\}=1;\qquad\dim_{\mathbb C}\{m:\{m,\sigma_i\}=0\}=0
+$$
+$$
+(4):\ \text{block entries of}\ P_\mp W_{1,2}P_\pm\ \text{nonzero exact};\qquad P_-W_3P_-=\operatorname{diag}(1,0,0,0);\qquad\dim\bigcap_i\ker W_i=1<2=\operatorname{rk}P_\pm
+$$
+$$
+(5):\ W_i\Pi_{\mathcal V}=0\ [\text{machine}];\qquad\sum W_i^2=\tfrac32E_0+\tfrac12\Sigma\ [\mathrm{Cor\ CT0.7a}]=2\Pi_{\mathcal R}
+$$
+$$
+(6):\ \mathbb S P_{\mu\nu}\mathbb S=P_{\nu\mu}\implies[\gamma,\mathbb S]=0\iff\mu=\nu;\qquad[\sigma_0\otimes\sigma_3,\mathbb S]=\tfrac12[\sigma_0\otimes\sigma_3,\Sigma]=2iJ_3\ [\text{machine}]
+$$
+$$
+\operatorname{rank}(P_\pm\Pi_{\mathcal R})=2,\ \operatorname{rank}(P_\pm\Pi_{\mathcal V})=1\ \forall\pm\implies\neg\text{refinement either way};\qquad(3,1)\ne(2,2)\implies\neg\text{identification}
+$$
+$$
+(7),(8):\ \text{conjunction of}\ (1),(3),(5),(6)\ \text{with the cited inventory tags.}\ \blacksquare
+$$
+
+**Phys.** The Imaginator was half right, and the half that is right matters: the pair register really does carry a native Euclidean Clifford algebra — thirty frames, fifteen possible "γ₅'s", exact chiral projectors, all constructible from the axioms with nothing added. But every one of those fifteen chirality operators is blind to, or at war with, the weak force: the best of them commutes with a single Cartan generator while the other two rotate left into right, and the swap rotates all of them into the Janus seals. The weak force does have a native selectivity — it sees the symmetric triplet and annihilates the antisymmetric singlet, three against one — but that is a grading of the force arena by exchange parity, not a handedness of matter. A Dirac γ₅ needs a spacetime-side factor on which the gauge group acts trivially; the corpus has no such factor, and now there is a theorem saying the pair register cannot fake one. Chirality is still missing — but the search space has collapsed from "unknown primitive" to one named absent object.
+
+---
+
+---
+
+### FT.94 — The chiral mass spectrum: not constructible as chiral, exact as a statistic, and the fourth hierarchy negative
+
+**Thm.** Under Def-H.25/Def-H.28, at (S1)–(S4):
+$(1)$ **The typed tuple is not constructible.** No read of the form $(I_{\mathrm{topo}},I_{\mathrm{grav}},I_{\mathrm{Higgs}},I_{\mathrm{Weak}},I_{\mathrm{strong}})$ exists in the inventory: no pair-channel block carries a block-local quantum [FT.30's verdict: the geometric quantum is a *joint* $S$-even read mixing all ten metric coordinates across $G,H,D^+,W$]; per-aspect bit counts are well-posed exactly for the registration-type ledgers [FT.41's trichotomy: charge $=2$ end bits; colour $=\log_2$(sealing grammar); gravity $=L{-}1$ free integers, unbounded, $\neg$bit-type (C10); Higgs $=$ the continuous P4 datum $h_0$]; $I_{\mathrm{Higgs}}$ has no information-type referent at all (deficit 8: $\dim F_H=1$). The directive's own F5 concedes the point; the citation trail is exact.
+$(2)$ **"Chiral" splits no mass read.** By FT.93(3) no weak-chiral grade exists on any carrier; and cover-class reversal chirality is invisible to both mass ansätze — $K$, $|\mathcal C|$, $\Omega$, amp, norm weight, $k_{\max}$, mask dimension and cycle signature are identical on every exchanged pair [FT.78(6), re-verified per pair: tetra $1/1$, cube $111/111$, machine]. The per-class spectrum inside the declared inventory is therefore exactly FT.79(1)'s ladder — tetra $m_A\in\{0,2,4,6\}\ln2/\mathfrak h$, cube $\{0,2,4,6,8,10,12\}\ln2/\mathfrak h$ (re-derived) — with **zero spectral poles per class** [FT.80(3)]; the minimal bridge form [FT.91] remains constructed data (retirement record: HistLog §I) and **not adopted** (this directive adopts nothing).
+$(3)$ **The computable core of C3, as a flagged statistic.** The norm-weighted average of the Ansatz-A read with $|A|^2$ census weights ($|A|^2=16^{|\mathcal C|}$ per configuration; class sum $\Omega\cdot16^{|\mathcal C|}$):
+$$
+\langle m_A^2\rangle_{\mathrm{tetra}}=\frac{886272}{35201}\Bigl(\frac{\ln2}{\mathfrak h}\Bigr)^2\approx25.1775\Bigl(\frac{\ln2}{\mathfrak h}\Bigr)^2;\qquad
+\langle m_A^2\rangle_{\mathrm{cube}}=\frac{22146188288}{268241835}\Bigl(\frac{\ln2}{\mathfrak h}\Bigr)^2\approx82.5605\Bigl(\frac{\ln2}{\mathfrak h}\Bigr)^2
+$$
+exact rationals. **Flag:** this is a census statistic over classes (amplitude enters only as a weight — F4 respected: no amplitude is a mass, FT.79(5)); it is not a particle-mass read, and no pole interpretation is available without a bridge-map interface of the FT.91 species (retired candidate; HistLog §I) [FT.80(2)/FT.91].
+$(4)$ **C5: the fourth clean negative.** The widest $m_A^2$ range on any computed skeleton is $(12/2)^2=36$ against the [EXT] charged-lepton target $3477^2=12\,089\,529$ — a shortfall of $\times335\,820.25=12089529/36$ exactly; a priori, spanning $1{:}R$ requires $V\ge4R/3$ [FT.79(2)]: $V\ge4636$ for $R=3477$, against $V=8$. The verdicts of FT.77/FT.79(4)/FT.87(9) stand unmodified; the amplitude near-coincidences ($4^{|\mathcal C|}$ vs $207/3477$; the triple $(8,1056,1109312)=(8,Z^{\rm tetra}_{\rm byp}{-}1,Z^{\rm cube}_{\rm byp}{-}1)$) are rejected again as the same dimension trap [FT.79(5), FT.87(9)].
+
+**Req.** Def-H.25, Def-H.28; FT.30, FT.41, FT.67, FT.69, FT.76(3), FT.78, FT.79, FT.80, FT.87(9), FT.91, FT.93; C10; CT0.11 (Part 1); exact class enumeration and Fraction arithmetic [math; machine]. External hierarchy marked at (4).
+
+**Pf.**
+$$
+(1):\ \mathrm{FT.30}\ \text{verdict row} + \mathrm{FT.41}(c)\ \text{trichotomy}\ [\text{cited; no computation adds a referent}]
+$$
+$$
+(2):\ \mathrm{FT.93}(3)\ \text{(no grade)};\qquad\text{pair-field identity census}\ [\text{machine: }112\ \text{pairs}\times9\ \text{fields}]
+$$
+$$
+(3):\ \langle m_A^2\rangle=\frac{\sum_{\mathcal O}\Omega_{\mathcal O}16^{|\mathcal C_{\mathcal O}|}(2|\mathcal C_{\mathcal O}|)^2}{\sum_{\mathcal O}\Omega_{\mathcal O}16^{|\mathcal C_{\mathcal O}|}}:\ \text{tetra over }7\text{ classes},\ \text{cube over }264\ [\text{machine, exact}]
+$$
+$$
+(4):\ \max m_A^2/\min m_A^2\big|_{\ne0}=(12/2)^2=36;\qquad 3477^2/36=12089529/36;\qquad V\ge\tfrac43\cdot3477=4636\ [\mathrm{FT.79}(2)]\ \blacksquare
+$$
+
+**Phys.** Asked for a chiral mass spectrum, the corpus answers in three voices. The typed-information tuple does not exist: force blocks hold no private quanta, gravity keeps an unbounded integer ledger, and the Higgs block keeps a continuous dial — nothing to type. The chirality that does exist on the covers cannot touch any mass: reversal flips arrows and leaves every mass-relevant count untouched, one hundred twelve exchanged pairs and not one field moved. And the numbers themselves — an exact average of twenty-five and a fifth on the tetrahedron, eighty-two and a half on the cube, in the only units the corpus has — sit under a ceiling of thirty-six in squared-mass range, five and a half orders of magnitude short of the lepton hierarchy they were asked to reproduce. Fourth time, same negative, same exact reason.
+
+---
+
+---
+
+### FT.95 — Flicker chirality: the tautology, the absent trajectory, and the zero-expectation theorem
+
+**Thm.** Under Cal-F, Def-H.25, D2.6:
+$(1)$ **D4/D5 are tautological.** With $k(t)=(-1)^tk_0$ and $\mathrm{coupling}(t)=\mathrm{wb}\cdot\mathrm{hc}\cdot k(t)$: $\operatorname{sign}(k(t))\cdot k(t)=|k(t)|=|k_0|$ for every $t$ (machine: all $k\in\{\pm1,\dots,\pm5\}$), so $\langle\chi\rangle_T=\mathrm{wb}\cdot\mathrm{hc}\cdot|k_0|$ **for every $T\ge1$** — independent of the dynamics, the tick count and the phase boundary. "$\langle\chi\rangle_T\ne0$" is built in by the formula, not derived: the same species as FT.87(3)'s Regge-tautology verdict. D5 is void; D6 substitutes a measure parameter ($p^*_\infty=\sqrt{2/3}$ — itself FT.89(2d)'s cap-3 output, and a phase-boundary datum of the bypass measure [Def-H.26/FT.70], not a dynamics input) into the tautology and returns the tautology.
+$(2)$ **D1–D3 have no flicker referent.** The winding $k$ is a read of *materialized* closed chains [EW.18, FT.22]; flicker states carry none — bound content survives only dissolved, in even cycles [FT.69's cycle-alternation lemma], and covers carry no materialized closed chain [FT.80(6)] — so no trajectory $k(t)$ exists in the flicker sector. Cal-F declares the *rates* $r=\Gamma_{J^+}/\Gamma_{J^-}$ (per-edge independent detailed balance), not per-tick schedules; $\delta\tau$ is schedule data that $R$ does not determine [FT.80(5)]; and no oscillation frequency is constructible [FT.86(7): only $\tau_c=1$ ledger tick, CT0.3]. $\mathrm{weak\_bias}$ and $\mathrm{higgs\_coupling}$ count **0** in frozen Parts 1–2 (machine-asserted). The corpus's genuine period-2 phenomenon is FT.86(2)'s alternating *correlation ripple in the crystallization indicators* (cap-induced, exact decay rate $(\sqrt{21}-5)/2$) — a different object: it is $C$-even, orientation-blind, and carries no chirality; D2's deterministic sign-alternating winding conflates the bypass and bound sectors.
+$(3)$ **The zero-expectation theorem (the positive replacement for D5).** Global reversal $R\mapsto R^{\mathrm T}$ preserves admissibility, $K$, cover status and the amplitude $A(R)=(-1)^{|R|}2^{|R|}$ — **exhaustively verified on the tetrahedron**: all $1230$ bypass configurations, all $101$ covers, and all $4096$ patterns; the norm-layer class data $(K,\Omega)$ are reversal-invariant by FT.80(1). Hence both layer weights of the declared flicker ensemble are reversal-invariant, and **every $C$-odd read has exactly zero ensemble expectation**: for $f(R^{\mathrm T})=-f(R)$,
+$$
+\sum_R A(R)\,f(R)=0\qquad(\text{machine witness: the orientation-bias read}\ f(R)=\#\{(a,b)\in R:a<b\}-\#\{(a,b)\in R:a>b\},\ \text{exact}\ 0\ \text{over all}\ 4096).
+$$
+In particular $\langle q_{\mathrm{core}}\rangle=0$ ($\omega$-odd: FT.40/D2.6) and $\langle\operatorname{sign}(k)\rangle=0$ ($C$-odd: FT.87(8)) in the declared ensemble. **Parity violation is not constructible from the flicker**: producing $\langle C\text{-odd}\rangle\ne0$ requires declaring a $C$-odd state or a $C$-odd dynamics — application-layer territory; the exact declared reversal structure remains $\langle\omega,\Theta_{\mathfrak L}\rangle\cong\mathbb Z_2\times\mathbb Z_2$ [FT.88], whose elements are symmetries of the registration data, and by this clause of the equilibrium weights.
+
+**Req.** Cal-F; Def-H.25, Def-H.26; FT.22, FT.40, FT.69, FT.80, FT.86, FT.87, FT.88, FT.89(2); D2.6; CT0.3; EW.18 (Part 2); exhaustive tetrahedron enumeration, exact integer sums [math; machine].
+
+**Pf.**
+$$
+(1):\ \operatorname{sign}(x)x=|x|\ \forall x\in\mathbb Z\setminus\{0\};\qquad\langle\chi\rangle_T=\tfrac1T\sum_{t=0}^{T-1}|k_0|\cdot\mathrm{wb}\cdot\mathrm{hc}\ [\text{machine},\ T=1..6]
+$$
+$$
+(2):\ \mathrm{FT.69}\ \text{(dissolved only)}+\mathrm{FT.80}(6)\implies\neg\exists\ \text{materialized}\ k(t);\qquad\text{grep counts}=0\ [\text{machine}]
+$$
+$$
+(3):\ A(R^{\mathrm T})=(-1)^{|R^{\mathrm T}|}2^{|R^{\mathrm T}|}=A(R);\qquad R\mapsto R^{\mathrm T}\ \text{a bijection of the ensemble}\implies\sum_RA(R)f(R)=\tfrac12\sum_R\bigl(A(R)f(R)+A(R^{\mathrm T})f(R^{\mathrm T})\bigr)=0\ \blacksquare
+$$
+
+**Phys.** The proposed flicker chirality is a formula that multiplies a sign by the thing the sign came from — the answer is the absolute value, every time, for every period, at every phase boundary. Strip that away and ask the real question — can the flickering gas prefer one orientation? — and the corpus answers with a clean no-theorem: reversing every arrow leaves the weights of both layers untouched, configuration by configuration, so anything odd under reversal averages to exactly zero. The gas is born parity-symmetric. A parity-violating world needs a chiral state or a chiral rule, and neither is declared; that absence is the chirality assignment's dynamics-side face, now with an exact vanishing theorem behind it.
+
+---
+
+---
+
+
+## Tier F.32 — The Multi-Node Form Factor: Formalization, Exact Reductions, and the Third Ceiling
+
+### FT.97 — The form factor formalized: node ontology, three underdeterminations, reduction identities, and the general ceiling
+
+**Thm.** Under Def-H.25/FT.67, at (S1)–(S4):
+$(1)$ **Node ontology (premise correction).** For every flicker configuration $R$ on a skeleton $\Gamma$: $V(R)\subseteq V(\Gamma)$ — the nodes a configuration "passes through" are exactly the skeleton vertices its edges touch. The roles are the derived vertex types $(a,b)=(\mathrm{indeg}_R,\mathrm{outdeg}_R)$: **centre** $(1,1)$ (the threading junction; every cover edge is claimed by exactly one centre [FT.67(3d)]), **endpoint** $(a,0)/(0,b)$, **hub** $a+b\ge4$ (locked, $D^-$-configured [FT.3/CT4.5]), **unclaimed** $(0,0)$. "Intermediate nodes" do not exist as nodes; a form factor over subdivided skeletons has no corpus referent (no refinement mechanism is declared).
+$(2)$ **Three underdeterminations, exposed and fixed by convention (none is a free fit).** **(a) Per-node information assignment.** Registration bits live on *edges* [CT1.29: $S_{\mathfrak L}=n_{\mathcal R}\ln2$; D0.5]; assigning them to nodes requires a convention — tail ($i_v=\mathrm{outdeg}_R(v)$), end-sum ($a{+}b$) or half-split ($\tfrac{a+b}{2}$) — and the first two differ by an **exact factor $2$** on covers ($\sum_v\deg_R(v)=2|R|$). No rule of Parts 1–3 selects one (this is FT.85(7)'s per-sector non-constructibility in miniature); the **tail convention is primary** here because $\sum_v i_v=|R|=n_{\mathcal R}$ matches CT1.29's count exactly, and the factor-$2$ freedom is reported, not hidden. **(b) The role weight $w$.** Five derived candidates, all functions of the finite type set: $w_U=1_{\mathrm{participating}}$, $w_K=k_v=a{+}b$ [CT0.11's capped quantity], $w_C=1_{(1,1)}$ (centre), $w_E=1_{\mathrm{endpoint}}$, $w_H=\max(0,a{+}b{-}2)$ (hub excess). Any other $w$ is a free function — a P4-class parameter whose selection against [EXT] targets would violate P5; **all five are reported and none is selected by any target**. **(c) Sector scope** (bypass / locked / all): values differ by $O(2)$ and all three are tabulated.
+$(3)$ **Reduction identities (new; exact, per configuration).** For every strict cover $R$:
+$$
+S_{w_U}(R)=\sum_v \mathrm{outdeg}_R(v)=|R|=K(R);\qquad S_{w_C}(R)=\#\{(1,1)\ \text{vertices}\}=|\mathcal C(R)|=\tfrac{K}{2}
+$$
+(machine-asserted on all $17\,042$ covers of the three families). Hence the directive's form factor at its constructible core is
+$$
+M_{\mathrm{form}}^{(w_U)}(\Gamma)=\frac{\sum_R|A(R)|^2K(R)}{\sum_R|A(R)|^2}\,\ln2=\langle K\rangle_{|A|^2}\ln2\qquad(|A|^2=16^{|\mathcal C|}\ \text{on covers}),
+$$
+**exactly FT.68(1)'s reading (ii)** — the amplitude-weighted mean winding, tabulated for the tetrahedron bypass sector since FT.68. Anchor reproduced exactly from independent enumeration: $M_{\mathrm{form}}^{(w_U)}(\mathrm{tetra},\mathrm{byp})=62208/15745$; and $M^{(w_C)}=M^{(w_U)}/2$ identically, per family. The "paradigm shift" is a *reweighting of tabulated census data*, not a new read species.
+$(4)$ **The typed tuple remains non-constructible and ill-typed.** Per component [FT.94(1)'s citations, per-node scope added]: Topological — winding is per materialized *chain* [FT.22], no per-node referent, and flicker edges are unmaterialized [FT.80(6)]; $G$ — the geometric quantum is a *joint* $S$-even read over all ten metric coordinates [FT.30's verdict], its ledger unbounded-integer, $\neg$bit-type [FT.41(c)/C10]; $H$ — the continuous global P4 datum $h_0$ [EW.13], not per-node; $W$ — continuous per-edge shift data [CT1.12]; Strong — sealing bits are well-posed [FT.41(b)] but colour data is not determined by crystallization patterns [FT.80(2)]. A sum $\mathrm{Topological}+G+H+W+\mathrm{Strong}$ adds bits to unbounded integers to reals — **ill-typed** [C10]. The only constructible per-node information read is the registration bit count — a bit sum, which the directive's own D3 forbids: **D3 cannot be satisfied as written**; the constructible version is computed instead and flagged.
+$(5)$ **The Form-Factor Ceiling (the third size theorem).** $M_{\mathrm{form}}$ is a weighted *mean*, so $M_{\mathrm{form}}\le\max_R S_w(R)$; and $S_w(R)\le V\cdot c_w$ with the finite-type maxima
+$$
+c_w:\quad c_{w_U}=6,\quad c_{w_K}=36,\quad c_{w_C}=1,\quad c_{w_E}=6,\quad c_{w_H}=24\qquad(\text{universal over the type set}\ \{0<a+b\le6\}),
+$$
+so $M_{\mathrm{form}}(\Gamma)\le c_wV(\Gamma)$ — **linear in skeleton size for every role weight**. With $|\mathcal C|\le3V/4$ (bypass) / $V$ (locked) [CT0.11/FT.79(2)], the $16^{|\mathcal C|}$ enhancement **saturates at the cap**: exponential *inside* a skeleton, linear *across* skeletons. Spanning $1{:}R$ off the $P_3$ anchor requires $V\ge R\cdot M^{(w)}(P_3)/c_w$; at $R=3477$ [EXT]:
+$$
+V\ \ge\ \begin{cases}2187 & (w_U)\\ 1062 & (w_K)\\ 6561 & (w_C)\\ 65 & (w_E)\\ 515 & (w_H)\end{cases}
+\qquad(\text{exact: } \lceil 3477\cdot\tfrac{3264}{865\cdot6}\rceil,\ \lceil 3477\cdot\tfrac{9504}{865\cdot36}\rceil,\ \lceil 3477\cdot\tfrac{1632}{865}\rceil,\ \lceil 3477\cdot\tfrac{96}{865\cdot6}\rceil,\ \lceil 3477\cdot\tfrac{3072}{865\cdot24}\rceil)
+$$
+(the $w_E$ bound is loose — its $P_3$ anchor $96/865$ is tiny; its *computed* family maximum is $7.681$, FT.98(4)). This is the third instance of the size-bound species [FT.76(3): pole ceiling; FT.79(2): cover ceiling]: **the two-ceiling synthesis [FT.84(2)] becomes a three-ceiling synthesis** — counting reads of every constructed species on every computed skeleton are $O(V)$.
+$(6)$ **Mass status.** $M_{\mathrm{form}}$ is a flicker-ensemble **statistic** (the species of FT.94(3)); promoting it to a particle mass requires a declaration linking ensemble averages to pole structure [Def-H.16] — none exists, none is adopted. $|A|^2$ enters only as a weight (no amplitude-to-mass promotion; the FT.79(5)/FT.87(9) boundary is respected). "Mass is a form factor" is recorded as a proposed identification, **not adopted**.
+
+**Req.** Def-H.25; FT.3, FT.16, FT.22, FT.41, FT.42, FT.67, FT.68(1), FT.76(3), FT.79, FT.80, FT.84(2), FT.85(7), FT.94; D0.5; CT0.11 (Part 1); CT1.12, CT1.29 (Part 2); EW.13 (Part 2); C10; P4, P5; finite-type maximization, exact Fraction census averages [math; machine]. External hierarchies marked at (5); no identification.
+
+**Pf.**
+$$
+(1):\ \mathrm{Def\text{-}H.25}:\ R\subseteq\mathcal R_{\rightarrow}(\Gamma);\qquad\text{roles}=\mathrm{types\_of}(R)\ [\text{derived}]
+$$
+$$
+(3):\ \text{strict covers}: \text{every edge claimed once by a }(1,1)\text{ centre}\implies 2\#\mathrm{centres}=|R|\ [\mathrm{FT.67}(2)/(3d)]
+$$
+$$
+\sum_v\mathrm{outdeg}_v=|R|\ \text{(each edge has one tail)};\qquad M^{(w_U)}(\mathrm{tetra,byp})=\tfrac{62208}{15745}\ [\text{machine}=\mathrm{FT.68}(1)(ii)]
+$$
+$$
+(5):\ \text{mean}\le\max;\qquad S_w(R)=\sum_vw(v)i_v\le V\max_{(a,b)}w(a,b)\cdot b;\qquad\text{type set finite}\ (a+b\le6)
+$$
+$$
+|\mathcal C|\le3V/4\ [\mathrm{FT.79}(2)]\implies 16^{|\mathcal C|}\le16^{3V/4}:\ \text{weights saturate};\qquad\text{required-}V:\ \text{ceiling rearranged at the exact anchors}\ \blacksquare
+$$
+
+**Phys.** The proposal asked the gas to weigh its nodes instead of its edges. Taken literally, the nodes turn out to be the same old skeleton vertices wearing role costumes — centres, endpoints, hubs — and once the costumes are counted honestly, the new "form factor" collapses, identity by identity, onto a number the corpus has carried since FT.68: the amplitude-weighted mean winding of the covers. That is not a failure; it is a localization. Every way of building the proposal out of declared reads lands in the same bounded band, and the bound is a theorem: a weighted average cannot outrun its largest summand, its largest summand cannot outrun the per-vertex cap, and the per-vertex cap cannot outrun the skeleton's size. Three ceilings, one species. Hierarchy-hunting on four- and eight-vertex skeletons is over; the numbers say what would be needed, exactly.
+
+---
+
+---
+
+
+## Tier F.33 — The Dynamic Phase, Parity, and the CPT Bridge: the Mass Refinement
+
+### FT.100 — The alignment pattern refines the informational mass
+
+**Thm.** (candidate.) Under Def-H.9 (coarse-graining projection), the FT.16/FT.44(4) mass read ($m_{\mathrm{hid}}=E_{\mathrm{int}}\ln2/\mathfrak h$), and Def-EM.20 (dynamic phase):
+$(1)$ **Edge count.** The informational mass counts internal real edges: each real edge contributes $\ln2/\mathfrak h$; $m_{\mathrm{hid}}=E_{\mathrm{int}}\ln2/\mathfrak h$, $E_{\mathrm{int}}\in\mathbb Z_{\ge0}$ — on the floor families whose $E_{\mathrm{int}}$ read is computed [FT.32, FT.44(4)].
+$(2)$ **Phase-blindness.** The dynamic phase $\alpha_e$ does not change $m_{\mathrm{hid}}$: the mass counts edges, $\neg$ phases. An edge with $\alpha_e=0$ and an edge with $\alpha_e=\pi$ each contribute $\ln2/\mathfrak h$; $m_{\mathrm{hid}}$ is constant across all $2^{E_{\mathrm{int}}}$ phase assignments.
+$(3)$ **Refinement.** The alignment pattern $\mathcal P(\Sigma)$ [Def-EM.21] is a refinement of the mass read: two subnetworks with the same $m_{\mathrm{hid}}$ (same $E_{\mathrm{int}}$) can carry different alignment patterns — $2^{E_{\mathrm{int}}}$ of them [EM.23(4)] — and different parity classes [EM.23(1)–(2)]. The phase adds structure without changing mass.
+
+**Req.** Def-H.9; FT.1, FT.15, FT.16 (**Tiers F.1–F.11**); FT.32 (Tiers F.12–F.13); FT.44 (Tiers F.14–F.16); Def-EM.20, Def-EM.21; EM.20, EM.23 (Part 2); C9; CT0.9 (Part 1); exhaustive enumeration in exact integer arithmetic [math; machine: `checks/verify_F33_dynamic_phase.py` §E].
+
+**Pf.**
+$$(1):\ \mathrm{Def\text{-}H.9}(2):\ E_{\mathrm{tot}}=|\Sigma|\ln2\ [\mathrm{CT0.9},\ \mathrm{C9}:\ 1\ \text{real edge}=1\ \text{bit}=\ln2\ \text{nats}];\qquad \mathrm{FT.32}/\mathrm{FT.44}(4):\ m_{\mathrm{hid}}=S_{\mathfrak L}/\mathfrak h=E_{\mathrm{int}}\ln2/\mathfrak h\ \text{on the computed floors}
+$$
+$$(2):\ m_{\mathrm{hid}}=(E_{\mathrm{tot}}-E_{\mathrm{vis}})/\mathfrak h;\quad E_{\mathrm{vis}}=\min(\delta h,\ 4\,\delta\tau)\ln2\ [\mathrm{FT.1}]:\ \text{neither term reads}\ \alpha_e;\qquad \mathrm{FT.15}:\ \Pi_v\ \text{depends on}\ (\delta h,\delta\tau,\sigma_s,\sigma_t,\Theta_{\mathrm{int}}),\ \neg\text{on the phase distribution}
+$$
+$$\mathrm{EM.20}(1):\ \alpha_e\in\{0,\pi\}\ \forall e\in E_{\mathcal R}:\ \text{every assignment leaves}\ E_{\mathrm{int}},\ \text{hence}\ m_{\mathrm{hid}},\ \text{fixed}\ [\text{machine: all}\ 2^{E_{\mathrm{int}}}\ \text{assignments, exact}]
+$$
+$$(3):\ \text{same}\ E_{\mathrm{int}}\implies\text{same}\ m_{\mathrm{hid}}\ [(1)];\qquad \mathrm{EM.23}(4):\ \#\{\mathcal P(\Sigma)\}=2^{|E_{\mathcal R}(\Sigma)|}:\ \text{fiber cardinality over each mass value};\qquad \mathrm{EM.23}(1)\text{--}(2):\ \text{the patterns split into parity classes under}\ M\ [\mathrm{Def\text{-}EM.22}].\ \blacksquare
+$$
+
+**Phys.** What a coarse-grained fermion forgets, the alignment pattern remembers: the mass counts the hidden edges — one bit each — blind to which way each edge's phase points; parity reads exactly that pointing data. Same mass, $2^{E_{\mathrm{int}}}$ patterns, split into mirror-even and mirror-odd classes: a degeneracy-refinement template of the same species as FT.44's dual-pair splitting. No physical identification claimed.
+
+---
+
+---
+
+
+## Tier F.34 — The Weak Branch Grading of the Two-Branch Crystallization
+
+### FT.101 — The weak branch grading: the two crystallization branches are weak-inequivalent
+
+**Thm.** Under A3 ($\mathcal H_p\otimes\mathcal H_q=\vee^2\oplus\wedge^2$), A4 (branches: $\alpha_{pq}=0$ on $|\Pi_{\mathcal V}\rho_{pq}|\le\varepsilon_q$; $\alpha_{pq}=\pi$ on $|\Pi_{\mathcal V}\rho_{pq}|\ge1-\varepsilon_q$), $\Pi_{\mathcal R}=\tfrac14(3E_0+\Sigma)$, $\Pi_{\mathcal V}=\tfrac14(E_0-\Sigma)$ [CT0.7], $W_i=\tfrac12(\sigma_0\otimes\sigma_i+\sigma_i\otimes\sigma_0)$ [CT1.2, FT.13], $\Phi=\{0,\pi\}$ [D0.5, CT0.9]:
+$(1)$ **Aligned branch: weak-active.** $\ [\mathbb S,W_i]=0$; $\ W_i\Pi_{\mathcal R}=W_i=\Pi_{\mathcal R}W_i\Pi_{\mathcal R}\ne0$ for every $i$ (entrywise witnesses); $\ \sum_iW_i^2=2\,\Pi_{\mathcal R}$; Casimir read on $\vee^2$: $2=1(1{+}1)$ [CT0.7a].
+$(2)$ **Antialigned branch: weak-blind.** $\ W_i\Pi_{\mathcal V}=0=\Pi_{\mathcal V}W_i$ for every $i$; $\ \bigcap_i\ker W_i=\operatorname{im}\Pi_{\mathcal V}$ (the singlet line, dimension $1$); Casimir read on $\wedge^2$: $0$ [CT0.7a, FT.93(5)].
+$(3)$ **The branch flip is label-level.** The unique nontrivial automorphism $\iota$ of $\Phi$: $\iota(\alpha)=\pi-\alpha$; it exchanges the A4 branch labels ($\alpha=0\leftrightarrow\alpha=\pi$). On configuration data $\iota$ is the alignment-pattern complement $\mathcal P\mapsto E_{\mathcal R}\setminus\mathcal P$ [Def-EM.21, EM.23, EM.24(2); CT1.11a(4)] — exhaustive machine census: the complement flips $\alpha_e$ on every edge and exchanges the uniform patterns $\varnothing\leftrightarrow E_{\mathcal R}$ [EM.23(4)]. **No Hilbert-space implementation exists:** $\neg\exists\,M\in\operatorname{End}(\mathbb C^4)$ invertible with $M\Pi_{\mathcal R}M^{-1}=\Pi_{\mathcal V}$ — conjugation preserves trace and rank, and $\mathfrak T\Pi_{\mathcal R}=3\ne1=\mathfrak T\Pi_{\mathcal V}$, $\operatorname{rk}\Pi_{\mathcal R}=3\ne1=\operatorname{rk}\Pi_{\mathcal V}$ [CT0.7(1); exact witness].
+$(4)$ **The weak support is not flip-invariant.** The weak support is $\Pi_{\mathcal R}$: $W_i=\Pi_{\mathcal R}W_i\Pi_{\mathcal R}$ exactly [(1)]; $\iota$ maps the branch label $\mathcal R\mapsto\mathcal V$, on which the weak read is $0$ [(2)]: weak-activity is branch-selective and $\iota$-asymmetric — the flip maps the weak-active branch to the weak-blind branch. Sharp point $\varepsilon_q=0$: branch $\alpha=0\iff\operatorname{supp}\rho\subseteq\vee^2$, branch $\alpha=\pi\iff\rho=\Pi_{\mathcal V}$ [CT0.8]; witnesses: $W_3\cdot(\Pi_{\mathcal R}/3)\ne0$, $W_i\,\Pi_{\mathcal V}=0\ \forall i$ (exact).
+$(5)$ **Structural parity non-invariance.** The weak couples to one A4 branch and annihilates the other: a $\mathbb Z_2$-asymmetry of the force on the registration alphabet of the real edges; the branch exchange does not preserve the weak action. **Scope:** the force-arena $S$-parity grading [FT.93(5), FT.93(7)] — $\neg$ a matter chirality projector: the pincer [FT.93(3)] and the relocation [FT.93(7)] stand unmodified, and the chirality-assignment question is untouched by this theorem.
+
+**Req.** A3; A4; C1; D0.5; CT0.7, CT0.7a, CT0.8, CT0.9, CT1.1, CT1.2, CT1.11a (Part 1); Def-EM.21, EM.23, EM.24 (Part 2); FT.13 (Tiers F.1–F.11); FT.93; exact matrix arithmetic over $\mathbb Q(i)$, exhaustive small-configuration enumeration, exact rank/trace invariants [math; machine: `checks/verify_H_branch_parity.py`].
+
+**Pf.**
+$$
+(1):\ [\Sigma,W_i]=0\ [\mathrm{CT1.5}];\qquad\mathbb S=\tfrac12(E_0+\Sigma)\ [\mathrm{CT0.7}(1)]\implies[\mathbb S,W_i]=0\implies W_i\ \text{preserves}\ \vee^2,\ \wedge^2\ [\mathrm{CT0.7}(3)]
+$$
+$$
+W_i\Pi_{\mathcal V}=0\ [(2)]\implies W_i=W_i(\Pi_{\mathcal R}+\Pi_{\mathcal V})=W_i\Pi_{\mathcal R}=\Pi_{\mathcal R}W_i\Pi_{\mathcal R}\ [\mathrm{CT0.7}(1):\ \Pi_{\mathcal R}+\Pi_{\mathcal V}=E_0];\qquad\text{nonzero witnesses entrywise}\ [\text{machine}]
+$$
+$$
+\textstyle\sum_iW_i^2=\tfrac32E_0+\tfrac12\Sigma=2\,\Pi_{\mathcal R}\ [\mathrm{CT0.7a}];\qquad\vee^2:\ \mathbb S=+1\implies\Sigma=+1\implies\tfrac32+\tfrac12=2
+$$
+$$
+(2):\ W_i\,\Pi_{\mathcal V}=0\ \forall i:\ \text{direct exact computation on the CT1.2 basis}\ [\text{machine}];\qquad\wedge^2=\mathbb C\,|\Psi^-\rangle,\ \ \Pi_{\mathcal V}=|\Psi^-\rangle\langle\Psi^-|\ [\mathrm{CT0.7}(1);\ \text{machine}]
+$$
+$$
+\dim\bigcap_i\ker W_i=4-\operatorname{rk}\binom{W_1}{W_2}{W_3}=4-3=1\ [\text{exact elimination; machine}];\qquad\wedge^2:\ \tfrac32+\tfrac12(-3)=0\ [\mathrm{CT0.7a}:\ \Sigma|_{\wedge^2}=-3]
+$$
+$$
+(3):\ |\Phi|=2\ [\mathrm{CT0.9}]\implies\operatorname{Aut}(\Phi)=\mathbb Z_2=\{\mathrm{id},\iota\},\ \iota(\alpha)=\pi-\alpha,\ \iota^2=\mathrm{id};\qquad\mathrm{A4}:\ \alpha=0\leftrightarrow\alpha=\pi\ \text{exchanges the branch labels}
+$$
+$$
+\mathcal P=\{e:\alpha_e=\pi\}\ [\mathrm{Def\text{-}EM.21}];\qquad\alpha_e\mapsto\pi-\alpha_e\iff e\ \text{changes membership in}\ \mathcal P\iff\mathcal P\mapsto E_{\mathcal R}\setminus\mathcal P\ [\mathrm{EM.24}(2);\ \text{exhaustive},\ |E_{\mathcal R}|\le5;\ \text{machine}]
+$$
+$$
+\neg\exists M:\ \mathfrak T(MXM^{-1})=\mathfrak TX\ \wedge\ \operatorname{rk}(MXM^{-1})=\operatorname{rk}X\ [\text{conjugation invariants}];\qquad3\ne1\implies\Pi_{\mathcal R}\not\sim\Pi_{\mathcal V}\ [\mathrm{CT0.7}(1);\ \text{exact}]
+$$
+$$
+(4):\ \text{support identity}\ (1);\qquad\text{flip image}\ (2),(3);\qquad\text{sharp loci}\ [\mathrm{CT0.8}];\qquad\text{witness states}\ \Pi_{\mathcal R}/3,\ \Pi_{\mathcal V}:\ \text{exact}\ [\text{machine}]
+$$
+$$
+(5):\ (1)\text{--}(4)\ \text{conjoined};\qquad\text{scope clause cites FT.93}(3),(5),(7)\ \text{unmodified}\ [\text{no carrier grading is constructed here}].\ \blacksquare
+$$
+
+**Phys.** The two crystallization outcomes are inequivalent for the weak force: the aligned (triplet) branch is where the total-spin generators act — Casimir $2$ — and the antialigned (singlet) branch is annihilated by them — Casimir $0$. The flip of the binary branch label exchanges the two, so weak activity is not flip-invariant: a structural $\mathbb Z_2$ asymmetry carried by the registration alphabet of the real edges. This is the force-arena $S$-parity grading read against the ledger's own branch data — not a handedness of matter: the flip has no Hilbert-space implementation ($3$ vs $1$), and no chirality projector on a matter carrier is constructed or implied. Barred: naming either branch "left" or "right"; any SM species reading; any claim that the SM weak interaction is reproduced.
+
+---
+
+---
+
+
+## Tier F.35 — The 1-Loop Bridge: the Swap-Graded Effective Potential on the Flicker Phase Diagram
+
+### Def-H.31 — The bridge: dictionary, family, background, fluctuation operator, effective potential
+
+**Def.** A construction class on the prior canon (Def-H.24 pattern: no new axiom); clauses (1)–(6) are constitutive interface definitions. Domain: $\varepsilon_q\in(0,\tfrac14)$ [CT0.8]; $\ \gamma:=1-4\varepsilon_q$, $\ q:=4\varepsilon_q$ [D0.3, D0.4].
+
+$(1)$ **Dictionary (Def-H.31(1)).** $\ p:=\gamma=1-4\varepsilon_q;\qquad 1-p=q=4\varepsilon_q;\qquad s:=p/q;\qquad y:=16s^2=\dfrac{(1-4\varepsilon_q)^2}{\varepsilon_q^2}.$
+Anchors (exact): $\varepsilon_q=\tfrac18\iff p=\tfrac12\iff y=16$ — the point at which FT.68(1)'s amplitude-weighted reading is the uniform measure and $\sum|A_C|^2=15745$ on the tetrahedron [CT2.8 norm layer: $|A_C|^2=16^{|\mathcal C|}$; FT.67(2)'s value formula]; $\varepsilon_q\to0\iff p\to1$ — the static-floor corner [FT.68(5); D0.4's sharp point $\gamma=1$]; $\varepsilon_q\to\tfrac14\iff p\to0$ — the identity-tilt, vacuum-dominated corner [L2 ($\gamma\to0$); FT.70(5) ($\langle K\rangle\to0$)].
+
+$(2)$ **Family and weights (Def-H.31(2)).** $\ \mathbb F:=\{\text{tetra},\text{cube},\text{octa}\}$ — the skeletons whose two-sector covering polynomials are complete [FT.68(1), FT.68(3), FT.69(2)]:
+$$
+\mathcal Z^{\mathrm{tot}}_{\mathrm{tetra}}(y)=1+24y+72y^2+4y^3;\qquad
+\mathcal Z^{\mathrm{tot}}_{\mathrm{cube}}(y)=1+48y+672y^2+3400y^3+6816y^4+264y^5+4y^6;
+$$
+$$
+\mathcal Z^{\mathrm{tot}}_{\mathrm{octa}}(y)=1+72y+888y^2+2160y^3+840y^4
+\qquad(\mathcal Z^{\mathrm{tot}}=\mathcal Z_{\mathrm{byp}}+\mathcal Z_{\mathrm{lock}},\ \text{rows pooled}).
+$$
+With $2E_\Gamma\in(12,24,24)$ the directed-edge counts and $K=2|\mathcal C|$ [FT.79(2)], the **cover-weighted Bernoulli weight** of $\Gamma$ is
+$$
+W_\Gamma(p)\ :=\ \sum_k c_k(\Gamma)\,16^k\,p^{2k}\,q^{2E_\Gamma-2k}\ =\ q^{2E_\Gamma}\,\mathcal Z^{\mathrm{tot}}_\Gamma\bigl(16p^2/q^2\bigr)\ =\ \mu_p\text{-average of }|A_C|^2\text{ over covers }C\subseteq\Gamma,
+$$
+an integer polynomial in $p$ with $W_\Gamma(0)=1$ (the vacuum cover) and $W_\Gamma(1)=0$ (the fully crystallized floor is no cover — it cancels [FT.67(3a)]). The **family measure** is
+$$
+P(\Gamma\mid\varepsilon_q)\ :=\ \frac{W_\Gamma(p)}{\sum_{\Gamma'\in\mathbb F}W_{\Gamma'}(p)}\qquad(\text{ensemble scope of CT4.5a/Def-H.26: per-edge Bernoulli }p).
+$$
+
+$(3)$ **Background state.** Cover-conditioned edge content and mean real fraction:
+$$
+\langle K\rangle^{\mathrm{cov}}_\Gamma(p):=\frac{N_\Gamma(p)}{W_\Gamma(p)},\quad N_\Gamma:=\sum_k 2k\,c_k 16^k p^{2k}q^{2E-2k};\qquad
+\hat p_\Gamma:=\frac{\langle K\rangle^{\mathrm{cov}}_\Gamma}{2E_\Gamma}\in(0,\ K_{\mathrm{top}}/2E_\Gamma].
+$$
+The ensemble-averaged pair state (linear in the pattern measure; per-pattern state $=$ the branch state of its real/virtual edges, Cal-F detailed balance):
+$$
+\bar\rho_\Gamma(\varepsilon_q)\ :=\ \hat p_\Gamma\cdot\frac{\Pi_{\mathcal R}}{3}\ +\ (1-\hat p_\Gamma)\,\Pi_{\mathcal V}
+\qquad[\mathrm{CT0.7}(1):\ \Pi_{\mathcal R}=\tfrac14(3E_0+\Sigma),\ \Pi_{\mathcal V}=\tfrac14(E_0-\Sigma)];
+$$
+$\operatorname{spec}(\bar\rho_\Gamma)=\bigl(\tfrac{\hat p_\Gamma}3,\tfrac{\hat p_\Gamma}3,\tfrac{\hat p_\Gamma}3,\ 1-\hat p_\Gamma\bigr)$ — faithful on the whole domain; $\mathfrak T\bar\rho_\Gamma=1$.
+
+$(4)$ **Fluctuation operator (Def-H.31(4)).** $\Delta^{-1}_\Gamma(\varepsilon_q)$: the block-diagonal operator on the $16$-mode space $\mathfrak H(\mathbb C^4)$ [CT0.6] in the $\vee^2/\wedge^2$ decomposition of the swap grading [CT0.7(3)], with the A8 aspect labels of CT0.7(4):
+$$
+\textbf{S-even block}\ (10=9+1=\dim\mathfrak H(\vee^2)+\dim\mathfrak H(\wedge^2);\ \text{aspects }F_{D^+},F_H,F_G,F_{W^\pm},F_Z):
+$$
+the Bogoliubov–Kubo–Mori Hessian of the relative entropy $S(\rho\|\bar\rho_\Gamma)$ at $\bar\rho_\Gamma$ [math: the standard quadratic fluctuation kernel of the state-space information geometry; eigenvalue $1/\lambda$ on diagonal block directions]:
+$$
+M^2_{\vee^2}=3/\hat p_\Gamma\ (\times 9),\qquad M^2_{\wedge^2}=1/(1-\hat p_\Gamma)\ (\times 1);
+$$
+$$
+\textbf{S-odd block}\ (6=3+3;\ \text{the seal forces }F_{J^+}=\operatorname{span}\{J_i\},\ F_{J^-}=\operatorname{span}\{K_i\}\ [\mathrm{CT0.7}(4)]):
+$$
+$$
+M^2_{J^+}=p\cdot G_\Gamma(p)^2\ (\times 3),\qquad M^2_{J^-}=q\cdot G_\Gamma(p)^2\ (\times 3),\qquad G_\Gamma:=B_\Gamma-p^{2E_\Gamma}\ \ [\mathrm{Def\text{-}H.26},\ \mathrm{FT.70}(1)],
+$$
+with the detailed-balance occupations $(p,q)$ of the two seal channels [Cal-F; A8: $\mathbf F_{(+,\mathcal V)}=F_{J^+}$, $\mathbf F_{(-,\mathcal V)}=F_{J^-}$]. $B_\Gamma(p)=\sum_K c_Kp^Kq^{2E-K}$ with the frozen cap-census rows $c_K$ [FT.68(1), FT.68(3), FT.69(1)].
+
+$(5)$ **Effective potential.** With the **swap supertrace** $\operatorname{Str}_{\mathbb S}X:=\mathfrak T(\mathbb S X)$ (defined here; $\ne$ the C-sector supertrace [CT2.10] — collision-avoidance declared once; $\operatorname{Str}_{\mathbb S}$ grades $\mathfrak H(\mathbb C^4)$ by CT0.7(4)'s $S$-parity, $10-6=4$):
+$$
+V_{\text{1-loop},\Gamma}\ :=\ \tfrac12\operatorname{Str}_{\mathbb S}\log\Delta^{-1}_\Gamma\ =\ \tfrac12\Bigl(\sum_{\text{S-even}}\log M^2_i-\sum_{\text{S-odd}}\log M^2_j\Bigr)
+\ =\ \tfrac92\log\tfrac3{\hat p_\Gamma}-\tfrac12\log(1-\hat p_\Gamma)-\tfrac32\log(pq)-6\log|G_\Gamma|;
+$$
+$$
+V_{\text{tree},\Gamma}\ :=\ -\log W_\Gamma(p);\qquad
+V_{\mathrm{eff}}(\varepsilon_q)\ :=\ \sum_{\Gamma\in\mathbb F}P(\Gamma\mid\varepsilon_q)\,\bigl[V_{\text{tree},\Gamma}(\varepsilon_q)+V_{\text{1-loop},\Gamma}(\varepsilon_q)\bigr].
+$$
+Every log argument is positive on $(0,\tfrac14)\setminus\{\varepsilon^*_\Gamma\}$, $\varepsilon^*_\Gamma:=(1-p^*_\Gamma)/4$; $V_{\mathrm{eff}}$ is smooth on the wall complement and $V_{\mathrm{eff}}\to+\infty$ at both endpoints and at every wall (FT.102(4)).
+
+$(6)$ **Mass read (Def-H.31(6)).** For each vacuum $\varepsilon_q^{(i)}$ of $V_{\mathrm{eff}}$ (FT.103):
+$$
+m_i^2\ :=\ \Delta S\bigl(\varepsilon_q^{(i)}\bigr)\ :=\ \frac{V_{\mathrm{eff}}\bigl(\varepsilon_q^{(i)}\bigr)}{8}
+\qquad[\mathrm{L3}(2):\ V=8\,\Delta S_{\mathrm{pair}}\ \text{exact leading};\ \mathrm{L3}(4):\ m_i^2=\Delta S\ \text{inertial read};\ \text{dimensionless, nats}].
+$$
+The phase-band $\leftrightarrow$ generation-label correspondence is a labelling clause of this definition, not a derived selection; no particle identification; no coupling to $m_{\mathrm{pole}}$/$m_{\mathrm{hid}}$ beyond Def-H.39's bridge slots (unconstructed).
+
+**Rmk (what is new, what is frozen).** All numerical coefficients are prior-canon data: the covering rows $(1,24,60\,|\,12,4)$, $(1,48,648,2672,3624\,|\,24,728,3192,264,4)$, $(1,72,852,1152\,|\,36,1008,840)$ [FT.68, FT.69]; the cap-census rows $c_K$ [FT.68(1),(3), FT.69(1)]; $16=4^2$ [FT.67(2) value $\times$ CT2.8 norm]; $K=2|\mathcal C|$ [FT.79(2)]; the $10/6$ split [CT0.7(3)-(4)]; $\tfrac34$ and $\gamma(8-\gamma)$-family coefficients [L2, L5]; the factor $8$ [L3(2)]; the domain $[0,\tfrac14)$ [CT0.8]. New content: the assembly (Def-H.31(1)–e) and everything proved from it.
+
+---
+
+---
+
+### FT.102 — The fluctuation spectrum, the tree-level limit, and the seal-softening walls
+
+**Thm.** Under Def-H.31:
+$(1)$ **Exact spectrum.** For every $\Gamma\in\mathbb F$ and $\varepsilon_q\in(0,\tfrac14)\setminus\{\varepsilon^*_\Gamma\}$:
+$$
+\operatorname{Spec}\bigl(\Delta^{-1}_\Gamma(\varepsilon_q)\bigr)\ =\ \underbrace{\Bigl\{\tfrac3{\hat p_\Gamma}\times9,\ \ \tfrac1{1-\hat p_\Gamma}\times1\Bigr\}}_{\text{S-even},\ 10}\ \sqcup\ \underbrace{\bigl\{p\,G_\Gamma(p)^2\times3,\ \ q\,G_\Gamma(p)^2\times3\bigr\}}_{\text{S-odd},\ 6}\qquad(16\ \text{values}),
+$$
+with $\hat p_\Gamma\in(0,K_{\mathrm{top}}/2E_\Gamma]$, $K_{\mathrm{top}}/2E_\Gamma=(\tfrac12,\tfrac12,\tfrac13)$ for (tetra, cube, octa) — the supremum attained exactly in the limit $p\to1$ (vanishing order $2E-K_{\mathrm{top}}+2$ of $N_\Gamma-K_{\mathrm{top}}W_\Gamma$ at $p=1$; machine). The S-even block is strictly positive on the whole domain; the S-odd block vanishes exactly at $p\in\{p^*_\Gamma\}\cup\{0,1\}$ and nowhere else.
+$(2)$ **The grading is matrix-exact.** On the CT1.2 basis over $\mathbb Q(i)$: $\operatorname{Ad}(\mathbb S)$ has eigenvalue $+1$ on $\{E_0,\Sigma,\hat E^{ij}\,(5),W_i\,(3)\}$ — $10$ modes — and $-1$ on $\{J_i\}\cup\{K_i\}$ — $6$ modes [CT0.7(4) membership reproduced from the matrices]; S-even $\iff[\mathbb S,X]=0\iff X$ preserves $\vee^2,\wedge^2$; S-odd $\iff\{\mathbb S,X\}=0\iff X$ swaps them [CT0.7(3)]; basis rank $16$ [CT0.6]; $\operatorname{Str}_{\mathbb S}(I_{16})=10-6=4$; on any degenerate spectrum $\lambda I$: $V_{\text{1-loop}}=\tfrac12(10-6)\log\lambda=2\log\lambda$ — the super-dimension is the interference coefficient the trace log carries.
+$(3)$ **Tree-level limit $=$ the FT.68/FT.69 covering polynomials.** Setting $V_{\text{1-loop}}\equiv0$: $e^{-V_{\text{tree},\Gamma}(p)}=W_\Gamma(p)=q^{2E}\mathcal Z^{\mathrm{tot}}_\Gamma(y)$ *identically* — verified two ways: the polynomial expansion vs the sum over the *enumerated* covers (two independent enumerators per cell, all covers: $101/11205/3961$). Static evaluation anchors (exact integers):
+$$
+\begin{array}{c|ccc}
+&\text{tetra}&\text{cube}&\text{octa}\\ \hline
+\mathcal Z^{\mathrm{tot}}(4)\ (Z^\pm_{\mathrm{all}}) & 1505 & 2260161 & 367777\\
+\mathcal Z_{\mathrm{byp}}(4)\ /\ \mathcal Z_{\mathrm{lock}}(4) & 1057\ /\ 448 & 1109313\ /\ 1150848 & 87649\ /\ 280128\\
+W_\Gamma(\tfrac12)\cdot2^{2E}=\mathcal Z^{\mathrm{tot}}(16) & 35201 & 804725505 & 64126081\\
+\mathcal Z_{\mathrm{byp}}(16)\ /\ \mathcal Z_{\mathrm{lock}}(16) & 15745\ /\ 19456 & 248613633\ /\ 556111872 & 4937857\ /\ 59188224
+\end{array}
+$$
+the tetrahedron's bypass norm sum $15745$ and amplitude-weighted content $\langle K\rangle=62208/15745$ are FT.68(1)(ii) verbatim; the uniform readings $852/205$, $3311952/395023$, $2124600/318523$ at $p=\tfrac12$ are FT.68(1)(i)/FT.70(5) verbatim; the single-centre closed form $c_1=Vd(d-1)=(24,48,72)$ is FT.69(2) verbatim.
+$(4)$ **Seal-softening walls.** $V_{\mathrm{eff}}\to+\infty$ at each $\varepsilon^*_\Gamma=(1-p^*_\Gamma)/4$, $p^*_\Gamma$ the unique zero of $G_\Gamma$ [FT.70(1)–(2)] — dyadic isolation at width $2^{-40}$ reproduces the frozen boundaries exactly: $p^*=(0.725372,\ 0.723525,\ 0.679217)$ for (cube, tetra, octa), i.e. $\varepsilon^*=(0.068657016,\ 0.069118773,\ 0.080195792)$, order octa $>$ tetra $>$ cube in $\varepsilon^*$ [FT.70(2)'s order in $p^*$ inverted by the dictionary]. At a wall the six S-odd masses vanish quadratically — the phase boundary is exactly where the reality-exchanging (seal) fluctuations become marginal. $V_{\mathrm{eff}}\to+\infty$ also at both domain endpoints: the floor side ($\varepsilon_q\to0$) from $W_\Gamma\to0$ (the floor cancels [FT.67(3a)]) and $-\tfrac32\log q\to+\infty$; the threshold side ($\varepsilon_q\to\tfrac14$) from $3/\hat p_\Gamma\to\infty$ and $-\tfrac32\log p\to+\infty$.
+$(5)$ **Directive form.** $V_{\text{1-loop},\Gamma}=\tfrac12\bigl(\sum_{\text{S-even}}\log M_i^2-\sum_{\text{S-odd}}\log M_j^2\bigr)$ — the block assembly and the $16$-term eigenvalue assembly agree by enclosures; the minus sign on the $6$ odd terms is the swap-supertrace grading, and the odd block is precisely the seal force pair $F_{J^\pm}$ [CT0.7(4): "the $S$-odd blocks"; D1.2: the seals move A4-weight $\wedge^2\!\leftrightarrow\!\vee^2$].
+
+**Req.** Def-H.31; A4, A8; D0.3, D0.4, D1.2; CT0.6, CT0.7, CT0.7a, CT0.8, CT0.11, CT1.1, CT1.2 (Part 1); EW.12 (Part 2); CT2.8 (Part 2); CT4.5a (Part 2); Def-H.25, Def-H.26; FT.67, FT.68, FT.69, FT.70; FT.79(2); FT.93(5); L2, L3, L5; Cal-F; exact $\mathbb Q(i)$ matrix arithmetic, two-enumerator cover re-derivation, integer-Horner dyadic bisection, rational log-enclosures [math; machine: `checks/verify_H_1loop_bridge.py` §A–§D].
+
+**Pf.**
+$$
+(1):\ \bar\rho_\Gamma\ \text{faithful}\ (\hat p_\Gamma\in(0,\tfrac12])\implies\text{BKM diagonal coefficients }1/\lambda:\ 1/(\hat p/3)=3/\hat p\ (\times9),\ 1/(1-\hat p)\ (\times1)\ [\text{math}]
+$$
+$$
+\hat p\text{-bounds}:\ N_\Gamma/W_\Gamma\le K_{\mathrm{top}}\ \text{termwise (each cover }K\le K_{\mathrm{top}});\qquad
+\hat p(p\to1)=K_{\mathrm{top}}/2E_\Gamma:\ \text{vanishing-order census of }N_\Gamma-K_{\mathrm{top}}W_\Gamma\ \text{at }p=1\ [\text{machine: exact derivative ladder}]
+$$
+$$
+\text{odd zeros}:\ pG^2=0\iff p=0\vee G=0;\ qG^2=0\iff p=1\vee G=0;\qquad G_\Gamma\ \text{has exactly one root on the resolved grid}\ [\mathrm{FT.70}(1);\ \text{machine}]
+$$
+$$
+(2):\ \mathbb S=\tfrac12(E_0+\Sigma)\ \text{as matrices}\ [\mathrm{CT0.7}(1)];\qquad \operatorname{Ad}(\mathbb S)X\ \text{computed on all }16\ \text{basis elements over }\mathbb Q(i)\ [\text{machine}]
+$$
+$$
+\text{membership}=\mathrm{CT0.7}(4)\text{'s frozen lists};\qquad \operatorname{Str}_{\mathbb S}(I_{16})=\#\{+1\}-\#\{-1\}=10-6=4;\qquad \tfrac12\operatorname{Str}_{\mathbb S}\log(\lambda I)=\tfrac{10-6}2\log\lambda=2\log\lambda
+$$
+$$
+(3):\ W_\Gamma(p)=\sum_{\text{covers }C}16^{|C|}p^{2|C|}q^{2E-2|C|}:\ \text{polynomial expansion}=\text{enumerated sum at }p=\tfrac37\ [\text{machine, both enumerators}];\quad \text{anchors: exact integer evaluations}
+$$
+$$
+15745=\mathcal Z_{\mathrm{byp}}(16)=1+24\cdot16+60\cdot256;\qquad 62208=\sum_k2k\,c_k16^k\big|_{\mathrm{byp}}=2\cdot24\cdot16+4\cdot60\cdot256\ [\mathrm{FT.68}(1)(ii)]
+$$
+$$
+(4):\ G_\Gamma(0)=1>0>G_\Gamma(1)=-1\ [\mathrm{FT.70}(1)];\qquad \text{bisection at }2^{-40}:\ \text{intervals reproduce the frozen decimals}\ [\text{machine}]
+$$
+$$
+-6\log|G_\Gamma|\to+\infty\ \text{at }G_\Gamma=0;\qquad W_\Gamma(1)=0\ (\text{every term carries }q^{2E-2k},\ 2E-2k\ge2E-K_{\mathrm{top}}>0);\qquad \hat p\to0\implies3/\hat p\to\infty\ [\varepsilon_q\to\tfrac14]
+$$
+$$
+(5):\ \text{two assemblies of the same }16\text{-term sum, evaluated by independent code paths at }\varepsilon_q=\tfrac1{16}:\ \text{difference enclosure brackets }0\ [\text{machine}].\ \blacksquare
+$$
+
+**Phys.** The tree layer knows only polynomial censuses; the loop layer turns the census into geometry. Ten reality-preserving modes carry the information metric of the averaged crystallization state; six reality-exchanging seal modes carry the phase balance — and the walls of the effective potential sit exactly at the phase diagram's crossover boundaries, because a seal fluctuation has no restoring force where thread-gas and floor weigh equal. The grade difference $10-6=4$ — the swap super-dimension of the pair arena — is the coefficient the trace log carries into every degenerate limit. Structure class of a 1-loop effective potential (trace log of the fluctuation operator; Coleman–Weinberg species [physics vocabulary — analogy only; no SM field content, no identification]).
+
+---
+
+---
+
+### FT.103 — The vacuum structure: four exact vacua, three wall-delimited phase bands, dominance windows, the susceptibility census
+
+**Thm.** Under Def-H.31:
+$(1)$ **Vacuum census (complete at the resolved scale).** $dV_{\mathrm{eff}}/d\varepsilon_q=0$ has exactly four solutions in $(0,\tfrac14)$ on the wall-delimited bands — one per band, each a strict minimum ($V'$ passes $-\to+$; exact sign census by rational $+$ log-enclosure evaluation on dyadic grids; bisection to width $2^{-36}$):
+$$
+\begin{array}{c|c|c|c|c}
+&\text{band}&\varepsilon_q^{(i)}\ (\approx)&V_{\mathrm{eff}}\ (\approx)&m_i^2=V_{\mathrm{eff}}/8\ (\approx)\\ \hline
+\mathrm V_1&(0,\varepsilon^*_{\mathrm{cube}})\ \text{floor band}&0.021337258636&24.271850813&3.033981352\\
+\mathrm V_2&(\varepsilon^*_{\mathrm{cube}},\varepsilon^*_{\mathrm{tetra}})\ \text{bicritical sliver}&0.068783298916&59.645122359&7.455640295\\
+\mathrm V_3&(\varepsilon^*_{\mathrm{tetra}},\varepsilon^*_{\mathrm{octa}})\ \text{mixed band}&0.080091490970&38.713071069&4.839133884\\
+\mathrm V_4&(\varepsilon^*_{\mathrm{octa}},\tfrac14)\ \text{thread-gas band}&0.190792364908&10.655753803&1.331969225
+\end{array}
+$$
+All four values are strictly positive — $\Delta S$-admissible in nats [L3]; all four positions lie in CT0.8's physical domain $(0,\tfrac14)$. $\mathrm V_3$ sits $1.04\times10^{-4}$ below the octahedron wall (wall-adjacent: its depth is set by the seal-softening balance); $\mathrm V_2$ is the sliver bottom between the near-degenerate cube/tetrahedron boundaries — its existence and depth are controlled by the frozen splitting $|\varepsilon^*_{\mathrm{tetra}}-\varepsilon^*_{\mathrm{cube}}|=4.6176\times10^{-4}$ [FT.70(2)'s own numbers].
+$(2)$ **Mass order and ratios (enclosure-exact).** $m^2(\mathrm V_4)<m^2(\mathrm V_1)<m^2(\mathrm V_3)<m^2(\mathrm V_2)$ (disjoint enclosures). The phase triple $(\mathrm V_4,\mathrm V_1,\mathrm V_3)$ in mass order:
+$$
+m^2:\ 1:2.277816:3.633067;\qquad m:\ 1:1.509244:1.906061;
+$$
+all four: $m^2:\ 1:2.277816:3.633067:5.597457$ (bare $m^2$-span $<6$ — clause (6)).
+$(3)$ **Dominance windows (exact).** The pairwise $W$-crossings isolate (width $2^{-30}$): tetra$|$cube at $p=0.662192$ and $p=0.035764$ ($\varepsilon_q=0.084410$ and $0.241059$); cube$|$octa at $p=0.091544$ ($\varepsilon_q=0.227062$). Windows: tetra-dominant $(0,0.084410)\cup(0.241059,\tfrac14)$; cube-dominant $(0.084410,0.227062)$; octa-dominant $(0.227062,0.241059)$. Dominant skeleton at the vacua: $\mathrm V_1,\mathrm V_2,\mathrm V_3$ tetrahedron ($P_{\mathrm{tetra}}\approx0.999/0.720/0.556$); $\mathrm V_4$ cube ($P_{\mathrm{cube}}\approx0.727$). The octa window and the tetra tail sliver carry **no vacuum**: $V'>0$ throughout both (machine census) — the octahedron enters the vacuum structure through its wall $\varepsilon^*_{\mathrm{octa}}$, not through a dominance minimum.
+$(4)$ **Susceptibility census.** Per skeleton, $\chi_\Gamma(y):=d\langle K\rangle^{\mathrm{cov}}_\Gamma/dy=2\operatorname{Var}_y(|\mathcal C|)/y$ [exact identity; math] is **strictly decreasing** on the exact grid $y=2^{i/4}$, $|i|\le40$ — no interior peaks: the van-Hove structure sits in $\operatorname{Var}_y(|\mathcal C|)$ (the log-fugacity susceptibility $d\langle K\rangle/d\ln y=2\operatorname{Var}$). The cover-condensation transition scales $y=c_k/c_{k+1}$ and their exact $\varepsilon$-images ($\varepsilon=1/(4+\sqrt y)$; each the unique root in $(0,\tfrac14)$ of the integer quadratic $(16d-n)\varepsilon^2-8d\varepsilon+d=0$, $y=n/d$; machine):
+$$
+\begin{array}{c|c|c}
+\Gamma&y=c_k/c_{k+1}&\varepsilon_q=1/(4+\sqrt y)\ (\approx)\\ \hline
+\text{tetra}&\tfrac1{24},\ \tfrac13,\ 18&0.237862,\ 0.218467,\ 0.121320\\
+\text{cube}&\tfrac1{48},\ \tfrac1{14},\ \tfrac{84}{425},\ \tfrac{425}{852},\ \tfrac{284}{11},\ 66&0.241293,\ 0.234342,\ 0.224993,\ 0.212482,\ 0.110118,\ 0.082481\\
+\text{octa}&\tfrac1{72},\ \tfrac3{37},\ \tfrac{37}{90},\ \tfrac{18}7&0.242845,\ 0.233386,\ 0.215462,\ 0.178458
+\end{array}
+$$
+The family trajectory $\chi_{\mathbb F}(\varepsilon_q)=d\langle K\rangle_{\mathrm{fam}}/dy$ (with $\langle K\rangle_{\mathrm{fam}}=\sum_\Gamma P_\Gamma\langle K\rangle^{\mathrm{cov}}_\Gamma$, rational in $p$) has exactly **two** interior extrema on the resolved $2^{-13}$ grid (degree-$96$ integer-Horner census): $\varepsilon_q\approx0.019724$ (adjacent to $\mathrm V_1$) and $\varepsilon_q\approx0.083699$ (adjacent to the tetra$|$cube dominance boundary $0.084410$) — a census, not an identity: the extrema do not coincide with the vacua.
+$(5)$ **Phase-band reading (Def-H.31(6)).** The three wall-delimited bands that carry vacua — floor band ($\mathrm V_1$; static-crystallization side), crossover band ($\mathrm V_2,\mathrm V_3$; sliver $+$ mixed), thread-gas band ($\mathrm V_4$) — are the three topological phases of the construction; the labelling of the phase triple as three generations is declared, not derived. The band count equals $|\mathbb F|$, the declared family size: the selection principle for *three* is not supplied; the sliver vacuum $\mathrm V_2$ is a bicritical artifact of FT.70(2)'s near-degenerate boundaries — reported, not suppressed.
+$(6)$ **Bare-span bound on the computed cells.** The all-four $m^2$-span is $5.597457<6$ — the same order as FT.79(1)'s pool maximum $6$ and FT.76(3)'s widest ratio $6.3925$: a third independent appearance of the $\approx6$ scale on the computed cells (FT.104(1) quantifies the [EXT] consequence).
+
+**Req.** Def-H.31; FT.102; CT0.8 (Part 1); Def-H.26; FT.67, FT.68, FT.69, FT.70; FT.76(3), FT.79(1)–(2); L3; exact rational $+$ log-enclosure bisection, integer-Horner dyadic sign census, quadratic-surd verification, variance identities [math; machine: `checks/verify_H_1loop_bridge.py` §E–§F].
+
+**Pf.**
+$$
+(1):\ V'=\text{rational}(\varepsilon_q)+\sum_j\text{rational}_j(\varepsilon_q)\cdot\ln\bigl(\text{rational}_j(\varepsilon_q)\bigr):\ \text{each }\ln\text{ by rational atanh-enclosure (exact tails)}
+$$
+$$
+\text{band grids (dyadic, wall-graded near }\varepsilon^*_{\mathrm{octa}}\text{)}:\ \text{exactly one }-\to+\text{ sign flip per band}\ [\text{machine}];\qquad \text{bisection to }2^{-36};\qquad V(\varepsilon^{(i)})>0\ \text{by enclosure}
+$$
+$$
+V''\text{-flatness at the minimum}:\ |V(\text{mid})-V(\varepsilon^{(i)})|\le\tfrac12\sup|V''|\cdot(2^{-37})^2\ll2^{-44}:\ \text{enclosure values valid at width}\le2^{-44}\ [\text{machine}]
+$$
+$$
+(2):\ \text{interval division of disjoint positive enclosures};\qquad m=\sqrt{m^2}:\ \text{dyadic }\sqrt{\ }\text{-enclosures (integer squaring)}
+$$
+$$
+(3):\ W_\Gamma-W_{\Gamma'}\ \text{integer polynomials}:\ \text{root census }2/1/2\ \text{on the resolved grid};\qquad \text{dominance at vacua}: \text{exact rational comparison of }W_\Gamma(\text{mid})
+$$
+$$
+V'>0\ \text{on both no-vacuum windows}:\ \text{enclosure census at }41\ \text{dyadic points each}\ [\text{machine}]
+$$
+$$
+(4):\ \langle k\rangle_y=y\mathcal Z'/\mathcal Z\implies y\,d\langle k\rangle/dy=\operatorname{Var}_y(k)\ [\text{math}];\qquad \chi_\Gamma=2\operatorname{Var}/y:\ \text{strict decrease on the exact grid}\ [\text{machine}]
+$$
+$$
+y=(1-4\varepsilon)^2/\varepsilon^2\iff y\varepsilon^2=(1-4\varepsilon)^2\iff(16-y)\varepsilon^2-8\varepsilon+1=0\iff(16d-n)\varepsilon^2-8d\varepsilon+d=0\ (y=n/d):\ \text{unique root in }(0,\tfrac14)\ [\text{machine}]
+$$
+$$
+\chi_{\mathbb F}\ \text{extrema}:\ \text{numerator of }d\chi_{\mathbb F}/dp\ \text{is an integer polynomial of degree }96:\ \text{sign census at }p=m/2^{13}\ \text{by integer Horner}:\ 2\ \text{flips}\ [\text{machine}].\ \blacksquare
+$$
+
+**Phys.** The effective potential has four exact vacua, bracketed by walls that *are* the phase diagram: every crossover boundary FT.70 computed is now a divergent barrier at which the six seal modes go soft, and every vacuum is a phase — the crystallization-side well, the thread-gas well, and two crossover-band wells whose depths are set by how close the Platonic boundaries sit to one another. The lightest vacuum is the thread-gas phase (cube-dominant); the heaviest is the bicritical sliver between the near-degenerate cube/tetrahedron boundaries. The mass read is the entropy-deficit read in nats [L3(4)]: no pole identification is made or implied relating-equation residue applies unchanged (FT.104). No particle identification.
+
+---
+
+---
+
+### FT.104 — The [EXT] audit, the range-species classification, and the fourth read of Gap 7
+
+**Thm.** **External-data clause** (FT.73(5)/FT.79(4) pattern): the hierarchies compared below — charged leptons $1{:}207{:}3477$, down-type $1{:}20{:}900$, up-type $1{:}600{:}80000$ — are *supplied measured data* [EXT]; they enter no derivation, no definition, no coefficient of the construction; this document identifies no particles ; no parameter is fitted (P1, P5; FT.87(11) precedent).
+$(1)$ **Bare 1-loop read: exact shortfalls.** The phase triple $(m_1,m_2,m_3)=(1,\,1.509244,\,1.906061)$ in $m$, $(1,\,2.277816,\,3.633067)$ in $m^2$ [FT.103(2)] against [EXT]:
+$$
+\begin{array}{c|cccc}
+&\multicolumn2c{m\text{-read shortfall}}&\multicolumn2c{m^2\text{-read shortfall}}\\
+\text{[EXT] family}&\text{middle}&\text{outer}&\text{middle}&\text{outer}\\ \hline
+\text{leptons }(207,\,3477)&\times137.2&\times1824.2&\times90.9&\times957.0\\
+\text{down-type }(20,\,900)&\times13.3&\times472.2&\times8.8&\times247.7\\
+\text{up-type }(600,\,80000)&\times397.6&\times41971.4&\times263.4&\times22020.0
+\end{array}
+$$
+(enclosure-proven lower bounds: every middle shortfall $>10$, every outer $>100$.) The $m$-span $1.906$ is of the *same order* as the tree proxy's flat span $2$ and the all-four $m^2$-span $5.597$ of the same order as FT.79(1)'s pool maximum $6$: **the loop correction re-shapes the vacuum geometry — bands, walls, dominance windows — without extending the computed cells' numeric range.**
+$(2)$ **Range-species classification.** (a) *Bare read:* the vacuum-depth range on a family grows with the cells' size — floor-side barrier instance at $p_0=\tfrac{15}{16}$: $-\ln W_\Gamma(p_0)=(7.31,\ 16.01,\ 27.05)$ with exponents $2E-K_{\mathrm{top}}=(6,12,16)$ and the exact lower-bound law $-\ln W_\Gamma(p_0)\ge(2E-K_{\mathrm{top}})\ln\tfrac1{q_0}-\ln\mathcal Z^{\mathrm{tot}}_\Gamma(16)$ [machine] — **linear in size, unbounded in the family**: unlike the defect-angle read (hard ceiling $4\hat\mu'^2$ [FT.76(3)]) and of the same order class as the cover ladder — spanning $1{:}R$ needs $V\ge4R/3$ [FT.79(2): $V\ge276$ down-type, $V\ge4636$ leptons]. (b) *Composed tilt read* (Def-H.40 species at general $\gamma$, composed with the vacua — declared composition, NOT adopted): per-edge contraction $c(\varepsilon_q)=1-\tfrac\gamma4=\tfrac34+\varepsilon_q$ [L2], composed over $E_{\mathrm{int}}$ internal edges [Def-H.40's composition clause]:
+$$
+T_i(E):=c\bigl(\varepsilon_q^{(i)}\bigr)^{2E};\qquad \bigl(c(\mathrm V_1),c(\mathrm V_3),c(\mathrm V_4)\bigr)=(0.771337,\ 0.830091,\ 0.940792);
+$$
+$$
+\beta_{\mathrm{mid}}:=\tfrac{c(\mathrm V_3)}{c(\mathrm V_1)}=1.076172;\qquad \beta_{\mathrm{out}}:=\tfrac{c(\mathrm V_4)}{c(\mathrm V_1)}=1.219690;
+$$
+the range is **exponential in $E$** — the first read in Gap 7's comparison set that provably escapes both hard ceilings — with exact thresholds (each strict: $E{-}1$ falls below; enclosure-proven):
+$$
+\beta_{\mathrm{out}}^E\ge20\iff E\ge16;\quad \ge207\iff E\ge27;\quad \ge900\iff E\ge35;\quad \ge3477\iff E\ge42.
+$$
+Against FT.79(2)'s $V\ge276$ (down-type, cover ladder) and $V\ge4636$ (leptons): a **two-order compression** of the size requirement, $E_{\mathrm{int}}\approx16$–$42$ — within the corpus's computed-cell scale class.
+$(3)$ **Proportionality obstruction (exact).** No single $E$ carries any [EXT] triple through (2b): the triple's shape is fixed by the base pair $(\beta_{\mathrm{mid}},\beta_{\mathrm{out}})$, and
+$$
+\frac{\ln\beta_{\mathrm{mid}}}{\ln\beta_{\mathrm{out}}}=0.369645\qquad\text{vs}\qquad\frac{\ln207}{\ln3477}=0.654006\quad[\mathrm{EXT}]
+$$
+(disjoint enclosures; mismatch factor $1.7693$). At the outer threshold $E=42$: $\beta_{\mathrm{mid}}^{42}=21.83<207$ — middle shortfall $\times9.5$. The obstruction datum is the **base clustering**: the walls cluster in a band of width $0.0115$ [FT.70(2)], so the contraction bases span only $(0.771,0.941)$; an [EXT]-shaped triple would need the vacua's $\ln c$-spreads proportional to $(\ln207,\ln3477)$ — missed by the exact factor above. This is the 1-loop species' own structural obstruction, dual to FT.76(3)'s angle bound and FT.79(2)'s edge budget.
+$(4)$ **Adjudication summary.** The bridge is constructed and machine-exact: the tree limit reproduces the covering census [FT.102(3)]; the loop layer produces the corpus's first multi-vacuum spectrum — four exact vacua, three wall-delimited phase bands, walls at FT.70's boundaries, dominance windows with exact crossings [FT.103]; the mass read is $\Delta S$-admissible (all positive, nats) [L3]. It does not, on the computed cells: reach the [EXT] spans (clause (1)'s exact shortfalls); derive the number three (band count $=|\mathbb F|$, declared [FT.103(5)]); relate to $m_{\mathrm{pole}}$/$m_{\mathrm{hid}}$ (Def-H.39 unchanged; the category discipline of FT.89(2) applies to every cross-read). The exponential mechanism is real but sits in the composed species (clause (2b)), whose size thresholds are exact and whose proportionality datum (clause (3)) is the new obstruction. Item 7's comparison set gains the fourth read; the mass-hierarchy record (two hard ceilings $+$ linear bare $+$ exponential composed, all computed cells $\le6.39$ in span), 2 and 3 unchanged.
+
+**Req.** FT.102, FT.103; FT.73(5); FT.76(3); FT.77; FT.79(1), (2), (4)–(6); FT.84(2); FT.87(9), (11); FT.89(2); L2, L3; Def-H.39, Def-H.40; P1, P5; [EXT] data clause; rational log-enclosures for every threshold and shortfall [math; machine: `checks/verify_H_1loop_bridge.py` §G–§H].
+
+**Pf.**
+$$
+(1):\ \text{shortfall}=[\mathrm{EXT}]/\text{ratio}:\ \text{interval division of enclosure-proven ratios by exact integers}\ [\text{machine}]
+$$
+$$
+(2a):\ W_\Gamma(p)\le\mathcal Z^{\mathrm{tot}}_\Gamma(16)\cdot q^{2E-K_{\mathrm{top}}}\ \text{for }p\ge p_0\ (\text{termwise},\ p\le1):\ \text{log-enclosure comparison at }p_0=\tfrac{15}{16}\ [\text{machine}]
+$$
+$$
+(2b):\ \beta_{\mathrm{out}}^E\ge R\iff E\ln\beta_{\mathrm{out}}\ge\ln R:\ \text{both sides by rational log-enclosures; strictness at }E-1\ [\text{machine}];\qquad c=\tfrac34+\varepsilon_q\ [\mathrm{L2}:\ 1-\tfrac\gamma4,\ \gamma=1-4\varepsilon_q]
+$$
+$$
+(3):\ \ln\beta\ \text{enclosures at tolerance }2^{-50}:\ \text{quotient intervals disjoint};\qquad 42\ln\beta_{\mathrm{mid}}<\ln207\ [\text{machine}]
+$$
+$$
+(4):\ \text{conjunction of FT.102/FT.103 clauses and (1)–(3)};\qquad \text{no identification, no calibration invoked}\ [\mathrm{P1},\mathrm{P5}].\ \blacksquare
+$$
+
+**Phys.** The bridge carries the census across into geometry: walls where the phase diagram has boundaries, vacua where the ensemble has phases, masses as missing information. What it does not carry is the observed hierarchy: on the computed cells the span stays of order six in $m^2$ — the third independent appearance of that scale — and the exponential range that *does* exist lives in the composed tilt size, reaching the lepton span at $E_{\mathrm{int}}=42$ while missing the middle value by the exact factor $9.5$. The ledger has learned to speak geometry; the hierarchy question now has a fourth, unbounded-range species with quantified size requirements and an exact proportionality obstruction any future family must beat. No particle identification; no calibration; the pole$\leftrightarrow$info relational question remains open, its residue sharpened.
+
+---
+
+---
+
+
+## Tier F.36 — The Topology-Blind Path Integral: Observable-Conditioned Sectors and the Janus Sum
+
+### Def-H.32 — The topology-blind path integral
+
+**Def.** A construction class on the prior canon (Def-H.24 pattern: no new axiom); clauses (1)–(7) are constitutive interface definitions. Scopes (S1)–(S4) of Def-H.25 are inherited at every use ($\kappa_e\equiv1$ minimal-edge class on real edges unless a $\kappa$-class is named; literal $\aleph$-domain; seal/Janus bookkeeping static, $\mathcal J=1$; virtual edges weight $1$, no phase).
+
+$(1)$ **The topology space and the budget filtration (Def-H.32(1)).** $\mathcal G:=$ the isomorphism classes of finite connected simple graphs (self-loops excluded [A1]; skeletons read as their bidirectional digraphs, $2E$ directed edges [A7, D0.1]; connectedness per D2.13's subnetwork scope). Regularization $=$ the declared **budget filtration**
+$$
+\mathcal G_B:=\{\Gamma\in\mathcal G:\ V(\Gamma)\le B\},\qquad
+\mathfrak C_B(\Gamma):=\{R\subseteq E_{\mathrm{dir}}(\Gamma):\ |R|\le B_K\}\quad[B_K\ \text{default}\ 2E(\Gamma)],
+$$
+the budget being the ledger's own content measure: $|R|=n_{\mathcal R}$, $S_{\mathfrak L}=n_{\mathcal R}\ln2$ [CT1.29]. Every filtered sum below is a finite exact sum [FT.68(7) pattern]; the $B\to\infty$ limit is not constructed (growth data: FT.105).
+
+$(2)$ **Configurations and the two weight layers.** A configuration on $\Gamma$ is $C=(R,\sigma)\in\mathfrak C(\Gamma)$ [D0.10]: pattern $R$ with per-edge signs $\sigma_e\in\{\pm1\}$ [CT0.9, D3.4]; vertex types $(n_{\mathrm{in}},n_{\mathrm{out}})$ [A7, D0.8]; locked ($D^-$-configured) $\iff k_v\ge4$ [CT4.5 source criterion; CT0.11]. The A8 edge weight is $w(C)=\mathcal J(C)\prod_{e\in E(C)}G(e)\cdot(-1)^{\aleph(\sigma,C)}$ [A8; at (S1): $G(e)=-\sigma_e$; $\aleph=\sum_{\text{centres}}|f_v|$, $f_v=\tfrac{s_{\mathrm{out}}-s_{\mathrm{in}}}2$ [D3.3]]. Two layers [CT2.8]:
+$$
+\textbf{amplitude layer}:\quad v_\Gamma(R):=\sum_\sigma w(R,\sigma)\qquad[\mathrm{FT.67}(2):\ v=2^{|R|}(-1)^{\sum\kappa}\ \text{on covers},\ 0\ \text{else}];
+$$
+$$
+\textbf{norm layer}:\quad \nu_\Gamma(R):=\sum_\sigma|w(R,\sigma)|^2=2^{|R|}\qquad[|w(R,\sigma)|=1\ \text{for every valid pair};\ \mathrm{FT.68}\ \text{Rmk}(6c)].
+$$
+
+$(3)$ **Fugacities (Def-H.32(3) — formal indeterminates over $\mathbb Q$; no rate datum, no declared value).** Per configuration:
+$$
+\mathcal W^{\mathrm{amp}}_\Gamma(R)\ :=\ v_\Gamma(R)^2\;t^{|R|}\,u^{L(R)};\qquad
+\mathcal W^{\mathrm{norm}}_\Gamma(R)\ :=\ \nu_\Gamma(R)\;t^{|R|}\,u^{L(R)},
+$$
+$L(R):=\#\{v:\ k_v\ge4\}$ the locked census; $t$ the crystallization fugacity, $u$ the $D^-$-retention fugacity [CT4.1–CT4.5 vocabulary: absorption/emission/dissolution/retention enter as the static fate fugacity; the emission/dissolution *moves* live in clause (7)]. Specializations are marked at every use: $t=p/q$ with $p=x_+/(x_++x_-)$ [FT.108(4), derived]; tilt refinement $\mathcal W\mapsto\mathcal W\cdot\tau_{\mathcal R}^{|R|}\tau_{\mathcal V}^{2E-|R|}$ with spectral values $\tau_{\mathcal R}=e^{-\gamma/3}$, $\tau_{\mathcal V}=e^{-\gamma}$ [Cor L0a at the branch states; FT.108(7)].
+
+$(4)$ **Observables (Def-H.32(4) — internal bookkeeping labels; no identification).** A configuration carries chains [D1.4: ordered tuples of distinct real edges]: **closed** directed simple cycles $c$, length $L\ge2$; **open** directed simple paths, length $\ge2$. Readings:
+$$
+q(c,\sigma):=\frac{\sigma_{e_1}-\sigma_{e_k}}{2}\in\{-1,0,+1\}\quad[\mathrm{EM.9}\ \text{end registers};\ \mathrm{FT.40}\ \text{closed-core form at the tuple's own base};\ \mathrm{D3.4}],
+$$
+$$
+S(c):\ \text{the on-shell winding }k(c)=\Theta(c)/2\in\mathbb Z\quad[\mathrm{FT.22},\ \mathrm{FT.25}(3)],\qquad
+\text{minimal ladder}\ [\mathrm{FT.32}(6)]:\ \ L\ \text{even}\Rightarrow(\kappa\equiv1,\ k=L/2);\ \ L\ \text{odd}\Rightarrow(\kappa\equiv2,\ k=L);
+$$
+open chains carry $S=0$ (no closed core — bookkeeping label, $\neg$ a spin value; the $j=|k|/2$ map is Def-H.38-declared content and is *not* imported). A **chain instance** is a pair $(c,\text{base})$ (closed: base $=$ each of the $L$ cyclic starts; open: the tuple itself). The $\delta$-constraints of the sector sum are realized by summing over instances with the readings fixed.
+
+$(5)$ **The sector partition functions.** For labels $(q,S)$ and budget $(B,B_K)$:
+$$
+Z^{\bullet}_{B}(q,S)\ :=\ \sum_{\Gamma\in\mathcal G_B}\ \sum_{R\in\mathfrak C_B(\Gamma)}\ \mathcal W^{\bullet}_\Gamma(R)\cdot\#\{(c,\text{base}):\ q(c,\sigma)\text{-sector}=q,\ S(c)=S\}\Big|_{\sigma\text{-resolved}},
+$$
+$\bullet\in\{\mathrm{amp},\mathrm{norm}\}$: the amplitude layer with $\sigma$ resolved inside the sector condition and $w$-weights; the norm layer with $|w|^2$-weights (closed form: $m_q\,2^{|R|-2}$ per instance, $m_q=(2,1,1)$ at $q=(0,\pm1)$ [FT.106(3)]). Both are exact polynomials in $\mathbb Z[t,u]$ per budget cell.
+
+$(6)$ **The mass expectation (Def-H.32(6)).** For sectors with $Z^{\mathrm{norm}}_B(q,S)\ne0$:
+$$
+m^2_B(q,S)\ :=\ \frac{1}{Z^{\mathrm{norm}}_B(q,S)}\sum_{\Gamma,R}\ \mathcal W^{\mathrm{norm}}_\Gamma(R)\cdot\#\text{inst}(q,S;\Gamma,R)\cdot\Delta S(\Gamma,R),
+$$
+$$
+\Delta S(\Gamma,R)\ :=\ 2\,n_{\mathcal V}(\Gamma,R)\,\bigl\langle|\delta\rho|^2\bigr\rangle_{\text{branch states}}\ =\ \tfrac32\,n_{\mathcal V}(\Gamma,R)\ =\ \tfrac32\bigl(2E(\Gamma)-|R|\bigr)\qquad[\mathrm{L4};\ \mathrm{L3}(1)\ \text{exact leading};\ \mathrm{n}_\mathrm{V}:=\#\text{virtual channels}],
+$$
+the branch-state values $|\delta\rho|^2=(\tfrac34,\tfrac1{12})$ (virtual $\Pi_{\mathcal V}$, real $\Pi_{\mathcal R}/3$) computed matrix-exact [FT.107(2)]; dimensionless nats [L3(4) species]; no coupling to $m_{\mathrm{pole}}/m_{\mathrm{hid}}$ (mass-form bridge residue; Def-H.39's bridge slots unconstructed); the exact relative-entropy variant ($\ln4$ per virtual channel) is a specialization remark, not the read.
+
+$(7)$ **The Janus move system and the transition operator (Def-H.32(7)).** States $s=(\Gamma,R)$, $\Gamma$ any finite simple graph on $\le B$ labelled nodes (the path space admits disconnected and edgeless states; $\mathcal G$-membership is imposed at the sector sums). Moves, with formal weights:
+$$
+J^+(e):\ R\mapsto R\cup\{e\},\ e\notin R\ [\text{weight }x_+];\qquad J^-(e):\ R\mapsto R\setminus\{e\}\ [\text{weight }x_-]\qquad[\mathrm{D1.2}:\ \text{one pair across A4 per event}];
+$$
+$$
+N^+(v,S):\ \text{add node }v\text{ with }d=|S|\ge1\ \text{virtual edges to existing nodes}\ [\text{weight }y_d];
+$$
+$$
+N^-(v):\ \text{remove node }v\text{ of degree }d\text{ together with its }r(v)\ \text{real edges}\ [\text{weight }z_d\,x_-^{r(v)};\ \mathrm{D1.2}:\ \text{reality is per pair}].
+$$
+$\hat U:=\sum_{\text{moves}}w\,|t\rangle\langle s|$ over the budget-truncated state space; $\langle s'|\hat U^n|s\rangle\in\mathbb Z[x_\pm,y_d,z_d]$; the topology sum of clause (5) and the transition sum $\sum_n\langle s'|\hat U^n|s\rangle$ are the static and dynamical faces of the same move content (FT.108).
+
+**Rmk (interfaces and non-imports).** Frozen data only: A8/D3.3 weights; FT.67(2)'s classifier; CT0.9/CT0.11 registers and cap; CT1.29 ledger nats; EM.9/FT.40/FT.22/FT.25/FT.32 readings; CT4.1–CT4.5 lock vocabulary; Cor L0a tilt spectral values; L3/L4 deficit reads. Not imported: any declaration-entry entry (Def-H.38's $j=|k|/2$, Cal-F's rate datum, the non-adopted bridge-map's observer map, Def-H.39's bridge, Def-H.40's composition, Def-H.31's dictionary — the ensemble parameter $p$ and the dictionary $p=1-4\varepsilon_q$ are *derived* here as the stationary measure of clause (7)'s edge chain and its specialization [FT.108(4)]). Not declared: aspect-resolved couplings inside $w$ (the gauge-block coupling structure does not close [FT.82]; the aspects of A8/CT0.7(4) label the move algebra only [FT.108(1)]); observer-channel relativity of the readings (Def-H.1 vocabulary; the sector sums are channel-free instance censuses — a declaration would be needed to make them observer-relative, and none is made). Topology labels (names of cells) are internal bookkeeping throughout.
+
+---
+
+---
+
+### FT.106 — Weight transport and the two-layer sector structure
+
+**Thm.** Under Def-H.32:
+$(1)$ **The exact-cover classifier is topology-blind.** FT.67(2)'s classification — $v_\Gamma(R)=2^{|R|}(-1)^{\sum\kappa}$ iff the type-$(1,1)$ centres exactly single-cover $R$, else $0$ — holds verbatim on every $\Gamma\in\mathcal G$: its involution proof consumes only local vertex types [D3.3] and sign flips, no global topology. Machine: brute-force sign sums equal the classifier on **all $5845$ patterns of all ten $V\le4$ cells** and on $5888$ further $V{=}5$ witness patterns ($E\le5$).
+$(2)$ **Closed cells die in amplitude on every topology; covers thread them.** Every pure directed cycle (any length, any cell) has $v=0$ [FT.67(3a) transport]; on every enumerated cover containing directed cycles the cycle-alternation lemma holds exactly (centres/non-centres strictly alternate; all cycle lengths even; no odd cycle inside any cover) [FT.69(3) transport]; census: the only closed content inside covers at $B=4$ is dissolved digons (and their locked-hub families [FT.69(5)]).
+$(3)$ **The two-layer sector structure (exact census at $B=4$; $\sigma$-resolved scope: all cells with $2E\le8$ exhaustive, $K_4$ at $K\le4$ [FT.74(5) precedent], diamond at $K\le5$).** Sector totals over $\mathcal G_4$, $Z^{\mathrm{norm}}$ complete / $Z^{\mathrm{amp}}$ in scope:
+$$
+\begin{array}{c|cc|cc}
+(q,S)&Z^{\mathrm{norm}}&&Z^{\mathrm{amp}}&\\ \hline
+(\pm1,0)\ \text{transit}&197912&&1196&\\
+(0,0)\ \text{transit}&395824&&5336&m_q=(2,1,1)\\
+(\pm1,1)\ \text{digon winding}&787358&&802&\text{dissolved digons in covers}\\
+(0,1)&1574716&&4796&\\
+(\pm1,2)\ (C_4\text{-type winding})&655776&&0&\text{no cover contains a 4-cycle [FT.69(3)(v)]}\\
+(0,2)&1311552&&0&\\
+(\pm1,3)\ (\text{triangle winding},\ \kappa\equiv2)&1000512&&0&\text{odd cycles never enter covers [FT.69(3)(iv)]}\\
+(0,3)&2001024&&0&
+\end{array}
+$$
+Structural identities (all machine): **(a) norm-layer closed form** — per chain instance the $\sigma$-sum factorizes as $m_q2^{|R|-2}$, $m_q=(2,1,1)$ at $q=(0,\pm1)$ [EM.9's four end-pairs]; closed form $=$ census in scope, every cell and sector. **(b) amplitude $q$-sum identity** — for every winding $k$: $\sum_qZ^{\mathrm{amp}}_B(q,k)=\sum_{R\ \mathrm{cover}}v_\Gamma(R)\cdot\#\mathrm{inst}_k(R)$ exactly: the charge-resolved amplitude layer admits non-cover support ($18$ nonzero cancelling entries at $B=4$ — a sector-level refinement of FT.67's total), and the non-cover parts cancel exactly across $q$. **(c) amplitude death of $k\ge2$** — $Z^{\mathrm{amp}}(q,k)=0$ in total for $k=2$ and odd $k\ge3$; the winding-$1$ sector is amplitude-live exactly through dissolved-digon covers. **(d) $\omega$-symmetry** — $Z^{\bullet}(q,S)=Z^{\bullet}(-q,S)$: norm layer unconditional ($|w|$-invariance [EM.24(5) pattern]); amplitude layer on the cover support ($|R|=2|\mathcal C|$ even). **(e) charge alphabet** — $\{-1,0,+1\}$ attained in every chain-carrying cell [EM.9 transport]; every sector value is a nonnegative integer (norm) resp. integer (amp).
+
+**Req.** Def-H.32; A7, A8; D0.8, D0.10, D3.3, D3.4; CT0.9, CT0.11 (Part 1); CT2.8 (Part 2); EM.9, EM.24(5) (Part 2); Def-H.25; FT.67, FT.68, FT.69(3)–(5), FT.74(3),(5); exhaustive enumeration, involution transport, factorized $\sigma$-sums [math; machine: `checks/verify_H_topology_blind.py` §B–§C].
+
+**Pf.**
+$$
+(1):\ \mathrm{FT.67}(2)\text{'s involution flips }\sigma_e\text{ on unread/double-read edges per vertex — local data }[\mathrm{D3.3}];\qquad \text{brute force}=\text{classifier on }5845+5888\ \text{patterns}\ [\text{machine}]
+$$
+$$
+(2):\ \text{pure cycles}:\ \text{every vertex interior}\Rightarrow\text{cov}\equiv0\ \vee\ 2:\ v=0\ [\mathrm{FT.67}(3a)\ \text{proof transport}];\qquad \text{alternation census on every cover with cycles at }B=4\ [\text{machine}]
+$$
+$$
+(3a):\ q(c,\sigma)\ \text{reads two edge signs}:\ \#\{\sigma:\ q(c,\sigma)=q\}=m_q2^{L-2}\ \text{on the chain};\ \text{rest free}:\ 2^{|R|-L}:\ \text{product}=m_q2^{|R|-2};\qquad \text{census}=\text{closed form}\ [\text{machine}]
+$$
+$$
+(3b):\ \sum_q\sum_{\sigma:\,q(c,\sigma)=q}w(R,\sigma)=\sum_\sigma w(R,\sigma)=v_\Gamma(R)\ [\text{instances are }\sigma\text{-independent}];\qquad v=0\ \text{off covers}\ [(1)]
+$$
+$$
+(3c):\ \text{covers contain no 4-cycles and no odd cycles at }B=4\ [\text{census}] \implies \#\mathrm{inst}_{k\ge2}=0\ \text{on covers}\implies\sum_qZ^{\mathrm{amp}}=0\ [(3b)]
+$$
+$$
+(3d):\ \sigma\mapsto-\sigma:\ q\mapsto-q;\quad |w(R,-\sigma)|=|w(R,\sigma)|;\quad w(R,-\sigma)=(-1)^{|R|}w(R,\sigma);\quad |R|=2|\mathcal C|\ \text{even on covers}\ [\mathrm{FT.79}(2)]
+$$
+$$
+(3e):\ m_q>0\ \forall q;\ \ \text{instance existence per cell}\ [\text{machine census}].\ \blacksquare
+$$
+
+**Phys.** Weighing every topology against every pattern does not blur the frozen anatomy — it confirms it cell by cell: the amplitude layer remains a thread gas with dissolved even cores, the norm layer remains strictly positive, and the odd cores stay amplitude-dead on all ten topologies at once. The new datum is finer than the total: resolved by charge, the amplitude layer carries cancelling non-cover parts whose sum is exactly the cover census — FT.67's cancellation, seen from inside. No particle identification.
+
+---
+
+---
+
+### FT.107 — The observable sectors and the mass expectation
+
+**Thm.** Under Def-H.32:
+$(1)$ **On-shell ladder (transport of FT.32(6)).** A directed $L$-cycle is on-shell at $(\kappa\equiv1,\ k=L/2)$ for $L$ even and at $(\kappa\equiv2,\ k=L)$ for $L$ odd; instances at $B=4$: $k=1$ (digons, $\kappa\equiv1$), $k=2$ ($4$-cycles, $\kappa\equiv1$), $k=3$ (triangles, $\kappa\equiv2$); the floor card $L=2$, $k=1$ is FT.28's $\Sigma_{\min}$ datum reproduced by the census.
+$(2)$ **Branch-state deficits (matrix-exact).** At the canonical branch states [CT0.8 sharp readings]: $\rho_{\mathcal V}=\Pi_{\mathcal V}$: $|\delta\rho|^2=\tfrac34$; $\rho_{\mathcal R}=\Pi_{\mathcal R}/3$: $|\delta\rho|^2=\tfrac1{12}$; leading deficits $2|\delta\rho|^2=(\tfrac32,\ \tfrac16)$ [L3(1)]; hence $\Delta S(\Gamma,R)=\tfrac32\,n_{\mathcal V}(\Gamma,R)=\tfrac32(2E-|R|)$ — an exact rational per configuration.
+$(3)$ **The sector mass table ($B=4$, $(t,u)=(1,1)$, norm layer; exact rationals).** $m^2_B(q,S)$ is independent of $q$ (charge-degenerate at the leading deficit read — the topology-blind companion of FT.100's phase-blindness):
+$$
+\begin{array}{c|cccc}
+S\ (\text{winding})&0\ (\text{transit})&1&2&3\\ \hline
+m^2_4(\cdot,S)&\dfrac{843957}{98956}&\dfrac{1921662}{393679}&\dfrac{91}{23}&\dfrac{13713}{3088}\\[2mm]
+&\approx8.5286&\approx4.8813&\approx3.9565&\approx4.4407
+\end{array}
+$$
+all strictly positive ($\Delta S$-admissible, nats [L3(4)]); the ordering places the transit sector heaviest — thread-network instances ride sparser patterns (larger $n_{\mathcal V}$), the deficit read weights missing information.
+$(4)$ **Quadratic budget law.** For every sector and budget: $0<m^2_B(q,S)\le\tfrac32\max_\Gamma n_{\mathcal V}\le\tfrac32\,B(B-1)$ [exact bound; $\max$ at $R=\varnothing$ on the densest cell]: **quadratic in the node budget** — at $B=4$: bound $18$, attained census maximum $\tfrac{843957}{98956}<9$. The winding spread at $B=4$ is $\tfrac{91}{23}\le m^2\le\tfrac{843957}{98956}$ (span $\approx2.16$ in $m^2$): the computed-cell span remains order-one while the *bound* grows as $\Theta(B^2)$ — against the fixed-topology bare read's linear-in-size range [FT.104(2a)] and the two hard ceilings [FT.76(3), FT.79(2), FT.97(5)]. The fugacity axes add an unbounded structural direction (FT.108(5)); no axis value is declared. No [EXT] datum enters this part; no comparison is made.
+
+**Req.** Def-H.32; CT0.7, CT0.8 (Part 1); L3, L4; FT.22, FT.24, FT.25(3), FT.28, FT.32(6); FT.100; FT.104(2); FT.76(3), FT.79(2), FT.97(5); exact rational matrix arithmetic, sector census algebra [math; machine: `checks/verify_H_topology_blind.py` §C–§D].
+
+**Pf.**
+$$
+(1):\ \Theta=\sum_{e\in c}\widehat{ds}^{\,2}(e):\ \kappa\equiv1:\ \Theta=L;\ \ \kappa\equiv2:\ \Theta=2L;\qquad \text{on-shell}\iff\Theta\in2\mathbb Z\ [\mathrm{FT.22}];\qquad k_{\min}=\Theta_{\min}/2\ [\mathrm{FT.32}(6)]
+$$
+$$
+(2):\ \delta\rho=\Pi_{\mathcal V}-\tfrac14I:\ \operatorname{spec}=(-\tfrac14,-\tfrac14,-\tfrac14,\tfrac34):\ \mathfrak T(\delta\rho^2)=\tfrac3{16}+\tfrac9{16}=\tfrac34;\qquad \delta\rho=\tfrac{\Pi_{\mathcal R}}3-\tfrac14I:\ \operatorname{spec}=(\tfrac1{12},\tfrac1{12},\tfrac1{12},-\tfrac14):\ \mathfrak T(\delta\rho^2)=\tfrac3{144}+\tfrac1{16}=\tfrac1{12}\ [\text{machine}]
+$$
+$$
+(3):\ m^2=\frac{\sum_{\Gamma,R}\nu\,t^{|R|}u^{L}\#\mathrm{inst}\cdot\tfrac32(2E-|R|)}{\sum_{\Gamma,R}\nu\,t^{|R|}u^{L}\#\mathrm{inst}}\Bigg|_{t=u=1}:\ \text{exact rational division of census integers};\qquad q\text{-independence}:\ \Delta S(R)\ \text{is }\sigma\text{-free and }m_q\text{-symmetric}\ [(3a),(3d)\ \text{of FT.106}]
+$$
+$$
+(4):\ n_{\mathcal V}\le2E\le B(B-1)\ [\text{simple graphs}];\qquad \text{census max}<9<18\ [\text{machine}];\qquad \Theta(B^2)\ \text{vs}\ \Theta(B)\ [\mathrm{FT.104}(2a)]\ \text{and vs}\ 4\hat\mu'^2/3V\text{-ladder ceilings}.\ \blacksquare
+$$
+
+**Phys.** The mass of an observable-conditioned sector is the ensemble average of missing information over every topology that carries it — one exact rational per (charge, winding) label at each budget, charge-blind at this order, ordered by how sparse the carrying patterns are. The transit sector weighs heaviest at $B=4$: open threads live on the emptier configurations, and emptiness is what the deficit read weighs. The quadratic budget law is the mechanism statement: topology-blindness moves the range axis from skeleton size to the budget itself — how far that axis must be pushed to reach any external span is arithmetic on $\tfrac32B(B-1)$, not physics claimed here. No particle identification; no external datum used.
+
+---
+
+---
+
+### FT.108 — The Janus sum: move algebra, budget conservation, derived detailed balance, and the Tier F.35 boundary
+
+**Thm.** Under Def-H.32:
+$(1)$ **Move-label algebra.** The move classes carry CT0.7(4)'s aspect labels — $J^\pm\leftrightarrow F_{J^\pm}=\mathcal E_{-+}/\mathcal E_{--}$ (S-odd), node moves $\leftrightarrow$ the seal-generated topology change — and the frozen identities hold matrix-exact over $\mathbb Q(i)$ on the label algebra: $[\Sigma,J_i]=4iK_i$, $[\Sigma,K_i]=-4iJ_i$ [CT1.5]; $\{\mathbb S,J_i\}=0=\{\mathbb S,K_i\}$ [CT0.7(3)].
+$(2)$ **Budget conservation (the coarse-grained invariant).** The grade map $\mathrm{gr}:(\Gamma,R)\mapsto\bigl(V,\,E_{\mathrm{pot}},\,|R|\bigr)$ is a homomorphism of the move system: every monomial $x_+^{a_+}x_-^{a_-}\prod y_d^{m_d}\prod z_d^{n_d}$ of $\langle s'|\hat U^n|s\rangle$ satisfies
+$$
+a_+-a_-=|R'|-|R|;\qquad \textstyle\sum_d m_d-\sum_d n_d=V'-V;\qquad \sum_d d\,(m_d-n_d)=E'_{\mathrm{pot}}-E_{\mathrm{pot}}
+$$
+— exhaustive on every path monomial at $n\le3$ from every $V\le2$ source [machine]. Node dissolution carries its incident real edges' own $J^-$ factors [D1.2]: $z_d\,x_-^{r(v)}$ — without them the grade map fails (witnessed).
+$(3)$ **Path counts (two enumerators).** Operator iteration and depth-first path enumeration agree coefficient-wise on $\hat U^n$, $n\le4$; witness: $\langle\text{digon},R{=}E\,|\,\hat U^3\,|\,\bullet\rangle=2\,x_+^2y_1+\cdots$ — the two admissible move orderings [machine].
+$(4)$ **Detailed balance derived; the dictionary is a specialization.** The per-pair Janus dynamics [D1.2] on (virtual, real) has master generator $Q=\bigl(\begin{smallmatrix}-x_+&x_+\\ x_-&-x_-\end{smallmatrix}\bigr)$ over $\mathbb Z[x_+,x_-]$; $\ker Q$ is one-dimensional with span $(x_-,x_+)$ [exact: $(x_-,x_+)Q=0$; $\det Q=0\ne Q$] — the unique stationary measure, hence
+$$
+p\ =\ \frac{x_+}{x_++x_-}\qquad[\text{derived},\ \neg\text{imported}];
+$$
+the substitution $x_+=1-4\varepsilon_q$, $x_-=4\varepsilon_q$ gives $p=1-4\varepsilon_q$ identically [machine] — the fixed-topology ensemble parameter is a specialization of the derived stationary ratio, and the sealed universe-level balance $\#J^+=\#J^-$ [D1.3] is the balanced-sector restriction of $(2)$'s first identity.
+$(5)$ **Resolvent structure.** On a single pair channel, $\sum_n\langle\varnothing|\hat U^n|\varnothing\rangle w^n=\dfrac{1}{1-w^2x_+x_-}$ in $\mathbb Q[w]/(w^{12})$ [machine: $(1-w^2x_+x_-)\cdot\sum\equiv1$ coefficient-wise] — the transition sum is a geometric resolvent with pole at $w^2x_+x_-=1$: an unbounded structural range direction in the formal fugacities, no value declared (P4-class datum absent; any numerical use requires a logged declaration first).
+$(6)$ **The Tier F.35 boundary limit.** With node moves off ($y_d,z_d\mapsto0$) the state space decomposes into fixed-topology sectors, and on each sector $\Gamma_0$ the amplitude-layer cover generating function
+$$
+\Phi_{\Gamma_0}(t)\ :=\ \sum_{R\ \mathrm{cover}}v_{\Gamma_0}(R)^2\,t^{|R|}\ =\ \sum_kc_k16^kt^{2k}
+$$
+satisfies the exact polynomial identity
+$$
+q^{2E}\,\Phi_{\Gamma_0}\bigl(p/q\bigr)\ =\ W_{\Gamma_0}(p)\qquad[\text{coefficient-wise; machine on tetra/cube/octa against the frozen FT.68(1),(3)/FT.69(2) rows and on all nine live }V\le4\text{ cells}]
+$$
+— the fixed-topology tree layer of Def-H.31(2) [Tier F.35] is recovered identically; the lock refinement census at $(t,u)$: the tetrahedron's $16$ locked covers carry lock count $1$ each [FT.69(5) family]. Consequently the fixed-topology slice of the topology-blind integral carries Tier F.35's boundary data — its effective potential, four vacua, phase triple and FT.70 walls [FT.102–FT.104, under Def-H.31's interface definitions, cited as boundary content, not re-derived] — as the $y_d,z_d\to0$ restriction, per clause $(4)$'s specialization of $t$.
+$(7)$ **Tilt spectral specialization.** At the branch states, $Z_\gamma=\mathfrak T(\rho e^{-\gamma\rho})$ [Cor L0a] evaluates exactly by spectral calculus: real branch $e^{-\gamma/3}$, virtual branch $e^{-\gamma}$; at $\gamma=1$: disjoint rational enclosures $e^{-1/3}\in[0.716531311,\ldots]$, $e^{-1}\in[0.367879441,\ldots]$, strict order enclosure-proven [machine].
+
+**Req.** Def-H.32; A4, A8; D0.3, D1.2, D1.3, D3.3; CT0.7, CT0.7a, CT1.2, CT1.5 (Part 1); L0 (Cor L0a); Def-H.25, Def-H.26, Def-H.31 (Tier F.35, boundary citation); FT.67, FT.68, FT.69(2),(5), FT.70, FT.74; FT.102, FT.103, FT.104(2a) (Tier F.35); exact multivariate polynomial arithmetic over $\mathbb Z$, master-equation kernel algebra, truncated power series, rational exp-enclosures [math; machine: `checks/verify_H_topology_blind.py` §E–§G].
+
+**Pf.**
+$$
+(1):\ \text{matrices over }\mathbb Q(i)\ \text{from CT1.2's definitions verbatim};\qquad \text{all commutator/anticommutator entries compared exactly}\ [\text{machine}]
+$$
+$$
+(2):\ J^\pm:\ \Delta|R|=\pm1,\ \Delta V=\Delta E_{\mathrm{pot}}=0;\quad N^+(d):\ (\Delta V,\Delta E_{\mathrm{pot}},\Delta|R|)=(1,d,0);\quad N^-(v):\ (-1,-d,-r(v))\ \text{with weight }z_dx_-^{r(v)}:\ \text{grades match exponents monomial-wise}\ [\text{machine, exhaustive at }n\le3]
+$$
+$$
+(3):\ \text{dict-based operator iteration}=\text{recursive DFS aggregation}\ [\text{machine, coefficient-wise equality of multivariate polynomials}]
+$$
+$$
+(4):\ (x_-,x_+)Q=(x_-(-x_+)+x_+x_-,\ x_-x_+-x_+(x_-))=(0,0)\ [\text{exact in }\mathbb Z[x_+,x_-]];\qquad \det Q=x_+x_--x_-x_+=0,\ Q\ne0:\ \operatorname{rk}=1
+$$
+$$
+p=\tfrac{x_+}{x_++x_-};\qquad x_+=1-4\varepsilon_q,\ x_-=4\varepsilon_q:\ x_++x_-=1\implies p=1-4\varepsilon_q\ [\text{polynomial identity; machine}]
+$$
+$$
+(5):\ (\hat U^{2m})_{\varnothing\varnothing}=(x_+x_-)^m,\ (\hat U^{2m+1})_{\varnothing\varnothing}=0\ [\text{single channel}];\qquad (1-w^2x_+x_-)\sum_{m}(w^2x_+x_-)^m=1\ \text{in}\ \mathbb Q[w]/(w^{12})\ [\text{machine}]
+$$
+$$
+(6):\ v^2=4^{|R|}=16^{|\mathcal C|}\ [\mathrm{FT.67}(2),\ \mathrm{FT.79}(2)];\qquad q^{2E}\textstyle\sum_kc_k16^k(p/q)^{2k}=\sum_kc_k16^kp^{2k}q^{2E-2k}=W_{\Gamma_0}(p)\ [\mathrm{Def\text{-}H.31}(2)\ \text{form}];\qquad \text{coefficient-wise on frozen and live rows}\ [\text{machine}]
+$$
+$$
+(7):\ \operatorname{spec}(\Pi_{\mathcal R}/3)=(\tfrac13,\tfrac13,\tfrac13,0):\ \textstyle\sum\lambda e^{-\gamma\lambda}=e^{-\gamma/3};\qquad \operatorname{spec}(\Pi_{\mathcal V})=(0,0,0,1):\ e^{-\gamma};\qquad \gamma=1\ \text{enclosures}\ [\text{machine}].\ \blacksquare
+$$
+
+**Phys.** The Janus seals do what D1.2 always said they do — move one pair across the crystallization criterion — and once node events are admitted with the same per-pair discipline, topology itself becomes a walk in an exactly graded state space. The grade map is the conserved information budget; nothing else is conserved, and nothing else is needed: the stationary measure of a single pair channel comes out as the ratio of the two seal weights, so the ensemble parameter every earlier tier declared is here derived, and the fixed-topology world is the slice on which node moves are switched off. On that slice the boundary data reproduce identically — every covering polynomial, every wall, every vacuum of the fixed-topology construction is the restriction of the topology-blind integral, not a competing answer. The transition sum is a resolvent: its pole is the unbounded direction, its location a datum the corpus does not declare. No particle identification.
+
+---
+
+
+## Tier F.37 — The Koide Channel: The $C_3$-Covariant Seal Bilinear and the Bound-Chain Mixing Angle
+
+### FT.109 — The diagonal seal commutator
+
+**Thm.** Under CT1.7, with the CT1.2 basis $\{E_0,\Sigma,\hat E^{ij},W_i,J_i,K_i\}$:
+$$(1)\quad\sum_{i=1}^{3}[J_i,K_i]=i\sum_{i=1}^{3}\bigl(\Sigma-E^{ii}\bigr)=i\bigl(3\Sigma-\Sigma\bigr)=2i\Sigma ;$$
+$$(2)\quad\sum_{i=1}^{3}E^{ii}=\sum_{i=1}^{3}\sigma_i\otimes\sigma_i=\Sigma\qquad\bigl[E^{ii}=\tfrac12\bigl(\sigma_i\otimes\sigma_i+\sigma_i\otimes\sigma_i\bigr)=\sigma_i\otimes\sigma_i\bigr];$$
+$$(3)\quad\text{basis read: in the 16-element CT1.2 basis the sum }\textstyle\sum_i[J_i,K_i]\text{ has exactly one nonzero component — the }\Sigma\text{ component, with coefficient exactly }2i;$$
+$$(4)\quad 2i\Sigma\in\mathcal E_{++}\ \text{(the Higgs/gravity block)},\qquad 2i\Sigma\notin\operatorname{span}\{W_k\}.$$
+
+**Req.** CT1.2, CT1.7 (Part 1); exact $\mathbb Q(i)$ matrix arithmetic on all $16$ basis elements, basis-subset disjointness [math; machine: `checks/verify_H_koide_channel.py` §A–§B].
+
+**Pf.**
+$$
+(1):\ [J_i,K_i]=i\bigl(\delta_{ii}\Sigma-E^{ii}\bigr)=i\bigl(\Sigma-E^{ii}\bigr)\ [\mathrm{CT1.7}];\qquad\sum_{i=1}^{3}\bigl(\Sigma-E^{ii}\bigr)=3\Sigma-\sum_iE^{ii}=3\Sigma-\Sigma=2\Sigma\ [(2)]
+$$
+$$
+(2):\ E^{ii}=\sigma_i\otimes\sigma_i\ \text{and}\ \Sigma=\textstyle\sum_i\sigma_i\otimes\sigma_i\ [\mathrm{CT1.2}\ \text{definitions, entry-wise over}\ \mathbb Q(i)]
+$$
+$$
+(3):\ \textstyle\sum_i[J_i,K_i]=2i\Sigma\ \text{entry-wise exact over}\ \mathbb Q(i);\ \ \text{the 16 CT1.2 elements are a basis of}\ \mathfrak H(\mathbb C^4)\implies\text{component reads are unique}\ [\mathrm{CT1.2};\ \text{machine §A}]
+$$
+$$
+(4):\ S\Sigma S=\Sigma\ \wedge\ T\Sigma T=\Sigma\implies 2i\Sigma\in\mathcal E_{++}\ [\mathrm{CT1.2}\ \text{sector table}];\qquad SW_kS=-W_k\ [\mathrm{CT1.2}]
+$$
+$$
+\operatorname{span}\{E_0,\Sigma,\hat E^{ij}\}\cap\operatorname{span}\{W_k\}=\{0\}\ [\text{disjoint basis subsets};\ \mathrm{CT1.2}];\qquad 2i\Sigma\ne0\implies 2i\Sigma\notin\operatorname{span}\{W_k\}\ [\text{machine §A}].\ \blacksquare
+$$
+
+**Phys.** Bracketing each spatial seal with its own temporal seal and summing over the triplet cancels the entire symmetric-tensor content and leaves exactly twice the exchange scalar: the diagonal of the mixed seal commutator is a pure Higgs/gravity-block object, with exact integer coefficient $2$ and zero weak component. This integer $2$ is the sole numerator entering the mixing angle of FT.112 — no datum, no fit.
+
+---
+
+---
+
+### Def-H.41 — The bound-chain arena
+
+**Def.** The **bound-chain arena** is the minimal counting space combining the two independently present structures of a bound chain $c$ [D1.4]:
+$$
+\mathcal H_c\ :=\ \mathcal H_{\mathrm{seal}}\otimes\mathcal H_{\mathrm{poly}},\qquad
+\mathcal H_{\mathrm{seal}}:\ \text{the seal triplet at the chain's termini}\ [\mathrm{CT0.12},\ \mathrm{CT0.7}(4):\ F_{J^\pm}=\operatorname{span}\{J_i\}/\operatorname{span}\{K_i\},\ \dim=3],
+$$
+$$
+\mathcal H_{\mathrm{poly}}:\ \text{the polygonal transfer structure along its length}\ [\mathrm{FT.68}(2):\ \text{the transfer rule}\ T(t);\ \operatorname{tr}T(1)=3];\qquad
+\dim_{\mathrm{eff}}\mathcal H_c=3\times3=9\ \ [\mathrm{FT.110}(1)].
+$$
+**Species (constitutive).** A counting space: no inner product, no dynamics, no state, no Hamiltonian is declared on $\mathcal H_c$; its dimension enters the channel theorems exactly once — as the denominator of the mixing angle [FT.112: $\delta_\ell=\tfrac29$ with FT.109's diagonal seal coefficient $2$ the numerator].
+**Bars (standing).** $\dim\mathcal H_c$ is $\neg$a state count; the ratios $r_i^2$ [FT.113] reproduce no measured hierarchy — the exact nonzero shortfalls stand [FT.114 — forward pointer; Census row]; the overall scale $\mu$ is undeclared (P4-class, Cal-F); external calibration barred [P1, P5]; particle identification barred.
+
+---
+
+### FT.110 — The bound-chain arena dimension
+
+**Thm.** The bound-chain arena $\mathcal H_c$ is the tensor product of two independent $3$-dimensional structures:
+$$(1)\quad\dim_{\mathrm{eff}}\mathcal H_c=\dim F_{J^\pm}\times\operatorname{tr}T(1)=3\times3=9;$$
+$$(2)\quad\operatorname{tr}T(1)=3\qquad\bigl[\mathrm{FT.68}(2):\ \operatorname{charpoly}T(1)=x^2\bigl(x^2-3x-3\bigr)=x^4-3x^3-3x^2;\ \ \operatorname{tr}T(1)=-[x^3]\operatorname{charpoly}T(1)=3\bigr].$$
+
+**Rmk (tensor-product justification).** The tensor product is constitutive of Def-H.41 (immediately above): the minimal combination consistent with both structures being independently present — the seal triplet at the chain's termini [CT0.12, CT0.7(4); chains as in Def-H.32(4)] and the polygonal transfer structure along its length [FT.68(2)]. Both factors are derived; the product is the interface clause. $\mathcal H_c$ is an arena — a counting space: no inner product, no dynamics, no state on it is declared, and no Parts 1–2 result uses the declaration.
+
+**Req.** CT0.7(4), CT0.12 (Part 1); FT.68(2) (Tiers F.23–F.25); Def-H.32 (Tier F.36, chain vocabulary); Vieta coefficient read, exact integer characteristic polynomial of the $4\times4$ transfer rule [math; machine: `checks/verify_H_koide_channel.py` §C].
+
+**Pf.**
+$$
+(2):\ T(1)[s][s']=[\,|s|+|s'|\le3\,],\ s,s'\in\{0,1\}^2\ [\mathrm{FT.68}(2)\ \text{transfer rule at}\ t=1]:\ \text{the single excluded pair is}\ (|s|,|s'|)=(2,2)
+$$
+$$
+\implies T(1)=\mathbb 1_{4\times4}-[\,\cdot\,]_{(2,2)}\ \text{on the diagonal}:\ \operatorname{tr}T(1)=4-1=3\ [\text{exact integers; machine §C}]
+$$
+$$
+\operatorname{charpoly}T(1)=x^4-3x^3-3x^2=x^2\bigl(x^2-3x-3\bigr)\ [\mathrm{FT.68}(2);\ \text{machine: exact re-derivation from the}\ 4\times4\ \text{rule}];\qquad\operatorname{tr}T(1)=-[x^3]=3\ [\text{Vieta}]
+$$
+$$
+(1):\ \dim F_{J^\pm}=3\ [\mathrm{CT0.12}\ \text{table}:\ F_{J^+}=\mathcal E_{-+}=\operatorname{span}\{J_i\},\ F_{J^-}=\mathcal E_{--}=\operatorname{span}\{K_i\}\ [\mathrm{CT0.7}(4)]];\qquad 3\times3=9\ [\text{exact}].\ \blacksquare
+$$
+
+**Phys.** A bound chain carries a three-dimensional seal choice at its boundary and a three-dimensional transfer weight along its length; the arena that holds both bookkeepings at once is nine-dimensional. The count $9$ is the product of two independently derived threes — the seal triplet dimension and the transfer trace — and enters the tier exactly once: as the denominator of the mixing angle (FT.112).
+
+---
+
+---
+
+### FT.111 — The $C_3$ spectrum of the covariant seal bilinear
+
+**Thm.** The mixed seal commutator $[J_i,K_j]$ is a bilinear in two seal triplets. Let $C_3$ be the cyclic permutation of the seal index, generated by the $SO(3)$ rotation by $2\pi/3$ about the $(1,1,1)$ axis — a subgroup of the $SO(3)$ under which $\{J_i\}$ and $\{K_i\}$ transform as vectors [CT1.8]; inner form: $U=u\otimes u$ with $u=\tfrac12\bigl(I_2-i(\sigma_1+\sigma_2+\sigma_3)\bigr)$, exact over $\mathbb Q(i)$: $U^3=I_4$, $UJ_iU^\dagger=J_{i+1}$, $UK_iU^\dagger=K_{i+1}$ (indices mod $3$). Then:
+$$(1)\quad\text{bilinear}=\text{singlet}\oplus\text{doublet}:\ \ \text{the singlet is the}\ \Sigma\ \text{part (}C_3\text{-invariant); the doublet is the}\ \hat E^{ij}\ \text{part (}C_3\text{-cyclically permuted).}$$
+Concretely: the diagonal triple $[J_i,K_i]/i=\Sigma-E^{ii}=\tfrac23\Sigma-\hat E^{ii}$ splits into the fixed direction $\Sigma$ and the zero-sum plane of $\bigl(\hat E^{11},\hat E^{22},\hat E^{33}\bigr)$ — $\sum_i\hat E^{ii}=0$ — on which the cyclic shift $P$ acts with minimal polynomial $x^2+x+1$, irreducible over $\mathbb Q$: the doublet.
+$$(2)\quad\text{Democratic diagonalization: any}\ C_3\text{-covariant Hermitian operator on the triplet —}\ [H,P]=0,\ H^\dagger=H,\ P\ \text{the cyclic shift — has the form}$$
+$$H=a\,I_3+z\,P+\bar z\,P^{T}\qquad(a\in\mathbb R,\ z\in\mathbb C),$$
+$$\operatorname{spec}H:\quad\lambda_i=A+B\cos\bigl(\theta+2\pi i/3\bigr),\qquad i=0,1,2,\qquad A=a,\ \ B=2|z|,\ \ \theta=\arg z,$$
+equivalently the depressed cubic $\ (\lambda-A)^3-\tfrac{3B^2}{4}(\lambda-A)-\tfrac{B^3}{4}\cos3\theta=0$.
+$$(3)\quad\text{Normalization:}\ \ A=1\ \ \Bigl[\sum_i\lambda_i=3A=3=\dim F_{J^\pm}\Bigr];\qquad B=\sqrt2\ \ \Bigl[\sum_i(\lambda_i-A)^2=B^2\sum_i\cos^2(\theta+2\pi i/3)=B^2\cdot\tfrac32=3\implies B^2=2\Bigr];$$
+$$\theta=\delta:\ \text{the mixing angle, determined in FT.112.}$$
+
+**Req.** CT1.2, CT1.8, CT0.12 (Part 1); FT.109; standard $C_3$ representation theory (commutant of the cyclic shift, Fourier diagonalization, triple-angle identity) [math]; exact $\mathbb Q(i)$ conjugation, exact symbolic identities in $\mathbb Q(\sqrt3)[c,s]/(c^2{+}s^2{-}1)$, exact $\mathbb Q$ linear algebra, Zariski-dense rational sampling of the charpoly identity [machine: `checks/verify_H_koide_channel.py` §D].
+
+**Pf.**
+$$
+(1):\ U^3=I_4,\ UU^\dagger=I_4,\ \det u=1\ [\text{exact over}\ \mathbb Q(i);\ \text{machine}];\qquad UJ_iU^\dagger=J_{i+1},\ UK_iU^\dagger=K_{i+1}\ [\mathrm{CT1.8}\ \text{exponentiated};\ \text{machine}]
+$$
+$$
+U\Sigma U^\dagger=\Sigma;\qquad UE^{ii}U^\dagger=E^{i+1,i+1};\qquad U\hat E^{ii}U^\dagger=\hat E^{i+1,i+1};\qquad U\hat E^{12}U^\dagger=\hat E^{23},\ U\hat E^{23}U^\dagger=\hat E^{13},\ U\hat E^{13}U^\dagger=\hat E^{12}\ [\text{machine}]
+$$
+$$
+\bigl[J_i,K_j\bigr]\ \text{equivariance}:\ U\,[J_i,K_j]\,U^\dagger=[J_{i+1},K_{j+1}]\ \ \forall(i,j)\ [\text{machine, all 9 pairs}]
+$$
+$$
+\sum_i\hat E^{ii}=\sum_iE^{ii}-3\cdot\tfrac13\Sigma=\Sigma-\Sigma=0\ [\mathrm{FT.109}(2);\ \mathrm{CT1.2}\ \text{traceless split}]
+$$
+$$
+P^3=I_3,\ \operatorname{tr}P=0;\qquad P|_{\{\sum x_i=0\}}:\ \text{charpoly}=\text{minimal polynomial}=x^2+x+1\ (P|_{\text{plane}}\ne I);\qquad x^2+x+1\ \text{has no rational root}\ (\pm1\mapsto3\ne0)\implies\text{irreducible over}\ \mathbb Q:\ \text{doublet}\ [\text{machine}]
+$$
+$$
+(2):\ [X,P]=0\iff X\ \text{circulant}:\ \dim_{\mathbb Q}\operatorname{comm}(P)=3,\ \text{basis}\ \{I_3,P,P^2\}\ [\text{exact}\ \mathbb Q\ \text{elimination};\ \text{machine}]
+$$
+$$
+H=H^\dagger\in\operatorname{comm}(P)\iff H=aI_3+zP+\bar zP^T;\qquad\operatorname{charpoly}H=(x-a)^3-3|z|^2(x-a)-2\operatorname{Re}(z^3)\ [\text{machine at 24 exact rational points}\ (a,\operatorname{Re}z,\operatorname{Im}z):\ \text{Zariski-dense}\implies\text{identical}]
+$$
+$$
+A=a,\ B=2|z|,\ \cos3\theta=\operatorname{Re}(z^3)/|z|^3:\quad\tfrac{3B^2}4=3|z|^2,\quad\tfrac{B^3}4\cos3\theta=2\operatorname{Re}(z^3)\implies\text{depressed cubic form}\ \checkmark
+$$
+$$
+\prod_{i=0}^{2}\bigl(x-A-B\cos(\theta+\tfrac{2\pi i}3)\bigr)=(x-A)^3-\tfrac{3B^2}4(x-A)-\tfrac{B^3}4\cos3\theta\ [\text{exact in}\ \mathbb Q(\sqrt3)[A,B,x,c,s]/(c^2{+}s^2{-}1);\ \text{machine}];\qquad\cos3\theta=4c^3-3c\ [\text{same ring}]
+$$
+$$
+\text{covariance witness}:\ M(\theta):=A\,I_3+B\bigl(\cos\theta\,D_c-\sin\theta\,D_s\bigr),\ \ D_c=\operatorname{diag}\bigl(1,-\tfrac12,-\tfrac12\bigr),\ \ D_s=\operatorname{diag}\bigl(0,\tfrac{\sqrt3}2,-\tfrac{\sqrt3}2\bigr):
+$$
+$$
+\operatorname{spec}M(\theta)=\bigl\{A+B\cos(\theta+\tfrac{2\pi i}3)\bigr\}_{i=0,1,2};\qquad M\bigl(\theta+\tfrac{2\pi}3\bigr)=P^{T}M(\theta)\,P\ [\text{entry-wise exact in the same ring};\ \text{machine}]
+$$
+$$
+(3):\ \sum_i\cos(\theta+\tfrac{2\pi i}3)=0,\quad\sum_i\cos^2(\theta+\tfrac{2\pi i}3)=\tfrac32\ \ \forall\theta\ [\text{exact identities in}\ \mathbb Q(\sqrt3)[c,s]/(c^2{+}s^2{-}1):\ \text{coefficients}\ (1,-\tfrac12,-\tfrac12),\ (0,\tfrac{\sqrt3}2,-\tfrac{\sqrt3}2);\ \text{machine}]
+$$
+$$
+\sum_i\lambda_i=3A=3\implies A=1\ [\mathrm{CT0.12}:\ \dim F_{J^\pm}=3];\qquad\sum_i(\lambda_i-A)^2=B^2\cdot\tfrac32=3\implies B^2=2,\ B=\sqrt2\ [(\sqrt2)^2=2\ \text{exact in}\ \mathbb Q(\sqrt2);\ \text{machine}].\ \blacksquare
+$$
+
+**Rmk.** This is representation theory of $C_3$, not the Koide ansatz. Any $C_3$-covariant triplet operator has this spectrum. The specific form $r_i=1+\sqrt2\cos(\delta+2\pi i/3)$ follows from the normalization conditions alone.
+
+**Phys.** A $120^\circ$ rotation about the diagonal axis cycles the three seal directions, and the rotation is inner in the pair algebra: it conjugates each seal generator into the next. The mixed bilinear therefore splits into one rotation-invariant piece — the exchange scalar — and one irreducible rotating plane, the traceless diagonal tensors. Requiring the triplet's trace and its variance to each equal the seal dimension $3$ fixes the spectrum's offset and spread to $1$ and $\sqrt2$; the only remaining content is the phase $\delta$.
+
+---
+
+---
+
+### FT.112 — The mixing angle
+
+**Thm.** The mixing angle of the $C_3$-covariant seal bilinear is the exact rational
+$$\delta=\frac{\sum_i[J_i,K_i]\big|_\Sigma}{\dim F_{J^\pm}\cdot\operatorname{tr}T(1)}=\frac{2}{3\cdot3}=\frac29,$$
+where the numerator $2$ is the scalar coefficient of the diagonal seal commutator [FT.109(3): $\sum_i[J_i,K_i]=2i\Sigma$] and the denominator $9$ is the bound-chain arena dimension [FT.110(1)].
+
+**Rmk (cross-check, not a derivation of equality).** The same rational $2/3$ appears in three independent frozen results: $(p^*_\infty)^2=2/3$ [FT.70(3): the polygon phase boundary squared, exact in $\mathbb Z[\sqrt6]$]; $\delta_v/\pi=2/3$ [FT.63(4): the octahedron vertex defect, exact in $\pi$-units]; $f_{\mathrm{charge}}(\delta h=3)=2/3$ [FT.14: the $3$-chain charge fraction, exact rational]. The mixing angle is $\delta=2/9=(2/3)/3$: the polygon phase boundary divided by the number of generations (the seal dimension). Recorded as a cross-check — three independent appearances of the same rational — not as a derivation of their equality.
+
+**Req.** FT.109, FT.110; FT.14 (Tiers F.1–F.11), FT.63(4) (Tiers F.20–F.22), FT.70(3) (Tiers F.23–F.25) for the cross-check row; exact rational arithmetic, exact $\mathbb Z[\sqrt6]$ arithmetic [math; machine: `checks/verify_H_koide_channel.py` §E].
+
+**Pf.**
+$$
+\delta=\frac{2}{\dim F_{J^\pm}\cdot\operatorname{tr}T(1)}=\frac{2}{3\cdot3}=\frac29\ [\mathrm{FT.109}(3);\ \mathrm{FT.110};\ \text{exact Fractions; machine §E}]
+$$
+$$
+\text{cross-check rows}:\quad\bigl(\tfrac{\sqrt6}3\bigr)^2=\tfrac23\ [\text{exact in}\ \mathbb Z[\sqrt6];\ \mathrm{FT.70}(3)];\qquad\frac{\delta_v}\pi=2-\frac{d(L-2)}{L}\Big|_{d=4,\,L=3}=2-\tfrac43=\tfrac23\ [\mathrm{FT.63}(4);\ \text{exact integers}]
+$$
+$$
+f_{\mathrm{charge}}(\delta h=3)=\frac{N_{\mathrm{charge}}}{N_{\mathrm{visible}}}=\frac23\ [\mathrm{FT.14}\ \text{table row}\ \delta h=3];\qquad\frac{2/3}{3}=\frac29\ [\text{exact}].\ \blacksquare
+$$
+
+**Phys.** One exact integer from the seal algebra over one exact integer from the arena: the phase is $2/9$, a dimensionless rational with no adjustable content — the bilinear's coefficient divided by the arena's dimension. Its relation to the three independent $2/3$ results is a coincidence of rationals recorded for the ledger; nothing is calibrated to anything.
+
+---
+
+---
+
+### FT.113 — The bilinear spectrum and the mass-squared ratios
+
+**Thm.** With $\delta=2/9$ [FT.112] and $A=1$, $B=\sqrt2$ [FT.111(3)], the three eigenvalues of the $C_3$-covariant bilinear are
+$$r_i=1+\sqrt2\cos\Bigl(\frac29+\frac{2\pi i}{3}\Bigr),\qquad i=0,1,2,$$
+with exact radical-trigonometric closed forms ($c=\cos\tfrac29$, $s=\sin\tfrac29$):
+$$r_0=1+\sqrt2\,c;\qquad r_1=1-\frac{\sqrt2\,c+\sqrt6\,s}{2};\qquad r_2=1-\frac{\sqrt2\,c-\sqrt6\,s}{2};$$
+$$\sum_{i}r_i=3;\qquad\sum_{i<j}r_ir_j=\frac32;\qquad 2(r-1)^3-3(r-1)-\sqrt2\cos\frac23=0\ \ \text{for each}\ r=r_i\ \ [3\delta=\tfrac23].$$
+The mass-squared ratios are $r_i^2$. Ordered by magnitude — $r_1^2<r_2^2<r_0^2$, enclosure-proven —
+$$m_1^2:m_2^2:m_3^2=r_{\min}^2:r_{\mathrm{mid}}^2:r_{\max}^2=r_1^2:r_2^2:r_0^2=1:\frac{r_2^2}{r_1^2}:\frac{r_0^2}{r_1^2},$$
+$$\frac{r_2^2}{r_1^2}=206.770315972729\ldots,\qquad\frac{r_0^2}{r_1^2}=3477.472837104\ldots\qquad[\text{rational trigonometric enclosures, width}<2^{-50};\ \text{machine}].$$
+The overall scale $\mu$ in $m_i^2=\mu\,r_i^2$ is undeclared (P4-class free internal parameter): the ratios are this tag's only content. The $m^2$ vocabulary is the corpus's own inertial read [L3(4), L4: dimensionless entropy deficit in nats; $\neg$a particle identification].
+
+**Req.** FT.111, FT.112; L3, L4 (**B**, the $m^2$ read vocabulary); P4 (**A**, the free-scale clause); exact rational trigonometric enclosures (Taylor remainder bounds), exact integer square-root enclosures (Newton with certificates), monotone rational interval arithmetic [math; machine: `checks/verify_H_koide_channel.py` §F].
+
+**Pf.**
+$$
+r_i=A+B\cos(\delta+\tfrac{2\pi i}3)\ \text{at}\ A=1,\ B=\sqrt2,\ \delta=\tfrac29\ [\mathrm{FT.111}(3),\ \mathrm{FT.112}]
+$$
+$$
+\cos\bigl(\tfrac29+\tfrac{2\pi}3\bigr)=-\tfrac c2-\tfrac{\sqrt3}2s,\qquad\cos\bigl(\tfrac29+\tfrac{4\pi}3\bigr)=-\tfrac c2+\tfrac{\sqrt3}2s\ [\text{addition formulas}];\qquad\sqrt2\cdot\tfrac{\sqrt3}2=\tfrac{\sqrt6}2
+$$
+$$
+\sum_ir_i=3+\sqrt2\sum_i\cos(\delta+\tfrac{2\pi i}3)=3\ [\mathrm{FT.111}(3)\ \text{sum identity}];\qquad\text{Vieta pair sum and depressed cubic at}\ B^2=2,\ \cos3\delta=\cos\tfrac23\ [\mathrm{FT.111}(2)\ \text{charpoly identity}]
+$$
+$$
+c,s\ \text{enclosed by Taylor partial sums with exact rational remainder bounds (widths}<2^{-80}\text{)};\qquad\sqrt2,\sqrt6,\cos\tfrac23\ \text{enclosed exactly (integer certificates)}
+$$
+$$
+r_1^2<r_2^2<r_0^2\ [\text{disjoint enclosures}];\qquad\text{ratios by monotone interval division, width}<2^{-50}\ [\text{machine §F}];\qquad 0\in 2y_i^3-3y_i-\sqrt2\cos\tfrac23\ \text{enclosure for each}\ y_i=r_i-1\ [\text{machine}].\ \blacksquare
+$$
+
+**Phys.** The spectrum carries one large, one middle, and one nearly-vanished eigenvalue: a hierarchy produced by a rational phase inside a cosine, with closed forms in $\sqrt2$, $\sqrt6$, and $\cos\tfrac29$ alone. The proximity of the two ratios to the supplied external hierarchy is quantified in FT.114 and used nowhere else. Every quantity here is dimensionless; the scale $\mu$ converting ratios into a read is a free internal parameter (P4), and the $m^2$ name is the entropy-deficit read of L3(4)/L4 — never a particle.
+
+---
+
+---
+
+
+## Tier F.38 — The Colour Channel: The $\varepsilon$-Selected $C_3$, Confinement Blindness, and the Triplet-Attached Mixing Angle
+
+### FT.116 — The relabelling lattice, the two-level obstruction, and the $\varepsilon$-selection of $C_3$
+
+**Thm.** On the slot carrier $\mathcal H^{(3)}_{\mathrm{slot}}\cong\mathbb C^3$ [CT3.2] with the classical relabelling embedding $P_\pi|i\rangle=|\pi(i)\rangle$, $(P_\pi)^i{}_j=\delta^i_{\pi(j)}$, $S_3\hookrightarrow U(3)$ [CT3.3]:
+$$(1)\quad S_3\ \text{has exactly six subgroups, of orders}\ (1,2,2,2,3,6):\ \{e\},\ \text{three}\ \mathbb Z_2=\langle\text{transposition}\rangle,\ A_3\cong C_3,\ S_3\qquad[\text{machine: closure of all}\ 2^6\ \text{generator subsets}];$$
+$$(2)\quad\textbf{commutant dimensions}\ (\text{Hermitian real form}):\qquad\{e\}\mapsto9,\qquad\mathbb Z_2\mapsto5,\qquad C_3\mapsto3,\qquad S_3\mapsto2;$$
+$$(3)\quad C_3\text{-commutant}=\{aI_3+zP+z^{*}P^{T}:\ a\in\mathbb R,\ z\in\mathbb C\}\ (P=P_{(123)}),\qquad S_3\text{-commutant}=\operatorname{span}\{I_3,J\}\ (J=\text{all-ones});$$
+$$(4)\quad\textbf{the two-level obstruction:}\ \ \operatorname{spec}(aI_3+bJ)=\{a+3b,\ a,\ a\}\ \text{exactly}\ \forall(a,b)\in\mathbb R^2\ (P_\pi\text{-covariance }\Rightarrow\text{ at most two distinct eigenvalues});$$
+$$(5)\quad\textbf{reflection rigidity:}\ \ THT=H\ \text{for a transposition}\ T\iff z\in\mathbb R\qquad[THT=aI_3+zP^{T}+z^{*}P:\ \text{conjugation by a transposition inverts the}\ 3\text{-cycle}];$$
+$$\operatorname{disc}=108\,(\operatorname{Im}z^3)^2=108\,(\operatorname{Im}z)^2\bigl(3(\operatorname{Re}z)^2-(\operatorname{Im}z)^2\bigr)\ \text{vanishes}\iff z^3\in\mathbb R\iff\arg z\in\tfrac\pi3\mathbb Z\qquad[\text{the degeneracy locus: three lines through the origin}];$$
+$$S_3\text{-covariance forces}\ z\in\mathbb R\ (\arg z\in\{0,\pi\})\subset\tfrac\pi3\mathbb Z\implies\text{every}\ S_3\text{-covariant circulant has a double root};\ \text{a three-line spectrum requires}\ \operatorname{Im}z^3\ne0,\ \text{i.e.}\ S_3\text{-covariance must be broken to the cyclic subgroup};$$
+$$(6)\quad\textbf{the}\ \varepsilon\textbf{-selection:}\ \ \varepsilon_{ijk}P^i{}_aP^j{}_bP^k{}_c=\det(P_\pi)\,\varepsilon_{abc}=\operatorname{sgn}(\pi)\,\varepsilon_{abc}\ \forall\pi\in S_3\ [\mathrm{CT3.15}\ \text{on permutation matrices}];\qquad\det P_\pi=\operatorname{sgn}(\pi);$$
+$$\operatorname{Stab}_{S_3}(\varepsilon)=\{\pi:\det P_\pi=1\}=A_3=C_3=S_3\cap SU(3);\qquad\text{the}\ \varepsilon\text{-preserving subgroups are exactly}\ \{e\}\subset A_3,\ \text{so}\ A_3\ \text{is the unique maximal one};$$
+$$(7)\quad\textbf{seal-side companion census:}\ \ \text{on the seal triplet,}\ T\cong A_4\ (|T|=12,\ T\subset SO(3))\ \text{has commutant}\ \mathbb R\cdot I_3\ (\text{full degeneracy});\ \ V_4\ \text{has commutant the diagonal matrices}\ (3\ \text{parameters, no cyclic relation});\ \ C_3\ \text{(the}\ 2\pi/3\ \text{rotation about}\ (1,1,1)\ [\mathrm{CT1.8}])\ \text{has commutant the circulants}\ (3\ \text{parameters, fixed democratic eigenvectors}).$$
+
+**Req.** CT3.1, CT3.2, CT3.3, CT3.15 (Part 2); D3.9 (Parts 1–2); CT1.8 (Part 1); FT.111 (**Tier F.37**, the $C_3$ democratic form and its normalization); subgroup-lattice closure, exact nullspace dimension over $\mathbb Q$, Leibniz determinant identity, charpoly of the circulant and of $aI_3+bJ$, discriminant of the depressed cubic [math; machine: `checks/verify_H_colour_channel.py` §A].
+
+**Pf.**
+$$
+(1):\ \text{closure of each of the}\ 2^6\ \text{generator subsets under}\ \pi\circ\rho\ \text{yields}\ 6\ \text{distinct subgroups; orders sorted}\ (1,2,2,2,3,6)\ [\text{machine}]
+$$
+$$
+(2),(3):\ \{X:[X,P_\pi]=0\ \forall\pi\in G\}\ \text{solved as an exact}\ 9\text{-unknown nullspace over}\ \mathbb Q\ \text{per subgroup};\ \dim=(9,5,3,2);\ \text{transpose-closed}\ \forall G\ [\text{machine}]
+$$
+$$
+C_3:\ \text{basis}\ \{I_3,P,P^2\}\ \text{(real form}\ \{I_3,\ P+P^T,\ P-P^T\}\ \leftrightarrow\ \{a,\ 2\operatorname{Re}z,\ -2\operatorname{Im}z\});\qquad S_3:\ \text{nullspace basis}\ \{I_3,J\}\ [\text{machine: exact rank}\ 2]
+$$
+$$
+(4):\ \operatorname{charpoly}(aI_3+bJ)=(x-a-3b)(x-a)^2=x^3-(3a+3b)x^2+(3a^2+6ab)x-(a^3+3a^2b)\ \text{at}\ 3\ \text{exact rational points}\ (a,b)\ [\text{machine}]
+$$
+$$
+(5):\ THT=aI_3+zP^{T}+z^{*}P\ (TPT=P^{T}:\ \text{a transposition inverts the}\ 3\text{-cycle});\qquad THT=H\iff z=z^{*}\iff\operatorname{Im}z=0
+$$
+$$
+\operatorname{charpoly}(aI_3+zP+z^{*}P^{T})=(x-a)^3-3|z|^2(x-a)-2\operatorname{Re}(z^3)\ [\text{machine at}\ 15\ \text{exact rational points}];\qquad\operatorname{disc}=-4(-3|z|^2)^3-27(-2\operatorname{Re}z^3)^2=108\bigl(|z|^6-(\operatorname{Re}z^3)^2\bigr)=108(\operatorname{Im}z^3)^2\ [\text{exact}]
+$$
+$$
+\operatorname{Im}z^3=3(\operatorname{Re}z)^2\operatorname{Im}z-(\operatorname{Im}z)^3=\operatorname{Im}z\,\bigl(3(\operatorname{Re}z)^2-(\operatorname{Im}z)^2\bigr)\ [\text{polynomial identity at exact rational points, Zariski-dense};\ \text{machine}]
+$$
+$$
+\operatorname{disc}=0\iff(\operatorname{Im}z^3)^2=0\iff\operatorname{Im}z=0\ \vee\ (\operatorname{Im}z)^2=3(\operatorname{Re}z)^2\iff z^3\in\mathbb R\iff\arg z\in\tfrac\pi3\mathbb Z;\qquad z\in\mathbb R\implies\operatorname{disc}=0\implies\text{a double root}\ [\text{machine at every real-}z\ \text{point}]
+$$
+$$
+(6):\ \varepsilon_{ijk}P^i{}_aP^j{}_bP^k{}_c=\operatorname{sgn}(\pi)\varepsilon_{abc}\ \text{entrywise on all}\ 27\ \text{triples}\times6\ \text{relabellings};\qquad\det P_\pi=\operatorname{sgn}(\pi)\ [\text{exact}\ \mathbb Q\ \text{expansion};\ \text{machine}]
+$$
+$$
+\pi\in\operatorname{Stab}(\varepsilon)\iff\operatorname{sgn}(\pi)=1\iff\pi\in A_3;\qquad\text{lattice scan}: \{g\le S_3:g\subseteq A_3\}=\{\{e\},A_3\}\ [\text{machine}];\qquad A_3=S_3\cap SU(3)\ [\det=1]
+$$
+$$
+(7):\ T=\langle P_{(123)},\ \operatorname{diag}(1,-1,-1),\ \operatorname{diag}(-1,1,-1),\ \operatorname{diag}(-1,-1,1)\rangle:\ |T|=12,\ \det=1\ \forall T\ [\text{machine closure}];\qquad\dim\operatorname{comm}(T)=1,\ \dim\operatorname{comm}(V_4)=3,\ \dim\operatorname{comm}(C_3)=3\ [\text{exact nullspaces};\ \text{machine}].\ \blacksquare
+$$
+
+**Phys.** Ask the colour sector which of its own symmetries may carry a mass family, and the answer is forced twice over. The full relabelling group is too symmetric: an $S_3$-covariant operator on three slots has a doubly-degenerate spectrum, identically, for every choice of its two parameters, and any operator invariant under a single transposition has a double root — a three-line family cannot be $S_3$-covariant, and the phase $\arg z$ is precisely the datum that breaks it. Too little symmetry is equally useless: with no covariance at all nine parameters are free and nothing is predicted. The cyclic subgroup is the unique intermediate, and it is not selected by hand — the baryon seal $\varepsilon_{ijk}$, the tensor that makes three triplets into an observable [CT3.15, CT3.18], is preserved exactly by the even relabellings, so $A_3\cong C_3=S_3\cap SU(3)$ is the largest relabelling symmetry a sealed object can have. The same $C_3$ that FT.111 found inside the seal algebra is therefore also the maximal covariance group of the colour algebra, reached from the opposite side: there by the $2\pi/3$ rotation about $(1,1,1)$, here by the Levi-Civita tensor. The companion census closes the search on the seal side as well — the tetrahedral group is too big (its commutant is the scalars, so every $T$-covariant operator is fully degenerate) and the Klein group is the wrong shape (diagonal commutant, no cyclic relation among eigenvalues).
+
+---
+
+---
+
+### FT.117 — Confinement blindness: the one-body no-go on colour-sealed singlets
+
+**Thm.** Let $H\in\mathfrak H(\mathbb C^3)$ be any Hermitian slot operator, and let $\varepsilon_{ijk}$, $\delta^i{}_j$ be the two sealing tensors [CT3.17]:
+$$(1)\quad\textbf{baryon singlet:}\qquad\bigl(H\otimes I_3\otimes I_3+I_3\otimes H\otimes I_3+I_3\otimes I_3\otimes H\bigr)_{(ijk),(lmn)}\,\varepsilon_{lmn}=\mathfrak T(H)\,\varepsilon_{ijk};$$
+$$\text{equivalently}\quad\sum_l\bigl(H_{il}\varepsilon_{ljk}+H_{jl}\varepsilon_{ilk}+H_{kl}\varepsilon_{ijl}\bigr)=\mathfrak T(H)\,\varepsilon_{ijk}\qquad[\text{all}\ 27\ \text{components, exact};\ \mathrm{CT3.16}\ \text{at finite generators}];$$
+$$(2)\quad\textbf{covariant specialization:}\ \ H=aI_3+zP+z^{*}P^{T}\ [\mathrm{FT.116}(3)]:\qquad\mathfrak T(H)=3a\implies\text{the one-body baryon eigenvalue is}\ 3a,\ \textbf{independent of}\ (|z|,\arg z);$$
+$$\text{hence the}\ C_3\text{-doublet content}\ B=2|z|,\ \theta=\arg z\ \text{— the entire family-splitting datum of FT.111(2)}\text{— is annihilated on the baryon singlet};$$
+$$(3)\quad\textbf{meson singlet:}\qquad\bigl(H\otimes I_3-I_3\otimes H^{T}\bigr)\,\delta=H\cdot I_3-I_3\cdot H=0\qquad\forall H\ (\textbf{including the trace part});$$
+$$(4)\quad\textbf{visibility locus:}\ \ [H,E_{12}]\ne0\ \text{for}\ H=0\cdot I_3+(1+i)P+(1-i)P^{T}:\ \text{the same covariant data are nonzero on the adjoint channel — but the adjoint is not a sealed singlet, so it carries no pole}\ [\mathrm{CT3.18};\ \mathrm{CT3.22}:\ \text{isolated colour has norm}\ 0];$$
+$$(5)\quad\textbf{invariant census:}\qquad\dim\bigl(\mathbb C^3\otimes\mathbb C^3\otimes\mathbb C^3\bigr)^{\mathfrak{sl}(3)}=1\ \text{spanned by}\ \varepsilon_{ijk};\qquad\dim\bigl(\mathbb C^3\otimes\bar{\mathbb C}^3\bigr)^{\mathfrak{sl}(3)}=1\ \text{spanned by}\ \delta^i{}_j;$$
+$$(6)\quad\textbf{Casimir spectrum:}\ \ C:=\tfrac12\bigl(\sum_{ij}\rho(E_{ij})\rho(E_{ji})-\tfrac13\rho(\textstyle\sum_iE_{ii})^2\bigr)\ \text{on}\ \mathbb C^3\otimes\mathbb C^3\otimes\mathbb C^3\ \text{satisfies}\ C(C-3)(C-6)=0,$$
+$$\operatorname{spec}C=\{0,3,6\}\ \text{with multiplicities}\ (1,16,10)\ \text{from}\ (\operatorname{tr}C,\operatorname{tr}C^2)=(108,504):\qquad27=1\oplus(8\oplus8)\oplus10;\qquad C\big|_{\mathbb C^3}=\tfrac43\ (\text{normalization pin});$$
+$$(7)\quad\textbf{verdict (obstruction, derived):}\ \ \text{no colour-sealed object — baryon or meson — can carry a one-body}\ C_3\text{-covariant mass splitting: the baryon reads only the singlet coefficient}\ 3a,\ \text{the meson reads nothing.}\ \text{The three-line spectrum of the channel is readable only on the triplet-attached chain itself}\ [\mathrm{D3.8}],\ \text{whose colour factor is present but unsealed.}$$
+
+**Req.** CT3.15, CT3.16, CT3.17, CT3.18, CT3.22 (Part 2); D3.8, D3.9 (Parts 1–2); FT.116(3) (this tier); FT.111(2) (**Tier F.37**, the $(B,\theta)$ datum); $\mathfrak{sl}(3)$ invariant theory, exact nullspace and trace arithmetic, quadratic-Casimir spectral decomposition [math; machine: `checks/verify_H_colour_channel.py` §B].
+
+**Pf.**
+$$
+(1):\ \text{entrywise over}\ \mathbb Q(i)\ \text{on all}\ 27\ \text{components for}\ 15\ \text{exact covariant witnesses and}\ 8\ \text{deterministic Hermitian witnesses};\ \text{zero residual}\ [\text{machine}]
+$$
+$$
+\text{structural reason}:\ \varepsilon\ \text{spans}\ \wedge^3\mathbb C^3,\ \text{the determinant representation};\ \mathfrak{sl}(3)\ \text{acts on it by}\ \mathfrak T(X),\ \text{so the one-body sum acts by}\ \mathfrak T(H)\ \text{and the traceless part annihilates}\ [\mathrm{CT3.7}:\ \mathfrak T(T_a)=0;\ \mathrm{CT3.16}]
+$$
+$$
+(2):\ \mathfrak T(aI_3+zP+z^{*}P^{T})=3a+z\,\mathfrak T(P)+z^{*}\,\mathfrak T(P^{T})=3a\qquad[\mathfrak T(P)=\operatorname{tr}P_{(123)}=0;\ \text{machine}]
+$$
+$$
+(3):\ \delta=I_3\ \text{as a matrix};\qquad(H\otimes I-I\otimes H^{T})\,\mathrm{vec}(I)=\mathrm{vec}(H\cdot I-I\cdot H)=\mathrm{vec}(H-H)=0\ [\text{machine, all witnesses}]
+$$
+$$
+(4):\ [H,E_{12}]\ \text{computed entrywise for}\ H=(1+i)P+(1-i)P^{T}:\ \text{nonzero}\ [\text{machine}];\qquad\text{adjoint}\notin\operatorname{Im}\mathcal P_M^{(3)}\ [\mathrm{CT3.18}];\ \text{norm}\ 0\ [\mathrm{CT3.22};\ \mathrm{CT2.8}]
+$$
+$$
+(5):\ \rho_3(X)=X\otimes I\otimes I+I\otimes X\otimes I+I\otimes I\otimes X,\ \ \rho_M(X)=X\otimes I-I\otimes X^{T}\ \text{on the}\ 8\ \text{rational}\ \mathfrak{sl}(3)\ \text{generators}\ \{E_{ij}\}_{i\ne j}\cup\{E_{11}-E_{22},E_{22}-E_{33}\}
+$$
+$$
+27-\operatorname{rk}\rho_3=1,\quad9-\operatorname{rk}\rho_M=1\ [\text{exact}\ \mathbb Q\ \text{ranks};\ \text{machine}];\qquad\text{null vectors proportional to}\ \varepsilon_{ijk},\ \delta^i{}_j\ \text{componentwise}\ [\text{machine}]
+$$
+$$
+(6):\ C(C-3I_{27})(C-6I_{27})=0\ \text{entrywise exact}\ [\text{machine}];\qquad m_6=\tfrac{\operatorname{tr}C^2-3\operatorname{tr}C}{18}=10,\quad m_3=\tfrac{\operatorname{tr}C-6m_6}{3}=16,\quad m_0=27-m_3-m_6=1\ [\text{exact Fractions}]
+$$
+$$
+C\big|_{\mathbb C^3}=\tfrac12(3I_3-\tfrac13I_3)=\tfrac43I_3\ [\text{normalization pin};\ \text{machine}].\qquad(7):\ \text{conjunction of}\ (2),(3),(4)\ \text{with}\ \mathrm{CT3.18}/\mathrm{CT3.22}.\ \blacksquare
+$$
+
+**Phys.** Confinement does more than hide colour; it erases the very datum a family needs. A sealed baryon sees the sum of the three slot operators, and that sum is the trace — one number, the singlet coefficient — with the phase and the spread identically gone. A sealed meson sees the difference, which vanishes outright, trace included. The only place the cyclic data survive is the adjoint channel, and the adjoint is precisely what the mask refuses a pole. So the hadron-level branch of the question ledger is closed not by a choice of reading but by a theorem about the two invariant tensors: baryons and mesons cannot be the family that falls out of a one-body $C_3$ mechanism. What survives is the unsealed object — the chain with its triplet attachment — and that is where the arena count of FT.118 is performed. The decomposition $27=1\oplus8\oplus8\oplus10$ records the same fact from the representation side: a single singlet line in the three-triple product, a single singlet line in the triplet-antitriplet product, and everything else confined.
+
+---
+
+---
+
+### Def-H.42 — The colour-dressed arena
+
+**Def.** A triplet-attached bound chain [D3.8] carries, simultaneously and independently: the seal triplet at its termini [CT0.12, CT0.7(4)], the polygonal transfer structure along its length [FT.68(2)], and the colour slot at its attachment [CT3.2: $\mathbb C^3$]. The **colour-dressed arena** is their minimal combined counting space:
+$$
+\mathcal H_c^{(q)}\ :=\ \mathcal H_c\otimes\mathbb C^3_{\mathrm{slot}}\qquad[\mathrm{Def\text{-}H.41}],\qquad
+\dim_{\mathrm{eff}}\mathcal H_c^{(q)}=3\times3\times3=27\ \ [\mathrm{FT.118}(2)],
+$$
+entering exactly once — as the denominator of the triplet-attached mixing angle [FT.119: $\delta_q=\tfrac2{27}$ with FT.118(4)'s spectator numerator $2$]. Singlet-sealed chains keep Def-H.41's $9$: the invariant lines of a sealed object are $1$-dimensional [FT.117(5)], so its colour factor is $1$.
+**Species and bars.** As Def-H.41: a counting space — no inner product, no dynamics, no state, no Hamiltonian; dimension $\neg$a state count; the overall scale $\mu$ undeclared (P4-class, Cal-F); external calibration barred [P1, P5; FT.120 — forward pointer; Census row]; the adjoint-dressed numerator $8/3$ [FT.118(6)] and the alternative table rows [FT.119(7)] are logged alternatives, $\neg$adopted; particle identification barred.
+**Locus remark (structural).** Colour sits in an orthogonal stack block of the force arena [FT.93(4); CT0.12 Rmk: $\mathbb C^4\otimes\mathbb C^3$ is not a corpus construction], and EW.32's seed is colour-neutral by theorem — this definition counts D3.8's attachment choices in the chain's own bookkeeping, $\neg$a state-space composition of the force arena. The derived content compatible with both records is FT.118(4)'s spectator dressing $\sum_i[J_i\otimes I_3,\,K_i\otimes I_3]=2i\,\Sigma\otimes I_3$.
+
+---
+
+### FT.118 — The colour-dressed arena and the spectator numerator
+
+**Thm.** With the transfer rule $T(1)[s][s']=[\,|s|+|s'|\le3\,]$, $s,s'\in\{0,1\}^2$ [FT.68(2)], re-derived at the point of use:
+$$(1)\quad\operatorname{tr}T(1)=3\qquad[\text{the single excluded diagonal pair is}\ (|s|,|s'|)=(2,2)];\qquad\operatorname{charpoly}T(1)=x^4-3x^3-3x^2=x^2\bigl(x^2-3x-3\bigr)\ [\mathrm{FT.68}(2);\ \text{machine: Faddeev–LeVerrier over}\ \mathbb Z];$$
+$$(2)\quad\textbf{the colour-dressed arena:}\qquad\dim_{\mathrm{eff}}\mathcal H_c^{(q)}=\dim F_{J^\pm}\times\operatorname{tr}T(1)\times N_{\text{colour}}=3\times3\times3=27,$$
+$$\text{the third factor being}\ N_{\text{colour}}=3=\log_2C_{\mathrm{cap}}-1=\log_216-1\ [\mathrm{CT3.20};\ \mathrm{CT0.5},\ \mathrm{CT0.6},\ \mathrm{CT0.11}];\qquad\text{scope: triplet-attached chains}\ [\mathrm{D3.8}];$$
+$$(3)\quad\textbf{sealed attachments do not dress:}\qquad\text{colour factor of a sealed object}=1\ [\mathrm{FT.117}(5):\ \text{the invariant lines are}\ 1\text{-dimensional}]\implies\dim_{\mathrm{eff}}\mathcal H_c^{\mathrm{sealed}}=3\times3\times1=9\ [\mathrm{FT.110}(1)\ \text{recovered}];$$
+$$(4)\quad\textbf{the spectator numerator:}\qquad\sum_{i=1}^{3}\bigl[J_i\otimes I_3,\ K_i\otimes I_3\bigr]=\Bigl(\sum_i[J_i,K_i]\Bigr)\otimes I_3=2i\,\Sigma\otimes I_3\qquad[12\times12\ \text{entrywise exact over}\ \mathbb Q(i);\ \mathrm{FT.109}\ \text{re-derived}];$$
+$$(5)\quad\text{the diagonal coefficient of the colour-dressed seal commutator is therefore exactly}\ 2\ \text{— unchanged from}\ \mathrm{FT.109}(3):\ \text{colour is a spectator of the seal algebra}\ [\mathrm{EW.32}:\ T_a\mathsf v=0;\ \mathrm{CT0.12}\ \mathrm{Rmk}:\ \text{colour sits in an orthogonal stack block}];$$
+$$(6)\quad\textbf{adjoint dressing (computed, NOT adopted):}\qquad\text{with}\ X^2=\textstyle\sum_aT_aT_a=C_FI_3=\tfrac43I_3\ [\text{machine: from the rational}\ E_{ij}\ \text{basis}]\ \text{and}\ [A\otimes X,\,B\otimes X]=[A,B]\otimes X^2,$$
+$$\sum_i\bigl[J_i\otimes X,\ K_i\otimes X\bigr]=2i\,\Sigma\otimes X^2=\tfrac83\,i\,\Sigma\otimes I_3\implies\text{numerator}\ 2C_F=\tfrac83:\ \text{a different rational, and no corpus tag supplies the coupling};$$
+$$(7)\quad\textbf{the two candidate mixing angles:}\qquad\delta_q=\frac{2}{27}\ \ (\text{spectator, adopted in FT.119});\qquad\frac{2C_F}{27}=\frac{8/3}{27}=\frac8{81}\ \ (\text{adjoint-dressed, logged not adopted}).$$
+
+**Rmk (interface definition Def-H.42).** Clause (2)'s tensor product is the same species of interface definition as Def-H.41, with one new factor: a triplet-attached chain carries, simultaneously and independently, a seal triplet at its termini [CT0.12, CT0.7(4)], a polygonal transfer structure along its length [FT.68(2)], and a colour slot at its attachment [CT3.2, D3.8]; $\mathcal H_c^{(q)}$ is their minimal combined counting space. It is an arena — no inner product, no dynamics, no state, no Hamiltonian — and the count $27$ enters the tier exactly once, as the denominator of FT.119's mixing angle. **Tension logged:** FT.93(4) records colour as an orthogonal stack block (a $\oplus$-summand of $\mathcal K_\Sigma$, not a tensor factor [CT0.12 Rmk, CT0.14]) and the seed as colour-neutral by theorem [EW.32], so "$\mathbb C^4\otimes\mathbb C^3$" is not a corpus construction of the force arena; the declared factor counts D3.8's attachment choices in the chain's own bookkeeping, and clause (4)'s spectator dressing is the derived content compatible with both records. Clause (6) is recorded so that any future use of the adjoint-dressed numerator $8/3$ is a adoption rather than a silent one; the spectator form (4)–(5) is the derived content and needs no declaration beyond Def-H.42.
+
+**Req.** CT3.2, CT3.20 (Part 2); CT0.5, CT0.6, CT0.11, CT0.12, CT0.14, CT0.7(4) (Part 1); D3.8 (Parts 1–2); EW.32 (Part 2); FT.68(2) (Tiers F.23–F.25); FT.93(4) (Tiers F.31–F.34, the tension note); FT.109, FT.110 (Tier F.37); FT.117(5) (this tier); Vieta coefficient read, exact integer characteristic polynomial, exact $\mathbb Q(i)$ Kronecker arithmetic, quadratic-Casimir normalization [math; machine: `checks/verify_H_colour_channel.py` §C].
+
+**Pf.**
+$$
+(1):\ T(1)=\mathbb 1_{4\times4}-[\,\cdot\,]_{(2,2)}\ \text{on the diagonal}:\ \operatorname{tr}T(1)=4-1=3\ [\text{exact integers};\ \text{machine}]
+$$
+$$
+\operatorname{charpoly}T(1)=[1,-3,-3,0,0]\ \text{by Faddeev–LeVerrier over}\ \mathbb Z=x^4-3x^3-3x^2\ [\mathrm{FT.68}(2);\ \text{machine}]
+$$
+$$
+(2):\ \dim F_{J^\pm}=3\ [\mathrm{CT0.12}\ \text{table}:\ F_{J^+}=\mathcal E_{-+}=\operatorname{span}\{J_i\},\ F_{J^-}=\mathcal E_{--}=\operatorname{span}\{K_i\}];\qquad3\cdot3\cdot3=27\ [\text{exact}]
+$$
+$$
+N_{\text{colour}}=3=\log_216-1\ [\mathrm{CT3.20}:\ \text{admissible}\iff2^{n+1}\le C_{\mathrm{cap}}=16\iff n\le3]
+$$
+$$
+(3):\ 3\cdot3\cdot1=9\ [\mathrm{FT.117}(5):\ \dim(3\otimes3\otimes3)^{\mathfrak{sl}(3)}=\dim(3\otimes\bar3)^{\mathfrak{sl}(3)}=1;\ \text{machine}];\qquad\mathrm{FT.110}(1)\ \text{value recovered}
+$$
+$$
+(4):\ [J_i\otimes I_3,\ K_i\otimes I_3]=[J_i,K_i]\otimes I_3\ \text{(Kronecker multiplicativity)};\qquad\sum_i[J_i,K_i]=2i\Sigma\ [\mathrm{FT.109}(3)\ \text{re-derived entrywise over}\ \mathbb Q(i);\ \text{machine}]
+$$
+$$
+\implies\sum_i[J_i\otimes I_3,K_i\otimes I_3]=(2i\Sigma)\otimes I_3\ [12\times12\ \text{equality, exact};\ \text{machine}]
+$$
+$$
+(5):\ \text{the}\ \Sigma\text{-coefficient of}\ (4)\ \text{is}\ 2\ [\text{unique nonzero basis component};\ \mathrm{FT.109}(3)];\qquad T_a\mathsf v=0\ [\mathrm{EW.32}]\ \text{and the stack-block orthogonality}\ [\mathrm{CT0.12}\ \mathrm{Rmk}]\ \text{are the structural reasons}
+$$
+$$
+(6):\ \tfrac12\bigl(\sum_{ij}E_{ij}E_{ji}-\tfrac13(\sum_iE_{ii})^2\bigr)=\tfrac12(3I_3-\tfrac13I_3)=\tfrac43I_3=C_FI_3\ [\text{exact}\ \mathbb Q;\ \text{machine}]
+$$
+$$
+[A\otimes X,\ B\otimes X]=(A\otimes X)(B\otimes X)-(B\otimes X)(A\otimes X)=AB\otimes X^2-BA\otimes X^2=[A,B]\otimes X^2\ [\text{machine at}\ X^2=\tfrac43I_3]
+$$
+$$
+\implies\sum_i[J_i\otimes X,K_i\otimes X]=2i\Sigma\otimes X^2=2i\cdot\tfrac43\,\Sigma\otimes I_3=\tfrac83i\,\Sigma\otimes I_3;\qquad2\cdot\tfrac43=\tfrac83\ [\text{exact Fractions}]
+$$
+$$
+(7):\ \tfrac{2}{3\cdot3\cdot3}=\tfrac2{27};\qquad\tfrac{8/3}{27}=\tfrac8{81}\ [\text{exact Fractions};\ \text{machine}].\ \blacksquare
+$$
+
+**Phys.** A chain that grips a trivalent vertex carries one more independent bookkeeping than a chain that does not: which of the three slots it grips. That third ledger is the only new content of the rung-3 arena, and it multiplies — $3\times3$ becomes $3\times3\times3$. Sealing cancels the multiplication: because the baryon and meson invariant lines are one-dimensional, a sealed object's arena is back to nine, which is why FT.110's lepton-side count and this tier's differ at all. The numerator does not move. The seed that generates mass is colour-blind by theorem, so bracketing each spatial seal with its temporal partner and summing passes straight through the slot factor and returns the same integer $2$ over $\Sigma$ — the colour dressing is a spectator, and the alternative in which the strong generators themselves enter the bracket is a different rational ($8/3$), computed here and adopted nowhere, because no tag of the corpus couples the seal commutator to the slot algebra.
+
+---
+
+---
+
+### FT.119 — The triplet-attached mixing angle $\delta_q=2/27$ and its spectrum
+
+**Thm.** With the spectator numerator $2$ [FT.118(4)–(5)] over the colour-dressed arena $27$ [FT.118(2)], and the FT.111(3) normalization $A=1$, $B=\sqrt2$ (fixed by $\sum_i\lambda_i=3=\dim F_{J^\pm}$ and $\sum_i(\lambda_i-A)^2=3$, both seal-side and hence colour-blind):
+$$(1)\quad\delta_q=\frac{2}{3\cdot3\cdot3}=\frac2{27}=0.074074074074\ldots\qquad[\text{exact rational};\ \text{machine}\ \S D];$$
+$$(2)\quad3\delta_q=\delta_\ell=\frac29\qquad[\mathrm{FT.112}:\ \delta_\ell=\tfrac2{9}\ \text{from the undressed arena}\ 3\times3];$$
+$$(3)\quad\textbf{the spectrum:}\qquad r^{(q)}_i=1+\sqrt2\cos\Bigl(\frac2{27}+\frac{2\pi i}3\Bigr),\qquad i=0,1,2,$$
+$$\text{with}\ c=\cos\tfrac2{27},\ s=\sin\tfrac2{27}:\qquad r^{(q)}_0=1+\sqrt2\,c=2.410335463511094\ldots,$$
+$$r^{(q)}_1=1-\frac{\sqrt2\,c+\sqrt6\,s}{2}=0.204193367808662\ldots,\qquad r^{(q)}_2=1-\frac{\sqrt2\,c-\sqrt6\,s}{2}=0.385471168680242\ldots;$$
+$$\text{all three strictly positive}\ [\text{disjoint enclosures};\ \text{machine}]\ —\ \text{no sign branch, unlike the}\ \delta>\pi/12\ \text{regime};$$
+$$(4)\quad\textbf{Vieta and the phase-free invariant:}\qquad\sum_ir^{(q)}_i=3,\qquad\sum_{i<j}r^{(q)}_ir^{(q)}_j=\frac32,\qquad\sum_i\bigl(r^{(q)}_i\bigr)^2=6,$$
+$$2\bigl(r^{(q)}-1\bigr)^3-3\bigl(r^{(q)}-1\bigr)-\sqrt2\cos\frac29=0\quad\text{for each}\ r^{(q)}=r^{(q)}_i\qquad[\cos3\delta_q=\cos\tfrac29=\cos\delta_\ell:\ \text{clause}\ (2)\ \text{inside the cubic}];$$
+$$Q\ :=\ \frac{\sum_im_i}{\bigl(\sum_i\sqrt{m_i}\bigr)^2}\ \overset{m_i=\mu (r^{(q)}_i)^2}{=}\ \frac{\sum_i(r^{(q)}_i)^2}{\bigl(\sum_ir^{(q)}_i\bigr)^2}=\frac6{9}=\frac23\qquad[\text{exact, and independent of}\ \delta\ \text{and of}\ \mu];$$
+$$(5)\quad\textbf{the mass ratios}\ (m_i=\mu\,(r^{(q)}_i)^2,\ \mu\ \text{undeclared},\ \mathrm{P4}):\qquad(r^{(q)}_1)^2<(r^{(q)}_2)^2<(r^{(q)}_0)^2\ [\text{enclosure-proven}],$$
+$$m_1:m_2:m_3=1:\frac{(r^{(q)}_2)^2}{(r^{(q)}_1)^2}:\frac{(r^{(q)}_0)^2}{(r^{(q)}_1)^2}=1:3.563695074946\ldots:139.3386880284\ldots\qquad[\text{widths}<2^{-50};\ \text{machine}];$$
+$$(6)\quad\textbf{anchored forms}\ (\text{scale-free, top-normalized}):\qquad\frac{m_2}{m_3}=\frac{(r^{(q)}_2)^2}{(r^{(q)}_0)^2}=0.025575776012\ldots,\qquad\frac{m_1}{m_3}=\frac{(r^{(q)}_1)^2}{(r^{(q)}_0)^2}=0.007176757684\ldots;$$
+$$(7)\quad\textbf{alternative-hypothesis table}\ (\text{computed, none adopted}):\qquad\delta=\tfrac2{81}\ (\text{per-baryon arena}\ 3\cdot27):\ 1:1.5130:84.316;$$
+$$\delta=\tfrac1{36}=\tfrac2{72}\ (\text{arena}\ 9\ \text{dressed by the adjoint multiplicity}\ 8\ [\mathrm{CT3.13}]):\ 1:1.5939:86.746;\qquad\delta=\tfrac8{81}\ (\mathrm{FT.118}(6)\ \text{numerator over}\ 27):\ 1:5.6438:187.997.$$
+
+**Rmk (cross-check, not a derivation of equality).** Clause (2) is the tier's structural coincidence, recorded in the FT.112 discipline: the colour channel's triple angle is the lepton channel's angle, so both channels share one depressed-cubic constant $\sqrt2\cos\tfrac29$ and differ only in which of its three roots they read. Nothing is calibrated to anything; the equality $3\cdot\tfrac2{27}=\tfrac29$ is arithmetic on two independently derived rationals.
+
+**Req.** FT.118; FT.111(2)–(3), FT.112, FT.113 (**Tier F.37**: the democratic spectrum form, the normalization, the angle discipline, the $m=\mu r^2$ vocabulary); CT0.12 (Part 1); CT3.13 (**F**, the alternative table's adjoint multiplicity); L3, L4 (**B**, the inertial read vocabulary); P4 (**A**, the free-scale clause); exact rational trigonometric enclosures (Taylor remainder bounds), exact integer square-root enclosures with certificates, monotone rational interval arithmetic, Vieta reads [math; machine: `checks/verify_H_colour_channel.py` §D].
+
+**Pf.**
+$$
+(1):\ \delta_q=\frac{2}{\dim F_{J^\pm}\cdot\operatorname{tr}T(1)\cdot N_{\text{colour}}}=\frac{2}{3\cdot3\cdot3}=\frac2{27}\ [\mathrm{FT.118}(1),(2),(4);\ \text{exact Fractions};\ \text{machine}]
+$$
+$$
+(2):\ 3\cdot\tfrac2{27}=\tfrac6{27}=\tfrac29=\delta_\ell\ [\mathrm{FT.112};\ \text{exact}]
+$$
+$$
+(3):\ r^{(q)}_i=A+B\cos(\delta_q+\tfrac{2\pi i}3)\ \text{at}\ A=1,\ B=\sqrt2\ [\mathrm{FT.111}(3)];\qquad\cos(\tfrac2{27}+\tfrac{2\pi}3)=-\tfrac c2-\tfrac{\sqrt3}2s,\quad\cos(\tfrac2{27}+\tfrac{4\pi}3)=-\tfrac c2+\tfrac{\sqrt3}2s\ [\text{addition formulas}];\ \sqrt2\cdot\tfrac{\sqrt3}2=\tfrac{\sqrt6}2
+$$
+$$
+c,s\ \text{enclosed by alternating Taylor partial sums with exact rational remainder bounds (widths}<2^{-90}\text{)};\qquad\sqrt2,\sqrt6\ \text{enclosed by integer Newton certificates};\qquad r^{(q)}_1,r^{(q)}_2,r^{(q)}_0>0\ [\text{positive lower endpoints};\ \text{machine}]
+$$
+$$
+(4):\ \sum_i\cos(\delta_q+\tfrac{2\pi i}3)=0,\ \sum_i\cos^2(\delta_q+\tfrac{2\pi i}3)=\tfrac32\ [\mathrm{FT.111}(3)\ \text{identities}]\implies\sum_ir^{(q)}_i=3,\ \sum_i(r^{(q)}_i)^2=3+2\sqrt2\cdot0+2\cdot\tfrac32=6
+$$
+$$
+\text{pair sum by Vieta}=\tfrac32;\qquad\text{depressed cubic}\ (\lambda-1)^3-\tfrac32(\lambda-1)-\tfrac{\sqrt2}2\cos3\delta_q=0\ [\mathrm{FT.111}(2)\ \text{at}\ B^2=2];\quad\cos3\delta_q=\cos\tfrac29\ [(2)];\quad\times2:\ 2y^3-3y-\sqrt2\cos\tfrac29=0,\ y=r^{(q)}-1
+$$
+$$
+0\in2y_i^3-3y_i-\sqrt2\cos\tfrac29\ \text{enclosure for each}\ i\ [\text{machine}];\qquad Q=\tfrac6{9}=\tfrac23\ [\text{exact Fractions}]
+$$
+$$
+(5):\ (r^{(q)}_1)^2<(r^{(q)}_2)^2<(r^{(q)}_0)^2\ [\text{disjoint enclosures}];\qquad\text{ratios by monotone interval division, widths}<2^{-50}\ [\text{machine}]
+$$
+$$
+(6):\ \text{same divisions against}\ (r^{(q)}_0)^2\ [\text{machine}];\qquad(7):\ \text{each row by the identical enclosure pipeline at the stated rational}\ \delta\ [\text{machine}].\ \blacksquare
+$$
+
+**Phys.** One integer over three integers: the phase of the colour channel is the seal coefficient divided by a seal factor, a transfer factor and a colour factor, and it needs no new input beyond the rung-3 arena count. Its consequence is compact — triple the angle and the lepton channel's phase appears, so the two hierarchies are the three roots of one cubic read at phases differing by exactly the colour count. The spectrum itself is milder than the lepton-side one: no eigenvalue nearly vanishes, the middle line sits a factor $3.56$ above the inner and the outer a factor $139$ above it, and the anchored forms trade the undeclared scale for two pure numbers. The invariant $Q=\tfrac23$ is not a prediction of this tier — it holds for every phase, being the normalization content $A=1$, $B=\sqrt2$ — so what $\delta_q$ actually fixes is the position on that surface: the two ratios of clause (5). Everything here is dimensionless; $\mu$ is a free internal parameter (P4) and the $m$ vocabulary is the entropy-deficit read of L3(4)/L4, never a particle.
+
+---
+
+---
+
+
+## Tier F.39 — Chirality: The Orientation Doublet of the Bound Chain and Its Exchange-Form Grade
+
+### Def-H.33 — The chain orientation space and its chirality operator
+
+**Def.** For a bound chain $c$ [D1.4: ordered tuple of distinct real edges $c=(e_1,\dots,e_k)$; D1.5: bound $=$ closed self-contained, fermionic content]:
+- **Orientations.** $c$ and $\omega(c)$ [D2.6: $s(c)\leftrightarrow t(c)$, reversal of the traversal; $\omega^2=\mathrm{id}$]. As ordered tuples, $c\ne\omega(c)$ for every admissible $k\ge2$ [D1.4: distinct edges].
+- **Orientation space.**
+$$\mathcal H_\omega(c)\ :=\ \operatorname{span}_{\mathbb C}\bigl\{|c\rangle,\ |\omega(c)\rangle\bigr\}\ \cong\ \mathbb C^2,$$
+with the Hermitian inner product making $\{|c\rangle,|\omega(c)\rangle\}$ an orthonormal basis.
+- **Orientation involution.** $\hat\omega:\mathcal H_\omega\to\mathcal H_\omega$, $\hat\omega|c\rangle=|\omega(c)\rangle$, $\hat\omega|\omega(c)\rangle=|c\rangle$: then $\hat\omega^2=\mathrm{id}$, $\hat\omega^\dagger=\hat\omega$ [D2.6: $\omega$ is an involution].
+- **Chirality operator (the exchange form).**
+$$\boxed{\ \hat\chi\ :=\ i\bigl(|c\rangle\langle\omega(c)|-|\omega(c)\rangle\langle c|\bigr)\ }$$
+- **Chiral projectors.** $P_L:=\tfrac12(\mathrm{id}+\hat\chi)$, $P_R:=\tfrac12(\mathrm{id}-\hat\chi)$.
+- **Chiral eigenbasis.**
+$$\boxed{\ |L\rangle=\tfrac1{\sqrt2}\bigl(|c\rangle-i\,|\omega(c)\rangle\bigr),\qquad |R\rangle=\tfrac1{\sqrt2}\bigl(|c\rangle+i\,|\omega(c)\rangle\bigr)\ }$$
+— the $+1$ and $-1$ eigenvectors of $\hat\chi$ respectively; the labels are pinned by the boxed $\hat\chi$ together with $P_L:=\tfrac12(\mathrm{id}+\hat\chi)$ [FT.122(3), (6)].
+
+**Rmk (why $\mathcal H_\omega$ and not the pair register).** $\mathcal H_\omega(c)$ is indexed by the chain $c$, not by any pair $(p,q)$. It is *not* a subspace of $\operatorname{End}(\mathbb C^4_{\mathrm{pair}})$: its basis states are *chains* — configuration-level objects [D1.4, D0.10] — not operators on the pair space. The pincer [FT.93(3)] and the trace/rank obstruction [FT.101(3)] are statements about $\operatorname{End}(\mathbb C^4_{\mathrm{pair}})$ and do not reach $\mathcal H_\omega$ (FT.124 makes the locus separation exact).
+
+**Rmk (the physical content).** A closed chain's worldline is topologically $S^1$ with two traversal senses. The orientation doublet is the one-dimensional analogue of the linear-polarization basis; the exchange form $\hat\chi=i\cdot$(antisymmetric exchange) is the Hermitian generator of the exchange, and its $\pm1$ rays are the analogue of the two circular polarizations — the two chiralities of a loop mode. Orientation reversal exchanges the two rays [FT.122(4): $\hat\omega|L\rangle=-i|R\rangle$, $\hat\omega|R\rangle=+i|L\rangle$], realizing D2.6's "chirality $\mapsto-$chirality" as an operator identity. **The spin-structure torsor is a distinct object:** fermion boundary conditions on $S^1$ form $H^1(S^1;\mathbb Z_2)\cong\mathbb Z_2$, which orientation reversal fixes pointwise [FT.122(7); machine] — the torsor $\mathbb Z_2$ and the chiral-ray $\mathbb Z_2$ are different kinds, and only the latter is load-bearing. The phase $i$ in $\hat\chi$ is what turns the antisymmetric exchange form into a Hermitian involution, and it is what makes $\hat\chi$ odd under $\hat\omega$.
+
+**Rmk (canonicity and the naming residue).** Among Hermitian involutions on $\mathcal H_\omega$ that are $\hat\omega$-odd and diagonal-free in the orientation basis, $\hat\chi$ is unique up to overall sign [FT.122(6); machine: without the diagonal-free condition the family is the circle $M(a,y)=\bigl(\begin{smallmatrix}a&iy\\-iy&-a\end{smallmatrix}\bigr)$, $a^2+y^2=1$]. The sign itself is a naming choice: the map $(\hat\chi,P_L,|L\rangle)\mapsto(-\hat\chi,P_R,|R\rangle)$ leaves every identity of FT.122–FT.123 invariant (the adjoint action is linear: $\hat\omega(-\hat\chi)\hat\omega^{-1}=-(-\hat\chi)$); the boxed definition fixes it once and for all, and given it the labels $L/R$ are forced up to phase. The *physical* naming — which ray is "left" — is fixed by no algebra here: it is naming-convention content reserved to the matter-assignment rule (application-layer; its non-derivability here is proven [FT.125(4)]).
+
+**Rmk (achiral configurations).** For a physical state invariant under an orientation-reversing symmetry of its configuration, $\langle\hat\chi\rangle=0$ exactly [machine §A; the FT.95(3) pattern] — the grade is sharp per oriented chain, not per reversal-symmetric ensemble; a chiral read requires an oriented chain as boundary datum. This is the same observer-relativity as every chain-level read (Def-H.1 vocabulary); no new declaration.
+
+---
+
+---
+
+### FT.122 — The orientation doublet is corpus-constructible
+
+**Thm.** For every bound chain $c$ [D1.4, D1.5], the orientation space $\mathcal H_\omega(c)$, the involution $\hat\omega$, the chirality operator $\hat\chi$, and the projectors $P_L,P_R$ are constructible from Parts 1–2 data alone, with no new axiom and no declared parameter:
+$$(1)\quad \hat\chi^\dagger=\hat\chi,\qquad \hat\chi^2=\mathrm{id},\qquad \operatorname{spec}\hat\chi=\{+1,-1\},\qquad\operatorname{tr}\hat\chi=0;$$
+$$(2)\quad P_L^2=P_L,\quad P_R^2=P_R,\quad P_LP_R=0,\quad P_L+P_R=\mathrm{id},\quad \operatorname{tr}P_L=\operatorname{tr}P_R=1;$$
+$$(3)\quad \hat\chi|L\rangle=+|L\rangle,\quad \hat\chi|R\rangle=-|R\rangle,\quad P_L|L\rangle=|L\rangle,\quad P_L|R\rangle=0,\quad P_R|R\rangle=|R\rangle,\quad P_R|L\rangle=0;$$
+$$\text{equivalently, without the}\ \sqrt2\ \text{normalizers:}\quad2P_L=|L_u\rangle\langle L_u|,\ \ 2P_R=|R_u\rangle\langle R_u|\ \ \text{with}\ \ |L_u\rangle=|c\rangle-i|\omega(c)\rangle,\ |R_u\rangle=|c\rangle+i|\omega(c)\rangle\ \ [\text{exact over}\ \mathbb Q(i)];$$
+$$(4)\quad\textbf{the covariance identities and the winding read:}\qquad\hat\omega\hat\chi\hat\omega^{-1}=-\hat\chi,\qquad\{\hat\chi,\hat\omega\}=0,\qquad\hat\omega P_L\hat\omega^{-1}=P_R,\qquad\hat\omega|L\rangle=-i|R\rangle,\quad\hat\omega|R\rangle=+i|L\rangle;$$
+$$\text{for a materialized chain}\ c:\quad k(c)=\Theta(c)/2\in\mathbb Z\ [\mathrm{FT.22},\ \mathrm{FT.25}(3)];\qquad\omega:\ k\mapsto-k\ [\mathrm{D2.6};\ \mathrm{EM.24}(1):\ C\ \text{is}\ \omega\text{'s sign-level realization};\ \mathrm{FT.87}(8):\ \operatorname{sign}(k)\ \text{is}\ C\text{-odd}];$$
+$$(5)\quad\text{the construction is exact over}\ \mathbb Q(i)\ \text{on all matrix elements in the basis}\ \{|c\rangle,|\omega(c)\rangle\}:\quad\hat\chi=i\bigl(\begin{smallmatrix}0&1\\-1&0\end{smallmatrix}\bigr),\quad\hat\omega=\bigl(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\bigr);$$
+$$(6)\quad\textbf{canonicity:}\qquad\bigl\{M=M^\dagger\in\operatorname{End}(\mathcal H_\omega):\ \hat\omega M\hat\omega=-M,\ M^2=\mathrm{id},\ \langle c|M|c\rangle=\langle\omega(c)|M|\omega(c)\rangle=0\bigr\}=\{+\hat\chi,\ -\hat\chi\};$$
+$$\text{without the diagonal-free condition the}\ \hat\omega\text{-odd Hermitian involutions are the circle}\ M(a,y)=\bigl(\begin{smallmatrix}a&iy\\-iy&-a\end{smallmatrix}\bigr),\ a^2+y^2=1\ \ [\text{exact rational witnesses incl.}\ (a,y)=(\tfrac35,\tfrac45),(\tfrac5{13},\tfrac{12}{13}),(\tfrac8{17},\tfrac{15}{17});\ \text{machine}];$$
+$$(7)\quad\textbf{the kind flag (torsor distinction):}\qquad H^1(S^1;\mathbb Z_2)\cong\operatorname{Hom}(\mathbb Z,\mathbb Z_2)=\{h_{\mathrm R}:n\mapsto0,\ \ h_{\mathrm{NS}}:n\mapsto n\bmod2\},$$
+$$\text{and the orientation-reversal pullback}\ n\mapsto-n\ \text{fixes both pointwise}\ (h(-n)=h(n)\ \text{in}\ \mathbb Z_2):\ \textbf{the spin-structure torsor is reversal-invariant, NOT exchanged};$$
+$$\text{the}\ \hat\omega\text{-exchanged objects are the chiral rays of clause}\ (3)\text{: the torsor}\ \mathbb Z_2\ \text{(boundary conditions) and the ray}\ \mathbb Z_2\ \text{(the}\ \hat\chi\text{-grade) are distinct kinds}\ [\mathrm{FT.89}(2)\ \text{discipline}];\ \text{the R/NS analogy is recorded, never load-bearing}.$$
+
+**Req.** D1.4, D1.5, D2.6 (Parts 1–2); FT.22, FT.25 (Tiers F.1–F.11); EM.24 (Part 2); FT.87(8), FT.89(2) (Tiers F.29–F.30); Def-H.1 (**Tiers F.1–F.11**, the observer-relativity vocabulary of the closing Rmk); Hermitian-involution spectral facts, exact canonicity solve over $\mathbb Q$, $\operatorname{Hom}(\mathbb Z,\mathbb Z_2)$ arithmetic [math; machine: `checks/verify_H_chirality.py` §A].
+
+**Pf.**
+$$
+(1):\ \hat\chi^\dagger=\bigl[i\bigl(|c\rangle\langle\omega(c)|-|\omega(c)\rangle\langle c|\bigr)\bigr]^\dagger=(-i)\bigl(|\omega(c)\rangle\langle c|-|c\rangle\langle\omega(c)|\bigr)=i\bigl(|c\rangle\langle\omega(c)|-|\omega(c)\rangle\langle c|\bigr)=\hat\chi\ \ [(iA)^\dagger=-iA^\dagger;\ (|c\rangle\langle\omega(c)|)^\dagger=|\omega(c)\rangle\langle c|]
+$$
+$$
+E:=|c\rangle\langle\omega(c)|-|\omega(c)\rangle\langle c|:\quad E^2=\underbrace{|c\rangle\langle\omega(c)|c\rangle\langle\omega(c)|}_{0}-|c\rangle\underbrace{\langle\omega(c)|\omega(c)\rangle}_{1}\langle c|-\ |\omega(c)\rangle\underbrace{\langle c|c\rangle}_{1}\langle\omega(c)|+\underbrace{|\omega(c)\rangle\langle c|\omega(c)\rangle\langle c|}_{0}=-\bigl(|c\rangle\langle c|+|\omega(c)\rangle\langle\omega(c)|\bigr)=-\mathrm{id}
+$$
+$$
+\hat\chi^2=i^2E^2=(-1)(-\mathrm{id})=\mathrm{id};\qquad\operatorname{tr}\hat\chi=0\ [\text{off-diagonal}];\qquad\text{charpoly}(\hat\chi)=x^2-\operatorname{tr}(\hat\chi)x+\det\hat\chi=x^2-1\ [\det\hat\chi=0\cdot0-i\cdot(-i)=-1]:\ \operatorname{spec}=\{+1,-1\}
+$$
+$$
+(2):\ P_L^2=\tfrac14(\mathrm{id}+\hat\chi)^2=\tfrac14(\mathrm{id}+2\hat\chi+\hat\chi^2)=\tfrac14(2\,\mathrm{id}+2\hat\chi)=P_L;\quad\text{likewise}\ P_R;\qquad P_LP_R=\tfrac14(\mathrm{id}-\hat\chi^2)=0;\qquad P_L+P_R=\mathrm{id};\qquad\operatorname{tr}P_L=\tfrac12(2+0)=1
+$$
+$$
+(3):\ \hat\chi|c\rangle=i\bigl(|c\rangle\langle\omega(c)|c\rangle-|\omega(c)\rangle\langle c|c\rangle\bigr)=-i|\omega(c)\rangle;\qquad\hat\chi|\omega(c)\rangle=+i|c\rangle
+$$
+$$
+\hat\chi|L_u\rangle=\hat\chi|c\rangle-i\,\hat\chi|\omega(c)\rangle=-i|\omega(c)\rangle-i\cdot i|c\rangle=|c\rangle-i|\omega(c)\rangle=|L_u\rangle;\qquad\hat\chi|R_u\rangle=-i|\omega(c)\rangle+i\cdot i|c\rangle=-|R_u\rangle
+$$
+$$
+|L_u\rangle\langle L_u|=(|c\rangle-i|\omega(c)\rangle)(\langle c|+i\langle\omega(c)|)=\mathrm{id}+i\bigl(|c\rangle\langle\omega(c)|-|\omega(c)\rangle\langle c|\bigr)=\mathrm{id}+\hat\chi=2P_L\ [\text{exact over}\ \mathbb Q(i);\ \langle L_u|L_u\rangle=2];\qquad\text{likewise}\ |R_u\rangle\langle R_u|=2P_R
+$$
+$$
+\implies P_L|L\rangle=|L\rangle,\ P_L|R\rangle=0,\ P_R|R\rangle=|R\rangle,\ P_R|L\rangle=0\ \checkmark
+$$
+$$
+(4):\ \hat\omega\hat\chi\hat\omega=i\bigl(\hat\omega|c\rangle\langle\omega(c)|\hat\omega-\hat\omega|\omega(c)\rangle\langle c|\hat\omega\bigr)=i\bigl(|\omega(c)\rangle\langle c|-|c\rangle\langle\omega(c)|\bigr)=-\hat\chi\ \ [\hat\omega^{-1}=\hat\omega];\qquad\{\hat\chi,\hat\omega\}=\hat\chi\hat\omega+\hat\omega\hat\chi=\hat\chi\hat\omega-\hat\chi\hat\omega=0
+$$
+$$
+\hat\omega P_L\hat\omega=\tfrac12(\mathrm{id}+\hat\omega\hat\chi\hat\omega)=\tfrac12(\mathrm{id}-\hat\chi)=P_R;\qquad\hat\omega|L_u\rangle=|\omega(c)\rangle-i|c\rangle=-i\bigl(|c\rangle+i|\omega(c)\rangle\bigr)=-i|R_u\rangle;\qquad\hat\omega|R_u\rangle=+i|L_u\rangle
+$$
+$$
+k=\Theta/2\in\mathbb Z\ [\mathrm{FT.22}:\ \Theta\in2\mathbb Z\ \text{on materialized chains};\ \mathrm{FT.25}(3)];\qquad k\mapsto-k\ \text{under}\ \omega:\ \mathrm{D2.6}\ \text{(reversal)}+\mathrm{EM.24}(1)\ (C:\sigma_e\mapsto-\sigma_e\ \text{is}\ \omega\text{'s sign-level realization})+\mathrm{FT.87}(8)\ (\operatorname{sign}(k)\ \text{is}\ C\text{-odd})
+$$
+$$
+(5):\ \text{entrywise in the ordered basis}\ (|c\rangle,|\omega(c)\rangle)\ [\text{machine}]
+$$
+$$
+(6):\ M=\bigl(\begin{smallmatrix}a&z\\\bar z&b\end{smallmatrix}\bigr),\ a,b\in\mathbb Q,\ z=x+iy:\quad\hat\omega M\hat\omega=\bigl(\begin{smallmatrix}b&\bar z\\z&a\end{smallmatrix}\bigr)=-M\iff b=-a\wedge x=0\iff M=M(a,y);\quad M(a,y)^2=(a^2+y^2)\,\mathrm{id}
+$$
+$$
+M^2=\mathrm{id}\iff a^2+y^2=1;\qquad\text{diagonal-free}\iff a=0\iff y^2=1\iff y=\pm1\iff M=\pm\hat\chi\ [\text{exact rational census of}\ a^2+y^2=1\ \text{at denominators}\ \le20;\ \text{machine}]
+$$
+$$
+(7):\ \operatorname{Hom}(\mathbb Z,\mathbb Z_2)=\{h_0:n\mapsto0,\ h_1:n\mapsto n\bmod2\}\ [\text{a homomorphism is fixed by its value at}\ 1];\qquad(r^*h)(n)=h(-n):\quad h_1(-n)=(-n)\bmod2=n\bmod2=h_1(n)\ [\mathbb Z_2];\quad h_0(-n)=0=h_0(n)
+$$
+$$
+\implies r^*=\mathrm{id}\ \text{on the torsor: fixed pointwise}\ [\text{machine on}\ |n|\le6,\ \text{general by parity}];\qquad\text{the exchanged objects are the}\ \hat\chi\text{-rays}\ [(4)];\ \text{two distinct}\ \mathbb Z_2\text{'s}\ [\mathrm{FT.89}(2):\ \text{kind distinction recorded}].\ \blacksquare
+$$
+
+**Phys.** A bound chain is a closed loop, and a closed loop has two traversal senses. The orientation doublet holds them; the exchange form grades it into two chiral rays — exactly one such grade exists up to sign once the basis is treated symmetrically, so the construction carries no arbitrary choice beyond the naming. Reversing the loop exchanges the rays, and D2.6's vocabulary clause becomes an identity of matrices. The fermion boundary conditions on the loop — the Ramond and Neveu–Schwarz sectors — form a second, reversal-invariant $\mathbb Z_2$ that is *not* this grading; the tier keeps the two kinds apart rather than trading on their shared cardinality. All of it is built from two corpus objects that already exist — the chain and its reversal — with no axiom added and no parameter fitted.
+
+---
+
+---
+
+### FT.123 — Weak covariance and $\omega$-covariance on the extended carrier
+
+**Thm.** Under Def-H.34's constitutive carrier clause, the matter carrier of a bound chain extends from the seed $\mathcal H_{\mathsf v}\cong\mathbb C^2$ [EW.32] to $\mathcal H_{\mathrm{int}}\otimes\mathcal H_\omega(c)$, with the weak action on the first factor alone, $W_i\mapsto\tfrac12\sigma_i\otimes I_\omega$ [EW.32], and the chiral grade on the second alone:
+$$(1)\quad\textbf{weak covariance:}\qquad[W_i\otimes I_\omega,\ I_{\mathrm{int}}\otimes P_{L/R}]=0\qquad\forall i\in\{1,2,3\};$$
+$$\textbf{locus sharpening:}\ \ \sum_i\bigl(\tfrac12\sigma_i\otimes I_2\bigr)^2=\tfrac34I_4\ (\text{type}\ 2\oplus2,\ \text{multiplicity}\ 2),\quad\text{while on the pair register}\ \sum_iW_i^2=2\Pi_{\mathcal R}\ (\text{type}\ 3\oplus1)\ [\text{Cor CT0.7a}]:$$
+$$\text{the two weak actions are inequivalent}\ (\tfrac34I_4\ne2\Pi_{\mathcal R},\ \text{machine}),\ \text{so FT.93}(3)\text{'s pincer classifies the pair-register action and places no constraint here};$$
+$$\mathrm{FT.93}(3d)\text{'s seed irreducibility}\ (\{m:[m,\sigma_i]=0\}=\mathbb CI_2)\ \text{is discharged by multiplicity, not violated:}\ \{M:[M,\sigma_i\otimes I_2]=0\ \forall i\}=I_{\mathrm{int}}\otimes\operatorname{End}(\mathcal H_\omega),\ \dim_{\mathbb C}=4\ [\text{machine}];$$
+$$(2)\quad\textbf{the}\ \hat\omega\textbf{-covariance:}\qquad(I\otimes\hat\omega)\,(I\otimes P_L)\,(I\otimes\hat\omega)^{-1}=I\otimes P_R,\qquad(I\otimes\hat\omega)\,(I\otimes\hat\chi)\,(I\otimes\hat\omega)^{-1}=-(I\otimes\hat\chi);$$
+$$(3)\quad\textbf{the weight-cardinality correspondence}\ [\text{conditional on Def-H.38}]:\ \ \text{a materialized chain of winding}\ k\ [\mathrm{FT.22},\ \mathrm{FT.25}(3)]\ \text{carries}\ \mathrm{Sym}^{k}(\mathcal H_{\mathsf v})\ \text{with weights}\ j,j{-}1,\dots,-j,\ j=|k|/2\ [\text{Def-H.38};\ \mathrm{FT.60}(3)\ \text{ladder}];$$
+$$\text{the floor fermion}\ (\text{digon},\ k=1\ [\mathrm{FT.28}])\ \text{has}\ j=\tfrac12:\ \text{exactly two weights}\ \{+\tfrac12,-\tfrac12\}\ [\text{machine}]\ —\ \text{an unordered-pair cardinality correspondence with the two chiral rays}\ \{+1,-1\};$$
+$$\text{the label-to-weight attachment is}\ \textbf{not derived}\;\qquad\text{``chirality}=\text{helicity on-shell'' is marked external vocabulary — the corpus derives no dispersion relation, and transit-side helicity reads}\ [\mathrm{EM.8}]\ \text{are outside the bound scope}\ [\text{Def-H.38 scope note}];$$
+$$(4)\quad\textbf{massive modes (structural):}\ \ \text{the}\ \hat\chi\text{-eigenspaces are defined for any mode; helicity is a frame-dependent refinement}\ [\text{math}];\ \text{on a massive mode chirality and helicity are distinct — the Dirac pattern};$$
+$$(5)\quad\dim\bigl(\mathcal H_{\mathrm{int}}\otimes\mathcal H_\omega\bigr)=2\times2=4:\ \text{the Dirac-type carrier dimension of one massive mode (two Weyl halves)};\qquad\text{a weak doublet of Dirac-type carriers is}\ 2\times4=8.$$
+
+**Rmk (interface definition Def-H.34).** The tensor product $\mathcal H_{\mathrm{int}}\otimes\mathcal H_\omega$ is the same species of interface definition as Def-H.41/Def-H.42: the minimal carrier combination consistent with both structures being independently present — the seed with its weak action [EW.32] and the orientation doublet with its exchange-form grade [Def-H.33]. It is exactly the "extended carrier" locus that FT.93(7) identified and item 21(i) enumerated without adopting. The orientation space itself, and every operator identity of FT.122, are declaration-free. Not declared and not constructed: the per-edge frame section $e\mapsto\mathcal F_e$ and its coupling to the EW.32 transport (item 21(i)'s residue), a global Dirac-type operator on the emergent geometry, and any chiral gauge coupling (application-layer content).
+
+**Req.** Def-H.33; FT.122; Def-H.34 (carrier clause); A8 (Parts 1–2); EW.32, EW.33 (Part 2); D2.6 (Parts 1–2); CT0.7, Cor CT0.7a (Part 1); FT.22, FT.25 (Tiers F.1–F.11); FT.28 (Tiers F.1–F.11); FT.60 (Tiers F.20–F.22); Def-H.38; EM.8 (Part 2); Kronecker-product commutant algebra, Schur's lemma, exact nullspace solves over $\mathbb Q$ [math; machine: `checks/verify_H_chirality.py` §B].
+
+**Pf.**
+$$
+(1):\ [W_i\otimes I,\ I\otimes P]=(W_iI)\otimes(IP)-(IW_i)\otimes(PI)=0\ \text{(each factor commutes with an identity)}\ [\text{machine, all}\ i,\ \text{both}\ P]
+$$
+$$
+\sum_i\bigl(\tfrac{\sigma_i}2\otimes I_2\bigr)^2=\bigl(\tfrac14\sum_i\sigma_i^2\bigr)\otimes I_2=\tfrac34I_2\otimes I_2=\tfrac34I_4;\qquad\sum_iW_i^2=\tfrac32E_0+\tfrac12\Sigma=2\Pi_{\mathcal R}\ [\text{Cor CT0.7a re-derived};\ \text{machine}];\qquad\tfrac34I_4\ne2\Pi_{\mathcal R}\ [\operatorname{tr}:\ 3\ne4]
+$$
+$$
+\{M:[M,\sigma_i\otimes I_2]=0\}:\ \text{exact}\ 32\text{-unknown real nullspace, dim}_{\mathbb Q}=8\ (=4\ \text{over}\ \mathbb C);\qquad\{I_2\otimes E_{ab}\}_{a,b}\ \text{lies in it and is}\ \mathbb Q\text{-independent (8 dims)}\implies\text{equality};\qquad I\otimes P_L\ \text{is a nontrivial member}
+$$
+$$
+\{m:[m,\sigma_i]=0\}=\mathbb CI_2,\quad\{m:\{m,\sigma_i\}=0\}=0\ [\mathrm{FT.93}(3d)\ \text{re-derived};\ \text{exact nullspaces}]
+$$
+$$
+(2):\ \text{clause (4) of FT.122 tensored with}\ I_{\mathrm{int}}\ [\text{machine}];\qquad(3):\ \tfrac{\sigma_3}2\ \text{on}\ \mathrm{Sym}^1(\mathbb C^2)=\mathbb C^2:\ \text{eigenvalues}\ \pm\tfrac12\ [\text{machine}];\ \text{the ladder for general}\ k\ \text{is}\ \mathrm{FT.60}(3)\text{'s (machine-verified there)}
+$$
+$$
+(4):\ \hat\chi\text{-eigenspaces are basis data of}\ \mathcal H_\omega\ [\mathrm{FT.122}(1),(3)];\ \text{helicity is the frame-dependent sign of the momentum-axis projection}\ [\text{math vocabulary}]
+$$
+$$
+(5):\ 2\cdot2=4;\qquad2\cdot4=8\ [\text{exact}].\ \blacksquare
+$$
+
+**Phys.** The weak force lives on the internal seed; the chiral grade lives on the chain's own orientation bookkeeping; disjoint factors commute. That is the whole mechanism — and it is precisely the ingredient whose absence FT.93(7) diagnosed: a carrier on which the gauge action is trivial *for the grade in question*. The Casimir census keeps the accounting honest: the extended weak action ($\tfrac34I_4$, two doublets) is not the pair-register action ($2\Pi_{\mathcal R}$, a triplet and a singlet), so nothing proven about the latter binds the former, and the seed's irreducibility — the Schur wall behind the pincer — is lifted by multiplicity the moment the orientation factor is adjoined. What is *not* obtained is the Standard Model's chiral coupling: here the weak force is chirality-blind, the chiral halves are weak-blind rather than weak-inactive (the extended weak kernel is $\{0\}$), and the rule that would make one ray gauge-active is application-layer content, $\neg$derived here.
+
+**Rmk (forward pointer, non-load-bearing).** The chirality-flipping block of the complete static force matrix on the extended carrier — the off-diagonal complement of clause (1)'s chirality blindness — is computed in Tier F.40: at the derived locus $F_{LR}=0$ exactly (FT.128, the no-flip theorem: every derived aspect action is internal-only), and under the declared read promotion Def-H.43 the flipping block is $F_{LR}=q_{\mathrm{core}}I_2$ with flipping set $\{F_{\mathrm{EM}}\ \text{core read}\}$ and chiral-partner splitting $2|q|\in\{0,2\}$ (FT.129–FT.130). The pointer adds no load-bearing content to this tier.
+
+---
+
+---
+
+### FT.124 — The prior obstructions do not reach the orientation space
+
+**Thm.** The obstructions of Tiers F.26–F.28–Tiers F.31–F.34 and Tier F.38 are theorems about their own loci; the orientation-space chirality lives on a different space and evades each one — seven loci, census exact:
+$$(1)\quad\textbf{the pincer}\ [\mathrm{FT.93}(3)]:\ \ \text{the classification}\ \{M:[M,W_i]=0\}=\operatorname{span}_{\mathbb C}\{\Pi_{\mathcal R},\Pi_{\mathcal V}\},\ \{M:\{M,W_i\}=0\}=\mathbb C\cdot\Pi_{\mathcal V}\ \text{is a classification inside}\ \operatorname{End}(\mathbb C^4_{\mathrm{pair}})\ \text{for the pair-register weak action};$$
+$$\mathcal H_\omega(c)\not\subseteq\operatorname{End}(\mathbb C^4_{\mathrm{pair}});\qquad\text{the extended weak action is inequivalent}\ \bigl(\tfrac34I_4\ \text{vs}\ 2\Pi_{\mathcal R}\ [\mathrm{FT.123}(1)]\bigr);\qquad I\otimes P_{L/R}\ \text{commutes with}\ W_i\otimes I_\omega\ \text{by tensor-factor disjointness, not by membership in either pincer class};$$
+$$(2)\quad\textbf{the per-frame refutation}\ [\mathrm{FT.93}(4)]:\ \ \text{it concerns pair-register frame projectors}\ P^{(\mathcal F)}_\pm\ (\operatorname{rank}2\ \text{vs the}\ 1\text{-dimensional weak kernel}\ \wedge^2);\ \ \text{on the extended carrier the weak kernel is}\ \{0\}\ (\sigma_i\ \text{invertible};\ \text{machine}):$$
+$$P^{\mathrm{car}}_{L/R}\ \text{are not frame projectors, and their halves are weak-blind, not weak-inactive — the refutation is silent here};$$
+$$(3)\quad\textbf{the trace/rank obstruction}\ [\mathrm{FT.101}(3)]:\ \ \text{data re-derived:}\ \mathfrak T\Pi_{\mathcal R}=3\ne1=\mathfrak T\Pi_{\mathcal V};\ \text{no traceless involution in}\ \operatorname{span}\{\Pi_{\mathcal R},\Pi_{\mathcal V}\}\ (\operatorname{tr}=3a+b\in\{\pm4,\pm2\},\ \text{machine});$$
+$$\hat\omega\ \text{is an honest matrix involution on}\ \mathcal H_\omega\ —\ \text{not a Hilbert-space implementation of the A4 branch flip, which stays label-level; FT.101}(3)\ \text{stands untouched on its locus};$$
+$$(4)\quad\textbf{S-parity misalignment}\ [\mathrm{FT.93}(6)]:\ \ \text{catalog re-run (machine):}\ 30\ \text{frames},\ \gamma_{\mathcal F}=\pm\ \text{one Pauli product each, all}\ 15\ \text{sign-classes attained}\ \times2;\ \text{every class fails the commuting side for some}\ W_i\ \textbf{and}\ \text{the anticommuting side for some}\ W_i;$$
+$$\text{exactly}\ 3\ \text{classes are}\ S\text{-aligned}\ (\pm\sigma_i\otimes\sigma_i);\qquad[\mathbb S\otimes I_2,\ I_4\otimes\hat\chi]=0\ (8\times8\ \text{machine}):\ \text{the chiral grade is}\ S\text{-invariant by disjointness — no misalignment can arise};$$
+$$(5)\quad\textbf{the zero-expectation theorem}\ [\mathrm{FT.95}(3)]:\ \ \langle\psi|\hat\chi|\psi\rangle=0\ \text{for every}\ \hat\omega\text{-symmetric}\ \psi\ (\text{machine})\ —\ \text{recorded, not an obstruction:}\ \hat\chi\ \text{is a per-chain eigenvalue datum},\ \text{and the corpus's own precedent is FT.87}(8)\text{'s}\ \operatorname{sign}(k),$$
+$$\text{a legitimate}\ C\text{-odd coordinate under the same vanishing theorem; a chiral read requires an oriented chain (boundary datum), not an ensemble average}\ [\text{Def-H.33 closing Rmk}];$$
+$$(6)\quad\textbf{confinement blindness}\ [\mathrm{FT.117};\ \mathrm{CT3.22}]:\ \ \hat\chi\ \text{has no colour-slot argument:}\ [H_{\mathrm{slot}}\otimes I_2,\ I_3\otimes\hat\chi]=0\ \text{for every Hermitian slot operator}\ H\ (6\times6\ \text{machine witness});\ \text{sealed or not, the orientation factor persists};$$
+$$(7)\quad\textbf{the}\ Q\textbf{-phase-free bound}\ [\mathrm{FT.119}(4)]:\ \ Q=\tfrac23\ \text{is the seal-side normalization content}\ (A=1,B=\sqrt2);\ \hat\chi\ \text{is a chain-level grade: the}\ C_3\ \text{structures of Tier F.37 live on the seal triplet and are untouched}.$$
+
+**Req.** FT.93, FT.95, FT.101 (Tiers F.31–F.34); CT0.7, CT1.2, Cor CT0.7a (Part 1); FT.117, FT.119 (Tier F.38); FT.87(8) (Tiers F.29–F.30); FT.123 (this tier); CT3.22 (Part 2); D0.10, D1.4 (Parts 1–2); exact nullspace solves over $\mathbb Q(i)$, exhaustive frame enumeration, Kronecker disjointness identities [math; machine: `checks/verify_H_chirality.py` §C].
+
+**Pf.**
+$$
+(1):\ \text{pincer classes re-solved exactly: commuting-side nullspace}\ \dim_{\mathbb Q}4\ (=2\ \text{over}\ \mathbb C)=\operatorname{span}\{\Pi_{\mathcal R},\Pi_{\mathcal V}\};\ \text{anticommuting side}\ \dim_{\mathbb Q}2=\mathbb C\Pi_{\mathcal V};\ \operatorname{tr}(3a+b)\ne0\ \text{on all four sign pairs}\ [\text{machine}]
+$$
+$$
+\text{inequivalence:}\ \textstyle\sum_i(\tfrac{\sigma_i}2\otimes I)^2=\tfrac34I_4\ne2\Pi_{\mathcal R}=\sum_iW_i^2\ [\text{machine}];\qquad\text{disjointness: FT.123}(1)\ \text{clause verbatim}
+$$
+$$
+(2):\ \bigcap_i\ker(\sigma_i\otimes I_2)=\{0\}:\ \text{exact}\ 24\times8\ \text{real system, rank}\ 8\ [\text{machine}];\qquad\operatorname{rank}P^{\mathrm{car}}_{L/R}=2\ [\mathrm{FT.123}\ \text{Pf}]
+$$
+$$
+(3):\ \Pi_{\mathcal R}=\tfrac12(I_4+\mathbb S),\ \Pi_{\mathcal V}=\tfrac12(I_4-\mathbb S),\ \mathbb S=\tfrac12(E_0+\Sigma):\ \operatorname{tr}=(3,1)\ [\mathrm{CT0.7}(1)\ \text{re-derived};\ \text{machine}];\qquad M=a\Pi_{\mathcal R}+b\Pi_{\mathcal V}:\ M^2=\mathrm{id}\implies a,b\in\{\pm1\}\implies\operatorname{tr}M\in\{\pm4,\pm2\}\ne0
+$$
+$$
+(4):\ \binom{15}4=1365\ \text{candidate}\ 4\text{-sets}\to30\ \text{pairwise-anticommuting frames}\ [\text{machine}];\qquad\gamma_{\mathcal F}^2=I_4,\ \operatorname{tr}\gamma_{\mathcal F}=0,\ \gamma_{\mathcal F}^\dagger=\gamma_{\mathcal F}\ \forall\ \text{frames};\qquad\gamma_{\mathcal F}=\pm\ \text{a single Pauli product (exact match census)}
+$$
+$$
+15\ \text{sign-classes},\ \text{each from exactly}\ 2\ \text{frames};\qquad\forall\ \text{class}:\ \exists i:[\gamma,W_i]\ne0\ \wedge\ \exists j:\{\gamma,W_j\}\ne0\ [\text{machine, entrywise}];\qquad S\text{-aligned classes}:\ [\gamma,\mathbb S]=0\iff\gamma=\pm\sigma_i\otimes\sigma_i:\ \text{exactly}\ 3\ [\text{machine}]
+$$
+$$
+[\mathbb S\otimes I_2,\ I_4\otimes\hat\chi]=(\mathbb S I_4)\otimes(I_2\hat\chi)-(I_4\mathbb S)\otimes(\hat\chi I_2)=0\ [8\times8\ \text{entrywise};\ \text{machine}]
+$$
+$$
+(5):\ \psi_\pm=(|c\rangle\pm|\omega(c)\rangle)/\sqrt2:\ \langle\psi_\pm|\hat\chi|\psi_\pm\rangle=0\ [\text{exact};\ \text{machine}];\qquad\hat\chi|L\rangle=+|L\rangle\ \text{remains sharp}\ [\mathrm{FT.122}(3)]
+$$
+$$
+(6):\ (H\otimes I_2)(I_3\otimes\hat\chi)=H\otimes\hat\chi=(I_3\otimes\hat\chi)(H\otimes I_2)\ [\text{machine on a generic Hermitian witness},\ 6\times6]
+$$
+$$
+(7):\ \text{FT.119}(4)\ \text{is an identity on the seal-triplet spectrum}\ [\mathrm{FT.111}(3)\ \text{normalization}];\ \hat\chi\ \text{acts on}\ \mathcal H_\omega:\ \text{disjoint bookkeeping}.\ \blacksquare
+$$
+
+**Phys.** Each prior obstruction was a correct theorem about a different room. The pincer and the frame refutation are theorems about the pair register under *its* weak action; the trace/rank obstruction is about conjugation on that same register; the $S$-parity census is about pair-register pseudoscalars; the zero-expectation theorem is about ensemble averages of $C$-odd reads; confinement blindness is about one-body colour-slot operators; the $Q$ bound is about the seal-side $C_3$ spectrum. The chirality operator acts on the chain's own orientation doublet, indexed by the chain, tensor-disjoint from all of them — and the census above re-proved every obstruction at its own locus before showing the new grade walks past. Nothing was overturned; the locus moved.
+
+---
+
+---
+
+### FT.125 — The deficit ledger: deficit 1 closed at the projector level; deficit 1$'$ opened
+
+**Thm.** Under Def-H.33 and FT.122–FT.124 (and the chain-carrier lift of FT.126):
+$$(1)\quad\textbf{Item 20 deficit 1 (chirality projector) — CLOSED at the projector level}\ (\text{under Def-H.34}).\ \ P_L,P_R\ \text{are corpus-constructible on}\ \mathcal H_\omega(c);\ \text{they satisfy every defining property}\ —\ \text{idempotent, orthogonal, complete, rank}\ 1\ [\mathrm{FT.122}(2)],\ \text{weak-commuting on the extended carrier}\ [\mathrm{FT.123}(1)],\ \hat\omega\text{-exchanged}\ [\mathrm{FT.123}(2)]\ —\ \text{and D2.6's vocabulary clause is an operator identity}\ [\mathrm{FT.122}(4)].$$
+$$\textbf{Residue:}\ \text{item 21(i)'s frame section}\ e\mapsto\mathcal F_e,\ \text{its coupling to the EW.32 transport, and a global Dirac-type operator on the emergent geometry remain unconstructed — Tier F.39 supplies the extended carrier and its grade, not the section};$$
+$$(2)\quad\textbf{Item 20 deficit 5 (gauge anomalies) — blocker RELOCATED, not removed.}\ \ \mathrm{FT.81}(4)\ \text{names three prerequisites: a chiral projector, a Weyl symbol, a hypercharge-assignment read. Tier F.39 discharges only the first. The anomaly sums}\ \bigl(\sum Y,\ \sum Y^3,\ [\mathrm{SU}(3)]^2\mathrm U(1),\ [\mathrm{SU}(2)]^2\mathrm U(1)\bigr)\ \text{are formable for any}\ \textbf{declared}\ \text{chiral assignment; no corpus-internal statement is possible until deficits}\ 1'\ (+2/3)\ \text{close};$$
+$$(3)\quad\textbf{Item 20 deficit 6 (the neutrino row) — PARTIALLY UNBLOCKED, precisely:}\ \ \operatorname{im}P_R\ \text{is a constructible right-handed Weyl-type carrier}\ [\mathrm{Def\text{-}H.33}];\ \text{species content remains absent (deficits 2/3 stand) — whether the corpus spectrum contains such a state is a separate, still-unposed question};$$
+$$(4)\quad\textbf{NEW deficit 1' (chiral matter assignment).}\ \ \text{Which species sits in which gauge representation on which chiral ray is not derived. The SM pattern}\ —\ \text{left}\ \mathrm{SU}(2)_L\ \text{doublets, right singlets}\ [\mathrm{FT.81}(2)]\ —\ \text{requires a rule correlating the}\ \hat\chi\text{-grade with the gauge representation and with the weak coupling itself}\ [\mathrm{FT.123}\ \text{Phys: the grade here is weak-blind}].\ \text{The algebraic}\ L/R\ \text{naming is fixed by the same rule}\ [\mathrm{FT.122}(6);\ \text{Def-H.33 canonicity Rmk}];$$
+$$(5)\quad\textbf{Item 20 deficit 11 (spin–statistics) — UNCHANGED.}\ \ \text{A single-chain chiral grade is not an exchange operator on two-chain states; FT.80}(5)\text{'s inventory still contains no exchange operator. Equating the grade's}\ \mathbb Z_2\ \text{with the permutation sign's}\ \mathbb Z_2\ \text{is a kind confusion, barred by the FT.89}(2)\ \text{discipline}\ —\ \text{the same species as the torsor/ray distinction of FT.122}(7);$$
+$$(6)\quad\textbf{the rest of the ledger:}\ \ \text{deficits}\ 2\ (\text{Yukawa}),\ 3\ (\text{generations/flavour}),\ 4\ (\text{CKM/PMNS})\ \text{remain open, now downstream of}\ 1'\ \text{rather than of}\ 1;\qquad\text{deficits}\ 7,8,9,10,12\ \text{unchanged}\ [\mathrm{FT.124}(6)\text{–}(7):\ \text{the mass ceilings are properties of the pole-side and colour-side reads}];$$
+$$(7)\quad\textbf{the reversal accounting:}\ \ \text{every prior obstruction tag remains frozen and valid on its own locus}\ [\mathrm{FT.124},\ \text{clause by clause}];\ \text{no result of Tiers F.1–F.11–Tier F.38 is overturned — the closure is by relocation, not by refutation}.$$
+
+**Req.** FT.122, FT.123, FT.124 (this tier); FT.79, FT.80, FT.81, FT.84 (Tiers F.26–F.28); FT.87(8), FT.89(2) (Tiers F.29–F.30); FT.93(7) (Tiers F.31–F.34); FT.117, FT.119 (Tier F.38); item 20, item 21(i), Def-H.38, Def-H.34; exact bookkeeping; machine: `checks/verify_H_chirality.py` §D.
+
+**Pf.**
+$$
+(1):\ \mathrm{FT.122}(1)\text{–}(5)+\mathrm{FT.123}(1)\text{–}(2)\ \text{discharge the defining properties}\ [\text{machine}\ \S\mathrm{A}\text{–}\S\mathrm{B}];\qquad\text{residue}:\ \text{item 21(i)'s enumeration stands — no frame section is constructed anywhere in Tier F.39}
+$$
+$$
+(2):\ \mathrm{FT.81}(4)\ \text{verbatim:}\ \text{``no chiral projector, no Weyl symbol and no hypercharge-assignment read''};\qquad\text{Tier F.39 supplies the first; the second and third are deficit}\ 1'/2/3\ \text{content}
+$$
+$$
+(3):\ \operatorname{im}P_R=\mathbb C|R\rangle\ [\mathrm{FT.122}(2)\text{–}(3):\ \text{rank}\ 1];\qquad\text{species: deficits 2/3 unchanged}
+$$
+$$
+(4):\ \mathrm{FT.81}(2)\ \text{records the SM chiral pattern as external data};\qquad\mathrm{FT.123}\ \text{Phys}:\ [W_i\otimes I_\omega,\ I\otimes P_{L/R}]=0\ \text{is blindness, not coupling};\qquad\neg\exists\ \text{assignment rule in Tiers F.1–F.11–Tier F.39}
+$$
+$$
+(5):\ \text{grade}\ \mathbb Z_2=\{\pm\hat\chi\}\ \text{on}\ \mathcal H_\omega(c)\ (\text{one chain});\qquad\text{exchange sign}\ \mathbb Z_2\ \text{would act on}\ \mathcal H_\omega(c_1)\otimes\mathcal H_\omega(c_2)\ \text{by}\ c_1\leftrightarrow c_2\ —\ \text{no such operator in the inventory}\ [\mathrm{FT.80}(5)];\qquad\text{kind confusion}\ [\mathrm{FT.89}(2);\ \mathrm{FT.122}(7)\ \text{precedent}]
+$$
+$$
+(6),(7):\ \mathrm{FT.124}\ \text{clauses verbatim};\qquad\text{no contradiction with any frozen tag}.\ \blacksquare
+$$
+
+**Phys.** Chirality exists in the corpus: an exact, canonical-up-to-naming $\mathbb Z_2$ grade on the chain's orientation doublet, with projectors that commute with the weak action, are exchanged by orientation reversal, and walk past all seven prior obstructions because none of them was ever about this space. The ledger keeps its discipline: one item closed at precisely the level achieved — the projector, not the coupling, not the section, not the species; one sharper item opened in its place; nothing else moved. That is the shape the deficit-list discipline expects from a real closure.
+
+---
+
+---
+
+### FT.126 — Weak-covariant chiral projectors on the chain carrier
+
+**Thm.** Combining FT.123's tensor-factor separation with the branch-grading locus of FT.101: the orientation-space chirality lifts to the chain-carried Dirac-type carrier $\mathcal H_{\mathrm{int}}\otimes\mathcal H_\omega(c)$:
+$$(1)\quad P_{L/R}^{\mathrm{car}}\ :=\ I_{\mathrm{int}}\otimes P_{L/R}:\qquad(P^{\mathrm{car}}_{L/R})^2=P^{\mathrm{car}}_{L/R},\qquad P^{\mathrm{car}}_LP^{\mathrm{car}}_R=0,\qquad P^{\mathrm{car}}_L+P^{\mathrm{car}}_R=\mathrm{id},\qquad\operatorname{tr}P^{\mathrm{car}}_{L/R}=2;$$
+$$(2)\quad[W_i\otimes I_\omega,\ P^{\mathrm{car}}_{L/R}]=0\ \ \forall i\qquad[\text{the weak isospin acts chirality-blind}];$$
+$$(3)\quad\text{each Weyl half}\ \operatorname{im}P^{\mathrm{car}}_{L/R}\ \text{carries exactly one chiral ray of the orientation factor and the full internal seed action (weak-blind, not weak-inactive:}\ \bigcap_i\ker(W_i\otimes I_\omega)=\{0\}\ \text{[machine])};$$
+$$(4)\quad\textbf{independence of the two}\ \mathbb Z_2\textbf{'s:}\ \ \text{the A4 branch grading of FT.101 is label-level registration data}\ [\mathrm{FT.101}(3):\ \text{no Hilbert-space implementation on the pair register}];\ \text{the chiral grading is an implemented involution on the orientation factor. Any internal involution}\ G\otimes I_\omega\ \text{commutes with}\ I_{\mathrm{int}}\otimes\hat\omega\ \text{and their product is a third, distinct involution:}\ \mathbb Z_2\times\mathbb Z_2\ [\text{machine on}\ G\in\{\sigma_3,\sigma_1\};\ \mathrm{FT.88}\text{'s}\ \langle\omega,\Theta_{\mathfrak L}\rangle=\mathbb Z_2\times\mathbb Z_2\ \text{is the frozen precedent for the product structure}].$$
+
+**Req.** FT.122, FT.123, FT.124 (this tier); FT.88, FT.101 (**Tiers F.29–F.30**, **Tiers F.31–F.34**); EW.32 (Part 2); Def-H.34 (carrier clause); Kronecker-product identities [math; machine: `checks/verify_H_chirality.py` §B].
+
+**Pf.**
+$$
+(1):\ \mathrm{FT.122}(2)\ \text{tensored with}\ I_{\mathrm{int}}:\ (I\otimes P)^2=I\otimes P^2=I\otimes P;\quad\operatorname{tr}(I_2\otimes P_{L/R})=2\cdot1=2\ [\text{machine}]
+$$
+$$
+(2):\ \mathrm{FT.123}(1)\ \text{verbatim};\qquad(3):\ \operatorname{im}(I\otimes P_L)=\mathcal H_{\mathrm{int}}\otimes\mathbb C|L\rangle;\quad\bigcap_i\ker(\sigma_i\otimes I)=\bigl(\bigcap_i\ker\sigma_i\bigr)\otimes\mathcal H_\omega=\{0\}\ [\sigma_i\ \text{invertible};\ \text{exact}\ 24\times8\ \text{rank}\ 8;\ \text{machine}]
+$$
+$$
+(4):\ [G\otimes I,\ I\otimes\hat\omega]=0\ [\text{machine}];\qquad(G\otimes I)(I\otimes\hat\omega)=G\otimes\hat\omega\ne G\otimes I,\ I\otimes\hat\omega\ [\text{entrywise};\ \text{machine}];\qquad(G\otimes\hat\omega)^2=G^2\otimes\hat\omega^2=\mathrm{id}\ \blacksquare
+$$
+
+**Phys.** The weak force and the chiral grade do not interfere: the branch grading of FT.101 and the chiral grading of this tier are two independent $\mathbb Z_2$'s on disjoint data, and the lifted projectors give each Weyl half of the chain carrier its own orientation ray. Which branch, which ray, and which species go together is a *third* rule — the application-layer assignment rule of FT.125(4).
+
+---
+
+---
+
+
+## Tier F.40 — The Static Force Matrix on the Extended Carrier: The Aspect Census, the No-Flip Theorem, and the Charge–Parity Splitting
+
+### Def-H.34 — The extended carrier basis, the chiral transform, and the partner involution
+
+**Def.** For a bound chain $c$ [D1.4: ordered tuple of distinct real edges; D1.5: bound $=$ closed self-contained, fermionic content]:
+- **Extended carrier (constitutive carrier clause).** $\mathcal H_{\mathrm{ext}}:=\mathcal H_{\mathrm{int}}\otimes\mathcal H_\omega(c)\cong\mathbb C^2\otimes\mathbb C^2\cong\mathbb C^4$, with $\mathcal H_{\mathrm{int}}=\mathcal H_{\mathsf v}$ the seed carrier, orthonormal basis $\{|\mathsf v\rangle,|\mathsf v^\perp\rangle\}$ [EW.32; the complement ray is a basis convention — all statements below are basis-covariant], and $\mathcal H_\omega$, $\hat\omega$, $\hat\chi$, $P_{L/R}$, $|L\rangle$, $|R\rangle$ as in Def-H.33.
+- **Ordered orientation basis** (internal-major Kronecker order; composite index $=2\cdot\mathrm{int}+\omega$):
+$$|1\rangle:=|\mathsf v\rangle\otimes|c\rangle,\qquad|2\rangle:=|\mathsf v\rangle\otimes|\omega(c)\rangle,\qquad|3\rangle:=|\mathsf v^\perp\rangle\otimes|c\rangle,\qquad|4\rangle:=|\mathsf v^\perp\rangle\otimes|\omega(c)\rangle.$$
+- **Chiral carrier basis.** $\{|\mathsf v\rangle\otimes|L\rangle,\ |\mathsf v\rangle\otimes|R\rangle,\ |\mathsf v^\perp\rangle\otimes|L\rangle,\ |\mathsf v^\perp\rangle\otimes|R\rangle\}$, with $|L\rangle=\tfrac1{\sqrt2}(|c\rangle-i|\omega(c)\rangle)$, $|R\rangle=\tfrac1{\sqrt2}(|c\rangle+i|\omega(c)\rangle)$ [Def-H.33].
+- **The $S$-transform.** $S:=\bigl(\begin{smallmatrix}1&1\\-i&i\end{smallmatrix}\bigr)$ (columns $=$ unnormalized chiral kets): $S^\dagger S=2I_2$; $U:=I_2\otimes S$; the conjugation $M\mapsto\tfrac12U^\dagger MU$ is exact over $\mathbb Q(i)$ and rotates the $\omega$-factor Pauli images cyclically:
+$$\hat\omega\ (\sigma_1)\ \mapsto\ -\sigma_2,\qquad\hat\chi\ (-\sigma_2)\ \mapsto\ \sigma_3,\qquad\hat\kappa\ (\sigma_3)\ \mapsto\ \sigma_1.$$
+- **Partner involution.** $\hat\kappa:=|c\rangle\langle c|-|\omega(c)\rangle\langle\omega(c)|$ — the unique diagonal $\hat\omega$-odd Hermitian involution up to sign [FT.122(6)'s circle at $(a,y)=(\pm1,0)$; machine]. Quaternionic triple with Def-H.33's operators:
+$$\hat\omega^2=\hat\chi^2=\hat\kappa^2=\mathrm{id};\qquad\{\hat\omega,\hat\chi\}=\{\hat\chi,\hat\kappa\}=\{\hat\kappa,\hat\omega\}=0;\qquad\hat\omega\hat\chi=-i\hat\kappa,\quad\hat\chi\hat\kappa=-i\hat\omega,\quad\hat\kappa\hat\omega=-i\hat\chi.$$
+- **Force-profile and read data.** $\mathbf c=(c_0,c_1,c_2,c_3)\in\mathbb Q^4$: the weak-transport profile of the chain over the seed generator set $\{W_1,W_2,W_3,Y\}$ [EW.33's $c_A$; EW.32's images] — configuration data, formal indeterminates in the Def-H.32(3) discipline, never fitted [P1, P4];
+$$h(\mathbf c)=\tfrac12\sum_{a=0}^{3}c_a\,\sigma_a\qquad(\sigma_0:=I_2);\qquad|\mathbf c|^2:=c_1^2+c_2^2+c_3^2;$$
+$q:=q_{\mathrm{core}}(c)\in\{-1,0,+1\}$: the ternary core-charge read of the oriented chain [D3.4, EM.9, FT.40] — registration data, $\omega$-odd [FT.40].
+
+**Rmk (the three bases of the triple).** Each basis of $\mathcal H_\omega$ diagonalizes one member of the triple: the orientation basis $\{|c\rangle,|\omega(c)\rangle\}$ diagonalizes $\hat\kappa$; the chiral basis $\{|L\rangle,|R\rangle\}$ diagonalizes $\hat\chi$; the parity basis $\{(|c\rangle+|\omega(c)\rangle)/\sqrt2,\ (|c\rangle-|\omega(c)\rangle)/\sqrt2\}$ diagonalizes $\hat\omega$ [machine]. Every ray of one member is an equal-weight superposition in the eigenbasis of the other two — in particular $|c\rangle=(|L\rangle+|R\rangle)/\sqrt2$: the orientation rays, which FT.129(5) makes stationary, carry no definite chirality. No new structure beyond Def-H.33: $\hat\kappa$ completes its operator triple.
+
+---
+
+---
+
+### FT.127 — The aspect census on the extended carrier
+
+**Thm.** For the complete force operator of A8 — aspect inventory: the six pair-sector aspects [CT0.12], the rung masks and stack blocks [CT0.13, CT0.14], the two dark aspects [CT4.6, D4.1, D4.3], the Janus move classes [D1.2, FT.108(1)] — the derived-action census on $\mathcal H_{\mathrm{ext}}$ is:
+$$(1)\quad F_W\ (\mathcal E_{+-}=\operatorname{span}\{W_i\},\ 3\text{-dim}\ [\mathrm{CT0.12}]):\ \textbf{acts}.\qquad W_i^{(\mathrm{ext})}=\tfrac12\sigma_i\otimes I_\omega\qquad[\mathrm{EW.32}\ \text{seed images};\ \text{Def-H.34}]\ \ [\text{exact}\ 4\times4\ \text{over}\ \mathbb Q(i)];$$
+$$(2)\quad F_{\mathrm{EM}}\ (\text{stack},\ 1\text{-dim}\ [\mathrm{CT0.14}]):\ \textbf{acts on the internal factor only},\ \text{via the neutral mixing}\ A=\sin\theta_W\,W_3+\cos\theta_W\,Y\ [\mathrm{D3.10},\ \mathrm{EW.24}]:$$
+$$A^{(\mathrm{ext})}=\tfrac12\bigl(\sin\theta_W\,\sigma_3+\cos\theta_W\,\sigma_0\bigr)\otimes I_\omega\qquad[\mathrm{EW.32}:\ Y\mapsto\tfrac12\sigma_0]\ —\ \text{inside clause}\ (1)\text{'s span};\ \text{chirality-blind}\ (\otimes I_\omega);$$
+$$\text{the ternary end-register read}\ q_{\mathrm{core}}\ [\mathrm{D3.4},\ \mathrm{EM.9},\ \mathrm{FT.40}]\ \text{is}\ \omega\text{-odd configuration data: an orientation-side action requires the read promotion of FT.129 (Def-H.43)};$$
+$$\text{a bridge between the seed neutral content and the ternary read is not derived (the ternary-read situation is $\neg$derived here)};$$
+$$(3)\quad F_G\ (\operatorname{span}\{\hat E^{ij}\}\ \text{traceless},\ 5\text{-dim}\ [\mathrm{CT0.12}]):\ \textbf{does not act on}\ \mathcal H_{\mathrm{ext}}\ —\ \text{pair-register block}\ [\mathrm{CT1.2}];\ \text{chain-level content}= \text{geometric defect data}\ (\Theta_R\text{-type scalars under the Def-H.37(2)}\ \text{transfer}\ [\mathrm{FT.33},\ \mathrm{FT.54}(4)])\ —\ \text{scalar class};$$
+$$(4)\quad F_H\ (\operatorname{span}\{\Sigma\},\ H=h\Sigma\ [\mathrm{EW.13}]):\ \textbf{does not act as a carrier matrix}\ —\ \Sigma\in\operatorname{End}(\mathbb C^4_{\mathrm{pair}})\ [\mathrm{CT1.2}];\ \text{Higgs content on chains}= \text{scalar background}\ (h_0\ \text{P4-class};\ \text{entering only through the EW.20/EW.33 defect-residue packaging})\ —\ \text{scalar class};$$
+$$(5)\quad F_{D^+}\ (\operatorname{span}\{E_0\}=\Lambda\,\mathbb I\ [\mathrm{D4.3},\ \mathrm{CT4.6}]):\ \textbf{scalar class}\ —\ \text{central identity direction, configuration-independent};\ \text{if admitted on a carrier it is}\ \lambda I_4,\ \text{re-absorbed by}\ h\mapsto h+\lambda I_2\ [\mathrm{FT.130}(7)];\ \text{geometric side}\ \Lambda g_{\mu\nu}\ [\mathrm{CT1.23}],\ w=-1\ [\mathrm{CT1.25}];$$
+$$(6)\quad F_{J^+},F_{J^-}\ (\operatorname{span}\{J_i\},\ \operatorname{span}\{K_i\}\ [\mathrm{CT0.12},\ \mathrm{CT0.7}(4)]):\ \textbf{do not act on}\ \mathcal H_{\mathrm{ext}}\ —\ \text{pair-register matrices}\ [\mathrm{CT1.2}]\ \text{and graph-level Janus move generators}\ [\mathrm{D1.2},\ \mathrm{FT.108}(1)];\ \text{no seed or orientation action derived};\ \text{their bilinear channel content is the seal-triplet reads of Tiers F.37–F.38}\ [\mathrm{FT.109},\ \mathrm{FT.116}];$$
+$$(7)\quad F_{\mathrm{strong}}\ (8\text{-dim stack}\ [\mathrm{CT3.8},\ \mathrm{CT3.13},\ \mathrm{CT0.14}]):\ \textbf{does not act on}\ \mathcal H_{\mathrm{ext}}\ —\ \text{acts on the colour-slot carrier}\ \mathbb C^3\ \text{at trivalent vertices}\ [\mathrm{CT3.2},\ \mathrm{D3.1}];\ \text{the seed is colour-neutral by theorem}\ [\mathrm{EW.32}:\ T_a\mathsf v=0];\ \text{colour sits in an orthogonal stack block}\ [\mathrm{CT0.12}\ \mathrm{Rmk};\ \mathrm{FT.93}(4)];\ \mathcal H_{\mathrm{ext}}\ \text{has no slot factor};\ \text{sealed ends are blind in any case}\ [\mathrm{FT.117}];$$
+$$(8)\quad F_{D^-}\ \bigl(\bigoplus_{n\ge4}F_n\ [\mathrm{D4.1},\ \mathrm{CT4.1},\ \mathrm{CT4.6}]\bigr):\ \textbf{does not act}\ —\ \text{ledger sink/retention verbs}\ [\mathrm{CT4.2}\text{–}\mathrm{CT4.5};\ \text{the retention census is}\ u\text{-fugacity bookkeeping}\ [\mathrm{FT.108}(3)]];\ \text{no carrier representation};$$
+$$(9)\quad\textbf{census conclusion:}\ \ \text{the derived static force matrix is exactly the EW seed content},$$
+$$\mathbf F_{\mathrm{ext}}(\mathbf c)=h(\mathbf c)\otimes I_\omega,\qquad h(\mathbf c)=\tfrac12\sum_{a=0}^{3}c_a\,\sigma_a,$$
+$$\text{and the four images}\ \{\tfrac12\sigma_a\otimes I_2\}_{a=0}^{3}\ \text{are}\ \mathbb C\text{-independent with span}\ \operatorname{End}(\mathbb C^2)\otimes I_\omega\ [\text{machine}]:\ \text{every derived aspect action is chirality-blind}.$$
+
+**Req.** CT0.7, CT0.12, CT0.13, CT0.14, CT1.2, CT1.3 (Part 1); CT1.23, CT1.25 (Part 2); A8, D1.2, D3.1, D3.4, D3.10, D4.1, D4.3, P1, P4 (Parts 1–2); EW.8, EW.13, EW.20, EW.24, EW.32, EW.33 (Part 2); EM.9 (Part 2); CT3.2, CT3.8, CT3.13 (Part 2); CT4.1, CT4.2, CT4.3, CT4.5, CT4.6 (Part 2); FT.20 (Tiers F.1–F.11); FT.33 (Tiers F.12–F.13); FT.54 (Tiers F.17–F.19); FT.93 (Tiers F.31–F.34); FT.108 (Tier F.36); FT.109 (Tier F.37); FT.116, FT.117 (Tier F.38); Def-H.33, FT.123 (Tier F.39); Def-H.37(2), Def-H.32, Def-H.34; exact $\mathbb Q(i)$ independence rank (real-form flattening with $i$-doubles) [math; machine: `checks/verify_H_force_matrix.py` §B].
+
+**Pf.**
+$$
+(1):\ \mathrm{EW.32}:\ W_i\mapsto\tfrac12\sigma_i\ \text{on}\ \mathcal H_{\mathsf v};\qquad\text{Def-H.34: the extended action is}\ W_i\mapsto\tfrac12\sigma_i\otimes I_\omega;\qquad\text{the three}\ 4\times4\ \text{matrices written entrywise over}\ \mathbb Q(i)\ [\text{machine}]
+$$
+$$
+(2):\ A=\sin\theta_WW_3+\cos\theta_WY\ [\mathrm{EW.24};\ \mathrm{D3.10}];\qquad A^{(\mathrm{ext})}=\sin\theta_W\,W_3^{(\mathrm{ext})}+\cos\theta_W\,Y^{(\mathrm{ext})}\ [\text{linearity}];\qquad Y\mapsto\tfrac12\sigma_0\ [\mathrm{EW.32}];\qquad\text{unit normalization pin:}\ \mathfrak T\bigl((\tfrac12(\sin\theta_W\sigma_3+\cos\theta_W\sigma_0))^2\bigr)=\tfrac12\ [\sin^2+\cos^2=1;\ \mathfrak T\sigma_3=0]
+$$
+$$
+(9):\ \text{flattening}\ \{\tfrac12\sigma_a\otimes I_2\}\ \text{with}\ i\text{-doubles: real rank}\ 8=4\ \text{over}\ \mathbb C\ [\text{machine}];\qquad\operatorname{span}\{\sigma_0,\sigma_1,\sigma_2,\sigma_3\}=\operatorname{End}(\mathbb C^2)\ [\mathrm{CT1.1}\text{'s Pauli basis};\ \text{machine}]
+$$
+$$
+(3)\text{–}(8):\ \text{each row's locus is the cited frozen tag verbatim: pair-register membership}\ [\mathrm{CT1.2}\ \text{basis table}],\ \text{slot carriers}\ [\mathrm{CT3.2}],\ \text{ledger sinks}\ [\mathrm{D4.1},\ \mathrm{CT4.1}],\ \text{scalar/central directions}\ [\mathrm{D4.3},\ \mathrm{EW.13},\ \mathrm{EW.20}];\qquad\neg\exists\ \text{derived seed or orientation action for any of the eight}\ [\text{inventory scan: the only carrier bridge in Parts 1–2 is EW.32's}].\ \blacksquare
+$$
+
+**Phys.** Ask the nine aspects of the complete force where they act on the extended carrier, and eight answer elsewhere — on the pair register, in the colour slots, in the ledger, or as scalar background. The census is the theorem: the derived force content of a chain carrier is exactly the electroweak seed image, one simple tensor with the orientation identity, hence chirality-blind by construction. No aspect of A8 reaches the orientation factor; the only canonical candidate that does is the chain's own $\omega$-odd read data, taken up in FT.129.
+
+---
+
+---
+
+### FT.128 — The no-flip theorem at the derived locus
+
+**Thm.** In the chiral basis of Def-H.34:
+$$(1)\quad\textbf{form invariance:}\qquad U^{-1}\bigl(h(\mathbf c)\otimes I_\omega\bigr)U=h(\mathbf c)\otimes I_2\qquad[\text{the conjugation touches only the}\ \omega\text{-factor, where the derived matrix is the identity}];$$
+$$(2)\quad\textbf{the block decomposition:}\qquad F_{LL}=F_{RR}=h(\mathbf c),\qquad F_{LR}=F_{RL}=0\qquad\text{exactly, for every profile}\ \mathbf c;$$
+$$(3)\quad\textbf{the weak flip contribution vanishes by computation:}\qquad P_L^{\mathrm{car}}\,W_i^{(\mathrm{ext})}\,P_R^{\mathrm{car}}=0\ \ \forall i\qquad[\text{entrywise on the explicit}\ 4\times4\ \text{matrices};\ \mathrm{FT.123}(1)\ \text{re-verified, not invoked}];$$
+$$(4)\quad\bigl[\mathbf F_{\mathrm{ext}}(\mathbf c),\ I_2\otimes\hat\chi\bigr]=0\ \ \forall\mathbf c:\qquad\text{chirality is an exact quantum number of the derived static force matrix};$$
+$$(5)\quad\textbf{the derived spectrum:}\qquad\operatorname{charpoly}\mathbf F_{\mathrm{ext}}(\mathbf c)=\Bigl(x^2-c_0x+\tfrac{c_0^2-|\mathbf c|^2}{4}\Bigr)^2,$$
+$$\operatorname{spec}=\Bigl\{\tfrac12\bigl(c_0+|\mathbf c|\bigr),\ \tfrac12\bigl(c_0-|\mathbf c|\bigr)\Bigr\},\ \text{each with multiplicity}\ 2\ \text{across the chiral rays}\ —\ \textbf{spectral parity doubling};\qquad|\mathbf c|=\sqrt{|\mathbf c|^2}\in\text{a quadratic extension of}\ \mathbb Q(\mathbf c);$$
+$$(6)\quad\textbf{the static shadow, derived locus:}\qquad\langle L|\mathbf F_{\mathrm{ext}}|R\rangle=0\ —\ \text{the force aspects alone produce no parity-flipping seed on the extended carrier of a bound chain};\qquad\text{the flipping set at the derived locus}=\varnothing.$$
+
+**Req.** FT.127; Def-H.34; FT.122(1)–(3), FT.123(1) (Tier F.39); CT1.2 (Part 1); Zariski-dense rational sampling (entries linear in $\mathbf c$: vanishing on a dense set implies identically zero), Faddeev–LeVerrier over $\mathbb Q(i)$ [math; machine: `checks/verify_H_force_matrix.py` §B].
+
+**Pf.**
+$$
+(1):\ U=I_2\otimes S:\quad U^{-1}(h\otimes I_2)U=h\otimes(S^{-1}I_2S)=h\otimes I_2\ [\text{machine on}\ 108\ \text{exact rational profiles}]
+$$
+$$
+(2):\ \text{block extraction in the chiral carrier basis}\ \{|\mathsf v L\rangle,|\mathsf v R\rangle,|\mathsf v^\perp L\rangle,|\mathsf v^\perp R\rangle\}:\ F_{LR}=P_L^{\mathrm{car}}\mathbf F_{\mathrm{ext}}P_R^{\mathrm{car}}=0\ \text{entrywise at every sample profile};\qquad\text{entries of}\ F_{LR}\ \text{are linear in}\ \mathbf c:\ \text{vanishing on the Zariski-dense sample set}\implies F_{LR}\equiv0\ [\text{machine}]
+$$
+$$
+(3):\ P_L^{\mathrm{car}}=I_2\otimes P_L,\ P_R^{\mathrm{car}}=I_2\otimes P_R\ [\mathrm{FT.126}(1)]:\quad (I\otimes P_L)(\tfrac{\sigma_i}2\otimes I)(I\otimes P_R)=\tfrac{\sigma_i}2\otimes P_LP_R=0\ [\mathrm{FT.122}(2):\ P_LP_R=0];\qquad\text{machine: entrywise zero on all three}\ 4\times4\ \text{products}
+$$
+$$
+(4):\ [h\otimes I_2,\ I_2\otimes\hat\chi]=[h,I_2]\otimes[I_2,\hat\chi]\text{-type disjointness}:\ (hI_2)\otimes(I_2\hat\chi)-(I_2h)\otimes(\hat\chi I_2)=0\ [\text{machine}]
+$$
+$$
+(5):\ \operatorname{charpoly}h(\mathbf c)=x^2-c_0x+\tfrac{c_0^2-|\mathbf c|^2}4\ [\det h=\tfrac{c_0^2-|\mathbf c|^2}4;\ \mathfrak T h=c_0];\qquad\operatorname{charpoly}(h\otimes I_2)=(\operatorname{charpoly}h)^2\ [\text{Kronecker spectrum};\ \text{machine: Faddeev–LeVerrier coefficient identity at all}\ 108\ \text{profiles}]
+$$
+$$
+(6):\ \langle L|\mathbf F_{\mathrm{ext}}|R\rangle=(I_2\text{-block of}\ F_{LR})=0\ [(2)].\ \blacksquare
+$$
+
+**Phys.** The derived force matrix is blind to the very distinction the carrier was built to carry: it preserves each chiral ray, doubles every level across the two rays, and commutes with the chirality grade. That is not a failure of the census — it is its content. Every force the corpus derives onto this carrier arrives through the seed, and the seed action is internal: the orientation factor sees only the identity. A parity flip, if the corpus is to have one, must come from the orientation factor's own read structure, and the no-flip theorem narrows the search to a single question: does any $\omega$-odd datum of the bound chain act there?
+
+---
+
+---
+
+### Def-H.43 — The read promotion on the orientation doublet
+
+**Def.** An $\omega$-odd A8-aspect read carried by a bound chain acts on the orientation doublet $\mathcal H_\omega$ [Def-H.33] as the multiplication operator of its eigenvalues on the orientation basis rays:
+$$
+\text{read}\ q\ \longmapsto\ \hat q\ :=\ q\cdot\hat\kappa\qquad(\omega\text{-odd reads}),\qquad
+\hat\kappa\ =\ |c\rangle\langle c|-|\omega(c)\rangle\langle\omega(c)|\ \ [\mathrm{Def\text{-}H.34}:\ \text{the unique diagonal}\ \hat\omega\text{-odd Hermitian involution up to sign},\ \mathrm{FT.122}(6)],
+$$
+EM core read: $\ \hat Q_{\mathrm{EM}}=q_{\mathrm{core}}(c)\,\hat\kappa$, with $q_{\mathrm{core}}\in\{-1,0,+1\}$ ternary registration data [D3.4, EM.9, FT.40] — $\neg$fitted. $\omega$-even reads shift (no flip); the parity split is derived [FT.129(3) — immediate below], $\neg$part of this definition. The promotion is the sole source of a chirality-flipping block [FT.129(4)–(5)].
+**Derived under the promotion (cited).** Flipping block $F_{LR}=q_{\mathrm{core}}I_2$; flipping set $\{F_{\mathrm{EM}}\ \text{core read}\}$ — minimal and unique; chiral-partner splitting $2|q|\in\{0,2\}$ [FT.129(5), FT.130(5)]; at the derived locus (no promotion): the no-flip theorem holds unconditionally [FT.128].
+**Bars (standing).** $2|q|$ is $\neg$a frequency — no carrier-time parameter exists; emergent time is a prerequisite [FT.131(3)]; $\hat\kappa$-/$\hat\chi$-eigenrays are $\neg$species and $\neg$SM chiralities — the assignment rule is application-layer content; $\omega$-even reads are not promoted to $\hat\kappa$-multiples [FT.129(3) is derived]; a transit-chain flipping census is out of scope [FT.131(1)]; external calibration barred [P1, P5].
+**Tension remark (structural).** The chiral rays superpose $\omega$-opposed core charges $(q,-q)$ [FT.40] while channel-level coarse-graining is sign-blind and fuses only equal-$q$ states [FT.15's hypothesis; FT.90(5)'s audit] — the carrier-level doublet and channel fusion are distinct structures; their relation is bridge content [Def-H.39's slots], open, and no theorem of this part identifies them [FT.131(5)].
+
+---
+
+### FT.129 — The canonical flip candidate and the read promotion
+
+**Thm.**
+$$(1)\quad\textbf{canonicity:}\qquad\bigl\{M=M^\dagger:\ M\ \text{diagonal in the orientation basis},\ \hat\omega M\hat\omega=-M,\ M^2=\mathrm{id}\bigr\}=\{+\hat\kappa,\ -\hat\kappa\}\qquad[\mathrm{FT.122}(6)\text{'s circle at}\ (a,y)=(\pm1,0);\ \text{exact rational census};\ \text{machine}];$$
+$$(2)\quad\textbf{chiral images:}\qquad\hat\kappa|L\rangle=|R\rangle,\quad\hat\kappa|R\rangle=|L\rangle\ (\text{ray swap, no phase});\qquad\text{in the chiral basis:}\ \hat\kappa\mapsto\sigma_1\text{-type},\ \hat\chi\mapsto\sigma_3\text{-type},\ \hat\omega\mapsto-\sigma_2\text{-type}\ [\text{the}\ S\text{-rotation of Def-H.34};\ \text{machine}];$$
+$$(3)\quad\textbf{the parity split of the reads on the doublet:}\qquad\omega\text{-odd}:\ q_{\mathrm{core}}\ [\mathrm{FT.40}],\ k\ \text{and}\ \operatorname{sign}(k)\ [\mathrm{D2.6};\ \mathrm{EM.24}(1);\ \mathrm{FT.87}(8)];\qquad\omega\text{-even}:\ |k|,\ \Theta^2,\ \text{the sign-blind reads}\ [\mathrm{FT.90}(5)];$$
+$$\text{an even read, promoted, multiplies}\ I_2\ (\text{chirality-blind});\ \text{an odd read, promoted, multiplies}\ \hat\kappa\ (\text{chirality-flipping}):\ \text{the flipping structure of any scalar read class is decided by its}\ \omega\text{-parity};$$
+$$(4)\quad\textbf{Def-H.43 (read promotion, Def-H.43):}\ \ \text{an}\ \omega\text{-odd A8-aspect read carried by a bound chain acts on}\ \mathcal H_\omega\ \text{as the multiplication operator of its eigenvalues on the basis rays. For the EM core read:}$$
+$$\hat Q_{\mathrm{EM}}:=q_{\mathrm{core}}(c)\,\hat\kappa\qquad[\text{the unique minimal promotion consistent with FT.40's eigenvalues}\ (q,-q);\ q\in\{-1,0,+1\}\ \text{registration data},\ \neg\text{fitted}];$$
+$$\text{no such action is derived in Parts 1–2 (reads are labels}\ [\mathrm{Def\text{-}H.15}(4)]\text{), hence declared.}\ \textbf{Tension logged:}\ \text{the chiral rays superpose}\ \omega\text{-opposed core charges}\ (q,-q);\ \text{channel-level coarse-graining fuses only equal-}q\ \text{states}\ [\mathrm{FT.15}\ \text{hypothesis};\ \mathrm{FT.90}(5)\ \text{audit}]\ —\ \text{the relation between the carrier-level doublet and channel fusion is item 7/item 13 bridge content, open};$$
+$$(5)\quad\textbf{the promoted force matrix and its flipping block:}\qquad\text{under Def-H.43,}$$
+$$\mathbf F_{\mathrm{ext}}(\mathbf c,q)=h(\mathbf c)\otimes I_2+q\,I_2\otimes\hat\kappa,\qquad\bigl[h(\mathbf c)\otimes I_2,\ q\,I_2\otimes\hat\kappa\bigr]=0\ [\text{machine}];$$
+$$F_{LL}=F_{RR}=h(\mathbf c),\qquad F_{LR}=q\,I_2=F_{RL}:\qquad\text{nonzero}\iff q\ne0;$$
+$$\textbf{the flipping set}=\{F_{\mathrm{EM}}\ \text{core read}\}:\ \text{minimal and unique — removing the}\ \hat\kappa\ \text{term kills}\ F_{LR}\ \text{for every profile}\ [\mathrm{FT.128}(2)];\ \text{removing every internal term leaves}\ F_{LR}=qI_2\ [\text{machine}];$$
+$$\text{the off-diagonal matrix elements encoding the flipping structure are the core-charge read itself:}\qquad\langle L|\mathbf F_{\mathrm{ext}}|R\rangle=q\,I_2.$$
+
+**Req.** Def-H.34; FT.128; FT.122(6)–(7), FT.123, FT.126 (Tier F.39); Def-H.33 (Tier F.39); FT.15 (Tiers F.1–F.11); FT.40 (Tiers F.12–F.13); Def-H.15 (Tiers F.1–F.11); FT.87(8), FT.89(2), FT.90(5) (Tiers F.29–F.30); EM.9, EM.24 (Part 2); D2.6, D3.4 (Parts 1–2); Def-H.43; exact canonicity census, Kronecker block algebra [math; machine: `checks/verify_H_force_matrix.py` §A, §C].
+
+**Pf.**
+$$
+(1):\ M=\operatorname{diag}(a,b):\ \hat\omega M\hat\omega=\operatorname{diag}(b,a)=-M\iff b=-a;\qquad M^2=\mathrm{id}\iff a^2=1\iff a=\pm1\iff M=\pm\hat\kappa\ [\text{exact rational census};\ \text{machine}]
+$$
+$$
+(2):\ \hat\kappa|L_u\rangle=\hat\kappa(|c\rangle-i|\omega(c)\rangle)=|c\rangle+i|\omega(c)\rangle=|R_u\rangle\ [\text{unnormalized, exact}];\qquad\text{likewise}\ \hat\kappa|R_u\rangle=|L_u\rangle;\qquad\tfrac12S^\dagger\sigma_3S=\sigma_1\ [\mathrm{Def\text{-}H.34}\ \text{rotation};\ \text{machine}]
+$$
+$$
+(3):\ q_{\mathrm{core}}(\omega(c))=-q_{\mathrm{core}}(c)\ [\mathrm{FT.40}];\qquad k\mapsto-k\ [\mathrm{D2.6};\ \mathrm{EM.24}(1);\ \mathrm{FT.87}(8)];\qquad|k|,\ \Theta^2\ \text{invariant};\ \text{sign-blindness of the listed reads}\ [\mathrm{FT.90}(5)]
+$$
+$$
+\text{promotion linearity: an}\ \omega\text{-even read}\ r\ (\text{values}\ (r,r))\ \mapsto\ rI_2;\ \text{an}\ \omega\text{-odd read}\ r\ (\text{values}\ (r,-r))\ \mapsto r\hat\kappa\ [\text{diagonal multiplication operators on the orientation basis};\ \text{uniqueness of the diagonal form: clause}\ (1)]
+$$
+$$
+(4):\ \hat Q_{\mathrm{EM}}|c\rangle=q|c\rangle,\quad\hat Q_{\mathrm{EM}}|\omega(c)\rangle=-q|\omega(c)\rangle\ [\mathrm{FT.40}\ \text{eigenvalues}];\qquad\text{declaration status and tension: recorded at Def-H.43}
+$$
+$$
+(5):\ \bigl[h\otimes I_2,\ qI_2\otimes\hat\kappa\bigr]=q\bigl(hI_2\otimes I_2\hat\kappa-I_2h\otimes\hat\kappa I_2\bigr)=0\ [\text{machine}];\qquad\tfrac12U^\dagger(I_2\otimes\hat\kappa)U=I_2\otimes\sigma_1\ [\mathrm{Def\text{-}H.34}]
+$$
+$$
+\implies\ \text{chiral blocks of}\ h\otimes I_2+q\,I_2\otimes\sigma_1:\ F_{LL}=F_{RR}=h,\quad F_{LR}=F_{RL}=qI_2\ [\text{machine on}\ 48\ \text{profiles}\times q\in\{-1,0,1\}];\qquad\text{minimality rows: machine}\ \blacksquare
+$$
+
+**Phys.** The orientation doublet carries exactly two canonical involutions — the exchange form, which grades chirality, and its partner, which grades the traversal sense — and the partner is the flip operator: it swaps the chiral rays with no phase. The corpus's own reads split cleanly across this pair: everything $\omega$-even can only shift levels; everything $\omega$-odd can only flip chirality. Promoting the ternary core-charge read — one interface definition, its tension with equal-$q$ channel fusion logged rather than hidden — the complete static force matrix acquires its only off-diagonal content, and the flipping amplitude is the charge read itself: a charged core flips, a neutral core does not.
+
+---
+
+---
+
+### FT.130 — Tensor structure, Schmidt rank, and the static spectrum
+
+**Thm.**
+$$(1)\quad\textbf{derived locus:}\qquad\mathbf F_{\mathrm{ext}}(\mathbf c)=h(\mathbf c)\otimes I_\omega\ \text{is a single simple tensor for every}\ \mathbf c:\qquad\text{operator-Schmidt rank}=1\ (\text{rank}\ 0\iff\mathbf c=0)\ [\text{exact Pauli-bilinear flattening};\ \text{machine}];$$
+$$(2)\quad\textbf{promoted locus:}\qquad\mathbf F_{\mathrm{ext}}(\mathbf c,q)=h\otimes I_2+q\,I_2\otimes\hat\kappa:\ \text{the two terms are Hilbert–Schmidt orthogonal}\ (\mathfrak T\hat\kappa=0);\qquad\text{Schmidt rank}=2\iff q\ne0\ \wedge\ (c_1,c_2,c_3)\ne0;$$
+$$\text{rank}\ 1\ \text{when}\ h\propto I_2\ (\text{the terms share the internal factor and recombine:}\ \mathbf F_{\mathrm{ext}}=I_2\otimes(\lambda I_2+q\hat\kappa))\ \text{or exactly one term survives};\qquad\text{rank}\ 0\iff\mathbf c=0=q;$$
+$$\textbf{no entangling term at any locus:}\ \ \mathbf F_{\mathrm{ext}}\ \text{is always a sum of}\ \le2\ \text{simple tensors with one-sided factors};$$
+$$(3)\quad\textbf{the flipping criterion (iff):}\qquad F_{LR}\ne0\iff\text{some Schmidt term has a chiral-off-diagonal}\ \omega\text{-factor}\iff\text{the}\ \hat\kappa\ \text{term is present with}\ q\ne0\qquad[I_2\ \text{is chiral-diagonal};\ \hat\kappa\ \text{is chiral-off-diagonal}\ [\mathrm{FT.129}(2)]];$$
+$$(4)\quad\textbf{derived spectrum:}\qquad\operatorname{spec}=\bigl\{\tfrac12(c_0\pm|\mathbf c|)\bigr\},\ \text{each}\times2;\qquad\text{field}\ \mathbb Q(\mathbf c)\bigl[\sqrt{|\mathbf c|^2}\bigr]:\ \text{quadratic extension};\ \text{charpoly exact over}\ \mathbb Q(\mathbf c)[x]\ [\mathrm{FT.128}(5)];$$
+$$(5)\quad\textbf{promoted spectrum:}\qquad\text{the terms commute}\ [\mathrm{FT.129}(5)]:\qquad\operatorname{spec}=\bigl\{\tfrac12\bigl(c_0+s|\mathbf c|\bigr)+tq:\ s,t\in\{\pm1\}\bigr\},$$
+$$\operatorname{charpoly}=\bigl((y-u)^2-q^2\bigr)\bigl((y+u)^2-q^2\bigr),\qquad y=x-\tfrac{c_0}2,\quad u^2=\tfrac{|\mathbf c|^2}4\qquad[\text{machine on all profiles}\times\text{ternary}\ q];$$
+$$\textbf{the chiral-partner splitting}=2|q|\in\{0,2\}\qquad[\text{the ternary read}\ [\mathrm{EM.9}]:\ \text{charged cores split the parity doublet by exactly two read units; neutral cores keep the doubling}];$$
+$$\text{simultaneous eigenbasis}=\text{internal Bloch rays}\otimes\text{orientation rays}\ \{|c\rangle,|\omega(c)\rangle\}\ (\hat\kappa\text{-eigenrays},\ \kappa\text{-eigenvalues}\ \pm1);\qquad|c\rangle=(|L\rangle+|R\rangle)/\sqrt2\ [\text{machine}]:$$
+$$\text{the stationary rays carry no definite chirality — chirality is the precessing quantity, and}\ 2|q|\ \text{is the static shadow of the parity-flipping frequency (the dynamical read is deferred, FT.131}(3));$$
+$$(6)\quad\textbf{collision census (exact):}\qquad q=0:\ \text{parity doubling};\qquad|\mathbf c|=0:\ \operatorname{spec}=\{\tfrac{c_0}2\pm q\},\ \text{each}\times2;\qquad\tfrac{|\mathbf c|}2=|q|:\ \text{the central eigenvalue}\ \tfrac{c_0}2\ \text{is double};\qquad\text{no further degeneracies at ternary}\ q;$$
+$$(7)\quad\textbf{scalar-shift clause:}\qquad\mathbf F_{\mathrm{ext}}\mapsto\mathbf F_{\mathrm{ext}}+\lambda I_4\iff h\mapsto h+\lambda I_2:\qquad F_{LR},\ \text{Schmidt ranks, commutants and the splitting}\ 2|q|\ \text{invariant};\ \text{the spectrum translates by}\ \lambda$$
+$$[\text{any scalar-class contribution}\ —\ F_{D^+}\ \text{if admitted},\ h_0\text{-type backgrounds},\ m^2\text{-type reads as identity multiples}\ —\ \text{is invisible to the flipping structure}].$$
+
+**Req.** FT.128, FT.129; Def-H.34; CT1.1, CT1.2 (**B**, the Pauli basis); EM.9 (Part 2); Hilbert–Schmidt and operator-Schmidt rank facts, exact flattening ranks over $\mathbb Q$, Faddeev–LeVerrier, Vieta reads [math; machine: `checks/verify_H_force_matrix.py` §D].
+
+**Pf.**
+$$
+(1):\ \mathbf F_{\mathrm{ext}}=\sum_{ab}t_{ab}\,\sigma_a\otimes\sigma_b,\quad t_{ab}=\tfrac14\mathfrak T\bigl(\mathbf F_{\mathrm{ext}}(\sigma_a\otimes\sigma_b)\bigr):\qquad t_{a0}=c_a/2,\ \text{all other}\ t_{ab}=0\ [\text{Pauli orthogonality}\ \mathfrak T(\sigma_a\sigma_b)=2\delta_{ab}]
+$$
+$$
+\operatorname{rk}T=1\iff\mathbf c\ne0\ [\text{exact rational flattening ranks at all sample profiles};\ \text{machine}]
+$$
+$$
+(2):\ t_{a0}=c_a/2,\quad t_{03}=q\ [\hat\kappa=\sigma_3\ \text{in the orientation basis}]:\qquad\operatorname{rk}T=2\iff q\ne0\wedge(c_1,c_2,c_3)\ne0;\quad h=\lambda I_2\ (\text{i.e.}\ c_1=c_2=c_3=0):\ \mathbf F_{\mathrm{ext}}=I_2\otimes(\lambda I_2+q\sigma_3):\ \operatorname{rk}T=1\ [\text{machine, degenerate corners included}]
+$$
+$$
+\mathfrak T\bigl((h\otimes I_2)^\dagger(qI_2\otimes\hat\kappa)\bigr)=q\,\mathfrak T(h)\,\mathfrak T(\hat\kappa)=0\ [\mathfrak T\hat\kappa=0;\ \text{machine witness}]:\ \text{the two Schmidt terms are orthogonal}
+$$
+$$
+(3):\ F_{LR}=qI_2\ [\mathrm{FT.129}(5)];\qquad\text{chiral images:}\ I_2\mapsto I_2\ (\text{diagonal}),\ \hat\kappa\mapsto\sigma_1\ (\text{off-diagonal})\ [\mathrm{Def\text{-}H.34}]\ \implies\text{both directions exact}
+$$
+$$
+(4),(5):\ \text{Faddeev–LeVerrier coefficient identity against}\ \bigl(x^2-c_0x+\tfrac{c_0^2-|\mathbf c|^2}4\bigr)^2\ \text{and}\ \bigl((y-u)^2-q^2\bigr)\bigl((y+u)^2-q^2\bigr)\ \text{at all profiles}\times\text{ternary}\ q\ [\text{machine}]
+$$
+$$
+\text{splitting: fixed}\ s:\ \bigl(\tfrac12(c_0+s|\mathbf c|)+q\bigr)-\bigl(\tfrac12(c_0+s|\mathbf c|)-q\bigr)=2q;\qquad q\in\{-1,0,+1\}\implies2|q|\in\{0,2\}\ [\mathrm{EM.9};\ \text{exact}]
+$$
+$$
+(6):\ \text{collision loci from the closed form:}\ q=0;\quad|\mathbf c|=0;\quad u^2=q^2\ [\text{exhaustive over the closed form};\ \text{machine census at rational}\ u\in\{\tfrac12,1,\tfrac32\}\times\text{ternary}\ q]
+$$
+$$
+(7):\ \lambda I_4=(\lambda I_2)\otimes I_2:\ h+\lambda I_2\ \text{re-absorbs the shift}\ [\text{machine}];\qquad P_L^{\mathrm{car}}(\lambda I_4)P_R^{\mathrm{car}}=\lambda P_LP_R=0\ [\mathrm{FT.122}(2)].\ \blacksquare
+$$
+
+**Phys.** The static force matrix never entangles the internal and orientation books beyond a single product term, and the whole flipping phenomenon reduces to one ternary number: the core charge. Its level splitting $2|q|$ is the only frequency-shaped datum the static tier can produce — the eigenvalues of the promoted matrix encode, exactly, the splitting that a dynamical read would turn into the parity-flipping frequency. Scalar reads of every species shift the ladder and change nothing else: the flip structure is parity-graded, and parity is decided by $\omega$-oddness alone.
+
+---
+
+---
+
+### FT.131 — Scope: bound chains, no isolated charge, the deferrals
+
+**Thm.**
+$$(1)\quad\textbf{bound-chain scope:}\qquad\mathbf F_{\mathrm{ext}}\ \text{is computed for bound chains}\ [\mathrm{D1.5}];\ \text{the orientation doublet requires}\ k\ge2\ \text{distinct edges as an ordered tuple}\ [\mathrm{D1.4}];\ \text{transit/trivial chains carry no bound orientation doublet}\ [\mathrm{Def\text{-}H.33}\ \text{scope};\ \text{Def-H.38 scope note}]:\ \text{their flipping census is a separate computation, not performed here};$$
+$$(2)\quad\textbf{no isolated charge:}\qquad\text{a charge read requires two end registers}\ [\mathrm{D3.4},\ \mathrm{EM.9}];\ \text{a bound chain carries}\ q_{\mathrm{core}}\ [\mathrm{FT.40}]\ \text{but no transit charge};\ \ F_{LR}=q_{\mathrm{core}}I_2\ \text{is the flipping structure}\ \textbf{of the bound chain},\ \text{not of an isolated carrier};\ \text{isolated colour is excluded in any case}\ [\mathrm{CT3.22}:\ \neg\text{pole},\ \text{norm}\ 0];$$
+$$(3)\quad\textbf{the deferral and the CPT adjudication:}\qquad\text{a frequency read requires a time parameter coupling}\ \mathbf F_{\mathrm{ext}}\ \text{to an evolution. The CPT-equivalent record was consulted:}\ \mathrm{EM.24}(5)\text{'s exact phase identity}$$
+$$w(\mathrm{CPT}\,C)=(-1)^{|E(C)|}e^{i\pi\Theta(C)}w(C),\qquad|w|^2\ \text{unconditionally invariant},$$
+$$\text{relates reversal-paired configuration amplitudes — the configuration-level flipping locus}\ (\text{the pairing exists, its phase is exact})\ \text{but supplies no carrier-time parameter};$$
+$$\text{the only derived clock is the ledger tick}\ [\mathrm{CT0.3}:\ (\Delta n_{\mathcal R},\delta h,\delta\tau)=\pm(1,1,1)\ \text{per Janus move}],\ \text{whose rate has no field coupling}\ [\mathrm{FT.86}(8)];\ \text{proper-time vocabulary exists}\ [\mathrm{Def\text{-}H.19}\ \text{stationary jumps};\ \text{Morse–Bott refinement}\ \mathrm{Def\text{-}H.24}]\ \text{with no materialization coupling}\ [\text{Def-H.19}];$$
+$$\text{hence: emergent time is a prerequisite; nothing in the CPT record discharges it; the frequency,}\ e^{-i\mathbf F t},\ \text{and the time-resolved chiral coupling are deferred — the splitting}\ 2|q|\ [\mathrm{FT.130}(5)]\ \text{is the complete static deliverable};$$
+$$(4)\quad\textbf{bars:}\qquad\text{no particle identification}\ (\text{the matrices are for an arbitrary bound chain with arbitrary profile and registration data});\ \text{no external data}\ —\ \text{the marker [EXT] appears in this clause alone; no external value enters any clause of this document};\ \text{no Yukawa/mass mechanism}\ (\text{mass-type scalars enter only through FT.130}(7)\text{'s identity-shift clause, never as}\ L\text{–}R\ \text{couplings});\ \text{no binding energy};\ \text{no fixed topology or privileged skeleton}\ (\mathbf c,q,k,\Theta\ \text{are chain and registration data — the matrices are skeleton-independent});\ \text{single-aspect intermediates are marked scope restrictions};$$
+$$(5)\quad\textbf{the standing superselection tension (scope restatement):}\qquad\text{the chiral rays superpose}\ \omega\text{-opposed core charges}\ (q,-q)\ [\mathrm{FT.40}];\ \text{channel reads are sign-blind and fuse only equal-}q\ \text{states}\ [\mathrm{FT.15};\ \mathrm{FT.90}(5)];\ \text{Def-H.43's promotion is carrier-level; its relation to channel-level fusion is open bridge content}\ \ —\ \text{no theorem here resolves it}.$$
+
+**Req.** D1.4, D1.5, D3.4 (Parts 1–2); EM.9, EM.24 (Part 2); CT0.3 (Part 1); CT3.22 (Part 2); FT.15 (Tiers F.1–F.11); FT.40 (Tiers F.12–F.13); Def-H.19 (Tiers F.12–F.13); Def-H.24 (Tiers F.20–F.22); FT.86, FT.90 (Tiers F.29–F.30); Def-H.19, Def-H.38, Def-H.43; exact bookkeeping; machine: `checks/verify_H_force_matrix.py` §E (citation pins).
+
+**Pf.**
+$$
+(1):\ \mathrm{D1.5}:\ \text{bound}=\text{closed self-contained};\qquad\mathrm{D1.4}:\ c=(e_1,\dots,e_k),\ e_i\ \text{distinct};\ k\ge2\ [\mathrm{A1}:\ \neg\text{self-loops}];\qquad\mathrm{Def\text{-}H.33}\ \text{constructs}\ \mathcal H_\omega(c)\ \text{for bound}\ c
+$$
+$$
+(2):\ \mathrm{D3.4}:\ q_{\mathrm{EM}}=\tfrac12(\sigma_s-\sigma_t)\ \text{on end registers};\qquad\mathrm{FT.40}:\ q_{\mathrm{core}}(c;v)=\tfrac12(\sigma_{e_1}-\sigma_{e_k})\ \text{on the closed core};\qquad\mathrm{CT3.22}:\ \neg\exists\ \text{isolated triplet pole}
+$$
+$$
+(3):\ \mathrm{EM.24}(5)\ \text{verbatim (frozen)};\qquad\mathrm{CT0.3}\ \text{verbatim};\qquad\mathrm{FT.86}(8):\ \neg\exists\ \text{tag coupling}\ \delta\tau\ \text{to}\ \Omega/N_i;\qquad\text{Def-H.19}:\ \text{Def-H.19 vocabulary asserts no coupling to materialization}
+$$
+$$
+(4),(5):\ \text{citation conjunctions}\ [\mathrm{FT.15}\ \text{hypothesis verbatim};\ \mathrm{FT.90}(5)\ \text{audit verbatim}].\ \blacksquare
+$$
+
+**Phys.** The tier knows exactly where it stops. The matrix is static because the corpus has no time to evolve it with — and the consultation of the CPT record confirms that the configuration-level pairing, though exact, cannot supply one: reversal phases are amplitudes, not clocks. What survives as the complete static deliverable is sharp: bound chains only; charge only as the core read; flipping only from $\omega$-odd data; frequency only after time.
+
+**Rmk (forward pointer, non-load-bearing).** The parity structures invoked by this part's census rows receive their systematic treatment in Tier F.41: the configuration-space reversal calculus with the exact commutations and both frozen CPT lifts (FT.133); the carrier bookkeeping — C, P, T fix the doublet rays and CPT acts as the scalar character $\lambda=(-1)^{|E|}e^{i\pi\Theta}$ (FT.134), so this part's splitting $2|q|$ is parity-even and charge-odd (FT.139(3)); the branch, cover, flicker, pole and channel censuses (FT.135–FT.139). The carrier-level parity-eigenvalue assignment to species is application-layer content.
+
+---
+
+---
+
+
+## Tier F.41 — Parity: The Configuration Calculus, the Carrier Bookkeeping, and the Sector Census
+
+### FT.133 — The configuration-space reversal calculus
+
+**Thm.** On the configuration space $\mathfrak C(\mathcal R)$ [D0.10], with configuration data $(R,\ \sigma,\ \alpha,\ \kappa/\text{ledger})$ [A4, A8, D0.5, D3.5, Def-EM.20]:
+$$(1)\quad\textbf{the four register involutions}\ [\text{each frozen, re-derived at the point of use}]:$$
+$$\omega\text{-pattern}:\ R\mapsto R^{\mathrm T}=\{(b,a):(a,b)\in R\}\ \text{with edge data carried}\ [\mathrm{D2.6};\ \mathrm{FT.88}(1)];\qquad C:\ \sigma_e\mapsto-\sigma_e\ [\mathrm{EM.24}(1)];$$
+$$P:\ \alpha_e\mapsto\pi-\alpha_e\ \ (\mathcal P\mapsto E_{\mathcal R}\setminus\mathcal P)\ [\mathrm{EM.24}(2),\ \mathrm{Def\text{-}EM.21}];\qquad T=\Theta_{\mathfrak L}:\ \text{ledger order reversed},\ J^+\leftrightarrow J^-,\ \kappa_e\mapsto-\kappa_e,\ \sigma\ \text{fixed}\ [\mathrm{D2.7};\ \mathrm{FT.88}(2)];$$
+$$\text{each is an involution on configuration data}\ [\text{machine: exhaustive on}\ 17^2+5^6\ \text{configurations}\ +\ 3000\ \text{deterministic off-shell samples}];$$
+$$(2)\quad\textbf{register-disjoint commutation:}\qquad[C,P]=[C,T]=[P,T]=[C,\omega]=[P,\omega]=[T,\omega]=0$$
+$$[\text{the four act on pairwise-disjoint data coordinates: edge-direction set};\ \sigma;\ \alpha;\ (\kappa,\text{ledger})]\implies\langle C,P,T\rangle\cong\mathbb Z_2^3,\qquad\langle\omega\text{-pattern},\,C,\,P,\,T\rangle\cong\mathbb Z_2^4;$$
+$$\mathrm{FT.88}(3)\text{'s}\ \langle\omega,\Theta_{\mathfrak L}\rangle\cong\mathbb Z_2\times\mathbb Z_2\ \text{is the frozen two-generator subalgebra}\ [\text{machine: exhaustive commutation census}];$$
+$$(3)\quad\textbf{component weight identities}\ (w=\mathcal J\cdot S\cdot\Gamma\cdot A,\ S=\prod\sigma_e,\ \Gamma=\prod e^{i\alpha_e\widehat{ds}^{\,2}(e)},\ A=(-1)^{\aleph}\ [\mathrm{A8},\ \mathrm{D3.5},\ \mathrm{D3.6}]):$$
+$$w(C\mathcal C)=(-1)^{|E|}\,w(\mathcal C)\ [\aleph\ \text{invariant}:\ \aleph_v=|f_v|,\ f_v\mapsto-f_v];\qquad w(T\mathcal C)=w(\mathcal C)^{*}\ [\mathrm{CT2.8}(1)];\qquad w(P\mathcal C)=e^{i\pi\Theta}\,w(\mathcal C)^{*};$$
+$$\Theta:=\!\!\sum_{e\in R}\!\!\widehat{ds}^{\,2}(e)\ [\mathrm{EM.24}(5)]:\quad\Theta\ \text{is}\ P\text{-even},\ T\text{-odd}\ (\Theta\mapsto-\Theta),\ \omega\text{-even}\ (\text{an edge-set function};\ \widehat{ds}^{\,2}\ \text{direction-symmetric});$$
+$$(4)\quad\textbf{the composition, in both frozen lifts:}\qquad\mathrm{CPT}:=C\circ P\circ T\ [\mathrm{EM.24}(4)];$$
+$$\text{conjugation lift}\ [\mathrm{EM.24}(5)\ \mathrm{Pf}:\ T\ \text{as}\ \Gamma\mapsto\bar\Gamma]:\qquad w(\mathrm{CPT}\,\mathcal C)=(-1)^{|E|}\,e^{+i\pi\Theta}\,w(\mathcal C);$$
+$$\kappa\text{-flip lift}\ [\mathrm{FT.88}(2)\ \text{register picture}:\ T:\kappa\mapsto-\kappa]:\qquad w(\mathrm{CPT}\,\mathcal C)=(-1)^{|E|}\,e^{-i\pi\Theta}\,w(\mathcal C);$$
+$$\text{the two lifts agree exactly on the integer-}\Theta\ \text{locus}\ (e^{2i\pi\Theta}=1),\ \text{which contains every materialized closed chain}\ [\mathrm{FT.22}:\ \Theta\in2\mathbb Z];\qquad\bigl|w(\mathrm{CPT}\,\mathcal C)\bigr|^2=\bigl|w(\mathcal C)\bigr|^2\ \text{unconditionally in both lifts}\ [\text{machine}];$$
+$$(5)\quad\textbf{on-shell reductions:}\qquad\Theta\in2\mathbb Z\implies e^{i\pi\Theta}=1:\ \text{the CPT character reduces to}\ (-1)^{|E|};\qquad|E|+\Theta\equiv0\ (\mathrm{mod}\ 2)\implies w(\mathrm{CPT}\,\mathcal C)=w(\mathcal C)=w(\mathcal C)^{*}\ [\mathrm{EM.24}(5)\ \text{third line, re-derived}];$$
+$$(6)\quad\textbf{the read-covariance table}\ [\text{exact; machine on closed digon and triangle chains}]:$$
+$$\begin{array}{c|cccc}
+\text{read} & C & P & T & \omega\\ \hline
+q_{\mathrm{core}}\ [\mathrm{FT.40}] & - & + & + & -\\
+\Theta=\sum\widehat{ds}^{\,2} & + & + & - & +\\
+|E|,\ K=|R| & + & + & + & +\\
+\aleph\ [\mathrm{EM.24}(1)] & + & + & + & +\\
+\mathcal P\ [\mathrm{Def\text{-}EM.21}] & + & \text{complement} & + & \text{transported}
+\end{array}$$
+$$(7)\quad\textbf{the parity naming (derived record):}\ \ \text{the parity operation on configuration space is}\ \mathrm{EM.24}(2)\text{'s}\ P\ —\ \textbf{derived}\ \text{from the dynamic phase}\ [\mathrm{Def\text{-}EM.20},\ \mathrm{EM.20}(1)]\ \text{and named inside the derived CPT bridge};\ \mathrm{FT.101}(3)\text{'s branch flip}\ \iota(\alpha)=\pi-\alpha\ \textbf{is}\ P|_{\Phi}\ \text{on the A4 label alphabet}\ [\mathrm{FT.101}(3)\ \text{cites}\ \mathrm{EM.24}(2),\ \mathrm{Def\text{-}EM.21}]:\ \text{the identification is derived content and no declaration issues}.$$
+
+**Req.** A4, A8, D0.5, D0.10, D1.6, D2.6, D2.7, D3.3, D3.4, D3.5, D3.6 (Parts 1–2); CT2.8 (Part 2); Def-EM.20, Def-EM.21, EM.9, EM.9a, EM.20, EM.23, EM.24 (Part 2); FT.22 (Tiers F.1–F.11); FT.40 (Tiers F.12–F.13); FT.88 (Tiers F.29–F.30); FT.101 (Tiers F.31–F.34); exhaustive enumeration, exact $\mathbb Q(i)$ weight arithmetic [math; machine: `checks/verify_H_parity_identification.py` §A].
+
+**Pf.**
+$$
+(1):\ \text{each map is an involution on its register}:\ (-\sigma)=\sigma;\ \pi-(\pi-\alpha)=\alpha;\ (-\kappa)\mapsto\kappa;\ (R^{\mathrm T})^{\mathrm T}=R;\ \text{data transport is a bijection}\ [\text{machine, exhaustive}]
+$$
+$$
+(2):\ \text{disjoint coordinates}\implies\text{maps commute pointwise}\ [\text{machine on all enumerated configurations}];\qquad\text{group generation}:\ \mathbb Z_2^3,\ \mathbb Z_2^4\ [\text{distinct nonidentity elements counted}]
+$$
+$$
+(3):\ C:\ S\mapsto(-1)^{|E|}S,\ \Gamma,\mathcal J,A\ \text{fixed}\ [\aleph_v=|f_v|,\ f_v\mapsto-f_v\ [\mathrm{D3.3},\ \mathrm{EM.24}(1)]];
+$$
+$$
+T:\ \Gamma\mapsto\bar\Gamma\ [\kappa\mapsto-\kappa:\ e^{i\alpha(-\kappa)\pi\cdots}=\overline{e^{i\alpha\kappa\cdots}};\ \mathcal J\mapsto\mathcal J^{*}\ [\mathrm{D2.7},\ \mathrm{D3.6}];\ S,A\in\{\pm1\}];\qquad P:\ e^{i(\pi-\alpha_e)\widehat{ds}^{\,2}(e)}=e^{i\pi\widehat{ds}^{\,2}(e)}\,e^{-i\alpha_e\widehat{ds}^{\,2}(e)}\implies\Gamma\mapsto e^{i\pi\Theta}\bar\Gamma
+$$
+$$
+(4):\ \text{composition of}\ (3)\ \text{in each lift};\qquad e^{+i\pi\Theta}=e^{-i\pi\Theta}\iff e^{2i\pi\Theta}=1\iff\Theta\in\mathbb Z;\qquad\Theta\in2\mathbb Z\ \text{on materialized closed chains}\ [\mathrm{FT.22}]
+$$
+$$
+|(-1)^{|E|}e^{\pm i\pi\Theta}|=1\implies|w(\mathrm{CPT}\,\mathcal C)|^2=|w(\mathcal C)|^2\ [\text{machine, both lifts, all enumerated configurations}]
+$$
+$$
+(5):\ \Theta\in2\mathbb Z:\ e^{i\pi\Theta}=(-1)^{\Theta}=1;\qquad|E|+\Theta\equiv0\ (2):\ (-1)^{|E|}e^{i\pi\Theta}=(-1)^{|E|+\Theta}=1;\qquad\text{on-shell}\ w\in\mathbb R\ [\mathrm{EM.24}(5)\ \text{Pf re-run}]
+$$
+$$
+(6):\ q_{\mathrm{core}}=\tfrac12(\sigma_{e_1}-\sigma_{e_k})\ [\mathrm{FT.40}]:\ C\ \text{flips both}\ \sigma;\ P,T\ \text{fix}\ \sigma;\ \omega\ \text{swaps}\ e_1\leftrightarrow e_k;\qquad\Theta,|E|:\ \text{edge-set functions};\ \kappa\mapsto-\kappa\ \text{under}\ T\ [\mathrm{FT.88}(2)]\ \blacksquare
+$$
+
+**Phys.** Parity in this corpus is a register operation, not a postulate: it complements the alignment pattern, and it has done so since the dynamic phase was derived. The four reversals live on four disjoint shelves of the configuration data, so they commute by arithmetic — the elementary abelian group is a census, not an assumption. The CPT identity is the corpus's own CPT theorem; this tier pins its two frozen lifts and their exact agreement locus, which is precisely the locus where materialized chains live. The covariance table is the working ledger of the part: every later clause reads its parities off this table.
+
+---
+
+---
+
+### FT.134 — The carrier bookkeeping: the scalar-CPT theorem
+
+**Thm.** On the orientation doublet $\mathcal H_\omega$ [Def-H.33] and the extended carrier [Def-H.34]:
+$$(1)\quad\textbf{the ray census:}\ \ \omega\text{-pattern is the only involution of the FT.133 family that moves the doublet basis}\ (\hat\omega|c\rangle=|\omega(c)\rangle\ [\mathrm{FT.122}(4)]);\ \ C,P,T\ \text{fix the chain tuple pointwise}\ [\mathrm{FT.133}(1)\ \text{registers}]:\ \text{their doublet action is the identity on rays, with a label map};$$
+$$\text{hence no operator identification}\ \hat\omega=C\ \text{or}\ \hat\kappa=P\ \text{exists: the two sides of each proposed equality act on different registers}\ [\text{machine witnesses}];$$
+$$(2)\quad\textbf{the read-level covariance (the content the identifications reach):}\ \ \text{under Def-H.43's promotion}\ \hat Q_{\mathrm{EM}}=q_{\mathrm{core}}\hat\kappa\ [\mathrm{FT.129}(4)]:\ \text{the family}\ \{\hat Q_q=q\hat\kappa\}\ \text{is}\ C\text{-odd}\ (\hat Q_{-q}=-\hat Q_q,\ \text{matching}\ q\mapsto-q),\ P\text{-even and}\ T\text{-even}\ (q_{\mathrm{core}}\ \text{is}\ P/T\text{-even}\ [\mathrm{FT.133}(6)]),\ \text{and}\ \omega\text{-covariant}\ (\hat\kappa\ \hat\omega\text{-odd}\ \wedge\ q\ \omega\text{-odd}:\ \text{the signs cancel});$$
+$$\text{consequently Tier F.40's flipping block}\ F_{LR}=q\,I_2\ \text{is}\ C\text{-odd},\ P\text{-even},\ T\text{-even}\ [\mathrm{FT.129}(5)];$$
+$$(3)\quad\textbf{the scalar-CPT theorem:}\ \ \text{the CPT character}\ \lambda=(-1)^{|E|}e^{i\pi\Theta}\ \text{takes the same value on both doublet rays}\ (|E|,\Theta\ \text{are edge-set functions}\ [\mathrm{FT.133}(6)]),\ |\lambda|=1:$$
+$$\mathrm{CPT}\big|_{\mathcal H_\omega}=\lambda\,\mathrm{id},\qquad\lambda=(-1)^{|E|}e^{i\pi\Theta};$$
+$$\text{chirality is CPT-even: the}\ \hat\chi\text{-eigenspaces are CPT-stable};\ \hat\kappa\ \text{and}\ \hat\omega\ \text{likewise};\qquad\textbf{refutation witness:}\ \operatorname{tr}(\lambda\,\mathrm{id})=2\lambda\ne0=\operatorname{tr}(\pm\hat\kappa):\ \text{no}\ \hat\kappa\text{-multiple equals the CPT action};$$
+$$(4)\quad\textbf{the uniqueness pair}\ [\text{re-derived at the point of use}]:\ \ \pm\hat\chi\ \text{are the unique diagonal-free}\ \hat\omega\text{-odd Hermitian involutions}\ [\mathrm{FT.122}(6)];\ \pm\hat\kappa\ \text{the unique diagonal ones}\ [\mathrm{FT.129}(1)];\ \text{quaternionic triple}\ [\mathrm{Def\text{-}H.34}]:\ \hat\omega\hat\chi=-i\hat\kappa,\ \hat\chi\hat\kappa=-i\hat\omega,\ \hat\kappa\hat\omega=-i\hat\chi;$$
+$$(5)\quad\textbf{independence:}\ \ \text{any internal involution}\ G\otimes I_2\ \text{commutes with}\ I_2\otimes\hat\omega\ \text{and their product is a third distinct involution: the configuration-side and carrier-side}\ \mathbb Z_2\text{'s generate}\ \mathbb Z_2\times\mathbb Z_2\ [\mathrm{FT.126}(4)\ \text{pattern};\ \mathrm{FT.88}(3)\ \text{precedent};\ \text{machine}].$$
+
+**Req.** Def-H.33, FT.122, FT.126 (Tier F.39); Def-H.34, FT.128, FT.129 (Tier F.40); FT.133; FT.40 (Tiers F.12–F.13); Def-H.34, Def-H.43; exact $\mathbb Q(i)$ arithmetic, trace witnesses, rational canonicity census [math; machine: `checks/verify_H_parity_identification.py` §B].
+
+**Pf.**
+$$
+(1):\ \text{register census of FT.133(1):}\ C,P,T\ \text{act on}\ (\sigma),(\alpha),(\kappa,\text{ledger})\ \text{and leave the edge tuple fixed}\ [\text{machine: key sets preserved on all enumerated configurations}];\qquad\omega\text{-pattern transposes it}\ [\text{machine}]
+$$
+$$
+\hat\omega\ne\pm\mathrm{id}\ [\text{entrywise}];\qquad\text{an operator equality between a ray-swapping and a ray-fixing map is impossible}
+$$
+$$
+(2):\ \hat Q_{-q}=-\hat Q_q\ [\text{linearity}];\qquad q_{\mathrm{core}}(P\mathcal C)=q_{\mathrm{core}}(T\mathcal C)=q_{\mathrm{core}}(\mathcal C),\quad q_{\mathrm{core}}(\omega\mathcal C)=-q_{\mathrm{core}}(\mathcal C)\ [\mathrm{FT.133}(6)];\qquad\hat\omega\hat\kappa\hat\omega=-\hat\kappa\ [\mathrm{Def\text{-}H.34}]
+$$
+$$
+\implies\ \text{the coupled operator}\ q\hat\kappa\ \text{is}\ \omega\text{-invariant (both signs cancel) and}\ C\text{-odd};\qquad F_{LR}=qI_2\ \text{inherits the characters}\ [\mathrm{FT.129}(5)]
+$$
+$$
+(3):\ \lambda(\text{ray}\ c)=(-1)^{|E(c)|}e^{i\pi\Theta(c)}=(-1)^{|E(\omega c)|}e^{i\pi\Theta(\omega c)}=\lambda(\text{ray}\ \omega(c))\ [\mathrm{FT.133}(6):\ \text{both reads edge-set functions};\ \text{machine on closed digon/triangle chains}]
+$$
+$$
+\mathrm{CPT}\ \text{fixes each ray and multiplies the weight by}\ \lambda\ [\mathrm{EM.24}(5);\ \mathrm{FT.133}(4)]\implies\mathrm{CPT}\big|_{\mathcal H_\omega}=\lambda\,\mathrm{id};\qquad|\lambda|^2=1\ [\text{machine}]
+$$
+$$
+[\lambda\,\mathrm{id},\ \hat\chi]=[\lambda\,\mathrm{id},\ \hat\kappa]=[\lambda\,\mathrm{id},\ \hat\omega]=0;\qquad\operatorname{tr}(\lambda\,\mathrm{id})=2\lambda\ne0=\operatorname{tr}(\hat\kappa)=\operatorname{tr}(-\hat\kappa)\ [\lambda\ne0]
+$$
+$$
+(4):\ \text{rational census: diagonal}\ \hat\omega\text{-odd involutions}\ \{a,-a\}:\ a^2=1\implies a=\pm1;\ \text{diagonal-free}\ \{iy,-iy\}:\ y^2=1\implies y=\pm1\ [\text{machine}];\qquad\text{triple products entrywise}\ [\text{machine}]
+$$
+$$
+(5):\ [G\otimes I,\ I\otimes\hat\omega]=0\ [\text{Kronecker disjointness}];\qquad(G\otimes\hat\omega)^2=G^2\otimes\hat\omega^2=\mathrm{id};\qquad G\otimes\hat\omega\ne G\otimes I\ne I\otimes\hat\omega\ [\text{entrywise witnesses};\ \text{machine}].\ \blacksquare
+$$
+
+**Phys.** The carrier keeps its own books. Charge conjugation, parity and time reversal act on the registration shelves; only the traversal reversal moves the rays of the doublet. The composition CPT — the operation the configuration calculus proves exact — reaches the doublet as a pure phase: the quietest possible action, leaving chirality, the orientation sign and the exchange grade all untouched. What the proposed operator identifications legitimately reach is the read level, and there the census is sharp: the promoted flip block is charge-odd and parity-even, the only parity-sensitive structure in the fermion tower.
+
+---
+
+---
+
+### FT.135 — The weak branch grading under parity
+
+**Thm.**
+$$(1)\quad\iota(0)=\pi,\ \iota(\pi)=0\ \text{on the branch alphabet}\ \Phi=\{0,\pi\}\ [\mathrm{FT.101}(3);\ \mathrm{D0.5}];\qquad\iota=P|_{\Phi}\ [\mathrm{EM.24}(2);\ \mathrm{FT.101}(3)\ \text{citation chain}]:\ \text{parity exchanges the two crystallization branches at the label level};$$
+$$(2)\quad\textbf{aligned branch}\ (\alpha=0,\ \vee^2,\ \text{Casimir}\ 2):\ W_i=\Pi_{\mathcal R}W_i\Pi_{\mathcal R}\ne0,\ \sum_iW_i^2=2\Pi_{\mathcal R}\ [\mathrm{FT.101}(1),\ \text{Cor}\ \mathrm{CT0.7a}\ \text{re-derived}];\qquad\textbf{antialigned branch}\ (\alpha=\pi,\ \wedge^2,\ \text{Casimir}\ 0):\ W_i\Pi_{\mathcal V}=0,\ \bigcap_i\ker W_i=\operatorname{im}\Pi_{\mathcal V}\ [\mathrm{FT.101}(2),\ \mathrm{FT.93}(5)\ \text{re-derived}];$$
+$$(3)\quad P\ \text{maps the weak-active branch label to the weak-blind one: the weak support is not flip-invariant}\ [\mathrm{FT.101}(4)];\ \text{structural parity non-invariance of the force arena}\ [\mathrm{FT.101}(5)];\ \text{scope: arena}\ S\text{-parity grading},\ \neg\ \text{matter chirality}\ [\mathrm{FT.93}(3),\ \mathrm{FT.93}(7)];$$
+$$(4)\quad\textbf{the exchange is label-level only:}\qquad\mathfrak T\Pi_{\mathcal R}=3\ne1=\mathfrak T\Pi_{\mathcal V};\qquad M=a\Pi_{\mathcal R}+b\Pi_{\mathcal V}:\ M^2=\mathrm{id}\implies a,b\in\{\pm1\}\implies\operatorname{tr}M=3a+b\in\{\pm4,\pm2\}\ne0:$$
+$$\text{no traceless involution implements the branch exchange on the pair register}\ [\mathrm{FT.101}(3),\ \mathrm{FT.93}(3a)\ \text{re-derived}];\qquad\mathbb S\Pi_{\mathcal R}=+\Pi_{\mathcal R},\ \mathbb S\Pi_{\mathcal V}=-\Pi_{\mathcal V}\ [\text{the}\ S\text{-eigenvalue labels}].$$
+
+**Req.** A3, A4 (Parts 1–2); CT0.7, Cor CT0.7a, CT0.8, CT1.2 (Part 1); Def-EM.21, EM.24 (Part 2); FT.93, FT.101 (Tiers F.31–F.34); exact $\mathbb Q(i)$ matrix arithmetic, trace/rank invariants, exact nullspace [math; machine: `checks/verify_H_parity_identification.py` §C].
+
+**Pf.**
+$$
+(1):\ \iota(\alpha)=\pi-\alpha\ [\mathrm{FT.101}(3):\ \text{the unique nontrivial automorphism of}\ \Phi];\qquad P:\ \alpha_e\mapsto\pi-\alpha_e\ [\mathrm{EM.24}(2)]:\ \iota=P|_{\Phi}\ [\text{same map on the same alphabet}]
+$$
+$$
+(2):\ \Pi_{\mathcal R}=\tfrac12(E_0+\mathbb S)=\tfrac14(3E_0+\Sigma),\ \Pi_{\mathcal V}=\tfrac14(E_0-\Sigma)\ [\mathrm{CT0.7}(1)]:\ \text{idempotent, orthogonal, complete, traces}\ (3,1)\ [\text{machine}]
+$$
+$$
+W_i\Pi_{\mathcal V}=0\ \forall i;\quad W_i=\Pi_{\mathcal R}W_i\Pi_{\mathcal R};\quad\textstyle\sum_iW_i^2=\tfrac32E_0+\tfrac12\Sigma=2\Pi_{\mathcal R};\quad\dim\ker(W\text{-stack})=1\ (\text{over}\ \mathbb C)=\operatorname{im}\Pi_{\mathcal V}\ [\text{exact nullspace};\ \text{machine}]
+$$
+$$
+(3):\ \mathrm{FT.101}(4)\text{–}(5)\ \text{verbatim (frozen)};\qquad\text{the}\ \neg\text{-scope is FT.93's pincer and relocation}\ [\mathrm{FT.125}(1)\ \text{status stands: the carrier chirality of Tier F.39 is a distinct structure}]
+$$
+$$
+(4):\ \text{sign enumeration over}\ \{a,b\}\subset\{\pm1\}^2:\ \operatorname{tr}\in\{4,2,-2,-4\}\ [\text{machine}].\ \blacksquare
+$$
+
+**Phys.** Parity has a derived, exact and destructive action on the weak force: it swaps the branch the weak sees for the branch it annihilates. The non-invariance is structural — a ℤ₂-asymmetry of the force on the registration alphabet — and it has no operator on the pair register, by trace and rank. What the force arena loses under parity, the carrier never had: the doublet's chirality grade commutes with the weak action entirely [FT.123(1)], and the two parity stories meet only in the assignment rule that does not yet exist.
+
+---
+
+---
+
+### FT.136 — The rung-one S-grading: the 10/6 split
+
+**Thm.**
+$$(1)\quad\textbf{the}\ \operatorname{Ad}(\mathbb S)\ \textbf{census on the CT1.2 generators}\ [\text{machine: all}\ 17]:\qquad S\text{-even}\ (+1):\ \{E_0,\ \Sigma,\ \hat E^{ij}\ (5\ \text{dims}),\ W_i\ (3)\}=10\ \text{dims}=\underbrace{G_5+W_3+H_1}_{\text{forces}}+\underbrace{D^+_1}_{\text{central}};$$
+$$S\text{-odd}\ (-1):\ \{J_i\ (3),\ K_i\ (3)\}=6\ \text{dims}=J^+_3+J^-_3\qquad[\mathrm{CT1.2}\ (S,T)\ \text{table};\ \mathrm{CT0.12};\ \mathrm{FT.30}\ \text{tiling}\ (5{+}3{+}1)+(3{+}3)+1];$$
+$$(2)\quad\mathcal A(1)=\{J,\,G,\,W,\,H,\,D^+\}\ [\mathrm{CT0.13}]:\ \text{the rung-one active set}\ \textbf{is}\ \text{the}\ 10/6\ \text{split};\ \text{the metric dictionary}\ [\mathrm{FT.30}]:\ \text{the}\ S\text{-even block carries every metric coordinate}\ (\hat h_{ij}\ 5,\ \Sigma_{\mathrm{tr}}\ 1,\ a_{00}\ 1,\ w_i\ 3);\ \text{the}\ S\text{-odd Janus seals carry none};$$
+$$(3)\quad\textbf{register separation:}\ \ P\ (\alpha\text{-complement})\ \text{acts on configuration data and has no action on the pair algebra}\ [\mathrm{FT.133}(2)];\ \text{the only derived bridge between parity and the}\ S\text{-grading is FT.101's label}\leftrightarrow\text{arena coupling}\ (\text{branch}\ \alpha\leftrightarrow\vee^2/\wedge^2\ \text{weak support}):\ \text{a naming of the}\ S\text{-blocks as}\ P\text{-sectors has no operator content — the two}\ \mathbb Z_2\text{'s act on different spaces};$$
+$$(4)\quad\textbf{the independence census:}\ \ \text{three pairwise-distinct}\ \mathbb Z_2\ \text{gradings stand in the record: the algebra}\ S\text{-grading}\ (\operatorname{Ad}\mathbb S),\ \text{the branch-label parity}\ (P/\iota\ [\mathrm{FT.101}]),\ \text{the carrier chirality}\ (\hat\chi\ [\mathrm{FT.122}])\ —\ \text{pairwise commuting where jointly defined, none reducible to another}\ [\mathrm{FT.126}(4);\ \text{machine}]:$$
+$$\text{the}\ 10/6\ \text{asymmetry is the force/dynamics split of rung one; it is not the source of the carrier chirality grade};$$
+$$(5)\quad\textbf{the weak location:}\ \ W\ \text{is}\ S\text{-even}\ [\text{clause}\ (1)];\ \text{its chiral selectivity is the arena}\ 3\oplus1\ \text{grading}\ [\mathrm{FT.93}(5):\ W_i\Pi_{\mathcal V}=0,\ \sum W_i^2=2\Pi_{\mathcal R}]\ —\ \text{a third structure, distinct from both the}\ S\text{-grading of the operator algebra and the}\ \hat\chi\text{-grading of the carrier}.$$
+
+**Req.** CT0.7, CT0.12, CT0.13, CT1.1, CT1.2 (Part 1); FT.30 (Tiers F.1–F.11); FT.93, FT.101 (Tiers F.31–F.34); FT.122, FT.126 (Tier F.39); FT.133 (this tier); exact $\operatorname{Ad}(\mathbb S)$ eigen-census over $\mathbb Q(i)$ [math; machine: `checks/verify_H_parity_identification.py` §D].
+
+**Pf.**
+$$
+(1):\ \mathbb S=\tfrac12(E_0+\Sigma),\ \mathbb S^2=E_0\ [\mathrm{CT0.7}(1);\ \Sigma^2=3E_0-2\Sigma];\qquad\operatorname{Ad}(\mathbb S)X=\mathbb SX\mathbb S=\pm X\ \text{on each generator}\ [\text{machine: all}\ 17,\ \text{entrywise}]
+$$
+$$
+\text{membership:}\ \mathbb S E_0\mathbb S=E_0,\ \mathbb S\Sigma\mathbb S=\Sigma\ [\mathrm{CT1.3},\ \mathrm{CT1.5}];\quad\mathbb S\hat E^{ij}\mathbb S=\hat E^{ij}\ [\mathrm{CT1.2}\ \text{table}];\quad\mathbb SW_i\mathbb S=W_i;\quad\mathbb SJ_i\mathbb S=-J_i,\ \mathbb SK_i\mathbb S=-K_i\ [\mathrm{CT0.7}(3)]
+$$
+$$
+\text{dimension count}:\ 1+1+5+3=10;\quad3+3=6;\qquad10+6=16=C_{\mathrm{cap}}\ [\mathrm{CT0.12};\ \mathrm{CT0.6}]
+$$
+$$
+(2):\ \mathrm{CT0.13}\ \text{verbatim (frozen)};\qquad\mathrm{FT.30}\ \text{dictionary rows verbatim}
+$$
+$$
+(3):\ \mathrm{FT.133}(1)\text{–}(2):\ P\ \text{acts on}\ \alpha;\ \text{the pair algebra is spanned by}\ \{E_0,\Sigma,\hat E^{ij},W_i,J_i,K_i\}\ \text{with no}\ \alpha\ \text{argument};\qquad\mathrm{FT.101}(1)\text{–}(2):\ \text{the label-arena coupling}
+$$
+$$
+(4):\ [G\otimes I,\ I\otimes\hat\omega]=0,\ (G\otimes\hat\omega)^2=\mathrm{id},\ G\otimes\hat\omega\ne G\otimes I\ne I\otimes\hat\omega\ [\mathrm{FT.134}(5);\ \text{machine}];\qquad\operatorname{Ad}(\mathbb S)\ \text{acts on}\ \operatorname{End}(\mathbb C^4_{\mathrm{pair}}),\ \iota\ \text{on labels},\ \hat\chi\ \text{on}\ \mathcal H_\omega:\ \text{three distinct spaces}
+$$
+$$
+(5):\ W_i\in\mathcal E_{+-}\ [\mathrm{CT1.2}\ \text{table}];\qquad\mathrm{FT.93}(5)\ \text{data re-derived in}\ \S\mathrm{C}.\ \blacksquare
+$$
+
+**Phys.** At the first rung the algebra already divides: ten dimensions that speak to the metric — shear, volume, conformal, shift — against six that only move the ledger. That is the rung-one asymmetry, and it is exact. Parity names the branch labels that select the weak support inside the arena; the S-grading sorts the operators; the carrier chirality grades the chains. The three ℤ₂'s commute and never collapse into one another — which is why no rung-one count generates a family, and why the family channels of Tiers F.37–F.38 run on their own integers.
+
+---
+
+---
+
+### FT.137 — The cover and flicker census under the reversal family
+
+**Thm.**
+$$(1)\quad\textbf{pattern reversal}\ (\omega\text{-side}\ [\mathrm{FT.88}(1):\ \omega\ \text{acts on skeletons as}\ R\mapsto R^{\mathrm T}]):\ \ \text{preserves admissibility},\ K=|R|,\ \text{cover status and the amplitude}:\ v(R^{\mathrm T})=v(R)\ \text{on all}\ 4096\ \text{tetrahedron patterns}\ [\mathrm{FT.95}(3)\ \text{re-derived};\ \text{machine}];\ 101\ \text{covers reproduced};$$
+$$(2)\quad\textbf{the chiral cover pair:}\ \ \text{the}\ 48\ \text{dissolved-digon bypass covers}\ [\mathrm{FT.69}(4)]\ \text{split into two}\ \Omega=24\ \operatorname{Aut}\text{-orbits exchanged by reversal};\ \text{no orbit is reversal-invariant}\ (R\mapsto R^{\mathrm T}\notin\operatorname{Aut}(\Gamma))\ [\mathrm{FT.78}(6)\ \text{re-derived};\ \text{machine}];$$
+$$(3)\quad\textbf{P (}\alpha\text{-complement) on the cover sector:}\ \ \text{the exact sign character}\qquad v_{\mathbf a}(R)=(-1)^{\sum_{e\in R}a_e}\,v_{\mathbf 0}(R)\qquad[\text{machine: exhaustive triangle census over all}\ (R,\mathbf a,\sigma)];$$
+$$\text{hence cover status}\ (v\ne0),\ |v|,\ K,\ 4^{|\mathcal C|},\ \text{and the norm layer}\ 2^{|R|}\ \text{are}\ P\text{-invariant};\qquad\text{weights:}\ w(P\mathcal C)=e^{i\pi\Theta}w(\mathcal C)^{*}\ [\mathrm{FT.133}(3)]:\ |w|^2\ \text{invariant};\ \text{materialized even-}\Theta\ \text{locus}:\ w(P\mathcal C)=w(\mathcal C)\ \text{exactly};$$
+$$(4)\quad\textbf{the flicker reads:}\ \ \text{the bypass/lock decomposition}\ [\mathrm{Def\text{-}H.25},\ \mathrm{FT.68}],\ B_\Gamma(p)\ \text{and the phase boundary}\ p^*_\Gamma\ [\mathrm{FT.70}(1)],\ f_{\mathrm{adm}}(n,p)\ [\mathrm{FT.70}(4)],\ \text{the dust density}\ \langle\rho_{D^-}\rangle_\Gamma(p)=\sum_vO(n_v)(1-f_{\mathrm{adm}}(n_v,p)),\ O(n)=2^{n+1}-16\ [\mathrm{FT.71}(1),\ \mathrm{CT4.1}]$$
+$$\text{are functions of}\ (\Gamma,R,p,n_v)\ \text{alone}\ —\ \alpha\text{-blind and}\ \sigma\text{-blind by definitional census}:\ P\text{-},\ C\text{-},\ T\text{- and}\ \omega\text{-invariant};\ \text{the only}\ P\text{-sensitive quantity in the sector is clause}\ (3)\text{'s weight character};$$
+$$(5)\quad\textbf{the attribution census:}\ \ \text{the cover sector's nontrivial chirality}\ —\ \text{clause}\ (2)\text{'s exchanged pair}\ —\ \text{belongs to the pattern reversal}\ [\mathrm{FT.78}(6):\ \text{``the pattern-level form of charge conjugation''};\ \mathrm{FT.88}(1):\ \omega\ \text{acts as}\ R\mapsto R^{\mathrm T}];\ \ P\ \text{acts on the census only through the sign character of clause}\ (3):$$
+$$\text{reversal and parity are distinct involutions with distinct footprints}\ [\mathrm{FT.89}(2)\ \text{discipline}].$$
+
+**Req.** FT.67, FT.68, FT.69, FT.70, FT.71, Def-H.25, Def-H.26 (Tiers F.23–F.25); FT.78 (Tiers F.26–F.28); FT.88 (Tiers F.29–F.30); FT.95 (Tiers F.31–F.34); CT4.1 (Part 2); FT.133 (this tier); exhaustive pattern enumeration, exact brute-force sign sums, $\operatorname{Aut}$-orbit machinery [math; machine: `checks/verify_H_parity_identification.py` §E].
+
+**Pf.**
+$$
+(1):\ v(R)=\sum_\sigma w(R,\sigma)\ \text{by brute-force sign sum}\ [\mathrm{FT.67}(2)\ \text{classifier transport}]:\ v(R^{\mathrm T})=v(R)\ \text{on all}\ 4096\ [\text{machine}];\qquad\text{types transpose}:\ (n_{\mathrm{in}},n_{\mathrm{out}})\mapsto(n_{\mathrm{out}},n_{\mathrm{in}}):\ \text{admissibility}\ k_v\le3\ \text{invariant}
+$$
+$$
+\ell\mapsto|\ell|\ \text{at type-}(1,1)\ \text{vertices under}\ \sigma\text{-transport}:\ \aleph\ \text{invariant};\qquad|R^{\mathrm T}|=|R|;\qquad\text{cover status}=(v\ne0)\ \text{invariant};\qquad101\ \text{covers}\ [\text{machine census}]
+$$
+$$
+(2):\ |\operatorname{Aut}|=24\ [\text{machine}];\qquad\text{orbit census of the}\ 48:\ \text{two orbits, sizes}\ (24,24);\qquad\text{reversal maps each orbit bijectively onto the other};\qquad\text{no fixed orbit}\ [\text{machine}]
+$$
+$$
+(3):\ w(R,\sigma,\mathbf a)=\prod_{e\in R}\sigma_e(-1)^{a_e}\cdot(-1)^{\aleph(\sigma)}\ [\mathrm{A8};\ \kappa\equiv1\ \text{class}]:\qquad\sum_\sigma w(R,\sigma,\mathbf a)=(-1)^{\sum a_e}\sum_\sigma w(R,\sigma,\mathbf 0)\ [\text{factorization};\ \text{machine exhaustive}]
+$$
+$$
+\text{status}/|v|/K/4^{|\mathcal C|}/2^{|R|}:\ \text{functions of}\ (R,\ |v|)\ \text{only};\qquad w(P\mathcal C)=e^{i\pi\Theta}w(\mathcal C)^*\ [\mathrm{FT.133}(3)];\qquad\Theta\in2\mathbb Z\ \text{and real weights}:\ w(P\mathcal C)=w(\mathcal C)
+$$
+$$
+(4):\ \text{definitional census: each formula's argument list}\ [\mathrm{FT.68}(1)\text{–}(5),\ \mathrm{FT.70}(1),(4),\ \mathrm{FT.71}(1),\ \mathrm{CT4.1}]\ \text{contains no}\ \alpha\ \text{and no}\ \sigma;\qquad(5):\ \mathrm{FT.78}(6),\ \mathrm{FT.88}(1)\ \text{verbatim (frozen)}.\ \blacksquare
+$$
+
+**Phys.** The cover world is chirally paired — but by reversal, not by parity. The two Ω=24 orbits are each other's mirror under the transposition of every arrow, and no automorphism of the skeleton can tell them apart from within: the cover sector carries a genuine ℤ₂ chirality, and it is ω-side. Parity's entire footprint on this sector is one exact sign per configuration — invisible to every status, count, boundary and density the flicker calculus reads.
+
+---
+
+---
+
+### FT.138 — The pole spectrum census
+
+**Thm.**
+$$(1)\quad\textbf{the defect formula is register-blind:}\qquad D_S(m)=\frac{m^2_{\mathrm{pole}}}{\hat\mu'^2}=2-2\cos\bigl(m\,\delta_v/2\bigr)=4\sin^2\bigl(m\,\delta_v/4\bigr)\qquad[\mathrm{FT.76},\ \mathrm{FT.60}(5);\ \text{Def-H.37(2)}\ \text{transfer}]:$$
+$$\text{reads}\ (m,\delta_v)\ \text{alone}\ —\ \text{winding and vertex-figure defect}\ [\mathrm{FT.63}(4)]:\ \alpha\text{-blind},\ \sigma\text{-blind}\implies C\text{- and}\ P\text{-invariant};\qquad T:\ \kappa\mapsto-\kappa\ [\mathrm{FT.88}(2)]\ \text{maps}\ m\mapsto-m:\ D(-m)=D(m)\ \text{exactly}\ (\cos\ \text{even});$$
+$$(2)\quad\textbf{the five Platonic multiplets, exact in algebraic number fields}\ [\text{machine}]:$$
+$$\text{tetrahedron}\ (\delta_v=\pi,\ k=3):\ D\equiv2\ \text{on}\ m\in\{3,1,-1,-3\}\ —\ \text{fully degenerate}\ [\mathrm{FT.76}(5a)];\qquad\text{cube}\ (\pi/2,\ k=2):\ \{2,0,2\}\ —\ \text{the exactly massless even-winding weight}\ [\mathrm{FT.76}(5b)];$$
+$$\text{octahedron}\ (2\pi/3,\ k=3):\ \{4,1,1,4\}\in\mathbb Q;\qquad\text{dodecahedron}\ (\pi/5,\ k=5):\ D(m)=2-2T_{|m|}(c),\ c=\cos\tfrac\pi{10},\ 16c^4-20c^2+5=0\ [\mathbb Q[c]/(\cdot);\ T_5(c)=0\ \text{exact}];$$
+$$\text{icosahedron}\ (\pi/3,\ k=3):\ \{2,\ 2-\sqrt3,\ 2-\sqrt3,\ 2\}\in\mathbb Q(\sqrt3),\quad(2-\sqrt3)(2+\sqrt3)=1;$$
+$$\text{every multiplet is}\ m\leftrightarrow-m\ \text{paired}: D(m)=D(-m)\ \text{in each field};$$
+$$(3)\quad\textbf{pole condition and weights:}\ \ \text{on the materialized even-}\Theta\ \text{locus},\ P\ \text{acts trivially on weights}\ [\mathrm{FT.137}(3)]:\ \text{the pole census}\ (1\in\operatorname{spec}\mathbf F_M^{(\Sigma)}\ [\mathrm{CT2.5},\ \mathrm{Def\text{-}H.16}])\ \text{is}\ P\text{-invariant there};\ \text{off-shell the weights acquire the unit character}\ e^{i\pi\Theta}:\ |w|^2\text{-level invariance is unconditional}\ [\mathrm{EM.24}(5)];\ \text{the character multiplies weights, not the mask}\ [\mathrm{CT2.3}];$$
+$$(4)\quad\textbf{ceilings are parity-blind:}\ \ \mathrm{FT.76}(3)\text{'s}\ m^2_{\mathrm{pole}}\in[0,4\hat\mu'^2]\ \text{and FT.77's negative results are range statements about}\ D\ \text{values}\ —\ \text{invariant under the whole reversal family}.$$
+
+**Req.** FT.60, FT.63 (Tiers F.20–F.22); FT.76, FT.77 (Tiers F.26–F.28); FT.22 (Tiers F.1–F.11); CT2.3, CT2.5 (Part 2); Def-H.16 (Tiers F.1–F.11); Def-H.37(2); FT.133, FT.137 (this tier); exact Chebyshev arithmetic in $\mathbb Q[c]/(16c^4-20c^2+5)$, exact $\mathbb Q(\sqrt3)$ and $\mathbb Q$ multiplets [math; machine: `checks/verify_H_parity_identification.py` §F].
+
+**Pf.**
+$$
+(1):\ \text{argument census of the frozen formula}\ [\mathrm{FT.76}(2)]:\ (m,\delta_v);\qquad\cos(-x)=\cos x\ [\text{even series}];\qquad m\mapsto-m\ \text{under}\ \kappa\mapsto-\kappa\ [\mathrm{FT.88}(2);\ k=\Theta/2]
+$$
+$$
+(2):\ \text{tetra}:\ \cos(m\pi/2)=0\ (m\ \text{odd}):\ D=2;\qquad\text{cube}:\ \cos(m\pi/4)\in\{0,1\}\ \text{at}\ m\in\{2,0,-2\}:\ D\in\{2,0\};\qquad\text{octa}:\ \cos(m\pi/3)\in\{-1,\tfrac12\}:\ D\in\{4,1\}
+$$
+$$
+\text{dodeca}:\ T_0=1,\ T_1=c,\ T_{m+1}=2cT_m-T_{m-1}\ \text{in}\ \mathbb Q[c]/(16c^4-20c^2+5):\ T_5=c(16c^4-20c^2+5)=0\ [\text{machine}];\qquad\text{icosa}:\ \cos(\pi/6)=\tfrac{\sqrt3}2:\ D(\pm1)=2-\sqrt3,\ D(\pm3)=2;\ \text{norm}\ (2-\sqrt3)(2+\sqrt3)=4-3=1
+$$
+$$
+(3):\ \mathrm{FT.137}(3):\ \Theta\in2\mathbb Z\ \text{and real weights}\implies w(P\mathcal C)=w(\mathcal C);\qquad\text{off-shell}:\ |e^{i\pi\Theta}|=1;\qquad\mathcal P_M\ \text{reads}\ (R,\ \text{seals}),\ \neg\alpha\ [\mathrm{CT2.3},\ \mathrm{D2.11}]
+$$
+$$
+(4):\ 0\le D\le4\iff0\le4\sin^2\le4\ [\text{range of}\ \sin^2];\qquad\text{the ceiling is a function of}\ D\ \text{values alone}.\ \blacksquare
+$$
+
+**Phys.** The pole ladder is cut from geometry and combinatorics alone — windings and vertex angles — and no register reversal in the corpus touches either. Parity walks through the whole pole spectrum without a footprint; the only motion is $m\mapsto-m$ under the ledger reflection, and every mass in every Platonic multiplet is even in it. The bounded-hierarchy verdicts of the SM audit are parity statements before the name existed: they constrain ranges, and ranges are what reversals preserve.
+
+---
+
+---
+
+### FT.139 — The channel census: Koide and colour channels under the reversal family
+
+**Thm.**
+$$(1)\quad\textbf{the seal bilinear is}\ S\textbf{-even:}\qquad\operatorname{Ad}(\mathbb S)[J_i,K_j]=[J_i,K_j]\ \ \forall(i,j)\ [\text{machine: all}\ 9\ \text{pairs}];\qquad\sum_i[J_i,K_i]=2i\Sigma\ [\mathrm{FT.109}\ \text{re-derived}];\qquad2i\Sigma\in\mathcal E_{++}\ [\mathrm{FT.109}(4)];$$
+$$(2)\quad\textbf{the channel constants are register-blind:}\ \ \text{the seal coefficient}\ 2\ [\mathrm{FT.109}(3)],\ \dim F_{J^\pm}=3\ [\mathrm{CT0.12}],\ \operatorname{tr}T(1)=3\ [\mathrm{FT.68}(2):\ \text{the cap-3 transfer rule reads}\ (R,\ \text{vertex degrees})],\ N_{\text{colour}}=3\ [\mathrm{CT3.20}:\ \text{the cap count}]:$$
+$$\text{no configuration register}\ (\sigma,\alpha,\kappa,\text{ledger})\ \text{enters any constituent}\implies\delta_\ell=\tfrac29\ [\mathrm{FT.112}],\ \delta_q=\tfrac2{27}\ [\mathrm{FT.119}],\ (A,B)=(1,\sqrt2)\ [\mathrm{FT.111}(3)],\ \text{the spectra}\ r_i,\ Q=\tfrac23,\ \text{and all ratios are invariant under the full}\ \mathbb Z_2^4\ \text{family}\ [\mathrm{FT.133}(2)];$$
+$$(3)\quad\textbf{the contrast census:}\ \ \text{Tier F.40's flipping block is not invariant:}\ F_{LR}=q\,I_2\ \text{is}\ C\text{-odd},\ P\text{-even},\ T\text{-even}\ [\mathrm{FT.134}(2);\ \mathrm{FT.133}(6)]:$$
+$$\text{the channels are parity-even and register-blind; the flipping block is charge-odd — two exact, distinct parity characters in the same tower}.$$
+
+**Req.** FT.109, FT.111, FT.112 (Tier F.37); FT.116, FT.119 (Tier F.38); FT.129 (Tier F.39); FT.68 (Tiers F.23–F.25); CT0.12 (Part 1); CT3.20 (Part 2); FT.133, FT.134 (this tier); exact $\mathbb Q(i)$ conjugation census [math; machine: `checks/verify_H_parity_identification.py` §G].
+
+**Pf.**
+$$
+(1):\ \operatorname{Ad}(\mathbb S)J_i=-J_i,\ \operatorname{Ad}(\mathbb S)K_i=-K_i\ [\mathrm{CT0.7}(3)]:\ \operatorname{Ad}(\mathbb S)[J_i,K_j]=[-J_i,-K_j]=[J_i,K_j]\ [\text{machine, all}\ 9];\qquad\sum_i[J_i,K_i]=2i\Sigma\ [\text{entrywise re-derivation};\ \text{machine}]
+$$
+$$
+\operatorname{Ad}(\mathbb S)\Sigma=\Sigma\ [\mathrm{CT1.5}:\ [\Sigma,\mathbb S]=0]
+$$
+$$
+(2):\ \text{constituent census: each integer's definition cites only cap counts, block dimensions and transfer rules}\ [\mathrm{FT.109}(3),\ \mathrm{CT0.12},\ \mathrm{FT.68}(2),\ \mathrm{CT3.20}];\qquad\text{invariance of constants under any data map}
+$$
+$$
+(3):\ \mathrm{FT.134}(2)\ \text{characters verbatim};\qquad q_{\mathrm{core}}(C\mathcal C)=-q_{\mathrm{core}}(\mathcal C)\ [\mathrm{FT.133}(6)].\ \blacksquare
+$$
+
+**Phys.** The numbers that carry the seal-side and colour-side hierarchies are cut from counts no reversal can reach — caps, dimensions, traces — so both channels sit outside the entire parity calculus, exactly invariant under all four involutions at once. Where parity does bite is the flip block: charge-odd, parity-even. A future dynamical read of the flipping frequency will inherit that character as a selection rule, and any application-layer assignment rule will have to reconcile it with the branch-selective weak force of FT.135.
+
+---
+
+---
+
+
+## Tier F.42 — The Rung-One Chirality, the Janus Arrow, and the Family Channel of the Sixteen-Dimensional Arena
+
+### FT.141 — The rung-one chirality theorem: the $10/6$ grading is the chirality of the complete force complex
+
+**Thm.** With $\mathbb S=\tfrac12(E_0+\Sigma)$ and $S(X)=\mathbb SX\mathbb S=\operatorname{Ad}(\mathbb S)X$ [A3; CT0.7(1)–(2)] on the pair channel $\mathfrak H(\mathbb C^4)$:
+$$(1)\quad\textbf{the grading census}\ [\mathrm{FT.136}(1)\ \text{re-derived at the point of use; machine: all}\ 17\ \mathrm{CT1.2}\ \text{generators}]:\qquad S\text{-even}\ (+1):\ \{E_0,\ \Sigma,\ \hat E^{ij}\ (5),\ W_i\ (3)\}=10\ \text{dims}=G_5+W_3+H_1+D^+_1;$$
+$$S\text{-odd}\ (-1):\ \{J_i\ (3),\ K_i\ (3)\}=6\ \text{dims}=J^+_3+J^-_3;\qquad 10+6=16=C_{\mathrm{cap}}\ [\mathrm{CT0.12};\ \mathrm{CT0.6}];\qquad\text{the asymmetry}\ 10\ne6\ \text{is exact};$$
+$$(2)\quad\textbf{the chirality of the complete force complex:}\ \ \text{the A8 block labels are readings of the}\ (S,T)\ \text{grades}\ [\mathrm{CT0.7}(4)]:\ \mathbf F_{(+,\mathcal R)}=F_G\oplus F_H\oplus F_{D^+}\ \text{and}\ \mathbf F_{(-,\mathcal R)}=F_W\ \text{are the}\ S\text{-even aspects},\ \mathbf F_{(+,\mathcal V)}=F_{J^+},\ \mathbf F_{(-,\mathcal V)}=F_{J^-}\ \text{the}\ S\text{-odd aspects};$$
+$$\text{the chiral structure of the complete force operator}\ \mathbf F\ [\mathrm{A8}:\ \text{always applied in full}]\ \text{at rung}\ 1\ \text{is the ordered pair}\ \bigl(\dim\mathcal K_1^{+},\ \dim\mathcal K_1^{-}\bigr)=(10,\ 6)\ [\mathrm{CT0.14}:\ \mathcal K_1=\text{the rung-one mask}]:$$
+$$\text{a property of the pair algebra}\ [\mathrm{A3}'\text{s swap};\ \mathrm{CT1.1},\ \mathrm{CT1.2}'\text{s basis}],\ \neg\ \text{of any single block:}\ \neg\exists\ \text{an aspect that is}\ \textbf{the}\ \text{chiral force};$$
+$$(3)\quad\textbf{deletion invariance:}\ \ \forall\,\mathcal Y\subseteq\{G,\ W,\ H,\ D^+,\ J^+,\ J^-\}\ \text{(the six rung-one blocks)}:\ \text{the}\ S\text{-eigenvalue of every surviving generator is unchanged}\ (\text{the eigen-relation}\ \mathbb SX\mathbb S=\pm X\ \text{is a two-operator relation: deletion touches neither}\ \mathbb S\ \text{nor}\ X);$$
+$$\text{the surviving split is}\ (10-d^+_{\mathcal Y},\ 6-d^-_{\mathcal Y}),\ d^{\pm}_{\mathcal Y}\ \text{the deleted dimensions in each grade};\qquad\text{the grading is nontrivial (both grades occupied)}\iff\ge1\ S\text{-even block and}\ \ge1\ S\text{-odd block survive}:\ 45\ \text{of the}\ 2^6=64\ \text{subsets}\ [\text{machine: exhaustive}];$$
+$$\text{the six single-block deletions leave}\ (5,6),\ (7,6),\ (9,6),\ (9,6),\ (10,3),\ (10,3):\ \text{each nontrivial, each asymmetric};\qquad\text{the full}\ 10/6\ \text{is recovered}\iff\mathcal Y=\varnothing;$$
+$$(4)\quad\textbf{the weak shadow:}\ \ W_i\in\mathcal E_{+-}:\ S\text{-even}\ [\mathrm{CT1.2}\ \text{table}];\qquad\operatorname{span}\{J_i,K_i\}\cap\operatorname{span}\{W_k\}=\{0\}\ [\text{disjoint basis subsets};\ \text{machine: rank}\ 9=6+3]:\ \text{the}\ S\text{-odd block carries no weak content};$$
+$$\text{the branch selectivity of the weak}\ [\mathrm{FT.93}(5),\ \mathrm{FT.101}]\ \text{sits at the state-space locus of the same swap}:\qquad\Pi_{\mathcal R}=\tfrac12(E_0+\mathbb S),\quad\Pi_{\mathcal V}=\tfrac12(E_0-\mathbb S)\quad[\mathrm{CT0.7}(1)],$$
+$$W_i\Pi_{\mathcal V}=0\ \ \forall i\ [\mathrm{FT.101}(2)\ \text{re-derived}];\qquad\textstyle\sum_iW_i^2=\tfrac32E_0+\tfrac12\Sigma\ [\mathrm{Cor}\ \mathrm{CT0.7a}]=E_0+\mathbb S=2\,\Pi_{\mathcal R}\qquad[\Sigma=2\mathbb S-E_0;\ \text{machine, entrywise}]:$$
+$$\text{the swap operator itself enters the weak Casimir identity — the branch asymmetry}\ (2\ \text{vs}\ 0)\ \text{is derived from the}\ S\text{-grading, and}\ \mathbb S\ \text{is A3 data, prior to every force assignment}\ [\mathrm{CT0.7}(4):\ \text{the A8 labels read the grades}];$$
+$$\text{locus discipline}\ [\mathrm{FT.136}(5)\ \text{stands}]:\ \text{the}\ 3\oplus1\ \text{branch split}\ (\operatorname{spec}\mathbb S\ \text{on}\ \mathbb C^4_{\mathrm{pair}})\ \text{and the}\ 10/6\ \text{operator split}\ (\operatorname{spec}\operatorname{Ad}(\mathbb S)\ \text{on}\ \operatorname{End}(\mathbb C^4_{\mathrm{pair}}))\ \text{are two loci of one swap, and neither is the carrier}\ \hat\chi\text{-grade}\ [\mathrm{FT.122}];$$
+$$(5)\quad\textbf{no}\ S\textbf{-neutral observable at rung one:}\ \ \operatorname{Ad}(\mathbb S)^2=\mathrm{id}\implies\operatorname{spec}\operatorname{Ad}(\mathbb S)\subseteq\{\pm1\}\ \text{and}\ \ker\operatorname{Ad}(\mathbb S)=\{0\}\ [\operatorname{Ad}(\mathbb S)\ \text{is its own inverse};\ \text{machine: rank}\ 16\ \text{on the flattened}\ 16\text{-basis};\ \operatorname{tr}\operatorname{Ad}(\mathbb S)=10-6=4];$$
+$$\text{every rung-one observable carries the unique grade decomposition}\ X=X_++X_-,\quad X_{\pm}=\tfrac12\bigl(\mathrm{id}\pm\operatorname{Ad}(\mathbb S)\bigr)X;$$
+$$\text{the metric reads}\ (\hat h_{ij}\ 5,\ \Sigma_{\mathrm{tr}}\ 1,\ a_{00}\ 1)\ \text{and the weak reads}\ (w_i\ 3)\ \text{are}\ S\text{-even};\ \text{the seal reads}\ (J^{\pm})\ \text{are}\ S\text{-odd with}\ 0\ \text{metric coordinates}\ [\mathrm{FT.30}\ \text{dictionary}]:$$
+$$\text{chirality at rung}\ 1\ \text{is}\ \neg\ \text{a selection rule applied by one force — it is the grading of the entire observable algebra}\ \mathcal K_1\ [\mathrm{CT0.14}\ \mathrm{Rmk}:\ \dim\mathcal K_1=16=C_{\mathrm{cap}}:\ \text{rung one exhausts the pair channel}];$$
+$$(6)\quad\textbf{reconciliation — the two independent}\ \mathbb Z_2\textbf{'s:}\ \ \text{the force-arena}\ S\text{-grading acts on}\ \operatorname{End}(\mathbb C^4_{\mathrm{pair}});\ \text{the carrier chirality}\ \hat\chi\ \text{acts on}\ \mathcal H_\omega\ [\mathrm{Def\text{-}H.33},\ \mathrm{FT.122};\ \text{Def-H.34}]:\ \text{pairwise distinct, commuting where jointly defined, neither reducible to the other}\ [\mathrm{FT.126}(4),\ \mathrm{FT.136}(4)\ \text{re-derived};\ \text{machine witnesses}];$$
+$$\text{the division of labour: the}\ S\text{-grading determines WHICH observables are chiral (the grade of every read); the carrier chirality determines WHICH chain orientations are chiral (the doublet's rays);}$$
+$$\text{the rule coupling the two}\ \mathbb Z_2\text{'s — and the branch-label}\ \mathbb Z_2\ [\mathrm{FT.101},\ \mathrm{FT.135}]\ \text{and the Janus arrow}\ [\mathrm{FT.144}(5)] — \text{to species is the deficit}\ 1'\ \text{assignment rule}\ [\mathrm{FT.125}(4)]:\ \neg\text{constructed here};\ \text{no new declaration issues}.$$
+
+**Req.** A3, A8 (Parts 1–2); CT0.6, CT0.7, Cor CT0.7a, CT0.12, CT0.13, CT0.14, CT1.1, CT1.2, CT1.3, CT1.5 (Part 1); FT.30 (Tiers F.1–F.11); FT.93, FT.101 (Tiers F.31–F.34); Def-H.33, FT.122, FT.125, FT.126 (Tier F.39); FT.135, FT.136 (Tier F.41); Def-H.34 (carrier clause); exact $\mathbb Q(i)$ matrix arithmetic, exhaustive $2^6$ subset census, rank/trace invariants, inclusion–exclusion [math; machine: `checks/verify_H_rung1_neutrino.py` §A].
+
+**Pf.**
+$$
+(1):\ \mathbb S=\tfrac12(E_0+\Sigma),\ \mathbb S^2=E_0\ [\mathrm{CT0.7}(1);\ \Sigma^2=3E_0-2\Sigma];\qquad\mathbb SE_0\mathbb S=E_0,\ \mathbb S\Sigma\mathbb S=\Sigma\ [\mathrm{CT1.3},\ \mathrm{CT1.5}];\qquad\mathbb S\hat E^{ij}\mathbb S=\hat E^{ij},\ \mathbb SW_i\mathbb S=W_i;\qquad\mathbb SJ_i\mathbb S=-J_i,\ \mathbb SK_i\mathbb S=-K_i\ [\mathrm{CT0.7}(3);\ \mathrm{CT1.2}\ \text{table}]
+$$
+$$
+\text{entrywise on all}\ 17\ \text{generators over}\ \mathbb Q(i)\ [\text{machine}];\qquad\text{counts}:\ 1+1+5+3=10;\quad3+3=6;\qquad10+6=16=C_{\mathrm{cap}}\ [\mathrm{CT0.12};\ \mathrm{CT0.6}]
+$$
+$$
+(2):\ \text{block}\leftrightarrow\text{aspect rows verbatim}\ [\mathrm{CT0.12}\ \text{table};\ \mathrm{CT0.7}(4)];\qquad\text{the}\ (S,T)\ \text{refinement}\ (7,3,3,3)\ [\mathrm{CT1.1}]:\ S\text{-even}=7+3=10,\ S\text{-odd}=3+3=6\ [\text{exact integers}];\qquad\text{A8}: \mathbf F\ \text{is the full direct sum — no sub-block restriction is an A8 force}
+$$
+$$
+(3):\ \text{the eigen-relation is binary in}\ (\mathbb S,X):\ \text{deleting}\ Y\ne X\ \text{leaves it untouched}\ [\text{machine: the grade table is identical on all}\ 64\ \text{subsets}];\qquad\text{both-grade census}:\ 2^6-2^4-2^2+1=64-16-4+1=45\ [\text{inclusion–exclusion over the}\ 4\ \text{even and}\ 2\ \text{odd blocks};\ \text{machine}]
+$$
+$$
+\text{single deletions}\ (d^+,d^-)\in\{(5,0),(3,0),(1,0),(1,0),(0,3),(0,3)\}\implies(5,6),(7,6),(9,6),(9,6),(10,3),(10,3)\ [\text{machine}];\qquad(10,6)\ \text{uniquely at}\ \mathcal Y=\varnothing\ [\text{machine}]
+$$
+$$
+(4):\ W_i\in\mathcal E_{+-}\ [\mathrm{CT1.2}];\qquad\operatorname{rank}\{J_1,J_2,J_3,K_1,K_2,K_3,W_1,W_2,W_3\}=9=6+3\ [\text{exact flattening rank};\ \text{machine}]\implies\text{the intersection is}\ \{0\}
+$$
+$$
+\Pi_{\mathcal R},\Pi_{\mathcal V}:\ \text{idempotent, orthogonal, complete},\ \mathfrak T\Pi_{\mathcal R}=3,\ \mathfrak T\Pi_{\mathcal V}=1\ [\mathrm{CT0.7}(1);\ \text{machine}];\qquad W_i\Pi_{\mathcal V}=0\ \forall i\ [\mathrm{FT.101}(2)\ \text{re-derived entrywise};\ \text{machine}]
+$$
+$$
+\textstyle\sum_iW_i^2=\tfrac14\sum_i(\sigma_i\otimes\sigma_0+\sigma_0\otimes\sigma_i)^2=\tfrac32E_0+\tfrac12\Sigma\ [\mathrm{Cor}\ \mathrm{CT0.7a}\ \text{re-derived}];\qquad\Sigma=2\mathbb S-E_0\ [\mathrm{CT0.7}(1)]\implies\tfrac32E_0+\tfrac12(2\mathbb S-E_0)=E_0+\mathbb S=2\cdot\tfrac12(E_0+\mathbb S)=2\Pi_{\mathcal R}\ [\text{machine}]
+$$
+$$
+\text{locus rows}:\ \operatorname{spec}\mathbb S\ \text{on}\ \mathbb C^4_{\mathrm{pair}}=(3,1)\ [\mathfrak T\Pi_{\mathcal R}=3,\ \mathfrak T\Pi_{\mathcal V}=1];\quad\operatorname{spec}\operatorname{Ad}(\mathbb S)\ \text{on}\ \operatorname{End}(\mathbb C^4_{\mathrm{pair}})=(10,6)\ [(1)];\quad\hat\chi\ \text{on}\ \mathcal H_\omega\ [\mathrm{FT.136}(4)\ \text{re-run}];\qquad\text{three distinct spaces}
+$$
+$$
+(5):\ \operatorname{Ad}(\mathbb S)^2X=\mathbb S(\mathbb SX\mathbb S)\mathbb S=\mathbb S^2X\mathbb S^2=E_0XE_0=X\ [\mathrm{CT1.3}];\qquad\text{self-inverse}\implies\text{invertible}\implies\ker=\{0\};\qquad\text{rank}\ 16\ \text{on the flattened basis}\ [\text{machine}];\qquad\operatorname{tr}\operatorname{Ad}(\mathbb S)=\#\{+1\}-\#\{-1\}=10-6=4\ [\text{machine}]
+$$
+$$
+X_{\pm}=\tfrac12(X\pm\mathbb SX\mathbb S):\ \operatorname{Ad}(\mathbb S)X_{\pm}=\pm X_{\pm},\ X_++X_-=X\ [\mathbb S^2=E_0];\qquad\text{uniqueness: eigenspace decomposition of an involution}\ [\text{machine on the}\ 16\text{-basis}];\qquad\mathrm{FT.30}\ \text{dictionary rows verbatim}
+$$
+$$
+(6):\ [G\otimes I_2,\ I_2\otimes\hat\omega]=0,\quad(G\otimes\hat\omega)^2=\mathrm{id},\quad G\otimes\hat\omega\ne G\otimes I_2\ne I_2\otimes\hat\omega\ [\mathrm{FT.126}(4)/\mathrm{FT.134}(5)\ \text{pattern};\ \text{machine on}\ G\in\{\sigma_1,\sigma_3\}];\qquad\operatorname{Ad}(\mathbb S)\ \text{on}\ \operatorname{End}(\mathbb C^4_{\mathrm{pair}})\ \text{vs}\ \hat\chi\ \text{on}\ \mathcal H_\omega:\ \text{distinct carriers}\ [\mathrm{FT.136}(4)]
+$$
+$$
+\text{coupling rule}:\ \neg\exists\ \text{tag assigning grades to species}\ [\text{inventory scan};\ \mathrm{FT.125}(4)].\ \blacksquare
+$$
+
+**Phys.** At the first rung the entire force complex is chiral, and its chirality is a count: ten dimensions speak to the metric — shear, volume, conformal, shift — and six only move the ledger. The count belongs to no force: it is the swap grading of the pair algebra, and every aspect of the complete force sits inside it with its grade already decided. The weak force's one-sidedness is a shadow of the same swap — its Casimir identity contains the swap operator literally — so no isolation of the weak reproduces the asymmetry, and no deletion of any force block removes it: the grade of each generator is a two-operator fact, invariant under everything except deleting the generator itself. Every observable at rung one is graded; none is neutral. The carrier keeps a second, independent chirality of its own, and the rule that would marry the two gradings to species is application-layer content.
+
+---
+
+---
+
+### FT.142 — The rung-one arena and the channel angle $\delta_\nu=\tfrac18$
+
+**Thm.** The rung-one channel — the deficit-6 ledger row, internal channel subscript $\nu$ [$\neg$a species name; Rmk below]:
+$$(1)\quad\textbf{the channel class:}\ \ \text{a rung-one bound chain is a bound chain}\ [\mathrm{D1.5}]\ \text{whose terminus-active aspects lie in}\ \mathcal A(1)=\{J,\ G,\ W,\ H,\ D^+\}\ [\mathrm{CT0.13}]:$$
+$$\text{EM unactivated}\ (f_v=0\ \text{reads}\ [\mathrm{D3.3};\ \mathrm{FT.28}(3):\ \mathrm{EM}\in\mathcal A\iff f_p\ne0\ \vee\ f_q\ne0]);\qquad\text{colour block vanishing}\ (\text{no slot index below trivalence}\ [\mathrm{CT3.11}(1)];\ \text{single-contact floors:}\ \mathcal C=0\implies\text{block}\equiv0\ [\mathrm{FT.19},\ \mathrm{FT.28}(3)]);$$
+$$\text{the Def-H.4 floor stands:}\ \delta h(c)\ge2,\ n(v)\ge2\ [\text{self-loops}\ \bot\ \text{by A1}];\qquad\text{the minimal instance is the digon}\ \Sigma_{\min}\ [\mathrm{FT.28}];$$
+$$(2)\quad\textbf{the arena:}\ \ \text{the pair-channel arena on which the complete rung-one force acts is the rung-one mask}\ \mathcal K_1:\qquad\dim\mathcal K_1=16=C_{\mathrm{cap}}\quad[\mathrm{CT0.14},\ \mathrm{CT0.12};\ \text{machine: exact rank}];$$
+$$\text{the complete-force standing rule}\ [\mathrm{A8}]\ \text{fixes the arena as the full mask: no sub-block arena — isolating a force is not an A8 action};$$
+$$(3)\quad\textbf{the arena adjudication}\ (\text{computed candidates; one adopted}):$$
+$$\begin{array}{c|c|c}\text{candidate} & \text{source} & \text{verdict}\\ \hline 16=\dim\mathcal K_1 & \mathrm{CT0.14}\ \text{(derived mask)} & \textbf{adopted}\\ 10=S\text{-even block} & \mathrm{FT.141}(1) & \text{rejected: deleting the}\ S\text{-odd blocks violates A8's completeness}\ [\mathrm{CT0.13}:\ J\in\mathcal A(1)]\\ 9=\text{seal}\times\text{transfer} & \mathrm{FT.110}\ [\text{Def-H.41}] & \text{rejected: a interface definition for transfer-dressed chains}\ [\text{the transfer trace}\ \operatorname{tr}T(1)=3\ \text{is polygon-channel data},\ \mathrm{FT.68}(2)];\ \text{not imported in this part}\\ 27=\text{seal}\times\text{transfer}\times\text{colour} & \mathrm{FT.118}(2)\ [\text{Def-H.42}] & \text{rejected: colour slots are rung-three content}\ [\mathrm{CT0.13}];\ \text{clause}\ (1)\ \text{excludes them};\ \text{not imported}\\ 6=\dim\mathcal K_0 & \mathrm{CT0.14} & \text{rejected: seals alone; a terminus with}\ n(v)\ge2\ \text{carries metric and weak reads}\ [\mathrm{FT.28}(3):\ \{G,H,W\}\subseteq\mathcal A(\Sigma_{\min})]\end{array}$$
+$$\text{the adopted arena is the unique candidate that is derived content with no interface declaration:}\ \delta_\nu\ \text{is the first channel angle whose denominator requires no declaration-entry construction};$$
+$$(4)\quad\textbf{the seal coefficient, undressed:}\ \ [J_i,K_j]=i\bigl(\delta_{ij}\Sigma-E^{ij}\bigr)\ [\mathrm{CT1.7}\ \text{re-derived, all}\ 9\ \text{pairs}];\qquad\textstyle\sum_i[J_i,K_i]=i\bigl(3\Sigma-\textstyle\sum_iE^{ii}\bigr)=2i\Sigma\quad[\textstyle\sum_iE^{ii}=\Sigma];$$
+$$\text{in the}\ 16\text{-element CT1.2 basis the sum has exactly one nonzero component — the}\ \Sigma\text{-component, coefficient exactly}\ 2\ [\mathrm{FT.109}(3)\ \text{pattern};\ \text{machine: exact linear solve, rank}\ 16];$$
+$$\text{the rung-one channel class carries no dressing factor}\ (\neg\text{colour slots by clause}\ (1);\ \neg\text{transfer declaration imported by clause}\ (3)):\ \text{the numerator is}\ 2,\ \text{undressed}\ [\mathrm{FT.118}(5)\ \text{spectator pattern}];$$
+$$(5)\quad\textbf{the channel angle:}\qquad\delta_\nu\ :=\ \frac{\sum_i[J_i,K_i]\big|_\Sigma}{\dim\mathcal K_1}\ =\ \frac{2}{16}\ =\ \frac18\qquad[\text{exact rational};\ \mathrm{FT.112}\ \text{pattern}];$$
+$$\text{the democratic normalization}\ A=1,\ B=\sqrt2\ \text{is seal-side data}\ [\mathrm{FT.111}(3):\ \textstyle\sum_i\lambda_i=3=\dim F_{J^\pm};\ \sum_i(\lambda_i-A)^2=3]\ \text{and hence channel-blind}\ [\mathrm{FT.119}\ \text{precedent}]:\ \text{the rung-one channel inherits it unchanged}.$$
+
+**Rmk (channel-label discipline).** The subscript $\nu$ names the deficit-6 ledger row — internal bookkeeping, joining $\ell$ [FT.112] and $q$ [FT.119] as a channel subscript; all three denote ledger rows, $\neg$particles. No species identification is made or implied [P1, P5]. The arena $\mathcal H_c$-vocabulary of FT.110/FT.118 (counting spaces without inner product, dynamics or states) applies verbatim: $\mathcal K_1$ enters this tier exactly once, as the denominator of clause (5).
+
+**Req.** A1, A8, D0.8, D1.5, D3.3, P1, P4, P5 (Parts 1–2); CT0.6, CT0.12, CT0.13, CT0.14, CT1.2, CT1.7 (Part 1); CT3.11 (Part 2); Def-H.4 (Tier F.2); FT.19, FT.28 (Tiers F.1–F.11); FT.68(2) (Tiers F.23–F.25); FT.109, FT.110, FT.111, FT.112 (Tier F.37); FT.118 (Tier F.38); FT.141 (this tier); Def-H.41, Def-H.42 cited in the rejection rows and imported nowhere; exact $\mathbb Q(i)$ arithmetic, exact linear solve on the $16$-basis, exact flattening ranks [math; machine: `checks/verify_H_rung1_neutrino.py` §B].
+
+**Pf.**
+$$
+(1):\ \mathrm{D1.5}:\ \text{bound}=\text{closed self-contained},\ \text{fermionic content};\qquad\mathcal A(1)\ \text{verbatim}\ [\mathrm{CT0.13}];\qquad\mathrm{FT.28}(3)\ \text{rows verbatim}\ [\mathrm{D3.3};\ \mathrm{CT3.11}(1);\ \mathrm{FT.19}]
+$$
+$$
+\mathrm{Def\text{-}H.4}\ \text{Rmk}:\ \delta h=1\ \text{closed chain}=\text{self-loop}=\bot\ [\mathrm{A1}];\qquad\text{closed chain based at}\ v\implies n(v)\ge2\ [\mathrm{D0.8}];\qquad\Sigma_{\min}=\text{the}\ 2\text{-cycle floor}\ [\mathrm{FT.28}]
+$$
+$$
+(2):\ \dim\mathcal K_1=6+(5+3+1+1)=16\ [\mathrm{CT0.14};\ \mathrm{CT0.12}\ \text{table}];\qquad\text{machine: flattening rank of the}\ 16\ \mathrm{CT1.2}\ \text{elements}=16\ \text{over}\ \mathbb Q\ (32\ \text{real components});\qquad 16=C_{\mathrm{cap}}\ [\mathrm{CT0.6}]
+$$
+$$
+\text{A8}: \mathbf F=F_{(+,\mathcal R)}\oplus F_{(-,\mathcal R)}\oplus F_{(+,\mathcal V)}\oplus F_{(-,\mathcal V)}\oplus F_{\mathrm{st}}\ \text{always applies in full}\implies\text{the rung-one read arena is the full mask}\ \mathcal K_1\ [\mathrm{CT0.14}:\ \mathcal P_M^{(1)}\ \text{projects onto it}]
+$$
+$$
+(3):\ \text{candidate rows}:\ 10=\operatorname{rank}\{E_0,\Sigma,\hat E^{ij},W_i\}\ [\text{machine}];\qquad 9=3\cdot3\ [\mathrm{FT.110}(1)\ \text{under Def-H.41's declared tensor product}];\qquad 27=3\cdot3\cdot3\ [\mathrm{FT.118}(2)\ \text{under Def-H.42}];\qquad 6=\operatorname{rank}\{J_i,K_i\}\ [\mathrm{CT0.14};\ \text{machine}]
+$$
+$$
+\text{rejection grounds}:\ \text{the}\ S\text{-even sub-arena omits}\ J\in\mathcal A(1)\ [\mathrm{CT0.13}]\ \text{against A8};\qquad\text{the}\ 9/27\ \text{arenas are declared constructions}\ [\mathrm{FT.110}\ \mathrm{Rmk};\ \mathrm{FT.118}\ \mathrm{Rmk}]\ \text{and this part's import discipline admits}\ \{ \text{Def-H.4},\ \text{Def-H.37(2)},\ \text{Def-H.38},\ \text{Def-H.34},\ \text{Def-H.43}\}\ \text{only};\qquad\mathcal K_0\ \text{omits the metric/weak reads of any}\ n\ge2\ \text{terminus}\ [\mathrm{FT.28}(3)]
+$$
+$$
+(4):\ \mathrm{CT1.7}\ \text{entrywise on all}\ 9\ \text{pairs over}\ \mathbb Q(i)\ [\text{machine}];\qquad\textstyle\sum_i(\Sigma-E^{ii})=3\Sigma-\Sigma=2\Sigma\ [\mathrm{FT.109}(2)\ \text{re-derived}];\qquad\text{component read: exact solve on the rank-}16\ \text{basis}\implies(0,\dots,0,\ 2i,\ 0,\dots,0)\ [\text{machine}]
+$$
+$$
+(5):\ \delta_\nu=\tfrac{2}{16}=\tfrac18\ [\text{exact Fractions}];\qquad A=1:\ \textstyle\sum_i\lambda_i=3A=3=\dim F_{J^\pm}\ [\mathrm{CT0.12}\ \text{table}];\qquad B^2=2:\ \textstyle\sum_i(\lambda_i-A)^2=B^2\textstyle\sum_i\cos^2(\theta+\tfrac{2\pi i}3)=B^2\cdot\tfrac32=3\ [\mathrm{FT.111}(3)\ \text{identities}].\ \blacksquare
+$$
+
+**Phys.** The rung-one channel is the class of bound chains that live on the pretime forces alone — no charge read firing, no colour slot gripped — and its arena needs no construction: the rung-one mask already is the whole pair channel, sixteen dimensions, derived. The seed integer of the family mechanism, the diagonal seal coefficient $2$, reappears undressed, because rung one dresses nothing. One integer over one derived dimension: the channel angle is $1/8$, the first of the three family angles whose denominator is a theorem rather than a interface definition.
+
+---
+
+---
+
+### FT.143 — The rung-one family spectrum
+
+**Thm.** With $\delta_\nu=\tfrac18$ [FT.142(5)] and $A=1$, $B=\sqrt2$ [FT.111(3)]:
+$$(1)\quad\textbf{the spectrum:}\qquad r_i^{(\nu)}=1+\sqrt2\cos\Bigl(\frac18+\frac{2\pi i}{3}\Bigr),\qquad i=0,1,2,$$
+$$\text{with exact radical-trigonometric closed forms}\ (c=\cos\tfrac18,\ s=\sin\tfrac18):\qquad r_0^{(\nu)}=1+\sqrt2\,c;\qquad r_1^{(\nu)}=1-\frac{\sqrt2\,c+\sqrt6\,s}{2};\qquad r_2^{(\nu)}=1-\frac{\sqrt2\,c-\sqrt6\,s}{2};$$
+$$r_0^{(\nu)}=2.403179397550\ldots,\qquad r_1^{(\nu)}=0.145715560918\ldots,\qquad r_2^{(\nu)}=0.451105041530\ldots\qquad[\text{all three strictly positive; disjoint enclosures; machine}];$$
+$$(2)\quad\textbf{Vieta and the channel-own cubic:}\qquad\textstyle\sum_ir_i^{(\nu)}=3,\qquad\sum_{i<j}r_i^{(\nu)}r_j^{(\nu)}=\frac32,\qquad\sum_i\bigl(r_i^{(\nu)}\bigr)^2=6\qquad[\text{exact ring identities};\ \text{machine}];$$
+$$2\bigl(r^{(\nu)}-1\bigr)^3-3\bigl(r^{(\nu)}-1\bigr)-\sqrt2\cos\frac38=0\quad\text{for each}\ r^{(\nu)}=r_i^{(\nu)}\qquad\bigl[\cos3\delta_\nu=\cos\tfrac38=4c^3-3c;\ \text{machine: symbolic + enclosure}\bigr];$$
+$$\cos\tfrac38\ne\cos\tfrac29\ [\text{disjoint enclosures}]:\ \text{the cubic constant}\ \sqrt2\cos\tfrac38\ \text{is channel-own — the rung-one channel shares no depressed cubic with the}\ \ell/q\ \text{pair}\ [\mathrm{FT.119}(4):\ \cos3\delta_q=\cos\delta_\ell=\cos\tfrac29];$$
+$$(3)\quad\textbf{the mass-squared ratios:}\qquad\bigl(r_1^{(\nu)}\bigr)^2<\bigl(r_2^{(\nu)}\bigr)^2<\bigl(r_0^{(\nu)}\bigr)^2\ [\text{enclosure-proven}];\qquad m_i=\mu_\nu\bigl(r_i^{(\nu)}\bigr)^2,\ \ \mu_\nu\ \text{undeclared}\ (\mathrm{P4});\qquad\text{the}\ m^2\ \text{vocabulary is the corpus's own inertial read}\ [\mathrm{L3}(4),\ \mathrm{L4}];\ \neg\text{a particle identification}:$$
+$$m_1^2:m_2^2:m_3^2=1:\frac{\bigl(r_2^{(\nu)}\bigr)^2}{\bigl(r_1^{(\nu)}\bigr)^2}:\frac{\bigl(r_0^{(\nu)}\bigr)^2}{\bigl(r_1^{(\nu)}\bigr)^2}=1:9.583926992379\ldots:271.994748749143\ldots\qquad[\text{widths}<2^{-50};\ \text{machine}];$$
+$$\textbf{anchored forms}\ (\text{scale-free, top-normalized}):\qquad\frac{m_2}{m_3}=\frac{\bigl(r_2^{(\nu)}\bigr)^2}{\bigl(r_0^{(\nu)}\bigr)^2}=0.035235705970\ldots,\qquad\frac{m_1}{m_3}=\frac{\bigl(r_1^{(\nu)}\bigr)^2}{\bigl(r_0^{(\nu)}\bigr)^2}=0.003676541567\ldots;$$
+$$(4)\quad\textbf{the Q-invariant:}\qquad Q\ :=\ \frac{\sum_im_i}{\bigl(\sum_i\sqrt{m_i}\bigr)^2}\ \overset{m_i=\mu_\nu(r_i^{(\nu)})^2}{=}\ \frac{\sum_i(r_i^{(\nu)})^2}{\bigl(\sum_ir_i^{(\nu)}\bigr)^2}\ =\ \frac69\ =\ \frac23\qquad[\text{exact, and independent of}\ \delta\ \text{and of}\ \mu\ [\mathrm{FT.119}(4)\ \text{pattern}]]:$$
+$$\text{the channel normalization}\ Q=\tfrac23\ \text{holds at rung one};$$
+$$(5)\quad\textbf{the angle ledger}\ (\text{exact rational arithmetic; no equality beyond those displayed}):$$
+$$16\,\delta_\nu=9\,\delta_\ell=27\,\delta_q=2\qquad[\text{the shared seal numerator is the only cross-channel identity};\ \mathrm{FT.112},\ \mathrm{FT.119}(1)];$$
+$$3\delta_\nu=\frac38\notin\Bigl\{\frac29,\ \frac2{27}\Bigr\}=\{\delta_\ell,\ \delta_q\};\qquad\delta_\nu\notin\Bigl\{3\delta_\ell,\ 3\delta_q,\ \frac{\delta_\ell}3,\ \frac{\delta_q}3\Bigr\}:\ \text{the triple-angle link}\ 3\delta_q=\delta_\ell\ [\mathrm{FT.119}(2)]\ \text{has no rung-one analogue};$$
+$$\delta_\nu-\delta_\ell=-\frac7{72};\qquad\delta_\nu-\delta_q=\frac{11}{216};\qquad3\delta_\nu-\delta_\ell=\frac{11}{72}=3\,(\delta_\nu-\delta_q)\quad[\text{consistent with}\ \delta_\ell=3\delta_q];$$
+$$\delta_\nu:\delta_\ell:\delta_q=27:48:16\quad[\times216];\qquad\delta_q<\delta_\nu<\delta_\ell;$$
+$$(6)\quad\textbf{the three-channel table}\ (\text{frozen rows cited; rung-one row derived here}):$$
+
+| channel (ledger row) | arena | $\dim$ | $\delta$ | cubic constant | $Q$ | $m_1^2:m_2^2:m_3^2$ |
+|---|---|---|---|---|---|---|
+| $\ell$ [FT.109–FT.113] | seal$\times$transfer [Def-H.41] | $9$ | $\tfrac29$ | $\sqrt2\cos\tfrac29$ | $\tfrac23$ | $1:206.770315972729\ldots:3477.472837104\ldots$ |
+| $q$ [FT.116–FT.119] | seal$\times$transfer$\times$colour [Def-H.42] | $27$ | $\tfrac2{27}$ | $\sqrt2\cos\tfrac29$ | $\tfrac23$ | $1:3.563695074946\ldots:139.3386880284\ldots$ |
+| $\nu$ (this tier) | $\mathcal K_1$ [derived] | $16$ | $\tfrac18$ | $\sqrt2\cos\tfrac38$ | $\tfrac23$ | $1:9.583926992379\ldots:271.994748749143\ldots$ |
+
+$$\text{the family count is}\ 3\ \text{in every channel}:\ 3=\dim F_{J^\pm}\ [\mathrm{CT0.12};\ \mathrm{FT.111}(3):\ \textstyle\sum_i\lambda_i=3]\ \text{— a datum for deficit}\ 3,\ \neg\ \text{a selection principle}\ [\text{item}\ 21(d)\ \text{stands}].$$
+
+**Req.** FT.142; FT.111(2)–(3), FT.112, FT.113 (**Tier F.37**: the democratic spectrum form, the normalization, the angle discipline, the $m=\mu r^2$ vocabulary and its enclosure pipeline); FT.119 (**Tier F.38**: the phase-free $Q$, the anchored forms, the triple-angle precedent); L3, L4 (**B**: the $m^2$ inertial-read vocabulary); P4 (**A**: the free-scale clause); exact symbolic identities in $\mathbb Q[\sqrt2,\sqrt3][c,s]/(c^2{+}s^2{-}1)$, rational trigonometric enclosures (Taylor remainder bounds), integer Newton certificates, monotone rational interval arithmetic, Vieta reads [math; machine: `checks/verify_H_rung1_neutrino.py` §C].
+
+**Pf.**
+$$
+(1):\ r_i^{(\nu)}=A+B\cos(\delta_\nu+\tfrac{2\pi i}3)\ \text{at}\ A=1,\ B=\sqrt2\ [\mathrm{FT.111}(3)];\qquad\cos(\tfrac18+\tfrac{2\pi}3)=-\tfrac c2-\tfrac{\sqrt3}2s,\quad\cos(\tfrac18+\tfrac{4\pi}3)=-\tfrac c2+\tfrac{\sqrt3}2s\ [\text{addition formulas}];\qquad\sqrt2\cdot\tfrac{\sqrt3}2=\tfrac{\sqrt6}2
+$$
+$$
+c,s\ \text{enclosed by alternating Taylor partial sums with exact rational remainder bounds at}\ x=\tfrac18\ (\text{widths}<2^{-90});\qquad\sqrt2,\sqrt6\ \text{enclosed by integer Newton certificates};\qquad r_1^{(\nu)},r_2^{(\nu)}>0\ [\text{positive lower endpoints};\ \text{machine}]
+$$
+$$
+(2):\ \textstyle\sum_i\cos(\delta_\nu+\tfrac{2\pi i}3)=0,\ \sum_i\cos^2(\delta_\nu+\tfrac{2\pi i}3)=\tfrac32\ [\mathrm{FT.111}(3)\ \text{identities, arbitrary phase}]\implies\sum_ir^{(\nu)}=3,\ \sum_i(r^{(\nu)})^2=3+2\sqrt2\cdot0+2\cdot\tfrac32=6;\qquad\text{pair sum by Vieta}=\tfrac32
+$$
+$$
+\text{depressed cubic}\ (\lambda-1)^3-\tfrac32(\lambda-1)-\tfrac{\sqrt2}2\cos3\delta_\nu=0\ [\mathrm{FT.111}(2)\ \text{at}\ B^2=2];\qquad\cos3\delta_\nu=\cos\tfrac38=4c^3-3c\ [\text{triple angle};\ \text{machine: ring identity}];\qquad\times2:\ 2y^3-3y-\sqrt2\cos\tfrac38=0,\ y=r^{(\nu)}-1
+$$
+$$
+0\in2y_i^3-3y_i-\sqrt2\cos\tfrac38\ \text{enclosure for each}\ i\ [\text{machine}];\qquad\cos\tfrac38\ \text{vs}\ \cos\tfrac29:\ \text{disjoint enclosures}\ [\text{machine}];\qquad\text{ring-side: all identities exact in}\ \mathbb Q[\sqrt2,\sqrt3][c,s]/(c^2{+}s^2{-}1)\ [\text{machine}]
+$$
+$$
+(3):\ (r_1^{(\nu)})^2<(r_2^{(\nu)})^2<(r_0^{(\nu)})^2\ [\text{disjoint enclosures}];\qquad\text{ratios by monotone interval division, widths}<2^{-50}\ [\text{machine}];\qquad\text{anchored forms: the same divisions against}\ (r_0^{(\nu)})^2\ [\text{machine}]
+$$
+$$
+(4):\ Q=\tfrac{\sum_i(r^{(\nu)})^2}{(\sum_ir^{(\nu)})^2}=\tfrac69=\tfrac23\ [\text{exact Fractions from}\ (2)];\qquad\mu_\nu\ \text{cancels}\ [\text{homogeneity}]
+$$
+$$
+(5):\ 16\cdot\tfrac18=2,\quad9\cdot\tfrac29=2,\quad27\cdot\tfrac2{27}=2;\qquad3\cdot\tfrac18=\tfrac38\ne\tfrac29\ne\tfrac2{27};\qquad\tfrac38-\tfrac29=\tfrac{27-16}{72}=\tfrac{11}{72};\qquad\tfrac18-\tfrac29=\tfrac{9-16}{72}=-\tfrac7{72};\qquad\tfrac18-\tfrac2{27}=\tfrac{27-16}{216}=\tfrac{11}{216}\ [\text{exact Fractions};\ \text{machine}]
+$$
+$$
+216\cdot(\tfrac18,\tfrac29,\tfrac2{27})=(27,48,16);\qquad\tfrac2{27}<\tfrac18<\tfrac29\ [\text{cross-multiplication};\ \text{machine}];\qquad(6):\ \text{frozen rows verbatim}\ [\mathrm{FT.113},\ \mathrm{FT.119}(3),(5);\ \text{machine: the cited decimals re-verified as enclosure floors at their stated widths}].\ \blacksquare
+$$
+
+**Phys.** The third channel runs the same democratic machine on the derived sixteen: one large line, one middle line, one small line, all exact in $\sqrt2$, $\sqrt6$ and $\cos\tfrac18$, with the universal $Q=\tfrac23$ holding again — the invariant knows the normalization, not the phase. Its cubic is its own: triple the angle and nothing from the other two channels appears, so the rung-one hierarchy is structurally distinct from the linked $\ell/q$ pair, sharing with them exactly one integer, the seal coefficient $2$. The angle sits between its two siblings and the hierarchy with them: milder than the $\ell$-channel's $3477$-fold span, steeper than the $q$-channel's $139$-fold span. Every number here is dimensionless; the scale $\mu_\nu$ is free internal data, and the $m^2$ name is the corpus's own inertial read — never a particle.
+
+---
+
+---
+
+### FT.144 — The Janus-arrow theorem: no backward materialization, and single-sector occupancy at rung one
+
+**Thm.**
+$$(1)\quad\textbf{the valid-universe condition:}\qquad\text{valid universe}\iff\text{real-edge network closed}\ \wedge\ \#J^+=\#J^-\ \wedge\ \in\operatorname{Im}(\text{active mask})\ \wedge\ \neg\exists\ \text{dangling ledger boundary}\ [\mathrm{D2.11},\ \mathrm{D1.3}];$$
+$$\text{observable fermions are termini of Janus-closed bound chains}\ [\mathrm{Def\text{-}H.4}];\qquad\text{closed}\iff\partial c=0\ \wedge\ \#J^+=\#J^-\ [\mathrm{D1.4}];\qquad\text{bound content is fermionic}\ [\mathrm{D1.5}];$$
+$$(2)\quad\textbf{the forward arrow}\ (\text{per-pair transition domains}):\qquad J^+:\ n_{\mathcal R}:0\to1\ (\text{crystallization});\qquad J^-:\ n_{\mathcal R}:1\to0\ (\text{dissolution})\qquad[\mathrm{D1.2}];$$
+$$J^-\ \text{is undefined at}\ n_{\mathcal R}=0\ \ \wedge\ \ J^+\ \text{is undefined at}\ n_{\mathcal R}=1:\ \text{the domains force}\ \textbf{strict alternation}\ \text{— the only admissible single-pair histories are the prefixes of the alternating word}\ (J^+J^-J^+J^-\cdots);$$
+$$\text{every admissible history obeys the prefix law}\ \ \#J^+(\text{prefix})\ \ge\ \#J^-(\text{prefix}),\ \ \text{with equality}\iff n_{\mathcal R}=0;\qquad\text{the completed single-pair history of length}\ 2m\ \text{is unique:}\ (J^+J^-)^m,\ \#J^+=\#J^-=m;$$
+$$\text{two-pair completed interleavings of total length}\ 2n:\qquad\sum_{m_0+m_1=n}\frac{(2n)!}{(2m_0)!\,(2m_1)!}\ =\ 2,\ 8,\ 32\quad(2n=2,4,6)\qquad[\text{machine: exhaustive enumeration}\ \le8\ (\text{single pair}),\ \le6\ (\text{two pairs})\ \text{agrees with the closed form}];$$
+$$\text{a materialized closed chain with any dissolution-first edge}\ (J^-\to J^+\ \text{as its leading local transition})\ \text{violates the prefix law at its first event: it is outside the transition domains, hence excluded from every valid universe}\ [\mathrm{D2.11}];$$
+$$\text{the sealed universe-level balance}\ \#J^+=\#J^-\ [\mathrm{D1.3}]\ \text{is the balanced-sector restriction of the move algebra's budget identity}\ a_+-a_-=|R'|-|R|\ [\mathrm{FT.108}(4)];$$
+$$(3)\quad\textbf{not a mass statement:}\ \ \text{the obstruction of}\ (2)\ \text{is the transition domain of D1.2 conjoined with the closure of D1.4/D2.11 — a combinatorial locus statement: no scale, no P4 parameter and no mass enters it}\ [\text{inventory: the premises contain}\ \neg\mathfrak h,\ \neg\mu,\ \neg h_0];$$
+$$\neg\exists\ \text{a value of any configuration datum that un-excludes the backward materialization};\qquad\text{contrast class: the deficit-12 ceilings are range bounds on reads}\ [\mathrm{FT.76}(3),\ \mathrm{FT.79}(2)]\ \text{— the present obstruction is a domain restriction, prior to every read};$$
+$$(4)\quad\textbf{the vacuum residence:}\ \ \text{the reversed reading exists only as formal bookkeeping. Two distinct reversals, adjudicated separately:}$$
+$$\text{(i)}\ \Theta_{\mathfrak L}\ (T):\ \text{ledger order reversed}\ \wedge\ J^+\leftrightarrow J^-\ [\mathrm{D2.7};\ \mathrm{FT.133}(1)]:\ \text{an involution on configuration data}\ [\text{machine: it bijects the completed admissible sequences onto themselves, counts preserved — the formal mirror}];$$
+$$\text{(ii) the pure order reversal}\ (\text{the ledger read backwards, labels unchanged — ``running the arrow in reverse''}):\ \text{every completed nonempty admissible history ends with}\ J^-\ (n_{\mathcal R}\ \text{returns to}\ 0\ \text{only via}\ 1\to0),\ \text{so its pure reversal leads with}\ J^-:\ \text{inadmissible at the first event}\ [\text{machine: exhaustive}];$$
+$$\text{and the tick sequence admits no inverse in either case}\ [\mathrm{A6}:\ \neg\exists\,\tau^{-1}]:\ \text{the ledger count}\ |\mathfrak L(\tau_n)|=\sum_{k<n}n_{\mathrm{real\_out}}(\tau_k)\ \text{is non-decreasing along every admissible history}\ (n_{\mathrm{real\_out}}\ge0)\ \text{and strictly increases at every crystallization: the reversed reading of a multi-crystallization history strictly decreases somewhere, and by (ii) the reversal of every completed word is inadmissible at its first event}\ [\text{machine: exhaustive}]\implies\text{no forward tick realization of any reversed reading exists};$$
+$$\text{the fluctuation content resides in the}\ \mathcal V\ \text{sector}\ [\mathrm{CT0.1}]:\quad n_{\mathcal R}=0\implies\forall(p,q):\ (p,q)\in\mathcal V\ \wedge\ \rho_{pq}=\rho_\circ=\tfrac14I,\quad S_{\mathrm{raw}}(\rho_\circ)=\ln4=\max,\quad\arg\max=\{\tfrac14I\}\quad[\mathrm{A5},\ \mathrm{CT0.2};\ \text{machine:}\ \mathfrak T\rho_\circ=1,\ \operatorname{charpoly}=(x-\tfrac14)^4,\ \text{dyadic entropy witnesses}<\ln4];$$
+$$\text{virtual pairs are unregistered}\ [\mathrm{D1.1}:\ \neg\text{registration}\implies e\in\mathcal V];\qquad\text{chains require real edges}\ [\mathrm{D1.4}:\ e_i\in E_{\mathcal R}]:\ |E_{\mathcal R}|=0\implies\text{the closed-chain count is}\ 0\implies\neg\exists\ \text{fermion terminus}\ [\mathrm{Def\text{-}H.4};\ \text{machine}];$$
+$$\text{the fluctuation resolvent is even in balanced pairs:}\quad\sum_n\langle\varnothing|\hat U^n|\varnothing\rangle\,w^n=\frac1{1-w^2x_+x_-}\quad[\mathrm{FT.108}(5)\ \text{re-derived};\ \text{machine in}\ \mathbb Q[w,x_+,x_-]/(w^{12})]:$$
+$$\text{every nonzero return monomial carries equal}\ x_+\text{- and}\ x_-\text{-degree}\ [\text{machine degree census}]:\ \text{a}\ J^-\text{-leading monomial has zero support};$$
+$$\text{the zero-projection/no-pole pattern applies}\ [\mathrm{CT4.2}:\ \mathcal P_MF\mathcal P_M=0\implies\neg\exists\ \text{accessible pole};\ \mathrm{CT2.5}:\ \text{poles}\iff1\in\operatorname{spec}\mathbf F_M]:\ \text{unregistered content supports no accessible pole at any rung};$$
+$$(5)\quad\textbf{carrier reconciliation — single-sector occupancy:}\ \ P_L,P_R=\tfrac12(\mathrm{id}\pm\hat\chi)\ \text{are constructible, exact, rank-}1,\ \hat\omega\text{-exchanged}\ [\mathrm{Def\text{-}H.33},\ \mathrm{FT.122}(2)\text{–}(4);\ \text{machine}]:\ \text{mathematical objects on}\ \mathcal H_\omega\ \text{whether or not occupied};$$
+$$\textbf{unconditional}\ (\text{derived}):\ \text{the rung-one materialized locus is single-arrow by}\ (2)\ \text{— one orientation sector of the doublet basis}\ (|c\rangle\ \text{carries the materialized ledger-ordered tuple}\ [\mathrm{D1.4};\ \mathrm{FT.134}(1):\ C,P,T\ \text{fix the chain tuple pointwise}];\ |\omega(c)\rangle\ \text{is the reversal image}\ [\mathrm{D2.6};\ \mathrm{FT.88}(1):\ R\mapsto R^{\mathrm T}]);$$
+$$\text{its complement is unoccupied at rung one, and by}\ (4)\ \text{the reversed content is vacuum-sector content}\ (\text{all-virtual, unregistered, no accessible pole});$$
+$$\textbf{conditional}\ (\text{the coupling}):\quad|c\rangle=\tfrac1{\sqrt2}\bigl(|L\rangle+|R\rangle\bigr)\quad[\mathrm{Def\text{-}H.34}\ \mathrm{Rmk};\ \text{machine}]:\ \text{the orientation rays carry no definite chirality}\implies\text{transferring single-arrow occupancy to single-ray occupancy requires an arrow}\leftrightarrow\text{ray coupling — the deficit}\ 1'\ \text{assignment rule}\ [\mathrm{FT.125}(4)];$$
+$$\text{the coupling's forced shape is derived: any}\ \hat\omega\text{-covariant coupling maps the single-arrow locus into a single chiral ray}\ (\text{the locus is one sector;}\ \hat\omega\ \text{is the ray exchange}\ [\mathrm{FT.122}(4)];\ \text{machine: exhaustive on the}\ 2!\ \text{bijections}),\ \text{and the complementary ray has occupancy zero at rung one — the vacuum sector of the doublet};$$
+$$\text{which of}\ P_L/P_R\ \text{names the occupied ray is reserved naming content}\ [\mathrm{Def\text{-}H.33}\ \text{canonicity Rmk}]:\ \text{the occupancy pair}\ (1,0),\ \text{up to ray exchange, is this clause's entire content};$$
+$$(6)\quad\textbf{rung scope — the force-side half opens at rung two:}\ \ \text{at rung one the static force matrix on the extended carrier is}\ \mathbf F_{\mathrm{ext}}(\mathbf c)=h(\mathbf c)\otimes I_\omega\ \text{with}\ F_{LR}=F_{RL}=0\ \text{exactly}\ [\mathrm{FT.127}(9),\ \mathrm{FT.128}(2):\ \text{the no-flip theorem};\ \text{machine}]:\ \text{the two chiral sectors are force-decoupled; the flipping set at the derived locus}=\varnothing\ [\mathrm{FT.128}(6)];$$
+$$\text{at rung two EM activates}\ [\mathrm{CT0.13}]\ \text{and the promoted core read opens the unique flip channel:}\quad\mathbf F_{\mathrm{ext}}(\mathbf c,q)=h(\mathbf c)\otimes I_2+q\,I_2\otimes\hat\kappa,\qquad F_{LR}=q\,I_2\ne0\iff q\ne0\quad[\mathrm{FT.129}(4)\text{–}(5),\ \text{Def-H.43};\ \mathrm{EM.9}:\ q\in\{-1,0,+1\}];$$
+$$\operatorname{charpoly}\mathbf F_{\mathrm{ext}}(\mathbf c,q)=\operatorname{charpoly}_h(x-q)\cdot\operatorname{charpoly}_h(x+q):\ \text{the chiral-partner splitting}\ 2|q|\in\{0,2\}\ [\mathrm{FT.130}(5);\ \text{machine: Faddeev–LeVerrier over}\ \mathbb Q(i)]:\ \text{both chiral sectors become force-coupled for charged cores};$$
+$$\text{at rung three colour adds no carrier flip: sealed ends are blind}\ [\mathrm{FT.117}],\ \text{colour acts on the slot carrier}\ [\mathrm{FT.127}(7)],\ \text{the seed is colour-neutral by theorem}\ [\mathrm{EW.32}]:\ \text{the flipping set remains}\ \{F_{\mathrm{EM}}\ \text{core read}\}\ \text{— minimal and unique}\ [\mathrm{FT.129}(5);\ \text{machine: removing the}\ \hat\kappa\ \text{term kills}\ F_{LR}\ \text{at every profile}];$$
+$$\text{the arrow law of}\ (2)\ \text{is rung-blind}\ [\mathrm{D1.2}'\text{s domains carry no rung argument}]:\ \text{what is rung-one specific is the coincidence of the two obstructions — no flip channel (force side)}\ \wedge\ \text{single-arrow locus (ledger side)};\ \text{the single-sector theorem is a rung-one theorem},\ \neg\ \text{a universal law}.$$
+
+**Req.** A5, A6, A8 (Parts 1–2); D1.1, D1.2, D1.3, D1.4, D1.5, D2.6, D2.7, D2.11 (Parts 1–2); CT0.1, CT0.2, CT0.13 (Part 1); CT2.5 (Part 2); EW.32 (Part 2); EM.9 (Part 2); CT4.2 (Part 2); Def-H.4 (Tier F.2); FT.40 (Tiers F.12–F.13); FT.76, FT.79 (Tiers F.26–F.28); FT.88 (Tiers F.29–F.30); FT.108 (Tier F.36); FT.117 (Tier F.38); Def-H.33, FT.122 (Tier F.39); Def-H.34, FT.127, FT.128, FT.129, FT.130 (Tier F.40); FT.133, FT.134 (Tier F.41); Def-H.4, Def-H.34, Def-H.43; exhaustive history enumeration, multinomial interleaving counts, exact polynomial resolvent identity in $\mathbb Q[w,x_+,x_-]/(w^{12})$, exact $\mathbb Q(i)$ block algebra, Faddeev–LeVerrier, exact rational $\log2$ enclosures [math; machine: `checks/verify_H_rung1_neutrino.py` §D–§E].
+
+**Pf.**
+$$
+(1):\ \mathrm{D2.11},\ \mathrm{D1.3},\ \mathrm{D1.4},\ \mathrm{D1.5},\ \mathrm{Def\text{-}H.4}\ \text{verbatim (frozen)}
+$$
+$$
+(2):\ \mathrm{D1.2}:\ \text{the move domains are}\ (0\to1)\ \text{for}\ J^+,\ (1\to0)\ \text{for}\ J^-;\qquad\text{induction on prefixes: the state after any admissible prefix is}\ n_{\mathcal R}=\#J^+-\#J^-\in\{0,1\},\ \text{and the next move is forced}\implies\text{strict alternation and the prefix law}\ [\text{machine: exhaustive at lengths}\le8]
+$$
+$$
+\text{completed}\iff n_{\mathcal R}=0\iff\#J^+=\#J^-;\qquad\text{the completed single-pair word of length}\ 2m\ \text{is unique:}\ (J^+J^-)^m\ [\text{machine}];\qquad\text{two-pair interleavings}:\ \text{each pair's projection is an alternating word};\ \text{completed counts at total length}\ 2n:\ \textstyle\sum_{m_0+m_1=n}\binom{2n}{2m_0}=2,8,32\ (2n=2,4,6)\ [\text{machine enumeration}=\text{multinomial closed form}];\ \text{global balance at completion}\ [\text{machine}]
+$$
+$$
+\text{dissolution-first chain}\implies\text{prefix law violated at the first event of that edge}\ [\text{machine witness}]\implies\neg\text{admissible}\implies\ \bot\ \text{in every valid universe}\ [\mathrm{D2.11}];\qquad\mathrm{FT.108}(4)\ \text{identity re-cited (frozen)}
+$$
+$$
+(3):\ \text{premise inventory of}\ (2):\ \{\mathrm{D1.2}\ \text{domains},\ \mathrm{D1.3}/\mathrm{D1.4}/\mathrm{D2.11}\ \text{closure}\}:\ \text{no dimensionful or P4 quantity occurs}\ [\text{scan}];\qquad\text{contrast rows}:\ \mathrm{FT.76}(3),\ \mathrm{FT.79}(2)\ \text{are read-range bounds}\ [\text{cited, not re-derived}]
+$$
+$$
+(4):\ \Theta_{\mathfrak L}=\text{reverse}+\text{label swap}\ [\mathrm{D2.7};\ \mathrm{FT.133}(1)]:\ \text{involution}\ [\text{machine}];\ \text{completed admissible words biject onto themselves}\ [\text{machine: counts preserved at every length}\le8]
+$$
+$$
+\text{pure order reversal}:\ \text{every completed nonempty admissible word ends in}\ J^-\ [\text{state}\ 0\ \text{is reached only via}\ 1\to0;\ \text{machine: exhaustive}]\implies\text{its reversal leads with}\ J^-:\ \text{inadmissible at the first event}\ [(2)\ \text{domains};\ \text{machine}]
+$$
+$$
+\mathrm{A6}:\ |\mathfrak L(\tau_{n+1})|=|\mathfrak L(\tau_n)|+n_{\mathrm{real\_out}}(\tau_n),\ n_{\mathrm{real\_out}}\ge0\implies\text{monotone non-decreasing};\qquad\text{the reversed reading of a multi-crystallization history strictly decreases somewhere, and every completed word's reversal is inadmissible from the start}\implies\neg\text{forward-realizable}\ [\text{machine: exhaustive};\ \neg\exists\,\tau^{-1}\ \text{axiomatic}]
+$$
+$$
+\rho_\circ=\tfrac14I_4:\ \mathfrak T=1,\ \operatorname{charpoly}=(x-\tfrac14)^4\ [\text{machine over}\ \mathbb Q];\qquad S_{\mathrm{raw}}(\rho_\circ)=-4\cdot\tfrac14\ln\tfrac14=\ln4=2\ln2\ [\text{exact rational}\ \log\ \text{enclosure, width}<2^{-80};\ \text{machine}];\qquad\text{dyadic witnesses}:\ S(\operatorname{diag}(\tfrac12,\tfrac14,\tfrac18,\tfrac18))=\tfrac74\ln2<2\ln2\ [\text{exact coefficient comparison};\ \text{machine}];\qquad\arg\max\ \text{uniqueness}\ [\text{Gibbs lemma};\ \mathrm{CT0.2}]
+$$
+$$
+|E_{\mathcal R}|=0\implies\#\{\text{tuples}\ (e_1,\dots,e_k)\subseteq E_{\mathcal R}\}=0\ \forall k\ge1\ [\text{machine}]\implies\neg\exists\ \text{closed chain}\ [\mathrm{D1.4}]\implies\neg\exists\ \text{terminus}\ [\mathrm{Def\text{-}H.4}]
+$$
+$$
+\hat U=\bigl(\begin{smallmatrix}0&x_-\\ x_+&0\end{smallmatrix}\bigr)\ [\mathrm{FT.108}(4)\ \text{generator at single-pair scope}]:\quad\langle\varnothing|\hat U^n|\varnothing\rangle=[\,n\ \text{even}\,]\,(x_+x_-)^{n/2}\ [\text{machine to}\ n=12];\qquad(1-w^2x_+x_-)\sum_n\langle\varnothing|\hat U^n|\varnothing\rangle w^n\equiv1\ [\mathbb Q[w,x_+,x_-]/(w^{12});\ \text{machine coefficient-wise}]
+$$
+$$
+\deg_{x_+}=\deg_{x_-}\ \text{on every nonzero monomial}\ [\text{machine census}];\qquad\ker Q=\operatorname{span}\{(x_-,x_+)\}:\ (x_-,x_+)Q=0,\ \det Q=0\ne Q\implies\text{rank}\ 1\ [\mathrm{FT.108}(4)\ \text{re-derived};\ \text{machine}]
+$$
+$$
+(5):\ \mathrm{FT.122}(2)\text{–}(4)\ \text{re-derived entrywise over}\ \mathbb Q(i)\ [\text{machine}]:\ P_{L/R}^2=P_{L/R},\ P_LP_R=0,\ P_L+P_R=\mathrm{id},\ \mathfrak T P_{L/R}=1;\qquad\hat\omega P_L\hat\omega=P_R;\qquad|c\rangle=\tfrac12(|L_u\rangle+|R_u\rangle)\ \text{unnormalized}\ [\text{machine}]
+$$
+$$
+\text{arrow-sector census}:\ \text{the materialized locus}=\{|\,c\,\rangle\text{-sector}\}\ \text{by}\ (2);\qquad\hat\omega\text{-covariant bijections}\ \{\text{arrow sectors}\}\to\{\text{rays}\}:\ 2!\ \text{candidates, each maps the single-arrow locus to one ray and its complement to the other}\ [\text{machine: exhaustive}];\qquad\text{naming residue}:\ \mathrm{Def\text{-}H.33}\ \text{canonicity Rmk verbatim}
+$$
+$$
+(6):\ \mathrm{FT.127}(9),\ \mathrm{FT.128}(2),(6)\ \text{re-derived at}\ 36\ \text{exact rational profiles}:\ F_{LR}=0\ \text{entrywise};\qquad[\mathbf F_{\mathrm{ext}},\ I_2\otimes\hat\chi]=0\ [\text{machine}]
+$$
+$$
+\mathbf F_{\mathrm{ext}}(\mathbf c,q)\ \text{blocks in the chiral carrier basis}\ [\mathrm{Def\text{-}H.34}'\text{s}\ S\text{-transform};\ \text{machine}]:\ F_{LL}=F_{RR}=h,\ F_{LR}=F_{RL}=qI_2\ \text{at}\ q\in\{-1,0,1\}\times36\ \text{profiles};\qquad\operatorname{charpoly}\ \text{factorization by Faddeev–LeVerrier coefficient identity}\ [\text{machine}]
+$$
+$$
+\text{minimality rows}:\ \text{removing}\ qI_2\otimes\hat\kappa\ \text{kills}\ F_{LR}\ \text{at every profile};\ \text{keeping only it leaves}\ F_{LR}=qI_2\ [\mathrm{FT.129}(5);\ \text{machine}];\qquad\text{colour rows}:\ \mathrm{FT.117},\ \mathrm{FT.127}(7),\ \mathrm{EW.32}\ \text{verbatim (frozen)};\qquad\mathrm{D1.2}\ \text{carries no rung argument}\ [\text{verbatim scan}].\ \blacksquare
+$$
+
+**Phys.** Ask the ledger which direction a real edge may be born in, and the answer is a domain, not a preference: dissolution presupposes crystallization, so every materialized history is crystallization-first on every edge, and the prefix law is exhaustive at every length checked. A backward-arrow fermion is therefore not heavy, not suppressed, not decoupled — it is ungrammatical: no ledger history spells it, at any value of any parameter. What the reversal does spell is bookkeeping: the formal T-images and the balanced fluctuation pairs of the all-virtual state, which carry no registration, no chain, no terminus and no accessible pole. On the carrier the consequence is an occupancy statement — one sector materializes, its complement is vacuum — and because the orientation rays superpose both chiral rays equally, the last step from arrow to ray is exactly the missing assignment rule; the theorem fixes its shape and its output, $(1,0)$ up to exchange, and leaves the naming where the corpus has always left it. At rung two the force side opens: the promoted core read is the unique flip channel, and the coincidence that makes rung one single-sector does not recur.
+
+---
+
+---
+
+### FT.145 — The rung-one completion
+
+**Thm.**
+$$(1)\quad\textbf{the content summary:}\ \ \text{the rung-one fermion sector consists of: one family channel}\ [\mathrm{FT.142}\text{–}\mathrm{FT.143}:\ \delta_\nu=\tfrac18,\ \text{triplet}\ r_i^{(\nu)},\ \text{ratios}\ 1:9.58\ldots:272.0\ldots,\ Q=\tfrac23];\ \text{its chirality structure}\ [\mathrm{FT.141}:\ \text{the complete-force}\ 10/6\ \text{grading},\ \text{no}\ S\text{-neutral observable},\ \text{the weak selectivity a state-locus shadow}];\ \text{its occupancy structure}\ [\mathrm{FT.144}:\ \text{single-arrow materialization},\ \text{single-ray under any}\ \hat\omega\text{-covariant coupling},\ \text{complement vacuum}];$$
+$$(2)\quad\textbf{the mass read:}\qquad m_{\mathrm{hid}}=E_{\mathrm{int}}\ln2/\mathfrak h\qquad[\mathrm{FT.16};\ \mathrm{FT.44}(4):\ \text{universal across every computed floor};\ \mathrm{Def\text{-}H.9}(2):\ m_{\mathrm{hid}}=I_{\mathrm{hid}}/\mathfrak h];$$
+$$\text{the minimal rung-one bound chain — the digon,}\ E_{\mathrm{int}}=2\ [\mathrm{FT.28}(1)]\ \text{— reads}\quad m_{\mathrm{hid}}=\frac{2\ln2}{\mathfrak h}\qquad[\text{machine: exact integer coefficient}];$$
+$$\text{the channel ratios of FT.143 are dimensionless with overall scale}\ \mu_\nu\ \text{undeclared}\ (\mathrm{P4});\qquad\text{the relating equation between the channel read and the}\ m_{\mathrm{hid}}/\text{pole/sector reads is undeclared}\ [\mathrm{FT.113}\ \text{Status pattern}];$$
+$$\text{amplitude}\ne\text{mass};\qquad\text{rung}\ne\text{scale}\qquad[\text{standing rules}];$$
+$$(3)\quad\textbf{the completeness fraction:}\qquad J^+_3+J^-_3+G_5+W_3+H_1+D^+_1=16=C_{\mathrm{cap}}=\dim\mathcal K_1\qquad[\mathrm{CT0.12},\ \mathrm{CT0.13},\ \mathrm{CT0.14};\ \text{machine}]:$$
+$$\mathcal A(1)\ \text{accounts for every pair-channel dimension — no part of the rung-one channel is forceless and no force overruns it}\ [\mathrm{CT0.12}\ \text{Phys pattern}];$$
+$$\text{the rung-one fermion sector carries:}\ \neg\mathrm{EM}\ (\text{activation at rung}\ 2\ [\mathrm{CT0.13}];\ \text{unactivated in the channel class}\ [\mathrm{FT.142}(1)]),\quad\neg\text{colour}\ (\text{rung}\ 3\ [\mathrm{CT0.13}];\ \text{structurally colourless}\ [\mathrm{FT.142}(1)]),$$
+$$\neg\text{Yukawa sector}\ (\text{deficit}\ 2\ \text{stands}),\qquad\neg\text{mixing matrix}\ (\text{deficit}\ 4\ \text{stands}),\qquad\neg\text{generation selection}\ (\text{deficit}\ 3\ \text{stands};\ \text{item}\ 21(d));$$
+$$(4)\quad\textbf{the bridge to rung two:}\qquad\mathcal K_1\subset\mathcal K_2\ (\text{strict}),\qquad\dim\mathcal K_2=17=\dim\mathcal K_1+1\qquad[\mathrm{CT0.14}:\ \text{the EM centre is the new summand};\ \text{machine}];$$
+$$\text{at rung two EM activates}\ [\mathrm{CT0.13}]\ \text{and the flip channel opens},\ F_{LR}=qI_2\ [\mathrm{FT.129}(5),\ \text{Def-H.43};\ \mathrm{FT.144}(6)]:\ \text{both chiral sectors become force-coupled};$$
+$$\text{the}\ 10/6\ \text{split persists on}\ \mathcal K_1:\ \text{the EM summand is a stack-register block}\ [\mathrm{CT0.12}\ \mathrm{Rmk};\ \mathrm{CT0.14}],\ \neg\ \text{a pair-channel direction}:\ \text{the}\ \operatorname{Ad}(\mathbb S)\ \text{census of the pair}\ 16\ \text{is unchanged};$$
+$$\text{the}\ \ell\text{-channel angle}\ \delta_\ell=\tfrac29\ [\mathrm{FT.112}\ \text{— Tier F.37, under Def-H.41's interface definition; cited as frozen channel datum, imported as no premise of this part}]\ \text{governs the rung-two family ratios};\qquad\text{the two angles are distinct rationals sharing the numerator}\ 2\ [\mathrm{FT.143}(5)];$$
+$$(5)\quad\textbf{the adjudication ledger:}$$
+
+| Statement | Source | Status |
+|---|---|---|
+| $10/6=\operatorname{Ad}(\mathbb S)$ census on $\mathcal K_1$ | FT.141(1) | Derived (FT.136(1) re-derived) |
+| Chirality $=$ the complete-force grading | FT.141(2) | Derived |
+| Deletion invariance; $45/64$ nontrivial subsets | FT.141(3) | Derived (exhaustive) |
+| Weak branch selectivity an $S$-grading consequence | FT.141(4) | Derived ($\sum_iW_i^2=E_0+\mathbb S$) |
+| No $S$-neutral observable at rung one | FT.141(5) | Derived |
+| $S$-grading vs carrier $\hat\chi$: independent $\mathbb Z_2$'s | FT.141(6) | Derived (FT.126(4)/FT.136(4) re-run) |
+| Arena $\mathcal K_1$, $\dim=16$; candidates $10/9/27/6$ rejected | FT.142(2)–(3) | Derived (no declaration) |
+| Seal coefficient $2$, undressed | FT.142(4) | Derived (FT.109(3) re-derived) |
+| $\delta_\nu=1/8$ | FT.142(5) | Derived |
+| $r_i^{(\nu)}$; ratios $1:9.58\ldots:272.0\ldots$; $Q=\tfrac23$ | FT.143 | Derived (scale $\mu_\nu$: P4) |
+| $3\delta_\nu=\tfrac38\notin\{\delta_\ell,\delta_q\}$; shared numerator $2$ | FT.143(2), (5) | Derived (exact rationals) |
+| Forward arrow $J^+\to J^-$; strict alternation; prefix law | FT.144(2) | Derived (exhaustive) |
+| Backward materialization excluded; $\neg$a mass statement | FT.144(2)–(3) | Derived |
+| Vacuum residence; balanced fluctuation pairs; no accessible pole | FT.144(4) | Derived |
+| Single-ray occupancy under $\hat\omega$-covariant coupling | FT.144(5) | Derived (coupling-conditional; naming reserved) |
+| Flip channel opens at rung two | FT.144(6) | Derived (under Def-H.43) |
+| $m_{\mathrm{hid}}(\text{digon})=2\ln2/\mathfrak h$ | FT.145(2) | Derived (FT.28(1) re-cited) |
+| Completeness $3{+}3{+}5{+}3{+}1{+}1=16=C_{\mathrm{cap}}$ | FT.145(3) | Derived |
+| Overall scale $\mu_\nu$; relating equation | — | Free (P4); open |
+| Species identification of the triplet | — | NOT derived (barred: P1, P5) |
+| Arrow$\leftrightarrow$ray assignment rule | — | Application-layer content |
+
+$$(6)\quad\textbf{the scope bars:}\ \ \text{no particle identification — the channel subscript}\ \nu\ \text{is ledger vocabulary}\ [\mathrm{FT.142}\ \mathrm{Rmk}];\qquad\text{no external data}\ ([\text{EXT}]\ \text{enters no clause of this document — this standing-rule record is its sole marker});$$
+$$\text{no new declaration issues: imports are confined to Def-H.4},\ \text{Def-H.34}\ (\text{extended carrier}),\ \text{Def-H.43}\ (\text{read promotion — rung-two bridge rows only});\qquad\text{Def-H.41/Def-H.42 are cited in the rejection rows and imported nowhere};$$
+$$\text{no fitted parameters}\ (\text{one scale}\ \mathfrak h,\ \text{P1});\qquad\text{all topology labels are internal bookkeeping};\qquad\text{no H-sector interpretation enters any theorem statement}.$$
+
+**Req.** FT.141–FT.144 (this tier); FT.16, Def-H.9 (Tiers F.1–F.11); FT.28 (Tiers F.1–F.11); FT.44 (Tiers F.14–F.16); CT0.12, CT0.13, CT0.14 (Part 1); FT.112 (**Tier F.37**, frozen-datum citation); FT.129 (Tier F.40); P1, P4, P5 (Parts 1–2); exact integer arithmetic, exact rational $\log2$ enclosures, exact ranks [math; machine: `checks/verify_H_rung1_neutrino.py` §F].
+
+**Pf.**
+$$
+(1):\ \text{assembly of FT.141–FT.144's adjudicated rows}\ [\text{machine: all sections green}]
+$$
+$$
+(2):\ \mathrm{FT.44}(4):\ m_{\mathrm{hid}}=E_{\mathrm{int}}\ln2/\mathfrak h\ \text{across every computed floor};\qquad\mathrm{FT.28}(1):\ E_{\mathrm{int}}=2\ (\text{both cycle edges internal})\implies m_{\mathrm{hid}}=2\ln2/\mathfrak h\ [\text{exact integer coefficient};\ \text{machine}];\qquad\mu_\nu:\ \neg\exists\ \text{tag fixing it}\ [\text{P4}]
+$$
+$$
+\text{relating equation}:\ \neg\exists\ \text{tag relating the channel ratios to}\ m_{\mathrm{hid}},\ m^2_{\mathrm{pole}}\ \text{or}\ m^2_B(q,S)\ [\text{inventory scan};\ \mathrm{FT.113}\ \text{Status}]
+$$
+$$
+(3):\ 3+3+5+3+1+1=16\ [\mathrm{CT0.12}\ \text{table};\ \text{machine}];\qquad\dim\mathcal K_1=16=C_{\mathrm{cap}}\ [\mathrm{CT0.14};\ \mathrm{CT0.6}];\qquad\neg\text{-rows}:\ \mathrm{CT0.13}\ \text{activation rungs verbatim};\ \mathrm{FT.142}(1)\ \text{channel class};\ \text{deficits}\ 2/3/4:\ \neg\exists\ \text{Yukawa, flavour-index or mixing-matrix tag}\ [\text{inventory scan}]
+$$
+$$
+(4):\ \dim\mathcal K_2=\dim\mathcal K_1+\dim Z(\mathfrak u(2))=16+1=17\ [\mathrm{CT0.14};\ \text{machine: strict flag}\ 6\subset16\subset17\subset25];\qquad\text{EM summand}:\ \text{stack register}\ [\mathrm{CT0.12}\ \mathrm{Rmk}]\implies\operatorname{Ad}(\mathbb S)\ \text{on the pair}\ 16\ \text{untouched}\ [\mathrm{FT.141}(1)\ \text{census unchanged}]
+$$
+$$
+\text{flip row}:\ \mathrm{FT.144}(6)\ \text{verbatim};\qquad\delta_\ell\ \text{row}:\ \mathrm{FT.112}\ \text{value cited with its interface provenance}\ [\text{Def-H.41 — Tier F.37's;}\ \neg\text{imported here}]
+$$
+$$
+(5):\ \text{each row is the adjudication of its own tag}:\ \mathrm{FT.141}\ (\S\mathrm{A}),\ \mathrm{FT.142}\ (\S\mathrm{B}),\ \mathrm{FT.143}\ (\S\mathrm{C}),\ \mathrm{FT.144}\ (\S\mathrm{D}\text{–}\S\mathrm{E})\ [\text{machine: all sections green}]
+$$
+$$
+(6):\ \text{standing-rule record};\qquad\text{import scan}:\ \text{the Req lines of this part name}\ \{\text{Def-H.4},\ \text{Def-H.34},\ \text{Def-H.43}\}\ \text{as imports and}\ \{\text{Def-H.41},\ \text{Def-H.42}\}\ \text{as cited-not-imported}\ [\text{machine scan}].\ \blacksquare
+$$
+
+**Phys.** Rung one closes as a sector: sixteen dimensions, every one spoken for by the five pretime aspects; one family channel with its own angle, its own cubic and the universal two-thirds; one chirality, belonging to the whole force complex rather than to any of its members; and one occupancy law that leaves a single sector materialized and its partner empty — not heavy, empty. The digon fixes the informational read at two bits over the single scale; the family ratios remain dimensionless pending the relating equation the ledger still owes. At the next rung the mask grows by exactly one dimension, the flip channel opens with the core charge, and the sector that was vacuum at rung one becomes force-reachable: the completion is a floor, not a ceiling.
+
+---
+
+---
+## Tier F.44 — The 3+1 Chiral Asymmetry: The Manifold Locus of Chirality, the Spatial Provenance of the Channel Angle, and the Emergent-Time Identity
+
+### FT.156 — The 3+1 asymmetry theorem: one signature datum at two loci, and the manifold structure as the chiral structure
+
+**Thm.** On the pair channel $\mathfrak H(\mathbb C^4)$ and the emergent geometry [CT2.6; conditions (ii)–(iii) inherited at the point of use — A §0.2a]:
+$$(1)\quad\textbf{one signature datum, two loci:}\qquad\mathrm{A3}\ \text{declares the register involution;}\ \mathrm{C13}\ \text{fixes the Lorentz-signature representative:}\quad T(\sigma_\mu\otimes\sigma_\nu)=\eta^\mu\eta^\nu\,(\sigma_\mu\otimes\sigma_\nu),\quad\eta=(-,+,+,+),\quad T^2=\mathbb1;$$
+$$\mathrm{CT1.12}\ \text{derives the signature of the emergent metric:}\quad\operatorname{sig}(g_{\mu\nu})=\operatorname{sig}(\bar g_{\mu\nu})=(-,+,+,+)\quad[\varkappa\|q\|_{\mathrm{op}}<1\ \text{regime}];$$
+$$\text{the same}\ (-,+,+,+)\ \text{sign pattern grades the register basis}\ [\mathrm{C3}:\ \mathcal E_{st}]\ \text{and the metric on}\ M\ [\mathrm{CT2.6}]:\ \text{one temporal sign and three spatial signs at each locus}\ [\text{machine: the}\ T\text{-table on the}\ 16\text{-element CT1.2 basis via exact Pauli-tensor decomposition over}\ \mathbb Q(i)];$$
+$$(2)\quad\textbf{the block census is the component census; the}\ 7/3\ T\textbf{-split is the}\ 3{+}1\ \textbf{split of the dictionary:}\qquad(7,3,3,3)\ [\mathrm{CT1.1}];\qquad S\text{-even}=10=7+3\ [\mathrm{CT1.2};\ \mathrm{FT.141}(1)];$$
+$$S\text{-even}= \text{the reality-preserving sector}\ ([\mathbb S,X]=0\ \text{preserves}\ \vee^2,\ \wedge^2\ [\mathrm{CT0.7}(3)]);\qquad S\text{-odd}=6=\{J_i\ (3),\ K_i\ (3)\}= \text{the reality-exchanging sector}\ (\text{the seals}\ [\mathrm{CT0.7}(3)\text{–}(4);\ \mathrm{D1.2}]);$$
+$$\text{within the}\ S\text{-even block:}\quad T\text{-even}\ 7=\{E_0,\ \Sigma,\ \hat E^{ij}\ (5)\}=\{D^+,\ H,\ G\}\ [\mathrm{CT0.12};\ \mathrm{CT1.10}:\ \mathbf 1\oplus\mathbf 5\oplus\mathbf 1];\qquad T\text{-odd}\ 3=\{W_i\}=F_W;$$
+$$\text{the dictionary}\ [\mathrm{D2.1},\ \mathrm{CT1.12}]:\qquad(a_{00},\ q_{ij})=(1{+}6)\ T\text{-even coefficients}\ \longmapsto\ \bigl(\Omega=e^{\alpha_\Omega a_{00}},\ \ \bar g_{ij}=\delta_{ij}+\varkappa q_{ij}\bigr)=\text{lapse/conformal}\ +\ \text{spatial metric};$$
+$$w_i\ (3)\ T\text{-odd coefficients}\ \longmapsto\ N_i=\beta w_i=\text{shift}=\text{the time–space cross components}\ \bar g_{0i};\qquad\text{components:}\quad g_{00}:1;\quad g_{ij}:6=\tfrac{3\cdot4}2;\quad g_{0i}:3;\quad\text{total}\ 10=\tfrac{4\cdot5}2\ [\mathrm{CT1.12}];$$
+$$\text{the temporal direction contributes exactly one component and one coefficient}\ (g_{00}=-\Omega^2\ \text{from the single}\ T\text{-even conformal coefficient}\ a_{00});\ \text{the spatial triad contributes the symmetric sextuple}\ q_{ij}\ \text{and the three shifts}\ w_i:$$
+$$\text{the}\ 7/3\ T\text{-split of the}\ S\text{-even block is the operator-side encoding of the}\ (1;6;3)\ \text{component split with signature}\ (-,+,+,+);\qquad\text{the}\ S\text{-odd block has}\ 0\ \text{metric coordinates}\ [\mathrm{FT.141}(5);\ \mathrm{FT.30}\ \text{dictionary}];$$
+$$(3)\quad\textbf{the reversal transport:}\ \ \text{the}\ T\text{-grading transports through the dictionary exactly to the time-reversal pullback:}\quad\text{with}\ J=\operatorname{diag}(-1,1,1,1)\ \text{and the}\ T\text{-action on sector data}\ (a_{00},q,w)\mapsto(a_{00},q,-w)$$
+$$[T(E_0)=E_0,\ T(E^{ij})=E^{ij},\ T(W_i)=-W_i;\ \text{machine, entrywise}]:\qquad\bar g_{\mu\nu}(a_{00},q,-w)=J^{\rho}{}_{\mu}\,\bar g_{\rho\sigma}(a_{00},q,w)\,J^{\sigma}{}_{\nu}\qquad[\text{machine: exact rational witnesses}];$$
+$$\text{lapse and spatial metric fixed, shift negated:}\quad\Omega\mapsto\Omega,\quad\bar g_{ij}\mapsto\bar g_{ij},\quad N_i\mapsto-N_i\qquad\Longleftrightarrow\qquad g_{00},\ g_{ij}\ \text{fixed},\quad g_{0i}\mapsto-g_{0i}\ [\Omega\ \text{depends on the}\ T\text{-even}\ a_{00}\ \text{alone}\ [\mathrm{D2.1}]];$$
+$$\text{the signature is reversal-invariant:}\quad\operatorname{sig}\bar g(w)=\operatorname{sig}\bar g(-w)=(-,+,+,+)\qquad[\text{machine: exact rational}\ \mathrm{LDL}^\top\ \text{inertia on a}\ 12\text{-point witness lattice}\ (q,w);\ \text{Sylvester criterion on}\ \bar g_{ij};\ \det\bar g<0\ \text{via the CT1.12 Schur form}];$$
+$$(4)\quad\textbf{space is symmetric and reversible:}\ \ \text{the spatial triad rotates innerly:}\quad\operatorname{span}\{W_i\}\cong\mathfrak{su}(2)\ [\mathrm{CT1.4}];\qquad J,K:\ \text{vectors},\quad\hat E^{ij}:\ \mathbf 5,\quad E_0,\Sigma:\ \mathbf 1\ \ \text{under the adjoint action}\ [\mathrm{CT1.8},\ \mathrm{CT1.10},\ \mathrm{CT1.5}];$$
+$$\text{every permutation of the three triad indices is realized by an inner unitary that is a rational polynomial in the weak generators alone:}$$
+$$\text{cyclic:}\quad U=u\otimes u,\ u=\tfrac12\bigl(I_2-i(\sigma_1+\sigma_2+\sigma_3)\bigr)\ [\mathrm{FT.111}]:\qquad U=\exp\!\bigl(-\tfrac{2\pi i}{3}\,\hat n\cdot W\bigr)=E_0-\tfrac12\mathcal W^2-\tfrac i2\mathcal W,\quad\mathcal W:=W_1{+}W_2{+}W_3,\quad\hat n=\tfrac{(1,1,1)}{\sqrt3},$$
+$$\text{via the polynomial identity}\ \mathcal W^3=3\mathcal W\ [\operatorname{spec}(\hat n\cdot W)=\{1,0,-1,0\};\ \text{machine}];\qquad U^3=E_0;\qquad U X_i U^\dagger=X_{i+1}\ \ \forall X\in\{W,J,K\}\ (\text{indices mod}\ 3)\ [\mathrm{FT.111}(1)\ \text{re-derived, plus the}\ W\text{-row};\ \text{machine}];$$
+$$\text{transpositions:}\quad U_{ij}=\exp\bigl(-i\pi\,\tfrac{W_i+W_j}{\sqrt2}\bigr)=E_0-(W_i+W_j)^2:\qquad U_{ij}^2=E_0;\qquad U_{ij}:\ X_i\leftrightarrow X_j,\ X_k\mapsto-X_k\ \ \forall X\in\{W,J,K\}\ [\text{machine: the full conjugation table on}\ \{W,J,K,\hat E\}];$$
+$$\text{the reversal involutions are exact: on the register}\ [S^2=T^2=\mathbb1\ [\mathrm{A3}]],\ \text{on configuration data}\ [\langle C,P,T,\omega\text{-pattern}\rangle\cong\mathbb Z_2^4,\ \text{register-disjoint}\ [\mathrm{FT.133}(1)\text{–}(2)]];$$
+$$(5)\quad\textbf{time is asymmetric and strictly forward:}\ \ \neg\exists\,\tau^{-1}\ [\mathrm{A6}:\ \tau_n\to\tau_{n+1}:\ \rho\mapsto\mathcal T(\rho)];\qquad|\mathfrak L(\tau_{n+1})|=|\mathfrak L(\tau_n)|+n_{\mathrm{real\_out}}(\tau_n)\ge|\mathfrak L(\tau_n)|\ [\mathrm{A6},\ \mathrm{A7}:\ \mathfrak L(\tau_n)\subseteq\mathfrak L(\tau_{n+1})];$$
+$$\text{the D1.2 seal domains force strict alternation and the prefix law; every completed nonempty history ends in}\ J^-,\ \text{and its pure order reversal is inadmissible at the first event}\ [\mathrm{FT.144}(2),\ (4)(\mathrm{ii});\ \text{machine: exhaustive at lengths}\le8];$$
+$$\Theta_{\mathfrak L}\ [\mathrm{D2.7}]\ \text{is the formal mirror — an involution on configuration data bijecting the completed admissible set onto itself}\ [\mathrm{FT.144}(4)(\mathrm{i});\ \text{machine}]\ —\ \neg\text{a dynamical inverse:}$$
+$$\text{the asymmetry is exact: the spatial-axis reversals are inner unitaries on the force arena}\ [(4)];\qquad\text{the temporal advance reversal has no implementation}\ [\mathrm{A6};\ \mathrm{FT.144}(3):\ \text{a domain restriction, prior to every read}];$$
+$$(6)\quad\textbf{the chiral structure is the manifold structure:}\ \ \text{the chirality of the complete force complex at rung one is the}\ 10/6\ S\text{-grading}\ [\mathrm{FT.141}(2)];\ \text{its}\ (S,T)\ \text{refinement}\ (7,3,3,3)\ [\mathrm{CT1.1}]\ \text{is the dictionary carrier of the metric}\ [\mathrm{CT1.12};\ (2)];$$
+$$\text{the weak block is the}\ T\text{-odd part of the}\ S\text{-even block} = \text{the metric's own time–space cross block}\ [\mathrm{CT0.12}:\ F_W=\mathcal E_{+-}=\operatorname{span}\{W_i\};\ \mathrm{D2.1}:\ X_{(-)}=w_iW_i;\ \mathrm{CT1.12}:\ w_i\mapsto N_i];$$
+$$\text{the chiral asymmetry}\ (10\ne6)\ \text{and the}\ 3{+}1\ \text{asymmetry are one graded structure read at three derived loci:}$$
+$$\text{the operator locus}\ (10,6)=(7{+}3,\ 3{+}3);\qquad\text{the component locus}\ (1;6;3)\ \text{with}\ \operatorname{sig}=(-,+,+,+);\qquad\text{the state locus}\ \operatorname{spec}\mathbb S=(3,1)\ [\mathrm{CT0.7}(1);\ \mathrm{FT.157}];$$
+$$\text{locus discipline}\ [\mathrm{FT.136}(5);\ \mathrm{FT.141}(4)]:\ \text{three distinct spaces}\ (\operatorname{End}(\mathbb C^4_{\mathrm{pair}}),\ \text{the metric on}\ M,\ \mathbb C^4_{\mathrm{pair}});\ \text{the counts are the derived content; no carrier identification is made}.$$
+
+**Rmk (label discipline).** The labels *spatial*/*temporal* of this tier are internal bookkeeping attached to derived T-parities and dictionary roles [CT1.2's table; CT1.12's table]; they name no particle and no external structure [P1, P5]. Naming either branch *left* or *right* remains barred [FT.101 Phys bars stand]. All topology and branch labels are internal bookkeeping; no H-sector interpretation enters any clause.
+
+**Req.** A3, A6, A7, A8 (Part 1); C3 (Part 1); D1.2, D2.1, D2.7 (Part 1); CT0.7, CT0.12, CT1.1, CT1.2, CT1.4, CT1.5, CT1.8, CT1.10 (Part 1); CT1.12, CT2.6 (Part 2; CT2.6's conditions (ii)–(iii) at the point of use — A §0.2a); FT.30 (Tiers F.1–F.11); FT.101, FT.111 (Tiers F.34, F.37); FT.133 (Tier F.41); FT.136, FT.141, FT.144 (Tiers F.41–F.42); exact $\mathbb Q(i)$ matrix arithmetic (Pauli-tensor decomposition, conjugation tables, polynomial rotation identities), exact rational $\mathrm{LDL}^\top$ inertia, Sylvester/Schur witnesses, exhaustive ledger-word enumeration [math; machine: `checks/verify_H_3p1_chiral_asymmetry.py` §A].
+
+**Pf.**
+$$
+(1):\ \eta=(-,+,+,+)\ \text{verbatim}\ [\mathrm{A3},\ \mathrm{C13}];\qquad\operatorname{sig}(g)=(-,+,+,+)\ \text{verbatim}\ [\mathrm{CT1.12}:\ \text{Schur}\ +\ \text{Sylvester}\ +\ \text{conformal covariance}];\qquad T(X)=\sum_{\mu,\nu}c_{\mu\nu}\,\eta^\mu\eta^\nu\,\sigma_\mu\otimes\sigma_\nu,\ \ c_{\mu\nu}=\tfrac14\mathfrak T\bigl((\sigma_\mu\otimes\sigma_\nu)X\bigr)\ [\text{exact decomposition, unique on the orthogonal Pauli-tensor basis}\ [\mathrm{CT1.1}\ \text{Pf pattern}];\ \text{machine on the}\ 16\text{-basis}]
+$$
+$$
+(2):\ \mathrm{CT1.2}\ \text{table verbatim}: (S,T)\ \text{grades}\ (1{+}1{+}5,\ 3;\ 3;\ 3);\qquad 7=1{+}1{+}5\ [\mathrm{CT1.10}];\qquad\text{dictionary rows verbatim}\ [\mathrm{CT1.12}\ \text{table}]:\ a_{00}\mapsto\Omega,\ \Sigma_{\mathrm{tr}}\mapsto\text{volume},\ \hat h_{ij}\mapsto\text{shear},\ w_i\mapsto\text{shift}
+$$
+$$
+q_{ij}=q_{ji}:\ 6\ \text{components}\ [\mathrm{D2.1}];\qquad 1+6+3=10=\tfrac{4\cdot5}2\ [\mathrm{CT1.12}];\qquad g_{00}=\Omega^2\bar g_{00}=-\Omega^2\ [\mathrm{D2.1}:\ \bar g_{00}=-1];\qquad S\text{-odd}:\ 0\ \text{metric coordinates}\ [\mathrm{FT.141}(5);\ \mathrm{FT.30}];\qquad\text{reality-preserving/exchanging}:\ \mathrm{CT0.7}(3)\ \text{eigen-relations verbatim}
+$$
+$$
+(3):\ \bar g_{0i}=\varkappa\beta w_i\ [\mathrm{D2.1}:\ N_i=\beta w_i]\implies\bar g_{0i}(a_{00},q,-w)=-\bar g_{0i}(a_{00},q,w);\qquad\bar g_{00}=-1,\ \bar g_{ij}=\delta_{ij}+\varkappa q_{ij}\ \text{are}\ w\text{-free}\implies\text{fixed};\qquad(J^\top\bar g J)_{00}=\bar g_{00},\ (J^\top\bar g J)_{ij}=\bar g_{ij},\ (J^\top\bar g J)_{0i}=-\bar g_{0i}\ [\text{machine: exact equality on the witness lattice}]
+$$
+$$
+\text{inertia}: \mathrm{LDL}^\top\ \text{over}\ \mathbb Q\ \text{on}\ \bar g(q,w):\ D\ \text{signs}\ (-,+,+,+)\ \text{on all}\ 12\ \text{witnesses and at}\ w\mapsto-w\ [\text{machine}];\qquad\det\bar g=\det(\bar g_{ij})\cdot\bigl(-1-\varkappa^2N_i(\bar g^{-1})^{ij}N_j\bigr)<0\ [\mathrm{CT1.12}\ \text{Pf re-run};\ \text{machine: exact}\ 4\times4\ \text{determinants}]
+$$
+$$
+(4):\ [W_i,W_j]=i\epsilon_{ijk}W_k\ [\mathrm{CT1.4}\ \text{re-derived, all pairs};\ \text{machine}];\qquad[W_i,J_j]=i\epsilon_{ijk}J_k,\quad[W_i,K_j]=i\epsilon_{ijk}K_k\ [\mathrm{CT1.8}\ \text{re-derived, all}\ 9{+}9\ \text{pairs};\ \text{machine}];\qquad[W_a,\hat E^{ij}]=i(\epsilon_{aik}\hat E^{kj}+\epsilon_{ajk}\hat E^{ik}),\quad[W_i,\Sigma]=0\ [\mathrm{CT1.10},\ \mathrm{CT1.5}\ \text{re-derived};\ \text{machine}]
+$$
+$$
+\mathcal W^3=3\mathcal W\ [\text{machine}]\implies X^3=X\ \text{at}\ X=\hat n\cdot W=\mathcal W/\sqrt3\implies\exp(-i\theta X)=E_0+(\cos\theta-1)X^2-i\sin\theta\,X\ [\text{polynomial identity on}\ \operatorname{spec}\{1,0,-1\}];\qquad\theta=\tfrac{2\pi}3:\ \cos\theta-1=-\tfrac32,\ \ \sin\theta\cdot\tfrac1{\sqrt3}=\tfrac12\implies U=E_0-\tfrac12\mathcal W^2-\tfrac i2\mathcal W
+$$
+$$
+U=u\otimes u\ \text{entrywise}\ [\mathrm{FT.111}\ \text{form};\ \text{machine}];\qquad U^3=E_0,\ U U^\dagger=E_0,\ \det u=1\ [\text{machine}];\qquad U X_i U^\dagger=X_{i+1},\ X\in\{W,J,K\}\ [\text{machine, all}\ 9];\qquad U\hat E^{ii}U^\dagger=\hat E^{i+1,i+1}\ [\text{machine}]
+$$
+$$
+U_{ij}=E_0-(W_i+W_j)^2\ [\theta=\pi:\ \cos\pi-1=-2,\ X=(W_i{+}W_j)/\sqrt2,\ X^3=X];\qquad U_{ij}^2=E_0,\ U_{ij}U_{ij}^\dagger=E_0\ [\text{machine}];\qquad\text{conjugation tables: all}\ 3\ \text{transpositions}\times\{W,J,K\}\ \text{and the}\ \hat E\text{-action}\ [\text{machine, exact}]
+$$
+$$
+(5):\ \mathrm{A6}/\mathrm{A7}\ \text{verbatim};\qquad\text{prefix law, uniqueness of}\ (J^+J^-)^m,\ \text{inadmissibility of pure reversals}\ [\mathrm{FT.144}(2),\ (4)\ \text{machine re-run: exhaustive at lengths}\le8];\qquad\Theta_{\mathfrak L}^2=\mathrm{id},\ \text{bijection on the completed set}\ [\mathrm{FT.144}(4)(\mathrm{i})\ \text{re-run};\ \text{machine}]
+$$
+$$
+(6):\ \text{conjunction of}\ (1)\text{–}(5)\ \text{with}\ \mathrm{FT.141}(2),\ \mathrm{CT0.12},\ \mathrm{CT0.7}(1);\qquad\text{locus rows verbatim}\ [\mathrm{FT.136}(5);\ \mathrm{FT.141}(4)].\ \blacksquare
+$$
+
+**Phys.** The corpus declares one sign pattern, $(-,+,+,+)$, at the register [A3's $T$; C13] and derives the same sign pattern for the emergent metric [CT1.12] — one datum at two loci. The ten reality-preserving dimensions split $7/3$ under that grading, and the split is exactly the metric's: the seven T-even coefficients build the lapse and the spatial metric, the three T-odd coefficients build the shift — the time–space cross terms. The grading transports through the dictionary as the time-reversal pullback: lapse and spatial metric stand, the shift flips, the signature stands. Space shows its symmetry as inner rotations — every triad permutation is a rational polynomial in the weak generators — and its reversibility as exact involutions; time shows its asymmetry as the absence of any inverse for the tick advance, the monotone ledger, and the inadmissibility of every reversed history. Chirality is the same structure: the $10/6$ split of the complete force complex, refined by the signature grading, with the weak block sitting precisely in the metric's time–space sector.
+
+---
+
+---
+
+### FT.157 — The weak-selectivity theorem: the weak force is the shift block — the spatial force on the spatial branch
+
+**Thm.** With $\mathbb S$, $\Pi_{\mathcal R}=\tfrac14(3E_0+\Sigma)$, $\Pi_{\mathcal V}=\tfrac14(E_0-\Sigma)$ [CT0.7(1)], $W_i=\tfrac12(\sigma_0\otimes\sigma_i+\sigma_i\otimes\sigma_0)$ [CT1.2], $\Phi=\{0,\pi\}$ [D0.5, CT0.9]:
+$$(1)\quad\textbf{the weak block is the shift block:}\qquad F_W=\mathbf F_{(-,\mathcal R)}=\mathcal E_{+-}=\operatorname{span}\{W_i\}\quad[\mathrm{A8};\ \mathrm{CT0.7}(4);\ \mathrm{C8}:\ F_W=F_{W^+}\oplus F_{W^-}\oplus F_Z];$$
+$$\text{the same three generators carry the metric shift}\ [\mathrm{D2.1}:\ X_{(-)}=w_iW_i;\ \mathrm{CT1.12}:\ w_i\mapsto N_i]:\qquad g_{0i}=\varkappa\beta\,\Omega^2\,w_i\ [\mathrm{D2.1}]:$$
+$$\text{the weak aspect is the metric's time–space coupling block — one}\ 3\text{-dimensional block, two derived readings}\ [\text{machine: sector membership of every basis element}\ +\ \text{the dictionary row count}];$$
+$$(2)\quad\textbf{the weak acts on the spatial orientations and has no temporal one to act on:}\qquad W_i=\tfrac12\bigl(\sigma_i^{(p)}+\sigma_i^{(q)}\bigr)=\text{total spin}\ [\mathrm{CT1.2};\ \mathrm{FT.13}];\qquad[W_i,W_j]=i\epsilon_{ijk}W_k\ [\mathrm{CT1.4}];$$
+$$J,K:\ \text{vectors under}\ \operatorname{span}\{W\}\ [\mathrm{CT1.8}];\qquad\text{the triad index}\ i\ \text{is the rotation index}\ [\mathrm{FT.156}(4)];$$
+$$\textstyle\sum_iW_i^2=\tfrac32E_0+\tfrac12\Sigma=E_0+\mathbb S=2\,\Pi_{\mathcal R}\ [\mathrm{Cor}\ \mathrm{CT0.7a};\ \mathrm{FT.141}(4)]:\qquad\text{Casimir}\ 2=1(1{+}1)\ \text{on}\ \vee^2\ —\ \text{the spin-1 (vector) read};$$
+$$W_i\Pi_{\mathcal V}=0=\Pi_{\mathcal V}W_i\ \forall i,\qquad\bigcap_i\ker W_i=\operatorname{im}\Pi_{\mathcal V}\ [\mathrm{FT.101}(1)\text{–}(2)\ \text{re-derived};\ \text{machine}]:\qquad\text{Casimir}\ 0\ \text{on}\ \wedge^2\ —\ \text{the spin-0 (scalar) read, no orientation};$$
+$$\text{the derived dimension match}\ [\mathrm{CT0.7}(1):\ \mathfrak T\Pi_{\mathcal R}=3=\dim\vee^2,\ \mathfrak T\Pi_{\mathcal V}=1=\dim\wedge^2;\ \mathrm{CT1.12}:\ 3\ \text{positive},\ 1\ \text{negative eigenvalue}]:$$
+$$\textbf{spatial branch}\ :=\ \text{the aligned branch}\ (\alpha=0,\ \vee^2,\ \text{Casimir}\ 2)\ —\ \text{weak-active};\qquad\textbf{temporal branch}\ :=\ \text{the antialigned branch}\ (\alpha=\pi,\ \wedge^2,\ \text{Casimir}\ 0)\ —\ \text{weak-blind}\qquad[\mathrm{A4};\ \mathrm{FT.101}];$$
+$$\text{the labels record the derived matches}\ \dim\vee^2=3=\#\{\text{spatial directions}\}\ \text{and}\ \dim\wedge^2=1=\#\{\text{the temporal direction}\}\ [\mathrm{FT.156}(2)\text{–}(3)];\ \text{they are internal bookkeeping}\ [\text{Rmk below}];$$
+$$(3)\quad\textbf{the selectivity is the}\ 3{+}1\ \textbf{asymmetry at the state locus:}\qquad\text{the weak sees the spatial branch and annihilates the temporal branch}\ [\mathrm{FT.101}(1)\text{–}(2);\ \text{machine}];$$
+$$\text{its support is fixed by the}\ S\text{-grading}\ (\mathbb S\ \text{enters the Casimir identity literally}\ [\mathrm{FT.141}(4)])\ \text{and refined by the}\ T\text{-grading: the weak support is the}\ S\text{-even}\ T\text{-odd block} = \text{the sector coupling the temporal register direction to the spatial triad}\ [\mathrm{FT.156}(2)\text{–}(3)];$$
+$$\text{the branch flip}\ \iota(\alpha)=\pi-\alpha\ \text{has no Hilbert-space implementation}\ (\mathfrak T\Pi_{\mathcal R}=3\ne1=\mathfrak T\Pi_{\mathcal V};\ \operatorname{rk}3\ne1)\ [\mathrm{FT.101}(3)\ \text{re-derived}]:\ \text{the one-sidedness is exact on the pair register};$$
+$$(4)\quad\textbf{the carrier-side ledger, unchanged:}\ \ \text{on the extended carrier the weak acts seed}\otimes\text{trivial and commutes with the chiral projectors}\ [\mathrm{FT.126}(2):\ \text{blindness},\ \neg\text{coupling}];$$
+$$\text{the four gradings — the algebra}\ S\text{-grading, the branch-label parity, the carrier}\ \hat\chi\text{-grade, the Janus arrow — remain pairwise distinct}\ [\mathrm{FT.136};\ \mathrm{FT.141}(6);\ \mathrm{FT.144}(5)];$$
+$$\text{this tag adds the manifold-side read of the branch-label}\ \mathbb Z_2\ (\text{spatial}=\text{aligned}=\text{weak-active};\ \text{temporal}=\text{antialigned}=\text{weak-blind}):\ \text{a force-side input to the deficit}\ 1'\ \text{assignment rule}\ [\mathrm{FT.125}(4);\ \mathrm{FT.141}(6)];$$
+$$\text{the rule coupling the gradings to species is}\ \neg\text{constructed here; no species is assigned};$$
+$$(5)\quad\textbf{the one-sidedness, answered:}\qquad\text{space:}\ 3\text{-dimensional}\ [\mathrm{CT1.12}:\ \text{three positive eigenvalues};\ \mathrm{FT.156}(2):\ \text{the triad counts}],\ \text{triad-symmetric}\ [\mathrm{FT.156}(4):\ S_3\ \text{inner}],\ \text{reversible under exact involutions}\ [\mathrm{A3};\ \mathrm{FT.133}(1)];$$
+$$\text{time:}\ 1\text{-dimensional}\ [\mathrm{CT1.12}:\ \text{the single negative eigenvalue}]\ \text{and strictly forward}\ [\mathrm{A6}:\ \neg\exists\,\tau^{-1};\ \mathrm{FT.144}(2)\text{–}(3):\ \text{no backward materialization}];$$
+$$\text{the weak coupling is the triad-indexed vector coupling}\ [\mathrm{CT1.2}:\ W_i,\ i=1,2,3;\ \mathrm{CT1.8}]:\ \text{it couples to the reversible}\ 3\text{-dimensional sector, and the}\ 1\text{-dimensional strictly-forward sector carries no orientation object for it to act on}\ [\wedge^2:\ \text{spin}\ 0;\ W_i\Pi_{\mathcal V}=0]:$$
+$$\text{the chiral asymmetry of the weak is the}\ 3{+}1\ \text{asymmetry of the arena}.$$
+
+**Rmk (naming and identification bars).** The labels *spatial branch*/*temporal branch* attach to the A4 branch and swap-eigenspace loci only — internal bookkeeping for the derived dimension and Casimir matches. Naming either branch *left* or *right* is barred [FT.101 Phys bars stand]; the carrier-ray names $P_L/P_R$ remain algebraic up to the application-layer assignment rule [Def-H.33 canonicity Rmk]; no SM species reading; no claim that the SM weak interaction is reproduced [P1, P5].
+
+**Req.** A3, A4, A6, A8 (Part 1); C8 (Part 1); D0.5, D2.1 (Part 1); CT0.7, Cor CT0.7a, CT0.9, CT0.12, CT1.2, CT1.4, CT1.8 (Part 1); CT1.12 (Part 2); FT.13 (Tiers F.1–F.11); FT.101 (Tier F.34); FT.125, FT.126 (Tier F.39); FT.133 (Tier F.41); FT.136, FT.141, FT.144 (Tiers F.41–F.42); Def-H.33, Def-H.34 cited within the frozen FT.126/FT.144 clauses; FT.156 (this tier); exact $\mathbb Q(i)$ arithmetic, rank/trace invariants, Casimir witnesses on exact rational states [math; machine: `checks/verify_H_3p1_chiral_asymmetry.py` §B].
+
+**Pf.**
+$$
+(1):\ \mathrm{A8}/\mathrm{CT0.7}(4)\ \text{block rows verbatim};\qquad\mathrm{D2.1}:\ X_{(-)}=w_iW_i;\qquad\mathrm{CT1.12}\ \text{table row}\ w_i\mapsto N_i=\beta w_i;\qquad g_{0i}=\Omega^2\bar g_{0i}=\varkappa\beta\Omega^2 w_i\ [\mathrm{D2.1}];\qquad\text{machine:}\ W_i\in\mathcal E_{+-}\ \text{on the}\ T\text{-table}\ [\mathrm{FT.156}(1)],\ \#\{T\text{-odd}\ S\text{-even basis elements}\}=3
+$$
+$$
+(2):\ \mathrm{CT1.2}/\mathrm{FT.13},\ \mathrm{CT1.4},\ \mathrm{CT1.8}\ \text{verbatim};\qquad\textstyle\sum_iW_i^2=\tfrac32E_0+\tfrac12\Sigma\ [\mathrm{Cor}\ \mathrm{CT0.7a}\ \text{re-derived};\ \text{machine}];\qquad\Sigma=2\mathbb S-E_0\ [\mathrm{CT0.7}(1)]\implies\tfrac32E_0+\tfrac12\Sigma=E_0+\mathbb S=2\Pi_{\mathcal R}\ [\text{machine}]
+$$
+$$
+\vee^2:\ \mathbb S=+1\implies\text{Casimir}\ 2;\qquad\wedge^2:\ \Sigma|_{\wedge^2}=-3\implies\tfrac32-\tfrac32=0\ [\mathrm{Cor}\ \mathrm{CT0.7a}];\qquad W_i\Pi_{\mathcal V}=0\ \forall i,\quad\dim\bigcap_i\ker W_i=4-\operatorname{rk}\binom{W_1}{W_2}{W_3}=1\ [\mathrm{FT.101}(2)\ \text{re-derived};\ \text{machine}];\qquad\mathfrak T\Pi_{\mathcal R}=3,\ \mathfrak T\Pi_{\mathcal V}=1\ [\mathrm{CT0.7}(1);\ \text{machine}]
+$$
+$$
+(3):\ \mathrm{FT.101}(1)\text{–}(3)\ \text{re-derived witnesses};\qquad\text{support identity}\ W_i=\Pi_{\mathcal R}W_i\Pi_{\mathcal R}\ [\text{machine}];\qquad\text{flip non-implementation: conjugation preserves}\ \mathfrak T\ \text{and}\ \operatorname{rk};\ 3\ne1\ [\text{machine}]
+$$
+$$
+(4):\ \mathrm{FT.126}(2),\ \mathrm{FT.136},\ \mathrm{FT.141}(6),\ \mathrm{FT.144}(5)\ \text{verbatim (frozen)};\qquad\neg\exists\ \text{assignment tag}\ [\text{inventory scan};\ \mathrm{FT.125}(4)]
+$$
+$$
+(5):\ \text{rows cite}\ \mathrm{CT1.12},\ \mathrm{FT.156}(2)\text{–}(5),\ \mathrm{A6},\ \mathrm{FT.144}(2)\text{–}(3),\ \mathrm{CT1.2},\ \mathrm{CT1.8};\qquad W_i\Pi_{\mathcal V}=0\ [(2);\ \text{machine}].\ \blacksquare
+$$
+
+**Phys.** The three generators the corpus calls weak are the same three coefficients the metric calls shift: the weak force is literally the time–space coupling block of the emergent geometry — a spatial force, triad-indexed, rotating everything it touches as vectors. On states, it lives entirely on the three-dimensional aligned branch — Casimir $2$, the spin-1 read — and annihilates the one-dimensional antialigned branch — Casimir $0$, no orientation to act on. Space is three-dimensional, fully symmetric under inner triad rotations, and reversible under exact involutions; time is one-dimensional and strictly forward, with no inverse for its advance. The weak couples to the spatial orientations because the spatial sector is where its vector action has a referent; it is blind to the temporal branch because the temporal sector has none. That is the chiral selectivity of the force — the $3{+}1$ asymmetry read on states — while the carrier-side gradings stay distinct and the species rule stays open.
+
+---
+
+---
+
+### FT.158 — The spatial provenance of the channel angle: $C_3$ is the weak rotation of the triad, and the Koide-form spectrum is forced
+
+**Thm.** With the seal bilinear $[J_i,K_j]$ [FT.109], the $C_3$-covariant spectrum [FT.111], the mixing angle $\delta=\tfrac29$ [FT.112], and the bilinear spectrum $r_i$ [FT.113]:
+$$(1)\quad\textbf{the}\ C_3\ \textbf{is generated by the weak generators:}\ \ \mathrm{FT.111}\text{'s inner rotation}\ U=u\otimes u,\ u=\tfrac12\bigl(I_2-i(\sigma_1+\sigma_2+\sigma_3)\bigr),\ \text{is the}\ \tfrac{2\pi}3\ \text{rotation about the}\ (1,1,1)\ \text{axis generated by the total-spin/weak generators:}$$
+$$U=\exp\!\bigl(-\tfrac{2\pi i}3\,\hat n\cdot W\bigr)=E_0-\tfrac12\mathcal W^2-\tfrac i2\mathcal W,\qquad\mathcal W=W_1{+}W_2{+}W_3,\qquad\hat n=\tfrac{(1,1,1)}{\sqrt3}\qquad[\text{exact polynomial identity over}\ \mathbb Q(i),\ \text{via}\ \mathcal W^3=3\mathcal W;\ \text{machine}];$$
+$$U^3=E_0;\qquad U J_i U^\dagger=J_{i+1},\quad U K_i U^\dagger=K_{i+1},\quad U W_i U^\dagger=W_{i+1}\quad(\text{indices mod}\ 3)\qquad[\mathrm{FT.111}(1)\ \text{re-derived, plus the}\ W\text{-row};\ \text{machine}]:$$
+$$C_3\le SO(3)\ —\ \text{the cyclic permutation of the three spatial directions}\ [\mathrm{CT1.8}:\ \text{the triad}\ SO(3);\ \mathrm{CT1.4}:\ \operatorname{span}\{W\}\cong\mathfrak{su}(2)]\ —\ \text{is inner in the weak rotation algebra};$$
+$$(2)\quad\textbf{the numerator}\ 2=3-1\ \textbf{is the doublet dimension of the spatial triad:}\qquad\text{the diagonal bilinear splits singlet}\ \oplus\ \text{doublet}\ [\mathrm{FT.111}(1)]:\ \ \text{the fixed direction}\ \Sigma\ \oplus\ \text{the zero-sum plane}\ \textstyle\sum_i\hat E^{ii}=0,\ \dim=2\ [\text{machine: exact rank}];$$
+$$\text{the cyclic shift on the plane:}\quad\operatorname{charpoly}=\text{minimal polynomial}=x^2+x+1,\ \ \text{irreducible over}\ \mathbb Q\ (\pm1\mapsto3\ne0)\ [\mathrm{FT.111}(1)\ \text{re-derived};\ \text{machine}];$$
+$$\textstyle\sum_i[J_i,K_i]=i\sum_i\bigl(\Sigma-E^{ii}\bigr)=i\bigl(3\Sigma-\Sigma\bigr)=2i\Sigma\qquad[\mathrm{FT.109}(1)\text{–}(3)\ \text{re-derived};\ \text{machine}]:$$
+$$\text{the coefficient}\ 2=3-1\ —\ \text{the triad count minus its trace}: \text{one integer at two derived reads}\ (\dim\ \text{doublet};\ \Sigma\text{-coefficient})\ [\text{exact integers}];$$
+$$(3)\quad\textbf{the denominator}\ 9=3\times3;\ \ \delta=\tfrac29\ \textbf{is a ratio of spatial counts:}\qquad\dim F_{J^\pm}=3\ [\mathrm{CT0.12};\ \text{machine: exact rank}]\ —\ \text{the seal-triplet dimension} = \text{the triad dimension on which}\ SO(3)\ \text{acts}\ [\mathrm{CT1.8}];$$
+$$\operatorname{tr}T(1)=3\ [\mathrm{FT.110}(2):\ \operatorname{charpoly}T(1)=x^4-3x^3-3x^2;\ \text{machine: exact re-derivation from the transfer rule}\ T(1)[s][s']=[\,|s|+|s'|\le3\,]];$$
+$$\delta=\frac{\sum_i[J_i,K_i]\big|_\Sigma}{\dim F_{J^\pm}\cdot\operatorname{tr}T(1)}=\frac{2}{3\cdot3}=\frac29\qquad[\mathrm{FT.112}\ \text{re-derived};\ \text{machine: exact Fractions}];$$
+$$\text{the arena reading carries Tier F.37's interface provenance}\ [\mathrm{Def\text{-}H.41}\ —\ \text{cited},\ \neg\text{imported here}]:\qquad\text{the angle's constituents are the doublet dimension, the seal dimension, the transfer trace — integer counts of the spatial channel, no datum, no fit};$$
+$$(4)\quad\textbf{the Koide-form spectrum is forced:}\qquad r_i=1+\sqrt2\cos\bigl(\tfrac29+\tfrac{2\pi i}3\bigr)\ [\mathrm{FT.113}]:\ \ \text{the shape from}\ C_3\text{-covariance}\ [\mathrm{FT.111}(2):\ \lambda_i=A+B\cos(\theta+\tfrac{2\pi i}3)\ \text{for every}\ C_3\text{-covariant Hermitian triplet operator}];$$
+$$A=1,\ B=\sqrt2\ \text{from the democratic normalization to the seal dimension}\ 3\ [\mathrm{FT.111}(3):\ \textstyle\sum_i\lambda_i=3=\dim F_{J^\pm},\ \sum_i(\lambda_i-A)^2=3];\qquad\theta=\delta\ \text{from}\ (2)/(3);$$
+$$\text{machine:}\quad\textstyle\sum_ir_i=3,\quad\sum_{i<j}r_ir_j=\tfrac32,\quad 2(r_i-1)^3-3(r_i-1)-\sqrt2\cos\tfrac23=0\ \ \forall i\qquad[\text{exact in}\ \mathbb Q(\sqrt2,\sqrt3)[c,s]/(c^2{+}s^2{-}1);\ \cos\tfrac23=4c^3-3c\ \text{at}\ c=\cos\tfrac29];$$
+$$\text{the Koide formula is a consequence of the}\ C_3\ \text{symmetry of the}\ 3\ \text{spatial directions};\qquad\text{the scale}\ \mu\ (\text{P4-class})\ \text{enters no ratio}\ [\mathrm{FT.113}];$$
+$$(5)\quad\textbf{the classification of the rational}\ \tfrac23\textbf{:}\qquad\tfrac23=\tfrac{3-1}3=\frac{\dim\ \text{doublet}}{\dim\ \text{triplet}}\ —\ \text{the decomposition ratio of the spatial seal triad under its inner rotation subgroup}\ [\mathrm{FT.111}(1):\ \mathbf 3=\mathbf 1\oplus\mathbf 2;\ \text{machine: exact Fractions}];$$
+$$\delta_\ell=\tfrac29=(\tfrac23)/3\ [\mathrm{FT.112}\ \mathrm{Rmk}]:\qquad\text{the three cross-check rationals}\ (p^*_\infty)^2=\tfrac23\ [\mathrm{FT.70}(3);\ \text{exact in}\ \mathbb Z[\sqrt6]],\quad\delta_v/\pi=2-\tfrac43=\tfrac23\ [\mathrm{FT.63}(4)],\quad f_{\mathrm{charge}}(\delta h{=}3)=\tfrac23\ [\mathrm{FT.14}]$$
+$$\text{equal}\ (3-1)/3\ \text{exactly}\ [\text{machine}]:\qquad\mathrm{FT.89}(2\mathrm d)\text{'s classification of the rational}\ \tfrac23\ \text{``cap-3 combinatorial output''}\ \text{and}\ (5)\text{'s verdict on the Koide-form structure}\ \text{``coincidence;\ no structural claim''}\ \textbf{do not stand}:$$
+$$\text{the corpus-side Koide-form angle and spectrum have the derived spatial provenance}\ (1)\text{–}(4);\qquad\textbf{unchanged and standing:}\ \ \mathrm{FT.89}(1)\text{'s arithmetic}\ (\text{exact, frozen});\ \ (3)\text{'s refutation};\ \ (4)\text{'s negatives};$$
+$$\text{the inadmissibility grounds}\ (2\mathrm a)\text{–}(2\mathrm c)\ \text{and the identification bars: no family-mass read exists in the corpus},\ \neg\exists\ \text{a declared map relating derived rationals to measured mass ratios},\ \text{external data enters no derivation}\ [\mathrm{P1},\ \mathrm{P5}];$$
+$$\text{the cap-sensitivity arithmetic}\ [(2\mathrm d):\ c=2\to0.508004\ldots;\ c=4\to\neg\exists\ \text{interior boundary}]\ \text{stands as the exact polygon-ensemble record};\qquad\text{the scale}\ \mu\ \text{remains undeclared}\ (\text{P4}).$$
+
+**Rmk (channel labels).** The subscripts $\ell,q,\nu$ name ledger rows [FT.112, FT.119, FT.142 Rmks]; “Koide-form” names the corpus-internal functional shape $1+\sqrt2\cos(\delta+\tfrac{2\pi i}3)$; no particle identification is made or implied [P1, P5].
+
+**Req.** CT0.12, CT1.2, CT1.4, CT1.8 (Part 1); FT.14 (Tiers F.1–F.11); FT.63(4) (Tiers F.20–F.22); FT.68(2), FT.70(3) (Tiers F.23–F.25); FT.89 (Tier F.30); FT.109, FT.110, FT.111, FT.112, FT.113, FT.119 (Tiers F.37–F.38); FT.142 (Tier F.42; the Rmk row); Def-H.41 cited as FT.110's arena provenance and imported nowhere; P4, P5 (Parts 1–2); FT.156 (this tier); exact $\mathbb Q(i)$ conjugation and polynomial rotation identities, exact $\mathbb Q$ ranks and characteristic polynomials, $\mathbb Z[\sqrt6]$ arithmetic, exact identities in $\mathbb Q(\sqrt2,\sqrt3)[c,s]/(c^2{+}s^2{-}1)$, Fractions [math; machine: `checks/verify_H_3p1_chiral_asymmetry.py` §C].
+
+**Pf.**
+$$
+(1):\ \mathcal W^3=3\mathcal W\ [\text{machine}]\implies(\hat n\cdot W)^3=\hat n\cdot W\implies\exp(-i\theta\,\hat n\cdot W)=E_0+(\cos\theta-1)(\hat n\cdot W)^2-i\sin\theta\,(\hat n\cdot W)\ [\text{polynomial on}\ \operatorname{spec}\{1,0,-1\}];\qquad\theta=\tfrac{2\pi}3\implies E_0-\tfrac12\mathcal W^2-\tfrac i2\mathcal W
+$$
+$$
+=u\otimes u\ \text{entrywise over}\ \mathbb Q(i)\ [\text{machine}];\qquad U^3=E_0,\ UJ_iU^\dagger=J_{i+1},\ UK_iU^\dagger=K_{i+1}\ [\mathrm{FT.111}(1)\ \text{Pf re-run};\ \text{machine}];\qquad UW_iU^\dagger=W_{i+1}\ [\text{machine}];\qquad C_3\le SO(3)\ [\mathrm{CT1.8}\ \text{vector structure};\ \mathrm{FT.111}\ \text{Thm line}]
+$$
+$$
+(2):\ \hat E^{ii}=E^{ii}-\tfrac13\Sigma,\ \ \textstyle\sum_i\hat E^{ii}=0\ [\mathrm{FT.109}(2);\ \mathrm{CT1.2}\ \text{traceless split};\ \text{machine}];\qquad\operatorname{rk}\{\hat E^{11},\hat E^{22},\hat E^{33}\}=2\ [\text{exact flattening rank};\ \text{machine}];\qquad P^3=I_3,\ \operatorname{tr}P=0:\ x^2+x+1\ \text{irreducible over}\ \mathbb Q\ [\mathrm{FT.111}(1)\ \text{Pf re-run};\ \text{machine}]
+$$
+$$
+\textstyle\sum_i[J_i,K_i]=i\sum_i(\Sigma-E^{ii})=i(3\Sigma-\Sigma)=2i\Sigma\ [\mathrm{CT1.7}\ \text{diagonal};\ \mathrm{FT.109}(1)\text{–}(2);\ \text{machine, entrywise}];\qquad 2=3-1\ [\text{exact integers}]
+$$
+$$
+(3):\ \dim\operatorname{span}\{J_i\}=3\ [\text{machine: exact rank}];\qquad T(1)=\mathbb 1_{4\times4}-[\,\cdot\,]_{(2,2)}\ \text{on the diagonal}:\ \operatorname{tr}T(1)=4-1=3;\quad\operatorname{charpoly}=x^4-3x^3-3x^2\ [\mathrm{FT.110}(2)\ \text{Pf re-run};\ \text{machine: exact Newton identities}];\qquad\delta=\tfrac{2}{3\cdot3}=\tfrac29\ [\text{Fractions}]
+$$
+$$
+(4):\ \text{closed forms}\ r_0=1+\sqrt2 c,\ r_{1,2}=1-\tfrac12(\sqrt2 c\pm\sqrt6 s)\ [\mathrm{FT.113}\ \text{re-derived by the addition formulas}];\qquad\sum_ir_i=3,\ \sum_{i<j}r_ir_j=\tfrac32\ [\text{exact in}\ \mathbb Q(\sqrt2,\sqrt3)[c,s]/(c^2{+}s^2{-}1);\ \text{machine}]
+$$
+$$
+2y^3-3y-\sqrt2(4c^3-3c)=0\ \ \forall y\in\{r_i-1\}\ [\text{same ring};\ \text{machine}];\qquad\cos\tfrac23=4c^3-3c\ \text{at}\ 3\delta=\tfrac23\ [\text{triple-angle identity in the ring};\ \mathrm{FT.113}\ \text{Pf pattern}]
+$$
+$$
+(5):\ \tfrac{3-1}3=\tfrac23\ [\text{Fractions}];\qquad\bigl(\tfrac{\sqrt6}3\bigr)^2=\tfrac69=\tfrac23\ [\mathbb Z[\sqrt6];\ \text{machine}];\qquad s=2+\sqrt6:\ s^2-4s-2=0,\ \tfrac{s}{1+s}=\tfrac{\sqrt6}3\ [\mathrm{FT.89}(1)\ \text{Pf re-run};\ \text{machine}];\qquad 2-\tfrac43=\tfrac23\ [\mathrm{FT.63}(4);\ \text{exact integers}];\qquad\tfrac{2/3}3=\tfrac29\ [\text{Fractions}]
+$$
+$$
+\text{classification row}: (1)\text{–}(4)\ \text{conjoined};\qquad\text{standing rows}: \mathrm{FT.89}(1)\text{–}(4)\ \text{cited unmodified};\ \mathrm{P1}/\mathrm{P5}\ \text{bars verbatim}.\ \blacksquare
+$$
+
+**Phys.** The $120^\circ$ rotation that shapes the triplet spectrum is a rotation of the three spatial directions performed by the weak generators themselves — an exact polynomial in $W_1+W_2+W_3$ with rational coefficients. The channel angle is the doublet dimension over the arena: $(3-1)$ over $3\times3$ — a ratio of spatial counts, with the same integer $2$ appearing independently as the seal-commutator coefficient. The famous cosine form is then forced three times over: covariance fixes the shape, the triad dimension fixes the normalization, the counts fix the angle — nothing is adjustable except an overall scale that no ratio sees. The classification of two thirds as a bookkeeping coincidence does not stand, at exactly that clause: the same rational is the singlet-complement fraction of the spatial triad under its own rotation group, and the Koide-form structure has a provenance theorem. Every bar against reading any of it as a measured mass ratio stands untouched.
+
+---
+
+---
+
+### FT.159 — The emergent-time identity theorem: gravitational time and CPT time are the ledger order
+
+**Thm.**
+$$(1)\quad\textbf{gravitational time is the tick coordinate:}\qquad x^0:=\tau_n\ [\mathrm{D1.8}:\ \tau_n=\sum\delta\tau\ \text{accumulated along a causal chain of real edges; the emergent coordinate}];$$
+$$\chi([v])=(x^0,x^1,x^2,x^3)=(\tau_n,h_1,h_2,h_3)\ [\mathrm{CT2.6}:\ M=\Gamma_{\mathcal R}/\!\!\sim\ \text{a smooth}\ 4\text{-manifold};\ g_{\mu\nu}\ \text{a smooth Lorentzian metric}\ [\mathrm{CT1.12}];\ \text{conditions (ii)–(iii) at the point of use — A §0.2a}];$$
+$$g_{00}=\Omega^2\bar g_{00}=-\Omega^2,\qquad\Omega=e^{\alpha_\Omega a_{00}}\ [\mathrm{D2.1}:\ \bar g_{00}=-1];\qquad a_{00}=\text{the}\ E_0\text{-coefficient of}\ X_{(+)}\in\mathcal E_{++}:\ S\text{-even},\ T\text{-even}\ [\mathrm{CT1.2}\ \text{table};\ \text{machine}]:$$
+$$\text{the lapse/conformal read is built from the}\ S\text{-even}\ T\text{-even block}\ [\mathrm{CT1.12}\ \text{table}:\ a_{00}\mapsto\text{conformal factor}];\qquad\text{the metric's time coordinate is the ledger's tick structure}\ [\mathrm{A7}:\ \mathfrak L=\bigcup_{n\ge0}\mathfrak L(\tau_n)];$$
+$$(2)\quad\textbf{CPT time is the ledger reversal:}\qquad\Theta_{\mathfrak L}\ [\mathrm{D2.7}]:\ \text{ledger order reversed},\ J^+\leftrightarrow J^-,\ G(e)\mapsto G(e)^\ast;$$
+$$T=\Theta_{\mathfrak L}:\ \text{the}\ T\text{-register of the configuration calculus is the ledger reversal}\ [\mathrm{FT.133}(1):\ \text{order reversed},\ J^+\leftrightarrow J^-,\ \kappa_e\mapsto-\kappa_e,\ \sigma\ \text{fixed};\ \mathrm{FT.88}(2)];$$
+$$w(\Theta_{\mathfrak L}C)=w(C)^\ast\ [\mathrm{CT2.8}(1);\ \text{machine: exact witnesses over}\ \mathbb Q(i)\ —\ G(e)=\sigma_e e^{i\pi\kappa_e}\ [\mathrm{FT.88}(2);\ \mathrm{D3.5}],\ e^{i\pi\kappa}\in\{1,i,-1,-i\}\ \text{on half-integer}\ \kappa\ \text{samples},\ \kappa\mapsto-\kappa=\text{conjugation},\ \sigma\ \text{fixed},\ \mathcal J\mapsto\mathcal J^\ast\ [\mathrm{D3.6}];\ \text{exhaustive on the}\ 3\text{-edge configurations}];$$
+$$\langle A|B\rangle:=Z\bigl[\Theta_{\mathfrak L}A\cup B\bigr]=\sum_C|w(C)|^2\ge0,\qquad w(C)=w(C_{\mathrm{left}})\cdot w(C_{\mathrm{right}})\ \ \text{across any interior ledger-time cut}\ [\mathrm{CT2.8}(2)\text{–}(3);\ \text{machine: exact regrouping witnesses}]:$$
+$$\text{the Hilbert-space structure is glued across the same ledger time by the same reversal}\ [\mathrm{CT2.8}(5)\text{–}(6)];$$
+$$(3)\quad\textbf{the identity:}\qquad\text{gravitational time}\ (1)\ \text{and CPT time}\ (2)\ \text{are the same entity — the ledger order parameter — read once as the coordinate and once as the reversal:}$$
+$$x^0=\tau_n\ [\mathrm{D1.8};\ \mathrm{CT2.6}]\qquad\text{and}\qquad\text{its reversal}=\Theta_{\mathfrak L}\ [\mathrm{D2.7};\ \mathrm{FT.133}(1):\ T=\Theta_{\mathfrak L}];$$
+$$\text{the metric side transports: the register involution is declared with the metric signature}\ [\mathrm{A3},\ \mathrm{C13}:\ \eta=(-,+,+,+)]\ \text{and its}\ T\text{-parity transport through the dictionary is the time-reversal pullback}\ [\mathrm{FT.156}(3):\ (a_{00},q,w)\mapsto(a_{00},q,-w)\iff g_{00},g_{ij}\ \text{fixed},\ g_{0i}\mapsto-g_{0i};\ \text{machine}];$$
+$$\text{the record side conjugates:}\quad w(\Theta_{\mathfrak L}C)=w(C)^\ast\ [\mathrm{CT2.8}(1);\ (2)]:\qquad\text{the time reversal of the emergent metric and the}\ T\text{-register of the CPT calculus are the reversal of the same ledger order at two loci — the metric dictionary and the configuration record};$$
+$$\text{locus discipline}\ [\mathrm{FT.134}(1)\ \text{pattern}]:\ \text{the register grading}\ [\mathrm{A3}]\ \text{and the record reversal}\ [\mathrm{D2.7}]\ \text{act on different spaces — the identity is of the time entity}\ (\text{the order parameter}),\ \neg\text{an operator equality};$$
+$$\text{inventory: one order parameter, four tags}\ [\mathrm{D0.7}\ \text{ticks};\ \mathrm{D1.8}\ x^0;\ \mathrm{CT2.6}\ \text{charts};\ \mathrm{D2.7}\ \Theta_{\mathfrak L}]\ —\ \text{no second time entity exists in the corpus}\ [\text{scan}];$$
+$$(4)\quad\textbf{the blockage removed; the residue restated:}\qquad\text{the ``no emergent time'' prerequisite}\ [\text{item}\ 21(\mathrm b)\ \text{row};\ \mathrm{FT.131}(3):\ \text{emergent time a named prerequisite}]\ \textbf{is discharged by}\ (1)\text{–}(3):$$
+$$\text{the time parameter is derived content — the coordinate}\ x^0=\tau_n\ [\mathrm{D1.8};\ \mathrm{CT2.6}],\ \text{the lapse}\ g_{00}=-\Omega^2\ [\mathrm{D2.1};\ \mathrm{CT1.12}],\ \text{the reversal}\ \Theta_{\mathfrak L}=T\ [\mathrm{D2.7};\ \mathrm{FT.133}(1)],\ \text{the cut-glued inner product}\ [\mathrm{CT2.8}(2)\text{–}(3)];$$
+$$\text{the line-element channel contracts metric data with tick data:}\quad ds^2(e)=g_{\mu\nu}(e)\,\Delta x^\mu_e\,\Delta x^\nu_e,\quad\widehat{ds}^{\,2}=ds^2/\mathfrak h^2\ [\mathrm{D1.6}],\quad\Delta x^0=\text{a tick increment}\ [\mathrm{D1.8};\ \mathrm{CT2.8}(2)\ \text{Pf}:\ \text{each edge is registered between consecutive ticks}]:$$
+$$\Omega\ \text{and}\ \Delta\tau\ \text{meet in every}\ \widehat{ds}^{\,2}(e)\ \text{with a temporal increment}\ [\text{machine: the bilinear-form witness}\ ds^2=g_{00}(\Delta x^0)^2\ \text{on purely temporal increments}];\qquad\text{the derived clock:}\ (\Delta n_{\mathcal R},\delta h,\delta\tau)=\pm(1,1,1)\ \text{per Janus move}\ [\mathrm{CT0.3}];$$
+$$\text{restated precisely — the unconstructed residue is the dynamical rate modulation: a flicker-frequency read of}\ \delta\tau\ [\mathrm{D0.7}]\ \text{against}\ \Omega/N_i\ \text{along materialized worldlines (a redshifted or self-modulating rate)}\ [\mathrm{FT.86}(8)\text{'s inventory row stands as the construction record}];$$
+$$\text{it requires no declaration of time — time is derived}\ (1)\text{–}(3)\ —\ \text{and no declaration issues};\qquad\mathrm{FT.131}(3)\text{'s deferred frequency read has its time parameter to be posed in};$$
+$$(5)\quad\textbf{strict forwardness stands:}\qquad\neg\exists\,\tau^{-1}\ [\mathrm{A6}];\qquad\Theta_{\mathfrak L}\ \text{is the formal mirror on records},\ \neg\text{a dynamical inverse}\ [\mathrm{FT.144}(4):\ \text{the pure order reversal of every completed nonempty history is inadmissible at its first event};\ \text{machine}];$$
+$$\text{materialization is single-arrow}\ [\mathrm{FT.144}(2)\text{–}(3)];\qquad\text{the ledger count is monotone}\ [\mathrm{A7};\ \text{machine: exact samples}]:$$
+$$\text{the CPT time reversal is a register operation on configuration data; the gravitational arrow is the ledger's forward advance — the same entity on the record side and on the dynamical side}.$$
+
+**Req.** A3, A6, A7 (Part 1); D0.5, D0.7, D1.2, D1.6, D1.8, D2.1, D2.7, D3.3, D3.5, D3.6 (Part 1); CT0.3 (Part 1); CT1.2, CT1.12, CT2.6 (conditions (ii)–(iii) at the point of use — A §0.2a), CT2.8 (Part 2); FT.86(8) (Tier F.29); FT.88 (Tiers F.29–F.30); FT.131(3) (Tier F.40); FT.133, FT.134(1) (Tier F.41); FT.144 (Tier F.42); FT.156 (this tier); exact $\mathbb Q(i)$ weight arithmetic on the half-integer $\kappa$ ladder, exhaustive word enumeration, exact rational regrouping and transport identities [math; machine: `checks/verify_H_3p1_chiral_asymmetry.py` §D].
+
+**Pf.**
+$$
+(1):\ \mathrm{D1.8}\ \text{verbatim}:\ x^0:=\tau_n;\qquad\mathrm{CT2.6}\ \text{chart line verbatim}:\ \chi([v])=(\tau_n,h_1,h_2,h_3);\qquad g_{00}=\Omega^2\bar g_{00}=-\Omega^2\ [\mathrm{D2.1}];\qquad E_0\in\mathcal E_{++}:\ (S,T)=(+,+)\ [\mathrm{CT1.2}\ \text{table};\ \text{machine}];\qquad\mathrm{CT1.12}\ \text{row}\ a_{00}\mapsto\Omega
+$$
+$$
+(2):\ \mathrm{D2.7}\ \text{verbatim};\qquad\mathrm{FT.133}(1):\ T=\Theta_{\mathfrak L}\ \text{register line verbatim}\ [\mathrm{FT.88}(2):\ \kappa\mapsto-\kappa];\qquad w(\Theta_{\mathfrak L}C)=w(C)^\ast\ [\mathrm{CT2.8}(1)\ \text{frozen};\ \text{machine re-run:}\ e^{i\pi\kappa}\mapsto e^{-i\pi\kappa}=(e^{i\pi\kappa})^\ast\ \text{on}\ \kappa\in\tfrac12\mathbb Z:\ \{1,i,-1,-i\}\subset\mathbb Q(i);\ \sigma\ \text{fixed};\ (-1)^\aleph\ \text{invariant}\ [\mathrm{D3.3}:\ \aleph_v=|f_v|]]
+$$
+$$
+\langle A|A\rangle=\sum_C w(\Theta_{\mathfrak L}C)w(C)=\sum_C|w(C)|^2\ [\mathrm{CT2.8}(3)\ \text{Pf pattern}];\qquad\text{cut factorization}: w=\mathcal J\prod_eG(e)\cdot(-1)^\aleph,\ \text{factors tick-local}\ [\mathrm{D0.7};\ \mathrm{CT2.8}(2)\ \text{Pf regrouping};\ \text{machine: exact products on witnessed cuts}]
+$$
+$$
+(3):\ (1)+(2)\ \text{conjoined};\qquad\text{transport row}\ [\mathrm{FT.156}(3);\ \text{machine}];\qquad\text{inventory scan}:\ \{\mathrm{D0.7},\ \mathrm{D1.8},\ \mathrm{CT2.6},\ \mathrm{D2.7}\}\ \text{name one order parameter}\ [\text{no second time coordinate in any tag}]
+$$
+$$
+(4):\ \text{item}\ 21(\mathrm b)\ \text{prerequisite text cited as discharged by}\ (1)\text{–}(3);\qquad\mathrm{D1.6}\circ\mathrm{D1.8}:\ g_{\mu\nu}\Delta x^\mu\Delta x^\nu\big|_{\Delta x=(\Delta\tau,0,0,0)}=g_{00}(\Delta\tau)^2\ [\text{bilinear substitution};\ \text{machine witness over}\ \mathbb Q];\qquad g_{00}=-\Omega^2\ [\mathrm{D2.1}];\qquad\mathrm{FT.86}(8)\ \text{row cited unchanged};\qquad\neg\exists\ \text{new declaration}\ [\text{scan of this tier's Req}]
+$$
+$$
+(5):\ \mathrm{A6}\ \text{verbatim};\qquad\mathrm{FT.144}(4)\ \text{machine re-run (exhaustive, lengths}\le8);\qquad\mathrm{A7}\ \text{monotonicity on exact samples}.\ \blacksquare
+$$
+
+**Phys.** The corpus has one time. The manifold's time coordinate is the ledger's own tick index, declared as such and charted onto the emergent geometry; its time-time metric component is the conformal read of the reality-preserving, reversal-even block. The CPT calculus's $T$ is the ledger reversal — the order of the record run backwards, seals exchanged, phases conjugated — and the same reversal, transported through the metric dictionary, is exactly the time-reversal pullback: lapse and spatial metric standing still, shift flipping sign, signature untouched. Gravitational time and CPT time are therefore not two entities needing a bridge; they are the ledger order read as coordinate and read as reversal. The blockage that deferred every frequency read for want of a time parameter is removed — the parameter exists and is derived. What remains unconstructed is honest and small: a dynamical rate modulation of the flicker against the conformal factor — a redshift — which is now a construction problem inside derived time, not a missing declaration. And the arrow stands: the reversal is a mirror on records; the advance has no inverse.
+
+---
+
+---
+
+### FT.160 — The 3+1 completion: adjudication and scope
+
+**Thm.**
+$$(1)\quad\textbf{the content summary:}\qquad\text{the}\ 3{+}1\ \text{asymmetry is derived structure at three loci of one graded pair algebra}\ [\mathrm{FT.156}:\ \text{the signature datum}\ (-,+,+,+)\ \text{at the register}\ [\mathrm{A3}]\ \text{and the metric}\ [\mathrm{CT1.12}];\ \text{the}\ 7/3\ T\text{-split}\ =(1;6;3)\ \text{component split};\ \text{reversal transport};\ \text{inner triad symmetry};\ \text{strict forwardness}];$$
+$$\text{its chiral read}\ [\mathrm{FT.157}:\ \text{the weak block}=\text{the shift block};\ \text{the spatial branch}\ (\vee^2,\ \text{Casimir}\ 2)\ \text{weak-active},\ \text{the temporal branch}\ (\wedge^2,\ \text{Casimir}\ 0)\ \text{weak-blind};\ \text{the selectivity}\ =\ \text{the}\ 3{+}1\ \text{asymmetry at the state locus}];$$
+$$\text{the spatial provenance of the channel structure}\ [\mathrm{FT.158}:\ C_3=\text{the weak rotation of the triad};\ \delta_\ell=\tfrac29=\tfrac{3-1}{3\cdot3};\ \text{the Koide-form spectrum forced};\ \mathrm{FT.89}\text{'s classification clause does not stand; its bars stand}];$$
+$$\text{the emergent-time identity}\ [\mathrm{FT.159}:\ \text{gravitational time}=\text{CPT time}=\text{the ledger order};\ \text{the item}\ 21(\mathrm b)\ \text{blockage removed; the rate-modulation residue restated}];$$
+$$(2)\quad\textbf{the adjudication table:}$$
+$$\begin{array}{c|c|c}\text{content} & \text{tag} & \text{status}\\ \hline\text{one signature datum}\ (-,+,+,+)\ \text{at two loci} & \mathrm{FT.156}(1) & \text{Derived}\ (\mathrm{A3}\circ\mathrm{CT1.12};\ \text{machine}\ T\text{-table})\\ 7/3\ T\text{-split}\ =(1;6;3)\ \text{dictionary split};\ S\text{-odd metric-blind} & \mathrm{FT.156}(2) & \text{Derived}\ (\mathrm{CT1.1}/\mathrm{CT1.2}/\mathrm{CT1.12})\\ \text{reversal transport};\ \operatorname{sig}\ \text{invariance} & \mathrm{FT.156}(3) & \text{Derived}\ (\text{exact rational inertia})\\ S_3\ \text{inner on the triad};\ \text{weak-generated rotations} & \mathrm{FT.156}(4),\ \mathrm{FT.158}(1) & \text{Derived}\ (\text{machine conjugation tables})\\ \text{strict forwardness};\ \neg\exists\ \text{temporal advance inverse} & \mathrm{FT.156}(5) & \text{Derived}\ (\mathrm{A6}\circ\mathrm{FT.144}\ \text{re-run})\\ \text{manifold structure}\ =\ \text{chiral structure} & \mathrm{FT.156}(6) & \text{Derived}\ (\text{three loci, locus discipline})\\ \text{weak}\ =\ \text{shift block};\ \text{the spatial force} & \mathrm{FT.157}(1)\text{–}(2) & \text{Derived}\\ \text{branch selectivity}\ =\ 3{+}1\ \text{at the state locus} & \mathrm{FT.157}(3),\ (5) & \text{Derived}\ (\mathrm{FT.101}\ \text{re-derived})\\ \text{carrier-side gradings distinct};\ \text{species rule absent} & \mathrm{FT.157}(4) & \text{Open}\ (\text{deficit}\ 1',\ \text{Q1}';\ \text{input added})\\ C_3\ \text{weak-generated};\ \delta=\tfrac{3-1}{3\cdot3} & \mathrm{FT.158}(1)\text{–}(3) & \text{Derived}\\ \text{Koide-form spectrum forced} & \mathrm{FT.158}(4) & \text{Derived}\ (\mathrm{FT.113}\ \text{re-derived})\\ \mathrm{FT.89}(2\mathrm d)/(5)\ \text{classification} & \mathrm{FT.158}(5) & \textbf{Superseded}\ (\text{bars standing})\\ \text{gravitational time}\ =\ \text{CPT time}\ =\ \text{ledger order} & \mathrm{FT.159}(1)\text{–}(3) & \text{Derived}\ (\mathrm{D1.8}\ \text{read with}\ \mathrm{CT2.6}/\mathrm{CT2.8})\\ \text{item}\ 21(\mathrm b)\ \text{``no emergent time'' blockage} & \mathrm{FT.159}(4) & \textbf{Removed}\ (\text{residue restated})\\ \text{rate modulation (redshifted flicker rate)} & \mathrm{FT.159}(4) & \text{Unconstructed}\ (\neg\text{a time declaration})\\ \text{species identification} & — & \neg\text{Derived}\ (\text{barred}:\ \mathrm{P1},\ \mathrm{P5})\end{array}$$
+$$(3)\quad\textbf{the ledger rows:}\qquad\text{the manifold/spacetime-structure question:}\ \textbf{CLOSED}\ [\mathrm{FT.156}\text{–}\mathrm{FT.157}];\qquad\text{the Koide-form justification question:}\ \textbf{CLOSED}\ [\mathrm{FT.158}];$$
+$$\text{the weak-coupling selectivity question:}\ \textbf{CLOSED}\ [\mathrm{FT.157}];\qquad\text{the emergent-time blockage}:\ \textbf{REMOVED}\ [\mathrm{FT.159}];$$
+$$\text{open, unchanged:}\quad\text{the relating equation}\;\qquad\text{the assignment rule}\;\qquad\text{the generation selection}\ (\text{item}\ 21(\mathrm d)/\text{item}\ 12);\qquad\text{the frame-section residue}\ (\text{item}\ 21(\mathrm i));$$
+$$\text{the carrier-time coupling for the frequency read}\ [\mathrm{FT.131}(3)\ —\ \text{poseable in derived time}];\qquad\text{the rate-modulation construction}\ [\mathrm{FT.159}(4)];$$
+$$(4)\quad\textbf{the scope bars:}\qquad\text{no particle identification}\ [\mathrm{P1},\ \mathrm{P5}];\qquad\text{no external data}\ ([\text{EXT}]\ \text{enters no clause of this tier — this standing-rule record is its sole marker});$$
+$$\text{all topology and branch labels are internal bookkeeping};\qquad\text{no H-sector interpretation enters any theorem statement};\qquad\text{amplitude}\ne\text{mass};\qquad\text{rung}\ne\text{scale};$$
+$$\text{no new declaration issues: imports are confined to the frozen derived tags of Parts 1–3};\qquad\text{the interface clauses touched carry their frozen provenance}\ [\mathrm{Def\text{-}H.41}\ \text{cited as FT.110's arena provenance and imported nowhere};\ \mathrm{Def\text{-}H.33}/\mathrm{Def\text{-}H.34}/\mathrm{Def\text{-}H.43}\ \text{enter only inside the re-cited frozen clauses FT.126/FT.129/FT.131/FT.144}];$$
+$$\text{no free parameter is added}\ (\text{one scale}\ \mathfrak h\ [\mathrm{P1}];\ \text{the channel scales remain P4-class}\ [\text{Cal-F}]);\qquad\text{completeness: the tier adds no new dimension to any census — the counts are CT1.1's}\ (7,3,3,3)\ \text{and CT1.12's}\ 10\ \text{read at new loci}.$$
+
+**Req.** FT.156, FT.157, FT.158, FT.159 (this tier); FT.125(4), FT.131(3), FT.141(6), FT.145(6) (Tiers F.39–F.42); CT1.1 (Part 1); CT1.12 (Part 2); Cal-F; items 7/12/20/21, Q1$'$; P1, P4, P5 (Parts 1–2); exact integer and rational arithmetic; the machine sections §A–§D green [math; machine: `checks/verify_H_3p1_chiral_asymmetry.py` §E].
+
+**Pf.**
+$$
+(1):\ \text{assembly of FT.156–FT.159's adjudicated rows}\ [\text{machine: §A–§D green}]
+$$
+$$
+(2):\ \text{each row is the adjudication of its own tag}\ [\mathrm{FT.156}\ (\S\mathrm A),\ \mathrm{FT.157}\ (\S\mathrm B),\ \mathrm{FT.158}\ (\S\mathrm C),\ \mathrm{FT.159}\ (\S\mathrm D)];\qquad\text{the open rows cite their frozen tags unmodified}\ [\mathrm{FT.125}(4),\ \mathrm{FT.141}(6),\ \mathrm{FT.131}(3)]
+$$
+$$
+(3):\ \text{ledger pointers}\ [\text{item}\ 21(\mathrm b)\ \text{bracket};\ \text{item}\ 20\ \text{bracket};\ \text{Q-table rows}]\ —\ \text{HistLog}\ \S\mathrm{II}\ \text{carries the resolution text}
+$$
+$$
+(4):\ \text{standing-rule record}\ [\mathrm{FT.145}(6)\ \text{pattern}];\qquad\text{import scan: the Req lines of this tier name no interface definition as an import; Def-H.41 appears in FT.158's provenance row alone}\ [\text{machine scan of this tier's text}].\ \blacksquare
+$$
+
+**Phys.** The tier closes as a sector: one signature datum declared at the register and derived at the metric; one dictionary turning the $7/3$ grading into lapse, spatial metric, and shift; one rotation algebra — the weak — performing every symmetry of the spatial triad from inside; one arrow of time with no inverse, whose formal mirror is exactly the CPT reversal; one channel angle that is a ratio of spatial counts; and one identity removing the last objection that the corpus had no time. What stays open stays open on the record: the rule marrying gradings to species, the relating equation between mass reads, the selection of three, and the dynamical redshift of the flicker — each now with its prerequisites derived and its locus named.
+
+---
+
+---

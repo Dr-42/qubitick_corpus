@@ -1,7 +1,11 @@
-# `era2/level5_atomic/` — Level 5 · the **Atomic** era · Tiers AT.1–AT.9
+# `era2/level5_atomic/` — Level 5 · the **Atomic** era · Tiers AT.1–AT.12 · **CLOSED**
 
-**Status: discovery-phase working tier. NOT frozen canon.** Nothing here is adopted, no
-declaration issues, §Cal-AT is empty, and no clause of Parts 1–4 is modified or retracted.
+**Status: CLOSED at AT.63 (Tier AT.12, session 8).** The level's record is closed: twelve tiers,
+63 tags, no structural open row at closure. **NOT promoted into the frozen canon** — promotion is
+an Era-2-closure act (after Levels 6–7) [AT.63(4)]. Nothing was adopted, no declaration issued,
+§Cal-AT stayed empty through closure, and no clause of Parts 1–4 was modified or retracted. The
+tier documents are the closed record: no further edits; future content opens new files with
+explicit supersession rows.
 
 | path | content |
 |---|---|
@@ -12,13 +16,16 @@ declaration issues, §Cal-AT is empty, and no clause of Parts 1–4 is modified 
 | `tiers/Part5_Atomic_era_TierAT7.md` | **Tier AT.7** — AT.41–AT.45: the hydrogen spine — the EM sealing grammar, the dynamics of Q, the binding-scaling no-go, the two-body resolvent, and the tier's closure row |
 | `tiers/Part5_Atomic_era_TierAT8.md` | **Tier AT.8** — AT.46–AT.49: the spin spine — the duality tool and the polygon spin holonomy, the frame section on the extended carrier, the ledger-native moment coupling, and the tier's closure row |
 | `tiers/Part5_Atomic_era_TierAT9.md` | **Tier AT.9** — AT.50–AT.55: the locked sector (dim 𝒦_{n≥4}=26, the third branch), the electroweak curl mechanism, **the dressed vertex correction** (the discrete Ward identity δ=0, the winding revival ladder, the measure-side anomalous read), and the tier's closure row |
+| `tiers/Part5_Atomic_era_TierAT10.md` | **Tier AT.10** — AT.56–AT.58: **the Pauli term as a ledger object** — the σ^{μν} bivector census on the native frame (two channels, no third, the Hodge row, the ray-wise so(4) split), the slot-free Weitzenböck identity (the Pauli term born from the Dirac skeleton's square at tree coefficient 1), the transport-curvature census (drag fiber-abelian; EW.32 Gaussian-integer), the structural F₁/F₂ dictionary, and the tier's closure row |
+| `tiers/Part5_Atomic_era_TierAT11.md` | **Tier AT.11** — AT.59–AT.62: **the resolution tier** — the metric dictionary at every carrier level (AT-O11 CLOSED: the conjugacy theorem, pair bits, exchange-fed kernel), the global Dirac-type operator on the tetrahedral floor (AT-O28 CLOSED AS CONSTRUCTION: the chirality dichotomy of the lift, the dissolved base frame, the discovered vielbein), the fine-splitting grammar and the exhaustive seat census (AT-O31 resolved as grammar; AT-O6 CLOSED outright), and the tier's closure row |
+| `tiers/Part5_Atomic_era_TierAT12.md` | **Tier AT.12 — THE CLOSURE TIER** — AT.63: the consolidated level ledger (twelve tiers, AT.1–AT.62), the closure adjudication, the final open ledger (no structural row), the declaration census (zero issued), the two-halves repository reorganization, and the machine state at closure |
 | `tiers/Part5_Atomic_era_TierA1.md`, `TierA2.md` | the two early session-1 working drafts, kept for provenance (superseded by the TierAT1 sequence) |
 | `checks/run_all_era2.py` | the level's runner — gates first, exit 0 iff all green |
 | `checks/check_era2_format.py` | the format + citation gate: canon `math_balance` rules ported, per-block Thm/Req/Pf/Phys anatomy, and every cited tag attested against the canon registry (reads `../tiers/` and `../../../canon/`) |
 | `checks/qexact.py` | shared exact-arithmetic core (see below) |
 | `checks/duality.py` | shared View1↔View2 duality core — the dictionary rules (D1)–(D6): sector→ADM (CT1.12≡BM.34(1)), the AT.5(1) closed form, the flat/drag split, holonomy reads, exact polygons (`Quad(√d)`), the H_ω doublet over `Gauss(i)` |
-| the 33 `checks/*.py` checkers | the machine verification (31 content checkers + the 2 validation gates); each cites the canon tags it reproduces or extends |
-| `discovery/*.md` | the free-form session records: session 1–2 (`MAGNETISM_ROUTE.md` … `ONE_FORCE_SPLIT.md`, `CENSUS_L5.md`, `COHERENCE_CENSUS.md`, `M1_SHIFT.md`), sessions 2–3 (`EM_SEAL_GRAMMAR` … `TWO_BODY_RESOLVENT`, `SPIN_HOLONOMY`, `FRAME_SECTION`, `MOMENT_COUPLING` — cited by the tiers but never committed; they lived in the session workspaces), session 4 (`RUNG4_EW_CURL.md`), session 5 (`VERTEX_CORRECTION.md`) |
+| the 37 `checks/*.py` checkers | the machine verification (35 content checkers + the 2 validation gates); each cites the canon tags it reproduces or extends |
+| `discovery/*.md` | the free-form session records: session 1–2 (`MAGNETISM_ROUTE.md` … `ONE_FORCE_SPLIT.md`, `CENSUS_L5.md`, `COHERENCE_CENSUS.md`, `M1_SHIFT.md`), sessions 2–3 (`EM_SEAL_GRAMMAR` … `TWO_BODY_RESOLVENT`, `SPIN_HOLONOMY`, `FRAME_SECTION`, `MOMENT_COUPLING` — cited by the tiers but never committed; they lived in the session workspaces), session 4 (`RUNG4_EW_CURL.md`), session 5 (`VERTEX_CORRECTION.md`), session 6 (`PAULI_TERM.md`), session 7 (`RESOLUTION_TIER.md`) |
 | `discovery/logs/` | historical run outputs (`*_OUTPUT.txt`) |
 | `discovery/legacy_checks/` | session-1 checker copies (provenance; NOT live — see its README) |
 | `SESSION_SUMMARY_AND_REVIEW.md` | session ledger, the model's error profile, and interaction review notes |
@@ -33,12 +40,14 @@ session-5 restructure cite the old loci; the files moved, the citations stay as 
 | `canon/era2/RUNG4_EW_CURL.md` | `era2/level5_atomic/discovery/RUNG4_EW_CURL.md` |
 | `era2/<session doc>.md` | `era2/level5_atomic/discovery/<session doc>.md` |
 | `qubitick_corpus/` (the nested published copy) | `archive/zenodo_v1.0_package/` |
+| `canon/` (the v1.0 canon tree; cited historically) | `era1/canon/` (moved at the Level-5 closure, AT.63(5)) |
+| `verification/` (the frozen 80-checker suite) | `era1/verification/` (moved with its canon, sibling-locked by symlinks) |
 
 ## Run
 
 ```bash
-cd era2/level5_atomic/checks && python3 run_all_era2.py     # -> 33 checkers, 587 exact markers, 0 failures, exit 0
-cd era2/level5_atomic/checks && python3 check_era2_format.py # -> 11 tier documents PASS, 0 violations
+cd era2/level5_atomic/checks && python3 run_all_era2.py     # -> 37 checkers, 643 exact markers, 0 failures, exit 0
+cd era2/level5_atomic/checks && python3 check_era2_format.py # -> 14 tier documents PASS, 0 violations
 ```
 
 **Tier index.** AT.1–AT.8 (Tier AT.1) the coherence census and the split · AT.9–AT.15 (AT.2) the
@@ -50,7 +59,12 @@ the binding-scaling no-go, the two-body resolvent · **AT.45 (AT.7) the closure 
 (AT.8) the spin spine: the duality tool and the polygon holonomy, the frame section, the moment
 coupling · **AT.49 (AT.8) the closure row** · AT.50–AT.51 (AT.9) the locked sector and the
 electroweak curl · AT.52–AT.54 (AT.9) the dressed vertex: the revival ladder, the Ward identity,
-the anomalous read · **AT.55 (AT.9) the closure row**.
+the anomalous read · **AT.55 (AT.9) the closure row** · AT.56–AT.57 (AT.10) the Pauli anatomy:
+the bivector census and the two-channel decomposition, the Weitzenböck birth and the transport
+curvature · **AT.58 (AT.10) the closure row** · AT.59–AT.61 (AT.11) the resolutions: the n-fold
+metric dictionary, the global Dirac operator on K₄, the fine-splitting grammar and the moment
+sector's exhaustive seat census · **AT.62 (AT.11) the closure row** · **AT.63 (AT.12) THE LEVEL
+CLOSURE**.
 
 **AT.40 — the gap-closure pass: eight more rows closed.**
 - **AT-O19**: the five extrema at `ε_q = ⅛` are **ONE equation** — `d/dp[p(1−p)] = 1−2p = 0` and
@@ -228,21 +242,161 @@ Def-H.43] in the FULLY DRESSED topology-blind ensemble and isolate δ := ⟨M̂�
   Quarantine [P5] untouched: a_e, a_μ, a_μ/a_e≈1.0054, the Lamb shift, 2S–2P — scoring targets,
   ¬inputs, ¬compared.
 
+**Session 6 — CONSOLIDATED as Tier AT.10 (AT.56–AT.58): the Pauli term as a ledger object.**
+`pauli_term.py` (**23/23 exact**; discovery record `discovery/PAULI_TERM.md`). The directive:
+*"Please continue on the Pauli things."* The threads executed: AT.48(3)'s decomposition theorem
+(stated, never mechanized), AT-O28's slot-free algebraic core, and `frame_section.py`'s residue
+(iv). Results, in order of load:
+- **THE BIVECTOR CENSUS (AT.56): the six σ^{μν} = (i/2)[γ_μ,γ_ν] on the native frame F₀ are
+  signed Pauli products** — six distinct directions of the 15, species 3 mixed + 2 off-diagonal
+  + 1 diagonal — and split into the exact channel identities **σ^{ab} = −2ε_{abc}W_c^ext** (the
+  magnetic bivectors ARE the gauge block of the extended carrier, index-carrying exactly as
+  AT.47(2)'s maximality theorem demands) and **σ^{a4} = σ_a⊗κ̂ = (σ_a⊗I₂)γ_{F₀}** (the electric
+  channel = the internal Pauli × the shortlist pseudoscalar = M̂'s matrix). The bridge
+  σ^{a4} = −ε_{abc}σ^{bc}γ_{F₀} makes the two channels the two grades of ONE Cl(3,0); the
+  generated algebra is exactly 8-dimensional — **the Pauli term adds ZERO new operators**.
+- **THE DECOMPOSITION MECHANIZED, NO THIRD CHANNEL (AT.56): σ^{μν}F_{μν} = −4𝔅_c W_c^ext +
+  2𝔈_a(σ_a⊗κ̂)** as an exact matrix identity (basis + integer trials + additivity), with a
+  zero-component census in the other 9 Pauli directions, in I₄, and in I⊗κ̂ — the last is the
+  **grade separation**: M̂ is never a bivector contraction, it is the electric channel's grade-4
+  partner (AT-O29's vector no-go, now with its exact grade reason). Adversarial witnesses keep
+  the census non-vacuous.
+- **THE HODGE ROW (AT.56, new): σ^{μν}γ_{F₀} = −(*σ)^{μν}** (ε₁₂₃₄=+1, the frame's Euclidean
+  read), hence **(σ^{μν}F_{μν})∘M̂ = q·σ^{μν}(*F)_{μν}: the boundary moment operator IS q × the
+  Hodge rotation** — the channel exchanger electric↔magnetic. Dictionary partner of the smooth
+  EM duality rotation, ¬equal [BM.134(5)].
+- **THE RAY-WISE so(4) SPLIT (AT.56, new): 𝖲^±ᵢ = ½(σ^{i4} ± *σ^{i4}) = ∓(σᵢ⊗I₂)P_±** — the two
+  su(2) copies of the Pauli tensor live on the TWO RAYS of the orientation doublet [Def-H.33;
+  FT.93(2)'s projectors], commuting because P₊P₋=0; [𝖲^±,𝖲^±] = ∓2iε𝖲^± exact. The born term
+  acts ray-wise (grade-even); M̂ flips rays [AT.48(4)] — exact grade-conjugates.
+- **THE WEITZENBÖCK IDENTITY (AT.57), SLOT-FREE AND FULLY SYMBOLIC:** on 𝒟 = Σγ_a⊗T_a with the
+  four transports as INDEPENDENT INDETERMINATES (16 variables; 416 monomials cancelled):
+  **𝒟² = I⊗(ΣT_a²) − (i/2)σ^{μν}⊗𝔉_{μν}**, 𝔉_{ab}:=[T_a,T_b] — the Pauli term born from the
+  skeleton's square **at tree coefficient exactly 1, for every slot choice**: AT-O28's two slots
+  block the evaluation, never the algebra. The coefficient-is-a-theorem witness: all T equal ⟹
+  𝔉≡0 ∧ 𝒟² = (Σγ)²⊗T² — **the algebraic root of AT.48(5i)'s flagged tree parallel**
+  (identification with any measured g stays QUARANTINED [P5]). The born term re-splits
+  symbolically into 2iW_c^ext⊗𝔅_c − i(σ_a⊗κ̂)⊗𝔈_a — curvature feeds exactly the two channels.
+- **THE DRAG CONNECTION IS FIBER-ABELIAN (AT.57): diag(i^Θ,i^{−Θ}) = U(πΘ/2, ẑ)** — the drag
+  exponential IS the ẑ-axis EW.32 member; all drag transports commute ⟹ **the drag NEVER births
+  a Pauli term**; its whole contribution sits in ΣT_a² — the winding/statistics side [AT.46(6)].
+  *Frame-dragging changes how a polygon exchanges, not what moment it couples.*
+- **THE EW.32 CURVATURE (AT.57): [U_a,U_b] = −2i sinφ_a sinφ_b((n̂_a×n̂_b)·σ⃗)** — 576 exact
+  identities; on the fourth-root lattice: 12 transports, 66 pairs, **exactly 12 nonzero
+  curvatures, every value ±2iσ_k — Gaussian integers**: NO CONTINUOUS LOCUS at the operator
+  layer, the connection-side confirmation of AT.54(6). Two ℂ⁸ integer witnesses: a PURE born
+  term (Laplacian part exactly zero) and a both-channels-live square.
+- **THE STRUCTURAL F₁/F₂ DICTIONARY (AT.58):** F₁-type seat = the boundary channel (flicker-
+  immune, Ward-protected δ=0 [AT.53(3)]); F₂-type seat = the measure dressing (AT.54's
+  rationals); operator-layer seat = the curvature-born gauge channel (Gaussian-integer valued,
+  slot-dependent in evaluation only). Values stay behind (M1′)–(M3′) [AT.54(6)] — nothing
+  converted, nothing compared [P5].
+- **THE ADJUDICATION:** AT.48(3)'s decomposition theorem **MECHANIZED AND COMPLETED**;
+  `frame_section`'s residue (iv) **SUPERSEDED IN SCOPE** (the slots were needed for the
+  EVALUATION, never the algebra); **AT-O28 ADVANCED, ¬CLOSED** (the slot-free core constructed;
+  the global operator still needs the two marked slots + the P4 transport profile); BM.125(4)'s
+  three grounds re-passed; BM.126(1)'s {ε_q} alphabet untouched; the other Pauli (exclusion,
+  dim∧³(ℂ²)=0 [BM.128(5)]) re-certified and standing; **new AT-O31** — the fine-structure-type
+  read of the hydrogen connector: seats identified (the ray-wise 𝖲^± su(2), the Hodge rotation,
+  the measure rationals), blocked by (M1′)–(M3′) + the AT-O28 slots, blocking nothing.
+  Declarations issued: none.
+
+**Session 7 — CONSOLIDATED as Tier AT.11 (AT.59–AT.62): THE RESOLUTION TIER.** The directive:
+*"Please proceed to resolve AT-O11, 28, 06, and 31 for the next tier."* All four resolved.
+Three new checkers: `dict_nfolds.py` (**13/13**), `global_dirac.py` (**12/12**),
+`fine_structure.py` (**8/8**); discovery record `discovery/RESOLUTION_TIER.md`.
+- **AT-O11 CLOSED (AT.59) — the conjugacy theorem.** The squeeze (isotypic projectors by exact
+  Lagrange interpolation in S²_tot; Σmⱼ² = the Catalans 2/5/14 = the permutation-span ranks):
+  **the commutant IS the permutation span** — invariant reads = exchange reads. The embedding
+  census (160 tests, AT.12(1)'s own criterion): **exactly Σ^(ij) (volume/H) passes at every n,
+  every pair** (+ E₀ = trace-fixed identity); W-embeddings fail because Wᵢ^(12) = Sᵢ *is* the
+  gauge generator, G as spin-2, J± as adjoint — **the AT.15(5) "none" rows are theorems at every
+  level; conformal/shear/shift NEVER acquire conjugates**. Positive supply: pair bits
+  b_(ij) = ¾+¼⟨Σ_(ij)⟩ (Π_𝒭^(ij) idempotent, trace 3·2^{n−2}), **the Casimir identity
+  ΣΣ_(ij) = 2S²_tot − (3n/2)I** — the total volume read IS the isotypic-weight read; ranks
+  r₂,r₃,r₄ = 1,3,6, central intersection exactly the Casimir line. Accounting: 13 = 6 volume +
+  7 metric-blind exchange coherences — **the "13 vs 26" framing corrected on the record as a
+  cross-currency count** [BM.83]; *the higher carriers see more of each other, not more of the
+  metric*. Scope: n=3 accessible; n=4 formal [CT0.5/6/11; AT.50(5)]. BM.131(6)'s Π_k shown to
+  BE the top isotypic projector (matrix equality), its "k invariants" suggestion stays superseded
+  by AT.40(5).
+- **AT-O28 CLOSED AS CONSTRUCTION (AT.60) — the global Dirac-type operator is built.**
+  𝒟_floor = Σ_edges(E_vw⊗γ_{a(e)}(F_e)⊗T_e + h.c.) on ℂ⁴_v⊗ℋ_ext⊗ℂ²_T (32-dim), 72+ operators
+  censured: Hermitian by the reverse-arc-dagger convention; sections rebuilt for both marked-lift
+  readings (seed-only: 6 fixed points → constant, 144 checks; diagonal: 2 orbits × 3, 12 signed
+  directions over the arcs). **THE CHIRALITY DICHOTOMY: the grading nullity — a gauge invariant —
+  is exactly 1 (seed-only: chiral-odd, ±-paired spectrum, kernel reads; nullities 0 on the four
+  witness profiles) vs exactly 0 (diagonal: no grading, no index): the lift declaration DECIDES
+  WHETHER THE GLOBAL OPERATOR HAS AN INDEX** — Open Gaps 19's exact physical content, derived.
+  **Slot (b) DISSOLVED:** the S-transform Φ = Ad(I₂⊗S) (DERIVED) is an automorphism (105
+  identities) with ONE orbit of 3 frames × the sign involution = the 6-menu, and
+  (V⊗I)𝒟(F,T)(V⁻¹⊗I) = 𝒟(ΦF,T) exactly — **the base-frame slot is a derived gauge** (first slot
+  ever retired by construction). **THE GLOBAL WEITZENBÖCK: 𝒟²_floor = 3·I₃₂ + triangle blocks
+  exactly** — the diagonal is the transport-blind degree Laplacian; ALL curvature lives on the
+  2-simplices; triangle holonomies: integer windings (drag, Θ∈{±1,±3}) and Gaussian integers
+  (EW lattice). **NEW SLOT named: the discrete vielbein a(e)** — Rot transitive on the 6 edges ⟹
+  no non-constant equivariant labeling exists (4⁶ = 4096 enumerated); derived rows verified
+  labeling-independent (3 witnesses). Residue: the lift declaration + vielbein + P4 profile +
+  **new AT-O32** (per-floor extension census, blocking nothing).
+- **AT-O31 RESOLVED AS GRAMMAR + AT-O6 CLOSED OUTRIGHT (AT.61).** The Casimir per ray:
+  Σᵢ(𝖲^±ᵢ)² = 3P_± exactly (integer). **THE SPLITTING LAW: the electric channel is
+  ray-ANTISYMMETRIC (ω̂-conjugate negatives), the magnetic ray-SYMMETRIC — the born Pauli term
+  splits the rays oppositely and shifts them commonly: the ledger's j = l±½-type doublet
+  grammar**, flagged ¬identified [P5]; witness block-diagonal + conjugation laws exact; the
+  lattice splitting census: 12 live feeds, every splitting a Gaussian integer × 2 — no continuous
+  locus. The composed fine read = (unmoved position [AT.44(5)/AT.54(3)]) × (phases i^{Θ±}:
+  witness (18,24) → (−1,+1), opposite statistics [AT.46(6)]) × (splittings) × (intensities:
+  theta-cell Z^amp/Z^norm = **4/9 uniformly — a q-blind attenuation**); values behind
+  (M1′)–(M3′). **THE SEAT CENSUS (AT-O6): the contraction image = exactly 6 directions; I₄
+  spectrally inert (splitting set {0,±2} c-independent); four seats — boundary M̂, dressing
+  (−1)^ℵ, shift-fed W-functional, curvature-born e-channel — each constructed, σ_c⊗I₂ proved
+  seatless, every alternative excluded with its ground: NO UNNAMED DIRECTION LEFT.**
+- **The open ledger now contains NO structural row**: two by-nature/by-design (AT-O2/O3), one
+  convention (AT-O7), one calibration-gated (AT-O13), two closure-phase declarations
+  (AT-O26/O27), one proved absence (AT-O29), two censuses (AT-O30/O32). Declarations issued:
+  none; marked rows: +1 (the vielbein), −1 (the base frame, dissolved).
+
 **The sharpened open list, in priority order:**
-1. **(AT-O28)** the global Dirac-type operator — **two enumerated slots away** (AT.47/AT.48):
-   the marked lift (Open Gaps 19) + one base frame per floor from the 6-frame shortlist; the
-   skeleton's chiral-odd graded shape is derived, and its spatial gammas are gauge-carrying by the
-   maximality theorem.
-2. **(AT-O11)** extend CT1.12's dictionary past the pair arena to `n=4` — **now fully decidable**:
-   AT.40 sharpened it to "which invariant is conjugate to which coordinate … once `dim 𝒦_{n≥4}` is
-   known", and session 4 made it known (**26**); 13 free invariants at n=4 against the
-   26-dimensional mask space — the conjugacy question is well-posed.
-3. **(AT-O7)** land the BM.140(6) pin and the re-citation-pinning convention.
+**Session 8 — CONSOLIDATED as Tier AT.12 (AT.63): THE CLOSURE OF LEVEL 5.** The directive:
+*"Please consolidate this as closure of Level 5. Split the canon in two clear halves, era 1 and
+era 2…"* Two acts, both recorded in the closure tag:
+- **THE CLOSURE TAG (AT.63):** the consolidated ledger of all twelve tiers (AT.1–AT.62, one
+  spine: split → bit → censor → CP tensor → boundary invariance → hydrogen spine → spin spine →
+  locked sector/curl/dressed vertex → Pauli anatomy → resolutions); the final open ledger —
+  **no structural row**, only natures/designs, one convention, the closure-phase declarations
+  (the lift — which decides the index, AT.60(4); the vielbein; the P4 profile; the read rules
+  (M1′)–(M3′); ε_q; (ϰ,β); e₀) and two blocking-nothing censuses (AT-O30, AT-O32); the
+  declaration census across the whole level: **ZERO issued, §Cal-AT empty, the P5 firewall held
+  at all twelve tiers**; the marked-row final census (+1 added at AT.60, −1 retired by
+  dissolution); promotion into the frozen canon's Summary/index/tags.json deliberately NOT taken
+  (an Era-2-closure act after Levels 6–7 [AT.63(4)]).
+- **THE TWO-HALVES REORGANIZATION (AT.63(5)):** `canon/` → `era1/canon/` and `verification/` →
+  `era1/verification/` (moved together — the suite's canon documents are symlinks into
+  `../canon/`); `era2/` unchanged in geometry; root keeps README/licences/AI_POLICY, the PDF
+  pipeline (`source/` → `docs/`), the frozen `working_markdowns/` archive (¬moved, ¬modified)
+  and `archive/zenodo_v1.0_package/`; new `era1/README.md`. **Live path fixes: exactly four
+  files** (`source/pipeline/qparse.py`, `qpipeline.py`, `source/Makefile`,
+  `checks/check_era2_format.py`); **no frozen file's content changed**. Post-move verification:
+  era-2 gate **14 docs PASS / 63 AT-blocks**, era-2 suite **37 checkers / 643 markers / 0
+  failures**, era-1 suite **80/80 ALL GREEN**, pipeline registry read re-verified (623 tags from
+  `era1/canon/index/tags.json`). Summary generation stays HERE-relative in `era1/canon/`
+  (`make_summary.py`); PDF generation stays at the root pipeline.
+
+**No structural row remains open after session 7.** What stands between Level 5 and contact is
+declaration/calibration species, in the Architect's order of use:
+1. **THE LIFT DECLARATION** (Def-H.37(2)/Open Gaps 19) — now with exact physical content: it
+   decides whether the global operator has an index (AT.60(4)'s nullity dichotomy 1 vs 0); with
+   it: the vielbein choice (4096 on K₄) and the P4 transport profile `(ℓ_c, 𝐜)`.
+2. **(AT-O26)** the level-price read rule of AT.44(8iv) — the gate of (M1′); a closure-phase act
+   (BM.30(5) pattern) if ever adopted.
+3. **(AT-O27)** `ε_q`'s value — ⅛ distinguished five ways, **adoption** ¬issued [P5];
+   calibration-era content. Together with (M2′)/(M3′) it gates every value conversion
+   (fine grammar, continuous anomaly).
 4. **(AT-O13)** Kerr, once **(AT-O3)** issues `(ϰ,β)`.
-5. **(AT-O26)** the level-price read rule of AT.44(8iv) — if ever adopted, a logged declaration
-   (BM.30(5) pattern); a closure-phase act.
-6. **(AT-O27)** `ε_q`'s value — ⅛ is derived as the unique distinguished point (now four ways),
-   its **adoption** is ¬issued [P5]; calibration-era content.
+5. **(AT-O7)** land the BM.140(6) pin and the re-citation-pinning convention.
+6. **(AT-O30)** the B≥5 winding-resolved cover census; **(AT-O32)** the per-floor extension
+   census of 𝒟_floor (the other four platonic floors + the polygon ladder; recipe derived
+   [AT.60(10)]) — both blocking nothing.
 **By nature / by design, not gaps:** (AT-O2) the slicing choice is gauge; (AT-O3) `(ϰ,β)` is
 calibration; **(AT-O29)** a native vector EM read — proved absent (EM is a stack aspect with zero
 metric coordinates, AT.48(3)); reopening needs a new derived read-species. **(AT-O30)** the B≥5
@@ -264,7 +418,23 @@ AT.53), the dressing sign sector-locked (the master parity identity), the full a
 censused measure-side in exact rationals (AT.54); the continuous anomaly is a level-local no-go
 with its three missing definitions named (M1′)–(M3′) [AT.54(6)]; AT-O11 verified NON-BLOCKING for
 this calculation (zero dictionary calls).
-the continuous anomaly number is calibration-species by P5 design. **Closed earlier:** AT-O1, O7 (checker
+the continuous anomaly number is calibration-species by P5 design.
+**Advanced in session 6 (Tier AT.10):** (AT-O28) the slot-free algebraic core of the global
+Dirac-type operator is CONSTRUCTED — the Weitzenböck identity with the born Pauli term at tree
+coefficient 1 (fully symbolic in the slots), the exact two-channel decomposition of σ^{μν}F_{μν}
+(AT.48(3) mechanized and completed, with the Hodge row and the ray-wise so(4) split), and the
+transport-curvature census (drag fiber-abelian; EW.32 Gaussian-integer on the fourth-root
+lattice); the global evaluation still needs the two marked slots + the P4 profile. New row
+(AT-O31): the fine-structure-type read of the hydrogen connector — seats identified, blocked by
+(M1′)–(M3′) + AT-O28, blocking nothing.
+**Closed in session 7 (Tier AT.11):** (AT-O11) **CLOSED** — the conjugacy table complete at every
+level (image = volume alone; genus = the r_n = 1,3,6 pair bits; kernel = exchange coherences; the
+nine "none" rows promoted to theorems). (AT-O28) **CLOSED AS CONSTRUCTION** — 𝒟_floor built on K₄;
+base-frame slot dissolved as derived gauge; the lift proven physical (the index dichotomy); the
+vielbein slot discovered and named; residue = declarations + calibration + AT-O32. (AT-O31)
+**RESOLVED AS GRAMMAR** — the composed fine-splitting law derived and quantized; values behind
+(M1′)–(M3′). (AT-O6) **CLOSED OUTRIGHT** — the exhaustive seat census: four constructed seats, no
+unnamed direction left. New row (AT-O32): the per-floor extension census, blocking nothing. **Closed earlier:** AT-O1, O7 (checker
 written), O8, O9, O10, O12, O15, O16, O17, O18, O19, O20, O21, O22, O23, O23b, O24, O25.
 
 ## The arithmetic covenant
@@ -441,11 +611,11 @@ interval with `[d, d+10⁻ᵏ)` at the canon's own digit count — FT.119(4)'s "
 - **This is internal coherence plus exact arithmetic, not empirical validation.** `𝔥`, `e₀`,
   `ϰ`, `β` are unissued, and BM.140(5)/BM.83 prove `ρ_B` irreducibly calibration. "No structural
   gap remains in the magnetic sector" means *no gap given (S) and given calibration values*.
-- The folder is **not** wired into `verification/run_all.py`, and `index/`, `tags.json` and
+- The folder is **not** wired into `era1/verification/run_all.py`, and `index/`, `tags.json` and
   `Summary.md` have **not** been regenerated. Both are deliberate: regenerating would assert that
   AT.1–AT.55 are canon tags, and they are not yet. Promoting this tier means running the era-chain and
   citation-closure checkers against it, which is a closure-phase act — `check_era2_format.py` (F3)
-  is the citation-closure half, already run: **every cited token in all eleven Part 5 documents is
+  is the citation-closure half, already run: **every cited token in all fourteen Part 5 documents is
   attested** against the 640-tag canon registry.
 - **Tier AT.7's scope, stated plainly.** The lepton price `w_c` is *generation-blind* (one read for
   the species; the family splitting lives in the Gram currency and is ¬mixed in), it is a
@@ -466,3 +636,43 @@ interval with `[d, d+10⁻ᵏ)` at the canon's own digit count — FT.119(4)'s "
   [BM.111(6); FT.79(5); BM.30(5)] like their frozen B=4 cousins. The continuous anomaly's absence
   is a *level-local* no-go with named reopening definitions (M1′)–(M3′), following AT.43's
   pattern — not an eternal bar.
+- **Tier AT.10's scope, stated plainly.** The Weitzenböck identity is proved for the *skeleton*
+  𝒟 = Σγ_a⊗T_a on ℋ_ext⊗ℂ²_T — four transports on a two-dimensional transport factor, the
+  undeclared slots left as independent indeterminates. It is an algebraic identity of the frame
+  section's own objects, not a statement about a global operator on the emergent geometry: that
+  operator (AT-O28) still needs the marked lift, the base frame per floor, and the P4 transport
+  profile. The "tree coefficient 1" is the Clifford-normalized coefficient of the born term in
+  the square — its identification with any measured gyromagnetic ratio is quarantined behind the
+  unissued e₀ [P5; EM.25(7); Def-BM.3(7)], exactly like AT.48(5i)'s splitting-per-charge 2. The
+  Hodge row and the EM-duality "rotation" are internal Cl(4,0)-frame statements on the Euclidean
+  read [FT.93(1) note] — dictionary partners of chart-side objects, never identifications
+  [BM.134(5)]. The transport-curvature census runs on the two *constructed* families (the drag
+  exponential and the EW.32 profile family) at formal phases on the fourth-root lattice and the
+  Pythagorean pairs — no P4 value is issued anywhere. The F₁/F₂ dictionary assigns *seats*, not
+  numbers: the conversion rules (M1′)–(M3′) [AT.54(6)] remain undeclared, so no anomaly value
+  exists, is estimated, or is compared.
+- **Tier AT.11's scope, stated plainly.** The dictionary theorem (AT.59) is proved for the
+  carrier levels n = 2, 3, 4 — the conjugacy test is a commutant membership test on embedded
+  aspect generators, and the "never at any n" claim rests on the uniform group-theoretic reason
+  (W = the generator itself, G = spin-2, J± = adjoint, D+ = trace-fixed identity), verified
+  exhaustively at the three levels and general by the same embedding argument; n=4 is a FORMAL
+  table (channel-inadmissible rung [CT0.5/6/11]). The global operator (AT.60) is constructed on
+  the TETRAHEDRAL floor — the first arc-transitive floor — with the section machinery that
+  generalizes by recipe [AT.34(3)]; the other four platonic floors and the polygon ladder are
+  census work (AT-O32), not open math. Its Hermiticity uses the reverse-arc-dagger convention;
+  its chirality rows hold for the seed-only lift only — that IS the dichotomy, not a defect. The
+  vielbein is a new ENUMERATED datum, not an adopted one: no labeling is chosen or issued. The
+  fine grammar (AT.61) is a structural splitting law with quantized values; its identification
+  with any measured fine structure is barred [P5; Def-BM.3(7)] and its value conversion needs
+  (M1′)–(M3′). The AT-O6 seat census is exhaustive over the 8-dimensional Pauli algebra of
+  AT.56(7) — an exhaustiveness relative to the derived algebra, which the tier proves is the
+  whole operator content the Pauli term can carry.
+- **Level-5 closure scope, stated plainly.** AT.63 is an assembly tag: it consolidates, adjudicates
+  the record's status, and records the reorganization — it adds no mathematics. "Level 5 CLOSED"
+  means: every structural row the level opened is resolved to a derived answer or a named
+  declaration/calibration residue; it does NOT mean the declarations are issued (they are not —
+  the lift, the vielbein, the read rules, ε_q, (ϰ,β), e₀ all remain the Architect's/closure-era's
+  acts), does NOT mean promotion (the AT-tags are not frozen-canon tags; the era-2 Summary/index
+  generation is an Era-2-closure act), and does NOT mean contact (the standing box holds:
+  coherence is ¬contact, and no contact claim was made at any tier). Levels 6–7 open against this
+  closed record with the inheritance list of AT.63(9).
