@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 isotopic_family.py -- the 1p-kn isotopic family and the contraction-grammar phase transitions.
-Level 6, Tier ML.2 candidates (ML.6-ML.8).
+Level 6, Tier IT.2 candidates (IT.6-IT.8).
 
 DIRECTIVE (Architect): "Construct the 1p-kn Isotopic Family and the Contraction Grammar Phase
 Transitions ... the Architect predicts that at k=3 (1p3n, which has N=4 colour attachments) 'the
@@ -18,7 +18,7 @@ PREMISE AUDIT (verified against the frozen rows BEFORE construction; corrections
   * CORRECTION 1 (the attachment count): a nucleon is an epsilon-sealed 3-JUNCTURE with THREE
     attachments sealed inside as one epsilon triple [BM.17(1); Census FT.35(5); D3.9]. Hence the
     1p-kn composite of N_nuc = k+1 nucleons carries N = 3(k+1) attachments (junction-sharing /
-    fusion is NOT constructed in the record -- R10-type gap, opened below as ML-O4), not k+1.
+    fusion is NOT constructed in the record -- R10-type gap, opened below as IT-O4), not k+1.
     The directive's "1p3n has N=4 colour attachments" is therefore corrected to N=12; the N=4
     SUPPORT (the directive's transition locus) is the first post-protection support in the
     grammar (g(4)=3, all delta -- the double-mesonic "tetraquark-type" support, quoted), but it
@@ -57,7 +57,7 @@ DERIVED HERE (machine, exact):
        derived readings: DISJOINT E_int = 6(k+1) (6,12,18,24,30,36 -- floors {6,12,24} hit at
        k=0,1,3) and TREE-CONNECTED by k bidirectional connectors of the Sigma_12 species
        (connector: 2 [BM.17(1)]): E_int = 8k+6 (6,14,22,30,38,46 -- off-floor except k=0). The
-       connector species/winding between nucleons is NOT constructed: ML-O4, named. Derived
+       connector species/winding between nucleons is NOT constructed: IT-O4, named. Derived
        per-member rows from the frozen formulas: G/(2 pi ln2) = E^2 [BM.88(3)], k_crit/ln2 =
        E^2/2 [AT.35(1)], r_s/h = E/2 [BM.17(3) pattern], Delta x_B = h/(E ln2) [Def-BM.4(1)],
        and the E-independent product Delta x_B * r_s = h^2/(2 ln2) [BM.17(3)] -- exact.
@@ -67,7 +67,7 @@ DERIVED HERE (machine, exact):
        convolution is C(6(k+1), Q+3(k+1)) exactly (Vandermonde, machine) -- the family's charge
        distribution stays binomial and peaked at its class; Theta_int: 4Z per eps triple, 2Z
        where any delta sits [BM.31(4); FT.22; FT.34(3)], connector winding d entering via
-       k(Gamma) = k_1+k_2+d_12 [FT.34(3)] -- parametric in d (ML-O4).
+       k(Gamma) = k_1+k_2+d_12 [FT.34(3)] -- parametric in d (IT-O4).
   (F6) CAPACITY/MASK: colour slots at n=3 only [CT3.11(1)]; D_tick(n) = 2^(n+1) census:
        n=3 -> 16 = C_cap (SATURATED, admissible), n=4 -> 32 > 16 (inadmissible) -- the family
        (all junctions n=3) NEVER trips capacity or the D^- lock [AT.50(3),(4),(5) re-cited];
@@ -93,8 +93,8 @@ classes); P5 (no measured isotope data enters; no mass values -- prices only [Hi
 BM.134(5)/BM.83 (no currency mixing: the grammar census is pure combinatorics of the colour
 seal, the E_int rows are informational-currency prices, the lepton rows stay in {eps_q});
 FT.55(1) untouched; the Level-5 closed record cited, never edited [AT.63(2)]; no declaration;
-the Architect's ML.4-exception flag is honored: the multi-(p,n,e) calculus (ML-O2) may refine
-ML.4's minimality rows -- recorded, not pre-empted.
+the Architect's IT.4-exception flag is honored: the multi-(p,n,e) calculus (IT-O2) may refine
+IT.4's minimality rows -- recorded, not pre-empted.
 
 Covenant: EXACT arithmetic -- integer partition enumeration, Fractions, exact binomials and
 factorials, symbolic multiples of ln2/pi (no floating point in any assertion).
@@ -354,7 +354,7 @@ for k in range(1, 5):
 q_ok = all(1 + 0 * k == 1 for k in range(6))
 # Theta classes: 4Z per eps triple [BM.31(4); Census FT.49(3)]; 2Z per materialized closed chain
 # [FT.22]; mixed groupings carry the 2Z class only; the connector winding d enters k(Gamma) =
-# k_1+k_2+d_12 [FT.34(3)] -- parametric in d (ML-O4): no frozen d exists for nucleon-nucleon
+# k_1+k_2+d_12 [FT.34(3)] -- parametric in d (IT-O4): no frozen d exists for nucleon-nucleon
 # connectors, and none is invented here.
 theta_ok = all((4 * m) % 2 == 0 for m in range(1, 7)) and (2 % 4 != 0)
 chk("E1  THE CHARGE AND SIGN CENSUS [Def-BM.8(1),(6); AT.41(2),(3); BM.17(2); EM.9b; BM.135]: the"
@@ -366,7 +366,7 @@ chk("E1  THE CHARGE AND SIGN CENSUS [Def-BM.8(1),(6); AT.41(2),(3); BM.17(2); EM
     "\n           connector interiors telescoping [EM.9b]). Theta_int: 4Z per eps triple vs 2Z where"
     "\n           any delta sits, 4Z a PROPER subset (Theta=2 witness) [BM.31(4)]; the connector"
     "\n           winding enters via k(Gamma) = k_1+k_2+d_12 [FT.34(3)] and stays PARAMETRIC in d --"
-    "\n           no nucleon-nucleon connector winding is frozen anywhere (ML-O4); none is invented.",
+    "\n           no nucleon-nucleon connector winding is frozen anywhere (IT-O4); none is invented.",
     w3_ok and vand_ok and q_ok and theta_ok,
     "exact binomials + polynomial convolution (Vandermonde), integer phase classes")
 
@@ -421,12 +421,12 @@ chk("G1  ** LEPTON SATURATION, FLAGGED ** [AT.42(2); AT.44(4),(5); AT.54(3); BM.
     "\n           [Def-H.32(2)] and the Theta-class composition (B2) -- INTENSITIES AND STATISTICS"
     "\n           COMPOSITION, never positions or the connector boundary. Isotopy, ledger-natively:"
     "\n           SAME boundary charge, DIFFERENT grammar multiplicities. Full multi-(p,n,e) calculus:"
-    "\n           ML-O2; the Architect's ML.4-exception flag is honored and recorded.",
+    "\n           IT-O2; the Architect's IT.4-exception flag is honored and recorded.",
     disjoint_ok, "exact symbol-set census on the frozen formulas")
 
 print("""
   ============================================================================================
-  THE VERDICT (candidate tags ML.6-ML.8):
+  THE VERDICT (candidate tags IT.6-IT.8):
     * THE FAMILY IS CONSTRUCTED as support classes: N = 3(k+1) attachments, Q_total = +1,
       E_int = 6(k+1) (disjoint) / 8k+6 (Sigma_12-connector tree), grammar sectors g(N) with the
       exact (a,b) breakdowns and statistics composition -- k=0 protected and unique, k=1 first
@@ -434,15 +434,15 @@ print("""
     * THE PHASE TRANSITION is the grammar's, at N=4 (g_delta: 0 -> 3, protection unique to N=3)
       -- frozen [BM.31(2)] and re-derived; inside the family it falls at the DEUTERON (N=6), not
       at 1p3n; the directive's N=k+1 attachment count is corrected on the record (a nucleon is a
-      3-attachment eps triple [BM.17(1)]; fusion/sharing is unconstructed -> ML-O4).
+      3-attachment eps triple [BM.17(1)]; fusion/sharing is unconstructed -> IT-O4).
     * "THE SCREEN AND THE MASK CLOSE SOMETHING": what closes at N>=4 is the eps-PROTECTION
       (grammar); capacity NEVER closes in this family (n=3 saturated-admissible at every k);
       the (P1)-(P3)/void closure fires uniformly from k=1. At k=3 exactly: the disjoint E_int
       lands on the 24 floor and the delta share first exceeds 9/10.
-    * OPENED: ML-O4 -- the nucleon-nucleon connector species (count, winding d, junction
+    * OPENED: IT-O4 -- the nucleon-nucleon connector species (count, winding d, junction
       fusion/sharing): the family's tree reading and its Theta_int stay parametric until it is
-      constructed [BM.2(2)/(R10) pattern; R3 flavor-composition adjacent]. ML-O2 (the N>=4
-      multi-seal calculus) absorbs the ensemble weights; ML-O3 (the handshake) unchanged.
+      constructed [BM.2(2)/(R10) pattern; R3 flavor-composition adjacent]. IT-O2 (the N>=4
+      multi-seal calculus) absorbs the ensemble weights; IT-O3 (the handshake) unchanged.
     * BARS: species names quoted [Def-BM.3(7)]; prices not masses [HistLog V.32]; no measured
       isotope datum anywhere [P5]; no currency mixed [BM.83; BM.134(5)]; Level-5 record cited,
       never edited [AT.63(2)]. Declarations issued: none.

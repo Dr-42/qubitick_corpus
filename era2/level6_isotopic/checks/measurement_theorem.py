@@ -2,7 +2,7 @@
 """
 measurement_theorem.py -- THE MEASUREMENT THEOREM: the rung hierarchy of observation, the
 non-transit boundary, the entanglement dichotomy, and the molecular necessity.  Level 6 opening
-tier candidates ML.1-ML.5.
+tier candidates IT.1-IT.5.
 
 DIRECTIVE (Architect): "Construct the Measurement Theorem -- the rung hierarchy of observation,
 the non-transit boundary, and the molecular necessity. ... All measurements humanity has ever
@@ -26,7 +26,7 @@ PREMISE CORRECTIONS, verified against the canon before construction (the house d
     CHANNEL structure: the pair channel's weight x_+^2 chi_{NE>=T_0} [BM.122(3)] needs an EM
     junction AND the threshold, and its compensator is UNIQUE [BM.122(1)] -- so a formed
     emission always terminates in a register.  The dynamical radiation leg stays an open row
-    (ML-O1), named, not assumed.
+    (IT-O1), named, not assumed.
   * "Entanglement" is used strictly as the ledger composite: ONE global Def-H.32 configuration
     sum over system+register [AT.42(2)], whose boundary read telescopes to the end signs
     [EM.9b; AT.41] and whose return census is non-factorizing (witness below + AT.44's frozen
@@ -34,7 +34,7 @@ PREMISE CORRECTIONS, verified against the canon before construction (the house d
     corpus's measurement primitive is the A4 crystallization event + the L0 tilt step.
 
 DERIVED HERE (machine, exact), the four clauses + the calibration consequence:
-  (M1) THE RUNG HIERARCHY OF OBSERVATION [ML.1]: the rung ladder + admissibility biconditional
+  (M1) THE RUNG HIERARCHY OF OBSERVATION [IT.1]: the rung ladder + admissibility biconditional
        (D- in A(n) <=> n>=4 <=> inadmissible) reproduced; FT.20's criteria mechanized on the
        sign census of chains L=2..6: the EM criterion (exists v: f_v != 0) fails EXACTLY on the
        fully aligned configurations, where q = 0 AND aleph = 0 -- while the geometric reads
@@ -44,7 +44,7 @@ DERIVED HERE (machine, exact), the four clauses + the calibration consequence:
        R2 (winding) is self-geometric; R3 (singlet bit) needs a colour seal (rung >= 3, and
        colour itself is not observable [CT3.22]); J+-/D+ carry zero metric coordinates
        [CT1.12a(2): the S-odd grading, machine-reproduced].
-  (M2) THE NON-TRANSIT BOUNDARY [ML.2]: for an EM-inactive Sigma the active mask is K_(n<=1)
+  (M2) THE NON-TRANSIT BOUNDARY [IT.2]: for an EM-inactive Sigma the active mask is K_(n<=1)
        (dim 6 or 16): the EM(1)/strong(8)/D-(1) summands are ABSENT from K_Sigma -- nothing of
        rung >= 2 exists to leak [Def-H.15(3); CT0.13; AT.29(P2)]; the accessible content is
        EXACTLY the AT.32(1) functional (boundary triple, |R|, n) -- information-complete;
@@ -55,7 +55,7 @@ DERIVED HERE (machine, exact), the four clauses + the calibration consequence:
        certificate ln16 > 2 re-verified by rigorous interval (qexact); the bound/transit
        dichotomy [D1.5] + no formed supply vertex [(R9'')] => the non-transit boundary is the
        measurement horizon (assembly, cited).
-  (M3) THE ENTANGLEMENT DICHOTOMY [ML.3]: the invariant-state family of the pair carrier is
+  (M3) THE ENTANGLEMENT DICHOTOMY [IT.3]: the invariant-state family of the pair carrier is
        p Pi_R/3 + (1-p) Pi_V (commutant nullity 2 reproduced); its UNIQUE entropy maximum is
        rho* = I/4 [CT0.2 + Gibbs, machine: rational majorization at the vertices]; rho* is the
        fixed point of BOTH evolutions -- the Haar twirl (2T-average = Haar by Schur [AT.10],
@@ -72,7 +72,7 @@ DERIVED HERE (machine, exact), the four clauses + the calibration consequence:
        (delta K = gamma rho + log Z_gamma * I [BM.131(2)]); the only "collapse"-formed read is
        the Born-width distribution's collapse at eps_q = 0 [AT.42(3)] -- machine: D_n -> 1,
        w_mat -> 1 exactly at u = 0.
-  (M4) THE MOLECULAR NECESSITY [ML.4]: the independence lemma's integer certificate (2^a 3^b 5^c
+  (M4) THE ISOTOPIC NECESSITY [IT.4]: the independence lemma's integer certificate (2^a 3^b 5^c
        = 1 => a=b=c=0, exhaustive |a|,|b|,|c| <= 24) and the parametric irrationality solve
        (q ln1280 = p(ln960 + t ln2) forces p = q = 0 via the ln3 coefficient, for every rational
        t >= 0) [BM.83(2),(3) reproduced]; the ALPHABET CENSUS of every formed mass/price read:
@@ -97,7 +97,7 @@ DERIVED HERE (machine, exact), the four clauses + the calibration consequence:
        BM.122(2)] => THE MULTI-SEAL EM-BOUND COMPOSITE ("molecular", quoted, no species
        identification [Def-BM.3(7)]) IS THE MINIMAL FORMED STRUCTURE IN WHICH BOTH CURRENCY
        ALPHABETS OPERATE WITHIN ONE READ FAMILY: "we need molecular, sadly" -- derived.
-  (M5) THE CALIBRATION CONSEQUENCE [ML.5]: the slot-vs-read dependency census (which formed
+  (M5) THE CALIBRATION CONSEQUENCE [IT.5]: the slot-vs-read dependency census (which formed
        read family's alphabet contains which slot -- exact table from the frozen formulas):
        eps_q is fixable only from flicker-family reads; h/rho_B/mu'^2 only from informational/
        pole-family reads; e_0 only from the running-coupling family [BM.88(4); EM.25(7) -- not
@@ -113,10 +113,10 @@ DERIVED HERE (machine, exact), the four clauses + the calibration consequence:
        molecularly.  No value issued; the read rules (M1')-(M3') [AT.54(6)] still gate every
        conversion; P5 quarantine untouched.
 
-OPEN ROWS named (not closed here): ML-O1 the formed transit-leg amplitude (the radiation
+OPEN ROWS named (not closed here): IT-O1 the formed transit-leg amplitude (the radiation
 dynamics; (R9'') re-scoped to Level 6; the dichotomy of (M3) is structural, not dynamical);
-ML-O2 the N>=4 multi-seal configuration calculus (the Def-H.32 sums past the two-body engine
-[AT.44]; BM.31's grammar census is the frozen floor); ML-O3 the handshake-indicator operational
+IT-O2 the N>=4 multi-seal configuration calculus (the Def-H.32 sums past the two-body engine
+[AT.44]; BM.31's grammar census is the frozen floor); IT-O3 the handshake-indicator operational
 theory (the chi_{NE>=T_0}-gated read families across the threshold ladder of span 30 -- the
 locus where the calibration strategy of (M5) becomes mathematics).
 
@@ -743,7 +743,7 @@ chk("E5  [BM.31(2),(3),(5); BM.122(2); BM.115(2)(i)]: the multi-seal grammar -- 
     "\n           (classes overlap at Q=0,+1; only |Q|=3 is baryon-exclusive) and not phase alone"
     "\n           (4Z is a proper subset of 2Z).  The threshold ladder T_0 = 2 E_int h/ln2 runs"
     "\n           {4h/ln2, ..., 120h/ln2} on the computed cells, span ratio EXACTLY 30."
-    "\n           'Molecular' (quoted, no species identification [Def-BM.3(7)]) := the N>=4 multi-seal"
+    "\n           'Isotopic' (quoted, no species identification [Def-BM.3(7)]) := the N>=4 multi-seal"
     "\n           EM-bound ensembles -- grammar floors: N=4 (first delta-mixed), N=6 (first genuine"
     "\n           eps/delta mixture).",
     mix6 and span30 and eps_iff and g_delta[3] == 0 and all(v > 0 for k, v in g_delta.items() if k >= 4),
@@ -800,7 +800,7 @@ chk("F2  THE ONTOLOGY ROW: the '118x118 nuclear mass table' is NOT an object of 
 
 print("""
   ============================================================================================
-  THE MEASUREMENT THEOREM -- VERDICT (candidate tags ML.1-ML.5):
+  THE MEASUREMENT THEOREM -- VERDICT (candidate tags IT.1-IT.5):
     (1) THE RUNG HIERARCHY: the inter-system registration read is the charge read; it exists iff
         the EM criterion fires (exists v: f_v != 0), which activates at rung 2; J+-/D+- are never
         observables [FT.20 Rmk]; the dark (aligned) configurations carry geometry alone. A rung-1
@@ -816,7 +816,7 @@ print("""
         symmetric reads are vacuum values; rho* = I/4 is the fixed point of BOTH evolutions).
         No third option = AT.32(1). No collapse postulate exists in A1-A9; the update primitives
         are registration (A4) and tilt (L0). Radiation IS entanglement, structurally.
-    (4) THE MOLECULAR NECESSITY: the value alphabets are disjoint and incommensurable (the
+    (4) THE ISOTOPIC NECESSITY: the value alphabets are disjoint and incommensurable (the
         parametric irrationality); the reduced mass is not formable; the single atom is a
         single-currency instrument; the three mixed loci are all composite; the multi-seal grammar
         exists from N>=4 (mixing genuinely at N=6) => the multi-seal EM-bound composite
@@ -825,8 +825,8 @@ print("""
     (5) THE CALIBRATION CONSEQUENCE: slots split by currency; only molecular-class reads constrain
         both; the nuclear mass table is not an ontology object; every accessible baryon datum
         arrives EM-mediated. No value issued [P5]; (M1')-(M3') still gate conversion.
-    OPEN: ML-O1 the formed transit-leg amplitude (radiation dynamics; (R9'') re-scoped); ML-O2
-        the N>=4 configuration calculus; ML-O3 the handshake-indicator operational theory.
+    OPEN: IT-O1 the formed transit-leg amplitude (radiation dynamics; (R9'') re-scoped); IT-O2
+        the N>=4 configuration calculus; IT-O3 the handshake-indicator operational theory.
     Bars untouched: BM.134(5), BM.83, P5, Def-BM.3(7), FT.55(1), CT3.22, BM.143(1).
     Declarations issued: none. Level 5's closed record cited, never edited [AT.63(2)].
   ============================================================================================""")

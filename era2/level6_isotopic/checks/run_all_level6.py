@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-run_all_level6.py -- the Level 6 / Molecular-era check runner.
+run_all_level6.py -- the Level 6 / Isotopic-era check runner.
 
 Mirrors the Level-5 runner's contract (run_all_era2.py): run every checker in this folder,
 report exact-arithmetic marker counts and failures, exit 0 iff all green.  The format +
 citation gate runs FIRST: nothing downstream is admissible unless the tier documents pass
-(math balance, ML-block anatomy, citation attestation against the era-1 canon registry AND
+(math balance, IT-block anatomy, citation attestation against the era-1 canon registry AND
 the closed Level-5 record).
 
 Shared libraries: this level borrows `qexact.py` and `duality.py` from
@@ -38,7 +38,7 @@ def main():
                     if os.path.basename(f) not in HELPERS
                     and os.path.basename(f) not in GATES)
     print("=" * 78)
-    print("ERA 2 / LEVEL 6 -- THE MOLECULAR ERA -- exact-arithmetic check suite")
+    print("ERA 2 / LEVEL 6 -- THE ISOTOPIC ERA -- exact-arithmetic check suite")
     print("=" * 78)
     tot_g = tot_b = 0
     rows = []

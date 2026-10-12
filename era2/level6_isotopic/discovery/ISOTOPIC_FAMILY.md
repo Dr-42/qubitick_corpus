@@ -1,4 +1,4 @@
-# ISOTOPIC_FAMILY — session 10 discovery record (Level 6 / Era 2, the Molecular era)
+# ISOTOPIC_FAMILY — session 10 discovery record (Level 6 / Era 2, the Isotopic era)
 
 > **Directive (Architect):** *"Construct the 1p-kn Isotopic Family and the Contraction Grammar
 > Phase Transitions… at k=3 (1p3n, which has N=4 colour attachments) the screen and the mask
@@ -7,14 +7,14 @@
 >
 > **Result: the family is constructed as support classes, the transition is located exactly — and
 > it is not where the directive put it.** `isotopic_family.py` **8/8 exact**; candidate tags
-> ML.6–ML.8 (Tier ML.2). The grammar transition g_δ: 0→3 at N=4 is frozen [BM.31(2)] and
+> IT.6–IT.8 (Tier IT.2). The grammar transition g_δ: 0→3 at N=4 is frozen [BM.31(2)] and
 > re-derived triple-certified; but a nucleon is a **3-attachment** ε-triple [BM.17(1)], so the
 > family lives at N = 3(k+1) and its **first δ admission is the DEUTERON (N=6, the frozen
 > 3/5–2/5 mix)**; at 1p3n (N=12) δ **dominates** (387/427) on the E_int=24 floor. Capacity
 > never bites (n=3 saturated-admissible at every k); the (P1)–(P3) closure fires uniformly from
 > k=1. Lepton saturation flagged: the δ-mixing cannot touch the connector boundary (telescoping)
 > nor the ladder positions (grammar-blind alphabets) — it multiplies SECTORS. One new open row:
-> **ML-O4**, the nucleon–nucleon connector species. Declarations: none. P5 quarantine untouched;
+> **IT-O4**, the nucleon–nucleon connector species. Declarations: none. P5 quarantine untouched;
 > no isotope identified [Def-BM.3(7)].
 
 ---
@@ -28,10 +28,10 @@
 | "the screen and the mask will close something at k=3" | capacity: every junction n=3, D_tick(3)=16=C_cap **exactly saturated, admissible** — never trips at any k; D⁻ lock needs rung ≥4 ≡ inadmissible [AT.50(3),(4),(5)]; (P1)–(P3)/void closure [AT.29; BM.143(1)] applies **uniformly from k=1** | **ADJUDICATED:** what closes at N=4 is the ε-PROTECTION (grammar), ¬capacity; the information closure is not special to k=3. What IS special at k=3, exactly: the disjoint E_int=24 **lands on the computed-cell floor** {2,6,12,24,60} [BM.17(4); Def-BM.14(6) order-isomorphism — an order, ¬a number] and the δ share first exceeds 9/10 |
 | the cited g_δ/g_ε values | (1,0,3,10,15,105) and (0,1,0,0,10,0) for N=2..7 [Def-BM.9(3)] | **CONFIRMED**, triple-certified |
 
-Also honored on the record: the Architect's standing flag — *"ML.4 will soon get an exception
+Also honored on the record: the Architect's standing flag — *"IT.4 will soon get an exception
 when we calculate multi-(p,n,e) systems"* — this tier is the (p,n)-half of that calculus; the
-ML.4(4)/(6) exception is recorded as an **expectation** at ML.8(3), to be derived at its own
-locus when the electron-saturated members are built (ML-O2), ¬pre-empted.
+IT.4(4)/(6) exception is recorded as an **expectation** at IT.8(3), to be derived at its own
+locus when the electron-saturated members are built (IT-O2), ¬pre-empted.
 
 ## II. The grammar engine, triple-certified (machine §A)
 
@@ -68,7 +68,7 @@ g(11)=32725, **g(12)=164395 = 10395 (6δ) + 138600 (3δ+2ε) + 15400 (4ε)**.
 - Attachment counts are BOUNDARY DATA [Def-BM.9(4)] — each N is its own support class; no clause
   sums over sealings of a fixed support as alternatives [Def-BM.9(5)]; the grammar decides which
   sealings a support ADMITS. The ensemble sector decomposition (BM.31(6)'s disjoint-union
-  pattern) is the correct reading, and its weights are ML-O2's calculus.
+  pattern) is the correct reading, and its weights are IT-O2's calculus.
 
 ## IV. Prices, floors, charge, capacity (machine §§D–F)
 
@@ -77,7 +77,7 @@ g(11)=32725, **g(12)=164395 = 10395 (6δ) + 138600 (3δ+2ε) + 15400 (4ε)**.
   **k = 0, 1, 3** (the 1p3n member lands exactly on 24 — the Def-BM.14(6) order-isomorphism
   locus 12/24/60, quoted discipline); TREE reading with k bidirectional Σ₁₂-species connectors
   (2 edges each): 8k+6 = (6,14,22,30,38,46), off-floor except k=0. **The connector between
-  nucleons has no frozen species** — count/winding/fusion unconstructed → **ML-O4** (the record
+  nucleons has no frozen species** — count/winding/fusion unconstructed → **IT-O4** (the record
   refuses to guess; FT.34(3)'s k(Γ)=k₁+k₂+d₁₂ is the skeleton, BM.2(2)/(R10) the pattern).
 - Per-member derived rows (symbolic, exact): G/(2π ln2) = E², k_crit/ln2 = E²/2, r_s = 𝔥E/2,
   Δx_B = 𝔥/(E ln2), and the **E-independent product Δx_B·r_s = 𝔥²/(2 ln2)** [BM.17(3)]; the
@@ -111,7 +111,7 @@ g(11)=32725, **g(12)=164395 = 10395 (6δ) + 138600 (3δ+2ε) + 15400 (4ε)**.
 
 ## VI. Check ledger
 
-`era2/level6_molecular/checks/isotopic_family.py` — **8/8 EXACT**, no floating point:
+`era2/level6_isotopic/checks/isotopic_family.py` — **8/8 EXACT**, no floating point:
 A1 (grammar engine triple-certified + frozen rows), B1 (family census + monotone share +
 3/5–2/5 + the N=12 breakdown), B2 (statistics composition), C1 (the N=4 support: 3 perfect
 matchings, mod-3 exclusion, the slot/capacity rows), D1 (E_int both readings, floors, symbolic
@@ -127,15 +127,15 @@ any tier text was written, per the witness-first discipline.
 ## VII. Adjudication
 
 - **The family: CONSTRUCTED as support classes** (grammar sectors, prices, charge, phases,
-  capacity) — ML.6/ML.7; **no species identified, no mass values, no measured isotope datum**.
+  capacity) — IT.6/IT.7; **no species identified, no mass values, no measured isotope datum**.
 - **The phase transition: LOCATED exactly** — grammar at N=4 (frozen + re-derived), family at
   N=6 (deuteron), dominance at N=12 (387/427), floor landing at k=3 (E_int=24).
 - **The directive's "screen and mask" prediction: adjudicated** — ε-protection closes at N=4;
   capacity never closes; (P1)–(P3) closes from k=1; k=3's exact specials named.
-- **NEW OPEN ROW ML-O4** (the nucleon–nucleon connector species: count, winding d, fusion) —
-  the tree E_int and composite Θ_int stay parametric until it is constructed; ML-O2 absorbs the
-  ensemble weights; the Architect's ML.4-exception expectation recorded at ML.8(3).
-- Declarations issued: none. §Cal-ML empty. Level-5 closed record cited, never edited [AT.63(2)].
+- **NEW OPEN ROW IT-O4** (the nucleon–nucleon connector species: count, winding d, fusion) —
+  the tree E_int and composite Θ_int stay parametric until it is constructed; IT-O2 absorbs the
+  ensemble weights; the Architect's IT.4-exception expectation recorded at IT.8(3).
+- Declarations issued: none. §Cal-IT empty. Level-5 closed record cited, never edited [AT.63(2)].
 
 > *The corpus rewards: read the whole rather than the era; treat every "absent" as level-local;
 > let exact arithmetic, not plausibility, decide. — AT.39 Phys*
