@@ -1,23 +1,23 @@
-# $\langle qu(b(i(t|t))ick)\rangle$ — **Part 6 · Molecular era** — Tier ML.1: the Measurement Theorem
+# $\langle qu(b(i(t|t))ick)\rangle$ — **Part 6 · Isotopic era** — Tier IT.1: the Measurement Theorem
 
-**Level.** 6. **Era.** 2 (the Molecular era — OPENED by this tier). **Tier.** ML.1 — the
+**Level.** 6. **Era.** 2 (the Isotopic era — OPENED by this tier). **Tier.** IT.1 — the
 Measurement Theorem in four clauses plus its calibration consequence: the rung hierarchy of
 observation, the non-transit boundary, the entanglement dichotomy, and the molecular necessity.
-**Tags.** ML.1–ML.5. **Pattern.** the level-opening tiers (Tier AT.1's shape): construction tags
+**Tags.** IT.1–IT.5. **Pattern.** the level-opening tiers (Tier AT.1's shape): construction tags
 plus the level's §Cal and §Open sections.
 **Status.** discovery-phase working tier. Nothing is adopted into the frozen canon; no
-declaration issues; §Cal-ML is empty; no clause of Parts 1–4 is modified, retracted or
+declaration issues; §Cal-IT is empty; no clause of Parts 1–4 is modified, retracted or
 renumbered; **Level 5's closed record [AT.63(2)] is cited, never edited.**
-**Machine.** `era2/level6_molecular/checks/measurement_theorem.py` → **21/21 exact**;
-`era2/level6_molecular/checks/run_all_level6.py` → the level's runner (gate first);
-`era2/level6_molecular/checks/check_level6_format.py` → the format + citation gate over the Part 6
+**Machine.** `era2/level6_isotopic/checks/measurement_theorem.py` → **21/21 exact**;
+`era2/level6_isotopic/checks/run_all_level6.py` → the level's runner (gate first);
+`era2/level6_isotopic/checks/check_level6_format.py` → the format + citation gate over the Part 6
 documents, attesting against the era-1 canon registry AND the closed Level-5 record. Exact
 arithmetic: `Fraction`, `Gauss(i)` $4\times4$, rigorous `Fraction` intervals for $\ln 2$
 (`qexact`, borrowed from the Level-5 shared libraries), truncated $\mathbb Q[[\gamma]]$ series with
 coefficient-wise equality, integer certificates, exhaustive sign censuses.
 **No floating point in any assertion. No measured value enters any clause [P5].**
 **Charter (era chain).** Part 6 cites Parts 1–4, the Level-5 record (AT-tags), and earlier
-ML-tags only. No forward pointer is used as a premise.
+IT-tags only. No forward pointer is used as a premise.
 **Mandate.** The Architect's directive: *"Construct the Measurement Theorem — the rung hierarchy
 of observation, the non-transit boundary, and the molecular necessity… All measurements humanity
 has ever made are strictly confined to the reality of rung 1 measurements. A truly measured
@@ -25,7 +25,7 @@ boundary — an information-complete one — is one out of which no rung 2 or ru
 leaks. A rung 1 restricted system has a non-transit boundary; it doesn't radiate. As soon as a
 thing radiates, it gets entangled with the observer or else goes completely vacuum-looking. We
 need molecular, sadly."* — verified against the canon and assembled as a single derived theorem,
-with the premise corrections recorded at ML.1(8).
+with the premise corrections recorded at IT.1(8).
 **Nomenclature (inherited).** Def-BM.3(7)'s rule stands: *"molecular", "atomic", "photon"* stay
 quoted names for the derived configuration classes, $\neg$species identifications. Prices are
 $\neg$masses [HistLog §V.32]. The dictionary discipline stands: chart-side objects (collapse,
@@ -34,7 +34,7 @@ A4 registration, the L0 tilt, and the Def-H.32 configuration sum.
 
 ---
 
-### ML.1 — Clause 1: the rung hierarchy of observation — darkness is read-species separation
+### IT.1 — Clause 1: the rung hierarchy of observation — darkness is read-species separation
 
 **Thm.**
 $$(1)\quad\textbf{THE RUNG LADDER (re-produced,}\ \neg\textbf{new):}\qquad\mathcal A(0)=\{J\},\ \ \mathcal A(1)=\mathcal A(0)\cup\{G,W,H,D^+\},\ \ \mathcal A(2)=\mathcal A(1)\cup\{\mathrm{EM}\},\ \ \mathcal A(3)=\mathcal A(2)\cup\{\mathrm{strong}\},\ \ \mathcal A(n\ge4)=\mathcal A(3)\cup\{D^-\}\ \ [\mathrm{CT0.13}];$$
@@ -57,7 +57,7 @@ $$(7)\quad\textbf{the dark object's ledger — what it still has:}\qquad\text{ma
 $$\textbf{what it lacks:}\ \neg\text{a charge read},\ \neg\text{a wall read},\ \neg\text{a channel weight}\ (x_+^2\chi\ \text{needs the junction}\ [\mathrm{BM.122}(3)]),\ \neg\text{a registration by any other system}$$
 $$(8)\quad\textbf{premise corrections, on the record (the house discipline):}\qquad(\mathrm P1)\ \text{the rung ladder is}\ \mathrm{CT0.13}\ \text{'s frozen row,}\ \neg\mathrm{AT.30}(7)\ (\mathrm{AT.30}\ \text{has clauses}\ (1)\text{--}(6);\ \text{its}\ (1)\ \text{is the per-aspect}\times\text{per-rung census});$$
 $$(\mathrm P2)\ \text{``all measurements are confined to rung 1'' reads, on the derived rows, as its opposite: the charge-read floor is rung}\ 2\ [\mathrm{CT0.13};\ \mathrm{FT.20}]\ \text{— the directive's ``rung-1 restricted system'' is formalized as the EM-INACTIVE system (mask}\ \mathcal K_{n\le1}),\ \text{which is what the rest of the directive describes};$$
-$$(\mathrm P3)\ \text{``it doesn't radiate'' is formalized as:}\ \neg\exists\ \text{a formed radiation leg from anything}\ [(\mathrm{R9}'');\ \mathrm{BM.122}(6)(\mathrm O1)\text{--}(\mathrm O4)]\ +\ \text{the non-transit mask census}\ (\mathrm{ML.2})\ \text{— the dynamical radiation leg stays OPEN as}\ \mathrm{ML\text{-}O1},\ \text{named}\ \neg\text{assumed};$$
+$$(\mathrm P3)\ \text{``it doesn't radiate'' is formalized as:}\ \neg\exists\ \text{a formed radiation leg from anything}\ [(\mathrm{R9}'');\ \mathrm{BM.122}(6)(\mathrm O1)\text{--}(\mathrm O4)]\ +\ \text{the non-transit mask census}\ (\mathrm{IT.2})\ \text{— the dynamical radiation leg stays OPEN as}\ \mathrm{IT\.ext{-}O1},\ \text{named}\ \neg\text{assumed};$$
 $$(\mathrm P4)\ \text{``entanglement with the observer''}\ :=\ \text{the ledger composite (ONE global Def-H.32 configuration sum over system+register}\ [\mathrm{AT.42}(2)]);\ \ \text{``observer''}\ :=\ \text{a designated register/read apparatus}\ [\mathrm{Def\text{-}H.9}\ \text{'s}\ o;\ \mathrm{FT.20}\ \mathrm G\text{-row}]\ \text{—}\ \neg\text{consciousness,}\ \neg\text{a smooth-manifold analogy}$$
 $$(9)\quad\textbf{status:}\qquad\textbf{derived:}\ (4)\text{--}(7);\qquad\textbf{re-produced:}\ (1)\text{--}(3);\qquad\textbf{corrections:}\ (8);\qquad\neg\text{a declaration},\ \neg\text{a P4 addition},\ \neg\text{a measured value}\ [\mathrm{P5}],\ \neg\text{a species identification}\ [\mathrm{Def\text{-}BM.3}(7)]$$
 
@@ -86,7 +86,7 @@ since its first tier.)
 
 ---
 
-### ML.2 — Clause 2: the non-transit boundary is the measurement horizon
+### IT.2 — Clause 2: the non-transit boundary is the measurement horizon
 
 **Thm.**
 $$(1)\quad\textbf{DEFINITION (derived content, no new datum):}\qquad\text{a boundary}\ \partial\Sigma\ \text{is}\ \textbf{truly measured / information-complete}\ \iff\ \text{the active mask}\ \mathcal K_\Sigma(C)=\bigoplus_{A\in\mathcal A(\Sigma;C)}\mathcal K^{(A)}\ [\mathrm{Def\text{-}H.15}(1)\text{--}(3);\ \mathrm{AT.29}(2)]\ \text{carries}\ \neg\text{a rung}\ge2\ \text{summand out of}\ \Sigma\ \text{and the accessible content equals AT.32(1)'s functional EXACTLY};$$
@@ -106,7 +106,7 @@ $$\text{a dark system has NO junction}\ (x_+^2\ \text{never enters)}\ \wedge\ \t
 $$\text{the weight census:}\ x_+^2=1\ \text{only at}\ \varepsilon_q=0\ \wedge\ NE\ge\mathcal T_0;\quad x_+\to0\ \text{at}\ \varepsilon_q\to\tfrac14^-\ \ \text{— the two limits are opposite and both exact}\ [\mathrm{BM.122}(3)]$$
 $$(8)\quad\textbf{THE MEASUREMENT-HORIZON ROW (assembly):}\qquad\boxed{\ \textbf{the non-transit boundary is the measurement horizon:}\ \neg\text{a rung}\ge2\ \text{summand to leak}\ (2),\ \ \text{accessible content}=\ \text{the triple}\ (3),\ \ \text{interior void-closed}\ (5),\ \ \text{chart broken at the shell}\ (6),\ \ \neg\text{a radiation leg}\ (7)\ }$$
 $$\text{BEYOND it no information escapes; WITHIN it all information is preserved}\ [\mathrm{D0.7};\ \mathrm{Def\text{-}BM.5}(1)\ \text{charge preservation}]\ \textbf{but inaccessible}\ [\mathrm{BM.143}(1)]\ \text{— the ledger's censorship, without a smooth horizon}\ [\mathrm{BM.134}(5)\ \text{discipline:}\ r_s\ \text{stays a chart-side dictionary partner}]$$
-$$(9)\quad\textbf{status:}\qquad\textbf{derived:}\ (2),(4)\text{--}(8);\qquad\textbf{definition assembled from derived rows:}\ (1);\qquad\textbf{re-cited:}\ (3)\ \text{'s table};\qquad\text{the dynamical radiation leg stays open:}\ \mathrm{ML\text{-}O1}$$
+$$(9)\quad\textbf{status:}\qquad\textbf{derived:}\ (2),(4)\text{--}(8);\qquad\textbf{definition assembled from derived rows:}\ (1);\qquad\textbf{re-cited:}\ (3)\ \text{'s table};\qquad\text{the dynamical radiation leg stays open:}\ \mathrm{IT\.ext{-}O1}$$
 
 **Req.** A6, A7 (Part 1); P5, CT0.3, CT0.9, CT0.12, CT0.13, CT1.19b, CT1.29, D0.7, D1.5, FT.1, FT.19, FT.20, FT.22 (Parts 1–2); Def-H.9(2), Def-H.15(1),(2),(3), Def-H.32(4), Def-H.36, FT.28 (Part 3); AT.29(1),(2),(3),(4), AT.30(3), AT.32(1),(2), AT.35(0),(1),(2),(3), AT.50(5), AT.46(4), AT.63(2) (Level 5); Def-BM.3(2),(3), Def-BM.5(1), BM.2(1), BM.122(2),(3),(6), BM.132(2), BM.134(5), BM.143(1), BM.146(3), BM.148(1),(4) (Part 4); rigorous `Fraction` interval arithmetic for $\ln 2$ (`qexact`), exact integer cell census [math; machine: `measurement_theorem.py` §C, 4/4].
 
@@ -135,7 +135,7 @@ ledger's books stay balanced while its contents stay sealed.
 
 ---
 
-### ML.3 — Clause 3: the entanglement dichotomy — radiation is entanglement, and there is no collapse
+### IT.3 — Clause 3: the entanglement dichotomy — radiation is entanglement, and there is no collapse
 
 **Thm.**
 $$(1)\quad\textbf{THE MEASUREMENT PRIMITIVES (no collapse postulate exists):}\qquad\text{the axiom census}\ \mathrm{A1}\text{--}\mathrm{A9}\ \text{carries}\ \neg\text{a projection postulate};\qquad\text{registration:}\ (p,q)\in\mathcal R\iff|\Pi_{\mathcal V}\rho_{pq}|\le\varepsilon_q\ \vee\ \ge1-\varepsilon_q\ \ [\mathrm{A4};\ \mathrm{AT.13}(1)],\ \ \sigma_e\in\{\pm1\},\ \text{phase}=\text{registration data}\ [\mathrm{CT0.9};\ \mathrm{Def\text{-}EM.20}];$$
@@ -150,8 +150,8 @@ $$\textbf{the joint read is NON-FACTORIZING:}\ \ \dfrac{N_4(2m)}{N_2(2m)}=4^{m-1
 $$(4)\quad\textbf{THE DICHOTOMY (an exhaustiveness theorem, not a dynamics):}\qquad\text{for an EM-active system read at a boundary, AT.32(1)'s functional leaves EXACTLY two formed cases:}$$
 $$\begin{array}{l|l}\textbf{the boundary data carries a connector to a register}&\textbf{it does not}\\\hline\text{the composite branch: telescoped charge read, unique compensator,}&\text{the isolated branch: the gauge-invariant content is the bit ALONE}\ [\mathrm{AT.12}(3)];\\ \text{non-factorizing joint census -- ``entangled with the detector''}&\text{the ensemble-symmetric charge read vanishes}\ \langle q\rangle_{\mathrm{ens}}=0\ [\mathrm{AT.53}];\\ &\text{the dynamically fixed state is}\ \rho_\circ\ \text{(2)}\ \text{-- ``vacuum-looking''}\end{array}$$
 $$\boxed{\ \textbf{NO THIRD OPTION}=\mathrm{AT.32}(1)\ \textbf{itself: the accessible content is the functional of (triple,}\ |R|,\ n)\ \textbf{and nothing else}\ }\qquad\text{radiation IS entanglement:}\ \neg\exists\ \text{a formed emission that terminates nowhere (the compensator is unique, charge is conserved)}$$
-$$(5)\quad\textbf{NO MEASUREMENT WITHOUT RUNG-2 ACTIVATION; NO RUNG-2 ACTIVATION WITHOUT COMPOSITE OR VACUUM:}\qquad\text{the first half is}\ \mathrm{ML.1}(6);\ \ \text{the second is}\ (4);\qquad\text{``the measurement problem'' closes as a STRUCTURAL theorem: there is no collapse, only}\ \mathrm{EM}\ \text{activation}\ +\ \text{the composite's boundary read}\ +\ \text{the tilt step}\ [\mathrm{L0};\ \mathrm{BM.131}(2)]$$
-$$(6)\quad\textbf{the missing definition, named}\ (\text{the directive's constraint honored}):\qquad\text{the dichotomy is READ-LEVEL, not dynamical: a formed transit-leg AMPLITUDE between junctions does not exist in the inventory}\ [(\mathrm{R9}'');\ \mathrm{BM.122}(6);\ \mathrm{BM.6}(6):\ \neg\text{an S-matrix element beyond the formed amplitudes}]\ \text{—}\ \mathrm{ML\text{-}O1};$$
+$$(5)\quad\textbf{NO MEASUREMENT WITHOUT RUNG-2 ACTIVATION; NO RUNG-2 ACTIVATION WITHOUT COMPOSITE OR VACUUM:}\qquad\text{the first half is}\ \mathrm{IT.1}(6);\ \ \text{the second is}\ (4);\qquad\text{``the measurement problem'' closes as a STRUCTURAL theorem: there is no collapse, only}\ \mathrm{EM}\ \text{activation}\ +\ \text{the composite's boundary read}\ +\ \text{the tilt step}\ [\mathrm{L0};\ \mathrm{BM.131}(2)]$$
+$$(6)\quad\textbf{the missing definition, named}\ (\text{the directive's constraint honored}):\qquad\text{the dichotomy is READ-LEVEL, not dynamical: a formed transit-leg AMPLITUDE between junctions does not exist in the inventory}\ [(\mathrm{R9}'');\ \mathrm{BM.122}(6);\ \mathrm{BM.6}(6):\ \neg\text{an S-matrix element beyond the formed amplitudes}]\ \text{—}\ \mathrm{IT\.ext{-}O1};$$
 $$\text{the dichotomy needs none of it: it is the exhaustiveness of the accessible-content functional over the formed read classes}$$
 $$(7)\quad\textbf{status:}\qquad\textbf{derived:}\ (2)\text{--}(5);\qquad\textbf{record census:}\ (1);\qquad\textbf{open, named:}\ (6);\qquad\neg\text{a declaration},\ \neg\text{a measured value}\ [\mathrm{P5}],\ \neg\text{consciousness,}\ \neg\text{a smooth analogy}$$
 
@@ -184,7 +184,7 @@ rather than rhetorical.
 
 ---
 
-### ML.4 — Clause 4: the molecular necessity — the incommensurability bar is operational only in the multi-seal composite
+### IT.4 — Clause 4: the molecular necessity — the incommensurability bar is operational only in the multi-seal composite
 
 **Thm.**
 $$(1)\quad\textbf{THE INCOMMENSURABILITY, re-verified:}\qquad\mathfrak P=\mathbb Q\oplus\bigoplus_p\mathbb Q\ln p;\qquad\ln1280=8\ln2+\ln5,\qquad\ln960=6\ln2+\ln3+\ln5\ \ [\mathrm{BM.83}(2)];$$
@@ -201,7 +201,7 @@ $$\boxed{\ \textbf{atomic spectra can fix the lepton-currency slots only: the ba
 $$(5)\quad\textbf{THE MULTI-SEAL GRAMMAR EXISTS, AND ITS FLOORS ARE EXACT}\ [\mathrm{BM.31}(2),(3),(5)]:\qquad g_\delta(N)=(1,0,3,10,15,105)\ \ \text{for}\ N{=}2..7\ \ (\delta\text{-protection UNIQUE to}\ N{=}3;\ \ g_\delta>0\ \ \forall N\ge4);\qquad g_\varepsilon(N)\ne0\iff3\mid N;$$
 $$\text{at}\ N{=}6\ \text{the ensemble GENUINELY MIXES:}\ \tfrac{15}{25}=\tfrac35\ \text{of groupings contain a}\ \delta,\ \ \tfrac{10}{25}=\tfrac25\ \text{do not};\qquad\text{the separator of the sealings is the ATTACHMENT COUNT}\ N\ \text{in the boundary data}\ [\mathrm{Def\text{-}BM.9}(4)],\ \neg\text{charge (classes overlap at}\ Q{=}0{+}1;\ \text{only}\ |Q|{=}3\ \text{is baryon-exclusive)},\ \neg\text{phase alone}\ (4\mathbb Z\subsetneq2\mathbb Z);$$
 $$\text{the threshold ladder:}\ \ \mathcal T_0\in\bigl\{\tfrac{4\mathfrak h}{\ln2},\dots,\tfrac{120\mathfrak h}{\ln2}\bigr\},\ \ \text{span ratio EXACTLY}\ 30\ \ [\mathrm{BM.115}(2)(\mathrm i);\ \mathrm{BM.122}(2)]$$
-$$(6)\quad\textbf{THE MOLECULAR NECESSITY (the terminal consequence):}\qquad\text{``molecular''}\ :=\ \text{the}\ N\ge4\ \text{multi-seal EM-bound ensembles (quoted name,}\ \neg\text{a species identification}\ [\mathrm{Def\text{-}BM.3}(7)];\ \text{grammar floors:}\ N{=}4\ \text{first}\ \delta\text{-mixed},\ N{=}6\ \text{first genuine}\ \varepsilon/\delta\ \text{mixture});$$
+$$(6)\quad\textbf{THE ISOTOPIC NECESSITY (the terminal consequence):}\qquad\text{``molecular''}\ :=\ \text{the}\ N\ge4\ \text{multi-seal EM-bound ensembles (quoted name,}\ \neg\text{a species identification}\ [\mathrm{Def\text{-}BM.3}(7)];\ \text{grammar floors:}\ N{=}4\ \text{first}\ \delta\text{-mixed},\ N{=}6\ \text{first genuine}\ \varepsilon/\delta\ \text{mixture});$$
 $$\textbf{(a)}\ \text{it is the smallest formed class with a STRUCTURED EM boundary:}\ \ge2\ \text{seals}+\ \text{connectors}\ \implies\ \text{rung-2 activity on a multi-junction support}\ [\mathrm{FT.20};\ \mathrm{BM.31}(2)];\qquad\textbf{(b)}\ \text{it is where the two currencies meet: all THREE mixed loci}\ (2)\ \text{live in multi-junction composites}\ (\mathcal B_{\mathrm{ens}}\ \text{on}\ n\ge2\ \text{pair floors},\ \mathcal W_{\text{channel}}/\chi\ \text{at junctions across}\ \mathcal T_0);$$
 $$\textbf{(c)}\ \text{its read families depend on the seal classes}\ (E_{\mathrm{int}}\ \text{ladder},\ \text{span ratio}\ 30)\ \text{AND the junction flicker}\ (\varepsilon_q)\ \text{simultaneously — the incommensurability bar is OPERATIONAL exactly here: the bar forbids converting the currencies}\ (1),(3),\ \text{and the molecular read family is the formed locus where both are present WITHOUT conversion};$$
 $$\boxed{\ \textbf{``we need molecular, sadly'' — DERIVED: the calibration era cannot proceed from single-currency data; the minimal formed instruments carrying both alphabets are the multi-seal EM-bound composites}\ }$$
@@ -236,26 +236,26 @@ footings, on both banks, measurable at last.
 
 ---
 
-### ML.5 — Clause 5: the calibration consequence, and the status of Tier ML.1
+### IT.5 — Clause 5: the calibration consequence, and the status of Tier IT.1
 
 **Thm.**
 $$(1)\quad\textbf{THE SLOT-VS-READ DEPENDENCY CENSUS:}\qquad\begin{array}{l|l|l}\textbf{the slot}&\textbf{the formed families whose alphabet contains it}&\textbf{the currency}\\\hline\mathfrak h\ (\mathrm{P1})&m_{\mathrm{hid}},\ \mathcal T_0,\ \rho_{\mathrm B},\ \mathcal B_{\mathrm{ens}}&\text{shared scale}\\\varepsilon_q\ [\mathrm{AT\text{-}O27}]&w_c,\ W_d,\ \mathcal W_{\text{round}},\ D_n/w_{\mathrm{mat}},\ \mathcal B_{\mathrm{ens}},\ \mathcal W_{\text{channel}},\ P(\Delta x_{\mathrm B})&\text{lepton/flicker}\\e_0\ [\mathrm{EM.25}(7):\ \neg\text{issued}]&\varepsilon_{\mathrm{EM}}(r,E,N)=Nf\mathsf g\varepsilon_{\mathrm{EM}}\ [\mathrm{BM.88}(4)]&\text{connector}\\\varkappa\beta\ [\mathrm{AT\text{-}O3}]&\mathrm{AT.6}\ \text{'s functional},\ \Theta_{\mathrm{drag}}\ \text{witnesses}\ [\mathrm{AT.46}(4)]&\text{metric/shift}\\\rho_{\mathrm B},\ \hat\mu'^2\ (\neg\text{declared})&\text{the pole ladder},\ \mathrm{BM.83}(5)\ \text{'s cross-ratios}&\text{baryon/pole}\\\sigma_\ell,\ \sigma_\nu\ (\neg\text{declared})&\text{the transport channel ratios},\ \mathrm{BM.83}(5)\ \text{'s cross-ratios}&\text{lepton/transport}\end{array}$$
-$$\text{machine: the two currency slot-families are DISJOINT;}\ e_0\ \text{appears in NO formed read alphabet (it is not issued)}\ [\mathrm{EM.25}(7)];\ \ \text{every mixed locus is composite}\ [\mathrm{ML.4}(2)]$$
+$$\text{machine: the two currency slot-families are DISJOINT;}\ e_0\ \text{appears in NO formed read alphabet (it is not issued)}\ [\mathrm{EM.25}(7)];\ \ \text{every mixed locus is composite}\ [\mathrm{IT.4}(2)]$$
 $$(2)\quad\textbf{THE CONSEQUENCE:}\qquad\boxed{\ \text{no single-currency data set constrains both slot families: the calibration era must proceed from multi-seal EM-bound (``molecular'') spectroscopy, where the threshold}\ \chi_{\{NE\ge\mathcal T_0\}},\ \text{the channel weight and the binding are simultaneously formed}\ }$$
-$$\text{the accessible data species: vibrational/rotational/electronic-type transition READS of multi-seal composites — i.e. the (R1)/(R2) classes on}\ N\ge4\ \text{ensembles}\ [\mathrm{ML.1}(3);\ \mathrm{ML.4}(5)];\qquad\text{the read rules}\ (\mathrm{M1'})\text{--}(\mathrm{M3'})\ [\mathrm{AT.54}(6)]\ \text{still gate EVERY conversion — no value is issued, estimated or compared here}\ [\mathrm{P5}]$$
+$$\text{the accessible data species: vibrational/rotational/electronic-type transition READS of multi-seal composites — i.e. the (R1)/(R2) classes on}\ N\ge4\ \text{ensembles}\ [\mathrm{IT.1}(3);\ \mathrm{IT.4}(5)];\qquad\text{the read rules}\ (\mathrm{M1'})\text{--}(\mathrm{M3'})\ [\mathrm{AT.54}(6)]\ \text{still gate EVERY conversion — no value is issued, estimated or compared here}\ [\mathrm{P5}]$$
 $$(3)\quad\textbf{THE ONTOLOGY ROW:}\qquad\text{the ``118}\times\text{118 nuclear mass table'' is}\ \neg\text{an object of this ontology: the accessible baryon data are the SEAL-CLASS PRICES on the}\ E_{\mathrm{int}}\ \text{ladder}\ \{2,6,12,24,60\}\ \text{with the Gram phases}\ \delta\in\{\tfrac29\ell,\tfrac2{27}q,\tfrac18\nu\}\ \text{— PRICES,}\ \neg\text{masses}\ [\text{HistLog}\ \S\mathrm{V.32};\ \mathrm{Def\text{-}BM.3}(7)\ \text{nomenclature};\ \mathrm{AT.44}(8)\ \text{read-rule discipline}];$$
-$$\text{SM-mass identification stays}\ \neg\text{formed on the standing bars}\ [\mathrm{BM.140}(7)(\mathrm c):\ \neg\text{a datum}\ [\mathrm{P5}],\ \text{the range failures re-certified row-wise}];\qquad\text{an isolated baryon read is DARK by ML.1(4): EVERY baryon-currency datum that can reach a register arrives EM-mediated — i.e. spectroscopically, i.e. (by ML.4) molecularly}$$
-$$(4)\quad\textbf{THE MEASUREMENT THEOREM, ASSEMBLED (the directive's single theorem):}\qquad\begin{array}{l|l}\textbf{clause}&\textbf{the disposition}\\\hline(1)\ \text{the rung hierarchy}&\textbf{DERIVED}\ [\mathrm{ML.1}]:\ \text{inter-system registration is rung-2 mediated; darkness is read-species separation}\\\\(2)\ \text{the non-transit boundary}&\textbf{DERIVED}\ [\mathrm{ML.2}]:\ \text{the mask leaks nothing, the content is the triple, the interior is void-closed, the shell is its locus}\\\\(3)\ \text{the entanglement dichotomy}&\textbf{DERIVED}\ [\mathrm{ML.3}]:\ \text{composite or vacuum, no third option}\ (=\mathrm{AT.32}(1));\ \neg\text{collapse in}\ \mathrm{A1}\text{--}\mathrm{A9}\\\\(4)\ \text{the molecular necessity}&\textbf{DERIVED}\ [\mathrm{ML.4}]:\ \text{the minimal formed two-currency instrument is the multi-seal EM-bound composite}\\\\(5)\ \text{the calibration consequence}&\textbf{DERIVED as strategy, values quarantined}\ [\mathrm{ML.5}]:\ \text{molecular spectroscopy is the calibration era's necessary data species}\end{array}$$
-$$(5)\quad\textbf{THE OPEN ROWS THIS TIER LEAVES:}\qquad\begin{array}{l|l}\textbf{row}&\textbf{content}\\\hline(\mathrm{ML\text{-}O1})&\text{the formed transit-leg amplitude (the radiation dynamics):}\ (\mathrm{R9}'')/\mathrm{BM.122}(6)\ \text{re-scoped to Level 6 — the dichotomy}\ [\mathrm{ML.3}]\ \text{is read-level and needs none of it, but a dynamical radiation theory would}\\\hline(\mathrm{ML\text{-}O2})&\text{the}\ N\ge4\ \text{multi-seal configuration calculus: the Def-H.32 sums past the two-body engine}\ [\mathrm{AT.44}];\ \mathrm{BM.31}\ \text{'s grammar census is the frozen floor};\ \mathrm{AT\text{-}O30}\ \text{'s cover engine is reusable}\\\hline(\mathrm{ML\text{-}O3})&\text{the handshake-indicator operational theory: the}\ \chi_{\{NE\ge\mathcal T_0\}}\text{-gated read families across the threshold ladder (span ratio 30) — the locus where ML.5's calibration strategy becomes mathematics}\end{array}$$
-$$(6)\quad\textbf{the declaration census:}\qquad\textbf{the declarations this tier adds: none.}\qquad\neg\text{a P4 addition},\ \neg\text{a new dimensionful scale}\ [\mathrm{P1}],\ \neg\text{a measured value}\ [\mathrm{P5}],\ \neg\text{a species identification}\ [\mathrm{Def\text{-}BM.3}(7)];\qquad\text{§Cal-ML: empty};\qquad\text{marked rows inherited unchanged}\ [\mathrm{AT.63}(4)]$$
+$$\text{SM-mass identification stays}\ \neg\text{formed on the standing bars}\ [\mathrm{BM.140}(7)(\mathrm c):\ \neg\text{a datum}\ [\mathrm{P5}],\ \text{the range failures re-certified row-wise}];\qquad\text{an isolated baryon read is DARK by IT.1(4): EVERY baryon-currency datum that can reach a register arrives EM-mediated — i.e. spectroscopically, i.e. (by IT.4) molecularly}$$
+$$(4)\quad\textbf{THE MEASUREMENT THEOREM, ASSEMBLED (the directive's single theorem):}\qquad\begin{array}{l|l}\textbf{clause}&\textbf{the disposition}\\\hline(1)\ \text{the rung hierarchy}&\textbf{DERIVED}\ [\mathrm{IT.1}]:\ \text{inter-system registration is rung-2 mediated; darkness is read-species separation}\\\\(2)\ \text{the non-transit boundary}&\textbf{DERIVED}\ [\mathrm{IT.2}]:\ \text{the mask leaks nothing, the content is the triple, the interior is void-closed, the shell is its locus}\\\\(3)\ \text{the entanglement dichotomy}&\textbf{DERIVED}\ [\mathrm{IT.3}]:\ \text{composite or vacuum, no third option}\ (=\mathrm{AT.32}(1));\ \neg\text{collapse in}\ \mathrm{A1}\text{--}\mathrm{A9}\\\\(4)\ \text{the molecular necessity}&\textbf{DERIVED}\ [\mathrm{IT.4}]:\ \text{the minimal formed two-currency instrument is the multi-seal EM-bound composite}\\\\(5)\ \text{the calibration consequence}&\textbf{DERIVED as strategy, values quarantined}\ [\mathrm{IT.5}]:\ \text{molecular spectroscopy is the calibration era's necessary data species}\end{array}$$
+$$(5)\quad\textbf{THE OPEN ROWS THIS TIER LEAVES:}\qquad\begin{array}{l|l}\textbf{row}&\textbf{content}\\\hline(\mathrm{IT\.ext{-}O1})&\text{the formed transit-leg amplitude (the radiation dynamics):}\ (\mathrm{R9}'')/\mathrm{BM.122}(6)\ \text{re-scoped to Level 6 — the dichotomy}\ [\mathrm{IT.3}]\ \text{is read-level and needs none of it, but a dynamical radiation theory would}\\\hline(\mathrm{IT\.ext{-}O2})&\text{the}\ N\ge4\ \text{multi-seal configuration calculus: the Def-H.32 sums past the two-body engine}\ [\mathrm{AT.44}];\ \mathrm{BM.31}\ \text{'s grammar census is the frozen floor};\ \mathrm{AT\text{-}O30}\ \text{'s cover engine is reusable}\\\hline(\mathrm{IT\.ext{-}O3})&\text{the handshake-indicator operational theory: the}\ \chi_{\{NE\ge\mathcal T_0\}}\text{-gated read families across the threshold ladder (span ratio 30) — the locus where IT.5's calibration strategy becomes mathematics}\end{array}$$
+$$(6)\quad\textbf{the declaration census:}\qquad\textbf{the declarations this tier adds: none.}\qquad\neg\text{a P4 addition},\ \neg\text{a new dimensionful scale}\ [\mathrm{P1}],\ \neg\text{a measured value}\ [\mathrm{P5}],\ \neg\text{a species identification}\ [\mathrm{Def\text{-}BM.3}(7)];\qquad\text{§Cal-IT: empty};\qquad\text{marked rows inherited unchanged}\ [\mathrm{AT.63}(4)]$$
 $$(7)\quad\textbf{the machine state:}\qquad\texttt{era2/level6\_molecular/checks/run\_all\_level6.py}\to\text{the level's runner (gate first)};\qquad\texttt{measurement\_theorem.py}\to\textbf{21/21 exact markers};\qquad\texttt{check\_level6\_format.py}\to\text{the format + citation gate (Part 6 documents; attestation against the era-1 registry AND the closed Level-5 record)};$$
 $$\text{shared libraries borrowed from Level 5 via}\ \texttt{sys.path}\ (\texttt{qexact.py},\ \texttt{duality.py}\ \text{— single source of truth, documented)};\qquad\text{the Level-5 suite is untouched}\ (37\ \text{checkers},\ 643\ \text{markers});\qquad\texttt{index/},\ \texttt{tags.json},\ \texttt{Summary.md}\ \neg\text{regenerated — promotion stays an Era-2-closure act}\ [\mathrm{AT.63}(4)]$$
-$$(8)\quad\textbf{the era chain:}\qquad\text{every ML-tag cites Parts 1--4, the closed Level-5 record, and earlier ML-tags only.}\ \neg\exists\ \text{a forward pointer used as a premise. Acyclic by construction}\ [\text{machine: the level-6 gate's F3}];$$
+$$(8)\quad\textbf{the era chain:}\qquad\text{every IT-tag cites Parts 1--4, the closed Level-5 record, and earlier IT-tags only.}\ \neg\exists\ \text{a forward pointer used as a premise. Acyclic by construction}\ [\text{machine: the level-6 gate's F3}];$$
 $$\boxed{\ \textbf{coherence is}\ \neg\textbf{contact, and Level 6 opens with no contact claim}\ }\qquad[\mathrm{AT.39}(8)\ \text{'s standing row, inherited at the level opening}]$$
 
-**Req.** ML.1, ML.2, ML.3, ML.4 (this level); AT.6, AT.13, AT.32(1), AT.41, AT.42, AT.44, AT.46(4), AT.54(3),(6), AT.63(2),(4) (Level 5); P1, P4, P5, CT0.9, CT1.12a(3), CT1.19b, EM.25(7), FT.20, FT.22 (Parts 1–2); Def-H.9, Def-H.32, Def-H.33 (Part 3); Def-BM.3(7), Def-BM.9(4), Def-BM.17(3), BM.31, BM.83, BM.88(3),(4), BM.115(2), BM.122(2),(3),(6), BM.134(5), BM.137, BM.140(5),(7) (Part 4); exact symbol-set censuses [math; machine: `measurement_theorem.py` §F, 2/2 + the level runner + the level gate].
+**Req.** IT.1, IT.2, IT.3, IT.4 (this level); AT.6, AT.13, AT.32(1), AT.41, AT.42, AT.44, AT.46(4), AT.54(3),(6), AT.63(2),(4) (Level 5); P1, P4, P5, CT0.9, CT1.12a(3), CT1.19b, EM.25(7), FT.20, FT.22 (Parts 1–2); Def-H.9, Def-H.32, Def-H.33 (Part 3); Def-BM.3(7), Def-BM.9(4), Def-BM.17(3), BM.31, BM.83, BM.88(3),(4), BM.115(2), BM.122(2),(3),(6), BM.134(5), BM.137, BM.140(5),(7) (Part 4); exact symbol-set censuses [math; machine: `measurement_theorem.py` §F, 2/2 + the level runner + the level gate].
 
-**Pf.** Row-wise assembly of ML.1–ML.4 with the slot census re-run [machine F1] and the ontology
+**Pf.** Row-wise assembly of IT.1–IT.4 with the slot census re-run [machine F1] and the ontology
 rows cited to their frozen loci [F2]; the level gate and runner re-run end to end; the Level-5
 record cited at AT.63(2)'s closed status, never edited. No new mathematics is introduced at this
 tag. $\blacksquare$
@@ -270,7 +270,7 @@ nuclear mass table the calibration brief might have wished for is not even an ob
 exists are seal-class prices on a five-rung ladder, and every baryon datum that can reach a
 register arrives dressed in electromagnetism, which is to say spectroscopically, which is to say
 molecularly. So the Measurement Theorem closes the measurement problem as structure — hierarchy,
-horizon, dichotomy — and opens the Molecular era with its first obligation named: the N≥4
+horizon, dichotomy — and opens the Isotopic era with its first obligation named: the N≥4
 configuration calculus, the transit-leg amplitude, and the operational theory of the handshake
 indicator are the three rows on which the calibration era's first real numbers will depend. No
 number is issued here. The box at the end is the one every tier of both eras has carried:
@@ -278,23 +278,23 @@ coherence is not contact, and Level 6 opens exactly as Level 5 did — with the 
 the arithmetic exact.
 
 ---
-## §Cal-ML — free internal parameters of the Molecular era
+## §Cal-IT — free internal parameters of the Isotopic era
 
-**Empty at this tier.** No calibration parameter is added, valued, or re-scoped by Tier ML.1. The
+**Empty at this tier.** No calibration parameter is added, valued, or re-scoped by Tier IT.1. The
 slots this level's rows depend on are inherited and unchanged: $\mathfrak h$ (P1), $\varepsilon_q$
 (AT-O27; $\tfrac18$ distinguished five ways, adoption ¬issued), $e_0$ (EM.25(7); ¬issued),
 $(\varkappa,\beta)$ (AT-O3; P4 core), $\rho_{\mathrm B}$, $\hat\mu'^2$, $\sigma_\ell$, $\sigma_\nu$
 (Cal-BM/Cal-F; ¬declared), the P4 transport profile $(\ell_c,\mathbf c)$, the lift and the
-vielbein [AT.60(4),(9); AT.63(3)]. ML.5(1)'s dependency census is the level's slot map; the
+vielbein [AT.60(4),(9); AT.63(3)]. IT.5(1)'s dependency census is the level's slot map; the
 read rules (M1′)–(M3′) [AT.54(6)] gate every conversion.
 
-## §Open-ML — the rows this tier leaves open
+## §Open-IT — the rows this tier leaves open
 
 | row | content | locus |
 |---|---|---|
-| (ML-O1) | the **formed transit-leg amplitude** — the radiation dynamics: (R9'')/BM.122(6)(O1)–(O4) re-scoped to Level 6; ML.3's dichotomy is read-level and needs none of it, but a dynamical radiation theory would; BM.6(6)'s S-matrix bar stays | BM.122(6); BM.6(6); ML.3(6) |
-| (ML-O2) | the **N≥4 multi-seal configuration calculus** — the Def-H.32 sums past the two-body engine: resolvents, covers, sector censuses on the mixed grammars (N=4 all-δ; N=6 the 3/5–2/5 mix); AT-O30's cover engine and AT.44's two-body engine are the reusable templates | BM.31(2); AT.44; AT-O30; ML.4(5) |
-| (ML-O3) | the **handshake-indicator operational theory** — the χ_{NE≥𝒯₀}-gated read families across the threshold ladder {4𝔥/ln2, …, 120𝔥/ln2} (span 30): where ML.5's calibration strategy becomes mathematics | Def-BM.17(3); BM.122(2); BM.134(5); ML.5(2) |
+| (IT-O1) | the **formed transit-leg amplitude** — the radiation dynamics: (R9'')/BM.122(6)(O1)–(O4) re-scoped to Level 6; IT.3's dichotomy is read-level and needs none of it, but a dynamical radiation theory would; BM.6(6)'s S-matrix bar stays | BM.122(6); BM.6(6); IT.3(6) |
+| (IT-O2) | the **N≥4 multi-seal configuration calculus** — the Def-H.32 sums past the two-body engine: resolvents, covers, sector censuses on the mixed grammars (N=4 all-δ; N=6 the 3/5–2/5 mix); AT-O30's cover engine and AT.44's two-body engine are the reusable templates | BM.31(2); AT.44; AT-O30; IT.4(5) |
+| (IT-O3) | the **handshake-indicator operational theory** — the χ_{NE≥𝒯₀}-gated read families across the threshold ladder {4𝔥/ln2, …, 120𝔥/ln2} (span 30): where IT.5's calibration strategy becomes mathematics | Def-BM.17(3); BM.122(2); BM.134(5); IT.5(2) |
 
 Inherited from Level 5, unchanged [AT.63(3),(5)]: the declarations owed to Era 2 (the lift —
 which decides the index; the vielbein; the P4 transport profile; the read rules (M1′)–(M3′);

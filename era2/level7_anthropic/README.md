@@ -1,6 +1,6 @@
 # Level 7 — the Anthropic era
 
-**Not opened.** Placeholder for the third level of Era 2, following Level 6 (the Molecular era).
+**Not opened.** Placeholder for the third level of Era 2, following Level 6 (the Isotopic era).
 
 When this level opens it inherits the era's shape and discipline (see `../README.md`):
 

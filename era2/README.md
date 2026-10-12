@@ -1,11 +1,11 @@
-# `era2/` — Era 2 · Levels 5–7 (Atomic · Molecular · Anthropic)
+# `era2/` — Era 2 · Levels 5–7 (Atomic · Isotopic · Anthropic)
 
 **The Era-2 half of the two-halves repository** (the sibling half is `/era1` — the frozen v1.0
 canon, Levels 1–4). Three levels follow the v1.0 canon: **Level 5 (Atomic) is CLOSED** — twelve
-tiers, tags AT.1–AT.63, closed at AT.63 (Tier AT.12); **Level 6 (Molecular) is OPEN** — Tier
-ML.1: the Measurement Theorem (ML.1–ML.5), Tier ML.2: the 1p-kn isotopic family and the
-contraction-grammar phase transitions (ML.6–ML.8), Tier ML.3: the multi-seal configuration
-census at N=5,6 — channel widths, masks, and the D⁻ saturation boundary (ML.9–ML.11); Level 7
+tiers, tags AT.1–AT.63, closed at AT.63 (Tier AT.12); **Level 6 (Isotopic) is OPEN** — Tier
+IT.1: the Measurement Theorem (IT.1–IT.5), Tier IT.2: the 1p-kn isotopic family and the
+contraction-grammar phase transitions (IT.6–IT.8), Tier IT.3: the multi-seal configuration
+census at N=5,6 — channel widths, masks, and the D⁻ saturation boundary (IT.9–IT.11); Level 7
 (Anthropic) is unopened. **Nothing here is frozen canon.** Nothing was adopted, no declaration issued, §Cal
 stays empty at every level, and no clause of Parts 1–4 is modified, retracted or renumbered.
 Promotion into the frozen canon's `index/`, `tags.json`, `Summary.md` is an **Era-2-closure act**
@@ -24,7 +24,7 @@ era2/
 │   └── discovery/             ← the free-form session records (superseded by the tiers),
 │       ├── logs/              ←   historical run outputs
 │       └── legacy_checks/     ←   session-1 checker copies (provenance; NOT live)
-├── level6_molecular/          ← Level 6 — the Molecular era (OPEN: Tiers ML.1–ML.2, tags ML.1–ML.8)
+├── level6_isotopic/          ← Level 6 — the Isotopic era (OPEN: Tiers IT.1–IT.2, tags IT.1–IT.8)
 └── level7_anthropic/          ← Level 7 — the Anthropic era (not opened)
 ```
 
@@ -38,8 +38,8 @@ machine, `discovery/` = the working notes). Levels 6–7 inherit this shape when
 cd era2/level5_atomic/checks && python3 run_all_era2.py      # -> 37 checkers, 643 exact markers, 0 failures
 cd era2/level5_atomic/checks && python3 check_era2_format.py # -> 14 tier documents PASS, 0 violations
 # Level 6 (open)
-cd era2/level6_molecular/checks && python3 run_all_level6.py      # -> 4 checkers, 42 exact markers, 0 failures
-cd era2/level6_molecular/checks && python3 check_level6_format.py # -> Part 6 documents PASS (attestation vs
+cd era2/level6_isotopic/checks && python3 run_all_level6.py      # -> 4 checkers, 42 exact markers, 0 failures
+cd era2/level6_isotopic/checks && python3 check_level6_format.py # -> Part 6 documents PASS (attestation vs
                                                                   #    era-1 canon AND the Level-5 record)
 ```
 

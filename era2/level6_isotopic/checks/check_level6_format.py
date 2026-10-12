@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-check_level6_format.py -- structural validator for the Level 6 / Molecular-era tier documents.
+check_level6_format.py -- structural validator for the Level 6 / Isotopic-era tier documents.
 
-Level-6 port of the Level-5 gate: ML.n blocks, ML-O rows, and citation attestation against
+Level-6 port of the Level-5 gate: IT.n blocks, IT-O rows, and citation attestation against
 THREE sources: the frozen era-1 canon registry (era1/canon), the CLOSED Level-5 record
 (../level5_atomic/tiers -- AT.n / AT-O rows), and this level's own definitions.
 
@@ -10,7 +10,7 @@ The era2 analogue of verification/checks/check_format.py, porting its math-disci
 verbatim (math_balance and the escaped-brace counting) and scoping them to this folder. The
 LaTeX-engine array rules of check_format.py are NOT ported: the Part5 tier documents are not
 fed to the xelatex pipeline (source/pipeline builds Parts 1-4 from parts/*.tex), so the rules
-that matter here are the delimiter/brace/citation ones. For every era2/level6_molecular/tiers/Part6_*.md:
+that matter here are the delimiter/brace/citation ones. For every era2/level6_isotopic/tiers/Part6_*.md:
 
   (F1) MATH BALANCE (check_format.py's math_balance, ported): the total $$ count is even; no
        line holds a single '$'; no line carries an odd number of unescaped '$'; inside every
@@ -32,7 +32,7 @@ import os
 import re
 import sys
 
-HERE = os.path.dirname(os.path.abspath(__file__))                 # era2/level6_molecular/checks
+HERE = os.path.dirname(os.path.abspath(__file__))                 # era2/level6_isotopic/checks
 TIERS_DIR = os.path.normpath(os.path.join(HERE, "..", "tiers"))   # the Part6 tier documents
 LEVEL6_README = os.path.normpath(os.path.join(HERE, "..", "README.md"))
 L5_TIERS_DIR = os.path.normpath(os.path.join(HERE, "..", "..", "level5_atomic", "tiers"))
@@ -50,7 +50,7 @@ COR_RE = re.compile(r"\*\*Cor\s+((?:CT\d+|EW|EM|FT|L\d)\.[\d.]+\w*|L0a)\b")
 TOKEN_RE = re.compile(
     r"\b(Def-EM\.\d+|Def-H\.\d+|Def-BM\.\d+|FT\.\d+|BM\.\d+|"
     r"CT\d+\.\d+[ab]?|EW\.\d+a?|EM\.\d+[ab]?|D[0-4]\.\d+|A[1-9]\b|C1[0-3]|C[1-9]\b|"
-    r"P[1-5]\b|L[0-5]a?\b|AT\.\d+|AT-O\d+[a-z]?|ML\.\d+|ML-O\d+[a-z]?|"
+    r"P[1-5]\b|L[0-5]a?\b|AT\.\d+|AT-O\d+[a-z]?|IT\.\d+|IT-O\d+[a-z]?|"
     r"A-BM\.\d+|A-H\.\d+)\b")
 
 WHITELIST = {"L0a"}
@@ -135,7 +135,7 @@ def build_registry():
     return reg
 
 def era2_attested():
-    """AT/AT-O definitions come from the CLOSED Level-5 record; ML/ML-O from this level."""
+    """AT/AT-O definitions come from the CLOSED Level-5 record; IT/IT-O from this level."""
     ats, atos, mls, mlos = set(), set(), set(), set()
     for d in (L5_TIERS_DIR, TIERS_DIR):
         if not os.path.isdir(d):
@@ -147,20 +147,20 @@ def era2_attested():
             ats |= set(re.findall(r"^###\s+(AT\.\d+)\b", src, re.M))
             atos |= set(re.findall(r"AT-O\d+[a-z]?", src))
             if d == TIERS_DIR:
-                mls |= set(re.findall(r"^###\s+(ML\.\d+)\b", src, re.M))
-                mlos |= set(re.findall(r"ML-O\d+[a-z]?", src))
+                mls |= set(re.findall(r"^###\s+(IT\.\d+)\b", src, re.M))
+                mlos |= set(re.findall(r"IT-O\d+[a-z]?", src))
     for p in (L5_README, LEVEL6_README):
         if os.path.exists(p):
             txt = open(p, encoding="utf-8").read()
             atos |= set(re.findall(r"AT-O\d+[a-z]?", txt))
-            mlos |= set(re.findall(r"ML-O\d+[a-z]?", txt))
+            mlos |= set(re.findall(r"IT-O\d+[a-z]?", txt))
     return ats | mls, atos | mlos
 
 def blocks(src):
     parts = re.split(r"^###\s+", src, flags=re.M)
     out = []
     for p in parts[1:]:
-        m = re.match(r"(ML\.\d+)\b", p)
+        m = re.match(r"(IT\.\d+)\b", p)
         if m:
             out.append((m.group(1), p))
     return out
@@ -169,7 +169,7 @@ def main():
     reg = build_registry()
     at_def, ato_def = era2_attested()
     files = sorted(f for f in os.listdir(TIERS_DIR)
-                   if f.startswith("Part6_Molecular_era") and f.endswith(".md"))
+                   if f.startswith("Part6_Isotopic_era") and f.endswith(".md"))
     errs = []
     n_marks = 0
     for fn in files:
@@ -195,9 +195,9 @@ def main():
             print("        " + e)
         return 1
     print(f"  [EXACT] F1 math balance (canon math_balance rules ported) across {len(files)} Part6 tier documents")
-    print(f"  [EXACT] F2 block anatomy: {n_marks} ML-blocks each carry Thm/Req/Pf/Phys + a \\blacksquare terminator")
+    print(f"  [EXACT] F2 block anatomy: {n_marks} IT-blocks each carry Thm/Req/Pf/Phys + a \\blacksquare terminator")
     print(f"  [EXACT] F3 citation accuracy: every cited token attested (canon registry {len(reg)} tags; "
-          f"AT/ML theorem definitions {len(at_def)}; AT-O/ML-O ledger rows {len(ato_def)})")
+          f"AT/IT theorem definitions {len(at_def)}; AT-O/IT-O ledger rows {len(ato_def)})")
     print(f"  [CLOSED] check_level6_format: {len(files)} documents PASS, 0 violations")
     return 0
 

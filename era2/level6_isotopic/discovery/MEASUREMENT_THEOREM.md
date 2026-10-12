@@ -1,4 +1,4 @@
-# MEASUREMENT_THEOREM — session 9 discovery record (Level 6 / Era 2, the Molecular era — OPENING)
+# MEASUREMENT_THEOREM — session 9 discovery record (Level 6 / Era 2, the Isotopic era — OPENING)
 
 > **Directive (Architect):** *"Construct the Measurement Theorem — the rung hierarchy of
 > observation, the non-transit boundary, and the molecular necessity. … All measurements humanity
@@ -10,10 +10,10 @@
 >
 > **Result: the theorem is constructed — four clauses plus the calibration consequence, every
 > clause exact, machine-checked (21/21), and cited to the frozen canon.** Level 5's closed record
-> [AT.63] is cited throughout and never edited; Level 6 opens with tag prefix **ML**, its own
+> [AT.63] is cited throughout and never edited; Level 6 opens with tag prefix **IT**, its own
 > runner and its own citation gate (attesting against era-1 canon AND the Level-5 record). The
 > directive's premises were verified first, and **four corrections are logged on the record**
-> (ML.1(8)) — including one where the canon says the *opposite* of the directive's first sentence,
+> (IT.1(8)) — including one where the canon says the *opposite* of the directive's first sentence,
 > and the rest of the directive describes the corrected object exactly.
 
 ---
@@ -24,12 +24,12 @@
 |---|---|---|
 | "cite AT.30(7)" for the rung ladder | the ladder 𝒜(n) is **CT0.13**; AT.30 has clauses (1)–(6), its (1) is the per-aspect×per-rung census | **corrected (P1)** — both cited at their own loci |
 | "all measurements … confined to rung 1" | the charge read q_EM needs EM activity [FT.20: ∃v f_v≠0], which activates at **rung 2** [CT0.13] | **corrected (P2)** — the directive's "rung-1 restricted system" = the EM-INACTIVE system (mask 𝒦_{n≤1}); the rest of the directive describes exactly that object |
-| "it doesn't radiate" | no formed radiation leg exists from anything [(R9''); BM.122(6)(O1)–(O4)]; the pair channel needs junction AND threshold [BM.122(3)] | **formalized (P3)** — non-transit = mask census + ¬formed supply vertex; the DYNAMICAL radiation leg stays open as **ML-O1** |
+| "it doesn't radiate" | no formed radiation leg exists from anything [(R9''); BM.122(6)(O1)–(O4)]; the pair channel needs junction AND threshold [BM.122(3)] | **formalized (P3)** — non-transit = mask census + ¬formed supply vertex; the DYNAMICAL radiation leg stays open as **IT-O1** |
 | "entangled with the observer" | the ledger has registers, not observers-with-consciousness: the composite is ONE global Def-H.32 sum [AT.42(2)]; "observer" = designated apparatus o [Def-H.9; FT.20 G-row] | **formalized (P4)** |
 | ρ° = ¼I unique entropy max "(CT0.2)" | **confirmed exactly**: n_𝒭=0 ⟹ all-virtual ∧ ρ_pq = ¼I ∧ S_raw = ln4 = max, argmax unique [CT0.2 + Gibbs] | adopted verbatim |
 | BM.140(5)/BM.83 incommensurability; ln1280/ln960 ∉ ℚ | **confirmed**: BM.83(2)'s prime-log ring + the parametric irrationality (∀ rational t ≥ 0); BM.140(5): "the comparison is arithmetic, ¬a bridge" | adopted verbatim |
 
-## II. Clause 1 — the rung hierarchy of observation (ML.1, machine §B)
+## II. Clause 1 — the rung hierarchy of observation (IT.1, machine §B)
 
 The assembled hierarchy, every step a frozen or Level-5 row:
 
@@ -59,7 +59,7 @@ The Earth analogy goes in Phys, flagged as an illustration: before the photon sc
 is a rung-one object; the scattering IS the rung-two activation — the first vertex where a sign
 turns.
 
-## III. Clause 2 — the non-transit boundary (ML.2, machine §C)
+## III. Clause 2 — the non-transit boundary (IT.2, machine §C)
 
 - **Definition (assembled, no new datum)**: truly measured / information-complete ⟺ the active
   mask 𝒦_Σ carries ¬a rung≥2 summand AND the accessible content equals AT.32(1)'s functional
@@ -83,7 +83,7 @@ turns.
 - **THE MEASUREMENT-HORIZON ROW** (assembly): beyond — nothing leaks; within — everything
   preserved, nothing accessible. r_s stays a chart-side dictionary partner [BM.134(5)].
 
-## IV. Clause 3 — the entanglement dichotomy (ML.3, machine §§A,D)
+## IV. Clause 3 — the entanglement dichotomy (IT.3, machine §§A,D)
 
 - **No collapse, as a record census**: A1–A9 carry no projection postulate; the primitives are
   A4 registration (|Π_𝒱ρ| vs ε_q — complementarity verified on the rational grid), CT0.9's binary
@@ -107,9 +107,9 @@ turns.
   alone [AT.12(3)], ⟨q⟩_ens = 0 [AT.53], the dynamically fixed state is ρ°). **NO THIRD OPTION =
   AT.32(1) itself.** "Radiation is entanglement": ¬∃ a formed emission terminating nowhere.
 - **The honest bound**: the dichotomy is READ-LEVEL. The formed transit-leg amplitude does not
-  exist [(R9''); BM.6(6)] — **ML-O1**, named not assumed. The dichotomy needs none of it.
+  exist [(R9''); BM.6(6)] — **IT-O1**, named not assumed. The dichotomy needs none of it.
 
-## V. Clause 4 — the molecular necessity (ML.4, machine §E)
+## V. Clause 4 — the molecular necessity (IT.4, machine §E)
 
 - **Incommensurability re-verified**: 2^a3^b5^c = 1 ⟹ a=b=c=0 (exhaustive |·|≤12, Fraction
   powers — the int-pow float trap avoided); the parametric solve: q·ln1280 = p(ln960+t·ln2)
@@ -143,7 +143,7 @@ turns.
   exactly here: it forbids converting the currencies, and the molecular read family is the formed
   locus where both are present WITHOUT conversion.** "We need molecular, sadly" — DERIVED.
 
-## VI. Clause 5 — the calibration consequence (ML.5, machine §F)
+## VI. Clause 5 — the calibration consequence (IT.5, machine §F)
 
 The slot-vs-read dependency census (exact table from the frozen formulas): ε_q fixable only from
 flicker-family reads; 𝔥/ρ_B/μ̂′² only from informational/pole families; e₀ only from the running
@@ -160,7 +160,7 @@ conversion; nothing issued, estimated or compared [P5].
 
 ## VII. Check ledger
 
-`era2/level6_molecular/checks/measurement_theorem.py` — **21/21 EXACT**, no floating point:
+`era2/level6_isotopic/checks/measurement_theorem.py` — **21/21 EXACT**, no floating point:
 
 - §A gates: A1 the vacuum family + unique maximum (majorization) + b(ρ°)=¾; A2 the A4 criterion's
   exact complements + window widths over ε_q ∈ [0,¼); A3 the Poisson fixed point (ℚ[[γ]] to
@@ -181,9 +181,9 @@ conversion; nothing issued, estimated or compared [P5].
 - §F clause 5: F1 the slot-family disjointness + mixed-loci compositeness; F2 the ontology rows
   (assembly on the cited frozen loci).
 
-New infrastructure: `check_level6_format.py` (the gate: canon math-balance rules ported; ML-block
+New infrastructure: `check_level6_format.py` (the gate: canon math-balance rules ported; IT-block
 anatomy; citation attestation against THREE sources — era-1 canon 640 tags, the closed Level-5
-record 63 AT-tags + 33 AT-O rows, this level's 5 ML-tags + 3 ML-O rows) and `run_all_level6.py`
+record 63 AT-tags + 33 AT-O rows, this level's 5 IT-tags + 3 IT-O rows) and `run_all_level6.py`
 (gate first; **2 checkers, 25 markers, exit 0**). Shared libs borrowed from Level 5 via sys.path
 (`qexact`, `duality`) — single source of truth.
 
@@ -208,13 +208,13 @@ record 63 AT-tags + 33 AT-O rows, this level's 5 ML-tags + 3 ML-O rows) and `run
   derived, machine-checked, cited; the measurement problem closed **as a structural theorem**:
   no collapse postulate exists or is needed; measurement = rung-2 activation + composite boundary
   read + tilt step; the dichotomy is an exhaustiveness theorem (AT.32(1)).
-- **Premise corrections logged** (ML.1(8)): (P1) the citation locus; (P2) the rung floor (the
+- **Premise corrections logged** (IT.1(8)): (P1) the citation locus; (P2) the rung floor (the
   canon says the opposite of the directive's first sentence — and the directive's own
   "rung-1 restricted system" is the EM-inactive one, which the theorem formalizes); (P3) the
-  radiation formalization with ML-O1 named; (P4) the observer/entanglement dictionary.
-- **Open rows**: ML-O1 (formed transit-leg amplitude), ML-O2 (the N≥4 configuration calculus),
-  ML-O3 (the handshake-indicator operational theory). Level-5 inheritance unchanged [AT.63(3)].
-- **Declarations issued: none.** §Cal-ML empty. P5 quarantine untouched. "Molecular" stays
+  radiation formalization with IT-O1 named; (P4) the observer/entanglement dictionary.
+- **Open rows**: IT-O1 (formed transit-leg amplitude), IT-O2 (the N≥4 configuration calculus),
+  IT-O3 (the handshake-indicator operational theory). Level-5 inheritance unchanged [AT.63(3)].
+- **Declarations issued: none.** §Cal-IT empty. P5 quarantine untouched. "Isotopic" stays
   quoted [Def-BM.3(7)]. Level 5's closed record cited, never edited [AT.63(2)].
 
 > *The corpus rewards: read the whole rather than the era; treat every "absent" as level-local;

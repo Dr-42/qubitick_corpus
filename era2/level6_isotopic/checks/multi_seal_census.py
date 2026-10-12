@@ -2,11 +2,11 @@
 """
 multi_seal_census.py -- the multi-seal configuration census at N=5,6: the channel width
 skeleton, the contraction grammar, the mask dimensions, and the D^- saturation boundary.
-Level 6, Tier ML.3 candidates (ML.9-ML.11).
+Level 6, Tier IT.3 candidates (IT.9-IT.11).
 
 DIRECTIVE (Architect): "Run the Multi-Seal Configuration Census for N=5 and N=6 -- the channel
 width skeleton and the D^- saturation boundary ... determine if the census terminates or
-encompasses D^- pure saturated areas ... I think this does ML-O4 and ML-O2 simultaneously."
+encompasses D^- pure saturated areas ... I think this does IT-O4 and IT-O2 simultaneously."
 
 PREMISE AUDIT (verified against the frozen rows before construction; corrections logged):
   * (P1) "the D^- scalar sink is formally active (adding exactly 1 dimension to reach dim
@@ -24,15 +24,15 @@ PREMISE AUDIT (verified against the frozen rows before construction; corrections
     16 bounds the PAIR channel [CT0.12 Rmk]; the per-vertex tick demand D_tick(n(v)) = 2^(n+1)
     saturates EXACTLY at n=3 (16 = C_cap, admissible) and would overshoot at n=4 (32, NOT
     admissible) [CT0.5/CT0.6/CT0.11]; the subnetwork mask bound is 18, not 16 [FT.26(3)]. Three
-    different spaces -- the currency/space discipline of ML.1(6) applies verbatim.
-  * (P3) "this does ML-O4 and ML-O2 simultaneously" -- ADJUDICATED: ML-O2 CLOSES ON ITS CENSUS
+    different spaces -- the currency/space discipline of IT.1(6) applies verbatim.
+  * (P3) "this does IT-O4 and IT-O2 simultaneously" -- ADJUDICATED: IT-O2 CLOSES ON ITS CENSUS
     SIDE at the N=5,6 boundaries (grammar, widths, masks, D^- status -- this file); its
-    amplitude side (the Def-H.32 ensemble sums over the grouping sectors) stays open (ML-O2
-    residue). ML-O4 (the nucleon-nucleon connector species: count, winding d, fusion) is NOT
+    amplitude side (the Def-H.32 ensemble sums over the grouping sectors) stays open (IT-O2
+    residue). IT-O4 (the nucleon-nucleon connector species: count, winding d, fusion) is NOT
     touched by a grammar census: the (a,b) groupings name the SUPPORT DECOMPOSITIONS (N=5: one
     2-support + one 3-support, uniquely; N=6: three 2-supports or two 3-supports), and the
-    connectors BETWEEN supports still have no frozen species -- ML.7's parametric tree reading
-    stands. ML-O4 stays OPEN, sharpened.
+    connectors BETWEEN supports still have no frozen species -- IT.7's parametric tree reading
+    stands. IT-O4 stays OPEN, sharpened.
 
 DERIVED HERE (machine, exact):
   (W1) THE CHANNEL WIDTH SKELETON: W_N(Q) = [z^Q](2+z+z^{-1})^N = C(2N, Q+N) -- verified by
@@ -44,7 +44,7 @@ DERIVED HERE (machine, exact):
        where the classes coincide -- BM.31(3)'s pattern extended); |Q|=6 is W_6-exclusive;
        Q is defined only on sealed supports (C=1 [BM.135(1); D2.14]) -- and every grammar
        grouping is total (covers all N attachments), hence sealed.
-  (W2) THE GRAMMAR CENSUS at N=5,6 (the ML.2 engine reused verbatim, triple-certified):
+  (W2) THE GRAMMAR CENSUS at N=5,6 (the IT.2 engine reused verbatim, triple-certified):
        g(5) = 10, ALL of type (a,b) = (1,1): one delta-pair + one epsilon-triple -- 2a+3b=5 has
        the UNIQUE nonneg solution (1,1), so g_eps(5) = 0 is forced arithmetically: EVERY
        5-attachment grouping is genuinely mixed (the directive's "highly strained" = NO pure-
@@ -54,7 +54,7 @@ DERIVED HERE (machine, exact):
   (W3) THE PROTECTION PERIODICITY: g_eps(N) > 0 <=> 3|N (N=2..18) -- the pure-baryon sector
        vanishes at N=4,5 (delta shares 1 and 1) and RETURNS at every multiple of 3 (N=6: 2/5;
        N=9: 2/11; N=12: 40/427): the protection is periodic; the delta share rises strictly
-       along the family N=3m (ML.2's monotonicity, re-cited).
+       along the family N=3m (IT.2's monotonicity, re-cited).
   (W4) THE MASK DIMENSIONS: rung census re-run (dim K_n = 6,16,17,25; 26 formal-only; the lock
        biconditional n=0..16 [AT.50(3),(4)]); subnetwork masks: dim K_Sigma = 9 (G+W+H core)
        + 1*[EM active] + 8*[strong: Colour != empty AND C=1] <= 18 [FT.20; FT.26(3); FT.28(4)];
@@ -65,14 +65,14 @@ DERIVED HERE (machine, exact):
        (epsilon: n=3, D_tick = 16 = C_cap EXACTLY SATURATED); n=4 would give 32 > 16 --
        inadmissible [CT0.5/CT0.6]: NO vertex carries 4+ attachments; N=5 needs >= 2 supports in
        every grouping (1+1 blocks), N=6 needs >= 2 (3+0 or 0+2 blocks) -- the multi-junction
-       spreading of ML.6(5), censused per grouping.
+       spreading of IT.6(5), censused per grouping.
   (W6) THE D^- STATUS at these boundaries (the "nonzero-but-unreachable" verification): the
        junction vertices are D^-CONFIGURED [Census FT.35(4); CT4.1] -- placement, not
        activation; the sink is masked at every accessible rung [CT4.2: P_M F_D- P_M = 0 for all
        n<=3, no pole of Z(R,n), one-way transfer]; formally nonzero at the rung-4 unlocking but
        unrealized (iota_4), inaccessible (V_0..V_3), and structureless even if reached [AT.50(5);
        CT4.4: no gauge algebra, no generator; CT4.5: dust w=0; CT4.7: entropy locked]; and the
-       void closure caps it: no construction could exist inside the bound [BM.143(1); ML.2(6)].
+       void closure caps it: no construction could exist inside the bound [BM.143(1); IT.2(6)].
        THE CENSUS TERMINATES IN A STRUCTURAL CENSORSHIP, NOT A SMOOTH SINGULARITY: the interior
        is preserved (every edge registered [D0.7]) and provably cannot reach the boundary.
   (W7) THE SYNTHESIS (the directive's step 4, as exact ledger rows): what GROWS with N is the
@@ -89,7 +89,7 @@ DERIVED HERE (machine, exact):
 
 BARS RESPECTED: species bars ("multi-seal EM-bound composites", no isotope identification [P5;
 Def-BM.3(7)]); BM.83/BM.134(5) (no currency mixing -- the census is pure seal combinatorics +
-mask arithmetic); FT.55(1); the Level-5 closed record cited, never edited [AT.63(2)]; the ML.2
+mask arithmetic); FT.55(1); the Level-5 closed record cited, never edited [AT.63(2)]; the IT.2
 engine reused with attribution (the directive's "do not reinvent the census"); no declaration;
 no new calibration parameter.
 
@@ -120,7 +120,7 @@ def fact(n):
     return r
 
 # ---------------------------------------------------------------------------
-# the grammar engine -- REUSED VERBATIM from isotopic_family.py (ML.2) per the
+# the grammar engine -- REUSED VERBATIM from isotopic_family.py (IT.2) per the
 # directive's "do not reinvent the census; extend it" (single mathematical
 # source, two census loci): triple certification enumeration/DP/closed form.
 # ---------------------------------------------------------------------------
@@ -227,7 +227,7 @@ chk("A2  THE CROSS-N CENSUS [BM.31(3)'s pattern extended]: W_5(Q) != W_6(Q) on t
     "exact integer comparisons on the full tables")
 
 print("\n" + "=" * 100)
-print("PART B -- the contraction grammar census at N=5,6 (the ML.2 engine, extended)")
+print("PART B -- the contraction grammar census at N=5,6 (the IT.2 engine, extended)")
 print("=" * 100)
 g5_tot, g5_parts = g_closed(5)
 g6_tot, g6_parts = g_closed(6)
@@ -245,7 +245,7 @@ ge5 = (g5_parts.get((0, 5 // 3), 0) == 0 and 5 % 3 != 0)
 print(f"     N=5: g = {g5_tot}, blocks {g5_parts}; solutions of 2a+3b=5: {solv5}")
 print(f"     N=6: g = {g6_tot}, blocks {g6_parts}; delta share {Fr(15,25)} vs pure-eps {Fr(10,25)}")
 chk("B1  ** THE GRAMMAR CENSUS, triple-certified ** [Def-BM.9(3); BM.31(1),(2); CT3.17a(2);"
-    "\n           FT.41(b); the ML.2 engine reused]: N=5: g(5) = 10 with the (a,b) breakdown {(1,1):10}"
+    "\n           FT.41(b); the IT.2 engine reused]: N=5: g(5) = 10 with the (a,b) breakdown {(1,1):10}"
     "\n           -- enumeration, recurrence and closed form agree; N=6: g(6) = 25 = {(3,0):15, (0,2):10}"
     "\n           -- the frozen mix re-derived EXACTLY: 15/25 = 3/5 delta-containing vs 10/25 = 2/5"
     "\n           pure-epsilon [BM.31(2)].",
@@ -255,9 +255,9 @@ chk("B2  ** N=5 IS FORCED-MIXED (the 'highly strained' row, as arithmetic) ** 2a
     "\n           UNIQUE nonnegative solution (a,b) = (1,1): every one of the ten 5-attachment groupings"
     "\n           is exactly one delta-pair plus one epsilon-triple -- g_eps(5) = 0 is FORCED, so NO"
     "\n           pure-baryon (4Z) sector exists at N=5 and the statistics composition is 100%"
-    "\n           mixed-class (2Z only) [BM.31(4); ML.8/B2's composition rows].  N=5 is also the FIRST"
+    "\n           mixed-class (2Z only) [BM.31(4); IT.8/B2's composition rows].  N=5 is also the FIRST"
     "\n           support size with a mandatory epsilon alongside the mandatory delta: N=4 is all-"
-    "\n           delta (3 perfect matchings [ML.6(5)]), N=5 cannot avoid the triple, N=6 restores the"
+    "\n           delta (3 perfect matchings [IT.6(5)]), N=5 cannot avoid the triple, N=6 restores the"
     "\n           pure-epsilon option (2/5).",
     strain5 and ge5, "exact solution census of 2a+3b=5 + the block breakdown")
 
@@ -277,7 +277,7 @@ chk("B3  ** THE PROTECTION PERIODICITY ** g_eps(N) > 0 <=> 3 | N, verified for E
     "\n           (closed form against the recurrence throughout): the pure-baryon sector vanishes at"
     "\n           N=4 and N=5 (delta shares 1 and 1) and RETURNS at every multiple of 3 -- but never"
     "\n           proportionally: along the family N = 3m the delta share rises strictly (3/5, 9/11,"
-    "\n           ..., 387/427 at N=12 [ML.7's census re-derived]) -- the protection is PERIODIC, the"
+    "\n           ..., 387/427 at N=12 [IT.7's census re-derived]) -- the protection is PERIODIC, the"
     "\n           erosion within it is monotone.  No floating point touches any share.",
     per_ok and fam_shares_ok and mono3m, "17 exact gcd-free Fraction shares")
 
@@ -304,7 +304,7 @@ bound_ok = (max(sigma_dims.values()) == 18 and sigma_dims[(1, 1)] == 18
 dminus_never = all("D-" not in A_of(3) for _ in range(1))       # rung-3 vertices: no D^-
 # the N=5,6 sealed EM-active members attain the bound: sealed (C=1, grammar total) + EM active
 attain_ok = (sigma_dims[(1, 1)] == 18)
-chk("C1  ** THE MASK DIMENSIONS (two species, kept apart -- ML.1(6)'s discipline) ** RUNG masks"
+chk("C1  ** THE MASK DIMENSIONS (two species, kept apart -- IT.1(6)'s discipline) ** RUNG masks"
     "\n           [D2.3; CT0.12; CT0.14; AT.50(1)]: dim K_n = 6, 16, 17, 25 for n = 0..3 and 26 ONLY"
     "\n           at the formal n >= 4 -- with the lock biconditional re-run exhaustively: D^- in A(n)"
     "\n           <=> n >= 4 <=> 2^(n+1) > 16 = C_cap <=> NOT admissible (n = 0..16).  SUBNETWORK masks"
@@ -339,9 +339,9 @@ chk("C2  ** THE VERTEX PLACEMENT (where the screen closes, at these boundaries) 
     "\n           D_tick = 8) and 3-supports (epsilon, n=3, D_tick = 16 = C_cap EXACTLY SATURATED,"
     "\n           admissible); n=4 would demand 32 > 16 -- inadmissible [CT0.5; CT0.6; CT3.11(1):"
     "\n           colour slots at n=3]: NO vertex carries 4+ attachments, so N=5 runs on >= 2 supports"
-    "\n           in every grouping (uniquely 1+1) and N=6 on >= 2 (3+0 or 0+2) -- ML.6(5)'s multi-"
+    "\n           in every grouping (uniquely 1+1) and N=6 on >= 2 (3+0 or 0+2) -- IT.6(5)'s multi-"
     "\n           junction spreading, censused per grouping.  The connectors BETWEEN the supports have"
-    "\n           no frozen species: ML-O4 stays open (the census names the decomposition, not the"
+    "\n           no frozen species: IT-O4 stays open (the census names the decomposition, not the"
     "\n           glue).",
     place_ok and n4_inadmissible and n3_saturated, "per-grouping support census, exact tick demands")
 
@@ -360,7 +360,7 @@ chk("C3  ** THE D^- STATUS AT THE BOUNDARIES: NONZERO-BUT-UNREACHABLE, re-verifi
     "\n           iota_4 is unrealized, the accessible vertex sets stay {V_0..V_3}, and the sink is"
     "\n           structureless even if reached [AT.50(5); CT4.4: no gauge algebra, no generator; CT4.5:"
     "\n           dust w=0; CT4.7: entropy locked]; and the void closure caps everything: no"
-    "\n           construction could exist inside the bound [BM.143(1); ML.2(6)].  THE CENSUS"
+    "\n           construction could exist inside the bound [BM.143(1); IT.2(6)].  THE CENSUS"
     "\n           TERMINATES IN A STRUCTURAL CENSORSHIP, NOT A SMOOTH SINGULARITY: the interior is"
     "\n           preserved (every edge registered [D0.7]) and provably cannot reach the boundary.",
     annih_ok and sink_const, "the block census + the frozen lock rows, cited row-wise")
@@ -394,22 +394,22 @@ chk("D1  ** THE SYNTHESIS (the directive's step 4, as exact rows) ** what GROWS 
 
 print("""
   ============================================================================================
-  THE VERDICT (candidate tags ML.9-ML.11):
-    * ML-O2 CLOSED ON ITS CENSUS SIDE at the N=5,6 boundaries: the width skeleton W_N(Q) =
+  THE VERDICT (candidate tags IT.9-IT.11):
+    * IT-O2 CLOSED ON ITS CENSUS SIDE at the N=5,6 boundaries: the width skeleton W_N(Q) =
       C(2N,Q+N) exact (1024/4096 states, 11/13 classes, frozen W_2/W_3 reproduced); the grammar
       exact (g(5)=10 all-(1,1) forced-mixed; g(6)=25 with the frozen 3/5-2/5 mix); the mask
       dimensions exact (dim K_Sigma = 9+[EM]+8[strong] <= 18, ATTAINED by the sealed EM-active
       members; the rung-26 mask formal-only); the D^- status re-verified (placement not
-      activation; masked; nonzero-but-unreachable; void-closed). RESIDUE (ML-O2): the Def-H.32
+      activation; masked; nonzero-but-unreachable; void-closed). RESIDUE (IT-O2): the Def-H.32
       ensemble sums over the grouping sectors (the amplitude side).
-    * ML-O4 STAYS OPEN, SHARPENED: the groupings name the support decompositions (N=5: 1+1
+    * IT-O4 STAYS OPEN, SHARPENED: the groupings name the support decompositions (N=5: 1+1
       uniquely; N=6: 3+0 or 0+2); the connectors between supports have no frozen species -- the
       census cannot and does not invent one.
     * PREMISE CORRECTIONS: (P1) the 26-dim D^- mask is a RUNG-mask at the inadmissible rung --
       subnetwork masks never contain D^- (FT.26(3) Pf) and are bounded by 18, attained here;
       (P2) "bounded by C_cap=16" holds for the pair channel and the per-vertex tick demand
       (saturated at n=3), NOT for the subnetwork mask (18) -- three spaces, kept apart;
-      (P3) this closes ML-O2's census side, not ML-O4.
+      (P3) this closes IT-O2's census side, not IT-O4.
     * BARS: no isotope/species identification [P5; Def-BM.3(7)]; no currency mixing [BM.83;
       BM.134(5)]; the collapse analogy is framing, flagged; Level-5 record cited, never edited.
     * Declarations issued: none.

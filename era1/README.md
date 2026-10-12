@@ -24,7 +24,7 @@ cd canon && python3 make_summary.py      # regenerate Summary.md (the Summary-of
 
 ## Relation to the rest of the repository
 
-- **`../era2/`** — the sibling half: the Era-2 record (Levels 5–7: Atomic · Molecular ·
+- **`../era2/`** — the sibling half: the Era-2 record (Levels 5–7: Atomic · Isotopic ·
   Anthropic). **Level 5 (the Atomic era) is CLOSED** at tag AT.63 (Tier AT.12); its 14 tier
   documents cite this half's 640-tag registry and are citation-gated against it
   (`../era2/level5_atomic/checks/check_era2_format.py` reads `canon/` here).
