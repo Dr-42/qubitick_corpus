@@ -1,1 +1,0 @@
-../canon/Part4_Baryomesonic_era.md
