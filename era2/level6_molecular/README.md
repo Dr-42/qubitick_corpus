@@ -1,4 +1,4 @@
-# `era2/level6_molecular/` — Level 6 · the **Molecular** era · Tiers ML.1–ML.2
+# `era2/level6_molecular/` — Level 6 · the **Molecular** era · Tiers ML.1–ML.3
 
 **Status: OPENED at session 9 — discovery-phase working level. NOT frozen canon.** Nothing here
 is adopted, no declaration issues, §Cal-ML is empty, and no clause of Parts 1–4 or of Level 5's
@@ -9,12 +9,15 @@ record, never edited.
 |---|---|
 | `tiers/Part6_Molecular_era_TierML1.md` | **Tier ML.1** — ML.1–ML.5: **the Measurement Theorem** (the Architect's directive), in four clauses plus its calibration consequence, with §Cal-ML and §Open-ML |
 | `tiers/Part6_Molecular_era_TierML2.md` | **Tier ML.2** — ML.6–ML.8: **the 1p-kn isotopic family and the contraction-grammar phase transitions** — the triple-certified grammar engine, the family census (N = 3(k+1); first δ admission at the deuteron; 1p3n δ-dominant at 387/427 on the E_int=24 floor), the capacity adjudication, the lepton-saturation flag, the premise corrections, and §Open-ML's new row ML-O4 |
+| `tiers/Part6_Molecular_era_TierML3.md` | **Tier ML.3** — ML.9–ML.11: **the multi-seal configuration census at N=5,6** — the channel-width skeleton (W_N(Q)=C(2N,Q+N); 1024/4096 states), the forced-mixed N=5 grammar, the mask-dimension attainment (dim 𝒦_Σ = 18), the D⁻ saturation-boundary adjudication (two mask species; structural censorship), and the ML-O2 census-side closure |
 | `checks/measurement_theorem.py` | the theorem's checker — **21/21 exact**, no floating point |
 | `checks/isotopic_family.py` | Tier ML.2's checker — **8/8 exact**: the grammar engine (enumeration ∧ recurrence ∧ closed form), the family census, the Vandermonde charge convolution, the capacity census |
+| `checks/multi_seal_census.py` | Tier ML.3's checker — **9/9 exact**: the width skeleton (Laurent vs binomial), the N=5,6 grammar census, both mask species, the support placement, the D⁻ status chain |
 | `checks/run_all_level6.py` | the level's runner (gate first, exit 0 iff green) |
 | `checks/check_level6_format.py` | the level's format + citation gate: canon `math_balance` rules ported, ML-block anatomy (Thm/Req/Pf/Phys + ∎), and citation attestation against **three** sources — the era-1 canon registry (`era1/canon`, 640 tags), the closed Level-5 record (`../level5_atomic/tiers`, AT.n/AT-O rows), and this level's own ML definitions |
 | `discovery/MEASUREMENT_THEOREM.md` | the session-9 working record: the directive's four premises verified against the canon, the four corrections logged, the check ledger |
 | `discovery/ISOTOPIC_FAMILY.md` | the session-10 working record: the premise audit (three corrections, one confirmation), the family tables, the adjudication |
+| `discovery/MULTI_SEAL_CENSUS.md` | the session-11 working record: the premise audit (three corrections), the width/grammar/mask tables, the synthesis, the adjudication |
 
 **Shared libraries are borrowed, not copied:** `qexact.py` (rigorous `Fraction` intervals) and
 `duality.py` (the `Gauss(i)` core) come from `../level5_atomic/checks` via `sys.path` — single
@@ -40,6 +43,18 @@ E_int prices and floors (6(k+1) disjoint / 8k+6 tree; floors hit at k = 0,1,3), 
 charge census (Q = +1 always), capacity-never-bites, and the (P1)–(P3) closure from k=1 · ML.8
 the lepton-saturation flag (isotopy = same charge, different grammar multiplicities), the premise
 corrections, ML-O4 (the nucleon–nucleon connector species), and the status rows.
+
+**ML.9–ML.11 (Tier ML.3) the multi-seal census at N=5,6:** ML.9 the channel-width skeleton
+(W_N(Q) = C(2N,Q+N); W₅ sums 1024 over 11 classes, W₆ 4096 over 13; the frozen W₂/W₃
+reproduced; cross-N separation) + the grammar census (g(5)=10 all-(1,1) — forced-mixed by the
+unique solution of 2a+3b=5; g(6)=25 with the frozen 3/5–2/5 mix; the protection periodicity
+g_ε>0 ⟺ 3|N to N=18) · ML.10 the two mask species (rung 26 formal-only vs subnetwork ≤18 —
+**attained** by the sealed EM-active members), the vertex placement (2-/3-supports, D_tick(3)=16
+saturated, n=4 inadmissible), and the D⁻ status chain (placement ¬activation; masked;
+nonzero-but-unreachable; void-closed — **the census terminates in a structural censorship**) ·
+ML.11 the synthesis (grammar/width grow, the sink is CONSTANT 1-dim — no saturated areas exist;
+the combinatorial capacity limit), the premise corrections (P1)–(P3), **ML-O2 closed on its
+census side** (amplitude side = residue), **ML-O4 open, sharpened**.
 molecular necessity (the incommensurability bar becomes operational only in the multi-seal
 composite) · ML.5 the calibration consequence + the tier's status rows, §Cal-ML, §Open-ML.
 
