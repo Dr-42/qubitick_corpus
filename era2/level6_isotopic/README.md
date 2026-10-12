@@ -1,4 +1,4 @@
-# `era2/level6_isotopic/` — Level 6 · the **Isotopic** era · Tiers IT.1–IT.6
+# `era2/level6_isotopic/` — Level 6 · the **Isotopic** era · Tiers IT.1–IT.7
 
 **Status: OPENED at session 9 — discovery-phase working level. NOT frozen canon.** Nothing here
 is adopted, no declaration issues, §Cal-IT is empty, and no clause of Parts 1–4 or of Level 5's
@@ -22,12 +22,14 @@ record: IT.15(3).
 | `tiers/Part6_Isotopic_era_TierIT4.md` | **Tier IT.4** — IT.12–IT.15: **the N=9 isobar doublet and its single-seed weak transition** ("tritium" → "helium-3" + ℓ + ν, quoted) — the doublet as boundary sectors (43758/31824; sector ⊋ species at shares 1000/2431, 375/884), the BM.23 carrier chain inherited coupling-invariantly, the conditionally forced neutral member, **the route-relative Q-value verdict: kinematically CLOSED on every adopted read; 11/8 derived and exact as the route-(ii) measure PRICE — priced ¬adopted**, the conditional endpoint section, the rename record, and the new declaration owed (the mass-read route choice) |
 | `tiers/Part6_Isotopic_era_TierIT5.md` | **Tier IT.5** — IT.16–IT.18: **the hydrogen isotope sequence** — the independent forward compute re-deriving the N=9 doublet decay-product-free (confirming IT.12 to the integer: 43758/31824, 11/8, the 343-triple shares), the grammar tipping point along N=3,6,9,12 (g_δ/g_ε = 3/2, 9/2, 387/40; δ-share monotone), the N=12 boundary census (W₁₂; the Θ_int 4ℤ/2ℤ mixture), **the binding-read adjudication** (B_info = 0 exactly at every k — the cutoff cannot arise on the informational read; every constructed read ≤ 0; no inter-nucleon binding exists), the four premise corrections, and **the new open row IT-O5** |
 | `tiers/Part6_Isotopic_era_TierIT6.md` | **Tier IT.6** — IT.19–IT.21: **the nucleon–nucleon connector species** — IT-O4 CLOSED (the connector is the frozen open bidirectional Σ₁₂ pair, winding d=0 [R10 = registration data, BM.143(3)], +2 E_int reproducing 8k+6, charge-telescoping, ε=+1, distinct supports, uniform rung-4 saturation), the 2k residue sign adjudicated read-relative (B_info=−2ku<0 uniformly — the deuteron too), and **IT-O5 sharpened to a single gate (IT-O2)** |
+| `tiers/Part6_Isotopic_era_TierIT7.md` | **Tier IT.7** — IT.22–IT.24: **the "exotic states" read-tier adjudication** — the N=4 support class (g(4)=3, all δ, g_ε=0: forced entirely mesonic-type), the N=5 support class (2a+3b=5 unique (1,1), g(5)=10, g_ε=0 forced: 100% mixed, no pure-baryon sector), the proton sector's exotic sign triples ((+1,+1,−1)-type; the majority-exotic interior 1000/2431, 375/884 < ½), the Measurement-Theorem read-tier closure (the inter-system read sees only the telescoped q_EM: 6→1, 43758→1), and **the LHC census mapping confined to a machine-scanned [EXT] audit clause** (IT.22/IT.23 token-free; zero decimals) |
 | `checks/measurement_theorem.py` | the theorem's checker — **21/21 exact**, no floating point |
 | `checks/isotopic_family.py` | Tier IT.2's checker — **8/8 exact**: the grammar engine (enumeration ∧ recurrence ∧ closed form), the family census, the Vandermonde charge convolution, the capacity census |
 | `checks/multi_seal_census.py` | Tier IT.3's checker — **9/9 exact**: the width skeleton (Laurent vs binomial), the N=5,6 grammar census, both mask species, the support placement, the D⁻ status chain |
 | `checks/isobar_transition.py` | Tier IT.4's checker — **25/25 exact**: g(9) triple certification, the N=9 width row (19 classes, 262144 states), the 343-triple sector decomposition with exact nucleonic shares, the overflow/balance/two-body-impossibility re-derivations, the ln2 enclosure, the route census with opposite-sign witnesses, the zero-point instance 567u² — every section with an adversarial witness |
 | `checks/isotope_cutoff.py` | Tier IT.5's checker — **20/20 exact**: the independent forward compute (fresh Laurent convolution + fresh set-partition enumeration), the N=3,6,9,12 grammar tipping point, the N=12 boundary/Θ_int census, the vanishing-informational-binding bridge, the connector-residue row, the constructed-reads-≤0 sign census — every section with an adversarial witness |
 | `checks/connector_species.py` | Tier IT.6's checker — **17/17 exact**: the connector species (open bidirectional, d=0, +2 E_int, charge telescoping, distinct supports), E_int^tree=8k+6 reproduced, the uniform rung-4 saturation, the B_info=−2ku sign census, the k-identical connector, the Step-3 mechanism refutations — every section with an adversarial witness |
+| `checks/exotic_states.py` | Tier IT.7's checker — **17/17 exact**: the N=4 and N=5 support-class censuses, the exhaustive ternary sign-triple enumeration, the N=9 majority-exotic shares, the telescoping/horizon witnesses, and **the [EXT]-confinement scan of the tier document** (the FT.114 §H pattern: IT.22/IT.23 token-free, zero decimal numerics) |
 | `checks/run_all_level6.py` | the level's runner (gate first, exit 0 iff green) |
 | `checks/check_level6_format.py` | the level's format + citation gate: canon `math_balance` rules ported, IT-block anatomy (Thm/Req/Pf/Phys + ∎), and citation attestation against **three** sources — the era-1 canon registry (`era1/canon`, 640 tags), the closed Level-5 record (`../level5_atomic/tiers`, AT.n/AT-O rows), and this level's own IT definitions |
 | `discovery/MEASUREMENT_THEOREM.md` | the session-9 working record: the directive's four premises verified against the canon, the four corrections logged, the check ledger |
@@ -36,6 +38,7 @@ record: IT.15(3).
 | `discovery/ISOBAR_TRANSITION.md` | the session-12 working record: the rename execution, the premise audit (four corrections + one refinement + the confirmations), the check ledger, the adjudication |
 | `discovery/ISOTOPE_CUTOFF.md` | the session-13 working record: the state move found on resume (session 12 / IT.4 / the rename), the premise audit (P1–P4 + the informational-binding bridge), the forward-compute tables, the N=3,6,9,12 census, the binding-read adjudication, and IT-O5 |
 | `discovery/CONNECTOR_SPECIES.md` | the session-13b working record: the premise audit (the connector is the frozen Σ₁₂ object; (R10) is registration data), the connector-species table, the residue-sign analysis, the Step-3 mechanism refutations, and the IT-O4-closed / IT-O5-sharpened adjudication |
+| `discovery/EXOTIC_STATES.md` | the session-13c working record: the premise audit (the citations hold; no pre-existing "exotic states" row), the N=4/N=5 support tables, the majority-exotic interior, the read-tier closure, the machine-enforced [EXT] quarantine, and the scoping refinement |
 
 **Shared libraries are borrowed, not copied:** `qexact.py` (rigorous `Fraction` intervals) and
 `duality.py` (the `Gauss(i)` core) come from `../level5_atomic/checks` via `sys.path` — single
@@ -44,8 +47,8 @@ source of truth, recorded in the checker header and in AT.63(9)'s inheritance li
 ## Run
 
 ```bash
-cd era2/level6_isotopic/checks && python3 run_all_level6.py        # -> 7 checkers, 104 exact markers, 0 failures, exit 0
-cd era2/level6_isotopic/checks && python3 check_level6_format.py   # -> 6 Part 6 documents PASS, 0 violations
+cd era2/level6_isotopic/checks && python3 run_all_level6.py        # -> 8 checkers, 121 exact markers, 0 failures, exit 0
+cd era2/level6_isotopic/checks && python3 check_level6_format.py   # -> 7 Part 6 documents PASS, 0 violations
 ```
 
 ## Tier index
@@ -121,6 +124,23 @@ the directive's three Step-3 mechanisms are refuted/relocated (capacity uniform,
 is ¬the connector and ¬the cardinality read, so it lives entirely in the **ensemble binding**
 [BM.21(2)–(4); BM.137(3) species] = the Def-H.32 amplitude sum = **IT-O2**; the declaration census
 (none), the status rows.
+
+**IT.22–IT.24 (Tier IT.7) the "exotic states" read-tier adjudication:** IT.22 the support-class
+census — N=4 (g(4)=3, all (2,0), g_ε(4)=0: forced entirely δ-paired/mesonic-type, no baryon sector)
+and N=5 (2a+3b=5 unique (1,1), g(5)=10, g_ε(5)=0 forced: 100% mixed, no pure-baryon sector), both
+off-family (N ≢ 0 mod 3); the exotic sign triples (the N=3 Q=+1 sector = 6 ordered triples, 3
+(+1,0,0)-type + 3 (+1,+1,−1)-type, all telescoping to +1); the majority-exotic interior at N=9
+(nucleonic shares 1000/2431, 375/884 < ½; complements 25758, 18324) · IT.23 the read-tier closure —
+the inter-system read is rung-2 mediated and sees only the telescoped q_EM [IT.1; FT.20], so all
+interior compositions of a fixed-Q sector collapse to one boundary read (6→1 at N=3; 43758→1 at N=9),
+preserved-but-inaccessible by the horizon [IT.2; AT.29]: the "exotic states" are the ensemble's
+interior multiplicities, ¬new particles, ¬an anomaly · IT.24 the adjudication + **the quarantined
+[EXT] audit clause** — the question CLOSES as a derived structural feature (the support classes are
+theorems of the contraction grammar, derived without importing quarks or a gauge theory); the LHC
+census mapping ("tetraquark"↔N=4, "pentaquark"↔N=5, "intrinsic charm"↔the exotic sign triples) is a
+species-NAMING act [Def-BM.3(7)] confined to the [EXT] clause and **machine-scanned** (IT.22/IT.23
+token-free, zero decimal numerics — the FT.114 §H pattern); the scoping refinement (the corpus derives
+the combinatorial structure, ¬the masses/widths/existence-as-resonances = IT-O2); no new open row.
 
 ## The directive's premises, and what the canon said
 
