@@ -1,1 +1,0 @@
-../canon/Part2_Bosonic_era.md
