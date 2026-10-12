@@ -9,8 +9,9 @@ census at N=5,6 — channel widths, masks, and the D⁻ saturation boundary (IT.
 IT.4: the N=9 isobar doublet and its single-seed weak transition — the route-relative Q-value
 verdict and the level's first declaration owed (IT.12–IT.15), Tier IT.5: the hydrogen isotope
 sequence — the forward-verified N=9 doublet, the grammar tipping point at N=3,6,9,12, and the
-binding-read adjudication that opens the inter-nucleon binding as IT-O5 (IT.16–IT.18); Level 7
-(Anthropic) is unopened.
+binding-read adjudication that opens the inter-nucleon binding as IT-O5 (IT.16–IT.18), Tier IT.6:
+the nucleon–nucleon connector species — IT-O4 CLOSED (the open bidirectional Σ₁₂ connector, d=0)
+and the isotope cutoff relocated to IT-O2 alone (IT.19–IT.21); Level 7 (Anthropic) is unopened.
 **Level 6 was opened as "Molecular" and renamed "Isotopic" at session 12 (the Architect's
 directive); the molecular level is deferred — its placement in the level map is the Architect's
 act [IT.15(3)].** **Nothing here is frozen canon.** Nothing was adopted, no declaration issued, §Cal
@@ -31,7 +32,7 @@ era2/
 │   └── discovery/             ← the free-form session records (superseded by the tiers),
 │       ├── logs/              ←   historical run outputs
 │       └── legacy_checks/     ←   session-1 checker copies (provenance; NOT live)
-├── level6_isotopic/          ← Level 6 — the Isotopic era (OPEN: Tiers IT.1–IT.5, tags IT.1–IT.18; opened as "Molecular", renamed at session 12)
+├── level6_isotopic/          ← Level 6 — the Isotopic era (OPEN: Tiers IT.1–IT.6, tags IT.1–IT.21; opened as "Molecular", renamed at session 12)
 └── level7_anthropic/          ← Level 7 — the Anthropic era (not opened)
 ```
 
@@ -45,7 +46,7 @@ machine, `discovery/` = the working notes). Levels 6–7 inherit this shape when
 cd era2/level5_atomic/checks && python3 run_all_era2.py      # -> 37 checkers, 643 exact markers, 0 failures
 cd era2/level5_atomic/checks && python3 check_era2_format.py # -> 14 tier documents PASS, 0 violations
 # Level 6 (open)
-cd era2/level6_isotopic/checks && python3 run_all_level6.py      # -> 6 checkers, 87 exact markers, 0 failures
+cd era2/level6_isotopic/checks && python3 run_all_level6.py      # -> 7 checkers, 104 exact markers, 0 failures
 cd era2/level6_isotopic/checks && python3 check_level6_format.py # -> Part 6 documents PASS (attestation vs
                                                                   #    era-1 canon AND the Level-5 record)
 ```
