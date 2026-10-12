@@ -1,29 +1,44 @@
-# `canon/era2/` — Level 5 · the **Atomic** era · Tiers AT.1–AT.9
+# `era2/level5_atomic/` — Level 5 · the **Atomic** era · Tiers AT.1–AT.9
 
 **Status: discovery-phase working tier. NOT frozen canon.** Nothing here is adopted, no
 declaration issues, §Cal-AT is empty, and no clause of Parts 1–4 is modified or retracted.
 
-| file | content |
+| path | content |
 |---|---|
-| `Part5_Atomic_era_TierAT1.md` | **Tier AT.1** — tags AT.1–AT.8 in canon format (Thm · Req · Pf · Phys), plus §Cal-AT and §Open-AT |
-| `Part5_Atomic_era_TierAT2.md` | **Tier AT.2** — tags AT.9–AT.15: the tensor form of the bit/qubit distinction through BM.131's Haar–Poisson duality, **no global tick** |
-| `Part5_Atomic_era_TierAT3.md` … `TierAT5.md` | **Tiers AT.3–AT.5** — AT.16–AT.38: the capacity censor, the CP-assimilated tensor, the boundary-invariance survey, the shell, the calibration floor |
-| `Part5_Atomic_era_TierAT6.md` | **Tier AT.6** — AT.39–AT.40: the closure row and the gap-closure pass (committed in session 1 as `CLOSURE.md`; renamed for the uniform TierAT1–AT7 sequence) |
-| `Part5_Atomic_era_TierAT7.md` | **Tier AT.7** — AT.41–AT.45: the hydrogen spine — the EM sealing grammar, the dynamics of Q, the binding-scaling no-go, the two-body resolvent, and the tier's closure row |
-| `Part5_Atomic_era_TierAT8.md` | **Tier AT.8** — AT.46–AT.49: the spin spine — the duality tool and the polygon spin holonomy, the frame section on the extended carrier, the ledger-native moment coupling, and the tier's closure row |
-| `Part5_Atomic_era_TierAT9.md` | **Tier AT.9** — AT.50–AT.55: the locked sector (dim 𝒦_{n≥4}=26, the third branch), the electroweak curl mechanism, **the dressed vertex correction** (the discrete Ward identity δ=0, the winding revival ladder, the measure-side anomalous read), and the tier's closure row |
-| `RUNG4_EW_CURL.md` | session 4's discovery record (AT.50/AT.51 as first written; consolidated in Tier AT.9) |
-| `run_all_era2.py` | the tier's runner — gates first, exit 0 iff all green |
-| `check_era2_format.py` | the format + citation gate: canon `math_balance` rules ported, per-block Thm/Req/Pf/Phys anatomy, and every cited tag attested against the canon registry |
-| `qexact.py` | shared exact-arithmetic core (see below) |
-| `duality.py` | shared View1↔View2 duality core — the dictionary rules (D1)–(D6): sector→ADM (CT1.12≡BM.34(1)), the AT.5(1) closed form, the flat/drag split, holonomy reads, exact polygons (`Quad(√d)`), the H_ω doublet over `Gauss(i)` |
+| `tiers/Part5_Atomic_era_TierAT1.md` | **Tier AT.1** — tags AT.1–AT.8 in canon format (Thm · Req · Pf · Phys), plus §Cal-AT and §Open-AT |
+| `tiers/Part5_Atomic_era_TierAT2.md` | **Tier AT.2** — tags AT.9–AT.15: the tensor form of the bit/qubit distinction through BM.131's Haar–Poisson duality, **no global tick** |
+| `tiers/Part5_Atomic_era_TierAT3.md` … `TierAT5.md` | **Tiers AT.3–AT.5** — AT.16–AT.38: the capacity censor, the CP-assimilated tensor, the boundary-invariance survey, the shell, the calibration floor |
+| `tiers/Part5_Atomic_era_TierAT6.md` | **Tier AT.6** — AT.39–AT.40: the closure row and the gap-closure pass (committed in session 1 as `CLOSURE.md`; renamed for the uniform TierAT1–AT7 sequence) |
+| `tiers/Part5_Atomic_era_TierAT7.md` | **Tier AT.7** — AT.41–AT.45: the hydrogen spine — the EM sealing grammar, the dynamics of Q, the binding-scaling no-go, the two-body resolvent, and the tier's closure row |
+| `tiers/Part5_Atomic_era_TierAT8.md` | **Tier AT.8** — AT.46–AT.49: the spin spine — the duality tool and the polygon spin holonomy, the frame section on the extended carrier, the ledger-native moment coupling, and the tier's closure row |
+| `tiers/Part5_Atomic_era_TierAT9.md` | **Tier AT.9** — AT.50–AT.55: the locked sector (dim 𝒦_{n≥4}=26, the third branch), the electroweak curl mechanism, **the dressed vertex correction** (the discrete Ward identity δ=0, the winding revival ladder, the measure-side anomalous read), and the tier's closure row |
+| `tiers/Part5_Atomic_era_TierA1.md`, `TierA2.md` | the two early session-1 working drafts, kept for provenance (superseded by the TierAT1 sequence) |
+| `checks/run_all_era2.py` | the level's runner — gates first, exit 0 iff all green |
+| `checks/check_era2_format.py` | the format + citation gate: canon `math_balance` rules ported, per-block Thm/Req/Pf/Phys anatomy, and every cited tag attested against the canon registry (reads `../tiers/` and `../../../canon/`) |
+| `checks/qexact.py` | shared exact-arithmetic core (see below) |
+| `checks/duality.py` | shared View1↔View2 duality core — the dictionary rules (D1)–(D6): sector→ADM (CT1.12≡BM.34(1)), the AT.5(1) closed form, the flat/drag split, holonomy reads, exact polygons (`Quad(√d)`), the H_ω doublet over `Gauss(i)` |
+| the 33 `checks/*.py` checkers | the machine verification (31 content checkers + the 2 validation gates); each cites the canon tags it reproduces or extends |
+| `discovery/*.md` | the free-form session records: session 1–2 (`MAGNETISM_ROUTE.md` … `ONE_FORCE_SPLIT.md`, `CENSUS_L5.md`, `COHERENCE_CENSUS.md`, `M1_SHIFT.md`), sessions 2–3 (`EM_SEAL_GRAMMAR` … `TWO_BODY_RESOLVENT`, `SPIN_HOLONOMY`, `FRAME_SECTION`, `MOMENT_COUPLING` — cited by the tiers but never committed; they lived in the session workspaces), session 4 (`RUNG4_EW_CURL.md`), session 5 (`VERTEX_CORRECTION.md`) |
+| `discovery/logs/` | historical run outputs (`*_OUTPUT.txt`) |
+| `discovery/legacy_checks/` | session-1 checker copies (provenance; NOT live — see its README) |
 | `SESSION_SUMMARY_AND_REVIEW.md` | session ledger, the model's error profile, and interaction review notes |
-| the 33 `*.py` checkers | the machine verification (31 content checkers + the 2 validation gates); each cites the canon tags it reproduces or extends |
+
+**Path map for historical citations.** Tier documents and discovery records written before the
+session-5 restructure cite the old loci; the files moved, the citations stay as written:
+
+| old citation | current location |
+|---|---|
+| `canon/era2/<checker>.py` | `era2/level5_atomic/checks/<checker>.py` |
+| `canon/era2/Part5_Atomic_era_*.md` | `era2/level5_atomic/tiers/Part5_Atomic_era_*.md` |
+| `canon/era2/RUNG4_EW_CURL.md` | `era2/level5_atomic/discovery/RUNG4_EW_CURL.md` |
+| `era2/<session doc>.md` | `era2/level5_atomic/discovery/<session doc>.md` |
+| `qubitick_corpus/` (the nested published copy) | `archive/zenodo_v1.0_package/` |
 
 ## Run
 
 ```bash
-cd canon/era2 && python3 run_all_era2.py     # -> 33 checkers, 587 exact markers, 0 failures, exit 0
+cd era2/level5_atomic/checks && python3 run_all_era2.py     # -> 33 checkers, 587 exact markers, 0 failures, exit 0
+cd era2/level5_atomic/checks && python3 check_era2_format.py # -> 11 tier documents PASS, 0 violations
 ```
 
 **Tier index.** AT.1–AT.8 (Tier AT.1) the coherence census and the split · AT.9–AT.15 (AT.2) the
@@ -155,7 +170,7 @@ A₀−B₀=(3/8)(g−g′/3)²+g′²/48, verified coefficient-wise in ℚ[g,g�
 colour-neutral curl reaches the **polygon** ladder (2D floors, Θ_R=0 [FT.54(4)]) but NOT platonic
 solids — the 3D seals are ε/δ junctions on **colour** slots [D3.9/CT3.17a(1)] and the EW seed is
 colour-neutral [EW.32: T_a𝗏=0]: "polygon or platonic" SPLITS — polygons yes, platonic iff colour
-attachments are present. Discovery record `canon/era2/RUNG4_EW_CURL.md`; consolidated in
+attachments are present. Discovery record `discovery/RUNG4_EW_CURL.md`; consolidated in
 `Part5_Atomic_era_TierAT9.md` (session 5).
 
 **Session 5 — CONSOLIDATED as Tier AT.9 (AT.50–AT.55): the dressed vertex correction.**
