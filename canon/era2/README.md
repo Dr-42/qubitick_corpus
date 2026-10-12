@@ -1,4 +1,4 @@
-# `canon/era2/` — Level 5 · the **Atomic** era · Tiers AT.1–AT.7
+# `canon/era2/` — Level 5 · the **Atomic** era · Tiers AT.1–AT.9
 
 **Status: discovery-phase working tier. NOT frozen canon.** Nothing here is adopted, no
 declaration issues, §Cal-AT is empty, and no clause of Parts 1–4 is modified or retracted.
@@ -11,17 +11,19 @@ declaration issues, §Cal-AT is empty, and no clause of Parts 1–4 is modified 
 | `Part5_Atomic_era_TierAT6.md` | **Tier AT.6** — AT.39–AT.40: the closure row and the gap-closure pass (committed in session 1 as `CLOSURE.md`; renamed for the uniform TierAT1–AT7 sequence) |
 | `Part5_Atomic_era_TierAT7.md` | **Tier AT.7** — AT.41–AT.45: the hydrogen spine — the EM sealing grammar, the dynamics of Q, the binding-scaling no-go, the two-body resolvent, and the tier's closure row |
 | `Part5_Atomic_era_TierAT8.md` | **Tier AT.8** — AT.46–AT.49: the spin spine — the duality tool and the polygon spin holonomy, the frame section on the extended carrier, the ledger-native moment coupling, and the tier's closure row |
+| `Part5_Atomic_era_TierAT9.md` | **Tier AT.9** — AT.50–AT.55: the locked sector (dim 𝒦_{n≥4}=26, the third branch), the electroweak curl mechanism, **the dressed vertex correction** (the discrete Ward identity δ=0, the winding revival ladder, the measure-side anomalous read), and the tier's closure row |
+| `RUNG4_EW_CURL.md` | session 4's discovery record (AT.50/AT.51 as first written; consolidated in Tier AT.9) |
 | `run_all_era2.py` | the tier's runner — gates first, exit 0 iff all green |
 | `check_era2_format.py` | the format + citation gate: canon `math_balance` rules ported, per-block Thm/Req/Pf/Phys anatomy, and every cited tag attested against the canon registry |
 | `qexact.py` | shared exact-arithmetic core (see below) |
 | `duality.py` | shared View1↔View2 duality core — the dictionary rules (D1)–(D6): sector→ADM (CT1.12≡BM.34(1)), the AT.5(1) closed form, the flat/drag split, holonomy reads, exact polygons (`Quad(√d)`), the H_ω doublet over `Gauss(i)` |
 | `SESSION_SUMMARY_AND_REVIEW.md` | session ledger, the model's error profile, and interaction review notes |
-| the 32 `*.py` checkers | the machine verification (30 content checkers + the 2 validation gates); each cites the canon tags it reproduces or extends |
+| the 33 `*.py` checkers | the machine verification (31 content checkers + the 2 validation gates); each cites the canon tags it reproduces or extends |
 
 ## Run
 
 ```bash
-cd canon/era2 && python3 run_all_era2.py     # -> 32 checkers, 564 exact markers, 0 failures, exit 0
+cd canon/era2 && python3 run_all_era2.py     # -> 33 checkers, 587 exact markers, 0 failures, exit 0
 ```
 
 **Tier index.** AT.1–AT.8 (Tier AT.1) the coherence census and the split · AT.9–AT.15 (AT.2) the
@@ -31,7 +33,9 @@ survey, the shell, and the calibration floor · **AT.39–AT.40 (AT.6) the closu
 gap-closure pass** · AT.41–AT.44 (AT.7) the hydrogen spine: the sealing grammar, the dynamics of Q,
 the binding-scaling no-go, the two-body resolvent · **AT.45 (AT.7) the closure row** · AT.46–AT.48
 (AT.8) the spin spine: the duality tool and the polygon holonomy, the frame section, the moment
-coupling · **AT.49 (AT.8) the closure row**.
+coupling · **AT.49 (AT.8) the closure row** · AT.50–AT.51 (AT.9) the locked sector and the
+electroweak curl · AT.52–AT.54 (AT.9) the dressed vertex: the revival ladder, the Ward identity,
+the anomalous read · **AT.55 (AT.9) the closure row**.
 
 **AT.40 — the gap-closure pass: eight more rows closed.**
 - **AT-O19**: the five extrema at `ε_q = ⅛` are **ONE equation** — `d/dp[p(1−p)] = 1−2p = 0` and
@@ -151,8 +155,63 @@ A₀−B₀=(3/8)(g−g′/3)²+g′²/48, verified coefficient-wise in ℚ[g,g�
 colour-neutral curl reaches the **polygon** ladder (2D floors, Θ_R=0 [FT.54(4)]) but NOT platonic
 solids — the 3D seals are ε/δ junctions on **colour** slots [D3.9/CT3.17a(1)] and the EW seed is
 colour-neutral [EW.32: T_a𝗏=0]: "polygon or platonic" SPLITS — polygons yes, platonic iff colour
-attachments are present. Discovery record `era2/RUNG4_EW_CURL.md` (repo root); tier consolidation
-(AT.50/AT.51 → TierAT9) pending the Architect's word.
+attachments are present. Discovery record `canon/era2/RUNG4_EW_CURL.md`; consolidated in
+`Part5_Atomic_era_TierAT9.md` (session 5).
+
+**Session 5 — CONSOLIDATED as Tier AT.9 (AT.50–AT.55): the dressed vertex correction.**
+`vertex_correction.py` (**23/23 exact**, candidates AT.52–AT.54; discovery record
+`era2/VERTEX_CORRECTION.md`). The directive: evaluate M̂ = −q_EM(I⊗κ̂) [AT.47(3)/AT.48(2a);
+Def-H.43] in the FULLY DRESSED topology-blind ensemble and isolate δ := ⟨M̂⟩_dressed −
+⟨M̂⟩_tree. Results, in order of load:
+- **THE DISCRETE WARD IDENTITY (AT.53): δ = 0 EXACTLY** — as a 4×4 `Gauss(i)` matrix identity, in
+  every (q,S) sector, at both layers, at both fugacity specializations, over every interleaving
+  and cover of the censused cells. Three independent supports: the **chain-local telescoping
+  extension** (Σ_int f_v = ½(σ_last−σ_first) on every path of every configuration *including hub
+  interiors* — EM.9b's type-(1,1) clause is a scope, not an obstruction), the charge preservation
+  on 𝓔(𝒳) [Def-BM.5(1)], and the sector-constancy of the promoted read. The tree splitting 2|q|
+  is ¬renormalized by any dressing.
+- **THE MASTER PARITY IDENTITY (AT.53): (−1)^ℵ = Π_{cov odd} σ_e** on every configuration (668 +
+  59,049 checked in-census, zero violations; FT.67(1) multiplied out). Corollaries: (−1)^{|q|} on
+  single open chains (exhaustive L=2..9), +1 on closed, Π_eσ_e on covers. **The A8 dressing sign
+  is SECTOR-LOCKED** — AT.48(5ii)'s "flicker-sensitive dressing" REFINED on the record: ℵ's value
+  fluctuates, its parity is charge data; ε_total = i^Θ(−1)^{|q|}.
+- **THE ω-SPLIT of the amplitude layer (AT.53):** the involution σ↦−σ forces
+  contribution_R(−q) = (−1)^{|R|}contribution_R(q): norm/cover/non-cover-even symmetric,
+  non-cover-ODD antisymmetric ⇒ Z^amp_ncO(0,S)=0 exactly; the hexagon cell exhibits the asymmetry
+  LIVE (11,348 vs 19,060 at q=(−1,+1), S=0; difference = 2×(−3856)) — FT.106(3b)/(3d) mechanized
+  per cell.
+- **THE WINDING REVIVAL LADDER (AT.52): B_min(m) = 2m + ⌈m/2⌉** — every winding m≥1 is
+  amplitude-live from that budget: tight witnesses at V=(3,5,8,10,13) for m=1..5 (values
+  16/64/1024/4096/65536, brute-force sign sums exact); m=1 IS FT.69(5)'s locked double-digon hub.
+  **The minimal winding-2 cover: the V=5 THETA pattern** (two dissolved 4-cycles sharing a 2-edge
+  path, v=64, 8 live S=2 instances), minimality exhaustive (V≤4: zero 4-cycle covers in 4095
+  patterns — FT.106(3c)'s death row re-derived as B=4-local; V=5: 262,599 subsets → exactly 60
+  patterns at |R|=6, one isomorphism class). **FT.106(3c) RE-SCOPED on the record** (the frozen
+  cube/octahedron rows already carried 504/672 four-cycles); odd cycles stay dead at every budget.
+- **THE LOCK PARITY (AT.52): odd windings are born LOCKED, even born clean** — pigeonhole: for odd
+  m the ⌈m/2⌉ off-cycle centres feed m+1 hub-endpoints to m hubs ⇒ a k_v=4 hub [CT4.5]; both V=8
+  winding-3 threadings lock; the first unlocked hexagon cover sits at V=9. Parallel to the
+  odd-winding↔fermion-sign row FLAGGED, ¬identified [P5].
+- **THE ANOMALOUS READ IS MEASURE-SIDE, EXACT, RATIONAL (AT.54):** residues a_{k,d} =
+  2^{1−k}C(k,(k+d)/2) and contact terms c_k = 2^{−k}C(k,k/2) [k even] in the partial
+  fractionization of R_k (sum rule = 1); attenuation ladders monotone (d=1: 1, ¾, ⅝, 35/64; d=2:
+  ½, ½, 15/32, 7/16); **the ℵ-excess means** ⟨ℵ⟩^{(n)} a polynomial identity in ℚ[u] — excess =
+  1/6 (n=2), 3/7 (n=3) at ε_q=⅛; **the first amplitude-live winding-2/3 sector censuses** (engine
+  certified on BM.137(4)'s frozen (4,2,2) row and FT.106(3b)'s cancelling support): theta cell
+  Z^amp(q,2)=(128,256,128), hexagon cell Z^amp(q,3)=(2816,6656,2816), with the full three-way
+  split; **POSITION vs RESIDUE (the Lamb analog): the 1/d² ladder is exactly position-degenerate
+  across channel counts — the dressing splits residues and diverts contacts, NEVER positions: an
+  intensity redistribution, not a frequency shift.**
+- **THE ADJUDICATION:** BM.125(4)'s three grounds bypassed (operator-valued / ¬mass-product /
+  all-𝔮⁰ census); BM.126(1)'s {ε_q} alphabet untouched (k = the floor's pair count, ¬a spin
+  read); **AT-O6 CLOSED AS DRESSED STRUCTURE**; the continuous a=(g−2)/2 a **level-local no-go
+  with three named missing definitions** (M1′ the measure→chart read rule, AT-O26-class; M2′
+  ε_q's value, AT-O27; M3′ the chart scale + e₀) — sharper than AT.48(5v): **no continuous locus
+  exists**, since every dressed operator read is sector-constant; **AT-O11 DOES NOT BLOCK** (zero
+  dictionary calls — the calculation lives on the pair arena, the k-channel resolvent, and frozen
+  censuses); **new AT-O30** (the B≥5 winding-resolved cover census — blocking nothing).
+  Quarantine [P5] untouched: a_e, a_μ, a_μ/a_e≈1.0054, the Lamb shift, 2S–2P — scoring targets,
+  ¬inputs, ¬compared.
 
 **The sharpened open list, in priority order:**
 1. **(AT-O28)** the global Dirac-type operator — **two enumerated slots away** (AT.47/AT.48):
@@ -171,16 +230,25 @@ attachments are present. Discovery record `era2/RUNG4_EW_CURL.md` (repo root); t
    its **adoption** is ¬issued [P5]; calibration-era content.
 **By nature / by design, not gaps:** (AT-O2) the slicing choice is gauge; (AT-O3) `(ϰ,β)` is
 calibration; **(AT-O29)** a native vector EM read — proved absent (EM is a stack aspect with zero
-metric coordinates, AT.48(3)); reopening needs a new derived read-species. **Closed at Tier AT.7:** (AT-O4) the EM sealing grammar — grammar AT.41(5), dynamics
+metric coordinates, AT.48(3)); reopening needs a new derived read-species. **(AT-O30)** the B≥5
+winding-resolved cover census — open, blocking nothing: the minimal cells are computed (AT.52/
+AT.54); the frozen-cell extension (cube/octahedron winding spectra, the V=5..7 full censuses) is
+FT.69(3)(v)/FT.106(3)-type census work at the next budgets. **Closed at Tier AT.7:** (AT-O4) the EM sealing grammar — grammar AT.41(5), dynamics
 AT.42, spectrum AT.44(5); residual = calibration species. (AT-O5) the lepton mass read — formed
 **in species** as the k=1 resolvent price AT.44(4); the `ε_q` value and the family splitting stay
 calibration/Gram-currency. AT.43(R3) — met by AT.44. **Closed at Tier AT.8:** (AT-O6) the
 anomalous moment — **closed as structure**: the drag/spin-orbit sector derived (AT.46), the frame
 section reduced to two enumerated slots (AT.47), the moment coupling constructed natively with the
 anomalous read `(2|q| splitting; (−1)^ℵ dressing)` and the vector channel a proved no-go (AT.48);
-**Closed in session 4 (AT.50-candidate):** (AT-O14/O16) `dim 𝒦_{n≥4}` = **26** by the squeeze, the
+**Closed in session 4 (AT.50):** (AT-O14/O16) `dim 𝒦_{n≥4}` = **26** by the squeeze, the
 flag terminated, the lock a biconditional, the rung-4 projection nonzero-but-unreachable — the
 locked sector is provably unreadable at every accessible rung.
+**Closed in session 5 (Tier AT.9):** (AT-O6) **CLOSED AS DRESSED STRUCTURE** — the vertex
+correction evaluated in the fully dressed ensemble: δ = 0 exactly (the discrete Ward identity,
+AT.53), the dressing sign sector-locked (the master parity identity), the full anomalous content
+censused measure-side in exact rationals (AT.54); the continuous anomaly is a level-local no-go
+with its three missing definitions named (M1′)–(M3′) [AT.54(6)]; AT-O11 verified NON-BLOCKING for
+this calculation (zero dictionary calls).
 the continuous anomaly number is calibration-species by P5 design. **Closed earlier:** AT-O1, O7 (checker
 written), O8, O9, O10, O12, O15, O16, O17, O18, O19, O20, O21, O22, O23, O23b, O24, O25.
 
@@ -360,9 +428,9 @@ interval with `[d, d+10⁻ᵏ)` at the canon's own digit count — FT.119(4)'s "
   gap remains in the magnetic sector" means *no gap given (S) and given calibration values*.
 - The folder is **not** wired into `verification/run_all.py`, and `index/`, `tags.json` and
   `Summary.md` have **not** been regenerated. Both are deliberate: regenerating would assert that
-  AT.1–AT.8 are canon tags, and they are not yet. Promoting this tier means running the era-chain and
+  AT.1–AT.55 are canon tags, and they are not yet. Promoting this tier means running the era-chain and
   citation-closure checkers against it, which is a closure-phase act — `check_era2_format.py` (F3)
-  is the citation-closure half, already run: **every cited token in all nine Part 5 documents is
+  is the citation-closure half, already run: **every cited token in all eleven Part 5 documents is
   attested** against the 640-tag canon registry.
 - **Tier AT.7's scope, stated plainly.** The lepton price `w_c` is *generation-blind* (one read for
   the species; the family splitting lives in the Gram currency and is ¬mixed in), it is a
@@ -372,3 +440,14 @@ interval with `[d, d+10⁻ᵏ)` at the canon's own digit count — FT.119(4)'s "
   (level price = squared dominant pole) and the chart-side scale `−ε²m_r/2` remain marked
   specifications (AT-O26). The `B→∞` universe limit is ¬constructed [Def-H.32(1)] — "universe-level"
   means the budget filtration with no local-seal truncation, never a completed infinite sum.
+- **Tier AT.9's scope, stated plainly.** The Ward identity δ=0 is proved on the *censused cells*
+  (the minimal winding-2/3 skeletons, both layers, two fugacity specializations) and generalizes by
+  its three supports — each a configuration-wise identity (telescoping, charge preservation,
+  sector-constancy of a label-read) — not by the census alone; the full G_B-uniform statement at
+  every budget rides on those identities, not on the enumerations. The revival ladder's bound
+  B_min(m) = 2m+⌈m/2⌉ is a hand proof with machine witnesses to m=5 and machine minimality at
+  m=2 only (V≤4 exhaustive, V=5 exhaustive at |R|≤8); larger-m minimality rests on the counting
+  argument. The new sector integers are *amplitude-layer structural reads* — barred as mass reads
+  [BM.111(6); FT.79(5); BM.30(5)] like their frozen B=4 cousins. The continuous anomaly's absence
+  is a *level-local* no-go with named reopening definitions (M1′)–(M3′), following AT.43's
+  pattern — not an eternal bar.
