@@ -7,7 +7,14 @@ IT.1: the Measurement Theorem (IT.1–IT.5), Tier IT.2: the 1p-kn isotopic famil
 contraction-grammar phase transitions (IT.6–IT.8), Tier IT.3: the multi-seal configuration
 census at N=5,6 — channel widths, masks, and the D⁻ saturation boundary (IT.9–IT.11), Tier
 IT.4: the N=9 isobar doublet and its single-seed weak transition — the route-relative Q-value
-verdict and the level's first declaration owed (IT.12–IT.15); Level 7 (Anthropic) is unopened.
+verdict and the level's first declaration owed (IT.12–IT.15), Tier IT.5: the hydrogen isotope
+sequence — the forward-verified N=9 doublet, the grammar tipping point at N=3,6,9,12, and the
+binding-read adjudication that opens the inter-nucleon binding as IT-O5 (IT.16–IT.18), Tier IT.6:
+the nucleon–nucleon connector species — IT-O4 CLOSED (the open bidirectional Σ₁₂ connector, d=0)
+and the isotope cutoff relocated to IT-O2 alone (IT.19–IT.21), Tier IT.7: the "exotic states"
+read-tier adjudication — the N=4,5 support classes and the quarantined [EXT] census mapping
+(IT.22–IT.24), Tier IT.8: the multi-seal amplitude calculus — IT-O2 advanced, IT-O5 open with the
+obstruction named (IT.25–IT.27); Level 7 (Anthropic) is unopened.
 **Level 6 was opened as "Molecular" and renamed "Isotopic" at session 12 (the Architect's
 directive); the molecular level is deferred — its placement in the level map is the Architect's
 act [IT.15(3)].** **Nothing here is frozen canon.** Nothing was adopted, no declaration issued, §Cal
@@ -28,7 +35,7 @@ era2/
 │   └── discovery/             ← the free-form session records (superseded by the tiers),
 │       ├── logs/              ←   historical run outputs
 │       └── legacy_checks/     ←   session-1 checker copies (provenance; NOT live)
-├── level6_isotopic/          ← Level 6 — the Isotopic era (OPEN: Tiers IT.1–IT.4, tags IT.1–IT.15; opened as "Molecular", renamed at session 12)
+├── level6_isotopic/          ← Level 6 — the Isotopic era (OPEN: Tiers IT.1–IT.8, tags IT.1–IT.27; opened as "Molecular", renamed at session 12)
 └── level7_anthropic/          ← Level 7 — the Anthropic era (not opened)
 ```
 
@@ -42,7 +49,7 @@ machine, `discovery/` = the working notes). Levels 6–7 inherit this shape when
 cd era2/level5_atomic/checks && python3 run_all_era2.py      # -> 37 checkers, 643 exact markers, 0 failures
 cd era2/level5_atomic/checks && python3 check_era2_format.py # -> 14 tier documents PASS, 0 violations
 # Level 6 (open)
-cd era2/level6_isotopic/checks && python3 run_all_level6.py      # -> 5 checkers, 67 exact markers, 0 failures
+cd era2/level6_isotopic/checks && python3 run_all_level6.py      # -> 9 checkers, 141 exact markers, 0 failures
 cd era2/level6_isotopic/checks && python3 check_level6_format.py # -> Part 6 documents PASS (attestation vs
                                                                   #    era-1 canon AND the Level-5 record)
 ```
