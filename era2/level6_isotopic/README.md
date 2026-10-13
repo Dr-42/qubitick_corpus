@@ -1,4 +1,4 @@
-# `era2/level6_isotopic/` — Level 6 · the **Isotopic** era · Tiers IT.1–IT.16
+# `era2/level6_isotopic/` — Level 6 · the **Isotopic** era · Tiers IT.1–IT.17
 
 **Status: OPENED at session 9 — discovery-phase working level. NOT frozen canon.** Nothing here
 is adopted, no declaration issues, §Cal-IT is empty, and no clause of Parts 1–4 or of Level 5's
@@ -32,6 +32,7 @@ record: IT.15(3).
 | `tiers/Part6_Isotopic_era_TierIT14.md` | **Tier IT.14** — IT.43–IT.45: **the cross-currency matrix object** — M=[[m_L,ρ_B],[ε_q,m_S]] audited entry by entry: the tensor product and the ρ_Bε_q seat census verified exact; THREE obstructions (𝔮-inhomogeneity — det sums 𝔮¹ with 𝔮⁰; the container does not launder the cross-currency sums [IT.4(3) doctrine]; the handshake seat misidentified — the formed mixed loci are exactly three and the handshake is the binary χ [IT.4(2); BM.134(5)]); the gem ι(M)=Mᵀ (the S-T split IS the currency-exchange symmetrization); the grading map REFUTED on the canon's own basis (J₂,K₁,K₃ transpose-even; W₂ transpose-odd); the derivative asymmetry SEATLESS (symmetric slot independence [IT.5(1)]); **Scenario B: REDUNDANT + PARAMETRIC + BARRED as a formed read — not adopted** |
 | `tiers/Part6_Isotopic_era_TierIT15.md` | **Tier IT.15** — IT.46–IT.48: **the capacity-bound calibration matrix (the parametric ion fills)** — M₄=M⊗M under the fills m_L(N)=2N·u, ρ_B(N)=ρ₀N, ε_q(n_e)=ε₀n_e, m_S(n_e)=m₀n_e audited: the ONE derived kernel (E_int=2N [IT.6(1); IT.7]) with a currency substitution at the scale joint (ln2/𝔥 → u=4ε_q [BM.137(1)] — the fill is the binding's sign-flipped, scale-stripped numerator fragment); the seven contradictions (ρ_B N-independence; ε_q global vs ion-indexed; σ_e=0 ∉ {±1} [CT0.9]; the ρ₀/μ₀ constraint; decorative slots; ε₀<⅛; the ion table vs the N-ladder — 'He2+' at N=6 is two-nucleon, 'He-4' lives at N=12 [IT.31(4),(5)]); the 𝔮-dilemma both horns (the ratio is 𝔮^{−1} — 'dimensionless' FALSE; the fills homogenize only by stripping the mass); the 'relative flux' unformed (BM.83(5)'s localization census closed); the 'crystallization cost' circular and N-BLIND (nilpotent, charpoly=λ⁴ for both bare ions); the derivative asymmetry SMUGGLED not discovered (∂m_L^fill/∂ε₀=8N·n_e≠0 = the barred conversion by fiat); **Scenario B — refuted, NOT adopted; no new open row** |
 | `tiers/Part6_Isotopic_era_TierIT16.md` | **Tier IT.16** — IT.49–IT.54: **the probe consolidation (the subgenerator study merged)** — the four delivered documents (CONSOLIDATED Parts I–XII; CONTINUUM; the photon phase-jump audit PJ.1–PJ.15; the two-photon radar audit RS.1–RS.10) audited: the citation sweep ~450 tokens / ONE unattested (a self-flagged CT0-prefix slip for CT3.20); the FT.116(5) canon typo CONFIRMED harmless and recorded probe-side (never edited); the ρ_B collision RESOLVED (ρ_B := the bridge [BM.69(2); BM.102(4)]; ρ := the density [BM.14(2),(4)]; the b-slot fork carried open); all 33 machine claims RE-DERIVED FROM SCRATCH (the study's scripts were ¬delivered). **New derived rows adopted:** 𝒦(N)=2/N; the neighbour law R(n)=(n+1)/n; the quotient uniqueness at 3; the cubic ladder γ_ℓ=2γ_q³−3γ_q; z_ℓ=2z_q³ (the factor 2=B² forced); the Newton tower + z-cubic; the 3-adic ν-exclusion; the circle algebra [Ô,C₃]=R_{4π/9}; **Lie⟨J,K⟩=𝔰𝔲(4) (15-dim, E₀∉)**; the nilpotent calculus (ΣA_iB_i=Π_ℛ, ΣB_iA_i=3Π_𝒱; the honest ¬Clifford negative); the branch-change bridge J_iΠ_ℛ=Π_𝒱J_i; the order-4 inner reflection Ad(e^{iπΣ/8}); the 10-of-16 tensor-square occupancy; the saturated-node/Lyapunov/radar rows incl. the agreement condition (⟺ s·dx=0) and the disjointness row; the radar recorded as an **IT-O3 candidate** (¬adopted). The matrix layer = the IT.37–39/IT.43–45 parametric class; thirteen declarations NAMED, none issued; **no new open row** |
+| `tiers/Part6_Isotopic_era_TierIT17.md` | **Tier IT.17** — IT.55–IT.57: **the declaration package (D-PJ/D-RS closure) — the FIRST logged declaration acts of Level 6** — the Architect's twelve-item package recorded, grounded row by row, and bar-checked (13/13 machine): ISSUED — D-PJ1 (Ô_{in→out}, the temporal vocabulary retired operator-locally), D-PJ2 (𝒫_ch complex-domain placeholder; the arena bars hold; the seven-register disambiguation), D-PJ3 (resolved by D-PJ1: the label-map horn, NO vertex — the transit bar stands on THREE grounds O1/O2/O4, the directive's 'O1 and O4' corrected), D-PJ4 (the ε_q-gated signature; functional form UNFIXED — precision debt; count→strength barred), D-PJ5 (branches OPEN — well-definedness suspended; the cubic census: three real roots, one positive, ℂ adds none), D-PJ6/D-RS5 (the register-o reading; citation corrected A9→Def-H.9+FT.20 G-row), D-RS1 (≺/≻ grounded in the tick order + C11; same-tick cross-vertex order NOT supplied), D-RS2 (the tick/null-segment DICTIONARY pairing — faces, ¬equals [BM.134(5)]), D-RS7 (item 10 re-numbered; the 𝔮⁰-price clarification), the **BM.113(6) sector sync** (∨² kept and synced with A4's {0,π} via the ℤ₂ dictionary ε=cos(πα); the derived ε=(−1)^A stands UNFLIPPED; the frozen row untouched — the discharge logged in era 2), item 12 (ρ_B/e₀ re-confirmed unissued). DEFERRED: D-RS4 (the stationarity scope; the condition itself IS derived). OWED untouched: D-RS3; D-PJ7/D-RS6. Seven premise corrections; §Cal-IT moves to a VALUE-FREE act register; NO new open row; the Def-category answer: no Def-IT series mid-level — citation handles D-PJn@IT.55, D-RSn@IT.56 |
 | `checks/measurement_theorem.py` | the theorem's checker — **21/21 exact**, no floating point |
 | `checks/isotopic_family.py` | Tier IT.2's checker — **8/8 exact**: the grammar engine (enumeration ∧ recurrence ∧ closed form), the family census, the Vandermonde charge convolution, the capacity census |
 | `checks/multi_seal_census.py` | Tier IT.3's checker — **9/9 exact**: the width skeleton (Laurent vs binomial), the N=5,6 grammar census, both mask species, the support placement, the D⁻ status chain |
@@ -48,6 +49,7 @@ record: IT.15(3).
 | `checks/cross_currency_matrix.py` | Tier IT.14's checker — **19/19 exact**: multivariate Laurent polynomials over Gauss(i) over Fraction — the entrywise tensor verification, the seat/grading/alphabet censuses, the symbolic S-T split + the ι=transpose identity, all 16 C_μν=v_μv_ν, the B3-basis cross-cut witnesses, the bivector/force-algebra supports, the formal-partial derivative census — every section with an adversarial witness |
 | `checks/ion_fill_matrix.py` | Tier IT.15's checker — **13/13 exact**: Laurent polynomials over Gauss(i) over Fraction — the degree censuses (both horns), the skeleton/substitution joint, BM.137(3)'s hinge identity D_n−1=uD_{n−1}, the fill-contradiction census, the N-ladder binomials, the localization-census exclusion, the symbolic nilpotency + Faddeev–LeVerrier charpoly λ⁴, the Kronecker spectral identities, the persisting/smuggled partials, the adapted-coordinate witnesses |
 | `checks/probe_consolidation.py` | Tier IT.16's checker — **33/33 exact**: Fraction polynomial rings with exact quotient reductions (the trig tower, Q[t₂]/(t₂²−2), Q[x,a₀,z_r,z_i,j]/(j²+1), Q[γ], Q[s]/(s²−Δ)), a jet-derivation algebra, Faddeev–LeVerrier, Gauss(i) 4×4 elimination, exhaustive 4ⁿ/S₃ censuses, rational π-certificates — the full re-verification of the study's machine layer |
+| `checks/declaration_package.py` | Tier IT.17's checker — **13/13 exact**: the P1/P5 censuses (every touched quantity 𝔮⁰; the nine-slot registry unchanged), the arena-bar/branch machine (the ω-relabeling inert in the trig ring; the cubic's three-real-roots/one-positive census in exact Q(√2) with the norm sign test), the iterate discipline (2/81, 2/243 ∉ the derived angles), the A9 text census, the tick-order/lifecycle grounding, the degree-pair dictionary row, the sector-sync safety census (multiplicativity unflipped; the flip = a label swap), and the four-part bar-check assembly |
 | `checks/run_all_level6.py` | the level's runner (gate first, exit 0 iff green) |
 | `checks/check_level6_format.py` | the level's format + citation gate: canon `math_balance` rules ported, IT-block anatomy (Thm/Req/Pf/Phys + ∎), and citation attestation against **three** sources — the era-1 canon registry (`era1/canon`, 640 tags), the closed Level-5 record (`../level5_atomic/tiers`, AT.n/AT-O rows), and this level's own IT definitions |
 | `discovery/MEASUREMENT_THEOREM.md` | the session-9 working record: the directive's four premises verified against the canon, the four corrections logged, the check ledger |
@@ -66,6 +68,7 @@ record: IT.15(3).
 | `discovery/CROSS_CURRENCY_MATRIX.md` | the session-13j working record: the environment-restoration log (PR #7 merged, suites green from the fresh clone), the entry-by-entry audit, the six premise corrections (P1–P6), the check ledger (19/19), and the Scenario-B verdict |
 | `discovery/ION_FILL_MATRIX.md` | the session-13k working record: the IT.14-checker erratum (BM.137(1)'s u=4ε_q), the fill-vs-derived-form tables, the fragment identification, the two-horn 𝔮-dilemma, the nilpotency/blindness machine rows, the smuggled-declaration finding, the check ledger (13/13), and the Scenario-B verdict |
 | `discovery/PROBE_CONSOLIDATION.md` | the session-13l working record: the intake inventory (four of eight documents delivered; five scripts ¬delivered → everything re-derived), the citation-audit results, the reconciliation table (amendment chain, the ρ_B/δ/s_ℓ/κ resolutions), the derived/declared/barred separation, the tier placement, and the 33-row check ledger |
+| `discovery/DECLARATION_PACKAGE.md` | the session-13m working record: the twelve-item issuance table (grounding + bar note per item), the bar-check verdict, the seven premise corrections, the register state (issued/deferred/owed/sub-debts), the Def-category placement answer, and the 13-row check ledger |
 
 **Shared libraries are borrowed, not copied:** `qexact.py` (rigorous `Fraction` intervals) and
 `duality.py` (the `Gauss(i)` core) come from `../level5_atomic/checks` via `sys.path` — single
@@ -74,8 +77,8 @@ source of truth, recorded in the checker header and in AT.63(9)'s inheritance li
 ## Run
 
 ```bash
-cd era2/level6_isotopic/checks && python3 run_all_level6.py        # -> 17 checkers, 276 exact markers, 0 failures, exit 0
-cd era2/level6_isotopic/checks && python3 check_level6_format.py   # -> 16 Part 6 documents PASS, 0 violations
+cd era2/level6_isotopic/checks && python3 run_all_level6.py        # -> 18 checkers, 289 exact markers, 0 failures, exit 0
+cd era2/level6_isotopic/checks && python3 check_level6_format.py   # -> 17 Part 6 documents PASS, 0 violations
 ```
 
 ## Tier index
@@ -369,6 +372,45 @@ separation; the declaration register absorbed (**D-PJ1–7, D-RS1–6** + the st
 CT1.9/FT.111–119/AT.56–58 with no conflict; the era chain holds); ten bars restated with grounds;
 **IT-O3 gains the radar candidate and stays OPEN; NO new row**; the declaration census: none; §Cal-IT
 empty.
+
+**IT.55–IT.57 (Tier IT.17) the declaration package (D-PJ/D-RS closure) — the FIRST logged declaration
+acts of Level 6:** IT.55 the D-PJ side — D-PJ1 issued (Ô_{in→out}: the directed label map with
+source/target endpoint NAMING; the temporal vocabulary retired operator-locally; the derived content
+stays the one jump edge [FT.119(2)]; the second iterate stays unadopted [FT.119(7)]); D-PJ2 issued
+(𝒫_ch: the complex-domain phase-register placeholder, exploration-scoped — the Def-H.41/42 arena
+bars hold verbatim; the seven-register disambiguation line 𝒫_ch vs Θ vs Θ_R vs α_e vs Φ vs μ_CP vs
+Δθ); D-PJ3 resolved by D-PJ1 (the bookkeeping horn of PJ.10(4): NO vertex/amplitude/rate; the
+transit bar stands on THREE grounds O1/O2/O4 — the directive's "O1 and O4" corrected); D-PJ4 issued
+with its functional form UNFIXED (ingredients anchored: the ε_q gate, (n_real,n_𝒱), E_vis/I_hid,
+dim𝒦_n, C_cap, (1−γ/4)²; no derived Lyapunov THRESHOLD exists — a value would be a further act;
+count→strength barred); D-PJ5 issued with well-definedness SUSPENDED (machine: the cubic inverse has
+three real roots on (0,√2), exactly one positive — the derived selection unaffected; ℂ adds no cubic
+root, only the inert z-coordinate ω-relabeling; no formed read may pass through an open branch);
+D-PJ6/D-RS5 issued (riders dropped, IT.44(6) stands; the register-o reading — citation corrected
+A9→Def-H.9+FT.20 G-row by machine text census) · IT.56 the D-RS side + the sector sync — D-RS1
+issued and scoped (≺/≻ grounded in the tick total order [D1.8] + C11's strict node 4-order; NO
+same-tick cross-vertex order supplied — labels, ¬facts; the logged C11 conflict dissolved by
+retirement); D-RS2 issued as a DICTIONARY PAIRING (tick 𝔮⁰ ↔ null-segment 𝔮^{−1/2}: faces, ¬equals
+[BM.134(5)]; ¬materialization coupling [Def-H.19; FT.131(3)]; ¬an amplitude [IT.41]); D-RS4
+DEFERRED verbatim (premise corrected: the condition ⟺ s·dx=0 IS derived [IT.53(5)(b)]; the scope act
+defers); the item-10 numbering collision resolved (→ D-RS7, the 𝔮⁰-price clarification); D-RS3 NOT
+addressed → remains owed; **item 11 issued: BM.113(6)'s priced sector choice DECLARED** — the ∨² read
+kept and synced with A4's {0,π} via the ℤ₂ dictionary ε=cos(πα) (machine: the derived ε=(−1)^A
+stands UNFLIPPED — multiplicativity exact A=1..6; the priced ∧² alternative = the same partition up
+to label swap; the dictionary bijects onto {0,π}, matching μ_CP=e^{iπΘ}=±1 [BM.108(3)]); a
+CONVENTION ¬an equality; the frozen row UNTOUCHED [AT.63(2)] — the discharge logged in era 2; item
+12 re-confirmed (ρ_B [A-BM.9], e₀ [EM.25(7)] unissued; the IT.5(1) registry unchanged; scoped to the
+deferred Calibration Era + molecular level) · IT.57 the bar-check verdict — **the package is ISSUABLE
+AS RECORDED** on every bar (P1: all touched quantities 𝔮⁰, 𝔥 untouched, no new constant; P5: no
+value; transit: no vertex, three grounds; arenas: 𝒫_ch is the coordinate's value space;
+incommensurability: all five families disjoint from the baryon generators, the pairing ¬a bridge;
+count→strength: the form unfixed; species quoted; canon untouched); the register state (issued /
+deferred / owed / four sub-debts: the branch rule, the degree form, the endpoint elaboration + the
+inherited forks); the seven premise corrections (P1)–(P7); **the Def-category answer: era 2 has no
+Def-IT series and the gate registry recognizes none — the declarations are recorded as LOGGED ACTS
+inside IT-tags (the IT.31 pattern) with handles D-PJn@IT.55 / D-RSn@IT.56; a Def-IT series at
+closure is an option, ¬forced**; §Cal-IT moves from empty to a VALUE-FREE act register; the
+Calibration Era stays deferred; NO new open row.
 
 ## The directive's premises, and what the canon said
 
