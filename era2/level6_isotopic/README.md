@@ -1,4 +1,4 @@
-# `era2/level6_isotopic/` — Level 6 · the **Isotopic** era · Tiers IT.1–IT.12
+# `era2/level6_isotopic/` — Level 6 · the **Isotopic** era · Tiers IT.1–IT.14
 
 **Status: OPENED at session 9 — discovery-phase working level. NOT frozen canon.** Nothing here
 is adopted, no declaration issues, §Cal-IT is empty, and no clause of Parts 1–4 or of Level 5's
@@ -29,6 +29,7 @@ record: IT.15(3).
 | `tiers/Part6_Isotopic_era_TierIT11.md` | **Tier IT.11** — IT.34–IT.36: **the amplitude-binding verdict** — the norm/amplitude LAYER separation (the binding B_ens is a norm-layer read [Def-H.32(6); BM.21(2)], dressing-free since \|(-1)^ℵ\|²=1, so the dressing CANNOT flip the ≤0 sign), the dressed resolvent + contact terms scoped (two-body, channel-indexed), the register conflation refuted, no dissociation channel [BM.122(6)], and **IT-O2's sign RESOLVED / value open, IT-O1 OPEN (level-local)** |
 | `tiers/Part6_Isotopic_era_TierIT12.md` | **Tier IT.12** — IT.37–IT.39: **the mass-matrix object** — the 2×2 Hermitian M on H_ω (Def-H.33), its exact Pauli decomposition (v₀=m_L+m_S, v₃=m_L−m_S, v₁=2m_off cosΔθ, v₂=−2m_off sinΔθ) and eigenvalues, the tensor product C_μν=v_μv_ν; adjudicated **REDUNDANT** (the same species as BM.22's force matrix F_ext) **+ PARAMETRIC** (m_off, Δθ undeclared slots — a P4/declaration act, none issued) + the 16-vs-8 force-algebra over-count [AT.56]; the unification/BEC over-claims refuted; **not adopted** |
 | `tiers/Part6_Isotopic_era_TierIT13.md` | **Tier IT.13** — IT.40–IT.42: **IT-O1 re-examined against the new machinery** — BM.122(6)'s four grounds re-audited (level-local discipline): **O3 DISSOLVED** (Def-BM.20/BM.134 constructed the momentum-space Σ-resolvent + plane-wave states + two-body phase space, superseding BM.122(6)(O3) within era 1 — a stale citation corrected); **O1/O2/O4 HOLD, sharpened** (the gauge blocks are chiral-blind [Wᵢ⊗I_ω, I⊗P_{L/R}]=0, machine-verified; the gauge field is undeclared slots T_a [AT.57]; the vector EM read ¬formable [AT-O29]; deficit 1′ application-layer; the D3.7 trivial chain out of Def-H.38's scope); **IT-O1 stays OPEN on THREE grounds; the missing primitive = deficit 1′ (a declaration, ¬a construction)** |
+| `tiers/Part6_Isotopic_era_TierIT14.md` | **Tier IT.14** — IT.43–IT.45: **the cross-currency matrix object** — M=[[m_L,ρ_B],[ε_q,m_S]] audited entry by entry: the tensor product and the ρ_Bε_q seat census verified exact; THREE obstructions (𝔮-inhomogeneity — det sums 𝔮¹ with 𝔮⁰; the container does not launder the cross-currency sums [IT.4(3) doctrine]; the handshake seat misidentified — the formed mixed loci are exactly three and the handshake is the binary χ [IT.4(2); BM.134(5)]); the gem ι(M)=Mᵀ (the S-T split IS the currency-exchange symmetrization); the grading map REFUTED on the canon's own basis (J₂,K₁,K₃ transpose-even; W₂ transpose-odd); the derivative asymmetry SEATLESS (symmetric slot independence [IT.5(1)]); **Scenario B: REDUNDANT + PARAMETRIC + BARRED as a formed read — not adopted** |
 | `checks/measurement_theorem.py` | the theorem's checker — **21/21 exact**, no floating point |
 | `checks/isotopic_family.py` | Tier IT.2's checker — **8/8 exact**: the grammar engine (enumeration ∧ recurrence ∧ closed form), the family census, the Vandermonde charge convolution, the capacity census |
 | `checks/multi_seal_census.py` | Tier IT.3's checker — **9/9 exact**: the width skeleton (Laurent vs binomial), the N=5,6 grammar census, both mask species, the support placement, the D⁻ status chain |
@@ -42,6 +43,7 @@ record: IT.15(3).
 | `checks/amplitude_binding.py` | Tier IT.11's checker — **16/16 exact**: the dressed resolvent/contact terms re-derived, the norm-layer dressing-freedom exhibited on explicit sign sums (ν=2^{|R|} under any dressing), the constructed bindings ≤0, the transit-bar census, the conflations refuted — every section with an adversarial witness |
 | `checks/mass_matrix.py` | Tier IT.12's checker — **13/13 exact**: Gauss(i) over Fraction — the Hermiticity, the Pauli decomposition (the four identities), the characteristic polynomial/eigenvalues, the 16-component tensor trace by explicit 4×4 multiplication, the 8-vs-16 force-algebra count — every section with an adversarial witness |
 | `checks/transit_reexam.py` | Tier IT.13's checker — **11/11 exact**: Gauss(i) over Fraction — the chiral-blindness commutator [Wᵢ⊗I_ω, I⊗P_{L/R}]=0 (+ the same-factor adversarial), the two-body phase-space identity (O3 discharged), and the row-by-row O1/O2/O4 adjudication + the missing-primitive verdict |
+| `checks/cross_currency_matrix.py` | Tier IT.14's checker — **19/19 exact**: multivariate Laurent polynomials over Gauss(i) over Fraction — the entrywise tensor verification, the seat/grading/alphabet censuses, the symbolic S-T split + the ι=transpose identity, all 16 C_μν=v_μv_ν, the B3-basis cross-cut witnesses, the bivector/force-algebra supports, the formal-partial derivative census — every section with an adversarial witness |
 | `checks/run_all_level6.py` | the level's runner (gate first, exit 0 iff green) |
 | `checks/check_level6_format.py` | the level's format + citation gate: canon `math_balance` rules ported, IT-block anatomy (Thm/Req/Pf/Phys + ∎), and citation attestation against **three** sources — the era-1 canon registry (`era1/canon`, 640 tags), the closed Level-5 record (`../level5_atomic/tiers`, AT.n/AT-O rows), and this level's own IT definitions |
 | `discovery/MEASUREMENT_THEOREM.md` | the session-9 working record: the directive's four premises verified against the canon, the four corrections logged, the check ledger |
@@ -57,6 +59,7 @@ record: IT.15(3).
 | `discovery/AMPLITUDE_BINDING.md` | the session-13g working record: the norm/amplitude layer separation (the binding is dressing-free), the amplitude machinery scoped, the conflations refuted, the level-local transit absence, and the third-scenario verdict |
 | `discovery/MASS_MATRIX.md` | the session-13h working record: the exact Pauli/tensor algebra, the 16-vs-8 over-count, the redundancy with BM.22/AT.56–58, the undeclared slots, and the redundant+parametric verdict |
 | `discovery/2026-10-13_session_13i_transit_reexam.md` | the session-13i working record: the four-ground re-audit, the O3 supersession (BM.134 ⊣ BM.122(6)(O3)), the chiral-blindness machine check, deficit 1′ as the missing primitive, and the open-on-three-grounds verdict |
+| `discovery/CROSS_CURRENCY_MATRIX.md` | the session-13j working record: the environment-restoration log (PR #7 merged, suites green from the fresh clone), the entry-by-entry audit, the six premise corrections (P1–P6), the check ledger (19/19), and the Scenario-B verdict |
 
 **Shared libraries are borrowed, not copied:** `qexact.py` (rigorous `Fraction` intervals) and
 `duality.py` (the `Gauss(i)` core) come from `../level5_atomic/checks` via `sys.path` — single
@@ -65,8 +68,8 @@ source of truth, recorded in the checker header and in AT.63(9)'s inheritance li
 ## Run
 
 ```bash
-cd era2/level6_isotopic/checks && python3 run_all_level6.py        # -> 14 checkers, 211 exact markers, 0 failures, exit 0
-cd era2/level6_isotopic/checks && python3 check_level6_format.py   # -> 13 Part 6 documents PASS, 0 violations
+cd era2/level6_isotopic/checks && python3 run_all_level6.py        # -> 15 checkers, 230 exact markers, 0 failures, exit 0
+cd era2/level6_isotopic/checks && python3 check_level6_format.py   # -> 14 Part 6 documents PASS, 0 violations
 ```
 
 ## Tier index
@@ -225,6 +228,47 @@ PARAMETRIC** ($m_{\rm off},\Delta\theta$ are undeclared slots: $\Delta\theta$ is
 [FT.22] nor the defect $\Theta_R$ [FT.54(1)]; a P4/declaration act, none issued); the over-claims refuted (no
 force unification — the forces are AT.50/AT.56–58; no BEC explanation — that is $\varepsilon=(-1)^A$
 [BM.128(7); IT.31(4)]); **recorded honestly, not adopted**.
+
+**IT.40–IT.42 (Tier IT.13) IT-O1 re-examined against the new machinery:** IT.40 the four grounds
+re-audited (the level-local no-go discipline) — **O3 DISSOLVED** (Def-BM.20/BM.134 constructed the
+momentum-space Σ-resolvent + plane-wave boundary states + the two-body phase space p_∗=(1/2N)√(z²−4N²m²)
+at Tier BM.23, superseding BM.122(6)(O3) within era 1 — the four-grounds citation at
+IT.1(6)/IT.29(4)/IT.35(4) is stale on O3 → three grounds); **O1/O2/O4 HOLD, sharpened** (the gauge
+blocks are chiral-blind, [Wᵢ⊗I_ω, I⊗P_{L/R}]=0 machine-verified with the same-factor adversarial;
+the gauge field is undeclared slots T_a [AT.57]; the vector EM read ¬formable [AT-O29]; deficit 1′
+needs a Weyl symbol + a hypercharge-assignment read, application-layer/non-derivable [FT.125(2),(4)];
+the D3.7 trivial chain is out of Def-H.38's scope) · IT.41 the verdict — **IT-O1 stays OPEN on three
+grounds; the missing primitive is deficit 1′ (the chiral matter assignment) — a DECLARATION gap, not
+a construction gap; the construction is ¬forced** · IT.42 the premise correction (four grounds →
+three), the status rows, and the no-declaration discipline.
+
+**IT.43–IT.45 (Tier IT.14) the cross-currency matrix object:** IT.43 the object audited entry by
+entry (m_L the informational read [FT.44(4)]; ρ_B, ε_q the two undeclared currency slots [BM.83(4);
+BM.19(2); IT.5(1)]; "quantum free charge" ¬a canon term), the directive's 4×4 tensor product
+verified ENTRYWISE with the ρ_Bε_q seat census ((2,3),(3,2); det −1; discriminant +4;
+C₁₁+C₂₂=4ρ_Bε_q), the exact S-T split (S carries ½m_L(ρ_B+ε_q), ½(ρ_B²+ε_q²); T the differences —
+with the factorization correction ½(ρ_B²−ε_q²)=½(ρ_B−ε_q)(ρ_B+ε_q)), the gem **ι(M)=Mᵀ — the S-T
+split IS the currency-exchange symmetrization** — and the THREE obstructions: **𝔮-inhomogeneity**
+(det sums 𝔮¹ with 𝔮⁰ — a defect IT.37's M did not have), **the container does not launder the
+sums** (v₁=ρ_B+ε_q already at 2×2; 12 of 16 C_μν carry a sum/difference factor; formable only as a
+symbolic expression [IT.4(3)], barred as formed reads [BM.83(3),(9); BM.140(5)]), and **the
+handshake seat misidentified** (the formed mixed loci are EXACTLY THREE; the handshake is the binary
+χ_{NE≥𝒯₀} [IT.4(2); BM.134(5)]) · IT.44 the grading map REFUTED on the canon's own basis (of the
+six S-odd operators J₂,K₁,K₃ are transpose-EVEN and W₂ is transpose-ODD — the involutions
+cross-cut; the 10+6/7+3+3+3 rhyme is numerology [BM.134(5) discipline]; the bivector overlap 2/6;
+S and T each carry 4 directions outside the 8-dim force algebra [IT.38(2)]), and the derivative
+asymmetry SEATLESS (no formed read contains both slots [IT.5(1)] — both formal partials vanish
+SYMMETRICALLY; ∂m_hid/∂ε_q=∂Δx_B/∂ε_q=0; a nonzero ∂ρ_B/∂ε_q would be a declared cross-currency
+conversion — barred, none issued; "perspectives" ¬primitives [IT.1(8)(P4)]; the photon has ¬formed
+reads [(R9''); IT.3(6); IT.41]; ρ_B ¬a seal class [AT.41(2),(3)] — the IT.10 citation inverted: the
+bypass licenses the geometric reads BECAUSE they never mix [IT.32(3)]; the salvageable kernel =
+IT.4(2)'s locus distinction, already derived) · IT.45 the adjudication — **SCENARIO B: REDUNDANT**
+(the general non-Hermitian 2×2 specialization of IT.37–IT.39's parametric class; F_ext ⊂ IT.37 ⊂ the
+new M; zero new operators, zero new loci) **+ PARAMETRIC + BARRED as a formed read; NOT ADOPTED**;
+m_S maps to existing rows under both candidate reads (2ln2/𝔥 = the BM.70 floor at equality; the
+undeclared σ_νz₁ln2/𝔥 under which even Tr M is barred [IT.4(3)]) — no route choice forced; six
+premise corrections (P1)–(P6); three declarations named that would be owed to promote it (a mass²
+scale; a ρ_B(ε_q) link — the bar itself; the 8-dim force-algebra restriction); **no new open row**.
 
 ## The directive's premises, and what the canon said
 
