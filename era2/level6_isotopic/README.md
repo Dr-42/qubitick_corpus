@@ -1,4 +1,4 @@
-# `era2/level6_isotopic/` — Level 6 · the **Isotopic** era · Tiers IT.1–IT.14
+# `era2/level6_isotopic/` — Level 6 · the **Isotopic** era · Tiers IT.1–IT.16
 
 **Status: OPENED at session 9 — discovery-phase working level. NOT frozen canon.** Nothing here
 is adopted, no declaration issues, §Cal-IT is empty, and no clause of Parts 1–4 or of Level 5's
@@ -30,6 +30,8 @@ record: IT.15(3).
 | `tiers/Part6_Isotopic_era_TierIT12.md` | **Tier IT.12** — IT.37–IT.39: **the mass-matrix object** — the 2×2 Hermitian M on H_ω (Def-H.33), its exact Pauli decomposition (v₀=m_L+m_S, v₃=m_L−m_S, v₁=2m_off cosΔθ, v₂=−2m_off sinΔθ) and eigenvalues, the tensor product C_μν=v_μv_ν; adjudicated **REDUNDANT** (the same species as BM.22's force matrix F_ext) **+ PARAMETRIC** (m_off, Δθ undeclared slots — a P4/declaration act, none issued) + the 16-vs-8 force-algebra over-count [AT.56]; the unification/BEC over-claims refuted; **not adopted** |
 | `tiers/Part6_Isotopic_era_TierIT13.md` | **Tier IT.13** — IT.40–IT.42: **IT-O1 re-examined against the new machinery** — BM.122(6)'s four grounds re-audited (level-local discipline): **O3 DISSOLVED** (Def-BM.20/BM.134 constructed the momentum-space Σ-resolvent + plane-wave states + two-body phase space, superseding BM.122(6)(O3) within era 1 — a stale citation corrected); **O1/O2/O4 HOLD, sharpened** (the gauge blocks are chiral-blind [Wᵢ⊗I_ω, I⊗P_{L/R}]=0, machine-verified; the gauge field is undeclared slots T_a [AT.57]; the vector EM read ¬formable [AT-O29]; deficit 1′ application-layer; the D3.7 trivial chain out of Def-H.38's scope); **IT-O1 stays OPEN on THREE grounds; the missing primitive = deficit 1′ (a declaration, ¬a construction)** |
 | `tiers/Part6_Isotopic_era_TierIT14.md` | **Tier IT.14** — IT.43–IT.45: **the cross-currency matrix object** — M=[[m_L,ρ_B],[ε_q,m_S]] audited entry by entry: the tensor product and the ρ_Bε_q seat census verified exact; THREE obstructions (𝔮-inhomogeneity — det sums 𝔮¹ with 𝔮⁰; the container does not launder the cross-currency sums [IT.4(3) doctrine]; the handshake seat misidentified — the formed mixed loci are exactly three and the handshake is the binary χ [IT.4(2); BM.134(5)]); the gem ι(M)=Mᵀ (the S-T split IS the currency-exchange symmetrization); the grading map REFUTED on the canon's own basis (J₂,K₁,K₃ transpose-even; W₂ transpose-odd); the derivative asymmetry SEATLESS (symmetric slot independence [IT.5(1)]); **Scenario B: REDUNDANT + PARAMETRIC + BARRED as a formed read — not adopted** |
+| `tiers/Part6_Isotopic_era_TierIT15.md` | **Tier IT.15** — IT.46–IT.48: **the capacity-bound calibration matrix (the parametric ion fills)** — M₄=M⊗M under the fills m_L(N)=2N·u, ρ_B(N)=ρ₀N, ε_q(n_e)=ε₀n_e, m_S(n_e)=m₀n_e audited: the ONE derived kernel (E_int=2N [IT.6(1); IT.7]) with a currency substitution at the scale joint (ln2/𝔥 → u=4ε_q [BM.137(1)] — the fill is the binding's sign-flipped, scale-stripped numerator fragment); the seven contradictions (ρ_B N-independence; ε_q global vs ion-indexed; σ_e=0 ∉ {±1} [CT0.9]; the ρ₀/μ₀ constraint; decorative slots; ε₀<⅛; the ion table vs the N-ladder — 'He2+' at N=6 is two-nucleon, 'He-4' lives at N=12 [IT.31(4),(5)]); the 𝔮-dilemma both horns (the ratio is 𝔮^{−1} — 'dimensionless' FALSE; the fills homogenize only by stripping the mass); the 'relative flux' unformed (BM.83(5)'s localization census closed); the 'crystallization cost' circular and N-BLIND (nilpotent, charpoly=λ⁴ for both bare ions); the derivative asymmetry SMUGGLED not discovered (∂m_L^fill/∂ε₀=8N·n_e≠0 = the barred conversion by fiat); **Scenario B — refuted, NOT adopted; no new open row** |
+| `tiers/Part6_Isotopic_era_TierIT16.md` | **Tier IT.16** — IT.49–IT.54: **the probe consolidation (the subgenerator study merged)** — the four delivered documents (CONSOLIDATED Parts I–XII; CONTINUUM; the photon phase-jump audit PJ.1–PJ.15; the two-photon radar audit RS.1–RS.10) audited: the citation sweep ~450 tokens / ONE unattested (a self-flagged CT0-prefix slip for CT3.20); the FT.116(5) canon typo CONFIRMED harmless and recorded probe-side (never edited); the ρ_B collision RESOLVED (ρ_B := the bridge [BM.69(2); BM.102(4)]; ρ := the density [BM.14(2),(4)]; the b-slot fork carried open); all 33 machine claims RE-DERIVED FROM SCRATCH (the study's scripts were ¬delivered). **New derived rows adopted:** 𝒦(N)=2/N; the neighbour law R(n)=(n+1)/n; the quotient uniqueness at 3; the cubic ladder γ_ℓ=2γ_q³−3γ_q; z_ℓ=2z_q³ (the factor 2=B² forced); the Newton tower + z-cubic; the 3-adic ν-exclusion; the circle algebra [Ô,C₃]=R_{4π/9}; **Lie⟨J,K⟩=𝔰𝔲(4) (15-dim, E₀∉)**; the nilpotent calculus (ΣA_iB_i=Π_ℛ, ΣB_iA_i=3Π_𝒱; the honest ¬Clifford negative); the branch-change bridge J_iΠ_ℛ=Π_𝒱J_i; the order-4 inner reflection Ad(e^{iπΣ/8}); the 10-of-16 tensor-square occupancy; the saturated-node/Lyapunov/radar rows incl. the agreement condition (⟺ s·dx=0) and the disjointness row; the radar recorded as an **IT-O3 candidate** (¬adopted). The matrix layer = the IT.37–39/IT.43–45 parametric class; thirteen declarations NAMED, none issued; **no new open row** |
 | `checks/measurement_theorem.py` | the theorem's checker — **21/21 exact**, no floating point |
 | `checks/isotopic_family.py` | Tier IT.2's checker — **8/8 exact**: the grammar engine (enumeration ∧ recurrence ∧ closed form), the family census, the Vandermonde charge convolution, the capacity census |
 | `checks/multi_seal_census.py` | Tier IT.3's checker — **9/9 exact**: the width skeleton (Laurent vs binomial), the N=5,6 grammar census, both mask species, the support placement, the D⁻ status chain |
@@ -44,6 +46,8 @@ record: IT.15(3).
 | `checks/mass_matrix.py` | Tier IT.12's checker — **13/13 exact**: Gauss(i) over Fraction — the Hermiticity, the Pauli decomposition (the four identities), the characteristic polynomial/eigenvalues, the 16-component tensor trace by explicit 4×4 multiplication, the 8-vs-16 force-algebra count — every section with an adversarial witness |
 | `checks/transit_reexam.py` | Tier IT.13's checker — **11/11 exact**: Gauss(i) over Fraction — the chiral-blindness commutator [Wᵢ⊗I_ω, I⊗P_{L/R}]=0 (+ the same-factor adversarial), the two-body phase-space identity (O3 discharged), and the row-by-row O1/O2/O4 adjudication + the missing-primitive verdict |
 | `checks/cross_currency_matrix.py` | Tier IT.14's checker — **19/19 exact**: multivariate Laurent polynomials over Gauss(i) over Fraction — the entrywise tensor verification, the seat/grading/alphabet censuses, the symbolic S-T split + the ι=transpose identity, all 16 C_μν=v_μv_ν, the B3-basis cross-cut witnesses, the bivector/force-algebra supports, the formal-partial derivative census — every section with an adversarial witness |
+| `checks/ion_fill_matrix.py` | Tier IT.15's checker — **13/13 exact**: Laurent polynomials over Gauss(i) over Fraction — the degree censuses (both horns), the skeleton/substitution joint, BM.137(3)'s hinge identity D_n−1=uD_{n−1}, the fill-contradiction census, the N-ladder binomials, the localization-census exclusion, the symbolic nilpotency + Faddeev–LeVerrier charpoly λ⁴, the Kronecker spectral identities, the persisting/smuggled partials, the adapted-coordinate witnesses |
+| `checks/probe_consolidation.py` | Tier IT.16's checker — **33/33 exact**: Fraction polynomial rings with exact quotient reductions (the trig tower, Q[t₂]/(t₂²−2), Q[x,a₀,z_r,z_i,j]/(j²+1), Q[γ], Q[s]/(s²−Δ)), a jet-derivation algebra, Faddeev–LeVerrier, Gauss(i) 4×4 elimination, exhaustive 4ⁿ/S₃ censuses, rational π-certificates — the full re-verification of the study's machine layer |
 | `checks/run_all_level6.py` | the level's runner (gate first, exit 0 iff green) |
 | `checks/check_level6_format.py` | the level's format + citation gate: canon `math_balance` rules ported, IT-block anatomy (Thm/Req/Pf/Phys + ∎), and citation attestation against **three** sources — the era-1 canon registry (`era1/canon`, 640 tags), the closed Level-5 record (`../level5_atomic/tiers`, AT.n/AT-O rows), and this level's own IT definitions |
 | `discovery/MEASUREMENT_THEOREM.md` | the session-9 working record: the directive's four premises verified against the canon, the four corrections logged, the check ledger |
@@ -60,6 +64,8 @@ record: IT.15(3).
 | `discovery/MASS_MATRIX.md` | the session-13h working record: the exact Pauli/tensor algebra, the 16-vs-8 over-count, the redundancy with BM.22/AT.56–58, the undeclared slots, and the redundant+parametric verdict |
 | `discovery/2026-10-13_session_13i_transit_reexam.md` | the session-13i working record: the four-ground re-audit, the O3 supersession (BM.134 ⊣ BM.122(6)(O3)), the chiral-blindness machine check, deficit 1′ as the missing primitive, and the open-on-three-grounds verdict |
 | `discovery/CROSS_CURRENCY_MATRIX.md` | the session-13j working record: the environment-restoration log (PR #7 merged, suites green from the fresh clone), the entry-by-entry audit, the six premise corrections (P1–P6), the check ledger (19/19), and the Scenario-B verdict |
+| `discovery/ION_FILL_MATRIX.md` | the session-13k working record: the IT.14-checker erratum (BM.137(1)'s u=4ε_q), the fill-vs-derived-form tables, the fragment identification, the two-horn 𝔮-dilemma, the nilpotency/blindness machine rows, the smuggled-declaration finding, the check ledger (13/13), and the Scenario-B verdict |
+| `discovery/PROBE_CONSOLIDATION.md` | the session-13l working record: the intake inventory (four of eight documents delivered; five scripts ¬delivered → everything re-derived), the citation-audit results, the reconciliation table (amendment chain, the ρ_B/δ/s_ℓ/κ resolutions), the derived/declared/barred separation, the tier placement, and the 33-row check ledger |
 
 **Shared libraries are borrowed, not copied:** `qexact.py` (rigorous `Fraction` intervals) and
 `duality.py` (the `Gauss(i)` core) come from `../level5_atomic/checks` via `sys.path` — single
@@ -68,8 +74,8 @@ source of truth, recorded in the checker header and in AT.63(9)'s inheritance li
 ## Run
 
 ```bash
-cd era2/level6_isotopic/checks && python3 run_all_level6.py        # -> 15 checkers, 230 exact markers, 0 failures, exit 0
-cd era2/level6_isotopic/checks && python3 check_level6_format.py   # -> 14 Part 6 documents PASS, 0 violations
+cd era2/level6_isotopic/checks && python3 run_all_level6.py        # -> 17 checkers, 276 exact markers, 0 failures, exit 0
+cd era2/level6_isotopic/checks && python3 check_level6_format.py   # -> 16 Part 6 documents PASS, 0 violations
 ```
 
 ## Tier index
@@ -269,6 +275,100 @@ m_S maps to existing rows under both candidate reads (2ln2/𝔥 = the BM.70 floo
 undeclared σ_νz₁ln2/𝔥 under which even Tr M is barred [IT.4(3)]) — no route choice forced; six
 premise corrections (P1)–(P6); three declarations named that would be owed to promote it (a mass²
 scale; a ρ_B(ε_q) link — the bar itself; the 8-dim force-algebra restriction); **no new open row**.
+
+**IT.46–IT.48 (Tier IT.15) the capacity-bound calibration matrix (the parametric ion fills):** IT.46
+the fills audited — the ONE derived kernel: E_int=2N exactly on the disjoint read (N=3(k+1),
+E_int=6(k+1) [IT.6(1); IT.7]), so m_L(derived)=2N·(ln2/𝔥) and the fill m_L(N)=2N·u keeps the
+skeleton while SWAPPING the scale factor (ln2/𝔥, shared currency, 𝔮^{1/2} → u=4ε_q [BM.137(1)],
+lepton currency, 𝔮⁰); the fill IS the ensemble binding's numerator fragment — sign flipped,
+D-ratio and ln2/𝔥 stripped (the hinge identity D_n−1=uD_{n−1} verified n=2,3,4; the witness
++1 vs −4/5 at ε_q=1/16; binding ¬mass [BM.137(3); IT.34(1); FT.79(5)]); the contradiction census
+(ρ_B derived is N-independent [BM.83(4)]; ε_q is ONE global A4 slot but the ion table gives it three
+values and pins bare nuclei to the sharp crystallization point as a LAW [BM.19(2),(3); D0.4];
+σ_e=σ₀n_e hits 0 at n_e=0, outside CT0.9's {−1,+1}; BM.83(4)'s identity forces ρ₀=μ₀𝔥²/(ln2)²
+between "independent" slots; μ_B, σ_e decorative — alph(M₄^fill)={N,n_e,ρ₀,ε₀,m₀}; the domain
+forces ε₀<⅛ [CT0.8]); the ion table vs the N-ladder (N=6 is two-nucleon — W₆(+2)=495, ΣW₆=4096
+[IT.9(1)]; "He-4" lives at A=4, N=12 [IT.31(4),(5)]; n_e has no derived standing — the
+electron-saturated calculus is ¬constructed [IT.8(3)]); the two-horn 𝔮-dilemma (horn 1: the ratio
+is 𝔮^{−1} — "dimensionless" FALSE; horn 2: the fills homogenize only by stripping every mass read
+of its mass; unfilled, M₄ spans THREE degrees {0,½,1}); C_cap=16 vs 4²=16 numerology (the lock
+biconditional re-censused) · IT.47 the claims refuted — the "relative information flux" ratio is
+NOT a formed read (BM.83(5)'s localization census is closed: ε_q enters none of the three formed
+cross-currency ratios; formable only as a symbolic expression [IT.4(3)]; "cost/flux" naming has no
+ledger primitive — the only "flux" on record is IT.14(2)'s curvature-flux Q-value read); the
+"crystallization cost" is CIRCULAR AND N-BLIND (at n_e=0: M nilpotent, charpoly(M₄)=λ⁴ identically
+for BOTH bare ions — a read that cannot fail; at n_e=1: tr(M₄)=(trM)², det(M₄)=(detM)⁴ with
+trM=8Nε₀+m₀, detM=Nε₀(8m₀−ρ₀) — the contrast is the fill's own law read back); crystallization is
+already derived without eigenvalues [BM.19(3); BM.122(3); BM.137(2); Def-BM.5(5)]; the Def-H.32
+grouping-sector map is the adjudicated ill-posed form [IT.26; AT.41(3); IT.27(2)] · IT.48 the
+derivative verdict re-visited — the independence PERSISTS (all cross-partials of ρ_B^fill, ε_q^fill
+vanish) but the fill SMUGGLES the declaration (∂m_L^fill/∂ε₀ = 8N·n_e ≠ 0: a stipulated
+cross-currency law = the barred conversion [BM.140(5); IT.45(5)(ii)] — "the fill does not DISCOVER
+the asymmetry; it ASSUMES it"); the "constant acceleration" identities verified exact and shown
+VACUOUS (the T₁₄ witness ∂²/∂Δ²=0; S₁₄ remains a cross-currency sum); **VERDICT — SCENARIO B
+(refutation)**: a parametric subclass of IT.37–39/IT.43–45's construction class; seven premise
+corrections (P1)–(P7); **NOT adopted; no declaration; §Cal-IT empty; NO new open row**; the erratum
+record (IT.14's checker: BM.137(1)'s u=4ε_q, verdict-neutral, fixed first, re-run 19/19); the
+declared door: the deferred Calibration Era [IT.5(2); IT.33; AT.63(4)] with (M1′)–(M3′) [AT.54(6)].
+
+**IT.49–IT.54 (Tier IT.16) the probe consolidation (the subgenerator study merged):** IT.49 the
+intake — four documents delivered (CONSOLIDATED/CONTINUUM/PJ/RS), five verification scripts NOT
+delivered ⟹ all 33 machine claims re-derived from scratch; the citation audit (~450 tokens, one
+self-flagged CT0-prefix slip → CT3.20; ~65 clause checks pass; every verbatim quote verified); the
+**FT.116(5) canon typo CONFIRMED** (the expanded discriminant needs the second factor squared;
+witness z=1+i: 432=432≠216; the zero locus — all the clause uses — unaffected; recorded probe-side,
+the frozen canon NEVER edited, an erratum queued for the Era-2-closure pipeline); the **ρ_B
+collision RESOLVED** (ρ_B := the bridge μ̂'²𝔥²/(ln2)² ∈ 𝔮⁰ [BM.69(2); BM.102(4); A-BM.9 ¬issued];
+ρ := the density 𝔥⁻⁴E⁴(ln2)⁴ ∈ 𝔮^{+2} [BM.14(2),(4)]; MR.3's mislabel corrected; the b-slot fork
+carried open [BM.30(5) pattern]); the notation unification (δ_ch phase vs s_ch exponent; κ≠ϰ; the
+four-c/four-ρ/six-μ/two-κ hazard table); the amendment chain (17+6+6 register rows; RS §0 overrides
+PJ.4's temporal reading) · IT.50 the channel-angle layer — **new derived rows:** 𝒦(N)=2/N (N=3,4,6
+exact; general N a root-sum math row; at N=3 the two twos coincide ⟹ FT.158(5)'s (3−1)/3 exact only
+at order 3); the neighbour law R(n)=(n+1)/n (BM.28(2)'s 2:1 and 4:3 = one law at n=1,3); the quotient
+uniqueness at k=3 (both quotient functions; "¬a tensor-product structure"); the cubic ladder
+γ_ℓ=2γ_q³−3γ_q (=√2T₃(γ_q/√2); the unique positive root; the ν-cubic channel-own); z_ℓ=2z_q³ with
+the factor 2=B² FORCED (c²=4, unique positive rational); the Newton tower (∏r=(γ−1)/2, Σr³, Σr⁴)
+and the z-cubic (Σz=6 phase-free); the 3-adic ν-unreachability (16≠9·3ᵏ); the circle algebra
+([Ô,C₃]=R_{4π/9}; ÔC₃Ô⁻¹=R_{2π/9}; the πδ_ℓ rhyme flagged ¬cashed; the lift a symbolic
+construction); the ℘-arithmetic (Σ_B=(2,−1,0); 3ln1280−4ln960=−ln405; "the 4/3 never becomes
+dimensionful; ln(4/3) does") · IT.51 the operator layer — **Lie⟨J_i,K_i⟩=𝔰𝔲(4), dim 15, E₀∉** (the
+generation from the six alone extends CT1.9's span row); the full commutation table re-certified;
+the nilpotent calculus (A_i²=B_i²=A_iA_j=B_iB_j=0; 𝔗(A_iB_j)=δ_ij; ΣA_iB_i=Π_ℛ=(3E₀+Σ)/4;
+ΣB_iA_i=3Π_𝒱; Σ[A_i,B_i]=Σ; **the honest negative {A_i,B_j}≠δ_ij𝟙 — fermion-like, ¬Clifford**); the
+Casimirs (ΣJ²=ΣK²=Π_ℛ+3Π_𝒱; ΣW²=2Π_ℛ; W_iΠ_𝒱=0 — the "2 versus 0" branch asymmetry's origin); the
+**branch-change bridge** J_iΠ_ℛ=Π_𝒱J_i, K_iΠ_ℛ=Π_𝒱K_i (the six are exactly the branch-changers;
+register #13's over-flag WITHDRAWN — one phenomenon, two loci); the **order-4 inner reflection**
+Ad(e^{iπΣ/8}): J↦−K, K↦J, A↦iA, B↦−iB, R⁴=iE₀ (exists only after complexification); CPT trivial on
+the sixteen (scalar character [FT.134(3)]; the unique fixed triple (0,0,0) [BM.28(5)]); the history
+reversal inadmissible [FT.144(4)(ii); A6]; the (S,T) sector table re-certified (W=(+,−), J=(−,+),
+K=(−,−); sectors (7,3,3,3)) · IT.52 the tensor-square occupancy and the parametric calculus — X=M⊗M
+occupies **10 of 16** with X_{J}=X_{K}=0 for every M ("a tensor square can never carry the blocks
+that generate the phase"); X_{E₀}=½(𝒮−𝒯), X_Σ=⅙(𝒮+𝒯); the metric identification ¬adopted (four
+prices: the Ω² nonlinearity, the swap-even 10→7 subspace, chart-vs-register, count→strength); the
+phase calculus exact (the tower r''=1−r; the family-sum zeros; the FOUR CORRECTED CELLS a'd/ad'/a''d/ad'';
+the readout table — 𝒮 no cross-curvature, 𝒯 only the cross term; the constrained flow (1,2n,n²);
+det J_Φ=−a'd'(a²−d²); det H_𝒯=ad·a''d''−(a'd')²; the eigenvalue certificate; at the sharp threshold
+each phase moves exactly one eigenvalue); the order-3 facts (∂q∂ℓ∂ν(M⊗M)=0 on all 81 cells; the ade
+cell of M⊗³; "the tensor power decides how many channel angles can meet"); the index-reading
+incompatibility (a slot-indexed read of a sealed composite cannot carry three distinct diagonal
+values [FT.117(1); BM.57(6); CT3.22; EW.32]); the matrix layer = the IT.37–39/IT.43–45 parametric
+class (the study's own Part XI concurs) · IT.53 the saturated node, the Lyapunov layer, the radar —
+at ρ_∘ every channel virtual (¼∉[0,ε_q]∪[1−ε_q,1]; re-certifies IT.3(2)); isotropy leaves TWO live
+metric coordinates; the reductio (the declared dictionary + a nonzero interface cannot both hold at
+the node — CONDITIONAL on the study's declared transport); (1−γ/4)²+γ(8−γ)/16=1; the direction-blind
+λ_jump; a real jump impossible at ρ_∘; the radar's four faces (hop/tick/chart/anchor; ¬a new scale
+[P1]); **the agreement condition**: ledger ground (only return words are formed [AT.44(1)] ⟹
+d_{e→p}=d_{p→e} a CONSEQUENCE), chart ground (⟺ s·dx=0 ∧ stationarity scope; metric symmetry and the
+shared null cone both insufficient; the syncs are T-conjugate), one-ledger ground; **the disjointness
+row** (the node where agreement is guaranteed is the node where the radar cannot run); the extraction
+(the χ-gated (x₊x₋)-weighted zig-zag = an **IT-O3 candidate semantics, recorded ¬adopted**); the
+dynamical radar barred on the three IT-O1 grounds; the O(n) continuation (z₀=3 the real zero; the
+complex ladder RECORDED AND SCOPED OUT [CT4.4a]) · IT.54 the verdict — the derived/declared/barred
+separation; the declaration register absorbed (**D-PJ1–7, D-RS1–6** + the study's Part-XI list: named,
+¬invented, none forced, none issued); the placement (Level 6; the operator/angle layers extend
+CT1.9/FT.111–119/AT.56–58 with no conflict; the era chain holds); ten bars restated with grounds;
+**IT-O3 gains the radar candidate and stays OPEN; NO new row**; the declaration census: none; §Cal-IT
+empty.
 
 ## The directive's premises, and what the canon said
 
