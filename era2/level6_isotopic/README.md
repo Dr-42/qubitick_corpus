@@ -28,6 +28,7 @@ record: IT.15(3).
 | `tiers/Part6_Isotopic_era_TierIT10.md` | **Tier IT.10** — IT.31–IT.33: **the Macroscopic Calibration Anchor** — three ledger-native definitions grounded (inter-nuclear distance ∝ Δx_B=𝔥/(E_int ln2), the E-independent Δx_B·r_s=𝔥²/(2ln2); macroscopic Pauli exclusion = the scale-free cardinals dim∧³(ℂ²)=0 + C_cap=16; BEC-readiness **corrected** to the multiplicative exchange ε=(−1)^A, bosonic iff A even [BM.128(7)], ¬"exclusively 4ℤ"), the shared geometric/cardinal/sign currency that BYPASSES the incommensurability bar (BM.83), the kinematics/rotational machinery, and **the anchor derived as a STRATEGY — no value issued (the Calibration Era stays deferred)** |
 | `tiers/Part6_Isotopic_era_TierIT11.md` | **Tier IT.11** — IT.34–IT.36: **the amplitude-binding verdict** — the norm/amplitude LAYER separation (the binding B_ens is a norm-layer read [Def-H.32(6); BM.21(2)], dressing-free since \|(-1)^ℵ\|²=1, so the dressing CANNOT flip the ≤0 sign), the dressed resolvent + contact terms scoped (two-body, channel-indexed), the register conflation refuted, no dissociation channel [BM.122(6)], and **IT-O2's sign RESOLVED / value open, IT-O1 OPEN (level-local)** |
 | `tiers/Part6_Isotopic_era_TierIT12.md` | **Tier IT.12** — IT.37–IT.39: **the mass-matrix object** — the 2×2 Hermitian M on H_ω (Def-H.33), its exact Pauli decomposition (v₀=m_L+m_S, v₃=m_L−m_S, v₁=2m_off cosΔθ, v₂=−2m_off sinΔθ) and eigenvalues, the tensor product C_μν=v_μv_ν; adjudicated **REDUNDANT** (the same species as BM.22's force matrix F_ext) **+ PARAMETRIC** (m_off, Δθ undeclared slots — a P4/declaration act, none issued) + the 16-vs-8 force-algebra over-count [AT.56]; the unification/BEC over-claims refuted; **not adopted** |
+| `tiers/Part6_Isotopic_era_TierIT13.md` | **Tier IT.13** — IT.40–IT.42: **IT-O1 re-examined against the new machinery** — BM.122(6)'s four grounds re-audited (level-local discipline): **O3 DISSOLVED** (Def-BM.20/BM.134 constructed the momentum-space Σ-resolvent + plane-wave states + two-body phase space, superseding BM.122(6)(O3) within era 1 — a stale citation corrected); **O1/O2/O4 HOLD, sharpened** (the gauge blocks are chiral-blind [Wᵢ⊗I_ω, I⊗P_{L/R}]=0, machine-verified; the gauge field is undeclared slots T_a [AT.57]; the vector EM read ¬formable [AT-O29]; deficit 1′ application-layer; the D3.7 trivial chain out of Def-H.38's scope); **IT-O1 stays OPEN on THREE grounds; the missing primitive = deficit 1′ (a declaration, ¬a construction)** |
 | `checks/measurement_theorem.py` | the theorem's checker — **21/21 exact**, no floating point |
 | `checks/isotopic_family.py` | Tier IT.2's checker — **8/8 exact**: the grammar engine (enumeration ∧ recurrence ∧ closed form), the family census, the Vandermonde charge convolution, the capacity census |
 | `checks/multi_seal_census.py` | Tier IT.3's checker — **9/9 exact**: the width skeleton (Laurent vs binomial), the N=5,6 grammar census, both mask species, the support placement, the D⁻ status chain |
@@ -40,6 +41,7 @@ record: IT.15(3).
 | `checks/calibration_anchor.py` | Tier IT.10's checker — **14/14 exact**: the Born-width invariant, the scale-free exclusion/capacity cardinals, the multiplicative exchange ε=(−1)^A + the Def-3 correction (N=12 δ-dominant, the deuteron witness), the incommensurability certificates (2^a3^b5^c=1; ln1280/ln960 irrational), the shared-currency bypass — every section with an adversarial witness |
 | `checks/amplitude_binding.py` | Tier IT.11's checker — **16/16 exact**: the dressed resolvent/contact terms re-derived, the norm-layer dressing-freedom exhibited on explicit sign sums (ν=2^{|R|} under any dressing), the constructed bindings ≤0, the transit-bar census, the conflations refuted — every section with an adversarial witness |
 | `checks/mass_matrix.py` | Tier IT.12's checker — **13/13 exact**: Gauss(i) over Fraction — the Hermiticity, the Pauli decomposition (the four identities), the characteristic polynomial/eigenvalues, the 16-component tensor trace by explicit 4×4 multiplication, the 8-vs-16 force-algebra count — every section with an adversarial witness |
+| `checks/transit_reexam.py` | Tier IT.13's checker — **11/11 exact**: Gauss(i) over Fraction — the chiral-blindness commutator [Wᵢ⊗I_ω, I⊗P_{L/R}]=0 (+ the same-factor adversarial), the two-body phase-space identity (O3 discharged), and the row-by-row O1/O2/O4 adjudication + the missing-primitive verdict |
 | `checks/run_all_level6.py` | the level's runner (gate first, exit 0 iff green) |
 | `checks/check_level6_format.py` | the level's format + citation gate: canon `math_balance` rules ported, IT-block anatomy (Thm/Req/Pf/Phys + ∎), and citation attestation against **three** sources — the era-1 canon registry (`era1/canon`, 640 tags), the closed Level-5 record (`../level5_atomic/tiers`, AT.n/AT-O rows), and this level's own IT definitions |
 | `discovery/MEASUREMENT_THEOREM.md` | the session-9 working record: the directive's four premises verified against the canon, the four corrections logged, the check ledger |
@@ -54,6 +56,7 @@ record: IT.15(3).
 | `discovery/CALIBRATION_ANCHOR.md` | the session-13f working record: the three definitions grounded (Def 3 corrected), the incommensurability bar + the shared-currency bypass, the machinery, and the anchor-as-strategy adjudication (no value issued) |
 | `discovery/AMPLITUDE_BINDING.md` | the session-13g working record: the norm/amplitude layer separation (the binding is dressing-free), the amplitude machinery scoped, the conflations refuted, the level-local transit absence, and the third-scenario verdict |
 | `discovery/MASS_MATRIX.md` | the session-13h working record: the exact Pauli/tensor algebra, the 16-vs-8 over-count, the redundancy with BM.22/AT.56–58, the undeclared slots, and the redundant+parametric verdict |
+| `discovery/2026-10-13_session_13i_transit_reexam.md` | the session-13i working record: the four-ground re-audit, the O3 supersession (BM.134 ⊣ BM.122(6)(O3)), the chiral-blindness machine check, deficit 1′ as the missing primitive, and the open-on-three-grounds verdict |
 
 **Shared libraries are borrowed, not copied:** `qexact.py` (rigorous `Fraction` intervals) and
 `duality.py` (the `Gauss(i)` core) come from `../level5_atomic/checks` via `sys.path` — single
@@ -62,8 +65,8 @@ source of truth, recorded in the checker header and in AT.63(9)'s inheritance li
 ## Run
 
 ```bash
-cd era2/level6_isotopic/checks && python3 run_all_level6.py        # -> 13 checkers, 200 exact markers, 0 failures, exit 0
-cd era2/level6_isotopic/checks && python3 check_level6_format.py   # -> 12 Part 6 documents PASS, 0 violations
+cd era2/level6_isotopic/checks && python3 run_all_level6.py        # -> 14 checkers, 211 exact markers, 0 failures, exit 0
+cd era2/level6_isotopic/checks && python3 check_level6_format.py   # -> 13 Part 6 documents PASS, 0 violations
 ```
 
 ## Tier index
@@ -304,7 +307,7 @@ merely admissible — plus the refinement **sector ⊋ species** at species gran
   the static reads are charge-degenerate, m_n=m_p). **IT-O5's static side is CLOSED** (no last-bound
   member exists statically; the "termination at k=2" is refuted as a static claim); the **empirical
   H-4⁺ resonances relocate to IT-O1** (a dissociation/transit amplitude, ¬∃ as formed [BM.122(6)]);
-  **IT-O2 is reduced to the binding VALUE** (¬the sign/verdict). Recorded
+  **IT-O2 is reduced to the binding VALUE** (¬the sign/verdict). **RE-EXAMINED (Tier IT.13, session 13i):** BM.122(6)'s four grounds re-audited against the atomic/isotopic machinery (level-local discipline) — **O3 DISSOLVED** (Def-BM.20/BM.134 constructed the momentum-space Σ-resolvent + plane-wave boundary states + two-body phase space at Tier BM.23, superseding BM.122(6)(O3) [Tier BM.22] within era 1; the four-grounds citation at IT.1(6)/IT.29(4)/IT.35(4) is stale on O3 → three grounds); **O1/O2/O4 HOLD, sharpened** (the gauge blocks are chiral-blind, [Wᵢ⊗I_ω, I⊗P_{L/R}]=0 'blindness not coupling' [FT.123], machine-verified; the gauge field is undeclared slots T_a [AT.57]; the vector EM read ¬formable [AT-O29]; deficit 1′ needs a Weyl symbol + hypercharge read, application-layer/non-derivable [FT.125(4)]; the D3.7 trivial chain is out of Def-H.38's scope). So **IT-O1 stays OPEN on three grounds**; the exact missing primitive is **deficit 1′** (the chiral matter assignment) — a DECLARATION, not a construction the machinery can supply. Recorded
   ¬forced per the exploration-state instruction; the empirical H-4+ resonance fact stays a
   quarantined [EXT] target [P5]. Premise corrections at IT.18(4), IT.20(4) and IT.27(3): δ-dominance is a degree not a
   binding criterion (the deuteron already mixes); "interior fuzz bleeding" contradicts the
