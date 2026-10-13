@@ -401,10 +401,11 @@ BARYON_GEN = {"E", "mu2", "rB", "DS"}                      # {E_int, mu'^2, rho_
 LEPTON_GEN = {"eq", "xp", "xm", "wc", "sl", "zl"}           # {eps_q, x_+-, w_c, sigma_l, z^(l)}
 SHARED = {"h", "L", "pi"}                                   # h, ln2, pi
 # the three formed mixed loci, encoded as polynomials (chi = the binary indicator as a formal symbol):
-u_round = psub(pscale(EQ, g(4)), pscale(pmul(EQ, EQ), g(16)))          # u = x_+x_- = 4eq(1-4eq)
+u_round = psub(pscale(EQ, g(4)), pscale(pmul(EQ, EQ), g(16)))          # W_round = x_+x_- = 4eq(1-4eq) [BM.122(3)]
 W_channel = pmul(pmul(psub(ONE_P, pscale(EQ, g(4))), psub(ONE_P, pscale(EQ, g(4)))), pvar("chi"))
-# B_ens^(2) numerator shape: -(2n u D_{n-1}/D_n)(ln2/h) -- numerator -4*u*L/h at n=2 (D_1=1):
-B_ens2_num = pscale(pmul(u_round, pmul(pvar("L"), {tuple(-1 if VARS[i] == "h" else 0 for i in range(NV)): G1})), g(-4))
+u_BM137 = pscale(EQ, g(4))                                              # u := 1-p = 4*eps_q [BM.137(1)]
+# B_ens^(2) = -(2n u D_{n-1}/D_n)(ln2/h) at n=2: -(4u/(1+u))(ln2/h) [BM.137(3)]:
+B_ens2_num = pscale(pmul(u_BM137, pmul(pvar("L"), {tuple(-1 if VARS[i] == "h" else 0 for i in range(NV)): G1})), g(-4))
 T0_alphabet = {"E", "h", "L"}
 loci = {"B_ens": pvars_used(B_ens2_num) | {"n"}, "W_channel": pvars_used(W_channel) | T0_alphabet,
         "chi (handshake)": T0_alphabet | {"NE"}}
@@ -754,7 +755,7 @@ rho_B_read = pmul(pvar("mu2"), pmul(pmul(pvar("h"), pvar("h")),
                                     pmul(Linv, Linv)))                    # mu'^2 h^2/(ln2)^2 [BM.83(4)]
 m2_pole = pmul(pvar("mu2"), pvar("DS"))                                 # mu'^2 D_S [BM.83(1) pole row]
 W_round = u_round                                                        # 4eq(1-4eq) [BM.109(2); BM.122(3)]
-B_ens2_den = padd(ONE_P, u_round)                                        # D_2 = 1+u [BM.137(1)]
+B_ens2_den = padd(ONE_P, u_BM137)                                        # D_2 = 1+u, u=4eq [BM.137(1)]
 eq_read = EQ                                                             # eps_q itself (a free slot)
 READS = {
     "m_hid = E_int ln2/h [FT.44(4)]": (m_hid, None),
