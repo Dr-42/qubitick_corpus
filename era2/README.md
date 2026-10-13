@@ -41,7 +41,7 @@ era2/
 │   └── discovery/             ← the free-form session records (superseded by the tiers),
 │       ├── logs/              ←   historical run outputs
 │       └── legacy_checks/     ←   session-1 checker copies (provenance; NOT live)
-├── level6_isotopic/          ← Level 6 — the Isotopic era (OPEN: Tiers IT.1–IT.12, tags IT.1–IT.39; opened as "Molecular", renamed at session 12)
+├── level6_isotopic/          ← Level 6 — the Isotopic era (OPEN: Tiers IT.1–IT.13, tags IT.1–IT.42; opened as "Molecular", renamed at session 12)
 └── level7_anthropic/          ← Level 7 — the Anthropic era (not opened)
 ```
 
@@ -55,7 +55,7 @@ machine, `discovery/` = the working notes). Levels 6–7 inherit this shape when
 cd era2/level5_atomic/checks && python3 run_all_era2.py      # -> 37 checkers, 643 exact markers, 0 failures
 cd era2/level5_atomic/checks && python3 check_era2_format.py # -> 14 tier documents PASS, 0 violations
 # Level 6 (open)
-cd era2/level6_isotopic/checks && python3 run_all_level6.py      # -> 13 checkers, 200 exact markers, 0 failures
+cd era2/level6_isotopic/checks && python3 run_all_level6.py      # -> 14 checkers, 211 exact markers, 0 failures
 cd era2/level6_isotopic/checks && python3 check_level6_format.py # -> Part 6 documents PASS (attestation vs
                                                                   #    era-1 canon AND the Level-5 record)
 ```
