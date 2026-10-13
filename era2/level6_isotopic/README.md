@@ -1,4 +1,4 @@
-# `era2/level6_isotopic/` — Level 6 · the **Isotopic** era · Tiers IT.1–IT.11
+# `era2/level6_isotopic/` — Level 6 · the **Isotopic** era · Tiers IT.1–IT.12
 
 **Status: OPENED at session 9 — discovery-phase working level. NOT frozen canon.** Nothing here
 is adopted, no declaration issues, §Cal-IT is empty, and no clause of Parts 1–4 or of Level 5's
@@ -27,6 +27,7 @@ record: IT.15(3).
 | `tiers/Part6_Isotopic_era_TierIT9.md` | **Tier IT.9** — IT.28–IT.30: **the isotope-cutoff resolution** — the "neutron stability" template (BM.41(4)(e): Q=−(m_ℓ+m_ν)<0, kinematically closed on every adopted read, because m_n=m_p charge-degenerate — the NON-DYNAMICAL cause), the static binding-sign census (every constructed read ≤0; the informational +2k excess is monotone & non-physical), the dynamics gap (BM.122(6)(O1–O4): ¬∃ a formed transit leg), and **the adjudication: IT-O5's static side CLOSED (no static cutoff; bound ≤0 at every k), the empirical cutoff RELOCATED to IT-O1** |
 | `tiers/Part6_Isotopic_era_TierIT10.md` | **Tier IT.10** — IT.31–IT.33: **the Macroscopic Calibration Anchor** — three ledger-native definitions grounded (inter-nuclear distance ∝ Δx_B=𝔥/(E_int ln2), the E-independent Δx_B·r_s=𝔥²/(2ln2); macroscopic Pauli exclusion = the scale-free cardinals dim∧³(ℂ²)=0 + C_cap=16; BEC-readiness **corrected** to the multiplicative exchange ε=(−1)^A, bosonic iff A even [BM.128(7)], ¬"exclusively 4ℤ"), the shared geometric/cardinal/sign currency that BYPASSES the incommensurability bar (BM.83), the kinematics/rotational machinery, and **the anchor derived as a STRATEGY — no value issued (the Calibration Era stays deferred)** |
 | `tiers/Part6_Isotopic_era_TierIT11.md` | **Tier IT.11** — IT.34–IT.36: **the amplitude-binding verdict** — the norm/amplitude LAYER separation (the binding B_ens is a norm-layer read [Def-H.32(6); BM.21(2)], dressing-free since \|(-1)^ℵ\|²=1, so the dressing CANNOT flip the ≤0 sign), the dressed resolvent + contact terms scoped (two-body, channel-indexed), the register conflation refuted, no dissociation channel [BM.122(6)], and **IT-O2's sign RESOLVED / value open, IT-O1 OPEN (level-local)** |
+| `tiers/Part6_Isotopic_era_TierIT12.md` | **Tier IT.12** — IT.37–IT.39: **the mass-matrix object** — the 2×2 Hermitian M on H_ω (Def-H.33), its exact Pauli decomposition (v₀=m_L+m_S, v₃=m_L−m_S, v₁=2m_off cosΔθ, v₂=−2m_off sinΔθ) and eigenvalues, the tensor product C_μν=v_μv_ν; adjudicated **REDUNDANT** (the same species as BM.22's force matrix F_ext) **+ PARAMETRIC** (m_off, Δθ undeclared slots — a P4/declaration act, none issued) + the 16-vs-8 force-algebra over-count [AT.56]; the unification/BEC over-claims refuted; **not adopted** |
 | `checks/measurement_theorem.py` | the theorem's checker — **21/21 exact**, no floating point |
 | `checks/isotopic_family.py` | Tier IT.2's checker — **8/8 exact**: the grammar engine (enumeration ∧ recurrence ∧ closed form), the family census, the Vandermonde charge convolution, the capacity census |
 | `checks/multi_seal_census.py` | Tier IT.3's checker — **9/9 exact**: the width skeleton (Laurent vs binomial), the N=5,6 grammar census, both mask species, the support placement, the D⁻ status chain |
@@ -38,6 +39,7 @@ record: IT.15(3).
 | `checks/cutoff_resolution.py` | Tier IT.9's checker — **16/16 exact**: the neutron Q-value sign theorem re-derived on symbolic masses, the charge-degeneracy, the EM-corrected Q, the static binding-sign census (BM.21/BM.137 re-derived), the informational mass excess, the BM.122(6) transit-bar census — every section with an adversarial witness |
 | `checks/calibration_anchor.py` | Tier IT.10's checker — **14/14 exact**: the Born-width invariant, the scale-free exclusion/capacity cardinals, the multiplicative exchange ε=(−1)^A + the Def-3 correction (N=12 δ-dominant, the deuteron witness), the incommensurability certificates (2^a3^b5^c=1; ln1280/ln960 irrational), the shared-currency bypass — every section with an adversarial witness |
 | `checks/amplitude_binding.py` | Tier IT.11's checker — **16/16 exact**: the dressed resolvent/contact terms re-derived, the norm-layer dressing-freedom exhibited on explicit sign sums (ν=2^{|R|} under any dressing), the constructed bindings ≤0, the transit-bar census, the conflations refuted — every section with an adversarial witness |
+| `checks/mass_matrix.py` | Tier IT.12's checker — **13/13 exact**: Gauss(i) over Fraction — the Hermiticity, the Pauli decomposition (the four identities), the characteristic polynomial/eigenvalues, the 16-component tensor trace by explicit 4×4 multiplication, the 8-vs-16 force-algebra count — every section with an adversarial witness |
 | `checks/run_all_level6.py` | the level's runner (gate first, exit 0 iff green) |
 | `checks/check_level6_format.py` | the level's format + citation gate: canon `math_balance` rules ported, IT-block anatomy (Thm/Req/Pf/Phys + ∎), and citation attestation against **three** sources — the era-1 canon registry (`era1/canon`, 640 tags), the closed Level-5 record (`../level5_atomic/tiers`, AT.n/AT-O rows), and this level's own IT definitions |
 | `discovery/MEASUREMENT_THEOREM.md` | the session-9 working record: the directive's four premises verified against the canon, the four corrections logged, the check ledger |
@@ -51,6 +53,7 @@ record: IT.15(3).
 | `discovery/CUTOFF_RESOLUTION.md` | the session-13e working record: the neutron-stability template, the static binding-sign census, the dynamics gap (BM.122(6)), and the adjudication relocating the empirical cutoff to IT-O1 |
 | `discovery/CALIBRATION_ANCHOR.md` | the session-13f working record: the three definitions grounded (Def 3 corrected), the incommensurability bar + the shared-currency bypass, the machinery, and the anchor-as-strategy adjudication (no value issued) |
 | `discovery/AMPLITUDE_BINDING.md` | the session-13g working record: the norm/amplitude layer separation (the binding is dressing-free), the amplitude machinery scoped, the conflations refuted, the level-local transit absence, and the third-scenario verdict |
+| `discovery/MASS_MATRIX.md` | the session-13h working record: the exact Pauli/tensor algebra, the 16-vs-8 over-count, the redundancy with BM.22/AT.56–58, the undeclared slots, and the redundant+parametric verdict |
 
 **Shared libraries are borrowed, not copied:** `qexact.py` (rigorous `Fraction` intervals) and
 `duality.py` (the `Gauss(i)` core) come from `../level5_atomic/checks` via `sys.path` — single
@@ -59,8 +62,8 @@ source of truth, recorded in the checker header and in AT.63(9)'s inheritance li
 ## Run
 
 ```bash
-cd era2/level6_isotopic/checks && python3 run_all_level6.py        # -> 12 checkers, 187 exact markers, 0 failures, exit 0
-cd era2/level6_isotopic/checks && python3 check_level6_format.py   # -> 11 Part 6 documents PASS, 0 violations
+cd era2/level6_isotopic/checks && python3 run_all_level6.py        # -> 13 checkers, 200 exact markers, 0 failures, exit 0
+cd era2/level6_isotopic/checks && python3 check_level6_format.py   # -> 12 Part 6 documents PASS, 0 violations
 ```
 
 ## Tier index
@@ -204,6 +207,21 @@ IT.36 the verdict — **IT-O2's SIGN resolved** (the static ≤0 is preserved; t
 **but its VALUE open** (the composed-support norm-layer configuration space beyond B=4 + the undefined
 multi-junction binding functional); **IT-O1 OPEN** (level-local); **neither Scenario A nor B** — the honest
 third scenario; four premise corrections; the declaration census (none).
+
+**IT.37–IT.39 (Tier IT.12) the mass-matrix object:** IT.37 the 2×2 Hermitian $M=[[m_L,w],[\bar w,m_S]]$ on
+$H_\omega=\mathbb C^2$ [Def-H.33], $w=m_{\rm off}e^{i\Delta\theta}$ — Hermiticity, the **Pauli decomposition**
+$v_\mu=\mathrm{Tr}(M\sigma_\mu)$ verified exactly ($v_0=m_L{+}m_S$, $v_3=m_L{-}m_S$, $v_1=2m_{\rm off}\cos\Delta\theta$,
+$v_2=-2m_{\rm off}\sin\Delta\theta$), the eigenvalues $\tfrac12[(m_L{+}m_S)\pm\sqrt{(m_L{-}m_S)^2{+}4m_{\rm off}^2}]$;
+the diagonal is commensurable ($m_L,m_S$ both $E_{\rm int}\ln2/\mathfrak h$ [FT.44(4)], no BM.83 mix) · IT.38
+the **tensor product** $C_{\mu\nu}=\mathrm{Tr}((M\otimes M)(\sigma_\mu\otimes\sigma_\nu))=v_\mu v_\nu$ (all 16 by
+explicit 4×4), and **the 16-vs-8 over-count** — the derived force algebra is 8-dim [AT.56: "zero new
+operators"], so 8 of the 16 are not force channels; **REDUNDANCY** — $M$ is the same species as BM.22's
+$F_{\rm ext}=h\otimes I_2+q\,I_2\otimes\hat\kappa$ (diagonal + off-diagonal flipping), with the derived charge
+$q$ replaced by the undeclared $m_{\rm off}e^{i\Delta\theta}$ · IT.39 the adjudication — **REDUNDANT +
+PARAMETRIC** ($m_{\rm off},\Delta\theta$ are undeclared slots: $\Delta\theta$ is neither the winding $\Theta$
+[FT.22] nor the defect $\Theta_R$ [FT.54(1)]; a P4/declaration act, none issued); the over-claims refuted (no
+force unification — the forces are AT.50/AT.56–58; no BEC explanation — that is $\varepsilon=(-1)^A$
+[BM.128(7); IT.31(4)]); **recorded honestly, not adopted**.
 
 ## The directive's premises, and what the canon said
 
