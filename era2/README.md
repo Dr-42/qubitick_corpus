@@ -1,4 +1,4 @@
-# `era2/` — Era 2 · Levels 5–7 (Atomic · Isotopic · Anthropic)
+# `era2/` — Era 2 · Levels 5–8 (Atomic · Isotopic · Molecular · Anthropic) — the declared ladder runs to Level 14
 
 **The Era-2 half of the two-halves repository** (the sibling half is `/era1` — the frozen v1.0
 canon, Levels 1–4). Three levels follow the v1.0 canon: **Level 5 (Atomic) is CLOSED** — twelve
@@ -41,12 +41,19 @@ era2/
 │   └── discovery/             ← the free-form session records (superseded by the tiers),
 │       ├── logs/              ←   historical run outputs
 │       └── legacy_checks/     ←   session-1 checker copies (provenance; NOT live)
-├── level6_isotopic/          ← Level 6 — the Isotopic era (OPEN: Tiers IT.1–IT.13, tags IT.1–IT.42; opened as "Molecular", renamed at session 12)
-└── level7_anthropic/          ← Level 7 — the Anthropic era (not opened)
+├── level6_isotopic/          ← Level 6 — the Isotopic era (OPEN: Tiers IT.1–IT.19, tags IT.1–IT.63; opened as "Molecular", renamed at session 12)
+├── level7_molecular/          ← Level 7 — the Molecular era (PLACED at session 13n [IT.61], not opened; prefix MO.n recommended, ¬minted)
+└── level8_anthropic/          ← Level 8 — the Anthropic era (not opened; was level7_anthropic/ before the ladder act [IT.61])
 ```
 
 **One level, one folder, the same three-way split** (`tiers/` = the record, `checks/` = the
-machine, `discovery/` = the working notes). Levels 6–7 inherit this shape when they open.
+machine, `discovery/` = the working notes). Levels 7–8 inherit this shape when they open.
+
+**The declared level ladder (the Architect's act, session 13n; logged at IT.61):** 5 Atomic
+(CLOSED) · 6 Isotopic (OPEN) · 7 Molecular (placed, not opened — IT.4's "molecular necessity" is
+its motivating theorem) · 8 Anthropic · 9 Stellar · 10 Black holes · 11 Galactic · 12 Galactic
+clusters · 13 Laniakea-like systems · **14 Universe (the target**, moved from 13 to 14 by
+Isotopic's insertion**)**.
 
 ## Run
 
