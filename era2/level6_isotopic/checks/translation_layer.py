@@ -2579,7 +2579,12 @@ acyclic = all(str(c) in own for c in fwd) and not any(int(c) > OWN_HI for c in c
 import subprocess
 gate = subprocess.run([sys.executable, os.path.join(HERE, "check_level6_format.py")],
                       capture_output=True, text=True)
-gate_ok = (gate.returncode == 0 and "22 documents PASS" in gate.stdout)
+# PIN MIGRATION (Tier IT.23 erratum, the session-13k pattern -- the checker is the record; the
+# frozen tier text keeps its closure-time "22 documents" statement, never edited [AT.63(2)]):
+# the hard count "22" went stale the moment Tier IT.23 landed -- replaced by the LIVE census of
+# Part 6 tier documents, so the gate pin tracks the level instead of the batch.
+_n_docs = len([f for f in os.listdir(TIERS) if f.startswith("Part6_") and f.endswith(".md")])
+gate_ok = (gate.returncode == 0 and f"{_n_docs} documents PASS" in gate.stdout)
 g4 = (blocks22 == ["IT.%d" % n for n in range(OWN_LO, OWN_HI + 1)] and anatomy and acyclic
       and gate_ok)
 chk("G4  [AT.63(2); the gate's F1-F3; machine: the tier anatomy census + the era chain + the gate re-run]:"
@@ -2587,7 +2592,9 @@ chk("G4  [AT.63(2); the gate's F1-F3; machine: the tier anatomy census + the era
     "\n           with Thm/Req/Pf/Phys and a blacksquare terminator in its Pf (independent of the gate's own"
     "\n           scan); every IT-tag cited is either an earlier tier's or this tier's own (IT.71-IT.78), so"
     "\n           no forward pointer is used as a premise and the citation graph is acyclic; and the level"
-    "\n           gate re-run inside this checker passes on all twenty-two Part 6 documents (math balance,"
+    "\n           gate re-run inside this checker passes on ALL Part 6 documents (live census -- the"
+    "\n           IT.22-time pin of twenty-two migrated to live tracking at Tier IT.23, 22 remains"
+    "\n           the count of the IT.22 record) (math balance,"
     "\n           block anatomy, citation attestation against the frozen era-1 registry, the closed Level-5"
     "\n           record and this level's own definitions). The frozen canon is cited, never edited: the"
     "\n           directive's citation slip is recorded as IT.71(4)(P1), not applied to any row.",
