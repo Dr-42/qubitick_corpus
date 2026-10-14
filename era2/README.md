@@ -44,7 +44,7 @@ era2/
 │   └── discovery/             ← the free-form session records (superseded by the tiers),
 │       ├── logs/              ←   historical run outputs
 │       └── legacy_checks/     ←   session-1 checker copies (provenance; NOT live)
-├── level6_isotopic/          ← Level 6 — the Isotopic era (OPEN: Tiers IT.1–IT.21, tags IT.1–IT.70; opened as "Molecular", renamed at session 12)
+├── level6_isotopic/          ← Level 6 — the Isotopic era (OPEN: Tiers IT.1–IT.22, tags IT.1–IT.77; opened as "Molecular", renamed at session 12)
 ├── level7_molecular/          ← Level 7 — the Molecular era (PLACED at session 13n [IT.61], not opened; prefix MO.n recommended, ¬minted)
 └── level8_anthropic/          ← Level 8 — the Anthropic era (not opened; was level7_anthropic/ before the ladder act [IT.61])
 ```
