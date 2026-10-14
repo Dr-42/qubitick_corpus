@@ -1780,14 +1780,14 @@ for word in ("Yukawa", "seesaw", "right-ray", "mixing matrix", "Dirac operator",
 # ---- M3 citation closure of the tier's Req lines
 REG = set()
 HEAD = re.compile(r"^###\s+(?:Cor\s+)?((?:FT|Def-H|Def-BM|BM)\.[\d.]+\w*|CT\d+\.\d+\w*|EW\.\d+\w*|EM\.\d+\w*|Def-EM\.\d+|L[0-5]\b)", re.M)
-PARA = re.compile(r"^\*\*(A[1-9]|C1[0-2]|C[1-9]|D[0-4]\.\d+|P[1-5])\.\*\*", re.M)
+PARA = re.compile(r"^\*\*(A[1-9]|C1[0-3]|C[1-9]|D[0-4]\.\d+|P[1-5])\.\*\*", re.M)
 CORR = re.compile(r"\*\*Cor\s+((?:CT\d+|EW|EM|FT|L\d)\.[\d.]+\w*|L0a)\b")
 for fn in ("Part1_Qubit_era.md", "Part2_Bosonic_era.md", "Part3_Fermion_era.md", "Part4_Baryomesonic_era.md", "Census.md"):
     t = rd(fn)
     for m in HEAD.finditer(t): REG.add(m.group(1).rstrip("."))
     for m in PARA.finditer(t): REG.add(m.group(1))
     for m in CORR.finditer(t): REG.add(m.group(1).rstrip("."))
-TOK = re.compile(r"\b(Def-EM\.\d+|Def-H\.\d+|Def-BM\.\d+|FT\.\d+|BM\.\d+|CT\d+\.\d+[ab]?|EW\.\d+a?|EM\.\d+[ab]?|D[0-4]\.\d+|A[1-9]|C1[0-2]|C[1-9]|P[1-5]|L[0-5]a?)\b")
+TOK = re.compile(r"\b(Def-EM\.\d+|Def-H\.\d+|Def-BM\.\d+|FT\.\d+|BM\.\d+|CT\d+\.\d+[ab]?|EW\.\d+a?|EM\.\d+[ab]?|D[0-4]\.\d+|A[1-9]|C1[0-3]|C[1-9]|P[1-5]|L[0-5]a?)\b")
 req_missing = set()
 for b in blocks:
     for rm in re.finditer(r"\*\*Req\.\*\*(.*?)(?=\n\s*\n\*\*|\n\*\*Pf|\n\*\*Phys|\Z)", b, re.S):
