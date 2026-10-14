@@ -62,7 +62,7 @@ pip install -r era1/verification/requirements.txt   # a documented no-op: the su
 python3 era1/verification/run_all.py                # the full frozen era-1 suite (80/80)
 cd era2/level5_atomic/checks && python3 run_all_era2.py      # the era-2 Level-5 suite (37 checkers, 643 markers)
 cd era2/level5_atomic/checks && python3 check_era2_format.py # the era-2 format + citation gate (14 documents)
-cd era2/level6_isotopic/checks && python3 run_all_level6.py # the Level-6 suite (14 checkers, 211 markers)
+cd era2/level6_isotopic/checks && python3 run_all_level6.py # the Level-6 suite (23 checkers, 390 markers)
 ```
 
 Expected output: **80/80 passed — ALL GREEN** (exit code 0). All arithmetic is
