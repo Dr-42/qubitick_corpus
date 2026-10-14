@@ -1,8 +1,10 @@
-# `era2/level6_isotopic/` — Level 6 · the **Isotopic** era · Tiers IT.1–IT.19
+# `era2/level6_isotopic/` — Level 6 · the **Isotopic** era · Tiers IT.1–IT.20
 
 **Status: OPENED at session 9 — discovery-phase working level. NOT frozen canon.** Nothing here
-is adopted, no declaration issues, §Cal-IT is empty, and no clause of Parts 1–4 or of Level 5's
-**closed** record [AT.63(2)] is modified, retracted or renumbered. Level 5 is cited as a closed
+is adopted as frozen canon; §Cal-IT is a VALUE-FREE act register (Tiers IT.17 + IT.20: the logged
+declaration acts D-PJ1–6 / D-RS1–3 / D-RS6–7 + the BM.113(6) sector sync, D-RS4 deferred, D-PJ7
+owed — no calibration value issued), and no clause of Parts 1–4 or of Level 5's **closed** record
+[AT.63(2)] is modified, retracted or renumbered. Level 5 is cited as a closed
 record, never edited.
 
 **Rename record (session 12, the Architect's directive):** this level was opened as "the
@@ -34,6 +36,7 @@ record: IT.15(3).
 | `tiers/Part6_Isotopic_era_TierIT16.md` | **Tier IT.16** — IT.49–IT.54: **the probe consolidation (the subgenerator study merged)** — the four delivered documents (CONSOLIDATED Parts I–XII; CONTINUUM; the photon phase-jump audit PJ.1–PJ.15; the two-photon radar audit RS.1–RS.10) audited: the citation sweep ~450 tokens / ONE unattested (a self-flagged CT0-prefix slip for CT3.20); the FT.116(5) canon typo CONFIRMED harmless and recorded probe-side (never edited); the ρ_B collision RESOLVED (ρ_B := the bridge [BM.69(2); BM.102(4)]; ρ := the density [BM.14(2),(4)]; the b-slot fork carried open); all 33 machine claims RE-DERIVED FROM SCRATCH (the study's scripts were ¬delivered). **New derived rows adopted:** 𝒦(N)=2/N; the neighbour law R(n)=(n+1)/n; the quotient uniqueness at 3; the cubic ladder γ_ℓ=2γ_q³−3γ_q; z_ℓ=2z_q³ (the factor 2=B² forced); the Newton tower + z-cubic; the 3-adic ν-exclusion; the circle algebra [Ô,C₃]=R_{4π/9}; **Lie⟨J,K⟩=𝔰𝔲(4) (15-dim, E₀∉)**; the nilpotent calculus (ΣA_iB_i=Π_ℛ, ΣB_iA_i=3Π_𝒱; the honest ¬Clifford negative); the branch-change bridge J_iΠ_ℛ=Π_𝒱J_i; the order-4 inner reflection Ad(e^{iπΣ/8}); the 10-of-16 tensor-square occupancy; the saturated-node/Lyapunov/radar rows incl. the agreement condition (⟺ s·dx=0) and the disjointness row; the radar recorded as an **IT-O3 candidate** (¬adopted). The matrix layer = the IT.37–39/IT.43–45 parametric class; thirteen declarations NAMED, none issued; **no new open row** |
 | `tiers/Part6_Isotopic_era_TierIT17.md` | **Tier IT.17** — IT.55–IT.57: **the declaration package (D-PJ/D-RS closure) — the FIRST logged declaration acts of Level 6** — the Architect's twelve-item package recorded, grounded row by row, and bar-checked (13/13 machine): ISSUED — D-PJ1 (Ô_{in→out}, the temporal vocabulary retired operator-locally), D-PJ2 (𝒫_ch complex-domain placeholder; the arena bars hold; the seven-register disambiguation), D-PJ3 (resolved by D-PJ1: the label-map horn, NO vertex — the transit bar stands on THREE grounds O1/O2/O4, the directive's 'O1 and O4' corrected), D-PJ4 (the ε_q-gated signature; functional form UNFIXED — precision debt; count→strength barred), D-PJ5 (branches OPEN — well-definedness suspended; the cubic census: three real roots, one positive, ℂ adds none), D-PJ6/D-RS5 (the register-o reading; citation corrected A9→Def-H.9+FT.20 G-row), D-RS1 (≺/≻ grounded in the tick order + C11; same-tick cross-vertex order NOT supplied), D-RS2 (the tick/null-segment DICTIONARY pairing — faces, ¬equals [BM.134(5)]), D-RS7 (item 10 re-numbered; the 𝔮⁰-price clarification), the **BM.113(6) sector sync** (∨² kept and synced with A4's {0,π} via the ℤ₂ dictionary ε=cos(πα); the derived ε=(−1)^A stands UNFLIPPED; the frozen row untouched — the discharge logged in era 2), item 12 (ρ_B/e₀ re-confirmed unissued). DEFERRED: D-RS4 (the stationarity scope; the condition itself IS derived). OWED untouched: D-RS3; D-PJ7/D-RS6. Seven premise corrections; §Cal-IT moves to a VALUE-FREE act register; NO new open row; the Def-category answer: no Def-IT series mid-level — citation handles D-PJn@IT.55, D-RSn@IT.56 |
 | `tiers/Part6_Isotopic_era_TierIT19.md` | **Tier IT.19** — IT.61–IT.63: **the level-ladder act + the δ-glue adjudication + the double-attested census extensions** — the Architect's ladder declaration logged (Molecular at 7, Anthropic at 8, target 14 = 13+1; IT.15(3)'s reservation exercised; 'deferred is stronger than planned'); the tree surgery executed content-preservingly (level7_anthropic→level8_anthropic; level7_molecular placeholder; the closed record's closure-time tree rows UNTOUCHED per the session-12 precedent; the MO.n prefix RECORDED ¬minted, ML retired-ambiguous); the builder's δ-glue scope questions answered on the rows (the connector tag IT.19 is scoped to ε-sealed pairs; the (2,3)/(2,2) glues underived — 1 of 3 block shapes derived) and **IT-O6 OPENED** (the δ-involving connector glue species — upstream of IT-O2, ¬absorbed by it; IT-O4's closure sharpened, ¬reopened); the k=4,5 family cells TRIPLE-certified (g(15)=27152125, g(18)=6443061625 + block splits; the δ-share monotonicity extends to 14697/15145); the TRANSPARENCY CENSUS (N=3 uniquely transparent; the seven-class row (1,6,15,0,0,6,1); the grammar mirror flagged as a parallel ¬an identification); the m=4 convention-fork guard row; the nucleonic sub-sum 35^m; and **the C13 tooling fix** (corpus_lib.py C1[0-2]→C1[0-3] — the parser disagreed with the corpus's own tags.json and the era-1 graph checker; tool-only, frozen text untouched; era-1 80/80 after; discovery credit: the builder) |
+| `tiers/Part6_Isotopic_era_TierIT20.md` | **Tier IT.20** — IT.64–IT.66: **the remaining declaration package** — the directive's eight items reconciled against the issued record (a declaration act is logged ONCE: five re-presentations REAFFIRMED at IT.55–IT.56 with their corrections standing, never re-issued); **D-RS3 ISSUED** (the tick–hop exchange rate, PER-EDGE INTEGER ONLY: Δτ_rt=2δh ⟹ d=δh∈ℕ agreeing with the derived hop face; the per-visit half reading barred on three machine grounds — face consistency, return-word parity [AT.44(1): odd entries vanish identically, anchors 2/4/8/40 + ratios 2,5,17,65], local-record integrality; scope: the radar READ's tick face, ¬a dynamical transit leg); **D-RS6 ISSUED** (the radar protocol DECLARED a geometric/read-level interpretation of the lepton–baryon connection — IT.53(8)'s "iff DECLARED a read" clause discharged; the formed content exhausted by the pre-existing counts/faces/order reads; the transit bar STANDS on three grounds O1/O2/O4, O1 re-run by machine); D-PJ4's endpoint sentences enter as DERIVED elaboration (x₋→0, D_n→1 at ε_q=0; D_n>1 strictly on the 249-point grid — genuinely an ensemble; the functional form stays UNFIXED); D-PJ5's arena bars re-certified self-contained (Δ(γ)=(27/4)(2−γ²); one positive root; the relabeling inert; Def-H.41/42 verbatim); D-RS4 STILL DEFERRED; **D-PJ7 NOT FORCED — remains owed** (the title overran the body); seven premise corrections (the "O1 and O4" miscount; A9 re-affirmed; CONTINUUM.md ¬existent — the live map is this README); the register closed to ONE owed act; NO new open row; §Cal-IT value-free (+2 logged acts) |
 | `tiers/Part6_Isotopic_era_TierIT18.md` | **Tier IT.18** — IT.58–IT.60: **the handshake-ladder operational theory — IT-O3 CLOSED** — the night-watch numerical crunch: both nested threshold ladders RECONSTRUCTED as exact sum sets (the computed-cell floors {2,6,12,24,60} → (5,15,33) values every element of BM.115(2)'s tables; the six-state floors {12,24,60} → (3,6,10); spans EXACTLY 30 and 5 at every n; the nesting exact; the extra cells = the digon floor + the baryon junction); the pair ladder (4,12,24,48,120)𝔥/ln2; the curvature read = the scale read (monomial identity; G-ratio 900=30²); the horizon read stays QUARANTINED (cited frozen, ¬reconciled); **the exhaustive χ-carrier census** (exactly 4 of 18 formed reads: the condition, 𝓦_channel, Γ [product-form footnote], the resolvent meeting [BM.134(5)]); χ lepton-free, ρ_B/μ̂'² in no gated family — the bar's operational shadow; the activation windows (N_min=⌈2E_int/ξ⌉ exact; half-lines; no forbidden resonance); **the simultaneous-formation witnesses at EVERY rung** (N_w=(4,4,4,5,12) at ξ=10 — IT.5(2)'s window never empty, values quarantined); **the cross-rung consistency web** (one global ε_q ⟹ the identical factor (1−4ε_q)² at every rung — over-determination is a THEOREM); the slot-constraint map; **the round-trip order theorem** (exactly 1 of 24 orderings: e₁≺r₁≺e₂≺r₂ — in the D-RS1/D-RS2/D-PJ4 vocabulary; no amplitude/vertex/rate — IT-O1 unchanged); the **AT-O7 staleness correction** (closed at Level 5 by AT.6(7),(10); IT.1(5)'s mention stale; the canon-erratum register now holds BM.140(6) + FT.116(5), queued for the closure pipeline); NO new open row; no declaration |
 | `checks/measurement_theorem.py` | the theorem's checker — **21/21 exact**, no floating point |
 | `checks/isotopic_family.py` | Tier IT.2's checker — **8/8 exact**: the grammar engine (enumeration ∧ recurrence ∧ closed form), the family census, the Vandermonde charge convolution, the capacity census |
@@ -54,6 +57,7 @@ record: IT.15(3).
 | `checks/declaration_package.py` | Tier IT.17's checker — **13/13 exact**: the P1/P5 censuses (every touched quantity 𝔮⁰; the nine-slot registry unchanged), the arena-bar/branch machine (the ω-relabeling inert in the trig ring; the cubic's three-real-roots/one-positive census in exact Q(√2) with the norm sign test), the iterate discipline (2/81, 2/243 ∉ the derived angles), the A9 text census, the tick-order/lifecycle grounding, the degree-pair dictionary row, the sector-sync safety census (multiplicativity unflipped; the flip = a label swap), and the four-part bar-check assembly |
 | `checks/census_extension.py` | Tier IT.19's checker — **8/8 exact**: the triple-certified g(15)/g(18) cells with block splits and the frozen anchor chain; the δ-share monotonicity in Fractions; the transparency census for m=1..6; the m=4 convention fork; the 35^m sub-sum; the N=5,6 glue-census block splits; the ladder arithmetic |
 | `checks/handshake_ladder.py` | Tier IT.18's checker — **15/15 exact**: the sum-set reconstruction of both ladders (every frozen value), the pair ladder + m_hid ranges, the curvature monomial identity, the exact-ceiling activation tables with two-sided minimality, the 4-of-18 χ-census, the currency/slot censuses, the opposite-limit Fraction witnesses (𝓦=1/62500 at ε_q=249/1000), the consistency-web polynomial identity, the simultaneous-formation witnesses, the exhaustive 4! round-trip order enumeration, and the AT-O7 staleness text census |
+| `checks/remaining_declarations.py` | Tier IT.20's checker — **23/23 exact**: the per-edge/per-visit exchange-rate censuses with the 10⁴ adversarial; the return-word parity (closed form + sign-vector brute force) with the frozen even-sector anchors; the integrality/locality censuses; the D-PJ4 endpoint grid (249 points × n=2..6, Fractions); the cubic discriminant identity in Q[γ] + the Q(√2)/Q(√3) sign, root and permutation censuses; the Def-H.41/42 canon text census; the O1 chiral-blindness commutator re-run in Gauss(i); the 1-of-24 order theorem re-run; the alphabet/registry intersections; the state-map and register consistency; the word-bounded decimal scan with a live-witness self-test |
 | `checks/run_all_level6.py` | the level's runner (gate first, exit 0 iff green) |
 | `checks/check_level6_format.py` | the level's format + citation gate: canon `math_balance` rules ported, IT-block anatomy (Thm/Req/Pf/Phys + ∎), and citation attestation against **three** sources — the era-1 canon registry (`era1/canon`, 640 tags), the closed Level-5 record (`../level5_atomic/tiers`, AT.n/AT-O rows), and this level's own IT definitions |
 | `discovery/MEASUREMENT_THEOREM.md` | the session-9 working record: the directive's four premises verified against the canon, the four corrections logged, the check ledger |
@@ -74,6 +78,7 @@ record: IT.15(3).
 | `discovery/PROBE_CONSOLIDATION.md` | the session-13l working record: the intake inventory (four of eight documents delivered; five scripts ¬delivered → everything re-derived), the citation-audit results, the reconciliation table (amendment chain, the ρ_B/δ/s_ℓ/κ resolutions), the derived/declared/barred separation, the tier placement, and the 33-row check ledger |
 | `discovery/DECLARATION_PACKAGE.md` | the session-13m working record: the twelve-item issuance table (grounding + bar note per item), the bar-check verdict, the seven premise corrections, the register state (issued/deferred/owed/sub-debts), the Def-category placement answer, and the 13-row check ledger |
 | `discovery/LADDER_AND_GLUE.md` | the session-13n (part 2) working record: the builder-channel intake table (every 0001/0002 item and its disposition), the channel state, the C13 fix record, and the 8-row check ledger |
+| `discovery/REMAINING_DECLARATIONS.md` | the session-13p working record: the reconciliation finding (six of eight items already dispositioned at IT.55–IT.57), the two new acts with their machine grounds, the reaffirmations, the seven premise corrections, the register after the acts, the bar-check table, and the 23-row check ledger |
 | `discovery/HANDSHAKE_LADDER.md` | the session-13n night-watch record: the closability scoping table (what a generator may and may not close overnight), the construction piece by piece, the IT-O3 closure mapping, the staleness correction, and the 15-row check ledger |
 
 **Shared libraries are borrowed, not copied:** `qexact.py` (rigorous `Fraction` intervals) and
@@ -83,8 +88,8 @@ source of truth, recorded in the checker header and in AT.63(9)'s inheritance li
 ## Run
 
 ```bash
-cd era2/level6_isotopic/checks && python3 run_all_level6.py        # -> 20 checkers, 312 exact markers, 0 failures, exit 0
-cd era2/level6_isotopic/checks && python3 check_level6_format.py   # -> 19 Part 6 documents PASS, 0 violations
+cd era2/level6_isotopic/checks && python3 run_all_level6.py        # -> 21 checkers, 335 exact markers, 0 failures, exit 0
+cd era2/level6_isotopic/checks && python3 check_level6_format.py   # -> 20 Part 6 documents PASS, 0 violations
 ```
 
 ## Tier index
@@ -491,6 +496,42 @@ that the corpus's own tags.json and the era-1 graph checker both carry; fixed (t
 tool-only [AT.63(2)], the frozen working_markdowns provenance copy untouched, era-1 suite 80/80
 after; discovery credit to the builder (vault issue #1), logged per the channel's attribution rule;
 NO new open row beyond IT-O6; no declaration; §Cal-IT value-free.
+
+**IT.64–IT.66 (Tier IT.20) the remaining declaration package:** IT.64 the intake and the
+reconciliation — the directive replayed the whole D-PJ/D-RS package, but six of its eight items were
+already dispositioned at Tier IT.17: a declaration act is logged ONCE, so the five re-presentations
+(D-PJ4, D-PJ5, D-PJ6/D-RS5, D-RS1, D-RS2) are REAFFIRMED with their corrections standing (A9 →
+Def-H.9 + FT.20 G-row; the D-RS1 scope row; the D-RS2 dictionary discipline), D-RS4 stays DEFERRED,
+and only the two items IT.57(2) listed as OWED are genuinely new acts; D-PJ4's endpoint sentences
+enter as DERIVED elaboration (x₋=4ε_q→0 and D_n→1, w_mat→1 at ε_q=0 [BM.19; BM.137(1); AT.42(3)] —
+the collapse to the crystallized member; D_n=Σuⁱ>1 strictly at every ε_q∈(0,¼) on the 249-point
+rational grid — genuinely an ensemble; the functional form stays UNFIXED, no Lyapunov threshold
+exists [IT.53(3)]); D-PJ5's arena bars re-certified SELF-CONTAINED (the discriminant identity
+Δ(γ)=(27/4)(2−γ²) exact in Q[γ]; three real roots / exactly one positive on witnesses with the
+adversarial (6/5)√2; the Vieta triple inert under all 6 permutations; Def-H.41/42's "counting
+space" clause verbatim) · IT.65 **D-RS3 ISSUED — the tick–hop exchange rate, PER-EDGE INTEGER
+ONLY**: Δτ_rt=2δh ⟹ d=δh∈ℕ, agreeing with the derived hop face [D0.6; EM.7]; the per-visit half
+reading (δh−½) BARRED on three machine grounds — face consistency (contradiction at every δh),
+return-word parity (odd entries vanish identically [AT.44(1)]; the even anchors 2/4/8/40 and ratios
+4^{m−1}+1 re-derived), and locality/information discreteness (the node's record is integer; the −1
+fusion offset is the REMOTE node's convention) — over-determined: the declaration freezes the
+reading the rows already favored; SCOPE: the radar READ's tick face, ¬a dynamical transit leg
+(IT-O1 unchanged); P1: count↔count, 𝔮⁰, the clause dimensionful-free (machine-scanned) · IT.66
+**D-RS6 ISSUED — radar as geometric read**: the radar protocol declared a GEOMETRIC/READ-LEVEL
+interpretation of the lepton–baryon connection [IT.3(6); Def-H.19] — IT.53(8)'s "admissible iff
+DECLARED a read" clause DISCHARGED; the formed content exhausted by the pre-existing reads (the
+return-word counts, the faces, the order grammar — the 1-of-24 round-trip theorem re-run, the
+χ-gated meeting locus); the alphabet census: {δh,Δτ_rt,d,≺,≻} meets the amplitude tokens and the
+baryon generators in ∅; the dynamical transit STAYS BARRED on THREE grounds O1/O2/O4 (O1 re-run by
+machine: [Wᵢ⊗I_ω, I⊗P_{L/R}]=0, adversarial [σ₁,σ₃]=−2iσ₂≠0); the bar-check verdict PASSED on
+every bar (23/23); the register (superseding IT.57(2) by explicit row): ISSUED cumulative
+D-PJ1–6/D-RS1–3/D-RS6–7 + the BM.113(6) sync, DEFERRED D-RS4, **REMAINING OWED: D-PJ7 ALONE** (the
+standing IT-O1 package: deficit 1′, the P4 transport profile, a transit winding carrier [IT.41(2)])
++ the three sub-debts unchanged; seven premise corrections (the "O1 and O4" miscount → three
+grounds; A9 re-affirmed; **CONTINUUM.md ¬existent** — the live project map is this README +
+era2/README; "npredim" builder-side, flagged; IT-O3 already CLOSED [IT.60(3)]; the "Transit Legs"
+title scoped to the read's legs; reconciliations ¬duplicates); NO new open row; §Cal-IT value-free
+(+2 logged acts: D-RS3@IT.65, D-RS6@IT.66).
 
 ## The directive's premises, and what the canon said
 
