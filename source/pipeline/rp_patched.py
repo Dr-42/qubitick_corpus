@@ -649,7 +649,7 @@ def is_sep_row(line):
 
 TAG_IN_HEAD = re.compile(
     r"((?:Def-(?:H|BM|EM)\.\d+|(?:FT|BM)\.\d+|CT\d+\.\d+[ab]?|EW\.\d+a?|EM\.\d+[ab]?|"
-    r"L[0-5]a?|A[1-9]|C1[0-2]|D[0-4]\.\d+|P[1-5])\b)")
+    r"L[0-5]a?|A[1-9]|C1[0-3]|D[0-4]\.\d+|P[1-5])\b)")
 
 def pdf_safe(s):
     s = re.sub(r"\$[^$]*\$", " ", s)

@@ -571,7 +571,7 @@ for fn in CANON:
     for m in re.finditer(r"^###\s+(?:Cor\s+)?((?:FT|Def-H|Def-BM|BM)\.[\d.]+\w*|"
                          r"CT\d+\.\d+\w*|EW\.\d+\w*|EM\.\d+\w*|Def-EM\.\d+|L[0-5]\w*)\b", src, re.M):
         REG.add(m.group(1).rstrip("."))
-    for m in re.finditer(r"^\*\*(A[1-9]|C1[0-2]|C[1-9]|D[0-4]\.\d+|P[1-5])\.\*\*", src, re.M):
+    for m in re.finditer(r"^\*\*(A[1-9]|C1[0-3]|C[1-9]|D[0-4]\.\d+|P[1-5])\.\*\*", src, re.M):
         REG.add(m.group(1))
     for m in re.finditer(r"\*\*Cor\s+((?:CT\d+|EW|EM|FT|L\d)\.[\d.]+\w*|L0a)\b", src):
         REG.add(m.group(1))
@@ -579,7 +579,7 @@ CITE = re.compile(r"\\mathrm\{([A-Za-z][A-Za-z0-9.\-]*?)(?:\(([^{}]*)\))?\}")
 missing = set()
 for m in CITE.finditer(tier):
     tok = m.group(1).replace("\\text{-}", "-").rstrip(".")
-    if re.fullmatch(r"(FT|Def-H|Def-BM|Def-EM|BM|CT\d+|EW|EM|L[0-5])\.[\d.]+\w*|A[1-9]|C1[0-2]|C[1-9]|D[0-4]\.\d+|P[1-5]|L0a", tok):
+    if re.fullmatch(r"(FT|Def-H|Def-BM|Def-EM|BM|CT\d+|EW|EM|L[0-5])\.[\d.]+\w*|A[1-9]|C1[0-3]|C[1-9]|D[0-4]\.\d+|P[1-5]|L0a", tok):
         base = tok.split("(")[0]
         if base not in REG: missing.add(base)
 chk(not missing, f"§G3 every tag cited in Tier BM.16 exists in the corpus registry: missing {sorted(missing)}")

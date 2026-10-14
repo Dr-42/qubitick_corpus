@@ -232,7 +232,7 @@ def citations(doc, src, reg, histags):
             err(doc, f"cites historical tag {tag} without a HistLog locator")
             continue
         # known non-tag matches
-        if re.match(r"^(C[1-9]|C1[0-2])$", tag) or re.match(r"^P[1-5]$", tag):
+        if re.match(r"^(C[1-9]|C1[0-3])$", tag) or re.match(r"^P[1-5]$", tag):
             if tag in reg:
                 continue
         err(doc, f"citation to unknown tag: {tag}")

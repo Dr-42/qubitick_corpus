@@ -42,6 +42,8 @@ session-5 restructure cite the old loci; the files moved, the citations stay as 
 | `qubitick_corpus/` (the nested published copy) | `archive/zenodo_v1.0_package/` |
 | `canon/` (the v1.0 canon tree; cited historically) | `era1/canon/` (moved at the Level-5 closure, AT.63(5)) |
 | `verification/` (the frozen 80-checker suite) | `era1/verification/` (moved with its canon, sibling-locked by symlinks) |
+| `era2/level7_anthropic/` (cited in closure-time tree rows, e.g. AT.63(5)) | `era2/level8_anthropic/` (the session-13n level-ladder act placed Molecular at 7 and moved Anthropic to 8 — logged at IT.61; closure-time mentions in the frozen record stay as written) |
+| `era2/level6_molecular/` (cited in closure-time tree rows) | `era2/level6_isotopic/` (the session-12 rename; the mapping row recorded here per IT.15(3)) |
 
 ## Run
 
