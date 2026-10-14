@@ -23,8 +23,11 @@ IT-O1 level-local) (IT.34–IT.36), Tier IT.12: the mass-matrix object — exact
 adjudicated redundant + parametric (IT.37–IT.39); Level 7 (Anthropic) is unopened.
 **Level 6 was opened as "Molecular" and renamed "Isotopic" at session 12 (the Architect's
 directive); the molecular level is deferred — its placement in the level map is the Architect's
-act [IT.15(3)].** **Nothing here is frozen canon.** Nothing was adopted, no declaration issued, §Cal
-stays empty at every level, and no clause of Parts 1–4 is modified, retracted or renumbered.
+act [IT.15(3)].** **Nothing here is frozen canon.** Nothing was adopted into the frozen canon; §Cal-IT at Level 6
+is a VALUE-FREE act register (Tiers IT.17 + IT.20: the Architect's logged declaration acts
+D-PJ1–6 / D-RS1–3 / D-RS6–7 + the BM.113(6) sector sync — D-RS4 deferred, D-PJ7 owed — no
+calibration value issued), §Cal stays empty at every other level, and no clause of Parts 1–4 is
+modified, retracted or renumbered.
 Promotion into the frozen canon's `index/`, `tags.json`, `Summary.md` is an **Era-2-closure act**
 (after Levels 6–7), deliberately not taken at Level-5 closure [AT.63(4)].
 
@@ -41,7 +44,7 @@ era2/
 │   └── discovery/             ← the free-form session records (superseded by the tiers),
 │       ├── logs/              ←   historical run outputs
 │       └── legacy_checks/     ←   session-1 checker copies (provenance; NOT live)
-├── level6_isotopic/          ← Level 6 — the Isotopic era (OPEN: Tiers IT.1–IT.19, tags IT.1–IT.63; opened as "Molecular", renamed at session 12)
+├── level6_isotopic/          ← Level 6 — the Isotopic era (OPEN: Tiers IT.1–IT.20, tags IT.1–IT.66; opened as "Molecular", renamed at session 12)
 ├── level7_molecular/          ← Level 7 — the Molecular era (PLACED at session 13n [IT.61], not opened; prefix MO.n recommended, ¬minted)
 └── level8_anthropic/          ← Level 8 — the Anthropic era (not opened; was level7_anthropic/ before the ladder act [IT.61])
 ```
