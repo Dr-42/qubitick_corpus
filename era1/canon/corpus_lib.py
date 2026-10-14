@@ -24,11 +24,11 @@ HISTLOG = "HistLog.md"
 HEAD_RE = re.compile(
     r"^###\s+(?:Cor\s+)?((?:FT|Def-H|Def-BM|BM)\.\d+\w*|"
     r"CT\d+\.\d+\w*|EW\.\d+\w*|EM\.\d+\w*|Def-EM\.\d+|L[0-5])\s*[—–-]?\s*(.*)$")
-PARA_RE = re.compile(r"^\*\*(A[1-9]|C1[0-2]|C[1-9]|D[0-4]\.\d+|P[1-5])\.\*\*", re.M)
+PARA_RE = re.compile(r"^\*\*(A[1-9]|C1[0-3]|C[1-9]|D[0-4]\.\d+|P[1-5])\.\*\*", re.M)
 COR_RE = re.compile(r"^\*\*Cor\s+((?:CT\d+|EW|EM|FT|L\d)[\.\d]*\w*)\b[^*]*\*\*", re.M)
 TOKEN_RE = re.compile(
     r"\b(Def-EM\.\d+|Def-H\.\d+|Def-BM\.\d+|FT\.\d+|BM\.\d+|"
-    r"CT\d+\.\d+[ab]?|EW\.\d+a?|EM\.\d+[ab]?|D[0-4]\.\d+|A[1-9]|C1[0-2]|C[1-9]|P[1-5]|L[0-5]a?)\b")
+    r"CT\d+\.\d+[ab]?|EW\.\d+a?|EM\.\d+[ab]?|D[0-4]\.\d+|A[1-9]|C1[0-3]|C[1-9]|P[1-5]|L[0-5]a?)\b")
 POINTER_RE = re.compile(r"HistLog §I{1,2}V?\}?/(?:\\mathrm\{)?(?:FT|Def-H)\.\d+\}?")
 
 SEG_RE = re.compile(r"^\*\*([A-Za-z][^*\n]{0,90}?)\.\*\*")
