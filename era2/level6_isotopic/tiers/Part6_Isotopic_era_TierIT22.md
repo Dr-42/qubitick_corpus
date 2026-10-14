@@ -11,7 +11,7 @@ mediating the entire $S$ sector. Executed as an adjudication, not an adoption: e
 is machine-checked against frozen rows and separated **DERIVED / DECLARED / BARRED / NOT
 DERIVED (scoped absence)**. Two claims come out whole, two come out split, one naming is barred,
 and the note yields the tier's sharpest new row.
-**Tags.** IT.71–IT.77. **Pattern.** the adjudication tiers (Tier IT.16's premise audit + IT.21's
+**Tags.** IT.71–IT.78. **Pattern.** the adjudication tiers (Tier IT.16's premise audit + IT.21's
 construction shape), corrections recorded in-tier, never overwritten.
 **Status.** discovery-phase working tier. Nothing is adopted into the frozen canon; **no
 declaration issues** (machine-scanned); §Cal-IT stays value-free and unchanged; no clause of
@@ -19,21 +19,26 @@ Parts 1–4, of Level 5's closed record, or of Tiers IT.1–IT.21 is modified [A
 citation slip in the directive is recorded as a PREMISE CORRECTION at IT.71(4), never applied to
 a frozen row. No measured value enters [P5]; no new dimensionful scale [P1]; species names stay
 quoted and no identification is made [Def-BM.3(1),(7)].
-**Machine.** `era2/level6_isotopic/checks/translation_layer.py` → **40/40 exact** (Gauss(i) over
+**Machine.** `era2/level6_isotopic/checks/translation_layer.py` → **43/43 exact** (Gauss(i) over
 Fractions for the $4\times4$ pair algebra; exact rational $\mathrm{LDL}^\top$ inertia; multivariate
 Fraction polynomial rings; a FORMAL JET ALGEBRA over $\mathbb Q$ for the linearized Einstein
 tensor; exhaustive enumeration; exact integer binomials; text censuses with live AND dead
 witnesses so no absence scan can pass dead; NO floating point); `run_all_level6.py` →
-**23 checkers, 390 exact markers, 0 failures**; `check_level6_format.py` → the gate over all
-twenty-two Part 6 documents. **NON-VACUITY (mutation audit, run before any tier text was
+**23 checkers, 393 exact markers, 0 failures**; `check_level6_format.py` → the gate over all
+twenty-two Part 6 documents (78 IT-blocks). **NON-VACUITY (mutation audit, run before any tier text was
 written):** six deliberate perturbations of the checker — the interleaving closed form
 $2^{2n-1}\mapsto2^{2n}$, the constraint-cell list, the radar half-distance, the covering
 sub-collection bound, the shift-monomial count, the joint-read derivative census — each turned
-exactly its own marker (and, where the component feeds the verdict table, IT.77's assembly) RED;
+exactly its own marker (and, where the component feeds the verdict table, IT.78's assembly) RED;
 and the flipped-signature representative $\eta'=(+,+,+,-)$ [C13's opposite choice] was run through
 the whole wave-operator census as a convention adversarial (IT.73(4)).
 **Charter (era chain).** Part 6 cites Parts 1–4, the Level-5 record, and earlier IT-tags only. No
 forward pointer is used as a premise.
+**Mid-batch intake.** The builder's `comms/0009` (Lean Tier 2 kernel-green) landed while this tier
+was building; its three machine-aimed items are answered at **IT.77** (the Pauli pin adopted,
+$[\Sigma,W_i]=0$ re-certified against an incoming contradictory hand computation, and the
+Lie-closure rank rows delivered as an exact-elimination receipt). The tier's tag range is
+IT.71–IT.78; the checker carries 43 markers.
 **Mandate.** The Architect's directive (session 13r), executed in full: *"Verify each claim
 against the frozen canon. Separate derived from declared from barred. Do not accept the
 hypothesis by fiat — prove or disprove each component … Do not force a declaration. If a claim
@@ -311,7 +316,47 @@ vocabulary: a layer, yes, but a dictionary, with its identification still priced
 
 ---
 
-### IT.77 — The verdict: the four claims component by component, the bars, and the census
+### IT.77 — The mid-batch channel intake: three receipts for the builder's kernel-checked sector table
+
+**Thm.**
+$$(0)\quad\textbf{THE INTAKE (provenance, recorded):}\qquad\text{the builder's channel message}\ \texttt{comms/0009}\ \text{landed MID-BATCH}\ (\text{Lean Tier 2 kernel-green:}\ \texttt{SectorTable.lean}\ 40\ \text{theorems},\ \texttt{OpenedPaths.lean}\ 30,\ \text{zero imports, PR}\ \texttt{qubitick\_lean\#1}\ \text{merged)}\textbf{:}$$
+$$\text{it names three items aimed at this level's machine — the}\ (7,3,3,3)\ \text{sector table proved twice, a Pauli-literal pin this checker lacked, and two rows deliberately NOT claimed}\ (\text{the Lie-closure ranks}\ 15/16{=}15{+}1,\ \text{``need exact elimination over}\ \mathbb Q(i)\text{''};\ \text{and}\ [\Sigma,W_i]\ \text{``not claimed either way — a hand computation says nonzero''});$$
+$$\text{this tag answers all three on the rows. The tier's own}\ \S\mathrm A\ \text{census is an INDEPENDENT third attestation of the same table (Python vs instrument vs kernel)}\ [\mathrm{AT.63}(2)\ \text{pattern: the record gains receipts,}\ \neg\text{edits}]$$
+$$(1)\quad\textbf{THE PAULI PIN, ADOPTED (new marker A6):}\qquad\boxed{\ \text{the four Pauli literals are certified to satisfy their own algebra BEFORE the}\ 16\text{-basis is built on them}\ }$$
+$$\sigma_\mu^2=I\ (4),\quad\sigma_\mu^\dagger=\sigma_\mu\ (4),\quad\mathfrak T\sigma_\mu=2\delta_{\mu0}\ (4),\quad\det\sigma_0=+1\ \wedge\ \det\sigma_i=-1\ (4),\quad\sigma_\mu\sigma_\nu=\delta_{\mu\nu}I+\mathrm i\epsilon_{\mu\nu\rho}\sigma_\rho\ (16),\quad\mathfrak T(\sigma_\mu\sigma_\nu)=2\delta_{\mu\nu}\ (16)$$
+$$\textbf{why it is load-bearing here:}\ \text{this session's own build mis-wrote}\ \sigma_3\ \text{with}\ -\mathrm i\ \text{in its lower slot instead of}\ -1;\ \text{the slip did NOT crash — it degraded the}\ \operatorname{Ad}(\mathbb S)\ \text{census silently and was caught only downstream}\ [\mathrm{A2}];\ \text{the pin localizes such a slip at the literal}\ [\text{the builder's}\ \texttt{pauli\_algebra\_pin},\ \text{credited}]$$
+$$(2)\quad\textbf{THE}\ [\Sigma,W_i]\ \textbf{ROW: THE FROZEN CLAUSE STANDS, THE HAND COMPUTATION DOES NOT (new marker A7):}\qquad\boxed{\ [\Sigma,\ W_i]=0\ \ \text{EXACTLY, for all three}\ i\ }\qquad[\mathrm{CT1.5},\ \text{as used in}\ \mathrm{CT1.10}\ \text{'s Pf}:\ \text{``}[\Sigma,W_i]=0\ [\mathrm{CT1.5}]\implies\Sigma:\ \mathbf 1\text{''}]$$
+$$\text{the full census of the sixteen commutators with}\ \Sigma:\qquad[\Sigma,W_i]=0\ (3\ \text{rows, identically});\qquad[\Sigma,J_i]=4\mathrm iK_i,\qquad[\Sigma,K_i]=-4\mathrm iJ_i\quad(\text{single-term, coefficients exactly}\ \pm4\mathrm i)\ [\mathrm{IT.51}(1)\ \text{re-certified}];\qquad E_0\ \text{central on all}\ 16;$$
+$$\textbf{the cancellation, exhibited term by term for each}\ i\ (j,k\ \text{the complementary pair)}\textbf{:}\qquad[\Sigma,W_i]\propto\underbrace{-2\mathrm i(\sigma_j\otimes\sigma_k)-2\mathrm i(\sigma_k\otimes\sigma_j)}_{\text{from the}\ j\text{-th summand}}\underbrace{+2\mathrm i(\sigma_k\otimes\sigma_j)+2\mathrm i(\sigma_j\otimes\sigma_k)}_{\text{from the}\ k\text{-th summand}}=0\ \ \text{PAIRWISE};$$
+$$\text{which is why a term-by-term hand computation that stops at the first summand reads ``nonzero''}\ \ \Longrightarrow\ \ \textbf{a Lean theorem asserting}\ [\Sigma,W_i]\ne0\ \textbf{would contradict the frozen}\ \mathrm{CT1.5}/\mathrm{CT1.10}\ \textbf{rows};\ \ \text{the corpus is the source of truth and the row wins}$$
+$$\text{consequence re-stated: the}\ \mathbf 1\oplus\mathbf 5\oplus\mathbf 1\ \text{decomposition of}\ \mathcal E_{++}\ \text{under}\ \operatorname{span}\{W_i\}\ [\mathrm{CT1.10}]\ \text{rests on}\ \Sigma\ \text{being a scalar there, and}\ \mathrm{CT1.12}\text{'s dictionary reads}\ \Sigma_{\mathrm{tr}}\ \text{as the volume mode}\ (H)\ \text{accordingly}$$
+$$(3)\quad\textbf{THE LIE-CLOSURE RANK ROWS, AS AN EXACT-ELIMINATION RECEIPT (new marker A8):}\qquad\text{all}\ \binom{15}{2}=105\ \text{commutator pairs of the}\ 15\ \text{traceless generators are expanded in the}\ 16\text{-basis by exact linear solve over}\ \mathbb Q(i):$$
+$$\boxed{\ \text{every}\ E_0\text{-component vanishes (the bracket preserves tracelessness, so}\ E_0\ \text{stays central)};\qquad\operatorname{rk}\{\text{the commutators}\}=15;\qquad\operatorname{rk}\{15\ \text{traceless}\}=15;\qquad\operatorname{rk}\{16\}=16\ }$$
+$$\text{i.e.}\ \dim=15\ \text{with}\ 16=15+1\ \text{exactly}\ [\mathrm{IT.51}(1)\text{'s ``the six generate}\ \mathfrak{su}(4)\text{''}];\qquad\text{the two rows named as the kernel's next increment now carry a Python attestation to double-enter against}\ [\mathrm{CT1.4};\ \mathrm{CT1.8}]$$
+$$(4)\quad\textbf{status:}\qquad\textbf{derived:}\ (1)\text{--}(3)\ \text{(three new markers,}\ 43/43\ \text{in the checker)};\qquad\textbf{record rows:}\ (0);\qquad\neg\text{a declaration},\qquad\neg\text{a canon edit},\qquad\neg\text{a new open row};\qquad\text{the builder's}\ \neg\text{claims stay}\ \neg\text{claims where they were honest: the Faddeev--LeVerrier charpoly and the CPT assembly remain with this level's machine}$$
+
+**Req.** C1, C2 (Part 1); CT1.2, CT1.4, CT1.5, CT1.8, CT1.10 (Part 1); CT1.12 (Part 2); IT.51(1),(7) (this level); AT.63(2) (Level 5); the builder's `comms/0009` §1 (channel intake, credited in-tier); exact $\mathbb Q(i)$ matrix arithmetic (Pauli-literal pin, commutator census with exact basis expansion by linear solve, flattening ranks) [math; machine: `translation_layer.py` §§A6–A8, 3/3].
+
+**Pf.**
+$$(1):\ \ \text{the}\ 48\ \text{literal rows verified entrywise over}\ \mathbb Q(i)\ \text{(squares, hermiticity, traces, determinants, the}\ 16\text{-row product law with}\ \epsilon_{\mu\nu\rho}\ \text{from the antisymmetric difference product, the}\ 16\ \text{orthogonality traces)}\ [\text{machine A6}];$$
+$$(2):\ \ \text{the}\ 16\ \text{commutators with}\ \Sigma\ \text{computed entrywise and re-expanded in the}\ 16\text{-basis by exact solve; the three}\ W\ \text{rows empty; the}\ J/K\ \text{rows single-term with coefficients}\ \pm4\mathrm i;\ E_0\ \text{central; the four-term cancellation exhibited for each}\ i\ [\text{machine A7}];$$
+$$(3):\ \ \text{the}\ 105\ \text{pairs expanded by exact solve, the}\ E_0\text{-component census, and the three flattening ranks}\ (15,\ 15,\ 16)\ [\text{machine A8}];\qquad(0),(4):\ \ \text{record rows on the cited clauses}.\ \blacksquare$$
+
+**Phys.** A kernel-checked table arrived mid-batch from the other half of the dyad, and it carried
+three things: a guard this checker should have had, a pair of rows it could not yet claim, and one
+row it declined to claim in either direction because a hand computation whispered the wrong answer.
+All three are answered on the rows. The Pauli literals are now pinned before anything is built on
+them, which is exactly the discipline this session's own sigma-three slip argues for. The
+commutator of the exchange scalar with the weak generators vanishes, and the cancellation is
+exhibited term by term so the whisper can be seen to stop one summand short — a frozen clause of
+Part 1 confirmed against an incoming contradiction, which is the cheapest kind of corpus defence
+there is. And the Lie-closure ranks, named as the next increment for the kernel, arrive here first
+as an exact elimination receipt: fifteen, fifteen, sixteen. Three implementations, one canon, and
+where they disagreed the row won.
+
+---
+
+### IT.78 — The verdict: the four claims component by component, the bars, and the census
 
 **Thm.**
 $$(1)\quad\textbf{THE VERDICT TABLE (every component traced to its certifying marker or its frozen ground):}\qquad\begin{array}{l|l|l}\textbf{claim}&\textbf{component}&\textbf{verdict}\\\hline(1)&\text{the four blocks carry metric coordinates}\ (5{+}3{+}1{+}1{=}10)&\textbf{DERIVED}\ [\mathrm{IT.72}(2);\ \mathrm{B1},\mathrm{B5}]\\(1)&\text{the seals carry zero metric coordinates}&\textbf{DERIVED}\ [\mathrm{FT.141}(5);\ \mathrm{IT.72}(2);\ \mathrm{B5}]\\(1)&\text{the dictionary is a bijection}\ 10\leftrightarrow10&\textbf{DERIVED}\ [\mathrm{CT1.12};\ \mathrm{IT.72}(3);\ \mathrm{B2}]\\(1)&\text{they ARE the dimensions (an identity)}&\textbf{NOT ADOPTED — four prices}\ [\mathrm{IT.52}(3);\ \mathrm{IT.54}(1);\ \mathrm{B6}];\ \text{an adoption is the Architect's act,}\ \neg\text{forced}\\\hline(2)&\text{ticks are ledger events,}\ \neg\text{geometric}&\textbf{DERIVED}\ [\mathrm{A6};\ \mathrm{A7};\ \mathrm{D1.9};\ \mathrm{IT.73}(1);\ \mathrm{C1},\mathrm{C3}]\\(2)&\text{the forces are geometric (the metric's coefficients)}&\textbf{DERIVED}\ [\mathrm{IT.72}(2);\ \mathrm{CT1.12};\ \mathrm{FT.157}(1)]\\(2)&\text{the}\ G\ \text{quintet is a geometric wave mode}&\textbf{DERIVED}\ [\mathrm{CT1.18};\ \mathrm{CT1.10};\ \mathrm{IT.73}(3),(4);\ \mathrm{C5},\mathrm{C6}]\\(2)&W,H,D^+\ \text{as wave modes}&\textbf{NOT DERIVED — scoped absence,}\ \neg\text{a no-go}\ [\mathrm{IT.73}(4),(8);\ \mathrm{AT.5}(4);\ \mathrm{CT1.17}];\ \text{the residue}\subseteq\mathrm{D\text{-}PJ7}\text{'s P4 transport profile}\\(2)&\text{the dynamical mediation reading}&\textbf{BARRED as formed — three grounds}\ \mathrm{O1/O2/O4}\ [\mathrm{IT.73}(6);\ \mathrm{C8}]\\\hline(3)&W_i\ \text{is}\ T\text{-odd}&\textbf{DERIVED}\ [\mathrm{CT1.2};\ \mathrm{IT.74}(1);\ \mathrm{A3},\mathrm{A4}]\\(3)&\text{it transports to the time-reversal pullback}&\textbf{DERIVED}\ [\mathrm{FT.156}(3);\ \mathrm{IT.74}(2),(3);\ \mathrm{D1},\mathrm{D2},\mathrm{D3}]\\(3)&\text{the interval is}\ T\text{-even (the flip is an involution)}&\textbf{DERIVED}\ [\mathrm{IT.74}(4);\ \mathrm{D4};\ \mathrm{CT1.12a}(2);\ \mathrm{CT1.19b}(2)]\\(3)&\text{it separates the two null legs}&\textbf{DERIVED}\ [\mathrm{IT.74}(5);\ \mathrm{IT.53}(5)(\mathrm b);\ \mathrm{D5}]\\(3)&\text{it distinguishes past from future}&\textbf{SPLIT: derived in the formal/read sense only}\ [\mathrm{IT.74}(6)];\ \text{the arrow's locus is}\ \neg\exists\tau^{-1}\ [\mathrm{A6}]+\mathrm{FT.144}(2),(3)+\mathrm{A7}\\(3)&\text{it encodes left/right}&\textbf{BARRED as a naming}\ [\mathrm{FT.156}\ \mathrm{Rmk};\ \mathrm{FT.157}\ \mathrm{Rmk};\ \mathrm{FT.101}\ \mathrm{Phys};\ \mathrm{D7}]\\\hline(4)&\text{the contraction measures the ledger (jointly)}&\textbf{DERIVED}\ [\mathrm{IT.75}(1)\text{--}(5);\ \mathrm{E1}\text{--}\mathrm{E5}]\\(4)&\text{the on-shell integers}\ (\Theta_{\mathcal P}\in2\mathbb Z,\ \kappa\in\mathbb Z)&\textbf{DERIVED}\ [\mathrm{CT1.19b};\ \mathrm{IT.75}(3);\ \mathrm{E3}]\\(4)&\text{the inverse translation (metric}\to\text{ledger integer)}&\textbf{DERIVED}\ [\mathrm{AT.5}(1),(3);\ \mathrm{IT.75}(4);\ \mathrm{E4}]\\(4)&\text{a per-block measurement}&\textbf{BARRED}\ [\mathrm{FT.30}\ \mathrm{Verdict};\ \mathrm{IT.75}(1)]\\(4)&\text{the operational read (the radar)}&\textbf{DECLARED and formed}\ [\mathrm{D\text{-}RS6};\ \mathrm{D\text{-}RS3};\ \mathrm{IT.68}];\ \ \mathrm{D\text{-}RS4}\ \text{deferred}\\(4)&\text{the dynamical jump}&\textbf{BARRED — three grounds}\ [\mathrm{IT.66}(1);\ \mathrm{IT.73}(6)]\\\hline\text{note}&\text{reach}\ 1\ \text{hop}\ \wedge\ \text{content the whole}\ S\ \text{sector}&\textbf{DERIVED, minimally}\ [\mathrm{IT.76}(1),(2);\ \mathrm{F1},\mathrm{F2}]\\\text{note}&\text{the SM weak-boson framing}&\textbf{FLAGGED}\ \neg\textbf{ADOPTED — out-of-corpus clarification}\ [\mathrm{IT.71}(3);\ \mathrm{IT.76}(5);\ \mathrm{F4}]\end{array}$$
@@ -320,12 +365,12 @@ $$(3)\quad\textbf{THE DECLARATION CENSUS:}\qquad\textbf{the declarations this ti
 $$\boxed{\ \S\mathrm{Cal\text{-}IT}\ \text{stays VALUE-FREE and unchanged; the register stands as}\ \mathrm{IT.66}(4)\ \text{records it: issued}\ \mathrm{D\text{-}PJ1}\text{–}\mathrm{D\text{-}PJ6},\ \mathrm{D\text{-}RS1}\text{–}\mathrm{D\text{-}RS3},\ \mathrm{D\text{-}RS6},\ \mathrm{D\text{-}RS7},\ \text{the}\ \mathrm{BM.113}(6)\ \text{sector sync; deferred}\ \mathrm{D\text{-}RS4};\ \textbf{owed}\ \mathrm{D\text{-}PJ7}\ \textbf{alone}\ +\ \text{the three sub-debts}\ }$$
 $$(4)\quad\textbf{THE OPEN-ROW STATE:}\qquad\boxed{\ \textbf{NO new open row}\ };\qquad\mathrm{IT\text{-}O1}\ \text{UNCHANGED (three grounds; deficit}\ 1');\qquad\mathrm{IT\text{-}O2}\ \text{UNCHANGED (the binding value; the three}\ \mathrm{IT.27}(2)\ \text{constructions)};\qquad\mathrm{IT\text{-}O5}\ \text{UNCHANGED};\qquad\mathrm{IT\text{-}O3},\ \mathrm{IT\text{-}O6}\ \text{stay CLOSED}\ [\mathrm{IT.60}(3);\ \mathrm{IT.69}(6)];$$
 $$\text{the one residue this tier names — a formed propagator role for}\ W,H,D^+\ \text{— CONSOLIDATES under}\ \mathrm{D\text{-}PJ7}\text{'s P4 transport profile (the declared gauge field)}\ [\mathrm{IT.41}(2);\ \mathrm{IT.66}(4)],\ \ \neg\text{a new row}\ [\mathrm{AT.63}(2)\ \text{pattern: no proliferation}]$$
-$$(5)\quad\textbf{THE MACHINE STATE:}\qquad\texttt{translation\_layer.py}\to\textbf{40/40 exact};\qquad\texttt{run\_all\_level6.py}\to\textbf{23 checkers, 390 exact markers, 0 failures};\qquad\texttt{check\_level6\_format.py}\to\textbf{22 Part 6 documents PASS};$$
+$$(5)\quad\textbf{THE MACHINE STATE:}\qquad\texttt{translation\_layer.py}\to\textbf{43/43 exact};\qquad\texttt{run\_all\_level6.py}\to\textbf{23 checkers, 393 exact markers, 0 failures};\qquad\texttt{check\_level6\_format.py}\to\textbf{22 Part 6 documents PASS, 78 IT-blocks};$$
 $$\text{the Level-5 closed suite untouched}\ (37/643);\qquad\text{index/tags/Summary}\ \neg\text{regenerated — promotion stays an Era-2-closure act}\ [\mathrm{AT.63}(4)]$$
 $$(6)\quad\textbf{THE ERA CHAIN:}\qquad\text{every clause cites Parts 1--4, the Level-5 record, and earlier IT-tags only;}\ \neg\exists\ \text{a forward pointer used as a premise; acyclic}\ [\text{machine: the gate's F3}];$$
 $$\boxed{\ \textbf{coherence is}\ \neg\textbf{contact, and a derived row is a row the frozen inventory already forced — not one the hypothesis wished for}\ }\qquad[\mathrm{AT.39}(8);\ \mathrm{IT.1}(8)\ \text{'s standing box, re-cited}]$$
 
-**Req.** P1, P5 (Parts 1–2); A6, A7, D0.6, D1.9, D2.9 (Parts 1–2); CT0.12, CT1.2, CT1.10, CT1.12, CT1.12a(2), CT1.18, CT1.19b, CT2.6 (Parts 1–2); Def-H.41, Def-H.42, Def-BM.3(1),(7), FT.20, FT.30, FT.73(5), FT.101, FT.141(5), FT.144, FT.156, FT.157 (Part 3); BM.34, BM.36(3), BM.61(8), BM.134(5) (Part 4); IT.4(2), IT.27(2), IT.40–IT.42, IT.41(2), IT.52(3), IT.53, IT.54(1), IT.56(2), IT.60(3), IT.64(4), IT.65(1), IT.66(1),(4), IT.68, IT.69(6), IT.71–IT.76, IT-O1, IT-O2, IT-O3, IT-O5, IT-O6 (this level); AT.5, AT.39(8), AT.63(2),(4) (Level 5); the full checker, the level runner and the level gate re-run end to end [math; machine: `translation_layer.py` §§G1–G4, 4/4].
+**Req.** P1, P5 (Parts 1–2); A6, A7, D0.6, D1.9, D2.9 (Parts 1–2); CT0.12, CT1.2, CT1.10, CT1.12, CT1.12a(2), CT1.18, CT1.19b, CT2.6 (Parts 1–2); Def-H.41, Def-H.42, Def-BM.3(1),(7), FT.20, FT.30, FT.73(5), FT.101, FT.141(5), FT.144, FT.156, FT.157 (Part 3); BM.34, BM.36(3), BM.61(8), BM.134(5) (Part 4); IT.4(2), IT.27(2), IT.40–IT.42, IT.41(2), IT.51(1), IT.52(3), IT.53, IT.54(1), IT.56(2), IT.60(3), IT.64(4), IT.65(1), IT.66(1),(4), IT.68, IT.69(6), IT.71–IT.77, IT-O1, IT-O2, IT-O3, IT-O5, IT-O6 (this level); AT.5, AT.39(8), AT.63(2),(4) (Level 5); the full checker, the level runner and the level gate re-run end to end [math; machine: `translation_layer.py` §§G1–G4, 4/4].
 
 **Pf.**
 $$(1):\ \ \text{the row-wise assembly of}\ \mathrm{IT.72}\text{--}\mathrm{IT.76}\ \text{with every verdict traced to its certifying marker}\ [\text{machine G1}];\qquad(2):\ \ \text{the bar assembly with the tier scans (zero decimals; the dimensionful-symbol census; the alphabet census for amplitude/vertex/weight/rate tokens)}\ [\text{machine G2}];$$
@@ -351,7 +396,7 @@ exactly where the last tier left it.
 
 ## §Cal-IT — unchanged (value-free)
 
-**No act at this tier.** Tier IT.22 issues no declaration (machine-scanned at IT.77(3)): it is an
+**No act at this tier.** Tier IT.22 issues no declaration (machine-scanned at IT.78(3)): it is an
 adjudication tier on the frozen inventory and the already-declared vocabulary. The act register
 stands as IT.66(4) records it — issued: D-PJ1–6, D-RS1–3, D-RS6–7, the BM.113(6) sector sync;
 deferred: D-RS4; owed: **D-PJ7 alone** + the three sub-debts. **No calibration parameter is added,
@@ -368,7 +413,7 @@ Calibration Era stays **deferred** [AT.63(4)].
 
 | row | content | locus |
 |---|---|---|
-| (none new) | Tier IT.22 opens **no new row**. The four claims are adjudicated component by component at IT.77(1): claim 1 DERIVED as a dictionary with the identity reading left at IT.52(3)'s ¬adoption (four prices, an Architect act, ¬forced); claim 2 DERIVED on the tick/channel separation and on the $G$ quintet's wave mode, with a SCOPED ABSENCE for $W,H,D^+$ as wave modes whose residue CONSOLIDATES under D-PJ7's P4 transport profile [IT.41(2); IT.66(4)]; claim 3 DERIVED on the $T$-oddness and the transport, SPLIT on the arrow (locus: $\neg\exists\tau^{-1}$ [A6; FT.144]), BARRED on the left/right naming; claim 4 DERIVED as a joint capability, BARRED per block [FT.30 Verdict], DECLARED-and-formed as an operational read [D-RS6; D-RS3; IT.68], BARRED as dynamics. The 1-reach theorem (range 1 hop, content the whole $S$ sector, minimal) is DERIVED at IT.76(1),(2) | IT.72(5); IT.73(7),(8); IT.74(8); IT.75(8); IT.76(1),(2); IT.77(1),(4) |
+| (none new) | Tier IT.22 opens **no new row**. The four claims are adjudicated component by component at IT.77(1): claim 1 DERIVED as a dictionary with the identity reading left at IT.52(3)'s ¬adoption (four prices, an Architect act, ¬forced); claim 2 DERIVED on the tick/channel separation and on the $G$ quintet's wave mode, with a SCOPED ABSENCE for $W,H,D^+$ as wave modes whose residue CONSOLIDATES under D-PJ7's P4 transport profile [IT.41(2); IT.66(4)]; claim 3 DERIVED on the $T$-oddness and the transport, SPLIT on the arrow (locus: $\neg\exists\tau^{-1}$ [A6; FT.144]), BARRED on the left/right naming; claim 4 DERIVED as a joint capability, BARRED per block [FT.30 Verdict], DECLARED-and-formed as an operational read [D-RS6; D-RS3; IT.68], BARRED as dynamics. The 1-reach theorem (range 1 hop, content the whole $S$ sector, minimal) is DERIVED at IT.76(1),(2); the mid-batch channel intake at IT.77 adds three receipts for the builder's kernel-checked sector table (the Pauli pin, $[\Sigma,W_i]=0$ against an incoming contradictory hand computation, and the Lie-closure rank rows 15/15/16) and opens no row | IT.72(5); IT.73(7),(8); IT.74(8); IT.75(8); IT.76(1),(2); IT.78(1),(4) |
 
 Inherited unchanged [IT.1(5); IT.8(4); IT.11(3),(4); IT.15(5); IT.18(5); IT.21(2); IT.24; IT.27;
 IT.30; IT.33; IT.36; IT.39(5); IT.42; IT.45(5); IT.48(4); IT.54(4); IT.57(5); IT.60(4); IT.62(4);

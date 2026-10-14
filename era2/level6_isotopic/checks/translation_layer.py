@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-translation_layer.py -- the machine for Tier IT.22 (tags IT.71-IT.77): the Architect's
+translation_layer.py -- the machine for Tier IT.22 (tags IT.71-IT.78): the Architect's
 "rung-1 forces as the translation layer between the discrete ledger and the emergent geometry"
 hypothesis, adjudicated claim by claim against the frozen record.
 
@@ -175,6 +175,13 @@ def m_scale(c, A):
 
 def m_tr(A):
     return sum((A[i][i] for i in range(len(A))), ZERO)
+
+
+def I2x2():
+    return [[ONE if a == b else ZERO for b in range(2)] for a in range(2)]
+
+
+
 
 
 def kron(A, B):
@@ -664,6 +671,146 @@ chk("A5  [NEW ROW; CT0.13; CT0.14; CT1.12; CT1.12a(2); FT.141(1)]: THREE indepen
     "\n           real edge => vee^2 populated => the S-even aspects act'. ADVERSARIAL: including J in the"
     "\n           difference gives 16, not 10.",
     a5, "A(1)\\A(0)=%s (dim %d); S-even blocks=%s; K_1-K_0=%d" % (newly, newly_dim, s_even_blocks, K1 - K0))
+
+
+# ---- A6-A8: the mid-batch channel intake (the builder's 0009, Lean Tier 2 kernel-green) ----
+# (a) the PAULI PIN, adopted from the builder's `pauli_algebra_pin`: prove the four literals
+#     satisfy their own algebra BEFORE the table is built on them, so a mis-typed sigma cannot
+#     survive into a grading census (this session's own sigma_3 slip is the reason the row exists)
+def levi(i, j, k):
+    return ((i - j) * (j - k) * (k - i)) // 2 if len({i, j, k}) == 3 else 0
+
+
+pin_sq = all(all(m_sub(D.mat_mul(SIG[mu], SIG[mu]),
+                       [[ONE if a == b else ZERO for b in range(2)] for a in range(2)])
+                 [r][c] == ZERO for r in range(2) for c in range(2)) for mu in range(4))
+pin_herm = all(all(m_sub(D.mdag(SIG[mu]), SIG[mu])[r][c] == ZERO
+                   for r in range(2) for c in range(2)) for mu in range(4))
+pin_tr = all(m_tr(SIG[mu]) == D.Gauss(2 if mu == 0 else 0) for mu in range(4))
+pin_det = all((SIG[mu][0][0] * SIG[mu][1][1] - SIG[mu][0][1] * SIG[mu][1][0])
+              == D.Gauss(1 if mu == 0 else -1) for mu in range(4))
+pin_prod = True
+for mu in range(4):
+    for nu in range(4):
+        lhs = D.mat_mul(SIG[mu], SIG[nu])
+        if mu == 0 or nu == 0:                      # sigma_0 is the identity: s_0 s_nu = s_nu
+            rhs = SIG[max(mu, nu)]
+        else:                                       # s_i s_j = delta_ij I + i eps_ijk s_k
+            rhs = m_scale(Fr(int(mu == nu)), I2x2())
+            for rho in (1, 2, 3):
+                eps = levi(mu, nu, rho)
+                if eps:
+                    rhs = m_add(rhs, m_scale(D.Gauss(0, eps), SIG[rho]))
+        if any(lhs[r][c] != rhs[r][c] for r in range(2) for c in range(2)):
+            pin_prod = False
+pin_orth = all(m_tr(D.mat_mul(SIG[mu], SIG[nu])) == D.Gauss(2 * int(mu == nu))
+               for mu in range(4) for nu in range(4))
+a6 = pin_sq and pin_herm and pin_tr and pin_det and pin_prod and pin_orth
+chk("A6  [the builder's pauli_algebra_pin ADOPTED (comms 0009 s1); CT1.2; C1; machine: exact Q(i)]:"
+    "\n           THE BASIS IS PINNED BEFORE IT IS USED. The four Pauli literals are certified to satisfy"
+    "\n           their own algebra: sigma_mu^2 = I (4 rows), sigma_mu^dagger = sigma_mu (4), tr sigma_mu ="
+    "\n           2 delta_{mu 0} (4), det sigma_0 = +1 and det sigma_i = -1 (4), the product law"
+    "\n           sigma_mu sigma_nu = delta_{mu nu} I + i eps_{mu nu rho} sigma_rho (16 rows) and the"
+    "\n           orthogonality tr(sigma_mu sigma_nu) = 2 delta_{mu nu} (16). This is the guard the builder's"
+    "\n           Lean Tier 2 carries and this checker did not: a mis-typed sigma cannot survive into a"
+    "\n           grading census. PROVENANCE: this session's own build mis-wrote sigma_3's lower slot as -i"
+    "\n           instead of -1, and the slip was caught only downstream, by the Ad(S) census degrading --"
+    "\n           the pin localizes it at the literal instead.",
+    a6, "square=%s hermitian=%s traces=%s determinants=%s product law=%s orthogonality=%s"
+    % (pin_sq, pin_herm, pin_tr, pin_det, pin_prod, pin_orth))
+
+# (b) the Sigma-commutation census -- CT1.5's [Sigma, W_i] = 0 re-certified against the hand
+#     computation recorded in the builder's 0009 as "not claimed either way ... says nonzero"
+def comm(A, B):
+    return m_sub(D.mat_mul(A, B), D.mat_mul(B, A))
+
+
+def in_basis(X):
+    """the exact coordinates of a 4x4 Gauss matrix in the 16-generator basis."""
+    b = flat16(X)
+    M = [[FLAT[n][r] for (n, _, _) in GENS] for r in range(16)]
+    return solve_exact(M, b)
+
+
+NAMES = [n for (n, _, _) in GENS]
+sig_com = {}
+for (n, _, X) in GENS:
+    c = comm(SIGMA(), X)
+    co = in_basis(c)
+    sig_com[n] = {NAMES[k]: co[k] for k in range(16) if co[k] != ZERO}
+sw_zero = all(not sig_com["W%d" % i] for i in (1, 2, 3))
+# the cancellation exhibit for W_1: the (sigma_2, sigma_3) cross terms cancel pairwise
+exhibit = {}
+for i in (1, 2, 3):
+    j, k = {1: (2, 3), 2: (3, 1), 3: (1, 2)}[i]
+    t1 = m_scale(D.Gauss(0, -2), kron(SIG[j], SIG[k]))      # from [s_j (x) s_j, s_0 (x) s_i]
+    t2 = m_scale(D.Gauss(0, -2), kron(SIG[k], SIG[j]))      # from [s_j (x) s_j, s_i (x) s_0]
+    t3 = m_scale(D.Gauss(0, 2), kron(SIG[k], SIG[j]))       # from [s_k (x) s_k, s_0 (x) s_i]
+    t4 = m_scale(D.Gauss(0, 2), kron(SIG[j], SIG[k]))       # from [s_k (x) s_k, s_i (x) s_0]
+    tot = m_add(m_add(m_add(t1, t2), t3), t4)
+    exhibit[i] = all(tot[r][c] == ZERO for r in range(4) for c in range(4))
+sj_rows = {n: sig_com[n] for n in ("J1", "J2", "J3")}
+sk_rows = {n: sig_com[n] for n in ("K1", "K2", "K3")}
+sj_ok = all(len(sig_com["J%d" % i]) == 1
+            and ("K%d" % i) in sig_com["J%d" % i]
+            and sig_com["J%d" % i]["K%d" % i] == D.Gauss(0, 4) for i in (1, 2, 3))
+sk_ok = all(len(sig_com["K%d" % i]) == 1
+            and ("J%d" % i) in sig_com["K%d" % i]
+            and sig_com["K%d" % i]["J%d" % i] == D.Gauss(0, -4) for i in (1, 2, 3))
+e0_central = all(all(comm(E0(), X)[r][c] == ZERO for r in range(4) for c in range(4))
+                 for (n, _, X) in GENS)
+a7 = (sw_zero and all(exhibit.values()) and sj_ok and sk_ok and e0_central)
+chk("A7  [CT1.5 as used in CT1.10's Pf; IT.51(1); the builder's comms 0009 s1 ('[Sigma,W_i] is not"
+    "\n           claimed either way; a hand computation says nonzero'); machine: exact 4x4 Q(i) with the"
+    "\n           cancellation exhibited]: [SIGMA, W_i] = 0 EXACTLY, FOR ALL THREE i -- the frozen row"
+    "\n           stands and the hand computation does not. The census of all sixteen commutators with"
+    "\n           Sigma: the three W rows vanish identically; the J and K rows give exactly [Sigma, J_i] ="
+    "\n           4i K_i and [Sigma, K_i] = -4i J_i (single-term, coefficient 4i and -4i) as IT.51(1) records;"
+    "\n           E_0 is central on all sixteen. The cancellation is exhibited term by term for each i: the"
+    "\n           (j,k) cross terms from Sigma's j-th and k-th summands are -2i(s_j (x) s_k) - 2i(s_k (x) s_j)"
+    "\n           + 2i(s_k (x) s_j) + 2i(s_j (x) s_k) = 0 pairwise -- which is why a term-by-term hand"
+    "\n           computation that stops at the first pair reads 'nonzero'. CT1.5/CT1.10 are confirmed, and"
+    "\n           the Sigma-as-scalar row of the (7,3,3,3) decomposition (E_{++} -> 1 (+) 5 (+) 1 under"
+    "\n           span{W_i}) rests on it.",
+    a7, "[Sigma,W_i]=0 for i=1,2,3: %s; pairwise cancellation exhibited: %s; [Sigma,J]=4iK: %s;"
+        " [Sigma,K]=-4iJ: %s; E_0 central: %s" % (sw_zero, exhibit, sj_ok, sk_ok, e0_central))
+
+# (c) the LIE-CLOSURE RANK rows -- the builder's named Tier-3 increment ("dim 15; 16 = 15+1 needs
+#     exact elimination over Q(i)"), delivered here as an exact-elimination receipt
+TRACELESS = [n for n in NAMES if n != "E_0"]
+comm_vecs = []
+comm_pairs = 0
+e0_comp_zero = True
+for ai in range(len(TRACELESS)):
+    for bi in range(ai + 1, len(TRACELESS)):
+        A, B = MAT[TRACELESS[ai]], MAT[TRACELESS[bi]]
+        co = in_basis(comm(A, B))
+        if co is None:
+            e0_comp_zero = False
+            continue
+        comm_pairs += 1
+        if co[NAMES.index("E_0")] != ZERO:
+            e0_comp_zero = False
+        if any(x != ZERO for x in co):
+            comm_vecs.append([FLAT[n][0] * 0 + co[k] for k, n in enumerate(NAMES)])
+rank_closure = rank_gauss(comm_vecs)
+rank_traceless = rank_gauss([FLAT[n] for n in TRACELESS])
+rank_full = rank_gauss([FLAT[n] for n in NAMES])
+a8 = (rank_closure == 15 and rank_traceless == 15 and rank_full == 16 and e0_comp_zero
+      and comm_pairs == 105)
+chk("A8  [IT.51(1) ('the six generate su(4)'); CT1.4; CT1.8; the builder's comms 0009 s1 (the"
+    "\n           Lie-closure rank rows 'need exact elimination over Q(i) -- Tier 3's first increment');"
+    "\n           machine: exact Gauss(i) linear solves + flattening ranks]: THE LIE-CLOSURE RANK ROWS,"
+    "\n           as an exact-elimination receipt ahead of the kernel: all 105 commutator pairs of the 15"
+    "\n           traceless generators are expanded in the 16-basis by exact linear solve over Q(i), every"
+    "\n           E_0-component vanishes (the bracket preserves tracelessness, so E_0 stays central), and"
+    "\n           the commutators SPANK A 15-DIMENSIONAL subspace -- su(4) -- while the 15 traceless"
+    "\n           generators themselves have rank 15 and the full 16 have rank 16: dim = 15 with"
+    "\n           16 = 15 + 1 exactly. The two rows the builder named as Tier 3's first increment now carry"
+    "\n           a Python attestation to double-enter against.",
+    a8, "commutator pairs=%d; rank of the closure=%d; rank of the 15 traceless=%d; rank of the 16=%d;"
+        " every E_0 component zero=%s" % (comm_pairs, rank_closure, rank_traceless, rank_full,
+                                          e0_comp_zero))
 
 # ==========================================================================================
 # PART B -- CLAIM 1: the rung-1 forces have metric coordinates
@@ -2425,18 +2572,20 @@ for tag in blocks22:
     if not (pfm and "blacksquare" in pfm.group(1)):
         anatomy = False
 cited = set(re.findall(r"\bIT\.(\d+)\b", T22))
-own = {str(n) for n in range(71, 78)}
-fwd = sorted(int(c) for c in cited if int(c) > 70)
-acyclic = all(str(c) in own for c in fwd) and not any(int(c) > 77 for c in cited)
+OWN_LO, OWN_HI = 71, 78
+own = {str(n) for n in range(OWN_LO, OWN_HI + 1)}
+fwd = sorted(int(c) for c in cited if int(c) >= OWN_LO)
+acyclic = all(str(c) in own for c in fwd) and not any(int(c) > OWN_HI for c in cited)
 import subprocess
 gate = subprocess.run([sys.executable, os.path.join(HERE, "check_level6_format.py")],
                       capture_output=True, text=True)
 gate_ok = (gate.returncode == 0 and "22 documents PASS" in gate.stdout)
-g4 = (blocks22 == ["IT.%d" % n for n in range(71, 78)] and anatomy and acyclic and gate_ok)
+g4 = (blocks22 == ["IT.%d" % n for n in range(OWN_LO, OWN_HI + 1)] and anatomy and acyclic
+      and gate_ok)
 chk("G4  [AT.63(2); the gate's F1-F3; machine: the tier anatomy census + the era chain + the gate re-run]:"
-    "\n           THE DOCUMENT AND THE ERA CHAIN. The tier carries exactly the seven blocks IT.71-IT.77, each"
+    "\n           THE DOCUMENT AND THE ERA CHAIN. The tier carries exactly the eight blocks IT.71-IT.78, each"
     "\n           with Thm/Req/Pf/Phys and a blacksquare terminator in its Pf (independent of the gate's own"
-    "\n           scan); every IT-tag cited is either an earlier tier's or this tier's own (IT.71-IT.77), so"
+    "\n           scan); every IT-tag cited is either an earlier tier's or this tier's own (IT.71-IT.78), so"
     "\n           no forward pointer is used as a premise and the citation graph is acyclic; and the level"
     "\n           gate re-run inside this checker passes on all twenty-two Part 6 documents (math balance,"
     "\n           block anatomy, citation attestation against the frozen era-1 registry, the closed Level-5"
@@ -2446,7 +2595,7 @@ chk("G4  [AT.63(2); the gate's F1-F3; machine: the tier anatomy census + the era
     % (blocks22, anatomy, fwd, acyclic, "PASS" if gate_ok else "FAIL"))
 
 print("=" * 104)
-print("VERDICT SUMMARY (Tier IT.22, tags IT.71-IT.77):")
+print("VERDICT SUMMARY (Tier IT.22, tags IT.71-IT.78):")
 print("""    * CLAIM 1 (they ARE the dimensions): DERIVED as a DICTIONARY -- all four rung-1 blocks carry
       metric coordinates, 5+3+1+1 = 10 = #{g_{mu nu} = g_{nu mu}}, cell by cell, and the S-odd six
       carry ZERO [FT.141(5); CT1.12; CT1.12a(2); FT.30]. The bijection is 9 linear cells + 1

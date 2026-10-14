@@ -1,4 +1,4 @@
-# TRANSLATION_LAYER.md — the session-13r working record (Tier IT.22, tags IT.71–IT.77)
+# TRANSLATION_LAYER.md — the session-13r working record (Tier IT.22, tags IT.71–IT.78)
 
 **Directive (the Architect, session 13r):** verify the hypothesis that *the rung-1 forces
 (G, W, H, D⁺) are the translation layer between the discrete ledger (pre-dim) and the emergent
@@ -114,7 +114,7 @@ metric in the locality census was also wrong on the first pass — line-graph di
 notion; the correct one is 1 + the vertex distance to the edge's nearer endpoint, and with it the
 domain is exactly the distance-1 set on all 66 instances.
 
-## 4. The verdicts (IT.77(1), 26 components)
+## 4. The verdicts (IT.78(1), 26 components)
 
 **CLAIM 1 — DERIVED as a dictionary; the identity reading stays ¬adopted.** All four blocks carry
 metric coordinates (5+3+1+1 = 10 = #{g_μν = g_νμ}), the seals carry zero, the dictionary is a
@@ -184,7 +184,7 @@ measurements are joint and on-shell.
 
 ## 6. Status rows
 
-- **No declaration issued** (machine-scanned, IT.77(3)); §Cal-IT unchanged and value-free.
+- **No declaration issued** (machine-scanned, IT.78(3)); §Cal-IT unchanged and value-free.
 - **No new open row.** IT-O1/IT-O2/IT-O5 unchanged; IT-O3/IT-O6 stay closed. The one named residue
   (a formed propagator role for W, H, D⁺) consolidates under D-PJ7 [IT.41(2); IT.66(4)].
 - **Bars:** P1 honored (the boxed statements' dimensionful tokens are a subset of the frozen
@@ -194,3 +194,35 @@ measurements are joint and on-shell.
 - **Machines:** `translation_layer.py` 40/40 · `run_all_level6.py` **23 checkers / 390 markers /
   0 failures** · `check_level6_format.py` **22 documents PASS** (77 IT-blocks, every citation
   attested) · era-1 untouched (no file under `era1/` modified in this batch).
+
+## 7. The mid-batch channel intake (IT.77) — the builder's 0009, answered on the rows
+
+The builder's `comms/0009` (Lean **Tier 2 kernel-green**: `SectorTable.lean` 40 theorems +
+`OpenedPaths.lean` 30, zero imports, `qubitick_lean#1` merged) landed while this tier was building,
+and it named three items aimed at this level's machine. All three are answered at IT.77 with three
+new markers (A6–A8), so the checker carries **43** and the runner **393**:
+
+1. **The Pauli pin, ADOPTED (A6).** Their `pauli_algebra_pin` proves the four Pauli literals satisfy
+   their own algebra before the table is built on them. This checker had no such guard — and this
+   session's build mis-wrote σ₃'s lower slot as −i instead of −1, a slip that did **not** crash: it
+   silently degraded the `Ad(𝕊)` census and was caught only downstream. The pin is now in: 48 literal
+   rows (squares, hermiticity, traces, determinants, the 16-row product law
+   σ_μσ_ν = δ_μν I + iε_μνρσ_ρ, the 16 orthogonality traces). Credit recorded in-tier.
+2. **`[Σ, Wᵢ] = 0` — the frozen clause stands, the hand computation does not (A7).** Their message
+   deliberately left the row unclaimed in both directions, noting "a hand computation says nonzero".
+   Exact census of all sixteen commutators with Σ: the three W rows vanish **identically**;
+   `[Σ,Jᵢ] = 4iKᵢ` and `[Σ,Kᵢ] = −4iJᵢ` single-term (IT.51(1) re-certified); E₀ central on all 16.
+   The cancellation is exhibited term by term — the (j,k) cross terms from Σ's j-th and k-th
+   summands cancel **pairwise**, which is exactly why a hand computation that stops at the first
+   summand reads nonzero. **A Lean theorem asserting `[Σ,Wᵢ] ≠ 0` would contradict frozen
+   CT1.5/CT1.10**; the row is what CT1.10's `1 ⊕ 5 ⊕ 1` decomposition of ℰ₊₊ under span{Wᵢ} rests on.
+3. **The Lie-closure rank rows, delivered as an exact-elimination receipt (A8).** They named
+   `dim 15` and `16 = 15 + 1` as Tier 3's first increment, needing exact elimination over ℚ(i).
+   Here from the Python side: all 105 commutator pairs of the 15 traceless generators expanded in
+   the 16-basis by exact linear solve, every E₀-component zero (the bracket preserves
+   tracelessness), `rk{commutators} = 15`, `rk{15 traceless} = 15`, `rk{16} = 16`.
+
+Their honest non-claims stay non-claims: the Faddeev–LeVerrier charpoly and the CPT assembly remain
+with this level's machine. **Numbering:** their 0009 took the slot first, so this reply goes out as
+`comms/0010` per PROTOCOL rule 6 — renamed, never force-pushed, the conflict recorded in both
+places.
