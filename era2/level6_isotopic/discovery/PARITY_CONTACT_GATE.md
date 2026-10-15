@@ -98,7 +98,7 @@ tier for the FT.63 and FT.62 attributions and for the builder's credit.
 
 ## 4. Machine
 
-`checks/parity_contact_gate.py` → **43/43 exact markers, exit 0** (~19 s). Parts A–K as cited by the
+`checks/parity_contact_gate.py` → **45/45 exact markers, exit 0** (~19 s). Parts A–K as cited by the
 tier's Req lines (§A–§C for IT.84, §D–§G for IT.85, §H–§J for IT.86, §K for IT.88). Exact arithmetic
 throughout — integers and `Fraction`; **no floating point in any assertion**; enumerations exhaustive
 where claimed ($V\le5$ for parity, all sealed digraphs at $V{=}4$, all sign chains $k\le7$ for the EM
@@ -147,8 +147,39 @@ cited, never edited [AT.63(2)]. **The M exploration [concept/0003] is EXPLORATOR
 probe remains PAUSED** — no clause of this tier touches $M$ or $X=M\otimes M$, and none cites either
 as a premise.
 
+## 5b. AMENDMENT before merge — the builder's general parity lemma SUBSUMES my biconditional
+
+Their `probe_space/protruding_edge_census.py` (session 24) proves the **general** form: with
+$C$ closed edges and $h$ open ends, $\sum_v n(v)=2C+h$, so $\#\{v: n(v)\text{ odd}\}\equiv h\pmod 2$;
+for an all-trivalent core $3k=2C+h$ gives $k\equiv h\pmod 2$. I re-verified it independently (zero
+exceptions over $k\le8$, $h\le3$, $C\le19$) and their census zeros are **forced** by it: $h=1$ with
+$k\in\{2,4,6\}$ has *no* solution at all.
+
+**This corrects my own IT.85(8).** I had written that the mixed-skeleton case "reduces to the same
+conclusion". It does not: $\mathrm{CT0.11b}$'s $d^{\mathrm{bi}}{=}0,d^{\mathrm{uni}}{=}3$ route to $n{=}3$
+(type $(3,0)/(0,3)$) is excluded by IT.84(2) **in the sealed case only** — with open ends it is
+reachable. So IT.85(1)'s biconditional is a **special case scoped to the FT.62 floor families**, and
+IT.85(8)–(9) now say so, with the general lemma stated and credited. The tier was amended **before**
+PR #16 merged; the gate and suite were re-run after.
+
+**The gate survives and gets sharper.** The lemma's $h{=}0$ case, conjoined with IT.84(2) (sealed ⟹
+$n(v)=2\partial^{\leftarrow}(v)$ even), gives $k=0$: **a fully sealed all-trivalent core does not
+exist.** So *colour hosting requires an odd rung; an odd rung requires an open end; a sealed network
+hosts nothing at all* — and **the single jutting edge is the unique parity repair** that makes an
+all-trivalent core legal. That is the derived answer to the Architect's *"it has to have an open
+channel to communicate with the electron, right?"*: an object that must communicate outward has
+exactly one degree of parity freedom, and it is the open end.
+
+Register caution carried at IT.85(9) [BM.134(5)]: **slot trivalence** ($\operatorname{rank}\varepsilon_{ijk}=3$
+[D3.9]) is **not ledger valence** $n(v)=3$ [D0.8]. The two currencies are never summed — which is why
+their R-A census (slot register, no parity constraint on the core size $k$) and my R1/B1 (ledger
+register, parity constraint) are complementary rather than contradictory.
+
 ## 6. Credit
 
+**The general parity lemma at IT.85(8) is the builder's** (`protruding_edge_census.py`,
+session 24), adopted here and independently re-verified; it subsumes my floor-family biconditional and
+forced the IT.85(8)–(9) scope correction above — recorded rather than absorbed.
 The retention-cell read (IT.87(4)) and the seal counts $\binom{n}{3}g_\varepsilon(3)=(1,4,20)$ are the
 **builder's**, independently re-derived here and agreeing. The kernel mirrors are the builder's
 (`RungBoundary.lean`, `parity_core`, `BalanceKnot.lean`); `parity_core` re-attributes the grammar half

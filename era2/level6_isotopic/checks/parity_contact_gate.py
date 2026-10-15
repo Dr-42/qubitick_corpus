@@ -411,12 +411,44 @@ def mixed_reach_three(dbi, duni):
 G8 = (mixed_reach_three(1, 1) == 3 and mixed_reach_three(0, 3) == 3
       and all(mixed_reach_three(a, b) != 3 for a in range(0, 3) for b in range(0, 4)
               if (a, b) not in ((1, 1), (0, 3))))
-chk("G5  [IT.85(8) SCOPE, stated honestly] the mixed-skeleton case is REASONED, not enumerated: "
-    "CT0.11b's n = 2*d_bi + d_uni <= 3 reaches n=3 in exactly two ways",
-    G8, "(d_bi, d_uni) = (1,1) -- exactly the single-directed contact case of D2 -- or (0,3), which is "
-        "type (3,0)/(0,3) and therefore unreachable in a sealed network by B1. So the mixed case "
-        "reduces to the same conclusion, but by argument; flagged as residue, not as a theorem "
-        "[level-local negatives].")
+chk("G5  [IT.85(9) SCOPE, stated honestly] CT0.11b's n = 2*d_bi + d_uni <= 3 reaches n=3 in exactly "
+    "two ways, and only ONE of them is the FT.62 contact route",
+    G8, "(d_bi, d_uni) = (1,1) -- the single-directed contact case of D2 -- or (0,3), which is type "
+        "(3,0)/(0,3). B1 excludes (3,0)/(0,3) in a SEALED network only; WITH open ends it is "
+        "reachable. So D2's biconditional is a SPECIAL CASE scoped to the FT.62 floor families, not a "
+        "general law -- see G6 for the general form. Register caution [BM.134(5)]: SLOT trivalence "
+        "(rank eps_ijk = 3 [D3.9]) is NOT ledger valence n(v)=3 [D0.8]; the two currencies are never "
+        "summed.")
+
+# ---- G6: the GENERAL parity lemma (builder's probe result, adopted; re-verified here) ----
+def lemma_exceptions(kmax=8, hmax=3, cmax=19):
+    """3k = 2C + h  =>  k = h (mod 2). Return every violation."""
+    return [(k, h, C) for k in range(0, kmax + 1) for h in range(0, hmax + 1)
+            for C in range(0, cmax + 1) if 3 * k == 2 * C + h and (k % 2) != (h % 2)]
+def solvable(k, h, cmax=60):
+    return any(3 * k == 2 * C + h for C in range(0, cmax + 1))
+G6a = lemma_exceptions() == []
+G6b = [k for k in range(1, 10) if solvable(k, 1)] == [1, 3, 5, 7, 9]
+G6c = [k for k in (2, 4, 6) if solvable(k, 1)] == []
+G6d = [k for k in range(1, 10) if solvable(k, 0)] == [2, 4, 6, 8]
+chk("G6  [IT.85(8) THE GENERAL PARITY LEMMA -- builder's probe, adopted and independently "
+    "re-verified] sum_v n(v) = 2C + h gives #{odd n(v)} = h (mod 2), and for an all-trivalent core "
+    "3k = 2C + h gives k = h (mod 2): ZERO exceptions over k=0..8, h=0..3, C=0..19",
+    G6a and G6b and G6c and G6d,
+    "h=1 (one jutting edge) admits k = %s -- ODD only. h=0 (sealed) admits k = %s -- EVEN only. And "
+    "h=1 with k in {2,4,6} has NO solution at all, so the builder's census zeros are FORCED by the "
+    "lemma rather than being an enumeration accident. Conjoined with B1 (sealed => every n(v) even), "
+    "h=0 gives k=0: A FULLY SEALED ALL-TRIVALENT CORE DOES NOT EXIST."
+    % ([k for k in range(1, 10) if solvable(k, 1)], [k for k in range(1, 10) if solvable(k, 0)]))
+chk("G6a [IT.85(8) THE SHARPEST FORM OF THE GATE] colour hosting requires an ODD rung; an odd rung "
+    "requires an OPEN END; therefore a sealed network hosts nothing at all -- and the single jutting "
+    "edge is the UNIQUE parity repair that makes an all-trivalent core legal",
+    G6a and G6c and B1,
+    "this GENERALIZES D2: the biconditional 'n=3 <=> d=1 plus one single-directed contact' holds on "
+    "the FT.62 floor families, while the lemma holds on the whole ledger grammar. An object that must "
+    "communicate outward has exactly one degree of parity freedom, and it is the open end -- which is "
+    "the derived answer to the Architect's 'it has to have an open channel to communicate with the "
+    "electron, right?'")
 
 # ===========================================================================
 sec("PART H -- IT.86(2): LOCUS A, the pair history (balance IS completion)")
@@ -582,8 +614,8 @@ t24 = open(TIER_FILE, encoding="utf-8").read() if os.path.exists(TIER_FILE) else
 norm24 = re.sub(r"\\mathrm\{\\text\{-\}\}", "-", t24)
 a_ok = all(R[0:4]); b_ok = all(R[4:7]); c_ok = all(R[7:13])
 d_ok = all(R[13:15]); e_ok = all(R[15:18]); f_ok = all(R[18:21])
-g_ok = all(R[21:26]); h_ok = all(R[26:29]); i_ok = all(R[29:33])
-j_ok = all(R[33:39])
+g_ok = all(R[21:28]); h_ok = all(R[28:31]); i_ok = all(R[31:35])
+j_ok = all(R[35:41])
 verdict_ok = all([a_ok, b_ok, c_ok, d_ok, e_ok, f_ok, g_ok, h_ok, i_ok, j_ok])
 chk("K1  [THE VERDICT] Tier IT.24 is a READ-TIER on frozen ground: (A) the embedding parity and its "
     "two load-bearing hypotheses; (B) the sealed case's diagonal types and the unreachability of "
