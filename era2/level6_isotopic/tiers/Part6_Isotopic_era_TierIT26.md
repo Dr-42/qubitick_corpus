@@ -6,7 +6,7 @@ act)"* — (a) the size-free invariant O(2d)/d, machine-censused and placed as a
 read-tier remark **beside FT.49 and CT4.5a**; (b) the n=3 triple peak, derived as a row with the
 **teleological reading BARRED in the same clause** and the caption *"that is where the readable
 universe lives"* **flagged ¬adopted caption material, never a citation**. Both candidates were
-adjudicated in probe space first (`lock_ratio_and_n3.py`, 36 exact markers, mirrored in the vault;
+adjudicated in probe space first (`lock_ratio_and_n3.py`, 38 exact markers, mirrored in the vault;
 the two candidate promotions were offered to the Architect at session 13s-addendum-4 and are
 frozen here at his dispatch). This tier additionally carries **one correction of a frozen row**
 (IT.94), which the G3 rider's machine exposed and which AT.63(2) requires to ride a later tier
